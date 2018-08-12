@@ -1,76 +1,83 @@
+// 變數
+$about-font: "Questrial", sans-serif;
+$h2-size: 3.5em;
+$info-bgcolor: #ffad26;
+$footer-bgcolor: #ffad26;
+
 * {
   outline: 1px solid #222;
-  box-sizing: border-box; }
-
+  box-sizing: border-box;
+}
 body {
-  overflow-x: hidden; }
-
+  overflow-x: hidden;
+}
 h1,
 h2,
 h3,
 h4 {
-  font-family: "Questrial", sans-serif; }
-
-h2 {
-  font-size: 3.5em;
-  margin: 0.83em 0; }
-
-p {
-  font-family: "Questrial", sans-serif;
-  margin: 1em 0; }
-
+  font-family: $about-font;
+}
+h2{
+  font-size: $h2-size;
+  margin: 0.83em 0;
+}
+p{
+  font-family: $about-font;
+  margin: 1em 0;
+}
 .wrapper {
   display: flex;
   flex-direction: column;
-  position: relative; }
-
+  position: relative;
+}
 .min {
-  width: 100%; }
-
+  width: 100%;
+}
+// 藍色星空屏幕開始
 .bg-top {
   background-color: #0f0111;
   background-image: url("../../images/about-material/about-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  color: #fff; }
-
+  color: #fff;
+}
 .bg-blue {
   background-color: #0f0111;
-  color: #fff; }
-
+  color: #fff;
+}
 .header-indent {
-  padding-top: 80px; }
-
+  padding-top: 80px;
+}
 .container-big {
   max-width: 1200px;
-  margin: auto; }
-
+  margin: auto;
+}
 .block-item {
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 6em; }
-
+  padding-bottom: 6em;
+}
 .block-item .block-text:first-child {
-  padding-right: 4em; }
-
+  padding-right: 4em;
+}
 .block-text {
-  width: 50%; }
-
-.block-aboutus {
+  width: 50%;
+}
+.block-aboutus{
   opacity: .6;
-  line-height: 1.4; }
-
+  line-height: 1.4;
+}
 .bolck-image {
   width: 50%;
-  padding-top: 470px; }
-
+  padding-top: 470px;
+}
 .block-item .block-text:last-child {
-  padding-left: 4em; }
-
+  padding-left: 4em;
+}
 .block-item-introduction {
   display: block;
-  overflow: hidden; }
-
+  overflow: hidden;
+}
 .sports-introduction {
   width: 90%;
   float: right;
@@ -78,11 +85,14 @@ p {
   background-repeat: no-repeat;
   position: relative;
   background-position: top right;
-  padding-bottom: 58%; }
+  padding-bottom: 58%;
+}
+// 藍色星空屏幕結束
 
+// 營業資訊開始
 .business-info {
-  position: relative; }
-
+  position: relative;
+}
 .l-color-block {
   position: absolute;
   z-index: -1;
@@ -90,9 +100,9 @@ p {
   left: -5%;
   width: 500px;
   height: 200%;
-  background-color: #ffad26;
-  transform: rotate(-20deg); }
-
+  background-color: $info-bgcolor;
+  transform: rotate(-20deg);
+}
 .r-color-block {
   position: absolute;
   z-index: -1;
@@ -100,37 +110,42 @@ p {
   right: -10%;
   width: 10%;
   height: 100%;
-  background-color: #ffad26;
-  transform: rotate(-20deg); }
-
+  background-color: $info-bgcolor;
+  transform: rotate(-20deg);
+}
 .businfo {
-  height: 660px; }
+  height: 660px;
+}
+// 營業資訊結束
 
+// 輪播場地開始
 .bg-buttom {
   background-image: url("../../images/about-material/about-bg2.png");
   background-repeat: no-repeat;
-  background-size: cover; }
-
+  background-size: cover;
+}
 .slide-site {
-  padding: 0 1em; }
-
+  padding: 0 1em;
+}
 .container-side {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 2em; }
-
+  padding-bottom: 2em;
+}
 .site-text {
   width: 50%;
   padding-bottom: 60px;
-  height: 560px; }
-
+  height: 560px;
+}
 .side {
   width: 50%;
   padding-bottom: 60px;
-  height: 560px; }
-
+  height: 560px;
+}
+// 輪播場地結束
 footer {
   height: 80px;
-  background-color: #ffad26; }
+  background-color: $footer-bgcolor;
+}
