@@ -1,11 +1,11 @@
 // 變數
-$about-font: "Questrial", sans-serif;
+$about-font: "Questrial",'微軟正黑體', sans-serif;
 $h2-size: 3.5em;
-$info-bgcolor: #ffad26;
-$footer-bgcolor: #ffad26;
+$info-bgcolor: #ffb505;
+$footer-bgcolor: #ffb505;
 
 * {
-  outline: 1px solid #222;
+  // outline: 1px solid #222;
   box-sizing: border-box;
 }
 body {
@@ -69,7 +69,12 @@ p{
 }
 .bolck-image {
   width: 50%;
-  padding-top: 470px;
+}
+.an-first{
+  width: 608px;
+  height: calc((608px / 3.2) * 3);
+  position: relative;
+  float: right;
 }
 .block-item .block-text:last-child {
   padding-left: 4em;
