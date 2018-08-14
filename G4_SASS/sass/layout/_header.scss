@@ -1,13 +1,14 @@
-*{
-    outline:1px solid red;
-    vertical-align: middle;
-    padding:0;
-    margin:0;
-}
+// *{
+//     outline:1px solid red;
+//     vertical-align: middle;
+//     padding:0;
+//     margin:0;
+// }
 
 header{
     width:100%;
     @include font-face();
+    background-color: #F00;
 }
 header:after{
     display:block;
@@ -36,6 +37,7 @@ header ul li{
 header ul li a{
     text-decoration: none;
     color: #0052b2;
+    text-shadow: #fff 0px 2px,#fff 0px -2px,#fff 2px 0px,#fff -2px 0px,;
 }
 header ul li:last-child{
     line-height: 1;

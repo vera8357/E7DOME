@@ -538,18 +538,3 @@
         transform: rotate(12deg)
     }
 }
-//==========ball=================
- .ball-animation{
-  animation: breatheBall 3s ease-in alternate infinite ;
-}
-@keyframes breatheBall {
-    0% {
-        transform: scale(1);
-        opacity: .6
-    }
-
-    100% {
-        transform: scale(1.1);
-        opacity: 1
-    }
-}
