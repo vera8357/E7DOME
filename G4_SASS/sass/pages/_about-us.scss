@@ -107,12 +107,63 @@ p {
   background-position: top right;
   padding-bottom: 58%;
 }
-.basketball-o{
+
+.basketball h3 {
+  position: absolute;
+  font-size: $h3-size;
+  top: 40%;
+  right: 20%;
+}
+
+.basketball-o {
   position: absolute;
   width: 24%;
   top: 21.5%;
   right: -4.5%;
 }
+
+.badminton h3 {
+  position: absolute;
+  font-size: $h3-size;
+  top: 40%;
+  right: 20%;
+}
+
+.badminton-o {
+  position: absolute;
+  width: 10%;
+  top: 21.5%;
+  right: 45%;
+}
+
+.bowling h3 {
+  position: absolute;
+  font-size: $h3-size;
+  top: 40%;
+  right: 20%;
+}
+
+.bowling-o {
+  position: absolute;
+  width: 10%;
+  top: 21.5%;
+  right: 80%;
+}
+
+.rock-climbing h3 {
+  position: absolute;
+  font-size: $h3-size;
+  top: 40%;
+  right: 20%;
+}
+
+.rock-climbing-o {
+  position: absolute;
+  width: 10%;
+  top: 48%;
+  right: 38%;
+}
+
 // 藍色星空屏幕結束
 // 營業資訊開始
 .business-info {

@@ -1,4 +1,43 @@
 @charset "UTF-8";
+header {
+  width: 100%;
+  font-family: 'HanWangZonYi';
+  src: url(../font/HanWangZonYi.ttf);
+  background-color: #F00; }
+
+header:after {
+  display: block;
+  content: '';
+  clear: both; }
+
+.logo {
+  float: left;
+  margin-left: 213px;
+  margin-top: 59px; }
+
+.logo img {
+  width: 65%; }
+
+header ul {
+  float: right;
+  margin-right: 100px;
+  margin-top: 30px; }
+
+header ul li {
+  float: left;
+  margin-right: 45px;
+  font-size: 26px;
+  line-height: 145px; }
+
+header ul li a {
+  text-decoration: none;
+  color: #0052b2;
+  text-shadow: #fff 0px 2px, #fff 0px -2px, #fff 2px 0px, #fff -2px 0px; }
+
+header ul li:last-child {
+  line-height: 1;
+  padding-top: 45px; }
+
 * {
   outline: 1px solid #222;
   box-sizing: border-box; }
@@ -88,11 +127,53 @@ p {
   background-position: top right;
   padding-bottom: 58%; }
 
+.basketball h3 {
+  position: absolute;
+  font-size: 2em;
+  top: 40%;
+  right: 20%; }
+
 .basketball-o {
   position: absolute;
   width: 24%;
   top: 21.5%;
   right: -4.5%; }
+
+.badminton h3 {
+  position: absolute;
+  font-size: 2em;
+  top: 40%;
+  right: 20%; }
+
+.badminton-o {
+  position: absolute;
+  width: 10%;
+  top: 21.5%;
+  right: 45%; }
+
+.bowling h3 {
+  position: absolute;
+  font-size: 2em;
+  top: 40%;
+  right: 20%; }
+
+.bowling-o {
+  position: absolute;
+  width: 10%;
+  top: 21.5%;
+  right: 80%; }
+
+.rock-climbing h3 {
+  position: absolute;
+  font-size: 2em;
+  top: 40%;
+  right: 20%; }
+
+.rock-climbing-o {
+  position: absolute;
+  width: 10%;
+  top: 48%;
+  right: 38%; }
 
 .business-info {
   position: relative;
