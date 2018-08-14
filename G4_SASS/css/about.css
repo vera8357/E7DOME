@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   outline: 1px solid #222;
   box-sizing: border-box; }
@@ -10,7 +9,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Questrial", " Microsoft JhengHei", "微軟正黑體", sans-serif; }
+  font-family: "Questrial", " Microsoft JhengHei", sans-serif; }
 
 h2 {
   font-size: 3.5em;
@@ -18,7 +17,7 @@ h2 {
   padding: 10px; }
 
 p {
-  font-family: "Questrial", " Microsoft JhengHei", "微軟正黑體", sans-serif;
+  font-family: "Questrial", " Microsoft JhengHei", sans-serif;
   margin: 1em 0; }
 
 .wrapper {
@@ -579,8 +578,7 @@ footer {
     width: 100%;
     height: 100%; }
   .block-item {
-    flex-direction: column-reverse;
-    padding-bottom: 2em; }
+    flex-direction: column-reverse; }
   .block-item .block-text:first-child {
     padding-right: 0em; }
   .block-aboutus {
@@ -588,11 +586,8 @@ footer {
     padding: 1em;
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5); }
   .block-text {
+    align-self: center;
     width: 100%; }
   .bolck-image {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center; }
-  .block-item .block-text:last-child {
-    padding-left: 0em; } }
+    align-self: center;
+    width: 100%; } }

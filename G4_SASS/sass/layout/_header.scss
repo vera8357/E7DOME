@@ -1,0 +1,43 @@
+*{
+    outline:1px solid red;
+    vertical-align: middle;
+    padding:0;
+    margin:0;
+}
+
+header{
+    width:100%;
+    @include font-face();
+}
+header:after{
+    display:block;
+    content:'';
+    clear: both;
+}
+.logo{
+    float:left;
+    margin-left: 213px;
+    margin-top: 59px;
+}
+.logo img{
+    width:65%;
+}
+header ul{
+    float:right;
+    margin-right: 100px;
+    margin-top: 30px;
+}
+header ul li{
+    float:left;
+    margin-right: 45px;
+    font-size: 26px;
+    line-height: 145px;
+}
+header ul li a{
+    text-decoration: none;
+    color: #0052b2;
+}
+header ul li:last-child{
+    line-height: 1;
+    padding-top: 45px;
+}
