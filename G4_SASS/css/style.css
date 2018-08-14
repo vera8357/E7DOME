@@ -26,9 +26,3 @@ blockquote:before, blockquote:after, q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
-
-.test {
-  width: 100%;
-  font-size: 50px;
-  font-family: 'HanWangZonYi';
-  src: url(../font/HanWangZonYi.ttf); }
