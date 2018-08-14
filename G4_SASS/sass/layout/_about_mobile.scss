@@ -1,0 +1,25 @@
+@media screen and (max-width: 768px) {
+  .bg-top {
+    width: 100%;
+    height: 100%;
+  }
+  .block-item {
+    flex-direction: column-reverse;
+  }
+  .block-item .block-text:first-child {
+    padding-right: 0em;
+  }
+  .block-aboutus {
+    line-height: 30px;
+    padding: $about-padding;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, .5);
+  }
+  .block-text {
+    align-self: center;
+    width: 100%;
+  }
+  .bolck-image {
+    align-self: center;
+    width: 100%;
+  }
+}

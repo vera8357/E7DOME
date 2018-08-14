@@ -1,5 +1,5 @@
-@charset "UTF-8";
 * {
+  outline: 1px solid #222;
   box-sizing: border-box; }
 
 body {
@@ -9,14 +9,15 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Questrial", "微軟正黑體", sans-serif; }
+  font-family: "Questrial", " Microsoft JhengHei", sans-serif; }
 
 h2 {
   font-size: 3.5em;
-  margin: 0.83em 0; }
+  margin: 0.83em 0;
+  padding: 10px; }
 
 p {
-  font-family: "Questrial", "微軟正黑體", sans-serif;
+  font-family: "Questrial", " Microsoft JhengHei", sans-serif;
   margin: 1em 0; }
 
 .wrapper {
@@ -57,7 +58,7 @@ p {
   width: 50%; }
 
 .block-aboutus {
-  opacity: .6;
+  opacity: .7;
   line-height: 1.4; }
 
 .bolck-image {
@@ -86,7 +87,8 @@ p {
   padding-bottom: 58%; }
 
 .business-info {
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .l-color-block {
   position: absolute;
@@ -570,3 +572,22 @@ footer {
     transform: rotate(0deg); }
   100% {
     transform: rotate(12deg); } }
+
+@media screen and (max-width: 768px) {
+  .bg-top {
+    width: 100%;
+    height: 100%; }
+  .block-item {
+    flex-direction: column-reverse; }
+  .block-item .block-text:first-child {
+    padding-right: 0em; }
+  .block-aboutus {
+    line-height: 30px;
+    padding: 1em;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5); }
+  .block-text {
+    align-self: center;
+    width: 100%; }
+  .bolck-image {
+    align-self: center;
+    width: 100%; } }
