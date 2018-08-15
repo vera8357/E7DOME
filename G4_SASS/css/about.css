@@ -1,13 +1,13 @@
 @charset "UTF-8";
-h1 {
+h1, h2 {
   font-family: 'HanWangZonYi';
-  src: url("font/HanWangZonYi.woff");
-  font-size: 6rem; }
+  src: url(../font/HanWangZonYi.woff);
+  font-size: 5vw; }
 
 header {
   width: 100%;
   font-family: 'HanWangZonYi';
-  src: url("font/HanWangZonYi.woff");
+  src: url(../font/HanWangZonYi.woff);
   background-color: #F00; }
 
 header:after {
@@ -103,7 +103,7 @@ p {
   width: 50%; }
 
 .block-aboutus {
-  opacity: .7;
+  opacity: 0.7;
   line-height: 1.4; }
 
 .bolck-image {
@@ -250,12 +250,12 @@ p {
   vertical-align: middle; }
 
 .sportman1 img {
-  position: absolute;
-  right: 80%; }
+  position: relative;
+  right: 30%; }
 
-.sportman2 {
-  position: absolute;
-  left: 80%; }
+.sportman2 img {
+  position: relative;
+  left: 150%; }
 
 .bg-buttom {
   background-image: url("../../images/about-material/about-bg2.png");

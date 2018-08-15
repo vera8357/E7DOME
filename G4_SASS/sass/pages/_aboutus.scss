@@ -1,0 +1,297 @@
+* {
+  outline: 1px solid #f0f;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $about-font;
+}
+
+h2 {
+  font-size: $h2-size;
+  margin: 0.83em 0;
+  padding: 10px;
+}
+
+p {
+  font-family: $about-font;
+  margin: 1em 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.min {
+  width: 100%;
+}
+
+// 藍色星空屏幕開始
+.bg-top {
+  background-color: #0f0111;
+  background-image: url("../../images/about-material/about-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.bg-blue {
+  background-color: #0f0111;
+  color: #fff;
+}
+
+.header-indent {
+  padding-top: 80px;
+}
+
+.container-big {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.block-item {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 6em;
+}
+
+.block-item .block-text:first-child {
+  padding-right: 4em;
+}
+
+.block-text {
+  width: 50%;
+}
+
+.block-aboutus {
+  opacity: 0.7;
+  line-height: 1.4;
+}
+
+.bolck-image {
+  width: 50%;
+}
+
+.an-first {
+  width: 608px;
+  height: calc((608px / 3.2) * 3);
+  position: relative;
+  float: right;
+}
+
+.block-item .block-text:last-child {
+  padding-left: 4em;
+}
+
+.block-item-introduction {
+  display: block;
+  overflow: hidden;
+}
+
+.sports-introduction {
+  width: 90%;
+  float: right;
+  background-size: 100%;
+  background-image: url("../../images/about-material/Introduction-page/Star-track.svg");
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: top right;
+  padding-bottom: 50%;
+}
+
+.basketball h3 {
+  position: absolute;
+  font-size: $h3-size;
+  top: 40%;
+  right: 20%;
+}
+
+.basketball-o {
+  position: absolute;
+  width: 24%;
+  top: 25%;
+  right: -4.5%;
+}
+
+.badminton h3 {
+  position: absolute;
+  font-size: $h3-size;
+  top: 30%;
+  right: 35%;
+}
+
+.badminton-o {
+  position: absolute;
+  width: 10%;
+  top: 25%;
+  right: 45%;
+}
+
+.bowling h3 {
+  position: absolute;
+  font-size: $h3-size;
+  top: 80%;
+  right: 70%;
+}
+
+.bowling-o {
+  position: absolute;
+  width: 10%;
+  top: 70%;
+  right: 90%;
+}
+
+.rock-climbing h3 {
+  position: absolute;
+  font-size: $h3-size;
+  top: 70%;
+  right: 25%;
+}
+
+.rock-climbing-o {
+  position: absolute;
+  width: 10%;
+  top: 55%;
+  right: 35%;
+}
+
+// 藍色星空屏幕結束
+// 營業資訊開始
+.business-info {
+  position: relative;
+  overflow: hidden;
+}
+
+.l-color-block {
+  position: absolute;
+  z-index: -1;
+  top: -10%;
+  left: -5%;
+  width: 500px;
+  height: 200%;
+  background-color: $info-bgcolor;
+  transform: rotate(-20deg);
+}
+
+.r-color-block {
+  position: absolute;
+  z-index: -1;
+  top: -8%;
+  right: -10%;
+  width: 10%;
+  height: 100%;
+  background-color: $info-bgcolor;
+  transform: rotate(-20deg);
+}
+
+.businfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+}
+
+.business-text {
+  align-self: center;
+  margin-top: 6em;
+  margin-bottom: 6em;
+}
+
+.business-text h3 {
+  font-size: $h3-size;
+  line-height: 1.3em;
+  font-weight: bold;
+}
+
+.business-text span {
+  margin-left: 1em;
+  margin-right: 1em;
+  font-size: $business;
+}
+
+.phone {
+  padding: 1em 0em;
+}
+
+.time {
+  padding: 1em 0em;
+}
+
+.landmark {
+  padding: 1em 0em;
+}
+
+.phone img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+
+.time img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+
+.landmark img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+
+.sportman1 img {
+  position: relative;
+  right: 30%;
+}
+
+.sportman2 img {
+  position: relative;
+  left: 150%;
+}
+
+// 營業資訊結束
+// 輪播場地開始
+.bg-buttom {
+  background-image: url("../../images/about-material/about-bg2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slide-site {
+  padding: 0 1em;
+}
+
+.container-side {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 2em;
+}
+
+.site-text {
+  width: 50%;
+  padding-bottom: 60px;
+  height: 560px;
+}
+
+.side {
+  width: 50%;
+  padding-bottom: 60px;
+  height: 560px;
+}
+
+// 輪播場地結束
+footer {
+  height: 80px;
+  background-color: $footer-bgcolor;
+}
