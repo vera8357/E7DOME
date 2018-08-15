@@ -1,0 +1,44 @@
+body {
+  background-color: #ea4c89; }
+
+* {
+  outline: #0f0 1px solid; }
+
+.bownling_first_page {
+  width: 100%; }
+
+.bownling_first_page:after {
+  display: block;
+  content: '';
+  clear: both; }
+
+.bownling_first_page > img {
+  width: 68%;
+  position: absolute;
+  right: 0; }
+
+.bownling_first_content {
+  width: 62.5%;
+  margin: auto;
+  position: relative;
+  z-index: 2; }
+
+#bowlingcan {
+  position: relative;
+  left: 9%; }
+
+#peteweber {
+  position: absolute;
+  bottom: 0;
+  left: -5%; }
+
+h1 {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 15%; }
+
+h1 {
+  font-family: 'HanWangZonYi';
+  src: url(../font/HanWangZonYi.woff);
+  font-size: 6rem; }
