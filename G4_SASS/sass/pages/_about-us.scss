@@ -104,8 +104,8 @@ p {
   background-image: url("../../images/about-material/Introduction-page/Star-track.svg");
   background-repeat: no-repeat;
   position: relative;
-  background-position: top right;
-  padding-bottom: 58%;
+  background-position: top right; 
+  padding-bottom: 40%;
 }
 
 .basketball h3 {
@@ -118,7 +118,7 @@ p {
 .basketball-o {
   position: absolute;
   width: 24%;
-  top: 21.5%;
+  top: 21%;
   right: -4.5%;
 }
 
@@ -130,10 +130,8 @@ p {
 }
 
 .badminton-o {
-  position: absolute;
+  // position: absolute;
   width: 10%;
-  top: 21.5%;
-  right: 45%;
 }
 
 .bowling h3 {
@@ -144,10 +142,8 @@ p {
 }
 
 .bowling-o {
-  position: absolute;
+  // position: absolute;
   width: 10%;
-  top: 21.5%;
-  right: 80%;
 }
 
 .rock-climbing h3 {
@@ -158,12 +154,9 @@ p {
 }
 
 .rock-climbing-o {
-  position: absolute;
+  // position: absolute;
   width: 10%;
-  top: 48%;
-  right: 38%;
 }
-
 // 藍色星空屏幕結束
 // 營業資訊開始
 .business-info {
