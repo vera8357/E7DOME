@@ -1,0 +1,102 @@
+@import "base/reset";
+@import "base/var";
+@import "mixins/mixins";
+@import "layout/desktop";
+@import "layout/small";
+
+body{
+	background-image: url("../images/rockclimb.jpg");
+
+}
+*{
+	outline: 1px solid #f00;
+}
+.select_bar{
+	margin: 30px auto;
+	background:#ffb505;
+	border: 1px solid #000;
+	width: 90%;
+	padding:30px;
+	border-radius: 15px;
+
+}
+.selectDate{
+	font-color: #fff;
+}
+.button{
+	width: 100px;
+	height: 150px;
+	border-radius: 5px;
+	padding: 20px 20px;
+	margin: 5px;
+	color: #fff;
+}
+
+.myGroup{
+	background-color: #f7682f;
+}
+
+.createGroup{
+	background-color: #0052b2;
+}
+
+span{ margin: 20px; }
+option{
+  background-color: #000;
+}
+
+option{
+  background-color: #000;
+  margin: 20px;
+}
+
+.selectSport {
+   overflow: hidden;
+   width: 100px;
+}
+
+.select-width{
+	padding:10px;
+}
+
+.selectSport select {
+   background: transparent;
+   border: none;
+   font-size: 14px;
+   height: 35px;
+   padding: 0px;
+   width: 100px;
+}
+
+.black   { background-color: #000;
+			order: none; }
+.black select { color: #fff; }
+
+.groupbtn{
+	margin: 10px;
+	float:right;
+}
+
+.select{
+	padding:20px;
+	border-radius: 5px;
+}
+.group-list{
+	width:1200px;
+	display: flex;
+	flex-flow:row wrap ;
+	align-content: center;
+	margin:100px auto;
+
+
+}
+
+.groupblock{
+	background-color: #fff;
+	width: 250px;
+	height: 400px;
+	margin: 50px 25px;
+}
+.group-img{
+	
+}
