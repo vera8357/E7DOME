@@ -1,8 +1,8 @@
 @mixin font-face{
     font-family:'HanWangZonYi';
-    src:url("font/HanWangZonYi.woff");
+    src:url(../font/HanWangZonYi.woff);
 }
-h1{
+h1,h2{
     @include font-face();
-    font-size: 6rem;
+    font-size: 5vw;
 }
