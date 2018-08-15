@@ -1,8 +1,13 @@
 @charset "UTF-8";
+h1 {
+  font-family: 'HanWangZonYi';
+  src: url("font/HanWangZonYi.woff");
+  font-size: 6rem; }
+
 header {
   width: 100%;
   font-family: 'HanWangZonYi';
-  src: url(../font/HanWangZonYi.ttf);
+  src: url("font/HanWangZonYi.woff");
   background-color: #F00; }
 
 header:after {
@@ -39,7 +44,7 @@ header ul li:last-child {
   padding-top: 45px; }
 
 * {
-  outline: 1px solid #222;
+  outline: 1px solid #f0f;
   box-sizing: border-box; }
 
 body {
@@ -125,7 +130,7 @@ p {
   background-repeat: no-repeat;
   position: relative;
   background-position: top right;
-  padding-bottom: 40%; }
+  padding-bottom: 50%; }
 
 .basketball h3 {
   position: absolute;
@@ -136,36 +141,44 @@ p {
 .basketball-o {
   position: absolute;
   width: 24%;
-  top: 21%;
+  top: 25%;
   right: -4.5%; }
 
 .badminton h3 {
   position: absolute;
   font-size: 2em;
-  top: 40%;
-  right: 20%; }
+  top: 30%;
+  right: 35%; }
 
 .badminton-o {
   position: absolute;
-  width: 10%; }
+  width: 10%;
+  top: 25%;
+  right: 45%; }
 
 .bowling h3 {
   position: absolute;
   font-size: 2em;
-  top: 40%;
-  right: 20%; }
+  top: 80%;
+  right: 70%; }
 
 .bowling-o {
-  width: 10%; }
+  position: absolute;
+  width: 10%;
+  top: 70%;
+  right: 90%; }
 
 .rock-climbing h3 {
   position: absolute;
   font-size: 2em;
-  top: 40%;
-  right: 20%; }
+  top: 70%;
+  right: 25%; }
 
 .rock-climbing-o {
-  width: 10%; }
+  position: absolute;
+  width: 10%;
+  top: 55%;
+  right: 35%; }
 
 .business-info {
   position: relative;
@@ -192,7 +205,57 @@ p {
   transform: rotate(-20deg); }
 
 .businfo {
-  height: 660px; }
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative; }
+
+.business-text {
+  align-self: center;
+  margin-top: 6em;
+  margin-bottom: 6em; }
+
+.business-text h3 {
+  font-size: 2em;
+  line-height: 1.3em;
+  font-weight: bold; }
+
+.business-text span {
+  margin-left: 1em;
+  margin-right: 1em;
+  font-size: 1.5em; }
+
+.phone {
+  padding: 1em 0em; }
+
+.time {
+  padding: 1em 0em; }
+
+.landmark {
+  padding: 1em 0em; }
+
+.phone img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle; }
+
+.time img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle; }
+
+.landmark img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle; }
+
+.sportman1 img {
+  position: absolute;
+  right: 80%; }
+
+.sportman2 {
+  position: absolute;
+  left: 80%; }
 
 .bg-buttom {
   background-image: url("../../images/about-material/about-bg2.png");
@@ -654,6 +717,9 @@ footer {
   100% {
     transform: rotate(12deg); } }
 
+.ball-animation {
+  animation: breatheBall 3s ease-in alternate infinite; }
+
 @keyframes breatheBall {
   0% {
     transform: scale(1);
@@ -661,33 +727,6 @@ footer {
   100% {
     transform: scale(1.1);
     opacity: 1; } }
-
-#star-line {
-  width: 100%;
-  display: block;
-  position: absolute; }
-
-.badminton-o {
-  offset-path: path("M1328.2,237.5c-324.2,49.9-567.8,156-556.7,247.3c12,98.4,314.5,142.3,675.7,98.4s644.2-159.5,632.2-257.8S1764.9, 183, 1403.7, 227C1378.1, 230.2, 1353, 233.7, 1328.2, 237.5");
-  offset-distance: 10%;
-  animation: badminton 10s linear infinite; }
-
-.bowling-o {
-  offset-path: path("M1213.9,40.3C507.8,148.9-22.5,379.9,1.9,578.9C28,793.1,686.8,889,1473.2,793.1S2876,446,2849.7,231.8c-26.3-214.2-684.9-310-1471.3-214.2C1323.5, 24.4, 1268.7, 31.9, 1213.9, 40.3");
-  offset-distance: 10%;
-  animation: badminton 10s linear infinite; }
-
-.rock-climbing-o {
-  offset-path: path("M504.7,517.4C521.6,656,947.8,718,1456.6,656S2364,431.4,2347,292.9c-17-138.6-443.1-200.6-951.8-138.5c-35.5, 4.4-71, 9.2-106.5, 14.6C832, 239.3, 488.9, 388.7, 504.7, 517.4z");
-  offset-distance: 10%;
-  animation: badminton 10s linear infinite; }
-
-@keyframes badminton {
-  from {
-    offset-distance: 0%; }
-  to {
-    offset-distance: 100%;
-    /* transform: scale(0.1); */ } }
 
 @media screen and (max-width: 768px) {
   .bg-top {

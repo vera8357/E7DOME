@@ -27,10 +27,15 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+h1 {
+  font-family: 'HanWangZonYi';
+  src: url("font/HanWangZonYi.woff");
+  font-size: 6rem; }
+
 header {
   width: 100%;
   font-family: 'HanWangZonYi';
-  src: url(../font/HanWangZonYi.ttf);
+  src: url("font/HanWangZonYi.woff");
   background-color: #F00; }
 
 header:after {

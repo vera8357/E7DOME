@@ -560,9 +560,9 @@
 }
 
 //==========ball=================
-//  .ball-animation{
-//   animation: breatheBall 3s ease-in alternate infinite ;
-// }
+.ball-animation{
+  animation: breatheBall 3s ease-in alternate infinite ;
+}
 @keyframes breatheBall {
   0% {
     transform: scale(1);
@@ -571,40 +571,5 @@
   100% {
     transform: scale(1.1);
     opacity: 1
-  }
-}
-
-#star-line {
-  width: 100%;
-  // padding-bottom: 50%;
-  display: block;
-  position: absolute;
-}
-
-.badminton-o {
-  offset-path: path('M1328.2,237.5c-324.2,49.9-567.8,156-556.7,247.3c12,98.4,314.5,142.3,675.7,98.4s644.2-159.5,632.2-257.8S1764.9, 183, 1403.7, 227C1378.1, 230.2, 1353, 233.7, 1328.2, 237.5');
-  offset-distance: 10%;
-  animation: badminton 10s linear infinite;
-}
-
-.bowling-o {
-  offset-path: path('M1213.9,40.3C507.8,148.9-22.5,379.9,1.9,578.9C28,793.1,686.8,889,1473.2,793.1S2876,446,2849.7,231.8c-26.3-214.2-684.9-310-1471.3-214.2C1323.5, 24.4, 1268.7, 31.9, 1213.9, 40.3');
-  offset-distance: 10%;
-  animation: badminton 10s linear infinite;
-}
-
-.rock-climbing-o {
-  offset-path: path('M504.7,517.4C521.6,656,947.8,718,1456.6,656S2364,431.4,2347,292.9c-17-138.6-443.1-200.6-951.8-138.5c-35.5, 4.4-71, 9.2-106.5, 14.6C832, 239.3, 488.9, 388.7, 504.7, 517.4z');
-  offset-distance: 10%;
-  animation: badminton 10s linear infinite;
-}
-
-@keyframes badminton {
-  from {
-    offset-distance: 0%;
-  }
-  to {
-    offset-distance: 100%;
-    /* transform: scale(0.1); */
   }
 }
