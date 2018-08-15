@@ -81,18 +81,11 @@ p {
 .sports-introduction {
   width: 90%;
   float: right;
-  background-size: 100%;
   background-image: url("../../images/about-material/Introduction-page/Star-track.svg");
   background-repeat: no-repeat;
   position: relative;
   background-position: top right;
   padding-bottom: 58%; }
-
-.basketball-o {
-  position: absolute;
-  width: 24%;
-  top: 21.5%;
-  right: -4.5%; }
 
 .business-info {
   position: relative;
@@ -580,17 +573,6 @@ footer {
     transform: rotate(0deg); }
   100% {
     transform: rotate(12deg); } }
-
-.ball-animation {
-  animation: breatheBall 3s ease-in alternate infinite; }
-
-@keyframes breatheBall {
-  0% {
-    transform: scale(1);
-    opacity: .6; }
-  100% {
-    transform: scale(1.1);
-    opacity: 1; } }
 
 @media screen and (max-width: 768px) {
   .bg-top {
