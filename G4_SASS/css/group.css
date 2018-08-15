@@ -1,0 +1,109 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  background-image: url("../images/rockclimb.jpg"); }
+
+.select_bar {
+  margin: 30px auto;
+  background: #ffb505;
+  border: 1px solid #000;
+  width: 90%;
+  padding: 30px;
+  border-radius: 15px; }
+
+.selectDate {
+  font-color: #fff; }
+
+.button {
+  width: 100px;
+  height: 150px;
+  border-radius: 5px;
+  padding: 20px 20px;
+  margin: 5px;
+  color: #fff; }
+
+.myGroup {
+  background-color: #f7682f; }
+
+.createGroup {
+  background-color: #0052b2; }
+
+span {
+  margin: 20px; }
+
+option {
+  background-color: #000; }
+
+option {
+  background-color: #000;
+  margin: 20px; }
+
+.selectSport {
+  overflow: hidden;
+  width: 100px; }
+
+.select-width {
+  padding: 10px; }
+
+.selectSport select {
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  height: 35px;
+  padding: 0px;
+  width: 100px; }
+
+.black {
+  background-color: #000;
+  order: none; }
+
+.black select {
+  color: #fff; }
+
+.groupbtn {
+  margin: 10px;
+  float: right; }
+
+.select {
+  padding: 20px;
+  border-radius: 5px; }
+
+.group-list {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  margin: 50px auto;
+  padding: 0 20px; }
+
+.groupblock {
+  background-color: #fff;
+  width: 400px;
+  height: 500px;
+  margin: 50px auto; }
