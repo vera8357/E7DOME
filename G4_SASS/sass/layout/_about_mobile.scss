@@ -195,11 +195,16 @@
     flex-direction: column-reverse;
     justify-content: space-between;
   }
-  .site-text h2{
+  .site-text h2 {
     font-size: 8vw;
     line-height: 1.3em;
     font-weight: bold;
     padding: 0.5em;
+  }
+  .site-text p {
+    line-height: 30px;
+    padding: $about-padding;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
   }
   .site-text {
     width: 100%;
