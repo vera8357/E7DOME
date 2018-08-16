@@ -293,6 +293,9 @@ p {
   padding-right: 10px; }
 
 .site-text p {
+  font-family: "Questrial", " Microsoft JhengHei", "微軟正黑體", sans-serif;
+  margin: 1em 0;
+  opacity: 0.7;
   line-height: 1.4; }
 
 #map {
@@ -919,6 +922,10 @@ footer {
     line-height: 1.3em;
     font-weight: bold;
     padding: 0.5em; }
+  .site-text p {
+    line-height: 30px;
+    padding: 1em;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5); }
   .site-text {
     width: 100%; }
   .side {
