@@ -1,14 +1,9 @@
 @charset "UTF-8";
-h1, h2 {
-  font-family: 'HanWangZonYi';
-  src: url(../font/HanWangZonYi.woff);
-  font-size: 5vw; }
-
 header {
   width: 100%;
   font-family: 'HanWangZonYi';
   src: url(../font/HanWangZonYi.woff);
-  position: fixed;
+  position: absolute;
   z-index: 99; }
 
 header:after {
@@ -49,6 +44,11 @@ header ul li:last-child {
 
 #loginicon {
   width: 100%; }
+
+h1, h2 {
+  font-family: 'HanWangZonYi';
+  src: url(../font/HanWangZonYi.woff);
+  font-size: 5vw; }
 
 * {
   box-sizing: border-box; }
@@ -91,7 +91,7 @@ p {
   color: #fff; }
 
 .header-indent {
-  padding-top: 80px; }
+  padding-top: 205px; }
 
 .container-big {
   max-width: 1200px;

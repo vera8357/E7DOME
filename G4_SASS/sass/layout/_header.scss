@@ -1,15 +1,9 @@
-// *{
-//     outline:1px solid red;
-//     vertical-align: middle;
-//     padding:0;
-//     margin:0;
-// }
 
 header {
     width: 100%;
     font-family: 'HanWangZonYi';
     src: url(../font/HanWangZonYi.woff);
-    position: fixed;
+    position: absolute;
     z-index: 99; }
 
 header:after {
