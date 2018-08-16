@@ -1,31 +1,48 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
+header {
+  width: 100%;
+  font-family: 'HanWangZonYi';
+  src: url(../font/HanWangZonYi.woff);
+  position: absolute;
+  z-index: 99; }
 
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after, q:before, q:after {
+header:after {
+  display: block;
   content: '';
-  content: none; }
+  clear: both; }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
+.logo {
+  float: left;
+  margin-left: 11%;
+  margin-top: 3%;
+  width: 17%; }
+
+.logo img {
+  width: 100%; }
+
+header ul {
+  float: right;
+  width: 43.8%;
+  margin-right: 5.2%;
+  margin-top: 1.5%; }
+
+header ul li {
+  float: left;
+  margin-right: 5.3%;
+  font-size: 1.3vw;
+  padding-top: 6.5%; }
+
+header ul li a {
+  text-decoration: none;
+  color: #0052b2;
+  text-shadow: #fff 0px 2px, #fff 0px -2px, #fff 2px 0px, #fff -2px 0px; }
+
+header ul li:last-child {
+  line-height: 1;
+  padding-top: 5.3%;
+  width: 6%; }
+
+#loginicon {
+  width: 100%; }
 
 h1, h2 {
   font-family: 'HanWangZonYi';
@@ -33,13 +50,14 @@ h1, h2 {
   font-size: 5vw; }
 
 body {
-  background-image: url("../images/rockclimb.jpg"); }
+  background: url("../images/climb.jpg") no-repeat center center fixed;
+  background-size: cover; }
 
 * {
   outline: 1px solid #f00; }
 
 .select_bar {
-  margin: 30px auto;
+  margin: 200px auto;
   background: #ffb505;
   border: 1px solid #000;
   width: 90%;
@@ -115,3 +133,14 @@ option {
   width: 250px;
   height: 400px;
   margin: 50px 25px; }
+
+.group-img {
+  position: relative;
+  width: 100%;
+  padding-bottom: 200px;
+  background: no-repeat center center;
+  background-size: cover; }
+
+h4 {
+  font-size: 18px;
+  color: #0052; }
