@@ -27,6 +27,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+h1, h2 {
+  font-family: 'HanWangZonYi';
+  src: url(../font/HanWangZonYi.woff);
+  font-size: 5vw; }
+
 body {
   background-image: url("../images/rockclimb.jpg"); }
 

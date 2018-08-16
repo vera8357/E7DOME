@@ -1,5 +1,5 @@
 * {
-  outline: 1px solid #f0f;
+  // outline: 1px solid #f0f;
   box-sizing: border-box;
 }
 
@@ -50,7 +50,7 @@ p {
 }
 
 .header-indent {
-  padding-top: 80px;
+  padding-top: 205px;
 }
 
 .container-big {
@@ -73,7 +73,7 @@ p {
 }
 
 .block-aboutus {
-  opacity: .7;
+  opacity: 0.7;
   line-height: 1.4;
 }
 
@@ -249,13 +249,13 @@ p {
 }
 
 .sportman1 img {
-  position: absolute;
-  right: 80%;
+  position: relative;
+  right: 30%;
 }
 
-.sportman2 {
-  position: absolute;
-  left: 80%;
+.sportman2 img {
+  position: relative;
+  left: 150%;
 }
 
 // 營業資訊結束
