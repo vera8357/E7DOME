@@ -1,5 +1,5 @@
 * {
-  outline: 1px solid #222;
+  outline: 1px solid #f0f;
   box-sizing: border-box;
 }
 
@@ -50,7 +50,7 @@ p {
 }
 
 .header-indent {
-  padding-top: 80px;
+  padding-top: 205px;
 }
 
 .container-big {
@@ -73,7 +73,7 @@ p {
 }
 
 .block-aboutus {
-  opacity: .7;
+  opacity: 0.7;
   line-height: 1.4;
 }
 
@@ -104,8 +104,8 @@ p {
   background-image: url("../../images/about-material/Introduction-page/Star-track.svg");
   background-repeat: no-repeat;
   position: relative;
-  background-position: top right; 
-  padding-bottom: 40%;
+  background-position: top right;
+  padding-bottom: 50%;
 }
 
 .basketball h3 {
@@ -118,45 +118,52 @@ p {
 .basketball-o {
   position: absolute;
   width: 24%;
-  top: 21%;
+  top: 25%;
   right: -4.5%;
 }
 
 .badminton h3 {
   position: absolute;
   font-size: $h3-size;
-  top: 40%;
-  right: 20%;
+  top: 30%;
+  right: 35%;
 }
 
 .badminton-o {
-  // position: absolute;
+  position: absolute;
   width: 10%;
+  top: 25%;
+  right: 45%;
 }
 
 .bowling h3 {
   position: absolute;
   font-size: $h3-size;
-  top: 40%;
-  right: 20%;
+  top: 80%;
+  right: 70%;
 }
 
 .bowling-o {
-  // position: absolute;
+  position: absolute;
   width: 10%;
+  top: 70%;
+  right: 90%;
 }
 
 .rock-climbing h3 {
   position: absolute;
   font-size: $h3-size;
-  top: 40%;
-  right: 20%;
+  top: 70%;
+  right: 25%;
 }
 
 .rock-climbing-o {
-  // position: absolute;
+  position: absolute;
   width: 10%;
+  top: 55%;
+  right: 35%;
 }
+
 // 藍色星空屏幕結束
 // 營業資訊開始
 .business-info {
@@ -187,7 +194,71 @@ p {
 }
 
 .businfo {
-  height: 660px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+}
+
+.business-text {
+  align-self: center;
+  margin-top: 6em;
+  margin-bottom: 6em;
+}
+
+.business-text h3 {
+  font-size: $h3-size;
+  line-height: 1.3em;
+  font-weight: bold;
+}
+
+.business-text span {
+  margin-left: 1em;
+  margin-right: 1em;
+  font-size: $business;
+}
+
+.phone {
+  padding: 1em 0em;
+}
+
+.time {
+  padding: 1em 0em;
+}
+
+.landmark {
+  padding: 1em 0em;
+}
+
+.phone img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+
+.time img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+
+.landmark img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+
+.sportman1 img {
+  width: 40%;
+  position: relative;
+  right: 10%;
+  top: 60px;
+}
+
+.sportman2 img {
+  width: 40%;
+  position: relative;
+  left: 130%;
 }
 
 // 營業資訊結束
@@ -196,6 +267,7 @@ p {
   background-image: url("../../images/about-material/about-bg2.png");
   background-repeat: no-repeat;
   background-size: cover;
+  color: #fff;
 }
 
 .slide-site {
@@ -212,14 +284,25 @@ p {
 
 .site-text {
   width: 50%;
-  padding-bottom: 60px;
-  height: 560px;
+  padding-bottom: 20px;
+  padding-right: 10px;
 }
 
+.site-text p{
+  line-height: 1.4;
+}
+#map{
+  width: 100%;
+  height: 300px;
+}
+.cell img{
+  width: 100%;
+  margin: auto;
+}
 .side {
   width: 50%;
-  padding-bottom: 60px;
-  height: 560px;
+  padding-bottom: 20px;
+  padding-left: 10px;
 }
 
 // 輪播場地結束

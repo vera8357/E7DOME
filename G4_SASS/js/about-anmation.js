@@ -37,3 +37,6 @@ $("#animation-crane").hover(
       $(".an-crane-3-wrap").css("animation-play-state", "running");
   }
 );
+
+var scene = document.getElementById('parallax_box');
+var parallax = new Parallax(scene);
