@@ -281,14 +281,24 @@ p {
 
 .site-text {
   width: 50%;
-  padding-bottom: 60px;
-  height: 560px;
+  padding-bottom: 20px;
+  padding-right: 10px;
 }
 
+.site-text p{
+  line-height: 1.4;
+}
+#map{
+  width: 100%;
+  height: 300px;
+}
+.cell img{
+  margin: auto;
+}
 .side {
   width: 50%;
-  padding-bottom: 60px;
-  height: 560px;
+  padding-bottom: 20px;
+  padding-left: 10px;
 }
 
 // 輪播場地結束
