@@ -560,9 +560,10 @@
 }
 
 //==========ball=================
-.ball-animation{
-  animation: breatheBall 3s ease-in alternate infinite ;
+.ball-animation {
+  animation: breatheBall 3s ease-in alternate infinite;
 }
+
 @keyframes breatheBall {
   0% {
     transform: scale(1);
