@@ -8,6 +8,8 @@
   <title>about</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/flickity.css">
+  <link rel="stylesheet" href="css/sandbox.css">
 </head>
 
 <body class="about-page">
@@ -107,6 +109,7 @@
         </div>
         <div class="block-item-introduction">
           <div class="sports-introduction">
+
             <div class="rock-climbing">
               <h3>攀岩場介紹</h3>
               <img class="rock-climbing-o ball-animation ball-ani-line3" src="images/about-material/ball/rock-climbing.png" alt="rock-climbing">
@@ -114,7 +117,7 @@
             <div class="badminton">
               <h3>羽球場介紹</h3>
               <img class="badminton-o ball-animation ball-ani-line1" src="images/about-material/ball/badminton.png" alt="badminton">
-            </div>
+            </div>            
             <div class="bowling">
               <h3>保齡球場介紹</h3>
               <img class="bowling-o ball-animation ball-ani-line2" src="images/about-material/ball/bowling.png" alt="bowling">
@@ -150,8 +153,18 @@
       <section class="bg-buttom">
         <div class="container-big">
           <div class="slide-site container-side">
-            <div class="site-text"></div>
-            <div class="side"></div>
+            <div class="site-text">
+              <h2>Lorem ipsum dolor sit amet.</h2>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus expedita culpa sed neque id eligendi nisi deleniti tempore velit pariatur! Laudantium suscipit rem magni, adipisci saepe beatae consequatur minima libero!</p>
+              <div id="map"></div>
+            </div>
+            <div class="side">
+              <div id="gallery" class="container">
+                <div class="cell" n1><img src="images/about-material/ballsite/3d-Badminton.png" alt=""></div>
+                <div class="cell" n2><img src="images/about-material/ballsite/3d-basketball.png" alt=""></div>
+                <div class="cell" n3><img src="images/about-material/ballsite/3d-football.png" alt=""></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -162,6 +175,9 @@
   <script src="libs/parallax/deploy/parallax.min.js"></script>
   <script src="libs/jquery/dist/jquery.min.js"></script>
   <script src="js/about-anmation.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+  <script src="js/map.js"></script>
+  <script data-main="main" src="https://unpkg.com/requirejs@2/require.js"></script>
 </body>
 
 </html>
