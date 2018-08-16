@@ -1,18 +1,21 @@
-@import "base/reset";
+@import "layout/header";
 @import "base/var";
 @import "mixins/mixins";
 @import "layout/desktop";
 @import "layout/small";
+@import "layout/footer";
+@import "components/buttons";
 
 body{
-	background-image: url("../images/rockclimb.jpg");
+	background: url("../images/climb.jpg") no-repeat center center fixed;
+	background-size: cover;
 
 }
 *{
 	outline: 1px solid #f00;
 }
 .select_bar{
-	margin: 30px auto;
+	margin: 200px auto;
 	background:#ffb505;
 	border: 1px solid #000;
 	width: 90%;
@@ -98,5 +101,16 @@ option{
 	margin: 50px 25px;
 }
 .group-img{
-	
+	position: relative;
+	width: 100%;
+	padding-bottom:200px;
+	background: no-repeat center center;
+	background-size: cover;
+
+}
+
+h4{
+	font-size: 18px;
+	color: #0052;
+
 }
