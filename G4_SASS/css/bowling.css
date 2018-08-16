@@ -86,7 +86,8 @@ h2 {
   content: '';
   clear: both; }
 
-.site_info_wrap h3 {
+.site_info_wrap h3,
+.assess_wrap h3 {
   font-size: 48px;
   font-family: 'HanWangZonYi';
   src: url(../font/HanWangZonYi.woff);
@@ -104,7 +105,8 @@ h2 {
 
 .info {
   width: 40%;
-  float: left; }
+  float: left;
+  padding-bottom: 156px; }
 
 .info h3 {
   line-height: 2;
@@ -193,7 +195,41 @@ h2 {
   border-width: 635px 0 0 870px;
   border-color: transparent transparent transparent #70d9f1;
   left: 0;
-  top: 265px; }
+  top: 255px; }
+
+.assess {
+  width: 100%; }
+
+.assess_wrap {
+  width: 1200px;
+  margin: auto; }
+
+.assess_wrap h3 {
+  color: #fff; }
+
+.assess_table {
+  position: relative;
+  background-color: #fff;
+  width: 90%;
+  margin: auto; }
+
+.assess_table:after {
+  display: block;
+  content: '';
+  clear: both; }
+
+.assess_table label {
+  width: 31.33%;
+  background-color: #0f0;
+  margin: 0 1% 0 1%;
+  display: block;
+  float: left;
+  text-align: center; }
+
+.assess_table input {
+  position: absolute;
+  width: 1px;
+  opacity: 0; }
 
 h1, h2 {
   font-family: 'HanWangZonYi';
