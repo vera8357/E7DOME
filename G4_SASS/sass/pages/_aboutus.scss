@@ -249,13 +249,16 @@ p {
 }
 
 .sportman1 img {
+  width: 40%;
   position: relative;
-  right: 30%;
+  right: 10%;
+  top: 60px;
 }
 
 .sportman2 img {
+  width: 40%;
   position: relative;
-  left: 150%;
+  left: 130%;
 }
 
 // 營業資訊結束
@@ -293,6 +296,7 @@ p {
   height: 300px;
 }
 .cell img{
+  width: 100%;
   margin: auto;
 }
 .side {

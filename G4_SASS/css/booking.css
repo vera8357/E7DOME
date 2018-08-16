@@ -950,4 +950,151 @@ a {
     flex-direction: row;
     justify-content: center; }
   .block-item .block-text:last-child {
-    padding-left: 0em; } }
+    padding-left: 0em; }
+  .sports-introduction {
+    min-width: 40%;
+    padding-bottom: 10%; }
+  .basketball {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center; }
+  .rock-climbing {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center; }
+  .badminton {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center; }
+  .bowling {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center; }
+  .basketball-o {
+    align-self: center;
+    position: static;
+    min-width: 50%;
+    top: 0%;
+    left: 0%; }
+  .basketball h3 {
+    align-self: center;
+    position: static;
+    font-size: 8vw;
+    top: 0%;
+    left: 0%; }
+  .rock-climbing-o {
+    align-self: center;
+    position: static;
+    min-width: 50%;
+    top: 0%;
+    right: 0%; }
+  .rock-climbing h3 {
+    align-self: center;
+    position: static;
+    font-size: 8vw;
+    top: 0%;
+    left: 0%; }
+  .badminton-o {
+    align-self: center;
+    position: static;
+    min-width: 50%;
+    top: 0%;
+    right: 0%; }
+  .badminton h3 {
+    align-self: center;
+    position: static;
+    font-size: 8vw;
+    top: 0%;
+    left: 0%; }
+  .bowling-o {
+    align-self: center;
+    position: static;
+    min-width: 50%;
+    top: 0%;
+    right: 0%; }
+  .bowling h3 {
+    align-self: center;
+    position: static;
+    font-size: 7vw;
+    top: 0%;
+    left: 0%; }
+  .l-color-block {
+    position: absolute;
+    z-index: -1;
+    top: -10%;
+    left: -5%;
+    width: 0vw;
+    height: 200%;
+    background-color: #ffb505;
+    transform: rotate(-20deg); }
+  .r-color-block {
+    position: absolute;
+    z-index: -1;
+    top: -8%;
+    right: -10%;
+    width: 100px;
+    height: 40%;
+    background-color: #ffb505;
+    transform: rotate(-20deg); }
+  .business-text {
+    align-self: center;
+    margin-top: 3em;
+    margin-bottom: 3em; }
+  .business-text h2 {
+    font-size: 8vw;
+    line-height: 1.3em;
+    font-weight: bold;
+    padding: 1em; }
+  .business-text h3 {
+    font-size: 5vw;
+    line-height: 1.3em;
+    font-weight: bold;
+    padding: 1em; }
+  .phone {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center; }
+  .time {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center; }
+  .landmark {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center; }
+  .business-text span {
+    display: inline-block;
+    box-sizing: border-box;
+    margin-left: 1em;
+    margin-right: 1em;
+    font-size: 5vw;
+    padding: 1.5em; }
+  .sportman1 img {
+    width: 40%;
+    position: relative;
+    top: 60px;
+    left: 50%; }
+  .sportman2 img {
+    width: 40%;
+    position: relative;
+    left: 70%; }
+  .container-side {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    justify-content: space-between; }
+  .site-text h2 {
+    font-size: 8vw;
+    line-height: 1.3em;
+    font-weight: bold;
+    padding: 0.5em; }
+  .site-text {
+    width: 100%; }
+  .side {
+    width: 100%; } }
