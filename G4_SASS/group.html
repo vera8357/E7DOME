@@ -3,23 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+
+
     <title>運動揪團</title>
     <link rel="stylesheet" href="css/group.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
 
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <style>
-        ul{
-
-        }
-    </style>
 </head>
 
 <body>
-    <header> <div class="logo"> <a href="#"> <img src="images/e7logo.png" alt=""> </a> </div> <ul> <li> <a href="#"> 場地介紹 </a> </li> <li> <a href="#"> 預約場地 </a> </li> <li> <a href="#"> 運動揪團 </a> </li> <li> <a href="#"> 關於我們 </a> </li> <li> <a href="#"> 諮詢專區 </a> </li> <li> <a href="#"> <img src="images/user-icon.png"> </a> </li> </ul> </header>
+    <!-- <header>
+     <div class="logo"> <a href="#"> <img src="images/e7logo.png" alt=""> </a> </div> <ul> <li> <a href="#"> 場地介紹 </a> </li> <li> <a href="#"> 預約場地 </a> </li> <li> <a href="#"> 運動揪團 </a> </li> <li> <a href="#"> 關於我們 </a> </li> <li> <a href="#"> 諮詢專區 </a> </li> <li> <a href="#"> <img src="images/user-icon.png"> </a> </li> </ul> </header> -->
 
     <section>
         <div class="select_bar">
@@ -32,10 +28,18 @@
             </select>
         </span>
         <span class="selectDate select-width black select ">
-            <input type="text" id="datepicker" class="black">
+            <input type="date" id="datepicker" class="black" placeholder="日期">
         </span>
-        <span class="selectTime select-width black select">
-            <input type="text" id="timepicker" class="black">
+        <span class="selectTime black select-width select">
+            <select>
+                <option>10:00 a.m</option>
+                <option>11:00 a.m</option>
+                <option>12:00 a.m</option>
+                <option>13:00 p.m</option>
+                <option>14:00 p.m</option>
+                <option>15:00 p.m</option>
+                <option>16:00 p.m</option>
+            </select>
         </span>
         <span class="selectDel select-width select"><i class="fas fa-trash-alt"></i>
 
@@ -47,50 +51,54 @@
     </div>
     </section>
     <section class="group-list">
-        <div class="groupblock">
-            <div class="group-img" style='background-image: url(images/rockclimb.jpg)'>
+        <div class="groupblock cl-3 cl-3">
+            <a href="groupInfo.html">
+            <div class="group-img" style='background-image: url(images/rockclimb.jpg)'><div class="group-date">
+                <span id="group-day">23</span><br>
+                <span id="group-month">AUG</span>
             </div>
-            <h4>中大籃球火</h4>
-
-
-        </div>
-        <div class="groupblock">
-            <div class="group-img" style='background-image: url(images/rockclimb.jpg)'>
             </div>
-            <h4>中大籃球火</h4>
+            <div class="group-title">中大籃球火</div>
 
+            </a>
         </div>
-        <div class="groupblock">
-            <div class="group-img" style='background-image: url(images/rockclimb.jpg)'>
-            </div>
-            <h4>中大籃球火</h4>
-
-        </div>
-        <div class="groupblock">
+        <div class="groupblock cl-3">
             <div class="group-img" style='background-image: url(images/rockclimb.jpg)'>
             </div>
             <h4>中大籃球火</h4>
 
         </div>
-        <div class="groupblock">
+        <div class="groupblock cl-3">
             <div class="group-img" style='background-image: url(images/rockclimb.jpg)'>
             </div>
             <h4>中大籃球火</h4>
 
         </div>
-        <div class="groupblock">
+        <div class="groupblock cl-3">
             <div class="group-img" style='background-image: url(images/rockclimb.jpg)'>
             </div>
             <h4>中大籃球火</h4>
 
         </div>
-        <div class="groupblock">
+        <div class="groupblock cl-3">
             <div class="group-img" style='background-image: url(images/rockclimb.jpg)'>
             </div>
             <h4>中大籃球火</h4>
 
         </div>
-        <div class="groupblock">
+        <div class="groupblock cl-3">
+            <div class="group-img" style='background-image: url(images/rockclimb.jpg)'>
+            </div>
+            <h4>中大籃球火</h4>
+
+        </div>
+        <div class="groupblock cl-3">
+            <div class="group-img" style='background-image: url(images/rockclimb.jpg)'>
+            </div>
+            <h4>中大籃球火</h4>
+
+        </div>
+        <div class="groupblock cl-3">
             <div class="group-img" style='background-image: url(images/rockclimb.jpg)'>
             </div>
             <h4>中大籃球火</h4>
@@ -98,9 +106,7 @@
         </div>
     </section>
     <script>
-    $(function(){
-        $("#datepicker").datepicker();
-    });
+
 
     </script>
 </body>
