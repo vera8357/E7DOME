@@ -1,0 +1,147 @@
+*{
+    outline:1px solid green;
+}
+body{
+    background-color: #fff;
+}
+img{
+    vertical-align: center;
+}
+.bkb_fp{
+    position: relative;
+}
+.bkb_fp:after{
+    display:block;
+    content:'';
+    clear: both;
+
+}
+.bkb_fp_bgimg{
+    float:right;
+    width:81.2%;
+}
+.bkb_fp_bgimg img{
+    width:100%;
+}
+.bkb_fp_blue{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 65vw 74vw 0 0;
+    border-color: #0052b2 transparent transparent transparent;
+    left:0;
+    top:0;
+    z-index: 1;
+}
+.bkb_fp_black{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 16vw 20vw 0 16vw;
+    border-color: #000 transparent transparent transparent;
+    position: absolute;
+    top:0;
+    left:10%;
+}
+.bkb_fp_black2{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 20vw 28vw;
+    border-color: transparent transparent #000 transparent;
+    position: absolute;
+    bottom:0;
+    right:0;
+    // z-index: 5;
+}
+.kobe{
+    position: absolute;
+    width:48%;
+    left:13%;
+    z-index: 1;
+}
+.kobe img{
+    width:100%;
+}
+.bkb_fp h1,
+.bkb_fp h2{
+    position: absolute;
+    color:#0052b2;
+    text-shadow: #fff 0px 3px,#fff 0px -3px,#fff 3px 0px,#fff -3px 0px;
+    top:50%;
+    right:15%;
+    margin-right: 8%;
+}
+.bkb_fp h2{
+    top:65%;
+    right:15%;
+    margin-right: 0;
+}
+
+.site_info{
+    background-color: #ffb405;
+}
+.site_info h3{
+    color:#000;
+}
+.site_info::before{
+    display:none;
+}
+.site_info::after{
+    position: absolute;
+    display:block;
+    content:'';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10vw 0 0 98vw;
+    border-color: transparent transparent transparent #fff;
+    left:0;
+    bottom:0;
+}
+.assess{
+    background-color: #fff;
+    padding-bottom: 15%;
+}
+.assess_table label{
+    background-color:#0052b2;
+    color:#fff;
+}
+.assess:before{
+    display:block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom:0;
+    left:0;
+    border-style: solid;
+    border-width: 20vw 0 0 35vw;
+    border-color: transparent transparent transparent #000;
+}
+.assess:after{
+    display:block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    right:0;
+    bottom:0;
+    border-style: solid;
+    border-width: 0 0 15vw 98vw;
+    border-color: transparent transparent #0052b2 transparent;
+}
+.assess_wrap h3{
+    color:#fff;
+}
+.group_page{
+    background-color: #0052b2;
+}
+.group_page_content h3{
+    color:#fff;
+}
+.group_page_content{
+    background-color: #0052b2;
+}
+.group_page:before{
+    display:none;
+}
