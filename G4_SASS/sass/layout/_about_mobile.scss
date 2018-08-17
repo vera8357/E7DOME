@@ -56,7 +56,8 @@
     justify-content: center;
   }
   .basketball-o {
-    align-self: center;
+    display: block;
+    margin: auto;
     position: static;
     min-width: 50%;
     top: 0%;
@@ -64,13 +65,14 @@
   }
   .basketball h3 {
     align-self: center;
-    position: static;
+    position: relative;
     font-size: 8vw;
     top: 0%;
     left: 0%;
   }
   .rock-climbing-o {
-    align-self: center;
+    display: block;
+    margin: auto;
     position: static;
     min-width: 50%;
     top: 0%;
@@ -78,13 +80,14 @@
   }
   .rock-climbing h3 {
     align-self: center;
-    position: static;
+    position: relative;
     font-size: 8vw;
     top: 0%;
     left: 0%;
   }
   .badminton-o {
-    align-self: center;
+    display: block;
+    margin: auto;
     position: static;
     min-width: 50%;
     top: 0%;
@@ -92,13 +95,14 @@
   }
   .badminton h3 {
     align-self: center;
-    position: static;
+    position: relative;
     font-size: 8vw;
     top: 0%;
     left: 0%;
   }
   .bowling-o {
-    align-self: center;
+    display: block;
+    margin: auto;
     position: static;
     min-width: 50%;
     top: 0%;
@@ -106,12 +110,31 @@
   }
   .bowling h3 {
     align-self: center;
-    position: static;
+    position: relative;
     font-size: 7vw;
     top: 0%;
     left: 0%;
   }
-
+  .point-txt1 {
+    position: absolute;
+    top: -28px;
+    left:-7%;
+  }
+  .point-txt2 {
+    position: absolute;
+    top: -28px;
+    left:-7%;
+  }
+  .point-txt3 {
+    position: absolute;
+    top: -28px;
+    left:-7%;
+  }
+  .point-txt4 {
+    position: absolute;
+    top: -28px;
+    left:-7%;
+  }
   .l-color-block {
     position: absolute;
     z-index: -1;
@@ -122,7 +145,6 @@
     background-color: $info-bgcolor;
     transform: rotate(-20deg);
   }
-
   .r-color-block {
     position: absolute;
     z-index: -1;
@@ -144,7 +166,6 @@
     font-weight: bold;
     padding: 1em;
   }
-
   .business-text h3 {
     font-size: 5vw;
     line-height: 1.3em;
@@ -169,7 +190,6 @@
     flex-direction: row;
     justify-content: center;
   }
-
   .business-text span {
     display: inline-block;
     box-sizing: border-box;
@@ -184,7 +204,6 @@
     top: 60px;
     left: 50%;
   }
-
   .sportman2 img {
     width: 40%;
     position: relative;

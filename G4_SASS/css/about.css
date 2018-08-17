@@ -139,6 +139,9 @@ p {
   background-position: top right;
   padding-bottom: 50%; }
 
+.sports-introduction a {
+  color: #fff; }
+
 .basketball h3 {
   position: absolute;
   font-size: 2em;
@@ -147,7 +150,7 @@ p {
 
 .basketball-o {
   position: absolute;
-  width: 24%;
+  width: 20%;
   top: 25%;
   right: -4.5%; }
 
@@ -159,8 +162,9 @@ p {
 
 .badminton-o {
   position: absolute;
-  width: 10%;
-  top: 25%;
+  border-radius: 50%;
+  width: 20%;
+  top: 5%;
   right: 45%; }
 
 .bowling h3 {
@@ -171,9 +175,9 @@ p {
 
 .bowling-o {
   position: absolute;
-  width: 10%;
-  top: 70%;
-  right: 90%; }
+  width: 20%;
+  top: 50%;
+  right: 80%; }
 
 .rock-climbing h3 {
   position: absolute;
@@ -183,9 +187,30 @@ p {
 
 .rock-climbing-o {
   position: absolute;
-  width: 10%;
+  border-radius: 50%;
+  width: 15%;
   top: 55%;
   right: 35%; }
+
+.point-txt1 {
+  position: absolute;
+  top: -25px;
+  right: 80%; }
+
+.point-txt2 {
+  position: absolute;
+  top: -25px;
+  right: 80%; }
+
+.point-txt3 {
+  position: absolute;
+  top: -25px;
+  right: 80%; }
+
+.point-txt4 {
+  position: absolute;
+  top: -25px;
+  right: 80%; }
 
 .business-info {
   position: relative;
@@ -799,53 +824,73 @@ footer {
     flex-direction: column;
     justify-content: center; }
   .basketball-o {
-    align-self: center;
+    display: block;
+    margin: auto;
     position: static;
     min-width: 50%;
     top: 0%;
     left: 0%; }
   .basketball h3 {
     align-self: center;
-    position: static;
+    position: relative;
     font-size: 8vw;
     top: 0%;
     left: 0%; }
   .rock-climbing-o {
-    align-self: center;
+    display: block;
+    margin: auto;
     position: static;
     min-width: 50%;
     top: 0%;
     right: 0%; }
   .rock-climbing h3 {
     align-self: center;
-    position: static;
+    position: relative;
     font-size: 8vw;
     top: 0%;
     left: 0%; }
   .badminton-o {
-    align-self: center;
+    display: block;
+    margin: auto;
     position: static;
     min-width: 50%;
     top: 0%;
     right: 0%; }
   .badminton h3 {
     align-self: center;
-    position: static;
+    position: relative;
     font-size: 8vw;
     top: 0%;
     left: 0%; }
   .bowling-o {
-    align-self: center;
+    display: block;
+    margin: auto;
     position: static;
     min-width: 50%;
     top: 0%;
     right: 0%; }
   .bowling h3 {
     align-self: center;
-    position: static;
+    position: relative;
     font-size: 7vw;
     top: 0%;
     left: 0%; }
+  .point-txt1 {
+    position: absolute;
+    top: -28px;
+    left: -7%; }
+  .point-txt2 {
+    position: absolute;
+    top: -28px;
+    left: -7%; }
+  .point-txt3 {
+    position: absolute;
+    top: -28px;
+    left: -7%; }
+  .point-txt4 {
+    position: absolute;
+    top: -28px;
+    left: -7%; }
   .l-color-block {
     position: absolute;
     z-index: -1;
