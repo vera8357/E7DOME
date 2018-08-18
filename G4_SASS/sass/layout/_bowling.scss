@@ -67,6 +67,7 @@ h1,h2{
     position: absolute;
     top:50%;
     right:15%;
+    @include font-face();
     text-align: right;
     margin-right: 8%;
     text-shadow: #fff 0px 3px,#fff 0px -3px,#fff 3px 0px,#fff -3px 0px
