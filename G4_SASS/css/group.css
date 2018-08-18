@@ -2,7 +2,6 @@
 header {
   width: 100%;
   font-family: 'HanWangZonYi';
-  src: url(../font/HanWangZonYi.woff);
   position: absolute;
   z-index: 99; }
 
@@ -47,7 +46,6 @@ header ul li:last-child {
 
 h1, h2 {
   font-family: 'HanWangZonYi';
-  src: url(../font/HanWangZonYi.woff);
   font-size: 5vw; }
 
 * {

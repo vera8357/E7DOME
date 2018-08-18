@@ -1,7 +1,6 @@
 @charset "UTF-8";
 h1, h2 {
   font-family: 'HanWangZonYi';
-  src: url(../font/HanWangZonYi.woff);
   font-size: 5vw; }
 
 body {
@@ -62,6 +61,7 @@ h1, h2 {
   position: absolute;
   top: 50%;
   right: 15%;
+  font-family: 'HanWangZonYi';
   text-align: right;
   margin-right: 8%;
   text-shadow: #fff 0px 3px,#fff 0px -3px,#fff 3px 0px,#fff -3px 0px; }
@@ -92,7 +92,6 @@ h2 {
 .group_page h3 {
   font-size: 48px;
   font-family: 'HanWangZonYi';
-  src: url(../font/HanWangZonYi.woff);
   color: #70d9f1;
   line-height: 3; }
 
@@ -117,7 +116,6 @@ h2 {
 .info p {
   font-size: 18px;
   font-family: 'HanWangZonYi';
-  src: url(../font/HanWangZonYi.woff);
   line-height: 1.5; }
 
 .info p:nth-child(3),
@@ -133,7 +131,6 @@ h2 {
   background-color: #0052b2;
   color: #fff;
   font-family: 'HanWangZonYi';
-  src: url(../font/HanWangZonYi.woff);
   font-size: 18px;
   padding: 12px 0 12px;
   border: 0;
@@ -171,7 +168,6 @@ h2 {
   display: block;
   font-size: 18px;
   font-family: 'HanWangZonYi';
-  src: url(../font/HanWangZonYi.woff);
   text-align: left;
   padding-left: 10px;
   padding-right: 10px; }
@@ -256,7 +252,6 @@ h2 {
   float: left;
   text-align: center;
   font-family: 'HanWangZonYi';
-  src: url(../font/HanWangZonYi.woff);
   color: #0052b2;
   font-size: 30px;
   line-height: 2;
@@ -343,7 +338,6 @@ td img {
 header {
   width: 100%;
   font-family: 'HanWangZonYi';
-  src: url(../font/HanWangZonYi.woff);
   position: absolute;
   z-index: 99; }
 
@@ -388,5 +382,4 @@ header ul li:last-child {
 
 h1, h2 {
   font-family: 'HanWangZonYi';
-  src: url(../font/HanWangZonYi.woff);
   font-size: 5vw; }
