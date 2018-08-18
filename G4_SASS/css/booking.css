@@ -1,7 +1,6 @@
 header {
   width: 100%;
   font-family: 'HanWangZonYi';
-  src: url(../font/HanWangZonYi.woff);
   position: absolute;
   z-index: 99; }
 
@@ -46,7 +45,6 @@ header ul li:last-child {
 
 h1, h2 {
   font-family: 'HanWangZonYi';
-  src: url(../font/HanWangZonYi.woff);
   font-size: 5vw; }
 
 * {
@@ -975,53 +973,73 @@ a {
     flex-direction: column;
     justify-content: center; }
   .basketball-o {
-    align-self: center;
+    display: block;
+    margin: auto;
     position: static;
     min-width: 50%;
     top: 0%;
     left: 0%; }
   .basketball h3 {
     align-self: center;
-    position: static;
+    position: relative;
     font-size: 8vw;
     top: 0%;
     left: 0%; }
   .rock-climbing-o {
-    align-self: center;
+    display: block;
+    margin: auto;
     position: static;
     min-width: 50%;
     top: 0%;
     right: 0%; }
   .rock-climbing h3 {
     align-self: center;
-    position: static;
+    position: relative;
     font-size: 8vw;
     top: 0%;
     left: 0%; }
   .badminton-o {
-    align-self: center;
+    display: block;
+    margin: auto;
     position: static;
     min-width: 50%;
     top: 0%;
     right: 0%; }
   .badminton h3 {
     align-self: center;
-    position: static;
+    position: relative;
     font-size: 8vw;
     top: 0%;
     left: 0%; }
   .bowling-o {
-    align-self: center;
+    display: block;
+    margin: auto;
     position: static;
     min-width: 50%;
     top: 0%;
     right: 0%; }
   .bowling h3 {
     align-self: center;
-    position: static;
+    position: relative;
     font-size: 7vw;
     top: 0%;
     left: 0%; }
+  .point-txt1 {
+    position: absolute;
+    top: -28px;
+    left: -7%; }
+  .point-txt2 {
+    position: absolute;
+    top: -28px;
+    left: -7%; }
+  .point-txt3 {
+    position: absolute;
+    top: -28px;
+    left: -7%; }
+  .point-txt4 {
+    position: absolute;
+    top: -28px;
+    left: -7%; }
   .l-color-block {
     position: absolute;
     z-index: -1;
