@@ -337,7 +337,7 @@ footer {
 .an-first > img,
 .an-first > div {
   position: absolute;
-  opacity: 1; }
+  opacity: 0; }
 
 .an-first > img {
   width: auto; }
@@ -376,6 +376,35 @@ footer {
   .an-first {
     width: 360px;
     height: calc((360px / 3.2) * 3); } }
+
+.block-image-video {
+  position: relative;
+  height: calc((500px / 3.2) * 3); }
+
+.block-image-video:hover .block-video {
+  cursor: url(../../../images/about-material/about-animation/video/arrow-quattro-8c19783f05e08cb519ba717790202f1c8af49e67fc94211cc97e28261c1be3ec.svg) 30 45, auto; }
+
+.block-image-video:hover .block-video {
+  box-shadow: 0 4px 30px 0 rgba(47, 144, 211, 0.4); }
+
+.block-video {
+  display: none;
+  position: absolute;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  transition: box-shadow .5s ease, -webkit-transform .2s ease;
+  transition: box-shadow .5s ease, transform .2s ease;
+  transition: box-shadow .5s ease, transform .2s ease, -webkit-transform .2s ease;
+  overflow: hidden; }
+
+.block-video .video-item {
+  position: absolute;
+  width: 135%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
 
 .an-first-area-1 {
   left: 0;
@@ -771,7 +800,7 @@ footer {
 @keyframes breatheBall {
   0% {
     transform: scale(1);
-    opacity: .6; }
+    opacity: 0.6; }
   100% {
     transform: scale(1.1);
     opacity: 1; } }
@@ -796,6 +825,8 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center; }
+  .block-image-video {
+    height: auto; }
   .block-item .block-text:last-child {
     padding-left: 0em; }
   .sports-introduction {
