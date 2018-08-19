@@ -1,3 +1,4 @@
+// 機械手臂互動
 $("#animation-crane").hover(
   function() {
     $(this).addClass("activate"),
@@ -27,7 +28,7 @@ $("#animation-crane").hover(
         e.preventDefault(), $(".an-crane-area-2").fadeOut(3e3);
       });
   },
-  //執行程式
+  //手臂執行程式事件
   function() {
     $(".an-crane-area-2").fadeIn(),
       $(".an-crane-1-wrap, .an-crane-1-wrap, .an-crane-area-wrap").css(
@@ -38,6 +39,7 @@ $("#animation-crane").hover(
   }
 );
 
+//3d動態影片牆jQuery
 $(document).ready(function() {
   var e = $(".playItem").get(0);
   $(".showPlayer").on("touchstart", function() {
@@ -66,24 +68,25 @@ $(document).ready(function() {
           e.play();
         }, 500);
       })
-      .bind("mouseleave", function() {
-        e.pause();
-      }),
-    $(".playControl, .play_video").click(function() {
-      $("body").append(
-        '<div class="popup popup_video"><div class="container"><div class="popup_bg"></div><div id="player" class="index_player"></div><div class="close close_video"></div></div></div>'
-      ),
-        $(".popup_video").addClass("open"),
-        onYouTubePlayerAPIReady(),
-        $(".close_video, .popup_video .popup_bg").click(function() {
-          $(".popup_video")
-            .removeClass("open")
-            .addClass("close"),
-            setTimeout(function() {
-              $(".popup_video").remove();
-            }, 1400);
-        });
-    });
+    //點擊觸發影片撥放控制
+    //   .bind("mouseleave", function() {
+    //     e.pause();
+    //   }),
+    // $(".playControl, .play_video").click(function() {
+    //   $("body").append(
+    //     '<div class="popup popup_video"><div class="container"><div class="popup_bg"></div><div id="player" class="index_player"></div><div class="close close_video"></div></div></div>'
+    //   ),
+    //     $(".popup_video").addClass("open"),
+    //     onYouTubePlayerAPIReady(),
+    //     $(".close_video, .popup_video .popup_bg").click(function() {
+    //       $(".popup_video")
+    //         .removeClass("open")
+    //         .addClass("close"),
+    //         setTimeout(function() {
+    //           $(".popup_video").remove();
+    //         }, 1400);
+    //     });
+    // });
 });
 
 var tag = document.createElement("script");
@@ -92,6 +95,7 @@ var firstScriptTag = document.getElementsByTagName("script")[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var player,
   card = $(".playControl");
+//控制css transform角度計算
 $(".showPlayer").mousemove(function(e) {
   var t = card.offset().left + card.width() / 2,
     n = card.offset().top + card.height() / 2,
@@ -106,7 +110,7 @@ $(".showPlayer").mousemove(function(e) {
       "deg) translateY(" +
       -a / 10 +
       "%)",
-    boxShadow: a / 2 + "px " + -r / 2 + "px 30px 0 rgba(47, 144, 211, 0.4)"
+    boxShadow: a / 2 + "px " + -r / 2 + "px 30px 0 rgba(211, 201, 47, 0.781)" //陰影計算
   });
 }),
   $(document).ready(function() {
@@ -127,6 +131,7 @@ $(".showPlayer").mousemove(function(e) {
       e();
     }
   });
-
-var scene = document.getElementById("parallax_box");
-var parallax = new Parallax(scene);
+//視差滑鼠動態
+// var scene = document.getElementById("parallax_box");
+// var parallax = new Parallax(scene);
+$("#scene2").parallax();
