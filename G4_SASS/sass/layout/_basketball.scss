@@ -85,21 +85,6 @@ img{
 .site_info h3{
     color:#000;
 }
-.site_info::before{
-    display:none;
-}
-.site_info::after{
-    position: absolute;
-    display:block;
-    content:'';
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 10vw 0 0 98vw;
-    border-color: transparent transparent transparent #fff;
-    left:0;
-    bottom:0;
-}
 .assess{
     background-color: #fff;
     padding-bottom: 15%;
@@ -107,28 +92,6 @@ img{
 .assess_table label{
     background-color:#0052b2;
     color:#fff;
-}
-.assess:before{
-    display:block;
-    width: 0;
-    height: 0;
-    position: absolute;
-    bottom:0;
-    left:0;
-    border-style: solid;
-    border-width: 20vw 0 0 35vw;
-    border-color: transparent transparent transparent #000;
-}
-.assess:after{
-    display:block;
-    width: 0;
-    height: 0;
-    position: absolute;
-    right:0;
-    bottom:0;
-    border-style: solid;
-    border-width: 0 0 15vw 98vw;
-    border-color: transparent transparent #0052b2 transparent;
 }
 .assess_wrap h3{
     color:#fff;
@@ -141,7 +104,4 @@ img{
 }
 .group_page_content{
     background-color: #0052b2;
-}
-.group_page:before{
-    display:none;
 }

@@ -44,114 +44,6 @@ header ul li:last-child {
 #loginicon {
   width: 100%; }
 
-h1, h2 {
-  font-family: 'HanWangZonYi';
-  font-size: 5vw; }
-
-* {
-  outline: 1px solid green; }
-
-body {
-  background-color: #fff; }
-
-img {
-  vertical-align: center; }
-
-.bkb_fp {
-  position: relative; }
-
-.bkb_fp:after {
-  display: block;
-  content: '';
-  clear: both; }
-
-.bkb_fp_bgimg {
-  float: right;
-  width: 81.2%; }
-
-.bkb_fp_bgimg img {
-  width: 100%; }
-
-.bkb_fp_blue {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 65vw 74vw 0 0;
-  border-color: #0052b2 transparent transparent transparent;
-  left: 0;
-  top: 0;
-  z-index: 1; }
-
-.bkb_fp_black {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 16vw 20vw 0 16vw;
-  border-color: #000 transparent transparent transparent;
-  position: absolute;
-  top: 0;
-  left: 10%; }
-
-.bkb_fp_black2 {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 0 20vw 28vw;
-  border-color: transparent transparent #000 transparent;
-  position: absolute;
-  bottom: 0;
-  right: 0; }
-
-.kobe {
-  position: absolute;
-  width: 48%;
-  left: 13%;
-  z-index: 1; }
-
-.kobe img {
-  width: 100%; }
-
-.bkb_fp h1,
-.bkb_fp h2 {
-  position: absolute;
-  color: #0052b2;
-  text-shadow: #fff 0px 3px,#fff 0px -3px,#fff 3px 0px,#fff -3px 0px;
-  top: 50%;
-  right: 15%;
-  margin-right: 8%; }
-
-.bkb_fp h2 {
-  top: 65%;
-  right: 15%;
-  margin-right: 0; }
-
-.site_info {
-  background-color: #ffb405; }
-
-.site_info h3 {
-  color: #000; }
-
-.assess {
-  background-color: #fff;
-  padding-bottom: 15%; }
-
-.assess_table label {
-  background-color: #0052b2;
-  color: #fff; }
-
-.assess_wrap h3 {
-  color: #fff; }
-
-.group_page {
-  background-color: #0052b2; }
-
-.group_page_content h3 {
-  color: #fff; }
-
-.group_page_content {
-  background-color: #0052b2; }
-
 img {
   vertical-align: middle; }
 
@@ -416,3 +308,85 @@ td img {
   border-style: solid;
   border-width: 0 280px 250px 0;
   border-color: transparent #f26fa2 transparent transparent; }
+
+* {
+  outline: 1px solid green; }
+
+.bad_fp {
+  position: relative;
+  width: 100%;
+  padding-top: 44%;
+  height: 0;
+  background-color: #fff; }
+
+.bad_fp_rec {
+  width: 21%;
+  padding-top: 44%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #ffd783; }
+
+.bad_fp_tri {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 43.5vw 0 0 43.5vw;
+  border-color: transparent transparent transparent #ffd783;
+  position: absolute;
+  top: 0;
+  left: 21%; }
+
+.bad_fp_bgimg1 {
+  width: 50%;
+  position: absolute;
+  left: 2%;
+  bottom: 0; }
+
+.bad_fp_bgtri {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50vw 50vw 0 50vw;
+  border-color: #fff transparent transparent transparent;
+  position: absolute;
+  top: 0;
+  right: -23%; }
+
+.bad_fp_bgimg2 {
+  width: 69%;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.bad_fp_bgimg3 {
+  width: 76%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.bad_fp_bgimg4 {
+  width: 21%;
+  position: absolute;
+  bottom: -10%;
+  left: 36%; }
+
+.bad_fp_bgimg1 img,
+.bad_fp_bgimg2 img,
+.bad_fp_bgimg3 img,
+.bad_fp_bgimg4 img {
+  width: 100%; }
+
+.bad_fp_tri2 {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 18vw 18vw;
+  border-color: transparent transparent #ffd783 transparent;
+  position: absolute;
+  bottom: 0;
+  right: 0; }
+
+h1, h2 {
+  font-family: 'HanWangZonYi';
+  font-size: 5vw; }
