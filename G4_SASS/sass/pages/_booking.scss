@@ -26,7 +26,6 @@ a{
 	display: flex;
 	flex-direction: row;
 	overflow: hidden;
-	padding-top: 25vh;
 }
 @media only screen and (max-width: 767px) {
     .container {
@@ -36,7 +35,7 @@ a{
 
 .area{
 	width: calc(50%/3);
-	height: 75vh;
+	height: 100vh;
 	/*transform: skew(-10deg);*/
 	position: relative;
 	overflow: hidden;
