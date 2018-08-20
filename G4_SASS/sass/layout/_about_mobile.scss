@@ -24,6 +24,9 @@
     flex-direction: row;
     justify-content: center;
   }
+  .block-image-video {
+    height: auto
+  }
   .block-item .block-text:last-child {
     padding-left: 0em;
   }
@@ -118,22 +121,22 @@
   .point-txt1 {
     position: absolute;
     top: -28px;
-    left:-7%;
+    left: -7%;
   }
   .point-txt2 {
     position: absolute;
     top: -28px;
-    left:-7%;
+    left: -7%;
   }
   .point-txt3 {
     position: absolute;
     top: -28px;
-    left:-7%;
+    left: -7%;
   }
   .point-txt4 {
     position: absolute;
     top: -28px;
-    left:-7%;
+    left: -7%;
   }
   .l-color-block {
     position: absolute;
@@ -198,16 +201,23 @@
     font-size: 5vw;
     padding: 1.5em;
   }
-  .sportman1 img {
-    width: 40%;
-    position: relative;
-    top: 60px;
-    left: 50%;
+  .redman {
+    top: 10px;
+    right: -450px;
   }
-  .sportman2 img {
+  .redman img {
+    width: 30%;
+  }
+  .blackman img {
+    width: 70%;
+    display: none;
+  }
+  .fastball {
+    top: -10px;
+    right: -250px;
+  }
+  .fastball img {
     width: 40%;
-    position: relative;
-    left: 70%;
   }
   .container-side {
     flex-wrap: wrap;
