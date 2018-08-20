@@ -52,19 +52,21 @@
 .site_info{
     background-color: #f6682f;
 }
-.assess,
+.assess{
+    background-color: #fff;
+}
 .group_page {
     background-color: #ffb783;
 }
-.site_info:after {
+.site_info_tri2 {
     border-color: transparent transparent transparent #ffb783;    
 }
-.assess:before {
+.assess_tri1 {
     border-color: #f6682f transparent transparent transparent;
 }
-.assess:after {
-    border-color: transparent transparent #f6682f transparent;
+.assess_tri2 {
+    border-color: transparent transparent #f6672f70 transparent;
 }
-.group_page:before {
-    border-color: transparent #f6672f70 transparent transparent;
+.group_page_tri {
+    border-color: transparent #f6682f transparent transparent;
 }

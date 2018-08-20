@@ -159,18 +159,18 @@ a{
 	font-size:10vw;
 }
 	.home_pg1_btng{
-	margin-left: 3vw;
+	margin-left: 0;
 	margin-top: 2vw;
 }
 	.home_pg1_btn{
 	display: inline-block;
 	background-color: #fff;
-	width: 7vw;
-	height: 3vw;
-	font-size: 2vw;
+	width: 14vw;
+	height: 6vw;
+	font-size: 4vw;
 	text-align: center;
 	border-radius: 50px;
-	line-height: 3vw;
+	line-height: 6vw;
 	margin:0 0.5vw;
 	color: #0052b2;
 }
@@ -542,10 +542,11 @@ a{
 	padding-bottom: 150%;
 	background-repeat: no-repeat;
 	background-position: 97% 3%;
+	// background-size: contain;
 }
 .cardP1{
 	font-size: 26px;
-	margin-top: 100px;
+	margin-top: 50%;
 }
 .cardP2{
 	font-size: 20px;
@@ -630,14 +631,7 @@ a{
 
 @media screen and (max-width: 1200px) {
 	.home_pg4_bg{
-	position: absolute;
-	top:0;
-	right: 0;
-	width: 100%;
-	height: 100vh;
-	background-image: url('../images/index/bg4.png');
-	background-size: cover;
-	/*background-position: center;*/
+	display: none;
 }
 	.home_pg4_bluebox1{
 	position: absolute;
@@ -696,10 +690,64 @@ a{
 	transform: translateY(-50%);
 }
 	.pointCard li{
-	width:100%;
-	padding: 0 15px;
-	height: 420px;
-}
+		// width:100%;
+		// margin-bottom:800px;
+	}
+	.cardP1{
+		font-size: 2vw;
+	}
+	.cardP2{
+		font-size: 20px;
+		margin-left: -20px;
+	}
+	.cardP3{
+		margin: 3vw auto 4.2vw;
+		font-size: 3vw
+		
+	}
+	.cardCost{
+		font-size: 4vw;
+	}
+	.cardPoint{
+		font-size: 2vw;
+	}
+	.cardFree{
+		font-size: 1.5vw;
+		background-color: #fff;
+		padding: 1px;
+		border-radius: 50%;
+	}
+	.cardBuy{
+		display: block;
+		background-color: #fff;
+		padding: 1vw 1.5vw;
+		border-radius: 15px;
+
+	}
+	.home_pg4_txt{
+		width: 100%;
+		left: 0;
+		top:20vh;
+		transform: skewX(0deg);
+		opacity: 0;
+		text-align: center
+	
+	}
+	.home_pg4_txt h2{
+		color :#0052B2;
+		font-size: 5vw;
+	}
+	.home_pg4_txt p{
+		color: #ffb505;
+		font-size: 1.5vw;
+		margin-top: 3vh;
+	}
+	.home_pg4_bluebox2 h3{
+		text-align:center;
+		padding-right: 0;
+	}
+
+
 }
 
 .home_pg5{
@@ -847,7 +895,7 @@ a{
 		padding-left: 0px;
 		width: 100%;
 		text-align: center;
-		font-size: 48px;
+		font-size: 5vw;
 		font-weight: bold;
 		z-index: 3;
 		opacity: 0;
