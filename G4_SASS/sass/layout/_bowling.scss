@@ -1,7 +1,4 @@
 @import "mixins/mixins";
-body{
-    background-color: #ea4c89;
-}
 img{
     vertical-align: middle;
 }
@@ -11,6 +8,7 @@ img{
 .bownling_first_page{
     width:100%;
     position: relative;
+    background-color: #ea4c89;
     // background-color: #F00;
 }
 .bownling_first_page:after{
@@ -76,4 +74,12 @@ h2{
     top:65%;
     right:15%;
     margin-right: 0;
+}
+.site_info{
+    background-color: #ea4c89;}
+.assess{
+    background-color: #70d9f1;
+}
+.group_page{
+    background-color: #70d9f1;    
 }
