@@ -2,7 +2,7 @@ function $id(id){
 	return document.getElementById(id);
 }	
 
-    function showLoginForm(){
+function showLoginForm(){
       
       if($id('spanLogin').innerHTML == "登入"){
       $id('sing_in').style.display = 'block';
@@ -10,50 +10,51 @@ function $id(id){
         var xhr = new XMLHttpRequest();
         xhr.onload = function(){
           if( xhr.status == 200){
-            $id('MEM_NAME').innerHTML = '&nbsp';
+            $id('link_member').href ='#';
+            $id('m_pic').src ='member_pic/pic.jpg';
             $id('spanLogin').innerHTML = '登入';             
           }else{
             alert( xhr.status);
           }
          
         }
-        xhr.open("get","ajax_logout.php",true);
+        xhr.open("get","../php/ajax_logout.php",true);
         xhr.send(null);
-
       }
+ }//showLoginForm
 
-    }//showLoginForm
-
-    function sendForm(){
+function sendForm(){
       //=====使用Ajax 回server端,取回登入者姓名, 放到頁面上    
-      var xhr = new XMLHttpRequest();
+    var xhr = new XMLHttpRequest();
 
-      xhr.onload = function(){
+    xhr.onload = function(){
         if( xhr.status == 200){  
           if( xhr.responseText == "NG"){
             alert("帳密錯誤");
           }else{
-            document.getElementById("MEM_NAME").innerHTML = xhr.responseText;
-            document.getElementById("spanLogin").innerHTML = "登出";  
+            document.getElementById("link_member").href ='memberinfo.php';
+            document.getElementById("m_pic").src = 'member_pic/'+ xhr.responseText;
+            document.getElementById("spanLogin").innerHTML = "登出"; 
+  
+            
           }
 
         }else{
           alert(xhr.status);
         }
-      }
+    }
 
-      xhr.open("Post", "ajax_login.php", true);
+      xhr.open("Post", "../php/ajax_login.php", true);
       xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
       var data_info = "MEM_ID=" + document.getElementById("MEM_ID").value 
                     + "&MEM_PSW="+ document.getElementById("MEM_PSW").value;
       xhr.send(data_info);
-
       //將登入表單上的資料清空，並隱藏起來
       $id('sing_in').style.display='none';
       $id('MEM_ID').value = '';
       $id('MEM_PSW').value = '';
       
-    }
+}
 
 
 function close_1(){
@@ -62,8 +63,10 @@ function close_1(){
     $id('MEM_PSW').value='';
 }
 
+
 function close_2(){
-    $id('check').innerHTML = '';  
+    $id('check_id').innerHTML = '';
+    $id('check_psw').innerHTML = '';
     $id('enroll_id').value = '';
     $id('enroll_psw1').value = '';
     $id('enroll_psw2').value = '';
@@ -72,7 +75,6 @@ function close_2(){
     $id('enroll').style.display = 'none';
     $id('sing_in').style.display = 'none';
  
-
 }
 
 
@@ -80,24 +82,35 @@ function close_2(){
 function show_enroll(){
    $id('enroll').style.display='block';
     $id('sing_in').style.display = 'none';
-  }
+}
 
   // 檢察密碼是否相同
-  function check_psw(){
-   var psw_1 = $id('enroll_psw1').value;
-   var psw_2 = $id('enroll_psw2').value;
+function check_psw(){
+     var psw_1 = $id('enroll_psw1').value;
+     var psw_2 = $id('enroll_psw2').value;
 
-  if(psw_2 == psw_1){
-    $id('check').innerHTML="";
-    $id('enroll_send').disabled=false;
-  }else{
-    $id('check').innerHTML="密碼不同";
-    $id('enroll_send').disabled=true;
-  }
+    if(psw_2 == psw_1){
+        $id('check_psw').innerHTML="";
+       $id('enroll_send').disabled=false;
+
+    }else{
+      $id('check_psw').innerHTML="密碼不同";
+      $id('enroll_send').disabled=true;
+    }
 
 
 }
 
+
+function check_tel(){
+  re = /^[09]{2}[0-9]{8}$/;
+  if(!re.test($id('enroll_tel').value)){
+    alert('手機號碼不符合規範');
+     $id('enroll_send').disabled=true;
+  }else{
+     $id('enroll_send').disabled=false;
+  }
+}
 
 
 
@@ -109,18 +122,22 @@ function check_id(){
   xhr.onload = function(){
 
      if( xhr.status == 200){  
-        document.getElementById("check").innerHTML = xhr.responseText;
+      var reply = xhr.responseText
+
+          if(reply == "帳號已存在"){
+            document.getElementById("check_id").innerHTML = reply;
+             $id('enroll_send').disabled=true;
+          }else{
+            document.getElementById("check_id").innerHTML = reply;
+             $id('enroll_send').disabled=false;
+          }
+
         }else{
           alert(xhr.status);
         
         }
-
-
   }
-
-
-
-  var url = "check_id.php?MEM_ID=" + document.getElementById("enroll_id").value;
+  var url = "../php/check_id.php?enroll_id=" + document.getElementById("enroll_id").value;
   xhr.open("get", url, true);
   xhr.send(null);
 
@@ -129,23 +146,16 @@ function check_id(){
 
 
 
-   
 
-    // function cancelLogin(){
-    //   將登入表單上的資料清空，並將燈箱隱藏起來
-    //   $id('lightBox').style.display = 'none';
-    //   $id('memId').value = '';
-    //   $id('memPsw').value = '';
-    // }
 
     function init(){
-      
+     
       // 登入燈箱
-      $id('spanLogin').onclick = showLoginForm;
+      $id('spanLogin').onclick=showLoginForm; 
+    
 
       // 登入確認
       $id('login_btn').onclick = sendForm;
-
 
       // 登入燈箱 註冊登箱 清空關閉
       $id('close_1').onclick = close_1;
@@ -154,19 +164,16 @@ function check_id(){
       // 顯示註冊登箱
       $id('enroll_btn').onclick = show_enroll;
 
-    // 檢查帳號是否有重複
-
     // 檢察密碼是否相同
       $id('enroll_psw1').onchange = check_psw;
       $id('enroll_psw2').onchange = check_psw;
 
+      //檢查電話是否正確
+      $id('enroll_tel').onchange = check_tel;
+
       // 檢查帳號是否有重複
       $id('enroll_id').onchange = check_id;
 
-
-
-     
-     
       
     }; //window.onload
 

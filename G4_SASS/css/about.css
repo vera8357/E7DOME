@@ -52,7 +52,9 @@ header ul li:last-child {
     margin-top: .5%;
     margin-bottom: .5%; } }
 
-h1, h2 {
+/*lightbox*/
+h1,
+h2 {
   font-family: 'HanWangZonYi';
   font-size: 5vw; }
 

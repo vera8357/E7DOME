@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*lightbox*/
 header {
   width: 100%;
   font-family: 'HanWangZonYi';
@@ -385,6 +386,7 @@ td img {
 .group_page:before {
   border-color: transparent #f6672f70 transparent transparent; }
 
-h1, h2 {
+h1,
+h2 {
   font-family: 'HanWangZonYi';
   font-size: 5vw; }

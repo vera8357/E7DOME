@@ -1,3 +1,4 @@
+
 <?php
 ob_start();
 session_start();
@@ -9,9 +10,9 @@ session_start();
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/member.css">
 
-	<link rel="stylesheet" type="text/css" href="resert.css">
-	<link rel="stylesheet" type="text/css" href="lighebox.css">
 	<title>Document</title>
 </head>
 
@@ -24,10 +25,10 @@ session_start();
 <?php
 //檢查是否已登入
 if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
-  echo '<a href="#"><span id="MEM_NAME">', $_SESSION["MEM_NAME"], '</span></a>';
+  echo '<a href="memberinfo.php" id="link_member"><img src="member_pic/'.$_SESSION["MEM_IMG"].'" id="m_pic"></a>';
   echo '<span id="spanLogin">登出</span>';
 }else{
-  echo '<span id="MEM_NAME">&nbsp;</span>';
+  echo '<a href="#" id="link_member"><img src="member_pic/pic.jpg" id="m_pic"></a>';
   echo '<span id="spanLogin">登入</span>';
 }
 ?>  
@@ -35,23 +36,23 @@ if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
 </div>
 
 
-
 <!-- 登入燈箱 -->
 
 <div id="sing_in">
 	
 	<div id="sing_wrap">
-		<h1>會員登入</h1><span id="close_1">x</span>
+		
+		<p>會員登入</p><span id="close_1"><img src="member_pic/close.png"></span>
 
 		<table id="table_login">
 			<tr>
 				<td>
-					帳號:<input id="MEM_ID" type="text" name="MEM_ID">
+					帳號:<input id="MEM_ID" type="text" name="MEM_ID" required="required">
 				</td>
 			</tr>
 			<tr>
 				<td>
-					密碼: <input id="MEM_PSW" type="password" name="MEM_PSW">
+					密碼: <input id="MEM_PSW" type="password" name="MEM_PSW" required="required">
 				</td>
 			</tr>
 			<tr>
@@ -75,29 +76,34 @@ if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
 
 <div id="enroll">
 	<div id="enroll_wrap">
-		<h1>會員註冊</h1><span id="close_2">x</span>
-		<form action="enroll.php">
+		<p>會員註冊</p><span id="close_2"><img src="member_pic/close.png"></span>
+		<form action="../php/enroll.php">
 			<ul>
-				<li class="enroll_li" id="check"></li>
+				<li class="enroll_li" >
+
+					<span id="check_id"></span>
+					<span id="check_psw"></span>
+					
+				</li>
 
 				<li class="enroll_li">
-					會員帳號:<input id="enroll_id" type="text" name="enroll_id">
+					會員帳號:<input id="enroll_id" type="text" name="enroll_id" required="required">
 				</li>
 
 				<li class="enroll_li"> 
-					會員密碼:<input id="enroll_psw1" type="password" name="enroll_psw1">
+					會員密碼:<input id="enroll_psw1" type="password" name="enroll_psw1" required="required">
 				</li>
 
 				<li class="enroll_li">
-					確認密碼:<input id="enroll_psw2" type="password" name="enroll_psw2">
+					確認密碼:<input id="enroll_psw2" type="password" name="enroll_psw2" required="required">
 				</li>
 
 				<li class="enroll_li">
-					會員名稱:<input id="enroll_name" type="text" name="enroll_name">
+					會員名稱:<input id="enroll_name" type="text" name="enroll_name" required="required">
 				</li>
 
 				<li class="enroll_li">
-					手機號碼:<input id="enroll_tel" type="tel" name="enroll_tel">
+					手機號碼:<input id="enroll_tel" type="tel" name="enroll_tel" required="required" value="09-xxxxxxxx">
 				</li>
 
 				<li class="enroll_li">
@@ -117,6 +123,6 @@ if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
 </div>
 
 
-	<script src="login.js"></script>
+	<script src="../js/login.js"></script>
 </body>
 </html>
