@@ -52,114 +52,6 @@ header ul li:last-child {
     margin-top: .5%;
     margin-bottom: .5%; } }
 
-h1, h2 {
-  font-family: 'HanWangZonYi';
-  font-size: 5vw; }
-
-* {
-  outline: 1px solid green; }
-
-body {
-  background-color: #fff; }
-
-img {
-  vertical-align: center; }
-
-.bkb_fp {
-  position: relative; }
-
-.bkb_fp:after {
-  display: block;
-  content: '';
-  clear: both; }
-
-.bkb_fp_bgimg {
-  float: right;
-  width: 81.2%; }
-
-.bkb_fp_bgimg img {
-  width: 100%; }
-
-.bkb_fp_blue {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 65vw 74vw 0 0;
-  border-color: #0052b2 transparent transparent transparent;
-  left: 0;
-  top: 0;
-  z-index: 1; }
-
-.bkb_fp_black {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 16vw 20vw 0 16vw;
-  border-color: #000 transparent transparent transparent;
-  position: absolute;
-  top: 0;
-  left: 10%; }
-
-.bkb_fp_black2 {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 0 20vw 28vw;
-  border-color: transparent transparent #000 transparent;
-  position: absolute;
-  bottom: 0;
-  right: 0; }
-
-.kobe {
-  position: absolute;
-  width: 48%;
-  left: 13%;
-  z-index: 1; }
-
-.kobe img {
-  width: 100%; }
-
-.bkb_fp h1,
-.bkb_fp h2 {
-  position: absolute;
-  color: #0052b2;
-  text-shadow: #fff 0px 3px,#fff 0px -3px,#fff 3px 0px,#fff -3px 0px;
-  top: 50%;
-  right: 15%;
-  margin-right: 8%; }
-
-.bkb_fp h2 {
-  top: 65%;
-  right: 15%;
-  margin-right: 0; }
-
-.site_info {
-  background-color: #ffb405; }
-
-.site_info h3 {
-  color: #000; }
-
-.assess {
-  background-color: #fff;
-  padding-bottom: 15%; }
-
-.assess_table label {
-  background-color: #0052b2;
-  color: #fff; }
-
-.assess_wrap h3 {
-  color: #fff; }
-
-.group_page {
-  background-color: #0052b2; }
-
-.group_page_content h3 {
-  color: #fff; }
-
-.group_page_content {
-  background-color: #0052b2; }
-
 img {
   vertical-align: middle; }
 
@@ -424,3 +316,75 @@ td img {
   border-style: solid;
   border-width: 0 280px 250px 0;
   border-color: transparent #f26fa2 transparent transparent; }
+
+.clm_fp {
+  position: relative;
+  width: 100%; }
+
+.clm_fp:after {
+  display: block;
+  content: '';
+  clear: both; }
+
+.clm_fp_bgimg {
+  width: 100%; }
+
+.clm_fp_bgimg img {
+  width: 100%; }
+
+.clm_fp_orgtop {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 33vw 33vw 0 0;
+  border-color: #f6682f transparent transparent transparent;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.clm_fp_orgbot {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 26vw 26vw;
+  border-color: transparent transparent #f6682f transparent;
+  position: absolute;
+  bottom: 0%;
+  right: 0; }
+
+.clm_fp h1,
+.clm_fp h2 {
+  position: absolute;
+  color: #0052b2;
+  text-shadow: #fff 0px 3px, #fff 0px -3px, #fff 3px 0px, #fff -3px 0px;
+  top: 50%;
+  right: 15%;
+  margin-right: 8%; }
+
+.clm_fp h2 {
+  top: 65%;
+  right: 15%;
+  margin-right: 0; }
+
+.site_info {
+  background-color: #f6682f; }
+
+.assess,
+.group_page {
+  background-color: #ffb783; }
+
+.site_info:after {
+  border-color: transparent transparent transparent #ffb783; }
+
+.assess:before {
+  border-color: #f6682f transparent transparent transparent; }
+
+.assess:after {
+  border-color: transparent transparent #f6682f transparent; }
+
+.group_page:before {
+  border-color: transparent #f6672f70 transparent transparent; }
+
+h1, h2 {
+  font-family: 'HanWangZonYi';
+  font-size: 5vw; }

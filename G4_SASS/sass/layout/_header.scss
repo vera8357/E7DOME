@@ -1,10 +1,10 @@
 
 header {
-    width: 100%;
-    font-family: 'HanWangZonYi';
-    // src: url(../font/HanWangZonYi.woff);
-    position: absolute;
-    z-index: 99; }
+width: 100%;
+font-family: 'HanWangZonYi';
+// src: url(../font/HanWangZonYi.woff);
+position: absolute;
+z-index: 99; }
 
 header:after {
 display: block;
@@ -14,7 +14,7 @@ clear: both; }
 .logo {
 float: left;
 margin-left: 11%;
-margin-top: 3%;
+margin-top: 1.5%;
 width: 17%; }
 
 .logo img {
@@ -23,8 +23,7 @@ width: 100%; }
 header ul {
 float: right;
 width: 43.8%;
-margin-right: 5.2%;
-margin-top: 1.5%; }
+margin-right: 5.2%; }
 
 header ul li {
 float: left;
@@ -44,3 +43,16 @@ width: 6%; }
 
 #loginicon {
 width: 100%; }
+
+@media screen and (max-width:768px){
+    header{
+        background-color: rgba(255,255,255,.8);
+        position: relative;
+    }
+    .logo{
+        margin-left: 5%;
+        margin-top: .5%;
+        margin-bottom: .5%;
+    }
+    
+}
