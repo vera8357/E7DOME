@@ -84,7 +84,7 @@ header:after {
 .logo {
   float: left;
   margin-left: 11%;
-  margin-top: 3%;
+  margin-top: 1.5%;
   width: 17%; }
 
 .logo img {
@@ -93,8 +93,7 @@ header:after {
 header ul {
   float: right;
   width: 43.8%;
-  margin-right: 5.2%;
-  margin-top: 1.5%; }
+  margin-right: 5.2%; }
 
 header ul li {
   float: left;
@@ -114,6 +113,15 @@ header ul li:last-child {
 
 #loginicon {
   width: 100%; }
+
+@media screen and (max-width: 768px) {
+  header {
+    background-color: rgba(255, 255, 255, 0.8);
+    position: relative; }
+  .logo {
+    margin-left: 5%;
+    margin-top: .5%;
+    margin-bottom: .5%; } }
 
 h1, h2 {
   font-family: 'HanWangZonYi';
