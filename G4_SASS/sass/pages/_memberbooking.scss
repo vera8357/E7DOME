@@ -1,0 +1,245 @@
+* {
+    @include all();
+}
+body{
+    font-family: $about-font;
+}
+
+a {
+    text-decoration: none;
+    color: $a_color;
+    display: inline-block;
+}
+
+/*------------------------------------*/
+
+.nav {
+    width: 100%;
+    height: 150px;
+}
+
+/*---------------------------------------*/
+
+section {
+    width: 100%;
+}
+
+.wrap {
+    width: 100%;
+}
+
+.member_item {
+    width: 100%;
+    outline: 1px solid $wrap_color;
+    padding: 3%;
+}
+
+.content {
+    width: 100%;
+    padding: 3%;
+    outline: 1px solid $wrap_color;
+}
+
+/*768以上*/
+
+@media screen and (min-width: 768px) {
+    .wrap {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+    }
+    .member_item {
+        width: 35%;
+    }
+    .content {
+        width: 65%;
+    }
+}
+
+/*1024以上*/
+
+@media screen and (min-width: 1024px) {
+    .wrap {
+        width: 70%;
+    }
+    .member_item {
+        width: 30%;
+    }
+}
+
+/*-------------------------------------------*/
+
+/*member_item*/
+
+#file {
+    text-align: center;
+}
+
+.pic_wrap {
+    width: 100%;
+}
+
+.pic {
+    width: 50%;
+    vertical-align: bottom;
+    margin: auto;
+}
+
+.change_pic {
+    display: none;
+}
+
+input[type="file"] {
+    width: 20px;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+input[type="button"],
+input[type="submit"]{
+    margin-top: 18px;
+}
+
+#show_name {
+    width: 30%;
+    height: 30px;
+    margin: 20px auto;
+    text-align: center;
+    border-bottom: 1px solid #bbb;
+}
+
+.m_item {
+    width: 100%;
+    display: flex;
+}
+
+.m_item li {
+    width: 25%;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 3px;
+}
+
+.m_item li a {
+    border-bottom: 4px solid blue;
+    padding-bottom: 5px;
+}
+
+/*768以上*/
+
+@media screen and (min-width: 768px) {
+    .pic_wrap {
+        position: relative;
+        width: 180px;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    .pic {
+        width: 80%;
+    }
+    .change_pic {
+        display: block;
+        width: 80%;
+        background-color: #888;
+        color: #fff;
+        text-align: center;
+        position: absolute;
+        padding: 5px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        opacity: 0;
+        transition: .5s;
+    }
+    label:hover .change_pic {
+        opacity: 1;
+    }
+    #show_name {
+        width: 70%;
+        height: 30px;
+        margin: 20px auto;
+        text-align: center;
+        border-bottom: 1px solid #bbb;
+    }
+    .m_item {
+        width: 100%;
+        display: block;
+    }
+    .m_item li {
+        width: 100%;
+        padding: 15px;
+    }
+    .line {
+        display: inline-block;
+        width: 5px;
+        height: 20px;
+        background-color: blue;
+        vertical-align: bottom;
+        margin-right: 4px;
+    }
+    .m_item li a {
+        border-bottom: 1px solid transparent;
+        padding-bottom: 0px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .pic_wrap {
+        width: 90%;
+    }
+}
+
+/*-------------------------------------------------*/
+
+.member_content,
+.change_paw {
+    width: 100%;
+    text-align: center;
+}
+
+.change_paw {
+    margin-top: 40px;
+}
+
+h1 {
+    @include h1();
+}
+
+.first {
+    margin-top: 30px;
+}
+
+.div_style {
+    padding: 18px;
+    font-size: 18px;
+}
+
+
+
+input[type="text"],
+input[type="tel"],
+input[type="password"] {
+    @include input();
+}
+
+input[type="button"],
+input[type="submit"]{
+    @include submit();
+}
+.first #clear_border{
+    border: transparent;
+}
+/*1024以上*/
+
+@media screen and (min-width: 1024px) {}

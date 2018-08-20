@@ -1,0 +1,90 @@
+* {
+  // outline: 1px solid;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 100vh;
+  .triangle-yellow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-color: rgb(255, 181, 5) transparent transparent transparent;
+    border-style: solid solid solid solid;
+    /* 設定邊框大小可拼湊出任意形狀的三角形 */
+    border-width: 150vw 35vw 0vw 0vw;
+    /* 設定 width、height 可更好理解原理 */
+  }
+  .trapezoid-blue {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    border-color: transparent rgb(0, 82, 178) transparent transparent;
+    border-style: solid solid solid solid;
+    /* 設定邊框大小可拼湊出任意形狀的三角形 */
+    border-width: 150vw 35vw 0vw 0vw;
+    /* 設定 width、height 可更好理解原理 */
+  }
+  .rectangle-blue {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 150vw;
+    background-color: rgb(0, 82, 178);
+  }
+  .message {
+    display: flex;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 50%;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.466);
+    ;
+    border-radius: 10px;
+    box-shadow: .5px .5px 10px .5px;
+    z-index: 2;
+  }
+  input {
+    position: absolute;
+    top: 0;
+    left: 15%;
+    bottom: -80%;
+    margin: auto;
+    width: 70%;
+    height: 50px;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 1.5vw;
+    padding: 5px;
+    background-color: rgb(0, 82, 178);
+  }
+  .coach_img{
+    width:100%;
+    overflow: hidden;
+    // padding-top: 48.75%;
+
+    height:70vh;
+    position: absolute;
+    top:20%;
+    background-image: url('../../images/chatrobot/coach.png');
+    background-size: cover;
+  }
+  .coach_img img {
+    // max-width: 100%;
+    width:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    // right: 0;
+    // bottom: 0;
+    // margin: auto;
+  }
+}
