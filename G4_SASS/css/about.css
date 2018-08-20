@@ -999,15 +999,19 @@ footer {
     margin-right: 1em;
     font-size: 5vw;
     padding: 1.5em; }
-  .sportman1 img {
-    width: 40%;
-    position: relative;
-    top: 60px;
-    left: 50%; }
-  .sportman2 img {
-    width: 40%;
-    position: relative;
-    left: 70%; }
+  .redman {
+    top: 10px;
+    right: -450px; }
+  .redman img {
+    width: 30%; }
+  .blackman img {
+    width: 70%;
+    display: none; }
+  .fastball {
+    top: -10px;
+    right: -250px; }
+  .fastball img {
+    width: 40%; }
   .container-side {
     flex-wrap: wrap;
     flex-direction: column-reverse;
