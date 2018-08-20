@@ -4,9 +4,6 @@ h2 {
   font-family: 'HanWangZonYi';
   font-size: 5vw; }
 
-body {
-  background-color: #ea4c89; }
-
 img {
   vertical-align: middle; }
 
@@ -15,7 +12,8 @@ img {
 
 .bownling_first_page {
   width: 100%;
-  position: relative; }
+  position: relative;
+  background-color: #ea4c89; }
 
 .bownling_first_page:after {
   display: block;
@@ -71,6 +69,15 @@ h2 {
   top: 65%;
   right: 15%;
   margin-right: 0; }
+
+.site_info {
+  background-color: #ea4c89; }
+
+.assess {
+  background-color: #70d9f1; }
+
+.group_page {
+  background-color: #70d9f1; }
 
 header {
   width: 100%;
