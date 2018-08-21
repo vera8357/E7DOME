@@ -13,9 +13,10 @@ try{
   	if($member_phone->rowCount()==0){
   		echo "請通知服務人員";
   	}else{
-      $memRow = $member_phone->fetch(PDO::FETCH_ASSOC);
+   
 
-      $_SESSION["MEM_PHONE"] = $memRow["MEM_PHONE"];
+     echo $_SESSION["MEM_PHONE"];
+     
    
 
 

@@ -1,0 +1,120 @@
+*{
+	/*outline: 1px solid #f00;*/
+	list-style-type: none;
+}
+
+
+.levels{
+	margin: -72vmin 0 0 -48vmin;
+	/*-webkit-transform: rotateX(70deg) rotateZ(-45deg) translateZ(-15vmin);*/
+	/*transform: rotateX(70deg) rotateZ(-45deg) translateZ(-15vmin);*/
+
+	-webkit-transform: rotateX(0deg) rotateZ(0deg) translateZ(-15vmin);
+	transform: rotateX(0deg) rotateZ(0deg) translateZ(-15vmin);
+}
+
+.facility-container{
+	display: flex;
+	flex-direction: row;
+}
+
+.facility{
+	width: 25%;
+}
+
+.facility img{
+	width: 100%;
+}
+
+.facility-intro{
+	width: 75%;
+}
+
+.facility-intro h4{
+	display: block;
+	margin: 0;
+	color: #fff;
+	background-color: #0052B2;
+	padding: 16px;
+
+}
+
+.facility-intro ul{
+	display: flex;
+	flex-direction: row;
+}
+
+.facility-intro li{
+	border: 1px solid #fff;
+	width: 25%;
+	margin: 16px;
+}
+
+.facility-intro li span{
+	display: inline-block;
+	padding: 16px;
+}
+
+.level.level--current {
+	-webkit-transform: translateZ(15vmin) rotate3d(0,0,0,30deg);
+	/* go to center */
+	transform: translateZ(15vmin) rotate3d(0,0,0,30deg);
+}
+
+.level__pins--active .pin__icon {
+	opacity: 0;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+
+.level--current::after {
+/*	-webkit-transform: rotateZ(-20deg) rotateZ(45deg) rotateX(-70deg) translateZ(5vmin) translateX(5vmin) translateY(-10vmin);
+	transform: rotateZ(-20deg) rotateZ(45deg) rotateX(-70deg) translateZ(5vmin) translateX(5vmin) translateY(-10vmin);*/
+	-webkit-transform: rotateZ(-20deg) rotateZ(45deg) rotateX(-70deg) translateZ(5vmin) translateX(5vmin) translateY(-10vmin);
+	transform: rotateZ(-20deg) rotateZ(45deg) rotateX(-70deg) translateZ(5vmin) translateX(5vmin) translateY(-10vmin);
+}
+
+.level::after {
+	top: 30em;
+    left: 0em;
+	-webkit-transform: rotateZ(0deg) rotateX(0deg) translateZ(5vmin);
+	transform: rotateZ(0deg) rotateX(0deg) translateZ(5vmin);
+
+}
+
+
+.level--2 {
+	-webkit-transform: translateZ(10vmin);
+	transform: translateZ(10vmin);
+	transform: translateY(-10vmin);
+}
+
+.level--3 {
+	-webkit-transform: translateZ(20vmin);
+	transform: translateZ(20vmin);
+	transform: translateY(-20vmin);
+}
+
+.level--4 {
+	-webkit-transform: translateZ(30vmin);
+	transform: translateZ(30vmin);
+	transform: translateY(-30vmin);
+}
+
+
+    #green {
+      transform: translateY(30px);
+    }
+    #red{
+      transform: translateY(30px);
+    }
+    #blue{
+      transform: translateY(30px);
+	}
+	
+	/* Level nav */
+.mallnav {
+	top: 200px;
+	right: 0;
+}
