@@ -104,14 +104,12 @@ input[type="file"] {
 input[type="button"],
 input[type="submit"]{
     margin-top: 18px;
+    @include btn_style();
+
 }
 
 #show_name {
-    width: 30%;
-    height: 30px;
-    margin: 20px auto;
-    text-align: center;
-    border-bottom: 1px solid #bbb;
+    @include s_show_name();
 }
 
 .m_item {
@@ -166,11 +164,7 @@ input[type="submit"]{
         opacity: 1;
     }
     #show_name {
-        width: 70%;
-        height: 30px;
-        margin: 20px auto;
-        text-align: center;
-        border-bottom: 1px solid #bbb;
+     @include show_name();
     }
     .m_item {
         width: 100%;
@@ -202,44 +196,81 @@ input[type="submit"]{
 
 /*-------------------------------------------------*/
 
-.member_content,
-.change_paw {
-    width: 100%;
-    text-align: center;
-}
 
-.change_paw {
-    margin-top: 40px;
-}
 
 h1 {
     @include h1();
 }
 
-.first {
-    margin-top: 30px;
+.booking_content{
+    width: 100%;
+    margin-top: 20px;
+
 }
 
-.div_style {
-    padding: 18px;
-    font-size: 18px;
+.booking{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 1px solid #ccc;
+    margin: 10px auto;
+    border-radius: 10px;
+    padding: 7px;
+}
+
+.hold{
+    width: 50%;
+
+}
+
+.button{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.hold img{
+    width: 130px;
+}
+
+
+.hold p{
+    font-size: 16px;
+    margin:18px 0;
+}
+
+.hold span{
+    display: inline-block;
+    width: 30%;
+    border-bottom:1px solid #ccc;
+}
+
+
+.button input{
+    padding: 3px 5px;
+    border-radius: 3px;
+    border:transparent;
+    letter-spacing: 2px;
+}
+
+
+@media screen and (min-width: 768px){
+
+    .hold img{
+        width: 150px;
+    }
+
+
 }
 
 
 
-input[type="text"],
-input[type="tel"],
-input[type="password"] {
-    @include input();
-}
 
-input[type="button"],
-input[type="submit"]{
-    @include submit();
-}
-.first #clear_border{
-    border: transparent;
-}
-/*1024以上*/
 
-@media screen and (min-width: 1024px) {}
+@media screen and (min-width: 1024px){
+
+    .booking{
+        width: 70%;
+    }
+}

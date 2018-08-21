@@ -16,7 +16,7 @@ session_start();
 	<title>Document</title>
 </head>
 
-
+ 
 <body>
 
 <!-- 登入 -->
@@ -103,7 +103,7 @@ if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
 				</li>
 
 				<li class="enroll_li">
-					手機號碼:<input id="enroll_tel" type="tel" name="enroll_tel" required="required" value="09-xxxxxxxx">
+					手機號碼:<input id="enroll_tel" type="tel" name="enroll_tel" required="required" value="09-12345678">
 				</li>
 
 				<li class="enroll_li">

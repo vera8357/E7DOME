@@ -45,7 +45,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 
 
 
-       		 <div id="show_name"></div>
+       		 <div id="show_name"><?php echo $_SESSION['MEM_ID']; ?></div>
 
 
 

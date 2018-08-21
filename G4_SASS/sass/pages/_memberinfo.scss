@@ -3,6 +3,7 @@
 }
 body{
     font-family: $about-font;
+    
 }
 
 a {
@@ -38,6 +39,8 @@ section {
     width: 100%;
     padding: 3%;
     outline: 1px solid $wrap_color;
+    
+
 }
 
 /*768以上*/
@@ -107,11 +110,7 @@ input[type="submit"]{
 }
 
 #show_name {
-    width: 30%;
-    height: 30px;
-    margin: 20px auto;
-    text-align: center;
-    border-bottom: 1px solid #bbb;
+   @include s_show_name();
 }
 
 .m_item {
@@ -166,11 +165,9 @@ input[type="submit"]{
         opacity: 1;
     }
     #show_name {
-        width: 70%;
-        height: 30px;
-        margin: 20px auto;
-        text-align: center;
-        border-bottom: 1px solid #bbb;
+       @include show_name();
+    
+        
     }
     .m_item {
         width: 100%;
@@ -235,7 +232,7 @@ input[type="password"] {
 
 input[type="button"],
 input[type="submit"]{
-    @include submit();
+    @include btn_style();
 }
 .first #clear_border{
     border: transparent;
