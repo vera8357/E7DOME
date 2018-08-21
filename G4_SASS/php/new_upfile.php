@@ -27,7 +27,7 @@ switch($_FILES['upfile']['error']){
     $filname = "{$filext}";
     if(copy( $from, $to)){
       $memberfile = "UPDATE member SET MEM_IMG = '{$filname}' WHERE MEM_NO = $MEM_NO";
-                $pdo->exec($memberfile);
+      $pdo->exec($memberfile);
       $_SESSION["MEM_IMG"] = $filname;       
     	echo "<a href='memberinfo.php'>上傳成功</a>";
       // 回個人頁面
