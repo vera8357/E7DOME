@@ -59,8 +59,7 @@ h2 {
   font-size: 5vw; }
 
 * {
-  text-decoration: none;
-  outline: 1px solid #f00; }
+  text-decoration: none; }
 
 body {
   background: url("../images/climb.jpg") no-repeat center center fixed;
