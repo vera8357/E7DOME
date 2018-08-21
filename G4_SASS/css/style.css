@@ -77,10 +77,10 @@ header ul li:last-child {
 #loginicon {
   width: 100%; }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   header {
-    background-color: rgba(255, 255, 255, 0.8);
-    position: relative; }
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed; }
   .logo {
     margin-left: 5%;
     margin-top: .5%;
