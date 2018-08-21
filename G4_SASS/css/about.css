@@ -317,6 +317,13 @@ p {
 .fastball img {
   width: 50%; }
 
+.speed-ball {
+  top: 10px;
+  left: 73%; }
+
+.speed-ball img {
+  width: 50%; }
+
 .bg-buttom {
   background-image: url("../../images/about-material/about-bg2.png");
   background-repeat: no-repeat;
