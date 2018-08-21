@@ -46,7 +46,7 @@ header ul li:last-child {
 @media screen and (max-width: 768px) {
   header {
     background-color: rgba(255, 255, 255, 0.8);
-    position: relative; }
+    position: fixed; }
   .logo {
     margin-left: 5%;
     margin-top: .5%;
@@ -168,15 +168,11 @@ p {
   right: 35%; }
 
 .badminton-o {
-<<<<<<< HEAD
-  width: 10%; }
-=======
   position: absolute;
   border-radius: 50%;
   width: 20%;
   top: 5%;
   right: 45%; }
->>>>>>> G4-1
 
 .bowling h3 {
   position: absolute;

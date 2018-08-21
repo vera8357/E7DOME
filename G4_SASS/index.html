@@ -3,14 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/fullpage.css">
+	<link rel="stylesheet" href="css/slick.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<link rel="stylesheet" href="css/font.css">
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js" 
   	integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-  	crossorigin="anonymous"></script>
+	  crossorigin="anonymous"></script>
 	<script type="text/javascript" src="js/fullpage.js"></script>
+	<script src="js/slick.min.js"></script>
 </head>
 <body>
     <header>
@@ -42,7 +45,7 @@
       </header>
 	<div id="homePage">
 		<div class="section home_pg1">
-			<video id="home_bg1_vd" data-src="images/index/EZDOME.mp4" type="video/mp4" autoplay muted loop="true" 
+			<video id="home_bg1_vd" data-src="images/index/EZDOME.mp4" type="video/mp4" data-autoplay muted loop="true" 
 			data-video="0">
 			</video>
 			<div class="home_pg1_bluebox1">
@@ -60,6 +63,7 @@
 				<div class="home_pg1_yellowbox"></div>
 			</div>
 			<div class="home_pg1_bluebox2"></div>
+			<div class="home_pg1_bluebox3"></div>
 		</div>
 
 		<div class="section home_pg2">
@@ -70,117 +74,262 @@
 			<div class="home_pg3_svg"></div>
 			<div class="wrapper">
 				<h2>加入揪團!尋找運動夥伴</h2>
+				<div class="teamItem all">
+					<div class="teamAll">
+						<div class="all_img">
+							<img src="images/index/date.png">
+							<h3>
+									揪團日期
+							</h3>
+						</div>
+						<a href="#">
+							<div class="allMore">
+								查看更多
+								<div class="moreSkew">></div>
+							</div>
+						</a>
+					</div>
+				</div>
 				<div class="home_team">
 					<ul>
-						<li class="teamItem all">
-							<div class="teamAll">
-								<div class="all_img">
-									<img src="images/index/date.png">
-									<h3>
-										揪團日期
-									</h3>
+						<li class="teamItem">
+							<a href="#">
+								<div class="teamOne">
+									<div class="teamPic">
+										<img src="images//index/bg2.png" alt="">
+									</div>
+								
+								<div class="teamInfo">
+									<div class="teamMore">
+										更多資訊
+										<div class="moreSkew">
+											>
+										</div>
+									</div>
+									<div class="teamName">
+										台北帥哥籃球團
+									</div>
+									<div class="teamDate">
+										2018/06/28
+									</div>
+										<div class="teamMem">
+										揪團人數  
+											<span>3</span>
+											/
+											<span>6</span>
+											人
+										</div>
+										<div class="teamTxt">
+										Lorem ipsum dolor sit amet.
+										</div>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="teamItem">
+							<a href="#">
+								<div class="teamOne">
+									<div class="teamPic">
+										<img src="images//index/bg2.png" alt="">
+									</div>
+								
+								<div class="teamInfo">
+									<div class="teamMore">
+										更多資訊
+										<div class="moreSkew">
+											>
+										</div>
+									</div>
+									<div class="teamName">
+										台北帥哥籃球團
+									</div>
+									<div class="teamDate">
+										2018/06/28
+									</div>
+										<div class="teamMem">
+										揪團人數  
+											<span>3</span>
+											/
+											<span>6</span>
+											人
+										</div>
+										<div class="teamTxt">
+										Lorem ipsum dolor sit amet.
+										</div>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="teamItem">
+							<a href="#">
+								<div class="teamOne">
+									<div class="teamPic">
+										<img src="images//index/bg2.png" alt="">
+									</div>
+								
+								<div class="teamInfo">
+									<div class="teamMore">
+										更多資訊
+										<div class="moreSkew">
+											>
+										</div>
+									</div>
+									<div class="teamName">
+										台北帥哥籃球團
+									</div>
+									<div class="teamDate">
+										2018/06/28
+									</div>
+										<div class="teamMem">
+										揪團人數  
+											<span>3</span>
+											/
+											<span>6</span>
+											人
+										</div>
+										<div class="teamTxt">
+										Lorem ipsum dolor sit amet.
+										</div>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="teamItem">
+								<a href="#">
+									<div class="teamOne">
+										<div class="teamPic">
+											<img src="images//index/bg2.png" alt="">
+										</div>
+									
+									<div class="teamInfo">
+										<div class="teamMore">
+											更多資訊
+											<div class="moreSkew">
+												>
+											</div>
+										</div>
+										<div class="teamName">
+											台北帥哥籃球團
+										</div>
+										<div class="teamDate">
+											2018/06/28
+										</div>
+											<div class="teamMem">
+											揪團人數  
+												<span>3</span>
+												/
+												<span>6</span>
+												人
+											</div>
+											<div class="teamTxt">
+											Lorem ipsum dolor sit amet.
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="teamItem">
 									<a href="#">
-										<div class="allMore">
-											查看更多
-											<div class="moreSkew">></div>
+										<div class="teamOne">
+											<div class="teamPic">
+												<img src="images//index/bg2.png" alt="">
+											</div>
+										
+										<div class="teamInfo">
+											<div class="teamMore">
+												更多資訊
+												<div class="moreSkew">
+													>
+												</div>
+											</div>
+											<div class="teamName">
+												台北帥哥籃球團
+											</div>
+											<div class="teamDate">
+												2018/06/28
+											</div>
+												<div class="teamMem">
+												揪團人數  
+													<span>3</span>
+													/
+													<span>6</span>
+													人
+												</div>
+												<div class="teamTxt">
+												Lorem ipsum dolor sit amet.
+												</div>
+											</div>
 										</div>
 									</a>
-								</div>
-							</div>
-						</li>
-						<li class="teamItem">
-							<div class="teamOne">
-								<div class="teamPic">
-									<img src="images//index/bg2.png" alt="">
-								</div>
-								<a href="#"><div class="teamMore">
-										更多資訊
-										<div class="moreSkew">
-											>
-										</div>
-									</div></a>
-								<div class="teamInfo">
-									<div class="teamName">
-										台北帥哥籃球團
-									</div>
-									<div class="teamDate">
-										2018/06/28
-									</div>
-									<div class="teamMem">
-										揪團人數  
-										<span>3</span>
-										/
-										<span>6</span>
-										人
-									</div>
-									<div class="teamTxt">
-										Lorem ipsum dolor sit amet.
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="teamItem">
-							<div class="teamOne">
-								<div class="teamPic">
-									<img src="images//index/bg2.png" alt="">
-								</div>
-								<a href="#"><div class="teamMore">
-										更多資訊
-										<div class="moreSkew">
-											>
-										</div>
-									</div></a>
-								<div class="teamInfo">
-									<div class="teamName">
-										台北帥哥籃球團
-									</div>
-									<div class="teamDate">
-										2018/06/28
-									</div>
-									<div class="teamMem">
-										揪團人數  
-										<span>3</span>
-										/
-										<span>6</span>
-										人
-									</div>
-									<div class="teamTxt">
-										Lorem ipsum dolor sit amet.
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="teamItem">
-							<div class="teamOne">
-								<div class="teamPic">
-									<img src="images//index/bg2.png" alt="">
-								</div>
-								<a href="#"><div class="teamMore">
-										更多資訊
-										<div class="moreSkew">
-											>
-										</div>
-									</div></a>
-								<div class="teamInfo">
-									<div class="teamName">
-										台北帥哥籃球團
-									</div>
-									<div class="teamDate">
-										2018/06/28
-									</div>
-									<div class="teamMem">
-										揪團人數  
-										<span>3</span>
-										/
-										<span>6</span>
-										人
-									</div>
-									<div class="teamTxt">
-										Lorem ipsum dolor sit amet.
-									</div>
-								</div>
-							</div>
-						</li>
+								</li>
+								<li class="teamItem">
+										<a href="#">
+											<div class="teamOne">
+												<div class="teamPic">
+													<img src="images//index/bg2.png" alt="">
+												</div>
+											
+											<div class="teamInfo">
+												<div class="teamMore">
+													更多資訊
+													<div class="moreSkew">
+														>
+													</div>
+												</div>
+												<div class="teamName">
+													台北帥哥籃球團
+												</div>
+												<div class="teamDate">
+													2018/06/28
+												</div>
+													<div class="teamMem">
+													揪團人數  
+														<span>3</span>
+														/
+														<span>6</span>
+														人
+													</div>
+													<div class="teamTxt">
+													Lorem ipsum dolor sit amet.
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="teamItem">
+											<a href="#">
+												<div class="teamOne">
+													<div class="teamPic">
+														<img src="images//index/bg2.png" alt="">
+													</div>
+												
+												<div class="teamInfo">
+													<div class="teamMore">
+														更多資訊
+														<div class="moreSkew">
+															>
+														</div>
+													</div>
+													<div class="teamName">
+														台北帥哥籃球團
+													</div>
+													<div class="teamDate">
+														2018/06/28
+													</div>
+														<div class="teamMem">
+														揪團人數  
+															<span>3</span>
+															/
+															<span>6</span>
+															人
+														</div>
+														<div class="teamTxt">
+														Lorem ipsum dolor sit amet.
+														</div>
+													</div>
+												</div>
+											</a>
+										</li>
 					</ul>
 				</div>
 			</div>
@@ -271,7 +420,7 @@
 			anchors:['firstPage', 'secondPage', 'thirdPage','forthPage','lastPage'],
 			navigation: true,
 			// responsiveWidth: 1200,]
-			scrollOverflow: true,
+			// scrollOverflow: true,
 			afterRender: function(){
         	// $('#home_bg1_vd')[0].play();      
     		},
@@ -320,6 +469,27 @@
 				}
 		}
 		});
+	</script>
+	<script>
+		$('.home_team ul').slick({
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		arrows: false,
+		dots: true,
+		responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+		arrows: true,
+        dots: false,
+      }
+    },
+  ]
+		
+	});
 	</script>
 </body>
 </html>
