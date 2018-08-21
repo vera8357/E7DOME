@@ -87,7 +87,6 @@ img{
 }
 .assess{
     background-color: #fff;
-    padding-bottom: 15%;
 }
 .assess_table label{
     background-color:#0052b2;
@@ -104,4 +103,16 @@ img{
 }
 .group_page_content{
     background-color: #0052b2;
+}
+.site_info_tri2{
+    border-color: transparent transparent transparent rgba(255,255,255,.2);    
+}
+.assess_tri1{
+    border-color: #ffb405 transparent transparent transparent;
+}
+.assess_tri2{
+    border-color: transparent transparent rgba(255,180,5,.5) transparent;    
+}
+.group_page_tri{
+    border-color: transparent #ffb405 transparent transparent;
 }
