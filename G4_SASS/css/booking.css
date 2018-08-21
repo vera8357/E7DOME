@@ -499,9 +499,6 @@ a {
     display: table;
     border-collapse: separate; } }
 
-.table-modal tr:not(:last-child) {
-  /*border-bottom: 1px solid white;*/ }
-
 .table-modal th,
 .table-modal td {
   width: 25%; }
