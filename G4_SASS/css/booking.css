@@ -58,12 +58,31 @@ header ul {
   width: 43.8%;
   margin-right: 5.2%; }
 
+header ul:after {
+  display: block;
+  content: '';
+  clear: both; }
+
 header ul li {
   float: left;
   margin-right: 5.3%;
   font-size: 1.3vw;
   padding-top: 6.5%;
   position: relative; }
+
+header ul li:before {
+  display: block;
+  content: '';
+  width: 90%;
+  padding-top: 10%;
+  height: 0;
+  position: absolute;
+  right: -10%;
+  bottom: -10%;
+  z-index: -1; }
+
+header ul li:hover :before {
+  background-color: #ecb32b; }
 
 header ul li a {
   text-decoration: none;
@@ -74,6 +93,27 @@ header ul li:last-child {
   line-height: 1;
   padding-top: 5.3%;
   width: 6%; }
+
+.site_list {
+  position: relative; }
+
+.site_list_ul {
+  position: absolute;
+  width: 600%;
+  bottom: -80%;
+  display: none; }
+
+.site_list_ul li {
+  margin-right: 8%; }
+
+.site_list_ul li:last-child {
+  margin-right: 5.3%;
+  font-size: 1.3vw;
+  padding-top: 6.5%;
+  width: auto; }
+
+.site_list:hover .site_list_ul {
+  display: block; }
 
 #loginicon {
   width: 100%; }
