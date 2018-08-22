@@ -4,24 +4,13 @@ function $id(id){
 
 function showLoginForm(){
       
-      if($id('spanLogin').innerHTML == "登入"){
+      if($id('link_member').innerHTML == "會員登入"){
       $id('sing_in').style.display = 'block';
-      }else{  //登出
-        var xhr = new XMLHttpRequest();
-        xhr.onload = function(){
-          if( xhr.status == 200){
-            $id('link_member').href ='#';
-            $id('m_pic').src ='member_pic/pic.jpg';
-            $id('spanLogin').innerHTML = '登入';             
-          }else{
-            alert( xhr.status);
-          }
-         
-        }
-        xhr.open("get","../php/ajax_logout.php",true);
-        xhr.send(null);
       }
- }//showLoginForm
+
+
+      
+ }
 
 function sendForm(){
       //=====使用Ajax 回server端,取回登入者姓名, 放到頁面上    
@@ -34,7 +23,7 @@ function sendForm(){
           }else{
             document.getElementById("link_member").href ='memberinfo.php';
             document.getElementById("m_pic").src = 'member_pic/'+ xhr.responseText;
-            document.getElementById("spanLogin").innerHTML = "登出"; 
+            document.getElementById("link_member").innerHTML = "會員專區"; 
   
             
           }
@@ -151,7 +140,7 @@ function check_id(){
     function init(){
      
       // 登入燈箱
-      $id('spanLogin').onclick=showLoginForm; 
+      $id('link_member').onclick=showLoginForm; 
     
 
       // 登入確認
