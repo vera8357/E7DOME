@@ -220,7 +220,7 @@ a{
 	font-size: 20px;
 	line-height: 30px;
 	font-weight: bold;
-	color: #0052b2; 
+	color: #0052b2;
 	padding-bottom: 10px;
 }
 
@@ -244,4 +244,11 @@ a{
 
 .cl-3 {
     width: 25%;
+}
+
+@media screen and (max-width: 901px){
+    .cl-12{
+		width: 100%;
+		margin: 0px;
+	}
 }
