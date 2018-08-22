@@ -6,20 +6,25 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/fullpage.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/fullpage.css"> -->
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<link rel="stylesheet" href="css/font.css">
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js" 
-  	integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-  	crossorigin="anonymous"></script>
+	<!-- <link rel="stylesheet" href="css/slick.css"> -->
+	
 	<script type="text/javascript" src="js/fullpage.js"></script>
 
 	<!-- 3dfacModel -->
 	<link rel="stylesheet" type="text/css" href="3dfac/css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="3dfac/css/style0.css" />
 	<link rel="stylesheet" type="text/css" href="3dfac/css/custom.css" />		
-	<script src="3dfac/js/modernizr-custom.js"></script>
+	<script src="3dfac/js/modernizr-custom.js"></script>	
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"
+	></script>
 </head>
 <body>
    <?php
@@ -45,6 +50,7 @@
 				<div class="home_pg1_yellowbox"></div>
 			</div>
 			<div class="home_pg1_bluebox2"></div>
+			<div class="home_pg1_bluebox3"></div>
 		</div>
 
 		<div class="section home_pg2">
@@ -1013,7 +1019,7 @@
 			<script src="3dfac/js/main.js"></script>
 	
 	
-	  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	  <!-- <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
 	  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
 	
 	<script>
@@ -1040,36 +1046,38 @@
 			<div class="home_pg3_svg"></div>
 			<div class="wrapper">
 				<h2>加入揪團!尋找運動夥伴</h2>
+				<div class="teamItem all">
+						<div class="teamAll">
+							<div class="all_img">
+								<img src="images/index/date.png">
+								<h3>
+									揪團日期
+								</h3>
+						
+							</div>
+							<a href="#">
+								<div class="allMore">
+										查看更多
+										<div class="moreSkew">></div>
+								</div>
+							</a>
+						</div>
+				</div>	
 				<div class="home_team">
-					<ul>
-						<li class="teamItem all">
-							<div class="teamAll">
-								<div class="all_img">
-									<img src="images/index/date.png">
-									<h3>
-										揪團日期
-									</h3>
-									<a href="#">
-										<div class="allMore">
-											查看更多
-											<div class="moreSkew">></div>
-										</div>
-									</a>
-								</div>
-							</div>
-						</li>
+					<ul class="teamGroup">
 						<li class="teamItem">
 							<div class="teamOne">
 								<div class="teamPic">
 									<img src="images//index/bg2.png" alt="">
 								</div>
-								<a href="#"><div class="teamMore">
+								
+								<div class="teamInfo">
+									<a href="#"><div class="teamMore">
 										更多資訊
 										<div class="moreSkew">
 											>
 										</div>
 									</div></a>
-								<div class="teamInfo">
 									<div class="teamName">
 										台北帥哥籃球團
 									</div>
@@ -1094,13 +1102,14 @@
 								<div class="teamPic">
 									<img src="images//index/bg2.png" alt="">
 								</div>
-								<a href="#"><div class="teamMore">
+								
+								<div class="teamInfo">
+									<a href="#"><div class="teamMore">
 										更多資訊
 										<div class="moreSkew">
 											>
 										</div>
 									</div></a>
-								<div class="teamInfo">
 									<div class="teamName">
 										台北帥哥籃球團
 									</div>
@@ -1125,13 +1134,14 @@
 								<div class="teamPic">
 									<img src="images//index/bg2.png" alt="">
 								</div>
-								<a href="#"><div class="teamMore">
+								
+								<div class="teamInfo">
+									<a href="#"><div class="teamMore">
 										更多資訊
 										<div class="moreSkew">
 											>
 										</div>
 									</div></a>
-								<div class="teamInfo">
 									<div class="teamName">
 										台北帥哥籃球團
 									</div>
@@ -1151,6 +1161,102 @@
 								</div>
 							</div>
 						</li>
+						<li class="teamItem">
+								<div class="teamOne">
+									<div class="teamPic">
+										<img src="images//index/bg2.png" alt="">
+									</div>
+									
+									<div class="teamInfo">
+										<a href="#"><div class="teamMore">
+											更多資訊
+											<div class="moreSkew">
+												>
+											</div>
+										</div></a>
+										<div class="teamName">
+											台北帥哥籃球團
+										</div>
+										<div class="teamDate">
+											2018/06/28
+										</div>
+										<div class="teamMem">
+											揪團人數  
+											<span>3</span>
+											/
+											<span>6</span>
+											人
+										</div>
+										<div class="teamTxt">
+											Lorem ipsum dolor sit amet.
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="teamItem">
+									<div class="teamOne">
+										<div class="teamPic">
+											<img src="images//index/bg2.png" alt="">
+										</div>
+										
+										<div class="teamInfo">
+											<a href="#"><div class="teamMore">
+												更多資訊
+												<div class="moreSkew">
+													>
+												</div>
+											</div></a>
+											<div class="teamName">
+												台北帥哥籃球團
+											</div>
+											<div class="teamDate">
+												2018/06/28
+											</div>
+											<div class="teamMem">
+												揪團人數  
+												<span>3</span>
+												/
+												<span>6</span>
+												人
+											</div>
+											<div class="teamTxt">
+												Lorem ipsum dolor sit amet.
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="teamItem">
+										<div class="teamOne">
+											<div class="teamPic">
+												<img src="images//index/bg2.png" alt="">
+											</div>
+											
+											<div class="teamInfo">
+												<a href="#"><div class="teamMore">
+													更多資訊
+													<div class="moreSkew">
+														>
+													</div>
+												</div></a>
+												<div class="teamName">
+													台北帥哥籃球團
+												</div>
+												<div class="teamDate">
+													2018/06/28
+												</div>
+												<div class="teamMem">
+													揪團人數  
+													<span>3</span>
+													/
+													<span>6</span>
+													人
+												</div>
+												<div class="teamTxt">
+													Lorem ipsum dolor sit amet.
+												</div>
+											</div>
+										</div>
+									</li>
 					</ul>
 				</div>
 			</div>
@@ -1241,7 +1347,7 @@
 			anchors:['firstPage', 'secondPage', 'thirdPage','forthPage','lastPage'],
 			navigation: true,
 			// responsiveWidth: 1200,]
-			scrollOverflow: true,
+			// scrollOverflow: true,
 			afterRender: function(){
         	// $('#home_bg1_vd')[0].play();      
     		},
@@ -1251,11 +1357,11 @@
 					// $('#home_bg1_vd')[0].play();
 				}
 				if(destination.index==2){
-					for(var i = 1; i <= 3; i ++){
-						$('.teamItem').css({			
-							left: 0,
-						})
-					}
+					// for(var i = 1; i <= 3; i ++){
+					// 	$('.teamItem').css({			
+					// 		left: 0,
+					// 	})
+					// }
 				}
 				if(destination.index==3){
 					$('.home_pg4').removeClass('active');
@@ -1271,14 +1377,14 @@
 
 				}
 				if(destination.index==2){
-					for(var i = 1; i <= 3; i ++){
-						var distance = 25 * i + '%'
-						var calc = 'calc('+distance+')';
-						console.log(calc);
-						$('.teamItem').eq(i).animate({	
-							left : distance ,
-						},500)
-					}
+					// for(var i = 1; i <= 3; i ++){
+					// 	var distance = 25 * i + '%'
+					// 	var calc = 'calc('+distance+')';
+					// 	console.log(calc);
+					// 	$('.teamItem').eq(i).animate({	
+					// 		left : distance ,
+					// 	},500)
+					// }
 				}
 				if(destination.index==3){
 
@@ -1290,6 +1396,37 @@
 				}
 		}
 		});
+	</script>
+	
+
+	<script
+	src="https://code.jquery.com/jquery-1.12.4.min.js"
+	integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+	crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$('.teamGroup').slick(
+			{
+			infinite: false,
+			speed: 300,
+			slidesToShow: 3,
+			slidesToScroll: 3,
+			arrows: false,
+			responsive: [
+				{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					infinite: true,
+					// dots: true
+				}
+				}
+			]
+			}
+			)
+	});
 	</script>
 </body>
 </html>
