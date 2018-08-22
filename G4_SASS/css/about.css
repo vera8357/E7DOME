@@ -100,6 +100,7 @@ h2 {
   font-size: 5vw; }
 
 * {
+  outline: 1px solid #f0f;
   box-sizing: border-box; }
 
 body {
@@ -358,6 +359,13 @@ p {
 .fastball img {
   width: 50%; }
 
+.speed-ball {
+  top: 10px;
+  left: 73%; }
+
+.speed-ball img {
+  width: 50%; }
+
 .bg-buttom {
   background-image: url("../../images/about-material/about-bg2.png");
   background-repeat: no-repeat;
@@ -440,6 +448,11 @@ footer {
 .an-first.start .an-first-crane {
   animation-name: first-crane; }
 
+@media screen and (max-width: 1200px) {
+  .an-first {
+    width: 500px;
+    height: calc((500px / 3.2) * 3); } }
+
 @media screen and (max-width: 768px) {
   .an-first {
     width: 360px;
@@ -461,9 +474,9 @@ footer {
   background-color: #000;
   width: 100%;
   height: 100%;
-  transition: box-shadow .5s ease, -webkit-transform .2s ease;
-  transition: box-shadow .5s ease, transform .2s ease;
-  transition: box-shadow .5s ease, transform .2s ease, -webkit-transform .2s ease;
+  transition: box-shadow 0.5s ease, -webkit-transform 0.2s ease;
+  transition: box-shadow 0.5s ease, transform 0.2s ease;
+  transition: box-shadow 0.5s ease, transform 0.2s ease, -webkit-transform 0.2s ease;
   overflow: hidden; }
 
 .block-video .video-item {
@@ -667,6 +680,11 @@ footer {
 @media screen and (max-width: 767px) {
   .an-crane {
     overflow-x: hidden; } }
+
+@media screen and (max-width: 1200px) {
+  .an-crane {
+    width: 500px;
+    height: calc((500px / 3.2) * 3); } }
 
 @media screen and (max-width: 768px) {
   .an-crane {
@@ -872,6 +890,66 @@ footer {
   100% {
     transform: scale(1.1);
     opacity: 1; } }
+
+@media screen and (max-width: 1200px) {
+  .bg-top {
+    width: 100%;
+    height: 100%; }
+  .block-item {
+    flex-direction: row;
+    padding-bottom: 2em; }
+  .block-item .block-text:first-child {
+    padding-right: 0em; }
+  .block-aboutus {
+    line-height: 30px;
+    padding: 1em;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5); }
+  .block-text {
+    width: 50%;
+    padding: 0px 10px 10px 10px; }
+  .block-text h2 {
+    font-size: 2.5em;
+    margin: 0px; }
+  .bolck-image {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+  .block-image-video {
+    height: auto; }
+  .block-item .block-text:last-child {
+    padding-left: 0em; }
+  .business-text {
+    align-self: center;
+    margin-top: 3em;
+    margin-bottom: 3em; }
+  .business-text h2 {
+    font-size: 3vw;
+    line-height: 1.3em;
+    font-weight: bold;
+    padding: 1em; }
+  .business-text h3 {
+    font-size: 2vw;
+    line-height: 1.3em;
+    font-weight: bold;
+    padding: 1em; }
+  .landmark {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center; }
+  .redman {
+    top: 10px;
+    right: -450px; }
+  .redman img {
+    width: 30%; }
+  .blackman img {
+    width: 70%; }
+  .fastball {
+    top: -10px;
+    right: -250px; }
+  .fastball img {
+    width: 40%; } }
 
 @media screen and (max-width: 768px) {
   .bg-top {

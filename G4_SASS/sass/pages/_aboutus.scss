@@ -1,5 +1,5 @@
 * {
-  // outline: 1px solid #f0f;
+  outline: 1px solid #f0f;
   box-sizing: border-box;
 }
 
@@ -305,6 +305,14 @@ p {
   right: 15%;
 }
 .fastball img{
+  width: 50%;
+}
+// ==========scrollmagic================
+.speed-ball{
+  top: 10px;
+  left: 73%;
+}
+.speed-ball img{
   width: 50%;
 }
 // 營業資訊結束
