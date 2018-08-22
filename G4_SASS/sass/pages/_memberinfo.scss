@@ -1,8 +1,10 @@
 * {
     @include all();
+    /*outline: 1px solid red;*/
 }
 body{
     font-family: $about-font;
+  
     
 }
 
@@ -80,11 +82,14 @@ section {
 }
 
 .pic_wrap {
-    width: 100%;
+  width: 150px;
+    height: 150px;
+     margin: auto;
 }
 
 .pic {
-    width: 50%;
+    width: 150px;
+    height: 150px;
     vertical-align: bottom;
     margin: auto;
 }
@@ -121,7 +126,7 @@ input[type="submit"]{
 .m_item li {
     width: 25%;
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 1px;
     padding: 3px;
 }
@@ -137,6 +142,7 @@ input[type="submit"]{
     .pic_wrap {
         position: relative;
         width: 180px;
+        height: 180px;
         right: 0;
         left: 0;
         top: 0;
@@ -144,11 +150,12 @@ input[type="submit"]{
         margin: auto;
     }
     .pic {
-        width: 80%;
+        width: 180px;
+        height: 180px;
     }
     .change_pic {
         display: block;
-        width: 80%;
+        width: 180px;
         background-color: #888;
         color: #fff;
         text-align: center;
@@ -175,6 +182,7 @@ input[type="submit"]{
     }
     .m_item li {
         width: 100%;
+        font-size: 20px;
         padding: 15px;
     }
     .line {
@@ -210,7 +218,7 @@ input[type="submit"]{
 }
 
 h1 {
-    @include h1();
+    @include s_member_h1();
 }
 
 .first {
@@ -237,6 +245,13 @@ input[type="submit"]{
 .first #clear_border{
     border: transparent;
 }
+
+@media screen and (min-width: 768px){
+    h1 {
+    @include member_h1();
+}
+}
+
 /*1024以上*/
 
 @media screen and (min-width: 1024px) {}

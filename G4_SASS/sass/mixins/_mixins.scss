@@ -16,8 +16,17 @@ h2 {
     
     ;
 }
+@mixin s_member_h1() {
+    width: 35%;
+    font-size: 22px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    padding: 6px;
+    background-color: #aaa;
+}
 
-@mixin h1() {
+
+@mixin member_h1() {
     width: 35%;
     font-size: 24px;
     text-align: right;
