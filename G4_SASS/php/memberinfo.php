@@ -39,22 +39,27 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 					</label>
 				</div>
 
-				<input type="submit" value="確認上傳">
+				<input id="member_pic" type="submit" value="確認上傳">
 				
        		 </form>
 
 
 
-       		 <div id="show_name"></div>
+       		 <div id="show_name"><?php echo $_SESSION['MEM_ID']; ?></div>
 
 
 
 
 			<ul class="m_item">
+
 				<li><a href="#"><span class="line"></span>個人資料</a></li>
 				<li><a href="memberbooking.php"><span class="line"></span>預約紀錄</a></li>
 				<li><a href="#"><span class="line"></span>儲值紀錄</a></li>
 				<li><a href="#"><span class="line"></span>我的揪團</a></li>
+
+				<form action="logout.php" method="post">
+				<li><a href="#"> <input type="submit" value="登出"> </a></li>
+				</form>
 			</ul>
 			
 
@@ -74,7 +79,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 				
 
 
-						<input type="text"  id="MEM_NO" name="MEM_NO" value="<?php echo$_SESSION['MEM_NO'];?>" style="visibility: hidden;">
+						
 						<div class="div_style first">
 							會員名稱: <input id="clear_border" type="text" value="<?php echo$_SESSION['MEM_ID']; ?>" readonly="readonly">
 
@@ -98,27 +103,28 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 				
 				<h1>變更密碼</h1>
 
-				<form action="">
-
+					
 					<div class="div_style first">
-						輸入舊密碼: <input type="password" name="old_psw">
+						輸入舊密碼: <input id="old_psw" type="password" name="old_psw"   >
 					</div>
 
 					<div class="div_style">
-						輸入新密碼: <input type="password" name="new_psw">
+						輸入新密碼: <input id="new_ps1" type="password" name="new_psw"   >
 					</div>
 
 					<div class="div_style">
-						確認新密碼: <input type="password" name="chech_psw">
+						確認新密碼: <input  id="new_ps2" type="password" name="chech_psw"  >
 					</div>
 
 					<div>
-						<input type="button" value="確認修改密碼">
+						<input id="update_psw" type="button" value="確認修改密碼"  >
 					</div>
 
-				</form>
+				
 
 			</div>
+
+			<input type="text"  id="MEM_NO" name="MEM_NO" value="<?php echo$_SESSION['MEM_NO'];?>" style="visibility: hidden;">
 			
 
 		</div>

@@ -34,7 +34,9 @@ try{
       $_SESSION["MEM_POINTS"] = $memRow["MEM_POINTS"];
        $_SESSION["MEM_PHONE"] = $memRow["MEM_PHONE"];
         $_SESSION["MEM_IMG"] = $memRow["MEM_IMG"];
+        //跳轉刮刮樂頁面
     echo "<a href='memberinfo.php'>會員專區</a> ";
+
   }else{
     echo "註冊失敗";
   }

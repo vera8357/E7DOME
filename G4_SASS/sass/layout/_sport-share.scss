@@ -148,7 +148,7 @@ img{
     position: absolute;
     display:block;
     content:'';
-    right:0;
+    right:-100%;
     width: 0;
     height: 0;
     border-style: solid;
@@ -164,7 +164,7 @@ img{
     border-style: solid;
     border-width: 33vw 0 0 45vw;
     border-color: transparent transparent transparent #70d9f1;
-    left:0;
+    left:-100%;
     bottom:0;
 }
 .assess{
@@ -173,6 +173,7 @@ img{
     position: relative;
 }
 .assess_tri1{
+    left:-100%;
     display:block;
     content:'';
     position: absolute;
@@ -188,7 +189,7 @@ img{
     position: absolute;
     width: 0;
     height: 0;
-    right:0;
+    right:-100%;
     bottom:130px;
     z-index: 0;
     border-style: solid;
@@ -277,17 +278,19 @@ td img{
     animation: ball 2s 0s both;
     // z-index: 0;
     width:66.66%;
+    left:-100%;
+    transform: rotate(0deg);
 }
-@keyframes ball {
-    0% {
-        left: -1000px;
-        transform: rotate(0deg);
-    }
-    100% {
-        left: 50px;
-        transform: rotate(360deg);
-    }
-}
+// @keyframes ball {
+//     0% {
+//         left: -1000px;
+//         transform: rotate(0deg);
+//     }
+//     100% {
+//         left: 50px;
+//         transform: rotate(360deg);
+//     }
+// }
 
 .bgcball img{
     width:100%;
@@ -307,7 +310,7 @@ td img{
     display:block;
     content:'';
     position: absolute;
-    right:0;
+    right:-100%;
     top:-91%;
     width: 0;
     height: 0;

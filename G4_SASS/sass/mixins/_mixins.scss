@@ -16,8 +16,17 @@ h2 {
     
     ;
 }
+@mixin s_member_h1() {
+    width: 35%;
+    font-size: 22px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    padding: 6px;
+    background-color: #aaa;
+}
 
-@mixin h1() {
+
+@mixin member_h1() {
     width: 35%;
     font-size: 24px;
     text-align: right;
@@ -32,9 +41,27 @@ h2 {
     border-radius: 5px;
 }
 
-@mixin submit() {
-    padding: 5px;
-    letter-spacing: 2px;
-    border-radius: 5px;
+@mixin btn_style() {
+    background-color: rgba(254, 180, 4, .7);
+    letter-spacing:2px;
+    padding: 3px 10px;
     border: transparent;
+     border-radius: 5px;
+}
+
+@mixin s_show_name(){
+    display: block;
+    width: 30%;
+    height: 22px;
+    margin: 20px auto;
+    text-align: center;
+    border-bottom:1px solid #bbb;
+
+}
+
+
+@mixin show_name(){
+    width: 70%;
+    margin: 40px;
+
 }
