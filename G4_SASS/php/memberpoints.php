@@ -11,8 +11,8 @@ session_start();
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="../css/style.css">
-	<link rel="stylesheet" type="text/css" href="../css/memberinfo.css">
-	<title>會員基本資料</title>
+	<link rel="stylesheet" type="text/css" href="../css/memberpoints.css">
+	<title>會員儲值資訊</title>
 	
 
 </head>
@@ -52,9 +52,9 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 
 			<ul class="m_item">
 
-				<li><a href="#"><span class="line"></span>個人資料</a></li>
+				<li><a href="memberinfo.php"><span class="line"></span>個人資料</a></li>
 				<li><a href="memberbooking.php"><span class="line"></span>預約紀錄</a></li>
-				<li><a href="memberpoints.php"><span class="line"></span>儲值紀錄</a></li>
+				<li><a href="#"><span class="line"></span>儲值紀錄</a></li>
 				<li><a href="#"><span class="line"></span>我的揪團</a></li>
 
 				<form action="logout.php" method="post">
@@ -73,58 +73,64 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 		<!-- 右邊攔 選項內容-->
 		<div class="content">
 
-			<div class="member_content">
-				<h1>基本資料</h1>
+			<div class="points">
+				<h1>儲值紀錄</h1>
 
-				
-
-
-						
-						<div class="div_style first">
-							會員名稱: <input id="clear_border" type="text" value="<?php echo$_SESSION['MEM_ID']; ?>" readonly="readonly">
-
-						</div>
-
-						<div class="div_style">
-							手機號碼: <input id="phone_number" type="tel" name="change_tel"  value="<?php echo$_SESSION['MEM_PHONE']; ?>">
-
-						</div>
-						<div>
-							<input id="update_phone" type="button" value="修改手機號碼">
-						</div>
+				<table class="points_content">
 					
 			
 
+					<tr>
+						<th>訂單編號</th>
+						<th>&nbsp;日&nbsp;&nbsp;期&nbsp;</th>
+						<th>儲值金額</th>
+						<th>&nbsp;點&nbsp;&nbsp;數&nbsp;</th>
+					</tr>
 
-			</div>
+					<?php
+						
+						try{
+							require_once("connect_g4.php");
+							$sql = "select * from card_oder where MEM_NO =".$_SESSION['MEM_NO'];
+							$member = $pdo->query($sql);
+							
+
+							if($member->rowCount()==0){
+								echo "<tr><td class='no_oder'>無儲值紀錄</td></tr>";
+							}else{
+
+									while ($order = $member->fetch(PDO::FETCH_ASSOC)){
+										echo "<tr>";
+										echo "<td>".$order['ORDER_NO']."</td>";
+										echo "<td>".$order['ORDER_DATETIME']."</td>";
+										echo "<td>".$order['CARD_PRICE']."</td>";
+										echo "<td>".$order['CARD_POINTS']."</td>";
+										echo "</tr>";
+									} 
+										
+							}
+
+						}catch(PDOException $e){
+
+							echo $e->getMessage();
+						}
 
 
-			<div class="change_paw">
-				
-				<h1>變更密碼</h1>
+					?>
 
 					
-					<div class="div_style first">
-						輸入舊密碼: <input id="old_psw" type="password" name="old_psw"   >
-					</div>
+					
+				</table>
 
-					<div class="div_style">
-						輸入新密碼: <input id="new_ps1" type="password" name="new_psw"   >
-					</div>
 
-					<div class="div_style">
-						確認新密碼: <input  id="new_ps2" type="password" name="chech_psw"  >
-					</div>
-
-					<div>
-						<input id="update_psw" type="button" value="確認修改密碼"  >
-					</div>
-
-				
 
 			</div>
 
-			<input type="text"  id="MEM_NO" name="MEM_NO" value="<?php echo$_SESSION['MEM_NO'];?>" style="visibility: hidden;">
+
+						
+					
+
+			
 			
 
 		</div>
@@ -135,7 +141,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 
 
 	<script src="../js/upfile.js"></script>
-	<script src="../js/update_phone_psw.js"></script>
+	
 
 </body>
 </html>
