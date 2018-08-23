@@ -170,15 +170,11 @@ p {
   right: 35%; }
 
 .badminton-o {
-<<<<<<< HEAD
-  width: 10%; }
-=======
   position: absolute;
   border-radius: 50%;
   width: 20%;
   top: 5%;
   right: 45%; }
->>>>>>> G4-1
 
 .bowling h3 {
   position: absolute;
