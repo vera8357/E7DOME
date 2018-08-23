@@ -5,114 +5,142 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/maskbrush.css">
+    <link rel="stylesheet" href="css/font.css">
     <title>maskBrush</title>
     <style type="text/css">
-    * {
-        outline: 1px solid #f0f;
-        padding: 0;
-        margin: 0;
-    }
+        * {
+            /* outline: 1px solid #f0f; */
+            padding: 0;
+            margin: 0;
+        }
 
-    h2 {
-        position: absolute;
-        top: 0;
-        z-index: 1;
-        display: inline-block;
-        width: 500px;
-        height: 100px;
-        align-items: center;
-        color: #F2EC30;
-        font-size: 5em;
-    }
+        body,
+        html {
+            overflow: hidden;
+        }
 
-    canvas {
-        display: flex;
-        justify-content: center;
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
+        .layouts {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            background-image: url("images/brush/Summer-sports.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .layouts h2 {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 2%;
+            z-index: 1;
+            color: rgb(255, 255, 255);
+            font-size: 2em;
+            font-family: '微軟正黑體';
+        }
+
+        #mycanvas {
+            width: 60%;
+            box-shadow: 10px 10px 10px .5px rgba(255, 255, 255, 0.329);
+        }
     </style>
 </head>
 
 <body>
-    <div id="text">
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/e7logo.png" alt=""> </a>
+        </div>
+        <ul>
+            <li>
+                <a href="#"> 場地介紹 </a>
+            </li>
+            <li>
+                <a href="booking.html"> 預約場地 </a>
+            </li>
+            <li>
+                <a href="group.html"> 運動揪團 </a>
+            </li>
+            <li>
+                <a href="about.html"> 關於我們 </a>
+            </li>
+            <li>
+                <a href="chat-robot.html"> 諮詢專區 </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/user-icon.png"> </a>
+            </li>
+        </ul>
+    </header>
+    <div class="layouts">
         <h2>兌換點數</h2>
+        <canvas id="mycanvas" width="1000" height="400"></canvas>
     </div>
     <script src="js/pixi.min.js"></script>
     <script>
-    var app = new PIXI.Application(1000, 400);
-    document.body.appendChild(app.view);
+        var layouts = document.getElementsByClassName('layouts')[0];
+        var app = document.getElementById('mycanvas');
+        // var renderer = new PIXI.autoDetectRenderer(1000,400,);
+        var app = new PIXI.Application(1000, 400, { view: app });
+        layouts.appendChild(app.view);
+        var stage = app.stage;
 
-    //==============畫布滿版============
-    // app.renderer.view.style.position = "absolute";
-    // app.renderer.view.style.display = "block";
-    // app.renderer.autoResize = true;
-    // app.renderer.resize(window.innerWidth, window.innerHeight);
+        var brush = new PIXI.Graphics();
+        brush.beginFill(0xE7ED26);
+        brush.drawCircle(0, 0, 50);
+        brush.endFill();
 
+        PIXI.loader.add("t1", "images/brush/brushegg.jpg")
+        PIXI.loader.add("t2", "images/brush/ValentineDay.jpg")
+        PIXI.loader.load(setup);
 
-    //==============視窗縮放============
-    window.onresize = function(event) {
-        // var w = window.innerWidth;
-        // var h = window.innerHeight;
+        function setup(loader, resources) {
+            var background = new PIXI.Sprite(resources["t1"].texture);
+            stage.addChild(background);
+            background.width = app.screen.width;
+            background.height = app.screen.height;
 
-        // app.renderer.resize(w, h);
+            var imageToReveal = new PIXI.Sprite(resources["t2"].texture);
+            stage.addChild(imageToReveal);
+            imageToReveal.width = app.screen.width;
+            imageToReveal.height = app.screen.height;
 
-        //     將畫面的正中間放在 app.renderer 一半寬高的位置
-        // app.stage.x = app.renderer.width * 0;
-        // app.stage.y = app.renderer.height * 0;
-    };
-    var stage = app.stage;
+            var renderTexture = PIXI.RenderTexture.create(app.screen.width, app.screen.height);
 
-    var brush = new PIXI.Graphics();
-    brush.beginFill(0xE7ED26);
-    brush.drawCircle(0, 0, 50);
-    brush.endFill();
+            var renderTextureSprite = new PIXI.Sprite(renderTexture);
+            stage.addChild(renderTextureSprite);
+            imageToReveal.mask = renderTextureSprite;
 
-    PIXI.loader.add("t1", "images/brush/moon.png")
-    PIXI.loader.add("t2", "images/brush/ValentineDay.jpg")
-    PIXI.loader.load(setup);
+            app.stage.interactive = true;
+            app.stage.on('pointerdown', pointerDown);
+            app.stage.on('pointerup', pointerUp);
+            app.stage.on('pointermove', pointerMove);
 
-    function setup(loader, resources) {
-        var background = new PIXI.Sprite(resources["t1"].texture);
-        stage.addChild(background);
-        background.width = app.screen.width;
-        background.height = app.screen.height;
+            var dragging = false;
 
-        var imageToReveal = new PIXI.Sprite(resources["t2"].texture);
-        stage.addChild(imageToReveal);
-        imageToReveal.width = app.screen.width;
-        imageToReveal.height = app.screen.height;
+            function pointerMove(event) {
+                if (dragging) {
+                    brush.position.copy(event.data.global);
+                    app.renderer.render(brush, renderTexture, false, null, false);
+                }
+            }
 
-        var renderTexture = PIXI.RenderTexture.create(app.screen.width, app.screen.height);
+            function pointerDown(event) {
+                dragging = true;
+                pointerMove(event);
+            }
 
-        var renderTextureSprite = new PIXI.Sprite(renderTexture);
-        stage.addChild(renderTextureSprite);
-        imageToReveal.mask = renderTextureSprite;
-
-        app.stage.interactive = true;
-        app.stage.on('pointerdown', pointerDown);
-        app.stage.on('pointerup', pointerUp);
-        app.stage.on('pointermove', pointerMove);
-
-        var dragging = false;
-
-        function pointerMove(event) {
-            if (dragging) {
-                brush.position.copy(event.data.global);
-                app.renderer.render(brush, renderTexture, false, null, false);
+            function pointerUp(event) {
+                dragging = false;
             }
         }
-
-        function pointerDown(event) {
-            dragging = true;
-            pointerMove(event);
-        }
-
-        function pointerUp(event) {
-            dragging = false;
-        }
-    }
     </script>
 </body>
 

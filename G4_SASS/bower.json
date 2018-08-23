@@ -23,5 +23,8 @@
     "pixi": "^4.8.1",
     "p5.js": "p5js#^0.5.13",
     "scrollmagic": "^2.0.5"
+  },
+  "dependencies": {
+    "isotope-layout": "^3.0.6"
   }
 }
