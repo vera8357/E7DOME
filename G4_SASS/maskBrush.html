@@ -9,139 +9,28 @@
     <link rel="stylesheet" href="css/maskbrush.css">
     <link rel="stylesheet" href="css/font.css">
     <title>maskBrush</title>
-    <style type="text/css">
-        * {
-            /* outline: 1px solid #f0f; */
-            padding: 0;
-            margin: 0;
-        }
-
-        body,
-        html {
-            overflow: hidden;
-        }
-
-        .layouts {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100vw;
-            height: 100vh;
-            background-image: url("images/brush/Summer-sports.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            overflow: hidden;
-        }
-
-        .layouts h2 {
-            width: 100%;
-            text-align: center;
-            margin-bottom: 2%;
-            z-index: 1;
-            color: rgb(255, 255, 255);
-            font-size: 2em;
-            font-family: '微軟正黑體';
-        }
-
-        #mycanvas {
-            width: 60%;
-            box-shadow: 10px 10px 10px .5px rgba(255, 255, 255, 0.329);
-        }
-    </style>
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <a href="index.html">
-                <img src="images/e7logo.png" alt=""> </a>
-        </div>
-        <ul>
-            <li>
-                <a href="#"> 場地介紹 </a>
-            </li>
-            <li>
-                <a href="booking.html"> 預約場地 </a>
-            </li>
-            <li>
-                <a href="group.html"> 運動揪團 </a>
-            </li>
-            <li>
-                <a href="about.html"> 關於我們 </a>
-            </li>
-            <li>
-                <a href="chat-robot.html"> 諮詢專區 </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="images/user-icon.png"> </a>
-            </li>
-        </ul>
-    </header>
+    <header> <div class="logo"> <a href="index.html"> <img src="images/e7logo.png" alt=""> </a> </div> <ul> <li> <a href="#"> 場地介紹 </a> </li> <li> <a href="booking.html"> 預約場地 </a> </li> <li> <a href="group.html"> 運動揪團 </a> </li> <li> <a href="about.html"> 關於我們 </a> </li> <li> <a href="chat-robot.html"> 諮詢專區 </a> </li> <li> <a href="#"> <img src="images/user-icon.png"> </a> </li> </ul> </header>
     <div class="layouts">
-        <h2>兌換點數</h2>
+        <div class="bomb-rocket"></div>
+        <div class="bomb-rocket"></div>
+        <div class="bomb-rocket"></div>
+        <div class="bomb-rocket"></div>
+        <div class="bomb-rocket"></div>
+        <div class="normal-rocket"></div>
+        <div class="normal-rocket"></div>
+        <div class="normal-rocket"></div>
+        <div class="normal-rocket"></div>
+        <div class="normal-rocket"></div>
+        <div class="text">Summer Games</div>
+        <div class="light"></div>
+        <div class="light"></div>
         <canvas id="mycanvas" width="1000" height="400"></canvas>
     </div>
     <script src="js/pixi.min.js"></script>
-    <script>
-        var layouts = document.getElementsByClassName('layouts')[0];
-        var app = document.getElementById('mycanvas');
-        // var renderer = new PIXI.autoDetectRenderer(1000,400,);
-        var app = new PIXI.Application(1000, 400, { view: app });
-        layouts.appendChild(app.view);
-        var stage = app.stage;
-
-        var brush = new PIXI.Graphics();
-        brush.beginFill(0xE7ED26);
-        brush.drawCircle(0, 0, 50);
-        brush.endFill();
-
-        PIXI.loader.add("t1", "images/brush/brushegg.jpg")
-        PIXI.loader.add("t2", "images/brush/ValentineDay.jpg")
-        PIXI.loader.load(setup);
-
-        function setup(loader, resources) {
-            var background = new PIXI.Sprite(resources["t1"].texture);
-            stage.addChild(background);
-            background.width = app.screen.width;
-            background.height = app.screen.height;
-
-            var imageToReveal = new PIXI.Sprite(resources["t2"].texture);
-            stage.addChild(imageToReveal);
-            imageToReveal.width = app.screen.width;
-            imageToReveal.height = app.screen.height;
-
-            var renderTexture = PIXI.RenderTexture.create(app.screen.width, app.screen.height);
-
-            var renderTextureSprite = new PIXI.Sprite(renderTexture);
-            stage.addChild(renderTextureSprite);
-            imageToReveal.mask = renderTextureSprite;
-
-            app.stage.interactive = true;
-            app.stage.on('pointerdown', pointerDown);
-            app.stage.on('pointerup', pointerUp);
-            app.stage.on('pointermove', pointerMove);
-
-            var dragging = false;
-
-            function pointerMove(event) {
-                if (dragging) {
-                    brush.position.copy(event.data.global);
-                    app.renderer.render(brush, renderTexture, false, null, false);
-                }
-            }
-
-            function pointerDown(event) {
-                dragging = true;
-                pointerMove(event);
-            }
-
-            function pointerUp(event) {
-                dragging = false;
-            }
-        }
-    </script>
+    <script src="js/maskbrush.js"></script>
 </body>
 
 </html>
