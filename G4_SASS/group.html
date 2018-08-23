@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+   
 </head>
 
 <body>
@@ -26,11 +27,12 @@
     <section>
         <div class="select_bar">
             <span class="selectSport black select-width select">
-            <select>
-                <option>籃球</option>
-                <option>羽毛球</option>
-                <option>保齡球</option>
-                <option>攀岩</option>
+            <select class="filters-select">
+                <option value="*">全部</option>
+                <option value=".basketball">籃球</option>
+                <option value=".badminton">羽毛球</option>
+                <option value=".bowling">保齡球</option>
+                <option value=".climblng">攀岩</option>
             </select>
         </span>
             <span class="selectDate select-width black select ">
@@ -38,13 +40,11 @@
         </span>
             <span class="selectTime black select-width select">
             <select>
+                <option>全部</option>
                 <option>上午</option>
                 <option>下午</option>
                 <option>晚上</option>
             </select>
-        </span>
-            <span class="selectDel select-width select black"><i class="fas fa-trash-alt"></i>
-
         </span>
             <div class="groupbtn">
                 <span class="myGroup button">我的揪團</span>
@@ -52,8 +52,8 @@
             </div>
         </div>
     </section>
-    <ul class="group-list">
-        <li class="groupblock cl-3">
+    <ul class="group-list grid">
+        <li class="groupblock cl-3 cl-12 all badminton" data-category="badminton">
             <a href="groupInfo.html">
                 <div class="group01">
                     <div class="group-img">
@@ -84,7 +84,7 @@
                 </div>
             </a>
         </li>
-        <li class="groupblock cl-3">
+        <li class="groupblock cl-3 cl-12 all basketball" data-category="basketball">
             <a href="groupInfo.html">
                 <div class="group01">
                     <div class="group-img">
@@ -115,7 +115,7 @@
                 </div>
             </a>
         </li>
-        <li class="groupblock cl-3">
+        <li class="groupblock cl-3 cl-12 all bowling" data-category="bowling">
             <a href="groupInfo.html">
                 <div class="group01">
                     <div class="group-img">
@@ -146,7 +146,7 @@
                 </div>
             </a>
         </li>
-        <li class="groupblock cl-3">
+        <li class="groupblock cl-3 cl-12 all basketball" data-category="basketball">
             <a href="groupInfo.html">
                 <div class="group01">
                     <div class="group-img">
@@ -177,7 +177,7 @@
                 </div>
             </a>
         </li>
-        <li class="groupblock cl-3">
+        <li class="groupblock cl-3 cl-12 all bowling" data-category="bowling">
             <a href="groupInfo.html">
                 <div class="group01">
                     <div class="group-img">
@@ -208,7 +208,7 @@
                 </div>
             </a>
         </li>
-        <li class="groupblock cl-3">
+        <li class="groupblock cl-3 cl-12 all climblng" data-category="climblng">
             <a href="groupInfo.html">
                 <div class="group01">
                     <div class="group-img">
@@ -239,7 +239,7 @@
                 </div>
             </a>
         </li>
-        <li class="groupblock cl-3">
+        <li class="groupblock cl-3 cl-12 all climblng" data-category="climblng">
             <a href="groupInfo.html">
                 <div class="group01">
                     <div class="group-img">
@@ -270,7 +270,7 @@
                 </div>
             </a>
         </li>
-        <li class="groupblock cl-3">
+        <li class="groupblock cl-3 cl-12 all climblng" data-category="climblng">
             <a href="groupInfo.html">
                 <div class="group01">
                     <div class="group-img">
@@ -302,8 +302,36 @@
             </a>
         </li>
     </ul>    
-        <script>
-        </script>
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="libs/isotope-layout/dist/isotope.pkgd.min.js"></script>
+            <script>
+            // init Isotope
+            var $grid = $('.grid').isotope({
+              itemSelector: '.groupblock',
+              layoutMode: 'fitRows'
+            });
+            // filter functions
+            var filterFns = {
+              // show if number is greater than 50
+              numberGreaterThan50: function() {
+                var number = $(this).find('.number').text();
+                return parseInt( number, 10 ) > 50;
+              },
+              // show if name ends with -ium
+              ium: function() {
+                var name = $(this).find('.name').text();
+                return name.match( /ium$/ );
+              }
+            };
+            // bind filter on select change
+            $('.filters-select').on( 'change', function() {
+              // get filter value from option value
+              var filterValue = this.value;
+              // use filterFn if matches value
+              filterValue = filterFns[ filterValue ] || filterValue;
+              $grid.isotope({ filter: filterValue });
+            });
+            </script>
 </body>
 
 </html>
