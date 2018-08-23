@@ -26,6 +26,7 @@ a{
 	display: flex;
 	flex-direction: row;
 	overflow: hidden;
+	padding-top: 25vh;
 }
 @media only screen and (max-width: 767px) {
     .container {
@@ -35,7 +36,7 @@ a{
 
 .area{
 	width: calc(50%/3);
-	height: 100vh;
+	height: 75vh;
 	/*transform: skew(-10deg);*/
 	position: relative;
 	overflow: hidden;
@@ -405,7 +406,7 @@ a{
 }
 
 /* Modal Content/Box */
-.modal-header{}
+
 
 .modal-content {
     background-color: #fefefe;
@@ -450,9 +451,9 @@ a{
     }
 }
 
-.table-modal tr:not(:last-child){
-    /*border-bottom: 1px solid white;*/
-}
+// .table-modal tr:not(:last-child){
+//     border-bottom: 1px solid white;
+// }
 
 .table-modal th,
 .table-modal td{

@@ -23,13 +23,14 @@ width: 100%; }
 header ul {
 float: right;
 width: 43.8%;
-margin-right: 5.2%; }
+margin-right: 5.2%;}
 
 header ul li {
 float: left;
 margin-right: 5.3%;
 font-size: 1.3vw;
-padding-top: 6.5%; }
+padding-top: 6.5%;
+position: relative; }
 
 header ul li a {
 text-decoration: none;
@@ -44,10 +45,10 @@ width: 6%; }
 #loginicon {
 width: 100%; }
 
-@media screen and (max-width:768px){
+@media screen and (max-width:1200px){
     header{
-        background-color: rgba(255,255,255,.8);
-        position: relative;
+        background-color: rgba(255,255,255,.9);
+        position: fixed;
     }
     .logo{
         margin-left: 5%;

@@ -60,6 +60,7 @@
     position: absolute;
     bottom:-10%;
     left:36%;
+    z-index: 1;
 }
 .bad_fp_bgimg1 img,
 .bad_fp_bgimg2 img,
@@ -76,4 +77,24 @@
     position: absolute;
     bottom:0;
     right:0;
+}
+.site_info{
+    background-color: #ffd783;}
+.assess{
+    background-color: transparent;
+}
+.group_page{
+    background-color: #ffd783;    
+}
+.site_info_tri2{
+    border-color: transparent transparent transparent #ffb405;    
+}
+.assess_tri1{
+    border-color: #ffd783 transparent transparent transparent;
+}
+.assess_tri2{
+    border-color: transparent transparent #ffd783 transparent;    
+}
+.group_page_tri{
+    border-color: transparent #ffb405 transparent transparent;
 }

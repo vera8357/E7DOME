@@ -1,4 +1,3 @@
-@charset "UTF-8";
 header {
   width: 100%;
   font-family: 'HanWangZonYi';
@@ -28,7 +27,8 @@ header ul li {
   float: left;
   margin-right: 5.3%;
   font-size: 1.3vw;
-  padding-top: 6.5%; }
+  padding-top: 6.5%;
+  position: relative; }
 
 header ul li a {
   text-decoration: none;
@@ -43,29 +43,27 @@ header ul li:last-child {
 #loginicon {
   width: 100%; }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   header {
-    background-color: rgba(255, 255, 255, 0.8);
-    position: relative; }
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed; }
   .logo {
     margin-left: 5%;
     margin-top: .5%;
     margin-bottom: .5%; } }
 
-h1, h2 {
+/*lightbox*/
+h1,
+h2 {
   font-family: 'HanWangZonYi';
   font-size: 5vw; }
 
 * {
-  font: "Questrial", " Microsoft JhengHei", "微軟正黑體", sans-serif;
-  font-weight: bold; }
+  text-decoration: none; }
 
 body {
   background: url("../images/climb.jpg") no-repeat center center fixed;
   background-size: cover; }
-
-* {
-  outline: 1px solid #f00; }
 
 header + section {
   padding-top: 160px; }
@@ -76,7 +74,8 @@ header + section {
   border: 1px solid #000;
   width: 90%;
   padding: 30px;
-  border-radius: 15px; }
+  border-radius: 15px;
+  font-family: 'HanWangZonYi'; }
 
 .selectDate {
   font-color: #fff; }
@@ -123,8 +122,10 @@ input {
 
 .black {
   background-color: #000;
-  order: none;
-  color: #fff; }
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer; }
 
 .black select {
   color: #fff; }
@@ -143,31 +144,116 @@ input {
   display: flex;
   flex-flow: row wrap;
   align-content: center;
-  margin: 50px auto; }
+  justify-content: center;
+  margin: 50px auto;
+  font-family: 'HanWangZonYi'; }
 
 .groupblock {
-  height: 400px;
-  margin: 48px;
-  background: rgba(255, 255, 255, 0.9);
-  border-right: 4px solid rgba(0, 0, 0, 0.6);
-  border-bottom: 4px solid rgba(0, 0, 0, 0.6); }
+  vertical-align: top;
+  width: 25%;
+  box-sizing: border-box;
+  height: 405px;
+  padding: 0 15px;
+  color: #777;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 30px; }
+
+a {
+  color: #777; }
+
+.group01 {
+  width: 100%;
+  height: 405px;
+  margin: 10px 5px;
+  vertical-align: top;
+  box-sizing: border-box;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+
+.group-more {
+  position: absolute;
+  top: 160px;
+  transform: translateY(-50%);
+  background-color: #0052b2;
+  color: #ffb505;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 35px 8px 15px; }
+
+.more-skew {
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #ffb505;
+  color: #0052b2;
+  line-height: 40px;
+  text-align: center; }
+
+.more-skew:after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -15px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 40px 15px;
+  border-color: transparent transparent #ffb505 transparent; }
+
+.more-skew:before {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -15px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 40px 15px 0 0;
+  border-color: #ffb505 transparent transparent transparent; }
 
 .group-img {
-  position: relative;
   width: 100%;
-  padding-bottom: 200px;
-  background: no-repeat center center;
-  background-size: cover; }
+  height: 160px;
+  object-fit: cover; }
+
+.group-img img {
+  width: 100%;
+  height: 160px; }
 
 .group-date {
   background-color: #ffb505;
-  float: right;
+  color: #0052b2;
   text-align: center;
-  padding: 10px; }
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-weight: bold; }
 
-group-title {
-  font-size: 4em;
-  color: #0052b2; }
+#group-day {
+  font-size: 28px;
+  vertical-align: middle; }
+
+#group-month {
+  font-size: 20px;
+  vertical-align: middle;
+  line-height: 20px; }
+
+.group-title {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #0052b2;
+  padding-bottom: 10px; }
+
+.group-info {
+  padding: 30px 15px 15px; }
 
 .cl-3 {
   width: 25%; }

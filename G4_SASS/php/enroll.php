@@ -4,7 +4,7 @@ session_start();
 
 try{
   require_once("connect_g4.php");
-  $sql = "insert into member (MEM_NO, MEM_ID, MEM_PSW, MEM_NAME, MEM_IMG, MEM_PHONE, MEM_POINTS, MEM_STATUS) VALUES ( null, :MEM_ID, :MEM_PSW, :MEM_NAME, NULL, :MEM_PHONE, '5000', '1' )";
+  $sql = "insert into member (MEM_NO, MEM_ID, MEM_PSW, MEM_NAME, MEM_IMG, MEM_PHONE, MEM_POINTS, MEM_STATUS) VALUES ( null, :MEM_ID, :MEM_PSW, :MEM_NAME, 'pic.jpg', :MEM_PHONE, '5000', '1' )";
   $member = $pdo->prepare( $sql );
   $member->bindValue(":MEM_ID", $_REQUEST["enroll_id"]);
   $member->bindValue(":MEM_PSW", $_REQUEST["enroll_psw1"]);
@@ -27,11 +27,16 @@ try{
       $memRow = $member->fetch(PDO::FETCH_ASSOC);
   
         //將登入資訊寫入session
+      $_SESSION["MEM_NO"] = $memRow["MEM_NO"];
       $_SESSION["MEM_ID"] = $memRow["MEM_ID"];
       $_SESSION["MEM_PSW"] = $memRow["MEM_PSW"];
       $_SESSION["MEM_NAME"] = $memRow["MEM_NAME"];
       $_SESSION["MEM_POINTS"] = $memRow["MEM_POINTS"];
-    echo "<a href='lightbox.php'>會員專區</a> ";
+       $_SESSION["MEM_PHONE"] = $memRow["MEM_PHONE"];
+        $_SESSION["MEM_IMG"] = $memRow["MEM_IMG"];
+        //跳轉刮刮樂頁面
+    echo "<a href='memberinfo.php'>會員專區</a> ";
+
   }else{
     echo "註冊失敗";
   }
