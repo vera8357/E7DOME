@@ -1,0 +1,311 @@
+@import "layout/header";
+@import "base/var";
+@import "mixins/mixins";
+@import "layout/desktop";
+@import "layout/small";
+@import "layout/footer";
+@import "components/buttons";
+
+
+
+body{
+	background-image: none;
+}
+section{
+	margin: 0 auto;
+	color:#fff;
+	background-color:#fff;
+}
+.wrapper{
+	background-color:#0052b2;
+	line-height: 30px;
+}
+.first-wrapper{
+	display:flex;
+	background-color: #0052b2;
+	width: 1200px;
+	margin: 0 auto;
+	font-family: 'HanWangZonYi';
+}
+
+.group-info-title{
+	color:#fff;
+	font-size: 45px;
+	line-height: 30px;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+#group-mem-list{
+	display: flex;
+	margin: 20px 0;
+}
+.mem-head{
+	margin: 0 5px;
+}
+
+.line{
+	width:3px;
+	background-color:#fff;
+	margin:5px 5px;
+}
+.group-details{
+	background-color:#0052b2;
+	margin: 200px auto;
+}
+.group-hr{
+	width:100%;
+	margin:20px 0;
+}
+.group-info-image img{
+	width:100%;
+	vertical-align: top;
+}
+.mem-head{
+	width:50px;
+	height:50px;
+	border-radius: 50%;
+	background-color: #f00;
+}
+.group-txt{
+	width:100%;
+	margin: 20px 0;
+}
+
+.group-box1{
+	display: block;
+	border-color: #ffb505;
+	border-width: 300px 0 0 2000px;
+	height: 0;
+	position: absolute;
+	box-sizing: border-box;
+	border-style: solid;
+	transform: rotate(110deg);
+	left: 40%;
+}
+.group-box1:after{
+	content: '';
+	width:0.4vw;
+	border-color: #70daf2;
+	border-width: 0.2vw 0 0 2000px;
+	height: 0;
+	position: absolute;
+	z-index: 0;
+	bottom: 0px;
+	box-sizing: border-box;
+	border-style: solid;
+	transform: rotate(180deg);
+	right: 0;
+	margin: 200px;
+}
+
+
+.forum-wrapper{
+	background-color:#e2e2e2;
+	height:900px;
+	width: 100%;
+	margin: 0 190px;
+	position: relative;
+	z-index: -1;
+	transform: skew(-20deg);
+	font-family: 'HanWangZonYi';
+}
+.forum-board{
+	transform: skew(20deg);
+}
+.forum-box1:before{
+	content: '';
+	width:0.4vw;
+	border-color: #70daf2;
+	border-width: 0.2vw 0 0 2000px;
+	height: 0;
+	position: absolute;
+	z-index: 0;
+	top: 20%;
+	bottom: 0px;
+	box-sizing: border-box;
+	border-style: solid;
+	transform: rotate(180deg);
+	right: 0;
+	margin: 10px;
+}
+
+.forum-box1{
+	width:100px;
+	border-color: #ffb505;
+	border-width: 200px 0 0 2000px;
+	height: 0;
+	position: absolute;
+	z-index: 0;
+	top: 20%;
+	bottom: 0px;
+	box-sizing: border-box;
+	border-style: solid;
+	transform: rotate(110deg);
+	right: 54%;
+}
+
+.forum-title{
+	color:#0052b2;
+	line-height: 50px;
+	font-size: 2vw;
+	font-weight:bold;
+	position: absolute;
+	right: 0;
+	left:0;
+	margin: 80px 20px;
+}
+.forum{
+	background-color:#fff;
+	width:1000px;
+	padding-bottom: 500px;
+	margin: 150px 50px;
+	position: absolute;
+	z-index: 8;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	border-radius: 20px;
+	overflow: auto;
+
+}
+.message-box{
+	color:#000;
+	margin:50px;
+
+}
+.message{
+	display: inline-block;
+    width: 400px;
+}
+
+.mem-head01{
+	display: inline-block;
+    vertical-align: middle;
+    object-fit: contain;
+    width: 100px;
+    height:100px;
+}
+
+.mem-head01 img{
+    border-radius: 50%;
+	width: 100%;
+	height:100%;
+}
+.mem-id{
+	display: inline-block;
+    vertical-align: top;
+    margin: 10px 0;
+}
+.message-time{
+	display: inline-block;
+    float: right;
+    color: #aaa;
+    margin: 40px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.first-wrapper{
+	display:flex;
+	flex-flow: reverse nowrap;
+}
+.infoimgblock{
+	position: relative;
+	background-color: #ffb505;
+	border-radius: 20px;
+	width:400px;
+	height:250px;
+
+}
+.joinGroup{
+	background-color: #ffb505;
+}
+.infoimgblock:after{
+	content: '';
+	display: block;
+	border-color: #0052b2;
+	border-width: 500px 0 0 1920px;
+	height: 0;
+	position: absolute;
+	z-index: -5;
+	bottom: 50px;
+	box-sizing: border-box;
+	border-style: solid;
+	transform: rotate(110deg);
+	left: -50%;
+}
+.infoimg{
+	position: absolute;
+	bottom:20px;
+	right:20px;
+	background: no-repeat center center;
+	background-size: cover;
+	padding-bottom:250px;
+	width:100%;
+}
+.group-name{
+	text-align:right;
+}
+.group-name h3{
+	font-size: 4em;
+}
+.likeGroup{
+	width:60px;
+	height:60px;
+	margin:10px;
+	font-size:50px;
+	padding:5px;
+	text-align:center;
+	position: relative;
+}
+.likeGroup:after{
+	content: '';
+	border-radius: 50%;
+	display: block;
+	padding-bottom: 50px;
+	background-color:#fa0;
+	}
+
+.fbshare{
+	margin:20px;
+}
+.group-information{
+	display:flex;
+	flex-flow: row nowrap;
+	margin: 0 auto;
+}
+.group-desc{
+	width:50%;
+	height:500px;
+	background:rgba(255,255,255,.9);
+	border-right: 4px solid rgba(0,0,0,.6);
+	border-bottom: 4px solid rgba(0,0,0,.6);
+	border-radius: 20px;
+	margin:50px 0 20px;
+	padding: 20px;
+}
+.group-member{
+	width:50%;
+	height:500px;
+	background:rgba(255,255,255,.9);
+	border-right: 4px solid rgba(0,0,0,.6);
+	border-bottom: 4px solid rgba(0,0,0,.6);
+	border-radius: 20px;
+	margin:50px 0px;
+	margin-right:-20%;
+	margin-top:-10%;
+	padding: 20px;
+}*/
