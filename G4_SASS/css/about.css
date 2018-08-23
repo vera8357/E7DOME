@@ -24,12 +24,32 @@ header ul {
   width: 43.8%;
   margin-right: 5.2%; }
 
+header ul:after {
+  display: block;
+  content: '';
+  clear: both; }
+
 header ul li {
   float: left;
   margin-right: 5.3%;
   font-size: 1.3vw;
   padding-top: 6.5%;
   position: relative; }
+
+header ul li:before {
+  display: block;
+  content: '';
+  width: 90%;
+  background-color: transparent;
+  padding-top: 10%;
+  height: 0;
+  position: absolute;
+  right: -10%;
+  bottom: -10%;
+  z-index: -1; }
+
+header ul li:hover :before {
+  background-color: #ecb32b; }
 
 header ul li a {
   text-decoration: none;
