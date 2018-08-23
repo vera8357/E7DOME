@@ -370,60 +370,6 @@ td img {
     top: -180%;
     border-width: 0 25vw 23vw 0; } }
 
-header {
-  width: 100%;
-  font-family: 'HanWangZonYi';
-  position: absolute;
-  z-index: 99; }
-
-header:after {
-  display: block;
-  content: '';
-  clear: both; }
-
-.logo {
-  float: left;
-  margin-left: 11%;
-  margin-top: 1.5%;
-  width: 17%; }
-
-.logo img {
-  width: 100%; }
-
-header ul {
-  float: right;
-  width: 43.8%;
-  margin-right: 5.2%; }
-
-header ul li {
-  float: left;
-  margin-right: 5.3%;
-  font-size: 1.3vw;
-  padding-top: 6.5%;
-  position: relative; }
-
-header ul li a {
-  text-decoration: none;
-  color: #0052b2;
-  text-shadow: #fff 0px 2px, #fff 0px -2px, #fff 2px 0px, #fff -2px 0px; }
-
-header ul li:last-child {
-  line-height: 1;
-  padding-top: 5.3%;
-  width: 6%; }
-
-#loginicon {
-  width: 100%; }
-
-@media screen and (max-width: 1200px) {
-  header {
-    background-color: rgba(255, 255, 255, 0.9);
-    position: fixed; }
-  .logo {
-    margin-left: 5%;
-    margin-top: .5%;
-    margin-bottom: .5%; } }
-
 h1,
 h2 {
   font-family: 'HanWangZonYi';
