@@ -5,7 +5,8 @@ img {
 
 .site_info {
   width: 100%;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .site_info_wrap {
   width: 1200px;
@@ -171,7 +172,8 @@ img {
 
 .assess {
   width: 100%;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .assess_tri1 {
   left: -100%;
@@ -191,11 +193,23 @@ img {
   width: 0;
   height: 0;
   right: -100%;
-  bottom: 130px;
+  bottom: 27%;
   z-index: 0;
   border-style: solid;
   border-width: 0 0 13vw 15vw;
   border-color: transparent transparent #ea4c89 transparent; }
+
+.assess_tri3 {
+  display: block;
+  content: '';
+  position: absolute;
+  right: -100%;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 15vw 13vw 0;
+  border-color: transparent #f26fa2 transparent transparent; }
 
 .assess_wrap {
   width: 1200px;
@@ -266,7 +280,8 @@ td img {
 
 .group_page {
   width: 100%;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .bgcball {
   position: absolute;
@@ -286,18 +301,6 @@ td img {
 .group_page_content h3 {
   color: #ea4c89;
   text-align: right; }
-
-.group_page_tri {
-  display: block;
-  content: '';
-  position: absolute;
-  right: -100%;
-  top: -91%;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 15vw 13vw 0;
-  border-color: transparent #f26fa2 transparent transparent; }
 
 @media screen and (max-width: 1200px) {
   .site_info_wrap {

@@ -60,13 +60,13 @@ $(function(){
     .setTween(tween3)
     .addTo(controller);
 
-    var tween4 = TweenMax.to('.assess_tri2',.3,{
+    var tween4 = TweenMax.to('.assess_tri2',1,{
         right:0
     });
 
     var scene = new ScrollMagic.Scene({
         triggerElement:'.assess',
-        offset:300,
+        offset:0,
         reverse:true
     })
 
@@ -74,13 +74,13 @@ $(function(){
     .setTween(tween4)
     .addTo(controller);
 
-    var tween5 = TweenMax.to('.group_page_tri',.3,{
+    var tween5 = TweenMax.to('.assess_tri3',1,{
         right:0
     });
 
     var scene = new ScrollMagic.Scene({
         triggerElement:'.assess',
-        offset:300,
+        offset:0,
         reverse:true
     })
 
