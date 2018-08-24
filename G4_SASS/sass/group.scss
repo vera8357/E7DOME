@@ -9,9 +9,10 @@
 *{
 	text-decoration: none;
 }
-body{
+.group-body{
 	background: url("../images/climb.jpg") no-repeat center center fixed;
 	background-size: cover;
+	overflow: scroll;
 }
 
 header {
@@ -34,6 +35,13 @@ header {
 	font-color: #fff;
 }
 .button{
+	
+	text-align:center;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.button_a{
 	width: 100px;
 	height: 20px;
 	border-radius: 5px;
@@ -42,7 +50,7 @@ header {
 	color: #fff;
 	text-align:center;
 	font-size: 18px;
-	cursor: pointer;
+	
 }
 
 .myGroup{
@@ -204,6 +212,7 @@ a{
 	font-weight: bold;
 }
 #group-day{
+	display:block;
 	font-size: 28px;
 	vertical-align: middle;
 
