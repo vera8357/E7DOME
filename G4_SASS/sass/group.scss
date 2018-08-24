@@ -21,13 +21,13 @@ header {
 }
 
 .select_bar{
+	width:1200px;
 	margin: 50px auto;
 	background:#ffb505;
-	border: 1px solid #000;
-	width: 90%;
 	padding:30px;
 	border-radius: 15px;
 	font-family: 'HanWangZonYi';
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 
 }
 .selectDate{
