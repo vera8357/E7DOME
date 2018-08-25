@@ -54,6 +54,7 @@ section {
     }
     .content {
         width: 65%;
+    
     }
 }
 
@@ -210,7 +211,7 @@ h1 {
 
 .booking_content{
     width: 100%;
-    margin-top: 20px;
+    margin-top: 30px;
 
 }
 
@@ -227,6 +228,7 @@ h1 {
 
 .hold{
     width: 50%;
+    position: relative;
 
 }
 
@@ -237,19 +239,30 @@ h1 {
 }
 
 .hold img{
-    width: 130px;
+    width: 135px;
+    height: 135px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+
 }
 
 
 .hold p{
-    font-size: 16px;
-    margin:18px 0;
+    font-size: 20px;
+   padding:10px;
 }
 
 .hold span{
     display: inline-block;
-    width: 30%;
+    width: 40%;
+    margin-left: 10px;
     border-bottom:1px solid #ccc;
+    text-align: center;
+    font-size: 16px;
 }
 
 
@@ -257,22 +270,23 @@ h1 {
     padding: 3px 5px;
     border-radius: 3px;
     border:transparent;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
 }
+
+
 
 
 @media screen and (min-width: 768px){
 
-    .hold img{
-        width: 150px;
+    h1{
+         @include member_h1();
     }
 
-
-}
-
-
-@media screen and (min-width: 768px){
-    @include member_h1();
+     .hold img{
+        width: 150px;
+        height: 150px;
+    }
+   
 }
 
 

@@ -55,7 +55,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 				<li><a href="memberinfo.php"><span class="line"></span>個人資料</a></li>
 				<li><a href="memberbooking.php"><span class="line"></span>預約紀錄</a></li>
 				<li><a href="#"><span class="line"></span>儲值紀錄</a></li>
-				<li><a href="#"><span class="line"></span>我的揪團</a></li>
+				<li><a href="membergroup.php"><span class="line"></span>我的揪團</a></li>
 
 				<form action="logout.php" method="post">
 				<li><a href="#"> <input type="submit" value="登出"> </a></li>
@@ -76,16 +76,19 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 			<div class="points">
 				<h1>儲值紀錄</h1>
 
-				<table class="points_content">
+				
 					
 			
 
-					<tr>
-						<th>訂單編號</th>
-						<th>&nbsp;日&nbsp;&nbsp;期&nbsp;</th>
-						<th>儲值金額</th>
-						<th>&nbsp;點&nbsp;&nbsp;數&nbsp;</th>
-					</tr>
+					<div class="text_title">
+						<ul>
+							<li>訂單編號</li>
+							<li>訂購日期</li>
+							<li>商品售價</li>
+							<li>商品點數</li>
+						</ul>
+					
+					</div>
 
 					<?php
 						
@@ -96,16 +99,17 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 							
 
 							if($member->rowCount()==0){
-								echo "<tr><td class='no_oder'>無儲值紀錄</td></tr>";
+								echo "<ul class='no_order'><li>無儲值紀錄</li><ul>";
 							}else{
 
 									while ($order = $member->fetch(PDO::FETCH_ASSOC)){
-										echo "<tr>";
-										echo "<td>".$order['ORDER_NO']."</td>";
-										echo "<td>".$order['ORDER_DATETIME']."</td>";
-										echo "<td>".$order['CARD_PRICE']."</td>";
-										echo "<td>".$order['CARD_POINTS']."</td>";
-										echo "</tr>";
+										echo "<ul class='order_content'>";
+										echo "<li><span class='small_show'>訂單編號</span>".$order['ORDER_NO']."</li>";
+										echo "<li><span class='small_show'>訂購日期</span>".$order['ORDER_DATETIME']."</li>";
+										echo "<li><span class='small_show'>儲值金額</span>".$order['CARD_PRICE']."</li>";
+										echo "<li><span class='small_show'>購買點數</span>".$order['CARD_POINTS']."</li>";
+										echo "</ul>";
+
 									} 
 										
 							}
@@ -120,7 +124,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 
 					
 					
-				</table>
+				
 
 
 

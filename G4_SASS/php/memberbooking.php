@@ -54,7 +54,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 				<li><a href="memberinfo.php"><span class="line"></span>個人資料</a></li>
 				<li><a href="#"><span class="line"></span>預約紀錄</a></li>
 				<li><a href="memberpoints.php"><span class="line"></span>儲值紀錄</a></li>
-				<li><a href="#"><span class="line"></span>我的揪團</a></li>
+				<li><a href="membergroup.php"><span class="line"></span>我的揪團</a></li>
 				<form action="logout.php" method="post">
 				<li><a href="#"> <input type="submit" value="登出"> </a></li>
 				</form>
@@ -86,7 +86,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 						</span>
 
 						<span class="hold">
-							<p>訂單編號:<span id="booking_no"></span></p>
+							<p>訂單編號:<span id="booking_no">aaaaa</span></p>
 							<p>&nbsp;場&nbsp;&nbsp;&nbsp;&nbsp;地&nbsp;&nbsp;:<span id="booking_site"></span></p>
 							<p>日期時段:<span id="booking_time"></span></p>
 							<p>使用狀態:<span id="booking_check"></span></p>
