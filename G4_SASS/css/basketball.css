@@ -76,8 +76,7 @@ header ul li:last-child {
 
 h1,
 h2 {
-  font-family: 'HanWangZonYi';
-  font-size: 5vw; }
+  font-family: 'HanWangZonYi'; }
 
 img {
   vertical-align: middle; }
@@ -416,16 +415,35 @@ td img {
   .site_info_wrap h3,
   .assess_wrap h3,
   .group_page h3 {
-    font-size: 36px;
+    font-size: 24px;
     line-height: 2; }
+  .group_page h3 {
+    font-size: 20px; }
   .slider {
-    width: 90%;
+    width: 100%;
     margin: auto;
     float: initial; }
   .info {
-    width: 94%;
-    padding-right: 3%;
+    width: 100%;
+    padding-left: 0;
     padding-bottom: 50px; }
+  .info p {
+    font-size: 14px; }
+  .reservation,
+  .group {
+    width: 48%;
+    padding: 0 1% 0 1%;
+    line-height: 5vh; }
+  .site_item1,
+  .site_item2,
+  .site_item3 {
+    width: 48%;
+    padding: 10% 1% 0 1%; }
+  .assess_table label {
+    font-size: 18px;
+    margin-bottom: 2%;
+    letter-spacing: 1px;
+    font-weight: 100; }
   .assess_wrap {
     width: 80%;
     margin: auto;
@@ -435,13 +453,15 @@ td img {
     width: 100%;
     padding-bottom: 20%; }
   .assess_table table {
-    width: 90%; }
+    width: 100%; }
   .group_page_content {
     width: 80%; }
   .group_page_tri {
     top: -180%; }
   .site_info_tri1 {
-    border-width: 0 0 60vw 70vw; }
+    border-width: 0 0 60vw 70vw;
+    top: auto;
+    bottom: 0; }
   .site_info_tri2 {
     border-width: 66vw 0 0 50vw; }
   .assess_tri1 {
@@ -511,7 +531,7 @@ img {
   position: absolute;
   bottom: 0;
   right: 0;
-  z-index: 5; }
+  z-index: 2; }
 
 .kobe {
   position: absolute;
@@ -537,17 +557,78 @@ img {
 
 .bkb_fp h1,
 .bkb_fp h2 {
+  display: block;
   position: absolute;
   color: #0052b2;
   text-shadow: #fff 0px 3px,#fff 0px -3px,#fff 3px 0px,#fff -3px 0px;
-  top: 50%;
+  top: 49%;
   right: 15%;
-  margin-right: 8%; }
+  margin-right: 8%;
+  font-size: 88px;
+  z-index: 3; }
 
 .bkb_fp h2 {
   top: 65%;
   right: 15%;
-  margin-right: 0; }
+  margin-right: 0;
+  font-size: 66px;
+  z-index: 3; }
+
+@media screen and (max-width: 767px) {
+  .bkb_fp {
+    width: 100%;
+    height: 75vh;
+    padding-top: 60px;
+    overflow: hidden; }
+  .bkb_fp_bgimg {
+    width: 200%;
+    height: 75vh;
+    position: absolute;
+    right: -50%; }
+  .bkb_fp_bgimg img {
+    width: 100%;
+    height: 75vh; }
+  .bkb_fp_blue {
+    border-width: 100vw 100vw 0 0;
+    top: 60px; }
+  .bkb_fp_black {
+    border-width: 25vw 29vw 0 25vw;
+    top: 60px;
+    left: 10%;
+    z-index: 2; }
+  .bkb_fp_black2 {
+    border-width: 0 0 40vw 40vw; }
+  .kobe {
+    width: 125%;
+    animation: kobe_m .5s forwards; }
+  @keyframes kobe_m {
+    from {
+      left: -100%;
+      bottom: -100%;
+      opacity: 0; }
+    to {
+      left: -15%;
+      bottom: 15%;
+      opacity: 1; } }
+  .bkb_fp h1,
+  .bkb_fp h2 {
+    position: absolute;
+    color: #0052b2;
+    text-shadow: #fff 0px 3px,#fff 0px -3px,#fff 3px 0px,#fff -3px 0px;
+    top: auto;
+    bottom: 25%;
+    right: 15%;
+    margin-right: auto;
+    margin: auto;
+    font-size: 36px;
+    z-index: 2; }
+  .bkb_fp h2 {
+    top: auto;
+    bottom: 19%;
+    right: 15%;
+    margin-right: 0;
+    font-size: 24px;
+    z-index: 2; } }
 
 .site_info {
   background-color: #ffb405; }
