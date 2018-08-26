@@ -17,14 +17,30 @@
 
 <body>
     <header>
-        <div class="logo"> <a href="#"> <img src="images/e7logo.png" alt=""> </a> </div>
+        <div class="logo">
+            <a href="index.html">
+        <img src="images/e7logo.png" alt=""> </a>
+        </div>
         <ul>
-            <li> <a href="#"> 場地介紹 </a> </li>
-            <li> <a href="#"> 預約場地 </a> </li>
-            <li> <a href="#"> 運動揪團 </a> </li>
-            <li> <a href="#"> 關於我們 </a> </li>
-            <li> <a href="#"> 諮詢專區 </a> </li>
-            <li> <a href="#"> <img src="images/user-icon.png"> </a> </li>
+            <li>
+                <a href="#"> 場地介紹 </a>
+            </li>
+            <li>
+                <a href="booking.html"> 預約場地 </a>
+            </li>
+            <li>
+                <a href="group.html"> 運動揪團 </a>
+            </li>
+            <li>
+                <a href="about.html"> 關於我們 </a>
+            </li>
+            <li>
+                <a href="chat-robot.html"> 諮詢專區 </a>
+            </li>
+            <li>
+                <a href="#">
+          <img src="images/user-icon.png"> </a>
+            </li>
         </ul>
     </header>
     <section class="group-info-section">
@@ -62,24 +78,28 @@
                             我要參團
                         </span>
                         <span class="icon"><img src="images/unlike.png" id="heart" title="加入收藏"></span>
-                        <span class="icon fb-root" data-href="http://localhost:3000/groupInfo.html" data-layout="button_count"> 
+                        <span class="icon fb-root" data-href="http://localhost:3000/groupInfo.html" data-layout="button_count">
                                 <img src="images/share.png">
-                                <!-- <a class='social_fb' expr:href='"http://www.facebook.com/sharer.php?u=" + data:blog.canonicalUrl' onclick='window.open(this.href, "_blank", "height=500,width=800"); return false;' title='分享到 FB' target='_blank'>
+                                <!-- <a class='social_fb' expr:href='"http://www.facebook.com/sharer.php?u=" + data:blog.canonicalUrl' onclick='window.open(sthis.href, "_blank", "height=500,width=800"); return false;' title='分享到 FB' target='_blank'>
                                 </a> -->
                                 </span>
-
-                                
                     </div>
                 </div>
             </div>
         </div>
-        <div class="group-box1"></div>
+
     </section>
+    
     <section class="forum-wrapper">
+        <div class="group-box1"></div>
+        <div class="forum-box1"></div>
         <div class="forum-board">
-            <div class="forum-box1"></div>
+
             <div class="forum-title">討論區</div>
-            <ul class="forum">
+    <div class="forum">
+        <div class="forum-border">
+
+            <ul >
                 <li class="message-box">
                     <div class="mem-head01">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXjEvEiGoERw9vOMfGBiA9E9HmbEB0lw1ui7WM8RwBpxfrsSiM" alt="">
@@ -126,10 +146,45 @@
                         <span>2018/08/23 12:35</span>
                     </div>
                 </li>
+                <li class="message-box">
+                    <div class="mem-head01">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYs5zhb1TEbjQxZmQPajtHh5_CselWcqmWMr_3-wqDeIS6bzBg" alt="">
+                    </div>
+                    <div class="mem-id">
+                        小傑
+                    </div>
+                    <div class="message">
+                        <p>+1+1 d(d＇∀＇)
+                        </p>
+                    </div>
+                    <div class="message-time">
+                        <span>2018/08/23 12:35</span>
+                    </div>
+                </li>
+                <li class="message-box">
+                    <div class="mem-head01">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYs5zhb1TEbjQxZmQPajtHh5_CselWcqmWMr_3-wqDeIS6bzBg" alt="">
+                    </div>
+                    <div class="mem-id">
+                        小傑
+                    </div>
+                    <div class="message">
+                        <p>+1+1 d(d＇∀＇)
+                        </p>
+                    </div>
+                    <div class="message-time">
+                        <span>2018/08/23 12:35</span>
+                    </div>
+                </li>
             </ul>
-            <div class="message-box01">
-                <hr>
             </div>
+            <div class="message-box01">
+                <textarea name=""></textarea>
+                <div class=" submit button">送出
+                </div>
+            </div>
+
+       </div>
     </section>
     <script>
     function switchFavorite() {
@@ -150,18 +205,18 @@
         var heart = document.getElementById("heart");
         //heart.onclick = switchFavorite;
         heart.addEventListener("click", switchFavorite, false);
-    } //init
+    } init
 
     window.onload = init;
 
-    (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-
+    // (function(d, s, id) {
+    //     var js, fjs = d.getElementsByTagName(s)[0];
+    //     if (d.getElementById(id)) return;
+    //     js = d.createElement(s);
+    //     js.id = id;
+    //     js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+    //     fjs.parentNode.insertBefore(js, fjs);
+    // }(document, 'script', 'facebook-jssdk'));
     </script>
 </body>
 
