@@ -381,18 +381,43 @@ td img{
     .site_info_wrap h3,
     .assess_wrap h3,
     .group_page h3{
-        font-size: 36px;
+        font-size: 24px;
         line-height: 2;
     }
+    .group_page h3{
+        font-size: 20px;
+    }
     .slider{
-        width:90%;
+        width:100%;
         margin:auto;
         float:initial;
     }
     .info{
-        width:94%;
-        padding-right: 3%;
+        width:100%;
+        padding-left: 0;
         padding-bottom: 50px;
+    }
+    .info p{
+        font-size: 14px;
+    }
+    .reservation,
+    .group{
+        width:48%;
+        padding:0 1% 0 1%;
+        line-height: 5vh;
+    }
+    .site_item1,
+    .site_item2,
+    .site_item3{
+        width:48%;
+        padding:10% 1% 0 1%;
+    }
+    
+    .assess_table label{
+        font-size: 18px;
+        margin-bottom: 2%;
+        letter-spacing: 1px;
+        font-weight: 100;
     }
     .assess_wrap{
         width:80%;
@@ -405,7 +430,7 @@ td img{
         padding-bottom: 20%;
     }
     .assess_table table{
-        width:90%;
+        width:100%;
     }
     .group_page_content{
         width:80%;
@@ -414,7 +439,10 @@ td img{
         top:-180%;
     }
     .site_info_tri1{
-        border-width: 0 0 60vw 70vw;}
+        border-width: 0 0 60vw 70vw;
+        top:auto;
+        bottom:0;
+    }
     .site_info_tri2{
         border-width: 66vw 0 0 50vw;
     }
