@@ -204,6 +204,7 @@ a {
 
 .active {
   width: 50%; }
+<<<<<<< HEAD
 
 @media only screen and (max-width: 767px) {
   .active {
@@ -213,6 +214,17 @@ a {
 .active h3 {
   display: none; }
 
+=======
+
+@media only screen and (max-width: 767px) {
+  .active {
+    width: 100%;
+    height: 75vh; } }
+
+.active h3 {
+  display: none; }
+
+>>>>>>> G4-1
 /*BOOKING PANEL AREA*/
 .active .panel {
   padding: 16px;
