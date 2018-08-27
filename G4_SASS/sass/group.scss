@@ -35,22 +35,20 @@ header {
 	font-color: #fff;
 }
 .button{
-	
 	text-align:center;
 	font-size: 18px;
 	cursor: pointer;
 }
 
+
 .button_a{
-	width: 100px;
 	height: 20px;
 	border-radius: 5px;
 	padding: 20px 20px;
-	margin: 5px;
 	color: #fff;
 	text-align:center;
 	font-size: 18px;
-	
+	box-sizing: border-box;
 }
 
 .myGroup{
@@ -73,7 +71,6 @@ option{
 
 .selectSport {
    overflow: hidden;
-   width: 100px;
 }
 
 
@@ -82,6 +79,7 @@ option{
    border: none;
    font-size: 1.2em;
    margin:5px;
+   cursor: pointer;
 }
 
 input{
@@ -98,7 +96,6 @@ input{
 
 .groupbtn{
 	margin: 10px;
-	float:right;
 }
 
 .select{
@@ -110,7 +107,6 @@ input{
 
 
 .group-list{
-	width:1200px;
 	display: flex;
 	flex-flow:row wrap ;
 	align-content: center;
@@ -139,7 +135,6 @@ a{
 .group01{
 	width:100%;
 	height: 405px;
-	margin:10px 5px;
 	vertical-align: top;
 	box-sizing: border-box;
 	position: relative;
@@ -194,11 +189,11 @@ a{
 .group-img {
 	width: 100%;
 	height: 160px;
-	object-fit: cover;
 }
 .group-img img{
 	width:100%;
 	height: 160px;
+	object-fit: cover;
 }
 
 .group-date{
@@ -228,7 +223,7 @@ a{
 	font-size: 20px;
 	line-height: 30px;
 	font-weight: bold;
-	color: #0052b2; 
+	color: #0052b2;
 	padding-bottom: 10px;
 }
 
@@ -237,19 +232,84 @@ a{
 	padding: 30px 15px 15px;
 }
 
+@media screen and (min-width: 1200px) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-.cl-3 {
+ .cl-3 {
     width: 25%;
 }
+
+.group-list{
+	width:1200px;
+}
+}
+
+@media screen and (min-width: 900px) {
+
+ .cl-3 {
+    width: 25%;
+}
+
+
+
+.groupbtn{
+	margin: 10px;
+	float:right;
+}
+
+.select_bar{
+	width:1200px;
+	padding:30px;
+}
+.filters-select{
+	width:10%;
+}
+.button_a{
+	margin: 5px;
+}
+}
+
+@media screen and (max-width: 600px) {
+
+header + section {
+    padding-top: 80px;
+}
+
+.groupbtn{
+	margin: 10px;
+    font-size: 0;
+}
+
+.cl-12{
+	width: 100%;
+}
+
+.select_bar{
+	width:100%;
+	padding:10px 0;
+}
+
+.filters-select{
+	width:100%;
+}
+.select{
+	display:block;
+}
+
+.button_a{
+	width: calc(50% - 5px);
+	display: inline-block;
+    height: 60px;
+}
+.createGroup{
+	margin-left: 10px;
+}
+
+}
+
+
+
+
+
+
+
+
