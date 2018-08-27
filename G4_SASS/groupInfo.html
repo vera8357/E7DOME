@@ -82,8 +82,13 @@
                             我要參團
                         </div>
                         <!-- <span class="icon"> -->
-                            <img src="images/unlike.png" class="icon" id="heart" title="加入收藏"></span>
-                                <img src="images/share.png" class="icon">
+                            <img src="images/unlike.png" class="icon fb-share-button" id="heart" title="加入收藏">
+                               
+                                    <a href="javascript:void(0);" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u='+fbhtml_url+'&src=sdkpreparse');return false;">
+                                        <img src="images/share.png" class="icon">
+
+                                    
+                                </a> 
                     </div>
                 </div>
             </div>
@@ -189,6 +194,8 @@
     </section>
     <script>
 
+
+
         //收藏↓
     function switchFavorite() {
         var heart = document.getElementById("heart");
@@ -203,12 +210,7 @@
     }
 
 
-    // function init() {
-    //     //設定[加入收藏 或 取消收藏]的點按事件
-    //     var heart = document.getElementById("heart");
-    //     //heart.onclick = switchFavorite;
-    //     heart.addEventListener("click", switchFavorite, false);
-    // } init
+    
 
     //     //
 
@@ -224,9 +226,11 @@
         }
 
     }
-           
+
+          var fbhtml_url=window.location.toString(); 
 
     function init() {
+        
         //設定[加入收藏 或 取消收藏]的點按事件
         var join = document.getElementById("join");
         //heart.onclick = switchFavorite;
