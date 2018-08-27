@@ -1,3 +1,9 @@
+*{
+  box-sizing: border-box;
+}
+@mixin font-face {
+    font-family: 'HanWangZonYi'; 
+}
 html {
   height:100%;
   overflow:hidden;
@@ -9,12 +15,21 @@ html {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-image: url("../images/brush/Summer-sports.jpg");
+  // background-image: url("../images/brush/Summer-sports.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
 }
-
+.bg{
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/brush/Summer-sports.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 90% 100%;
+}
 .layouts h2 {
   width: 100%;
   text-align: center;
@@ -26,8 +41,41 @@ html {
 }
 
 #mycanvas {
-  width: 60%;
-  box-shadow: 10px 10px 10px 0.5px rgba(255, 255, 255, 0.329);
+  position: absolute;
+  top: 15%;
+  display: block;
+  width: 30%;
+  box-shadow: 10px 10px 10px 0.5px rgba(8, 8, 8, 0.452);
+}
+.vtb-intro-mask{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #fff;
+  mix-blend-mode: screen;
+  width: 100vw;
+  height: 100vh;
+}
+.vtb-intro-mask-overlay{
+  width: 100%;
+  height: 100%;
+  background-image: url("../../images/brush/mask.svg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: right top;
+}
+.vtb-intro-mask_hover{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.vtb-intro-mask_hover-overlay{
+  width: 100%;
+  height: 100%;
+  background-image: url("../../images/brush/mask_hover.svg");
+  background-size: auto 100%;
+  background-position: right top;
+  background-repeat: no-repeat;
 }
 //spotlight
 .light {
@@ -37,7 +85,7 @@ html {
   border-top:solid 200vh rgba(255, 255, 255, 0.082);
   bottom:0;
   height:0;
-  left:0;
+  left:55%;
   position:absolute;
   transform-origin:bottom;
   width:0;
@@ -70,11 +118,74 @@ html {
 //字型
 @import url("https://fonts.googleapis.com/css?family=Concert+One");
 
+.vtb-intro-body{
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 200px 0 0 0 ;
+  z-index: 10;
+}
+.vtb-intro-container{
+  padding: 0 0 0 50px;
+}
+.vtb-intro-header h1 span{
+  color: #cad1d7;
+  font-size: 0.5em;
+}
+.vtb-intro-header h1 b{
+  color: #0a2973;
+}
+.vtb-intro-description{
+  position: absolute;
+  z-index: 10;
+  margin: 30px 0 0 0 ;
+}
+.vtb-intro-description p{
+  @include font-face();
+  font-size: 24px;
+  letter-spacing: 5px;
+  line-height: 35px;
+  font-weight: 300;
+  color:rgba(0,0,0,.5);
+}
+.layer div {
+  position: relative;
+  z-index: 999;
+}
+.gift1 {
+  top: 100px;
+  right: -200%;
+}
+.gift1 img{
+  width: 100%;
+}
+.gift2 {
+  top: 100px;
+  right: -200%;;
+}
+.gift2 img{
+  width: 60%;
+}
+.gift3 {
+  top: 100px;
+  right: -200%;
+}
+.gift3 img{
+  width: 60%;
+}
+.gift4 {
+  top: 100px;
+  right: -200%;
+}
+.gift4 img{
+  width: 60%;
+}
 .text {
   position: absolute;
-  left: 50%;
-  top: 20%;
-  width: 50%;
+  right: -15%;
+  top: 55%;
+  z-index: 0;
+  width: 35%;
   transform: translate(-50%, -50%);
   text-align: center;
   font-size: 5vw;
@@ -111,7 +222,7 @@ html {
   border-radius: 100%;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  z-index: 0;
+  z-index: 999;
 }
 
 .bomb-rocket:nth-child(1) {
