@@ -1,12 +1,12 @@
-*{
-	/* outline: 1px solid #f00; */
+* {
+  /* outline: 1px solid #f00; */
 }
 
-.home_pg2{
-	background: url("../img/Dream-bg.png") -800px;
-    background-size: cover;
-    /*opacity: 0.9;*/
-    /*filter:alpha(opacity=80);*/
+.home_pg2 {
+  background: url("../img/Dream-bg.png") -800px;
+  background-size: cover;
+  /*opacity: 0.9;*/
+  /*filter:alpha(opacity=80);*/
 }
 
 /*
@@ -14,286 +14,486 @@
  */
 
 /* 1F BOWLING FLOOR */
-.level--1 .st0{display:none;}
-.level--1 .st1{display:inline;}
-.level--1 .st2{display:inline;fill:#FFFFFF;stroke:#010201;stroke-miterlimit:10;}
-.level--1 .st3{fill:#98A4CF;}
-.level--1 .st4{fill:#797DB5;}
-.level--1 .st5{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
-.level--1 .st6{fill:none;stroke:#6D75B1;stroke-miterlimit:10;}
-.level--1 .st7{display:inline;fill:#4D3B97;}
-.level--1 .st8{fill:#E8AA46;}
-.level--1 .st9{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}
-.level--1 .st10{fill:none;stroke:#5A525A;stroke-width:10;stroke-miterlimit:10;}
-.level--1 .st11{fill:none;stroke:#9A2A71;stroke-width:5;stroke-miterlimit:10;}
-.level--1 .st12{fill:none;stroke:#E6A127;stroke-width:10;stroke-miterlimit:10;}
+
+.level--1 .st0 {
+  display: none;
+}
+
+.level--1 .st1 {
+  display: inline;
+}
+
+.level--1 .st2 {
+  display: inline;
+  fill: #FFFFFF;
+  stroke: #010201;
+  stroke-miterlimit: 10;
+}
+
+.level--1 .st3 {
+  fill: #98A4CF;
+}
+
+.level--1 .st4 {
+  fill: #797DB5;
+}
+
+.level--1 .st5 {
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-miterlimit: 10;
+}
+
+.level--1 .st6 {
+  fill: none;
+  stroke: #6D75B1;
+  stroke-miterlimit: 10;
+}
+
+.level--1 .st7 {
+  display: inline;
+  fill: #4D3B97;
+}
+
+.level--1 .st8 {
+  fill: #E8AA46;
+}
+
+.level--1 .st9 {
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-width: 3;
+  stroke-miterlimit: 10;
+}
+
+.level--1 .st10 {
+  fill: none;
+  stroke: #5A525A;
+  stroke-width: 10;
+  stroke-miterlimit: 10;
+}
+
+.level--1 .st11 {
+  fill: none;
+  stroke: #9A2A71;
+  stroke-width: 5;
+  stroke-miterlimit: 10;
+}
+
+.level--1 .st12 {
+  fill: none;
+  stroke: #E6A127;
+  stroke-width: 10;
+  stroke-miterlimit: 10;
+}
 
 /* 2F BADMINTON FLOOR */
-.level--2 .st0{display:none;}
-.level--2 .st1{display:inline;}
-.level--2 .st2{display:inline;fill:#FFFFFF;stroke:#010201;stroke-miterlimit:10;}
-.level--2 .st3{fill:#98A4CF;}
-.level--2 .st4{fill:#797DB5;}
-.level--2 .st5{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
-.level--2 .st6{fill:none;stroke:#6D75B1;stroke-miterlimit:10;}
-.level--2 .st7{display:inline;fill:#4D3B97;}
-.level--2 .st8{fill:#2B76A5;}
-.level--2 .st9{fill:#4184B3;stroke:#FFFFFF;stroke-width:0.9928;stroke-miterlimit:10;}
+
+.level--2 .st0 {
+  display: none;
+}
+
+.level--2 .st1 {
+  display: inline;
+}
+
+.level--2 .st2 {
+  display: inline;
+  fill: #FFFFFF;
+  stroke: #010201;
+  stroke-miterlimit: 10;
+}
+
+.level--2 .st3 {
+  fill: #98A4CF;
+}
+
+.level--2 .st4 {
+  fill: #797DB5;
+}
+
+.level--2 .st5 {
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-miterlimit: 10;
+}
+
+.level--2 .st6 {
+  fill: none;
+  stroke: #6D75B1;
+  stroke-miterlimit: 10;
+}
+
+.level--2 .st7 {
+  display: inline;
+  fill: #4D3B97;
+}
+
+.level--2 .st8 {
+  fill: #2B76A5;
+}
+
+.level--2 .st9 {
+  fill: #4184B3;
+  stroke: #FFFFFF;
+  stroke-width: 0.9928;
+  stroke-miterlimit: 10;
+}
 
 /* 3F BASKETBALL FLOOR */
-.level--3 .st0{display:none;}
-.level--3 .st1{display:inline;}
-.level--3 .st2{display:inline;fill:#FFFFFF;stroke:#010201;stroke-miterlimit:10;}
-.level--3 .st3{fill:#98A4CF;}
-.level--3 .st4{fill:#797DB5;}
-.level--3 .st5{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
-.level--3 .st6{fill:none;stroke:#6D75B1;stroke-miterlimit:10;}
-.level--3 .st7{display:inline;fill:#4D3B97;}
-.level--3 .st8{fill:#FFB336;stroke:#FFFFFF;stroke-miterlimit:10;}
+
+.level--3 .st0 {
+  display: none;
+}
+
+.level--3 .st1 {
+  display: inline;
+}
+
+.level--3 .st2 {
+  display: inline;
+  fill: #FFFFFF;
+  stroke: #010201;
+  stroke-miterlimit: 10;
+}
+
+.level--3 .st3 {
+  fill: #98A4CF;
+}
+
+.level--3 .st4 {
+  fill: #797DB5;
+}
+
+.level--3 .st5 {
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-miterlimit: 10;
+}
+
+.level--3 .st6 {
+  fill: none;
+  stroke: #6D75B1;
+  stroke-miterlimit: 10;
+}
+
+.level--3 .st7 {
+  display: inline;
+  fill: #4D3B97;
+}
+
+.level--3 .st8 {
+  fill: #FFB336;
+  stroke: #FFFFFF;
+  stroke-miterlimit: 10;
+}
 
 /* 4F CLIMBING FLOOR */
-.level--4 .st0{display:none;}
-.level--4 .st1{display:inline;}
-.level--4 .st2{fill:#8C3C40;}
-.level--4 .st3{fill:#419363;}
-.level--4 .st4{fill:#427FAB;}
-.level--4 .st5{fill:#F6AF3F;}
-.level--4 .st6{fill:#7F1953;}
 
+.level--4 .st0 {
+  display: none;
+}
 
+.level--4 .st1 {
+  display: inline;
+}
 
+.level--4 .st2 {
+  fill: #8C3C40;
+}
+
+.level--4 .st3 {
+  fill: #419363;
+}
+
+.level--4 .st4 {
+  fill: #427FAB;
+}
+
+.level--4 .st5 {
+  fill: #F6AF3F;
+}
+
+.level--4 .st6 {
+  fill: #7F1953;
+}
 
 /*
 * 3F BASKETBALL OBJ **
 /
 
 /* HOOP RIGHT */
-#icon-hoop .st0{fill:#A5A5A5;}
-#icon-hoop .st1{fill:#382E51;}
-#icon-hoop .st2{fill:#FFFFFF;}
-#icon-hoop .st3{fill:#63606C;}
-#icon-hoop .st4{fill:#868284;}
-#icon-hoop .st5{fill:none;stroke:#373837;stroke-width:5;stroke-miterlimit:10;}
-#icon-hoop .st6{fill:#D6D6D6;}
-/* HOOP LEFT */
-#icon-hoopLeft .st0{fill:none;stroke:#090A0A;stroke-miterlimit:10;}
-#icon-hoopLeft .st1{fill:#ffffff;}
-#icon-hoopLeft .st2{fill:#372D4F;}
-#icon-hoopLeft .st3{fill:#625F6B;}
-#icon-hoopLeft .st4{fill:#A5A5A5;}
-#icon-hoopLeft .st5{fill:#858283;}
 
+#icon-hoop .st0 {
+  fill: #A5A5A5;
+}
+
+#icon-hoop .st1 {
+  fill: #382E51;
+}
+
+#icon-hoop .st2 {
+  fill: #FFFFFF;
+}
+
+#icon-hoop .st3 {
+  fill: #63606C;
+}
+
+#icon-hoop .st4 {
+  fill: #868284;
+}
+
+#icon-hoop .st5 {
+  fill: none;
+  stroke: #373837;
+  stroke-width: 5;
+  stroke-miterlimit: 10;
+}
+
+#icon-hoop .st6 {
+  fill: #D6D6D6;
+}
+
+/* HOOP LEFT */
+
+#icon-hoopLeft .st0 {
+  fill: none;
+  stroke: #090A0A;
+  stroke-miterlimit: 10;
+}
+
+#icon-hoopLeft .st1 {
+  fill: #ffffff;
+}
+
+#icon-hoopLeft .st2 {
+  fill: #372D4F;
+}
+
+#icon-hoopLeft .st3 {
+  fill: #625F6B;
+}
+
+#icon-hoopLeft .st4 {
+  fill: #A5A5A5;
+}
+
+#icon-hoopLeft .st5 {
+  fill: #858283;
+}
 
 /*
  * 2F BADMINTON OBJ *
  */
 
 /* NET */
-#icon-net .st0{fill:none;stroke:#fff;stroke-miterlimit:10;}
 
-
+#icon-net .st0 {
+  fill: none;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+}
 
 /*
  * OBJ POS CONTROL *
  */
 
-
 /* 4F CLIMBER */
-.player4f01{
-	position: absolute;
-	top: -130%;
-	left: 0;
-	width: 150%;
-	height: 150%;
+
+.player4f01 {
+  position: absolute;
+  top: -130%;
+  left: 0;
+  width: 150%;
+  height: 150%;
 }
 
-
 /* 3F BASKETBALL OBJ */
-.pin--3-3 { top: 32vmin; left: 93vmin; }
-.pin--3-2 { top: 35vmin; left: 4vmin; }
+
+.pin--3-3 {
+  top: 32vmin;
+  left: 93vmin;
+}
+
+.pin--3-2 {
+  top: 35vmin;
+  left: 4vmin;
+}
+
 .hoop,
-.hoopLeft{
-	position: absolute;
-	top: -100%;
-	left: -100%;
-	width: 200%;
-	height: 200%;	
+.hoopLeft {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
 }
 
 /* 3F BASKETBALL PLAYER */
-.pin--3-6 { top: 30vmin; left: 57vmin; }
-.player3f01{
-	position: absolute;
-	top: -120%;
-	left: 0;
-	width: 100%;
-	height: 100%;
+
+.pin--3-6 {
+  top: 30vmin;
+  left: 57vmin;
 }
 
-.pin--3-4 { top: 25vmin; left: 68vmin; }
-.player3f02{
-	position: absolute;
-	top: -130%;
-	left: 0;
-	width: 100%;
-	height: 100%;
+.player3f01 {
+  position: absolute;
+  top: -120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
+.pin--3-4 {
+  top: 25vmin;
+  left: 68vmin;
+}
 
+.player3f02 {
+  position: absolute;
+  top: -130%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
 /* 2F BADMINTON OBJ */
-.pin--2-4 { top: 45vmin; left: 25vmin; }
-.net{
-	position: absolute;
-	width: 500%;
-	height: 500%;
-	top: -280%;
-	left: 0%;
+
+.pin--2-4 {
+  top: 45vmin;
+  left: 25vmin;
+}
+
+.net {
+  position: absolute;
+  width: 500%;
+  height: 500%;
+  top: -280%;
+  left: 0%;
 }
 
 /* 2F BADMINTON PLAYER */
-.pin--2-3 { top: 21vmin; left: 70vmin; }
-.player2f01{
-	position: absolute;
-	top: -150%;
-	left: 0;
-	width: 300%;
-	height: 300%;
+
+.pin--2-3 {
+  top: 21vmin;
+  left: 70vmin;
 }
 
-
+.player2f01 {
+  position: absolute;
+  top: -150%;
+  left: 0;
+  width: 300%;
+  height: 300%;
+}
 
 /* 1F BOWLING PLAYER */
-.pin--1-1 { top: 25vmin; left: 2vmin; }
-.player1f01{
-	position: absolute;
-	top: -100%;
-	left: 0%;
-	width: 200%;
-	height: 200%;	
+
+.pin--1-1 {
+  top: 25vmin;
+  left: 2vmin;
 }
 
-
-.pin--1-2 { top: 49vmin; left: 2vmin; }
-.player1f02{
-	position: absolute;
-	top: -125%;
-	left: 0%;
-	width: 125%;
-	height: 125%;	
+.player1f01 {
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  width: 200%;
+  height: 200%;
 }
 
-.pin--1-3 {top: 49vmin; left: 2vmin;}
-.ball01{
-	position: absolute;
-	top: -330%;
-	left: -461%;
-	width: 70%;
+.pin--1-2 {
+  top: 49vmin;
+  left: 2vmin;
 }
+
+.player1f02 {
+  position: absolute;
+  top: -125%;
+  left: 0%;
+  width: 125%;
+  height: 125%;
+}
+
 
 
 .player4f01 img,
-
 .player3f01 img,
 .player3f02 img,
-
 .player2f01 img,
-
 .player1f01 img,
-.player1f02 img
-{
-	width: 100%;
-	vertical-align: middle;
+.player1f02 img {
+  width: 100%;
+  vertical-align: middle;
 }
-
 
 /*
  * BG PROJ LT ANIMATION
  */
 
 
-/*spotlight start*/
-.light {
-  border-bottom:transparent;
-  border-left:solid 20vh transparent;
-  border-right:solid 20vh transparent;
-  border-top:solid 200vh rgba(255, 255, 255, 0.082);
-  bottom:0;
-  height:0;
-  left:0;
-  position:absolute;
-  transform-origin:bottom;
-  width:0;
-  animation:top-right 5s ease-in-out alternate infinite;
-  filter: blur(30px);
-}
-
-.light + .light {
-  left:auto;
-  right:0;
-  animation:top-left 4s ease-in-out alternate infinite;
-}
-.light + .light +.light {
-  left:auto;
-  right:-20%;
-  animation:top-left 5.5s ease-in-out alternate infinite;
-}
-.light + .light +.light +.light{
-  left:20%;
-  right:auto;
-  animation:top-right 6s ease-in-out alternate infinite;
-}
 
 @keyframes top-right {
   0% {
-    transform:rotate(-10deg);
+    transform: rotate(-10deg);
   }
   100% {
-    transform:rotate(70deg);
+    transform: rotate(70deg);
   }
 }
 
 @keyframes top-left {
   0% {
-    transform:rotate(10deg);
+    transform: rotate(10deg);
   }
   100% {
-    transform:rotate(-70deg);
+    transform: rotate(-70deg);
   }
 }
+
 /*spotlight end*/
 
-
-
 /* FAC FLOOR TEXT ANIMATION */
+
 .level--1::after,
 .level--2::after,
 .level--3::after,
-.level--4::after{
-	opacity: 0;
-	animation-name: fadeIn;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
+.level--4::after {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
-.level--1::after { animation-delay: .5s; }
-.level--2::after { animation-delay: 1s; }
-.level--3::after { animation-delay: 1.5s; }
-.level--4::after { animation-delay: 2s; }
+.level--1::after {
+  animation-delay: .5s;
+}
 
+.level--2::after {
+  animation-delay: 1s;
+}
+
+.level--3::after {
+  animation-delay: 1.5s;
+}
+
+.level--4::after {
+  animation-delay: 2s;
+}
 
 @keyframes fadeIn {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
-
-
 
 /*
  * info box 
  */
-
 
 .fac-container {
   width: 1200px;
@@ -301,7 +501,7 @@
   margin: auto;
 }
 
- .box {
+.box {
   width: 19%;
   margin: 0.2%;
   padding: 32px 32px;
@@ -310,38 +510,54 @@
   background: #036C81;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 5px rgba(0,0,0,0.4);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   cursor: pointer;
 }
+
 .box .icon-cont {
-  border: 6px solid rgba(255,255,255,0.3);
+  border: 6px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   width: 75px;
   height: 75px;
   margin: 20px auto;
-  display: block; 
+  display: block;
   text-align: center;
-  
-  box-shadow: 0 0 0 0px rgba(255,255,255,0.5), 0 0 0 0px rgba(3, 108, 129, 0.5);
+  box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5), 0 0 0 0px rgba(3, 108, 129, 0.5);
 }
+
 .box .icon-cont i {
   color: #fff;
   opacity: 0.6;
   font-size: 2.5em;
   line-height: 75px;
 }
+
 .box:hover .icon-cont {
   animation: shady 4s linear infinite;
 }
 
 @keyframes shady {
-  0% {box-shadow: 0 0 0 0px rgba(255,255,255,0.5), 0 0 0 0px rgba(3, 108, 129, 0.5);}
-  20% {box-shadow: 0 0 0 100px rgba(255,255,255,0), 0 0 0 0px rgba(3, 108, 129, 0);}
-  20.1% {box-shadow: 0 0 0 0px rgba(255,255,255,0.5), 0 0 0 0px rgba(3, 108, 129, 0.5);}
-  50% {box-shadow: 0 0 0 0px rgba(255,255,255,0.5), 0 0 0 0px rgba(3, 108, 129, 0.5);}
-  70% {box-shadow: 0 0 0 100px rgba(255,255,255,0), 0 0 0 0px rgba(3, 108, 129, 0);}
-  70.1% {box-shadow: 0 0 0 0px rgba(255,255,255,0.5), 0 0 0 0px rgba(3, 108, 129, 0.5);}
-  100% {box-shadow: 0 0 0 0px rgba(255,255,255,0.5), 0 0 0 0px rgba(3, 108, 129, 0.5);}
+  0% {
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5), 0 0 0 0px rgba(3, 108, 129, 0.5);
+  }
+  20% {
+    box-shadow: 0 0 0 100px rgba(255, 255, 255, 0), 0 0 0 0px rgba(3, 108, 129, 0);
+  }
+  20.1% {
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5), 0 0 0 0px rgba(3, 108, 129, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5), 0 0 0 0px rgba(3, 108, 129, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 100px rgba(255, 255, 255, 0), 0 0 0 0px rgba(3, 108, 129, 0);
+  }
+  70.1% {
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5), 0 0 0 0px rgba(3, 108, 129, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5), 0 0 0 0px rgba(3, 108, 129, 0.5);
+  }
 }
 
 .box h3 {
@@ -352,45 +568,21 @@
   text-align: center;
   letter-spacing: 2px;
   padding: 15px;
-  border-bottom: 1px solid rgba(255,255,255,1);
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
 }
 
-.box span{
+.box span {
   color: #fff;
 }
+.mallnav {
+  top: 15%;
+  /* right: 10%; */
+}
 
+.content__item {
+  height: 75%;
+}
 
-
-
-/*保齡球路徑*/
-
-
-    .ball01 {
-      offset-path: path('M647,87c-61,10-77,74-77,74l-450,91');
-      offset-distance: 0%;
-      animation: ball 3000ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
-    }
-
-    @keyframes ball {
-      from {
-        offset-distance: 100%;
-        transform: rotate(0deg) scale(2);
-      }
-      to {
-        offset-distance: 0%;
-        transform: rotate(360deg) scale(1);
-      }
-    } 
-
-    .mallnav{
-      top: 15%;
-      /* right: 10%; */
-    }
-    
-    .content__item{
-      height: 75%;
-    }
-    
-    .content__button{
-      top: -75%;
-    }
+.content__button {
+  top: -75%;
+}

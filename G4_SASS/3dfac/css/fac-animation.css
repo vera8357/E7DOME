@@ -1,0 +1,254 @@
+/*spotlight start*/
+
+.light {
+  border-bottom: transparent;
+  border-left: solid 20vh transparent;
+  border-right: solid 20vh transparent;
+  border-top: solid 200vh rgba(255, 255, 255, 0.082);
+  bottom: 0;
+  height: 0;
+  left: 0;
+  position: absolute;
+  transform-origin: bottom;
+  width: 0;
+  animation: top-right 5s ease-in-out alternate infinite;
+  filter: blur(30px);
+}
+
+.light+.light {
+  left: auto;
+  right: 0;
+  animation: top-left 4s ease-in-out alternate infinite;
+}
+
+.light+.light+.light {
+  left: auto;
+  right: -20%;
+  animation: top-left 5.5s ease-in-out alternate infinite;
+}
+
+.light+.light+.light+.light {
+  left: 20%;
+  right: auto;
+  animation: top-right 6s ease-in-out alternate infinite;
+}
+
+/* 定位控制 */
+
+.pin--1-3 {
+  top: 49vmin;
+  left: 2vmin;
+}
+
+.ball01 {
+  position: absolute;
+  top: -154%;
+  left: -28%;
+  width: 70%;
+}
+
+.pin--1-4 {
+  top: 49vmin;
+  left: 2vmin;
+}
+
+.ball02 {
+  position: absolute;
+  top: -218%;
+  left: -61%;
+  width: 70%;
+}
+
+.bottle1 img,
+.bottle2 img,
+.bottle3 img,
+.bottle4 img,
+.bottle5 img,
+.bottle6 img,
+.bottle7 img,
+.bottle8 img,
+.bottle9 img,
+.bottle10 img {
+  width: 60%;
+  vertical-align: middle;
+}
+
+.pin--1-5 {
+  top: 22vmin;
+  left: 88vmin;
+}
+
+.pin--1-6 {
+  top: 29vmin;
+  left: 88vmin;
+}
+
+.pin--1-7 {
+  top: 22vmin;
+  left: 80vmin;
+}
+
+.pin--1-8 {
+  top: 16vmin;
+  left: 86vmin;
+}
+
+.pin--1-9 {
+  top: 9vmin;
+  left: 93vmin;
+}
+
+.pin--1-10 {
+  top: 16vmin;
+  left: 90vmin;
+}
+
+.pin--1-11 {
+  top: 21vmin;
+  left: 86vmin;
+}
+
+.pin--1-12 {
+  top: 24vmin;
+  left: 82vmin;
+}
+
+.pin--1-13 {
+  top: 28vmin;
+  left: 86vmin;
+}
+
+.pin--1-14 {
+  top: 26vmin;
+  left: 84vmin;
+}
+
+.pin--1-15 {
+  top: 65vmin;
+  left: 51vmin;
+}
+
+/* 擊飛動畫 */
+
+.bottle1 img {
+  /* offset-path: path('M25,103l92-78'); */
+  offset-distance: 0%;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+}
+
+.bottle2 img {
+  /* offset-path: path('M14.1,84l113.8-40'); */
+  offset-distance: 0%;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+}
+
+.bottle3 img {
+  /* offset-path: path('M25,103l92-78'); */
+  offset-distance: 0%;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+}
+
+.bottle4 img {
+  /* offset-path: path('M25,103l92-78'); */
+  offset-distance: 0%;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+}
+
+.bottle5 img {
+  /* offset-path: path('M116.3,102.7l-104-82'); */
+  offset-distance: 0%;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+}
+
+.bottle6 img {
+  /* offset-path: path('M116.3,102.7l-104-82'); */
+  offset-distance: 0%;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+}
+
+.bottle7 img {
+  /* offset-path: path('M87,7.3c29.5,22.5-9.8,55-9.8,55l-61.5,38.3'); */
+  offset-distance: 0%;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+}
+
+.bottle8 img {
+  /* offset-path: path('M25,103l92-78'); */
+  offset-distance: 0%;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+}
+
+.bottle9 img {
+  /* offset-path: path('M25,103l92-78'); */
+  offset-distance: 0%;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+}
+
+.bottle10 img {
+  /* offset-path: path('M116.3,102.7l-104-82'); */
+  offset-distance: 0%;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+}
+
+@keyframes bottle1 {
+  0% {
+    offset-distance: 0%;
+    transform: rotate(0deg) scale(1);
+  }
+  90% {
+    offset-distance: 0%;
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    offset-path: path('M116.3,102.7l-104-82');
+    offset-distance: 100%;
+    transform: rotate(1024deg) scale(0);
+  }
+}
+
+/* 擊飛動畫 */
+
+/*保齡球路徑*/
+
+.ball01 {
+  offset-path: path('M544,46c-43,43-213.5,78-213.5,78L7,178');
+  offset-distance: 0%;
+  animation: ball 3000ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+.ball02 {
+  offset-path: path('M7,147L549,29');
+  offset-distance: 0%;
+  animation: ball2 3000ms cubic-bezier(0.23, 1, 0.32, 1) infinite;
+}
+
+@keyframes ball {
+  from {
+    offset-distance: 100%;
+    transform: rotate(0deg) scale(2);
+  }
+  to {
+    offset-distance: 0%;
+    transform: rotate(10240deg) scale(1);
+  }
+}
+
+@keyframes ball2 {
+  from {
+    offset-distance: 0%;
+    transform: rotate(0deg) scale(2);
+  }
+  to {
+    offset-distance: 100%;
+    transform: rotate(1800deg) scale(1);
+  }
+}
+
+@keyframes ball2-1 {
+  from {
+    transform: rotate(0deg) scale(2);
+  }
+  to {
+    transform: rotate(360deg) scale(1);
+  }
+}
