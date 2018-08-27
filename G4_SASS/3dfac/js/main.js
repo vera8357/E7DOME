@@ -113,7 +113,6 @@
 				// shows this level
 				showLevel(pos+1); console.log(pos+1);
 				openContent( (pos+1) + '.01' );
-				play();
 			});
 		});
 
