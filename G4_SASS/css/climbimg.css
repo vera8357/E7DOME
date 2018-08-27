@@ -1,5 +1,11 @@
 @charset "UTF-8";
 /*lightbox*/
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  height: 100%; }
+
 header {
   width: 100%;
   font-family: 'HanWangZonYi';
