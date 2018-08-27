@@ -4,7 +4,7 @@
 }
 body{
     font-family: $about-font;
-    /*background-image: url(../images/about-material/about-bg.png);*/
+
     
 }
 
@@ -109,9 +109,9 @@ input[type="file"] {
     margin: auto;
 }
 
-input[type="button"],
 input[type="submit"]{
     margin-top: 18px;
+      @include btn_style();
 }
 
 #show_name {
@@ -124,7 +124,7 @@ input[type="submit"]{
 }
 
 .m_item li {
-    width: calc(100% / 5);
+    width: 25%;
     text-align: center;
     font-size: 16px;
     padding: 2px 0;
@@ -133,6 +133,10 @@ input[type="submit"]{
 .m_item li a {
     border-bottom: 4px solid blue;
     padding-bottom: 5px;
+}
+
+#btn_logout{
+     margin-top: 0px;
 }
 
 /*768以上*/
@@ -206,58 +210,231 @@ input[type="submit"]{
 
 /*-------------------------------------------------*/
 
-.member_content,
-.change_paw {
+.group{
     width: 100%;
+}
+
+h1{
+     @include s_member_h1();
+}
+
+.group_title{
+    font-size: 0px;
+    width: 70%;
+    margin: auto;
+     margin-top: 30px;
+}
+
+.title{
+    width: 50%;
     text-align: center;
+    display: inline-block;
+    margin: auto;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+  
 }
 
-.change_paw {
-    margin-top: 40px;
+.title_line{
+    border-right: 2px solid yellow;
 }
 
-h1 {
-    @include s_member_h1();
+.group_content{
+    width: 100%;
+    position: relative;
+    outline: 1px solid red;
+
 }
 
-.first {
-    margin-top: 30px;
+#leader_content{
+    display: block;
 }
 
-.div_style {
-    padding: 18px;
+#staff_content{
+    display: none;
+}
+
+
+.text_content{
+      width: 100%;
+      position: absolute;
+      outline: 1px solid red;
+      top: 0;
+      left: 0;
+      
+}
+
+.text_title{
+    display: none;
+}
+
+.my_group,
+.other_group{
+    
+    width: 80%;
+    margin:25px auto;
+    border-bottom: 1px solid #ccc;
+   
+}
+
+.my_group li,
+.other_group li{
+    
+    font-size: 16px;
+    padding: 12px;
+    
+}
+
+.my_group span,
+.other_group span{
+    display:inline-block;
+    width: 35%;
     font-size: 20px;
 }
 
 
 
-input[type="text"],
-input[type="tel"],
-input[type="password"] {
-    @include input();
-    font-size: 16px;
+
+@media screen and (min-width: 1024px) {
+
+    h1{
+     @include member_h1();
+}
+
+
+.group_title{
+    width: 100%;
+     margin-top: 30px;
+}
+
+
+.title{
+    width: 160px;
+    display: inline-block;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    padding:10px 40px 10px 15px;
+    margin-right: 16px;
+    outline: 1px solid #ccc;
+    position: relative;
+}
+
+.title:after{
+    content:'';
+    display: block;
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-right: 58px solid #99f;
+    border-bottom: 42px solid transparent;
+
+}
+
+
+.title_line{
+    border-right: 0px solid transparent;
+}
+
+.text_content{
+      width: 100%;
+      position: absolute;
+      outline: 1px solid red;
+      top: 0;
+      left: 0;
+      
+}
+
+
+
+
+.text_title,
+.my_group,
+.other_group{
+    width: 100%;
+    display: flex;
     text-align: center;
+     margin: 0;
 }
 
-input[type="button"],
-input[type="submit"]{
-    @include btn_style();
+
+.text_title{
+      font-size: 20px;
+      border-bottom: 1px solid #ccc;
+ 
 }
 
-#btn_logout{
-     margin-top: 0px;
+
+
+.leader li,
+.my_group li{
+   padding:12px 0px;
+    width: calc(100% / 5);
+    
+  
 }
 
-.first #clear_border{
-    border: transparent;
+.staff li,
+.other_group li{ 
+    width: calc(100% / 6);
+     padding:12px 0px;
+
 }
 
-@media screen and (min-width: 768px){
-    h1 {
-    @include member_h1();
-}
+.text_content span{
+    display: none;
 }
 
-/*1024以上*/
 
-@media screen and (min-width: 1024px) {}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

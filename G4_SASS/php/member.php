@@ -77,7 +77,7 @@ if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
 <div id="enroll">
 	<div id="enroll_wrap">
 		<p>會員註冊</p><span id="close_2"><img src="member_pic/close.png"></span>
-		<form action="../php/enroll.php">
+		<form action="enroll.php">
 			<ul>
 				<li class="enroll_li" >
 
@@ -103,7 +103,7 @@ if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
 				</li>
 
 				<li class="enroll_li">
-					手機號碼:<input id="enroll_tel" type="tel" name="enroll_tel" required="required" value="09-12345678">
+					手機號碼:<input id="enroll_tel" type="tel" name="enroll_tel" required="required" placeholder="格式0912345678">
 				</li>
 
 				<li class="enroll_li">

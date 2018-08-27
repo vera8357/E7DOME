@@ -1,6 +1,6 @@
 * {
     @include all();
-    /*outline: 1px solid red;*/
+   
 }
 body{
     font-family: $about-font;
@@ -34,12 +34,12 @@ section {
 .member_item {
     width: 100%;
     outline: 1px solid $wrap_color;
-    padding: 3%;
+    padding: 2%;
 }
 
 .content {
     width: 100%;
-    padding: 3%;
+    padding: 2%;
     outline: 1px solid $wrap_color;
     
 
@@ -55,10 +55,10 @@ section {
         justify-content: space-around;
     }
     .member_item {
-        width: 35%;
+        width: 32%;
     }
     .content {
-        width: 65%;
+        width: 68%;
     }
 }
 
@@ -109,9 +109,9 @@ input[type="file"] {
     margin: auto;
 }
 
-input[type="button"],
 input[type="submit"]{
     margin-top: 18px;
+      @include btn_style();
 }
 
 #show_name {
@@ -127,8 +127,8 @@ input[type="submit"]{
     width: 25%;
     text-align: center;
     font-size: 16px;
-    letter-spacing: 1px;
-    padding: 3px;
+    
+    padding: 2px 0;
 }
 
 .m_item li a {
@@ -136,6 +136,9 @@ input[type="submit"]{
     padding-bottom: 5px;
 }
 
+#btn_logout{
+     margin-top: 0px;
+}
 /*768以上*/
 
 @media screen and (min-width: 768px) {
@@ -206,25 +209,89 @@ input[type="submit"]{
 }
 
 /*-------------------------------------------------*/
+.no_order{
+    width: 80%;
+    margin:60px auto;
+    font-size: 18px;
+    text-align: center;
+
+}
 .points{
     width: 100%;
-    text-align: center;
+    
 }
 
 h1 {
     @include s_member_h1();
 }
 
-.points_content{
-    margin-top: 20px;
-    width: 100%;
-    border:1px solid red;
+.text_title{
+    display: none;
 }
 
-.points_content th{
+
+.order_content{
+    width: 80%;
+    margin:20px auto;
+    border-bottom: 1px solid #ccc;
+}
+
+.order_content li{
+
+    font-size: 16px;
+    padding: 12px;
+    
+}
+
+.small_show{
+    display: inline-block;
+    width: 35%;
     font-size: 20px;
-    border:1px solid #ccc ;
-  
+
+    
+}
+
+@media screen and (min-width: 768px) {
+
+h1 {
+     @include member_h1();
+}
+
+.text_title{
+    display: block;
+}
+
+.text_title ul{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+
+}
+.text_title li{
+    width: 25%;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.order_content{
+    width: 100%;
+    display: flex;
+}
+
+.order_content li{
+    width: 25%;
+    font-size: 16px;
+    padding: 12px;
+    text-align: center;
+}
+
+.small_show{
+    display: none;
+}
+
 
 }
 
