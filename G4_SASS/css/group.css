@@ -75,7 +75,8 @@ header ul li:last-child {
 /*lightbox*/
 h1,
 h2 {
-  font-family: 'HanWangZonYi'; }
+  font-family: 'HanWangZonYi';
+  font-size: 5vw; }
 
 * {
   text-decoration: none; }

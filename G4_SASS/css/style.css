@@ -30,7 +30,8 @@ table {
 /*lightbox*/
 h1,
 h2 {
-  font-family: 'HanWangZonYi'; }
+  font-family: 'HanWangZonYi';
+  font-size: 5vw; }
 
 header {
   width: 100%;

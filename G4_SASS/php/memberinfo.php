@@ -55,11 +55,9 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 				<li><a href="#"><span class="line"></span>個人資料</a></li>
 				<li><a href="memberbooking.php"><span class="line"></span>預約紀錄</a></li>
 				<li><a href="memberpoints.php"><span class="line"></span>儲值紀錄</a></li>
-				<li><a href="#"><span class="line"></span>我的揪團</a></li>
-
-				<form action="logout.php" method="post">
-				<li><a href="#"> <input type="submit" value="登出"> </a></li>
-				</form>
+				<li><a href="membergroup.php"><span class="line"></span>我的揪團</a></li>
+				<li><form action="logout.php" method="post"><input id="btn_logout" type="submit" value="登出"></form> </li>
+				
 			</ul>
 			
 
@@ -76,17 +74,13 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 			<div class="member_content">
 				<h1>基本資料</h1>
 
-				
-
-
-						
 						<div class="div_style first">
 							會員名稱: <input id="clear_border" type="text" value="<?php echo$_SESSION['MEM_ID']; ?>" readonly="readonly">
 
 						</div>
 
 						<div class="div_style">
-							手機號碼: <input id="phone_number" type="tel" name="change_tel"  value="<?php echo$_SESSION['MEM_PHONE']; ?>">
+							手機號碼: <input id="phone_number" type="tel" name="change_tel"  placeholder="<?php echo$_SESSION['MEM_PHONE']; ?>">
 
 						</div>
 						<div>
