@@ -66,23 +66,24 @@
                         場地：<span>室內籃球場A</span>
                     </div>
                     <div id="group-mem-list">
-                        <div class="mem-head"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXjEvEiGoERw9vOMfGBiA9E9HmbEB0lw1ui7WM8RwBpxfrsSiM" alt=""></div>
+                        <div class="mem-head" id="mem-head1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXjEvEiGoERw9vOMfGBiA9E9HmbEB0lw1ui7WM8RwBpxfrsSiM" alt=""></div>
                         <div class="line"></div>
-                        <div class="mem-head"><img src="https://static-s.aa-cdn.net/img/ios/915308148/170f1f888a7c53a1650c585a796fc598?v=1" alt=""></div>
-                        <div class="mem-head"></div>
-                        <div class="mem-head"></div>
+                        <div class="mem-head" id="mem-head2"><img src="https://static-s.aa-cdn.net/img/ios/915308148/170f1f888a7c53a1650c585a796fc598?v=1" alt=""></div>
+                        <div class="mem-head" id="memHead3">
+                            <img src="images/user-icon.png" >
+                        </div>
+                        <div class="mem-head" id="memHead4">
+                            <img src="" alt="">
+                        </div>
                     </div>
                     <hr class="group-hr">
                     <div class="icon_area">
-                        <span class="button join-button">
+                        <div class="button join-button" id="join">
                             我要參團
-                        </span>
-                        <span class="icon"><img src="images/unlike.png" id="heart" title="加入收藏"></span>
-                        <span class="icon fb-root" data-href="http://localhost:3000/groupInfo.html" data-layout="button_count">
-                                <img src="images/share.png">
-                                <!-- <a class='social_fb' expr:href='"http://www.facebook.com/sharer.php?u=" + data:blog.canonicalUrl' onclick='window.open(sthis.href, "_blank", "height=500,width=800"); return false;' title='分享到 FB' target='_blank'>
-                                </a> -->
-                                </span>
+                        </div>
+                        <!-- <span class="icon"> -->
+                            <img src="images/unlike.png" class="icon" id="heart" title="加入收藏"></span>
+                                <img src="images/share.png" class="icon">
                     </div>
                 </div>
             </div>
@@ -187,6 +188,8 @@
        </div>
     </section>
     <script>
+
+        //收藏↓
     function switchFavorite() {
         var heart = document.getElementById("heart");
         if (heart.title === "加入收藏") {
@@ -200,23 +203,40 @@
     }
 
 
+    // function init() {
+    //     //設定[加入收藏 或 取消收藏]的點按事件
+    //     var heart = document.getElementById("heart");
+    //     //heart.onclick = switchFavorite;
+    //     heart.addEventListener("click", switchFavorite, false);
+    // } init
+
+    //     //
+
+    function switchMember() {
+        var join = document.getElementById("join");
+        var memHead3 = document.getElementById("memHead3");
+        if (join.innerHTML === "我要參團") {
+            memHead3.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYs5zhb1TEbjQxZmQPajtHh5_CselWcqmWMr_3-wqDeIS6bzBg";
+            join.innerHTML = "我要退團";
+        } else {
+            memHead3.src = "images/user-icon.png";
+            join.innerHTML = "我要參團";
+        }
+
+    }
+           
+
     function init() {
         //設定[加入收藏 或 取消收藏]的點按事件
+        var join = document.getElementById("join");
+        //heart.onclick = switchFavorite;
+        join.addEventListener("click", switchMember, false);
         var heart = document.getElementById("heart");
         //heart.onclick = switchFavorite;
         heart.addEventListener("click", switchFavorite, false);
     } init
 
     window.onload = init;
-
-    // (function(d, s, id) {
-    //     var js, fjs = d.getElementsByTagName(s)[0];
-    //     if (d.getElementById(id)) return;
-    //     js = d.createElement(s);
-    //     js.id = id;
-    //     js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-    //     fjs.parentNode.insertBefore(js, fjs);
-    // }(document, 'script', 'facebook-jssdk'));
     </script>
 </body>
 
