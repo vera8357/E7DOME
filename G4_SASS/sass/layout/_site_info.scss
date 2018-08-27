@@ -1,5 +1,5 @@
 *{
-    outline:green solid 1px;
+    // outline:green solid 1px;
 }
 img{
     vertical-align: middle;
@@ -164,8 +164,131 @@ img{
 #climbimg_site{
     position: absolute;
     width:17%;
+    // height:17%;
     display: block;
+    border-radius: 9487%;
+    cursor: pointer;
 }
+#basketball_site img,
+#bowling_site img,
+#badminton_site img,
+#climbimg_site img {
+    display: block;
+    border-radius: 9487%;
+}
+.ani_bowling{
+    // width:100%;
+    height:100vh;
+    position: absolute;
+    left:-150%;
+    top:0;
+    transform: rotate(0deg);
+    z-index: 100;
+}
+.ani_basketball {
+    // width: 100%;
+    height:100vh;
+    position: absolute;
+    right:-150%;
+    top:0;
+    transform: rotate(0deg);
+    z-index: 100;
+}
+.ani_badminton {
+    // width: 100%;
+    height:100vh;
+    position: absolute;
+    // right:-150%;
+    top:-150%;
+    left:50%;
+    transform: translateX(-50%);
+    // margin:auto;
+    // transform: rotate(0deg);
+    z-index: 100;
+}
+.ani_bowling_bgc{
+    width:200%;
+    height:100vh;
+    left:-250%;
+    background-color: #ea4c89;
+    position: absolute;
+    top:0;
+    z-index: 99;
+    
+}
+.ani_basketball_bgc{
+    background-color: #0052b2;
+    width:200%;
+    height:100vh;
+    right:-250%;
+    position: absolute;
+    top:0;
+    z-index: 99;
+}
+.ani_badminton_bgc{
+    background-color: #ffd783;
+    width:200%;
+    height:100vh;
+    left:-50%;
+    top:-100%;
+    position: absolute;
+    // top:0;
+    z-index: 99;
+}
+.ani_bowling img,
+.ani_basketball img,
+.ani_badminton img {
+    height:100%;
+}
+.ani_bowling.active{
+    animation:bowling 2.5s forwards;
+}
+.ani_basketball.active {
+    animation: basketball 2.8s forwards;
+}
+.ani_badminton.active{
+    animation:badminton 1s forwards;
+}
+// .ani_bowling_bgc.active{
+//     animation:ball2 2.4s .3s forwards;
+// }
+@keyframes bowling {
+    from{
+        left:-150%;
+        transform: rotate(0deg);
+    }
+    to{
+        left:130%;
+        transform: rotate(360deg);
+    }
+}
+@keyframes basketball {
+    from {
+        right: -150%;
+        transform: rotate(0deg);
+    }
+    to {
+        right: 150%;
+        transform: rotate(-360deg);
+    }
+}
+@keyframes badminton {
+    from {
+        top: -100%;
+    }
+    to {
+        top: 150%;
+    }
+}
+
+// @keyframes ball2 {
+//     from {
+//         left: -250%;
+//     }
+//     to {
+//         left: -50%;
+//     }
+// }
 
 .link{
     position: absolute;

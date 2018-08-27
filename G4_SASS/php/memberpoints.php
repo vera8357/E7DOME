@@ -57,9 +57,9 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 				<li><a href="#"><span class="line"></span>儲值紀錄</a></li>
 				<li><a href="membergroup.php"><span class="line"></span>我的揪團</a></li>
 
-				<form action="logout.php" method="post">
-				<li><a href="#"> <input type="submit" value="登出"> </a></li>
-				</form>
+				
+				<li><form action="logout.php" method="post"> <input id="btn_logout" type="submit" value="登出"></form></li>
+				
 			</ul>
 			
 

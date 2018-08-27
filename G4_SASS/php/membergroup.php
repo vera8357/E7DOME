@@ -55,11 +55,11 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
                 <li><a href="memberinfo.php"><span class="line"></span>個人資料</a></li>
                 <li><a href="memberbooking.php"><span class="line"></span>預約紀錄</a></li>
                 <li><a href="memberpoints.php"><span class="line"></span>儲值紀錄</a></li>
-                <li><a href="#"><span class="line"></span>揪團管理</a></li>
+                <li><a href="#"><span class="line"></span>我的揪團</a></li>
 
-                <form action="logout.php" method="post">
-                <li><a href="#"> <input type="submit" value="登出"> </a></li>
-                </form>
+              
+                <li><form action="logout.php" method="post"><input id="btn_logout" type="submit" value="登出"></form></li>
+               
             </ul>
             
 
@@ -93,7 +93,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
                             <li>預定人數</li>
                             <li></li>
                         </ul>
-
+                      
                      <?php
                         
                         try{
@@ -103,18 +103,20 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
                             
 
                             if($member->rowCount()==0){
-                                echo "<ul class='my_group'><li>無儲值紀錄</li><ul>";
+                                echo "<ul class='my_group'><li style='width:100%; text-align: center;'>無紀錄</li><ul>";
                             }else{
 
                                     while ($booking = $member->fetch(PDO::FETCH_ASSOC)){
-                                    
-                                        echo "<ul class='my_group'>";
+                       
+                              
+                            
+                                        echo " <ul class='my_group'>";
                                         echo "<li><span>揪團編號</span>".$booking['TEAM_NO']."</li>";
                                         echo "<li><span>團隊名稱</span>".$booking['TEAM_NAME']."</li>";
                                         echo "<li><span>預定日期</span>".$booking['BOO_DATE']."</li>";
                                         echo "<li><span>預定人數</span>".$booking['TEAM_MEM']."</li>";
-                                        echo "<li><input type='button' value='團隊管理''></li>";
-                                        echo "</ul>";
+                                        echo "<li><input type='button' value='團隊管理'></li>";
+                                        echo " </ul>";
                                     } 
                                         
                             }
@@ -127,7 +129,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 
                     ?>    
                         
-                    
+                          
                     </div>
                         
 
@@ -142,8 +144,8 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
                             <li>預定人數</li>
                             <li></li>
                         </ul>
-
-                        
+   
+                       
                          <?php
                         
                         try{
@@ -153,19 +155,22 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
                             
 
                             if($member->rowCount()==0){
-                                echo "<ul class='other_group'><li>無儲值紀錄</li><ul>";
+                                echo "<ul class='other_group'><li style='width:100%; text-align: center;'>無紀錄</li><ul>";
                             }else{
 
                                     while ($booking = $member->fetch(PDO::FETCH_ASSOC)){
-                                    
+
+                                        echo " <form action='logout_team.php' method='post'> ";
                                         echo "<ul class='other_group'>";
+                                        echo "<input type='hidden' name='TEAM_NO' value='".$booking['TEAM_NO']."'>";
                                         echo "<li><span>揪團編號</span>".$booking['TEAM_NO']."</li>";
                                         echo "<li><span>團隊名稱</span>".$booking['TEAM_NAME']."</li>";
                                         echo "<li><span>團隊隊長</span>".$booking['MEM_NAME']."</li>";
                                         echo "<li><span>預定日期</span>".$booking['BOO_DATE']."</li>";
                                         echo "<li><span>預定人數</span>".$booking['TEAM_MEM']."</li>";
-                                        echo "<li><input type='button' value='團隊管理''></li>";
+                                        echo "<li><input id='logout' type='submit' value='退出隊伍'></li>";
                                         echo "</ul>";
+                                        echo "</form>";
                                     } 
                                         
                             }
@@ -176,20 +181,10 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
                         }
 
 
-                    ?>
+                         ?>
+                       
+                      
 
-
-<!-- 
-                        <ul class="other_group">
-                            <li><span>揪團編號</span>22222</li>
-                            <li><span>團隊名稱</span>122222</li>
-                            <li><span>團隊隊長</span>222222</li>
-                            <li><span>預定日期</span>222222222</li>
-                            <li><span>預定人數</span>22</li>
-                            <li><input type="button" value="退處隊伍" ></li>
-                        </ul> -->
-
-                    
                     </div>
 
 
@@ -210,6 +205,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
     <script src="../js/upfile.js"></script>
 
     <script src="../js/member_group.js"></script>
+ 
     
 
 </body>

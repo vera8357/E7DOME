@@ -12,10 +12,14 @@ function $id(id){
             $id('staff_content').style.display = 'block';
         }
 
+
+
+
         function init(){
 
             $id('show_leader').onclick = show_leader;
             $id('show_staff').onclick = show_staff;
+        
         }
 
 

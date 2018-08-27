@@ -1,6 +1,6 @@
-*{
-    outline:1px solid green;
-}
+// *{
+//     outline:1px solid green;
+// }
 body{
     background-color: #fff;
 }
@@ -19,9 +19,19 @@ img{
 .bkb_fp_bgimg{
     float:right;
     width:81.2%;
+    opacity: 0;
+    animation:bkb_bgimg 1.3s forwards;
 }
 .bkb_fp_bgimg img{
     width:100%;
+}
+@keyframes bkb_bgimg{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
 }
 .bkb_fp_blue{
     position: absolute;
@@ -53,13 +63,28 @@ img{
     position: absolute;
     bottom:0;
     right:0;
-    // z-index: 5;
+    z-index: 5;
 }
 .kobe{
     position: absolute;
     width:48%;
-    left:13%;
+    left:-100%;
+    bottom:-100%;
     z-index: 1;
+    opacity:0;
+    animation:kobe .5s forwards;
+}
+@keyframes kobe{
+    from{
+        left:-100%;
+        bottom:-100%;
+        opacity: 0;
+    }
+    to{
+        left:13%;
+        bottom:0;
+        opacity: 1;
+    }
 }
 .kobe img{
     width:100%;
@@ -113,6 +138,6 @@ img{
 .assess_tri2{
     border-color: transparent transparent rgba(255,180,5,.5) transparent;    
 }
-.group_page_tri{
+.assess_tri3{
     border-color: transparent #ffb405 transparent transparent;
 }

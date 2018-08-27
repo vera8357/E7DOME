@@ -117,7 +117,7 @@ function check_id(){
             document.getElementById("check_id").innerHTML = reply;
              $id('enroll_send').disabled=true;
           }else{
-            document.getElementById("check_id").innerHTML = reply;
+            document.getElementById("check_id").innerHTML = "";
              $id('enroll_send').disabled=false;
           }
 

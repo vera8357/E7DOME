@@ -31,12 +31,12 @@ section {
 .member_item {
     width: 100%;
     outline: 1px solid $wrap_color;
-    padding: 3%;
+    padding: 2%;
 }
 
 .content {
     width: 100%;
-    padding: 3%;
+    padding: 2%;
     outline: 1px solid $wrap_color;
 }
 
@@ -50,10 +50,10 @@ section {
         justify-content: space-around;
     }
     .member_item {
-        width: 35%;
+        width: 32%;
     }
     .content {
-        width: 65%;
+        width: 68%;
     
     }
 }
@@ -125,13 +125,16 @@ input[type="submit"]{
     width: 25%;
     text-align: center;
     font-size: 16px;
-    letter-spacing: 1px;
-    padding: 3px;
+    padding: 2px 0;
 }
 
 .m_item li a {
     border-bottom: 4px solid blue;
     padding-bottom: 5px;
+}
+
+#btn_logout{
+     margin-top: 0px;
 }
 
 /*768以上*/
@@ -272,6 +275,8 @@ h1 {
     border:transparent;
     letter-spacing: 1.5px;
 }
+
+
 
 
 

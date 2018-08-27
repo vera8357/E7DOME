@@ -28,9 +28,10 @@ switch($_FILES['upfile']['error']){
     if(copy( $from, $to)){
       $memberfile = "UPDATE member SET MEM_IMG = '{$filname}' WHERE MEM_NO = $MEM_NO";
       $pdo->exec($memberfile);
-      $_SESSION["MEM_IMG"] = $filname;       
-    	echo "<a href='memberinfo.php'>上傳成功</a>";
-      // 回個人頁面
+      $_SESSION["MEM_IMG"] = $filname;   
+
+      header('location:memberinfo.php');
+
     }
     break;
   case UPLOAD_ERR_INI_SIZE:
