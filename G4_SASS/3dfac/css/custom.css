@@ -225,6 +225,7 @@
   transform-origin:bottom;
   width:0;
   animation:top-right 5s ease-in-out alternate infinite;
+  filter: blur(30px);
 }
 
 .light + .light {

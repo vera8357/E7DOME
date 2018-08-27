@@ -1,9 +1,6 @@
 *{
   box-sizing: border-box;
 }
-@mixin font-face {
-    font-family: 'HanWangZonYi'; 
-}
 html {
   height:100%;
   overflow:hidden;
@@ -15,7 +12,6 @@ html {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  // background-image: url("../images/brush/Summer-sports.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -130,7 +126,7 @@ html {
 }
 .vtb-intro-header h1 span{
   color: #cad1d7;
-  font-size: 0.5em;
+  font-size: 2em;
 }
 .vtb-intro-header h1 b{
   color: #0a2973;
@@ -141,7 +137,7 @@ html {
   margin: 30px 0 0 0 ;
 }
 .vtb-intro-description p{
-  @include font-face();
+  font-family: 'HanWangZonYi';
   font-size: 24px;
   letter-spacing: 5px;
   line-height: 35px;
