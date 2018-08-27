@@ -150,7 +150,8 @@ header ul li a:hover:after {
 /*lightbox*/
 h1,
 h2 {
-  font-family: 'HanWangZonYi'; }
+  font-family: 'HanWangZonYi';
+  font-size: 5vw; }
 
 * {
   box-sizing: border-box; }

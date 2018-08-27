@@ -1,0 +1,66 @@
+* {
+    @include all();
+    /*outline: 1px solid red;*/
+  
+}
+body{
+    font-family: $about-font;
+  
+}
+
+a {
+    text-decoration: none;
+    color: $a_color;
+    display: inline-block;
+}
+
+/*-----------------------------------*/
+
+
+.nav{
+	width: 30%;
+	padding:4%;
+	
+}
+
+.logo_img{
+	
+	height: 100px;
+}
+
+.nav_item{
+	width: 100%;
+}
+
+.nav_item li{
+	width: 100%;
+	font-size: 20px;
+	padding:14px;
+	transition: .5s;
+	position: relative;
+
+
+	
+}
+.line{
+	position: absolute;
+	top: 8px;
+	left: 0;
+	z-index: -3;
+	display: inline-block;
+	width: 6px;
+	height: 30px;
+	margin-right:10px; 
+	background-color: #44f;
+	transition: .6s;
+}
+
+.nav_item li:hover .line{
+	width: 40%;
+}
+a{
+	transition: .4s;
+}
+.nav_item li:hover a{
+	color: #fff;
+}

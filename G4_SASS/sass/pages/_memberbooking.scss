@@ -31,12 +31,12 @@ section {
 .member_item {
     width: 100%;
     outline: 1px solid $wrap_color;
-    padding: 3%;
+    padding: 2%;
 }
 
 .content {
     width: 100%;
-    padding: 3%;
+    padding: 2%;
     outline: 1px solid $wrap_color;
 }
 
@@ -50,10 +50,11 @@ section {
         justify-content: space-around;
     }
     .member_item {
-        width: 35%;
+        width: 32%;
     }
     .content {
-        width: 65%;
+        width: 68%;
+    
     }
 }
 
@@ -124,13 +125,16 @@ input[type="submit"]{
     width: 25%;
     text-align: center;
     font-size: 16px;
-    letter-spacing: 1px;
-    padding: 3px;
+    padding: 2px 0;
 }
 
 .m_item li a {
     border-bottom: 4px solid blue;
     padding-bottom: 5px;
+}
+
+#btn_logout{
+     margin-top: 0px;
 }
 
 /*768以上*/
@@ -210,7 +214,7 @@ h1 {
 
 .booking_content{
     width: 100%;
-    margin-top: 20px;
+    margin-top: 30px;
 
 }
 
@@ -227,6 +231,7 @@ h1 {
 
 .hold{
     width: 50%;
+    position: relative;
 
 }
 
@@ -237,19 +242,30 @@ h1 {
 }
 
 .hold img{
-    width: 130px;
+    width: 135px;
+    height: 135px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+
 }
 
 
 .hold p{
-    font-size: 16px;
-    margin:18px 0;
+    font-size: 20px;
+   padding:10px;
 }
 
 .hold span{
     display: inline-block;
-    width: 30%;
+    width: 40%;
+    margin-left: 10px;
     border-bottom:1px solid #ccc;
+    text-align: center;
+    font-size: 16px;
 }
 
 
@@ -257,22 +273,25 @@ h1 {
     padding: 3px 5px;
     border-radius: 3px;
     border:transparent;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
 }
+
+
+
+
 
 
 @media screen and (min-width: 768px){
 
-    .hold img{
-        width: 150px;
+    h1{
+         @include member_h1();
     }
 
-
-}
-
-
-@media screen and (min-width: 768px){
-    @include member_h1();
+     .hold img{
+        width: 150px;
+        height: 150px;
+    }
+   
 }
 
 
