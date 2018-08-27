@@ -2,9 +2,9 @@
 img{
     vertical-align: middle;
 }
-*{
-    outline: #0f0 1px solid;
-}
+// *{
+//     outline: #0f0 1px solid;
+// }
 .bownling_first_page{
     width:100%;
     position: relative;
@@ -33,10 +33,20 @@ img{
     right:0;
     z-index: 2;
 }
-.bownling_first_page>img{
+#bowlingbgimg{
     width:66%;
     position: absolute;
     right:0;
+    opacity: 0;
+    animation: bowlingbgc 1s forwards;
+}
+@keyframes bowlingbgc{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
 // .bownling_first_content{
 //     width:1200px;
@@ -52,28 +62,128 @@ img{
     position: relative;
     left:25%;
     bottom:0;
+    animation: bowlingcan 1.5s forwards;
+    opacity: 0;
+}
+@keyframes bowlingcan{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 #peteweber{
     width:46%;
     position: absolute;
     bottom: 6.3%;
-    left:15%;
+    left:10%;
+    opacity: 0;
+    animation: peteweber 2s forwards;
+}
+@keyframes peteweber{
+    0%{
+        opacity: 0;
+        left:10%;
+    }
+    100%{
+        opacity: 1;
+        left:15%;
+    }
 }
 h1,h2{
     display:block;
     color:#0052b2;
     position: absolute;
-    top:50%;
+    top:49%;
     right:15%;
     font-family:'HanWangZonYi';
     text-align: right;
     margin-right: 8%;
+    font-size: 88px;
     text-shadow: #fff 0px 3px,#fff 0px -3px,#fff 3px 0px,#fff -3px 0px
 }
 h2{
     top:65%;
     right:15%;
     margin-right: 0;
+    font-size: 66px;
+}
+@media screen and (max-width:747px){
+    .bownling_first_page{
+        height:75vh;
+        overflow: hidden;
+        padding-top: 60px;
+        // background-color: #fff;
+    }
+    .bownling_first_page:before{
+        // display: none;
+        border:0;
+        width:20%;
+        height:73vh;
+        left:0;
+        top:60px;
+        bottom:auto;
+        right:auto;
+        background-color: #ea4c89;
+    }
+    #bowlingbgimg{
+        width:auto;
+        height:73vh;
+        position: absolute;
+        right:-85%;
+        opacity: 0;
+        animation: bowlingbgc 1s forwards;
+    }
+    #bowlingcan{
+        width:auto;
+        height:73vh;
+        position: relative;
+        left:-5%;
+        bottom:0;
+        animation: bowlingcan 1.5s forwards;
+        opacity: 0;
+        z-index: 2;
+    }
+    #peteweber{
+        width:auto;
+        height:40vh;
+        position: absolute;
+        bottom: 2vh;
+        left:-20%;
+        opacity: 0;
+        animation: peterweber_m 1.8s forwards;
+        z-index: 5;
+    }
+    @keyframes peterweber_m {
+        from{
+            opacity: 0;
+            left:-20%;
+        }
+        to{
+            opacity: 1;
+            left:-15%;
+        }
+    }
+    h1,h2{
+        z-index: 6;
+        display:block;
+        font-size: 40px;
+        color:#0052b2;
+        position: absolute;
+        top:45%;
+        right:5%;
+        font-family:'HanWangZonYi';
+        text-align: right;
+        margin-right: 8%;
+        text-shadow: #fff 0px 3px,#fff 0px -3px,#fff 3px 0px,#fff -3px 0px
+    }
+    h2{
+        top:55%;
+        right:5%;
+        margin-right: 0;
+        font-size: 30px;
+    }
 }
 .site_info{
     background-color: #ea4c89;}

@@ -35,6 +35,7 @@ section {
     height: 150vw;
     background-color: rgb(0, 82, 178);
   }
+
   .message {
     display: flex;
     display: none;
@@ -47,39 +48,111 @@ section {
     width: 50%;
     height: 500px;
     background-color: rgba(255, 255, 255, 0.466);
-    ;
     border-radius: 10px;
-    box-shadow: .5px .5px 10px .5px;
+    box-shadow: 0.5px 0.5px 10px 0.5px;
     z-index: 2;
   }
-  input {
-    position: absolute;
-    top: 0;
-    left: 15%;
-    bottom: -80%;
+  .field {
+    width: 500px;
+    height: 70px;
+    position: relative;
+    top: 80%;
+    left: 0;
+    right: 0;
+    bottom: 0;
     margin: auto;
-    width: 70%;
-    height: 50px;
-    border-radius: 30px;
-    color: #fff;
-    font-size: 1.5vw;
-    padding: 5px;
-    background-color: rgb(0, 82, 178);
+    input {
+      width: 100%;
+      border-radius: 6px;
+      height: 70px;
+      border: 0;
+      font-size: 0;
+      background-color: rgb(0, 82, 178);
+      transition: background 0.3s ease;
+      color: #ffffff;
+
+      &:focus {
+        background-color: rgb(0, 82, 178);
+        font-size: 23px;
+
+        &::selection {
+          background: rgba(188, 232, 255, 0.5);
+        }
+      }
+      &.active {
+        background-color: rgb(0, 82, 178);
+        font-size: 23px;
+      }
+    }
+    input,
+    button {
+      position: absolute;
+      height: 70px;
+    }
+    button {
+      background: rgba(0, 0, 0, 0.3);
+      right: 0;
+      border: 0;
+      width: 115px;
+      border-radius: 6px;
+      font-size: 22px;
+      cursor: pointer;
+      transition: width 0.3s ease, background 0.3s ease, opacity 0.3s ease;
+      opacity: 0;
+      color: #065cb7;
+      text-transform: uppercae;
+      pointer-events: none;
+      &.active {
+        color: #ffffff;
+        background: #639edb;
+        opacity: 1;
+        pointer-events: auto;
+        &:hover {
+          background: #5e99d6;
+        }
+      }
+      &.full {
+        width: 100%;
+      }
+    }
+    input:focus + label {
+      font-size: 19px;
+      transform: translate(16px, 11px);
+      color: rgba(255, 255, 255, 0.7);
+    }
+    label {
+      position: absolute;
+      color: rgba(255, 255, 255, 1);
+      transform: translate(16px, 20px);
+      transition: transform 0.3s ease, font-size 0.3s ease, color 0.3s 0.1s ease;
+      font-size: 28px;
+      &.active {
+        font-size: 19px;
+        transform: translate(16px, 11px);
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+    input:focus + label + button {
+      opacity: 1;
+    }
+    span{
+      font-family: $span-family;
+    }
   }
-  .coach_img{
-    width:100%;
+  .coach_img {
+    width: 100%;
     overflow: hidden;
     // padding-top: 48.75%;
 
-    height:70vh;
+    height: 70vh;
     position: absolute;
-    top:20%;
-    background-image: url('../../images/chatrobot/coach.png');
+    top: 20%;
+    background-image: url("../../images/chatrobot/gym-background.png");
     background-size: cover;
   }
   .coach_img img {
     // max-width: 100%;
-    width:100%;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;

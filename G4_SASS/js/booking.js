@@ -36,7 +36,7 @@ function bookingCal(argument) {
 	for (var j = 0; j < 4; j++) {
 		for (var i = 0; i < 7; i++) {
 			var dds = dd + i;
-			$('date')[j*7 + i].innerHTML = '<a href="#" class="text-white text-hover-yellow">' + mm + '/' + dds + '</a>';
+			$('date')[j*7 + i].innerHTML = '<a href="#" class="text-hover-yellow date-btn">' + mm + '/' + dds + '</a>';
 		}
 	}
 

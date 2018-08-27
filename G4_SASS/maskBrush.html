@@ -5,115 +5,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/maskbrush.css">
+    <link rel="stylesheet" href="css/font.css">
     <title>maskBrush</title>
-    <style type="text/css">
-    * {
-        outline: 1px solid #f0f;
-        padding: 0;
-        margin: 0;
-    }
-
-    h2 {
-        position: absolute;
-        top: 0;
-        z-index: 1;
-        display: inline-block;
-        width: 500px;
-        height: 100px;
-        align-items: center;
-        color: #F2EC30;
-        font-size: 5em;
-    }
-
-    canvas {
-        display: flex;
-        justify-content: center;
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
-    </style>
 </head>
 
 <body>
-    <div id="text">
-        <h2>兌換點數</h2>
+    <header>
+        <div class="logo"> <a href="index.html"> <img src="images/e7logo.png" alt=""> </a> </div>
+        <ul>
+            <li> <a href="#"> 場地介紹 </a> </li>
+            <li> <a href="booking.html"> 預約場地 </a> </li>
+            <li> <a href="group.html"> 運動揪團 </a> </li>
+            <li> <a href="about.html"> 關於我們 </a> </li>
+            <li> <a href="chat-robot.html"> 諮詢專區 </a> </li>
+            <li> <a href="#"> <img src="images/user-icon.png"> </a> </li>
+        </ul>
+    </header>
+    <div class="layouts">
+        <div class="bomb-rocket"></div>
+        <div class="bomb-rocket"></div>
+        <div class="bomb-rocket"></div>
+        <div class="bomb-rocket"></div>
+        <div class="bomb-rocket"></div>
+        <div class="normal-rocket"></div>
+        <div class="normal-rocket"></div>
+        <div class="normal-rocket"></div>
+        <div class="normal-rocket"></div>
+        <div class="normal-rocket"></div>
+        <div class="vtb-intro-body">
+            <div class="vtb-intro-container">
+                <div class="vtb-intro-header">
+                    <h1>
+                        <span>SCRATCH</span>
+                        <span><b>CARD</b></span>
+                    </h1>
+                </div>
+                <div class="vtb-intro-description">
+                    <p>註冊完成即可享有E7DOME<br>5000元儲值點數</p>
+                </div>
+            </div>
+        </div>
+        <div class="text">Summer Games</div>
+        <ul id="scene-mask" class="scene">
+            <li class="layer" data-depth="-1">
+                <div class="gift1">
+                    <img src="images/brush/alert.png" alt="gift2">
+                </div>
+            </li>
+            <li class="layer" data-depth="-4">
+                <div class="gift2">
+                    <img src="images/brush/no-prize.png" alt="gift2">
+                </div>
+            </li>
+            <li class="layer" data-depth="-8">
+                <div class="gift3">
+                    <img src="images/brush/ticket.png" alt="gift3">
+                </div>
+            </li>
+            <li class="layer" data-depth="-15">
+                <div class="gift4">
+                    <img src="images/brush/alert-d.png" alt="gift4">
+                </div>
+            </li>
+        </ul>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="vtb-intro-mask">
+            <div class="vtb-intro-mask-overlay"></div>
+        </div>
+        <div class="vtb-intro-mask_hover">
+            <div class="vtb-intro-mask_hover-overlay"></div>
+        </div>
+        <div class="bg"></div>
+        <canvas id="mycanvas"></canvas>
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://thefrontendblog.com/hosted/jquery.parallax.min.js"></script>
     <script src="js/pixi.min.js"></script>
-    <script>
-    var app = new PIXI.Application(1000, 400);
-    document.body.appendChild(app.view);
-
-    //==============畫布滿版============
-    // app.renderer.view.style.position = "absolute";
-    // app.renderer.view.style.display = "block";
-    // app.renderer.autoResize = true;
-    // app.renderer.resize(window.innerWidth, window.innerHeight);
-
-
-    //==============視窗縮放============
-    window.onresize = function(event) {
-        // var w = window.innerWidth;
-        // var h = window.innerHeight;
-
-        // app.renderer.resize(w, h);
-
-        //     將畫面的正中間放在 app.renderer 一半寬高的位置
-        // app.stage.x = app.renderer.width * 0;
-        // app.stage.y = app.renderer.height * 0;
-    };
-    var stage = app.stage;
-
-    var brush = new PIXI.Graphics();
-    brush.beginFill(0xE7ED26);
-    brush.drawCircle(0, 0, 50);
-    brush.endFill();
-
-    PIXI.loader.add("t1", "images/brush/moon.png")
-    PIXI.loader.add("t2", "images/brush/ValentineDay.jpg")
-    PIXI.loader.load(setup);
-
-    function setup(loader, resources) {
-        var background = new PIXI.Sprite(resources["t1"].texture);
-        stage.addChild(background);
-        background.width = app.screen.width;
-        background.height = app.screen.height;
-
-        var imageToReveal = new PIXI.Sprite(resources["t2"].texture);
-        stage.addChild(imageToReveal);
-        imageToReveal.width = app.screen.width;
-        imageToReveal.height = app.screen.height;
-
-        var renderTexture = PIXI.RenderTexture.create(app.screen.width, app.screen.height);
-
-        var renderTextureSprite = new PIXI.Sprite(renderTexture);
-        stage.addChild(renderTextureSprite);
-        imageToReveal.mask = renderTextureSprite;
-
-        app.stage.interactive = true;
-        app.stage.on('pointerdown', pointerDown);
-        app.stage.on('pointerup', pointerUp);
-        app.stage.on('pointermove', pointerMove);
-
-        var dragging = false;
-
-        function pointerMove(event) {
-            if (dragging) {
-                brush.position.copy(event.data.global);
-                app.renderer.render(brush, renderTexture, false, null, false);
-            }
-        }
-
-        function pointerDown(event) {
-            dragging = true;
-            pointerMove(event);
-        }
-
-        function pointerUp(event) {
-            dragging = false;
-        }
-    }
-    </script>
+    <script src="js/maskbrush.js"></script>
 </body>
 
 </html>

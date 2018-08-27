@@ -11,54 +11,150 @@ header:after {
   content: '';
   clear: both; }
 
+.humberger_btn {
+  display: none; }
+
 .logo {
   float: left;
-  margin-left: 11%;
-  margin-top: 1.5%;
-  width: 17%; }
+  margin-left: 15px;
+  margin-top: 15px;
+  width: 265px; }
 
 .logo img {
-  width: 100%; }
+  width: 100%;
+  vertical-align: top; }
 
 header ul {
   float: right;
-  width: 43.8%;
-  margin-right: 5.2%; }
+  margin-top: 40px; }
 
 header ul li {
   float: left;
-  margin-right: 5.3%;
-  font-size: 1.3vw;
-  padding-top: 6.5%; }
+  margin-right: 30px;
+  position: relative;
+  z-index: 2; }
 
-header ul li a {
+header a {
+  display: block;
+  position: relative;
   text-decoration: none;
   color: #0052b2;
-  text-shadow: #fff 0px 2px, #fff 0px -2px, #fff 2px 0px, #fff -2px 0px; }
+  letter-spacing: 5px;
+  text-shadow: #fff 1px 1px, #fff 1px -1px, #fff -1px 1px, #fff -1px -1px;
+  z-index: 3;
+  font-size: 20px; }
 
-header ul li:last-child {
-  line-height: 1;
-  padding-top: 5.3%;
-  width: 6%; }
+header a:after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  left: -20%;
+  width: 90%;
+  height: 50%;
+  transform: skewX(-40deg);
+  background-color: #ffb505;
+  z-index: -1;
+  opacity: 0;
+  display: block; }
+
+header ul li a:hover:after {
+  opacity: 1;
+  left: 10px;
+  transition: .5s; }
+
+.login {
+  float: right;
+  margin-top: 40px;
+  margin-right: 15px;
+  position: relative;
+  z-index: 2; }
 
 #loginicon {
   width: 100%; }
 
+@media screen and (max-width: 1200px) {
+  .logo {
+    width: 205px; }
+  header a {
+    font-size: 16px; } }
+
 @media screen and (max-width: 768px) {
   header {
     background-color: rgba(255, 255, 255, 0.8);
-    position: fixed; }
+    position: fixed;
+    height: 60px; }
+  .humberger_btn {
+    display: block;
+    float: left;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    z-index: 3; }
+  .humberger_line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffb505;
+    width: 20px;
+    height: 2px; }
+  .humberger_line.top {
+    top: 20px; }
+  .humberger_line.mid {
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%); }
+  .humberger_line.bot {
+    bottom: 20px; }
+  .humberger_btn.active .humberger_line.top {
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform-origin: center; }
+  .humberger_btn.active .humberger_line.mid {
+    opacity: 0; }
+  .humberger_btn.active .humberger_line.bot {
+    bottom: initial;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(-45deg); }
   .logo {
-    margin-left: 5%;
-    margin-top: .5%;
-    margin-bottom: .5%; } }
+    text-align: center;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    float: none; }
+  .humberger_btn.active ~ ul {
+    left: 0; }
+  header ul {
+    position: absolute;
+    float: none;
+    margin: 0;
+    top: 60px;
+    width: 100%;
+    left: -100%;
+    height: 100vh;
+    background-color: #fff; }
+  header ul li {
+    float: none;
+    margin: 0;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 6.5%; }
+  header ul li a:after {
+    display: none; }
+  .login {
+    margin-top: 0;
+    top: 50%;
+    transform: translateY(-50%); } }
 
 img {
   vertical-align: middle; }
 
 .site_info {
   width: 100%;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .site_info_wrap {
   width: 1200px;
@@ -203,7 +299,7 @@ img {
   position: absolute;
   display: block;
   content: '';
-  right: 0;
+  right: -100%;
   width: 0;
   height: 0;
   border-style: solid;
@@ -219,14 +315,16 @@ img {
   border-style: solid;
   border-width: 33vw 0 0 45vw;
   border-color: transparent transparent transparent #70d9f1;
-  left: 0;
+  left: -100%;
   bottom: 0; }
 
 .assess {
   width: 100%;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .assess_tri1 {
+  left: -100%;
   display: block;
   content: '';
   position: absolute;
@@ -242,12 +340,24 @@ img {
   position: absolute;
   width: 0;
   height: 0;
-  right: 0;
-  bottom: 130px;
+  right: -100%;
+  bottom: 27%;
   z-index: 0;
   border-style: solid;
   border-width: 0 0 13vw 15vw;
   border-color: transparent transparent #ea4c89 transparent; }
+
+.assess_tri3 {
+  display: block;
+  content: '';
+  position: absolute;
+  right: -100%;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 15vw 13vw 0;
+  border-color: transparent #f26fa2 transparent transparent; }
 
 .assess_wrap {
   width: 1200px;
@@ -318,20 +428,15 @@ td img {
 
 .group_page {
   width: 100%;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .bgcball {
   position: absolute;
   animation: ball 2s 0s both;
-  width: 66.66%; }
-
-@keyframes ball {
-  0% {
-    left: -1000px;
-    transform: rotate(0deg); }
-  100% {
-    left: 50px;
-    transform: rotate(360deg); } }
+  width: 66.66%;
+  left: -100%;
+  transform: rotate(0deg); }
 
 .bgcball img {
   width: 100%; }
@@ -344,18 +449,6 @@ td img {
 .group_page_content h3 {
   color: #ea4c89;
   text-align: right; }
-
-.group_page_tri {
-  display: block;
-  content: '';
-  position: absolute;
-  right: 0;
-  top: -91%;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 15vw 13vw 0;
-  border-color: transparent #f26fa2 transparent transparent; }
 
 @media screen and (max-width: 1200px) {
   .site_info_wrap {
@@ -392,16 +485,35 @@ td img {
   .site_info_wrap h3,
   .assess_wrap h3,
   .group_page h3 {
-    font-size: 36px;
+    font-size: 24px;
     line-height: 2; }
+  .group_page h3 {
+    font-size: 20px; }
   .slider {
-    width: 90%;
+    width: 100%;
     margin: auto;
     float: initial; }
   .info {
-    width: 94%;
-    padding-right: 3%;
+    width: 100%;
+    padding-left: 0;
     padding-bottom: 50px; }
+  .info p {
+    font-size: 14px; }
+  .reservation,
+  .group {
+    width: 48%;
+    padding: 0 1% 0 1%;
+    line-height: 5vh; }
+  .site_item1,
+  .site_item2,
+  .site_item3 {
+    width: 48%;
+    padding: 10% 1% 0 1%; }
+  .assess_table label {
+    font-size: 18px;
+    margin-bottom: 2%;
+    letter-spacing: 1px;
+    font-weight: 100; }
   .assess_wrap {
     width: 80%;
     margin: auto;
@@ -411,13 +523,15 @@ td img {
     width: 100%;
     padding-bottom: 20%; }
   .assess_table table {
-    width: 90%; }
+    width: 100%; }
   .group_page_content {
     width: 80%; }
   .group_page_tri {
     top: -180%; }
   .site_info_tri1 {
-    border-width: 0 0 60vw 70vw; }
+    border-width: 0 0 60vw 70vw;
+    top: auto;
+    bottom: 0; }
   .site_info_tri2 {
     border-width: 66vw 0 0 50vw; }
   .assess_tri1 {
@@ -438,7 +552,15 @@ td img {
   clear: both; }
 
 .clm_fp_bgimg {
-  width: 100%; }
+  width: 100%;
+  opacity: 0;
+  animation: clmbgimg .8s forwards; }
+
+@keyframes clmbgimg {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 .clm_fp_bgimg img {
   width: 100%; }
@@ -470,12 +592,46 @@ td img {
   text-shadow: #fff 0px 3px, #fff 0px -3px, #fff 3px 0px, #fff -3px 0px;
   top: 50%;
   right: 15%;
-  margin-right: 8%; }
+  margin-right: 8%;
+  font-size: 88px; }
 
 .clm_fp h2 {
   top: 65%;
   right: 15%;
-  margin-right: 0; }
+  margin-right: 0;
+  font-size: 66px; }
+
+@media screen and (max-width: 767px) {
+  .clm_fp {
+    height: 75vh;
+    overflow: hidden;
+    padding-top: 60px; }
+  .clm_fp_bgimg {
+    width: 300%;
+    height: 75vh;
+    position: absolute;
+    left: -50%; }
+  .clm_fp_orgtop {
+    border-width: 40vw 40vw 0 0;
+    top: 60px; }
+  .clm_fp_orgbot {
+    border-width: 0 0 40vw 40vw; }
+  .clm_fp h1,
+  .clm_fp h2 {
+    position: absolute;
+    color: #0052b2;
+    text-shadow: #fff 0px 3px, #fff 0px -3px, #fff 3px 0px, #fff -3px 0px;
+    top: auto;
+    bottom: 25%;
+    right: 15%;
+    margin-right: 8%;
+    font-size: 36px; }
+  .clm_fp h2 {
+    top: auto;
+    bottom: 19%;
+    right: 15%;
+    margin-right: 0;
+    font-size: 24px; } }
 
 .site_info {
   background-color: #f6682f; }
@@ -495,10 +651,9 @@ td img {
 .assess_tri2 {
   border-color: transparent transparent #f6672f70 transparent; }
 
-.group_page_tri {
+.assess_tri3 {
   border-color: transparent #f6682f transparent transparent; }
 
 h1,
 h2 {
-  font-family: 'HanWangZonYi';
-  font-size: 5vw; }
+  font-family: 'HanWangZonYi'; }

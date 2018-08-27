@@ -1,8 +1,8 @@
-
 <?php
 ob_start();
 session_start();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,11 +25,11 @@ session_start();
 <?php
 //檢查是否已登入
 if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
-  echo '<a href="memberinfo.php" id="link_member"><img src="member_pic/'.$_SESSION["MEM_IMG"].'" id="m_pic"></a>';
-  echo '<span id="spanLogin">登出</span>';
+  echo '<img src="member_pic/'.$_SESSION["MEM_IMG"].'" id="m_pic">';
+  echo '<a href="memberinfo.php" id="link_member">會員專區</a>';
 }else{
-  echo '<a href="#" id="link_member"><img src="member_pic/pic.jpg" id="m_pic"></a>';
-  echo '<span id="spanLogin">登入</span>';
+  echo '<img src="member_pic/pic.jpg" id="m_pic">';
+  echo '<a href="#" id="link_member">會員登入</a>';
 }
 ?>  
 

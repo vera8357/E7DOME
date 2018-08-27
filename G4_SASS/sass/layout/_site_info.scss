@@ -1,0 +1,552 @@
+*{
+    // outline:green solid 1px;
+}
+img{
+    vertical-align: middle;
+}
+.site_info_pg{
+    width:100%;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+.site_info_pg_bg {
+    position: absolute;
+    top: 10vh;
+    right: 0;
+    // height:80vh;
+}
+.site_info_pg_bg img{
+    height:80vh;
+    opacity: 0;
+    animation: bgimg .5s .3s forwards;
+}
+
+@keyframes bgimg{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.site_info_pg_bluebox1 {
+    position: absolute;
+    width: 30%;
+    top: -100%;
+    left:-20%;
+    height: 0;
+    padding-top: 100vh;
+    background-color: #0052b2;
+    transform: skewX(23deg);
+    animation: bluebox1 .5s forwards;
+}
+
+@keyframes bluebox1{
+    0%{
+        top:-100%;
+        left:-20%;
+    }
+    100%{
+        top:0;
+        left:0;
+    }
+}
+
+.site_info_pg_yellowbox {
+    position: absolute;
+    width: 25%;
+    top: 0;
+    height: 0;
+    padding-top: 100vh;
+    background-color: #ecb42c;
+    transform: skewY(0deg);
+}
+.site_info_pg_yellowbox:before {
+    display: block;
+    content: '';
+    position: absolute;
+    left: -2vw;
+    height: 100vh;
+    top:0;
+    width: 0.4vw;
+    background-color: #70daf2;
+}
+
+.site_info_pg_yellowbox:after {
+    display: block;
+    content: '';
+    position: absolute;
+    right: -2vw;
+    height: 100vh;
+    top:0;
+    width: 0.4vw;
+    background-color: #70daf2;
+    z-index: 99;
+}
+
+.site_info_pg_whitebox {
+    position: absolute;
+    width: 0;
+    height: 5vw;
+    bottom: 2vw;
+    background-color: #fff;
+    background-image: auto;
+    animation: whitebox .6s .5s forwards;
+}
+
+@keyframes whitebox{
+    0%{
+        width:0;
+    }
+    100%{
+        width:100%;
+        background-image: linear-gradient(to right, #fff 0%, #fff 23%, #ffb505 23%, #ffb505 25%, #fff 25%, #fff 100%);
+    }
+}
+
+.site_info_pg_bluebox2 {
+    position: absolute;
+    width: 100%;
+    height: 5vw;
+    bottom: 2vw;
+    left:-100%;
+    background-color: #0052b2;
+    // transform: scaleX(0);
+    transform-origin: left;
+    animation: blubox2 1.5s .5s forwards;
+}
+
+@keyframes blubox2{
+    0%{
+        left:-100%;
+    }
+    100%{
+        left:0;
+    }
+}
+
+.site_info_pg_bluebox2 h3 {
+    font-size: 36px;
+    line-height: 5vw;
+    float: right;
+    padding-right: 5%;
+    font-family: 'HanWangZonYi';
+    color: white;
+    opacity: 0;
+    animation: bluebox2_h3 2.5s 1.5s forwards;
+}
+@keyframes bluebox2_h3{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.site_info_wrap{
+    width:1200px;
+    margin:auto;
+    position: relative;
+    top:0;
+    left:0;
+    right:0;
+    height:100vh;
+}
+#basketball_site,
+#bowling_site,
+#badminton_site,
+#climbimg_site{
+    position: absolute;
+    width:17%;
+    // height:17%;
+    display: block;
+    border-radius: 9487%;
+    cursor: pointer;
+    opacity:0;
+    animation:fadein .5s .8s forwards;
+}
+#bowling_site{
+    animation:fadein .5s 1.2s forwards;
+}
+#badminton_site{
+    animation:fadein .5s 1.6s forwards;
+}
+#climbimg_site{
+    animation:fadein .5s 2s forwards;
+}
+@keyframes fadein{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+#basketball_site img,
+#bowling_site img,
+#badminton_site img,
+#climbimg_site img {
+    display: block;
+    border-radius: 9487%;
+    width:100%;
+}
+.ani_bowling{
+    // width:100%;
+    height:100vh;
+    position: absolute;
+    left:-150%;
+    top:0;
+    transform: rotate(0deg);
+    z-index: 100;
+    display: none;
+}
+.ani_basketball {
+    // width: 100%;
+    height:100vh;
+    position: absolute;
+    right:-150%;
+    top:0;
+    transform: rotate(0deg);
+    z-index: 100;
+    display: none;
+}
+.ani_badminton {
+    // width: 100%;
+    height:100vh;
+    position: absolute;
+    // right:-150%;
+    top:-150%;
+    left:50%;
+    transform: translateX(-50%);
+    // margin:auto;
+    // transform: rotate(0deg);
+    z-index: 100;
+}
+.ani_climbimg{
+    // width: 300%;
+    height:250vh;
+    position: absolute;
+    // right:-150%;
+    bottom:-250%;
+    left:-14%;
+    // transform: translateX(-50%);
+    // margin:auto;
+    // transform: rotate(0deg);
+    z-index: 100;
+}
+.ani_bowling_bgc{
+    width:200%;
+    height:100vh;
+    left:-250%;
+    background-color: #ea4c89;
+    position: absolute;
+    top:0;
+    z-index: 99;
+    
+}
+.ani_basketball_bgc{
+    background-color: #0052b2;
+    width:200%;
+    height:100vh;
+    right:-250%;
+    position: absolute;
+    top:0;
+    z-index: 99;
+}
+.ani_badminton_bgc{
+    background-color: #ffd783;
+    width:200%;
+    height:100vh;
+    left:-50%;
+    top:-100%;
+    position: absolute;
+    // top:0;
+    z-index: 99;
+}
+.ani_climbimg_bgc{
+    background-color: #ffd783;
+    width:200%;
+    height:150vh;
+    left:-50%;
+    bottom:-150%;
+    position: absolute;
+    // top:0;
+    z-index: 99;
+}
+.ani_bowling img,
+.ani_basketball img,
+.ani_badminton img,
+.ani_climbimg img {
+    height:100%;
+}
+.ani_bowling.active{
+    animation:bowling 2.5s forwards;
+    display: block;
+}
+.ani_basketball.active {
+    animation: basketball 2.8s forwards;
+    display: block;
+}
+.ani_badminton.active{
+    animation:badminton 2.3s forwards;
+}
+.ani_climbimg.active{
+    animation:climbimg 2.5s forwards;
+}
+// .ani_bowling_bgc.active{
+//     animation:ball2 2.4s .3s forwards;
+// }
+@keyframes bowling {
+    from{
+        left:-150%;
+        transform: rotate(0deg);
+    }
+    to{
+        left:150%;
+        transform: rotate(360deg);
+    }
+}
+@keyframes basketball {
+    from {
+        right: -150%;
+        transform: rotate(0deg);
+    }
+    to {
+        right: 150%;
+        transform: rotate(-360deg);
+    }
+}
+@keyframes badminton {
+    from {
+        top: -100%;
+    }
+    to {
+        top: 150%;
+    }
+}
+
+@keyframes climbimg {
+    from {
+        bottom: -250%;
+    }
+    to {
+        bottom: 150%;
+    }
+}
+// @keyframes ball2 {
+//     from {
+//         left: -250%;
+//     }
+//     to {
+//         left: -50%;
+//     }
+// }
+
+#bsk_link,
+#bwb_link,
+#bmt_link,
+#clb_link{
+    position: absolute;
+    display: block;
+    content:'';
+    border-radius: 9487%;
+    width: 25%;
+    padding-top: 25%;
+    height:0;
+    right:0;
+    bottom:0;
+    // background-color: #fff;
+    // border:.5vw solid #ff0000;
+}
+#bsk_link{
+    background-color: #0052b2;
+}
+#bwb_link{
+    background-color: #ea4c89;
+}
+#bmt_link{
+    background-color: #ffb505;
+}
+#clb_link{
+    background-color: #f6682f;
+}
+.link_text {
+    position: absolute;
+    display: block;
+    border-radius: 9487%;
+    text-align: center;
+    right: 0;
+    left:0;
+    top:50%;
+    transform: translateY(-50%);
+    color:#fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+#basketball_site h2,
+#bowling_site h2,
+#badminton_site h2,
+#climbimg_site h2 {
+    position: absolute;
+    font-size: 24px;
+    display: block;
+    width:100%;
+    text-align: center;
+    color:white;
+    height: 1.5vw;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+}
+#basketball_site img,
+#bowling_site img,
+#badminton_site img,
+#climbimg_site img{
+    width:100%;
+}
+#basketball_site{
+    top:25%;
+    left:16%;
+}
+
+#bowling_site {
+    top: 25%;
+    left:48%;
+}
+
+#badminton_site {
+    top: 55%;
+    left:32%;
+}
+
+#climbimg_site {
+    top: 55%;
+    left:64%;
+}
+
+@media screen and (max-width:1200px){
+    .site_info_wrap{
+        width:92%;
+        padding-top: 35vh;
+    }
+    #basketball_site,
+    #bowling_site,
+    #badminton_site,
+    #climbimg_site{
+        width:23%;
+        padding:0 1% 0 1%;
+        float:left;
+        position: relative;
+        top:auto;
+        left:auto;
+    }
+}
+@media screen and (max-width:415px) {
+    .site_info_pg_bluebox1 {
+        padding-top: 60px;
+        transform: skewX(0deg);
+        left: -100%;
+        top: 0;
+        width: 100%;
+        margin-top: 10vh;
+    }
+    .site_info_pg_yellowbox {
+        display: none;
+    }
+    .site_info_pg_whitebox {
+        display: none;
+    }
+    .site_info_pg_bluebox2 {
+        bottom: 0;
+        height: 50px;
+    }
+    .site_info_pg_bluebox2 h3 {
+        line-height: 50px;
+        animation: bluebox2_h3 .5s 1.5s forwards;
+    }
+
+    .site_info_pg_bg {
+        position: absolute;
+        top: 20vh;
+        right: 5vw;
+        width: 40vh;
+    }
+    .site_info_wrap {
+        width: 100%;
+        position: relative;
+        // height: 100vh;
+        padding-top: 27vh;
+    }
+
+    .ani_bowling {
+        // width:100%;
+        height: 100vh;
+        position: absolute;
+        left: -200%;
+        top: 0;
+        transform: rotate(0deg);
+        z-index: 100;
+    }
+
+    .ani_basketball {
+        // width: 100%;
+        height: 100vh;
+        position: absolute;
+        right: -200%;
+        top: 0;
+        transform: rotate(0deg);
+        z-index: 100;
+    }
+    #basketball_site,
+    #bowling_site,
+    #badminton_site,
+    #climbimg_site {
+        position: relative;
+        width: 48%; // height:17%;
+        display: block;
+        border-radius: 9487%;
+        cursor: pointer;
+        padding:0 1% 0 1%;
+        float:left;
+    }
+
+    #basketball_site {
+        top: auto;
+        left: auto;
+    }
+
+    #bowling_site {
+        top: auto;
+        left:  auto;
+    }
+
+    #badminton_site {
+        top: auto;
+        left: auto;
+        padding-top: 3%;
+    }
+
+    #climbimg_site {
+        top: auto;
+        left:  auto;
+        padding-top: 3%;
+    }
+    .site_info_pg_bg img{
+        animation: bgimg 2.5s forwards;
+        height:70vh;
+    }
+    @keyframes bgimg {
+        0%{
+            opacity: 0;
+        }
+        30%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+}
