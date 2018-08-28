@@ -156,31 +156,7 @@
 
 /* 3F BASKETBALL PLAYER */
 
-.pin--4-6 {
-  top: 30vmin;
-  left: 57vmin;
-}
 
-.player3f01 {
-  position: absolute;
-  top: -120%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.pin--4-4 {
-  top: 25vmin;
-  left: 68vmin;
-}
-
-.player3f02 {
-  position: absolute;
-  top: -130%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 
 /* 2F BADMINTON OBJ */
 
@@ -241,7 +217,7 @@
 }
 
 
-.pin--4-5 { top: 33vmin; left: 38vmin; }
+.pin--4-5 { top: 37vmin; left: 16vmin; }
 .player4f03 {
   position: absolute;
   top: -100%;

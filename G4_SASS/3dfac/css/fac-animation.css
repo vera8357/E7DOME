@@ -34,47 +34,19 @@
 }
 
 /* 定位控制 */
-.ball01 {
-  position: absolute;
-  top: -154%;
-  left: -28%;
-  width: 70%;
-}
-.ball02 {
-  position: absolute;
-  top: -218%;
-  left: -61%;
-  width: 70%;
-}
-.bottle1 img, .bottle2 img, .bottle3 img, .bottle4 img, .bottle5 img, .bottle6 img, .bottle7 img, .bottle8 img, .bottle9 img, .bottle10 img, .bottle11 img, .bottle12 img, .bottle13 img, .bottle14 img, .bottle15 img, .bottle16 img, .bottle17 img, .bottle18 img, .bottle19 img, .bottle20 img { width: 60%; vertical-align: middle; }
-
-/* 2F */
-.pin--2-3 { top: 49vmin; left: 2vmin; }
-.pin--2-4 { top: 49vmin; left: 2vmin; }
-.pin--2-5 { top: 22vmin; left: 88vmin; }
-.pin--2-6 { top: 29vmin; left: 88vmin; }
-.pin--2-7 { top: 22vmin; left: 80vmin; }
-.pin--2-8 { top: 16vmin; left: 86vmin; }
-.pin--2-9 { top: 9vmin; left: 93vmin; }
-.pin--2-10 { top: 16vmin; left: 90vmin; }
-.pin--2-11 { top: 21vmin; left: 86vmin; }
-.pin--2-12 { top: 24vmin; left: 82vmin; }
-.pin--2-13 { top: 28vmin; left: 86vmin; }
-.pin--2-14 { top: 26vmin; left: 84vmin; }
-.pin--2-15 { top: 54vmin; left: 77vmin; }
-.pin--2-16 { top: 50vmin; left: 81vmin; }
-.pin--2-17 { top: 56vmin; left: 79vmin; }
-.pin--2-18 { top: 46vmin; left: 86vmin; }
-.pin--2-19 { top: 53vmin; left: 83vmin; }
-.pin--2-20 { top: 57vmin; left: 83vmin; }
-.pin--2-21 { top: 42vmin; left: 90vmin; }
-.pin--2-22 { top: 47vmin; left: 90vmin; }
-.pin--2-23 { top: 53vmin; left: 88vmin; }
-.pin--2-24 { top: 59vmin; left: 86vmin; }
 
 /* 1F */
-.player4f02 img {width: 100%; vertical-align: middle;}
-.pin--1-5 { top: 33vmin; left: 0vmin; }
+
+.player4f02 img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.pin--1-5 {
+  top: 33vmin;
+  left: 0vmin;
+}
+
 .player4f01 {
   position: absolute;
   top: -130%;
@@ -82,7 +54,12 @@
   width: 150%;
   height: 150%;
 }
-.pin--1-6 { top: 54vmin; left: 20vmin; }
+
+.pin--1-6 {
+  top: 54vmin;
+  left: 20vmin;
+}
+
 .player4f02 {
   position: absolute;
   top: -405%;
@@ -90,6 +67,230 @@
   width: 470%;
   height: 470%;
 }
+
+/* 2F */
+
+.ball01 {
+  position: absolute;
+  top: -154%;
+  left: -28%;
+  width: 70%;
+}
+
+.ball02 {
+  position: absolute;
+  top: -218%;
+  left: -61%;
+  width: 70%;
+}
+
+.bottle1 img,
+.bottle2 img,
+.bottle3 img,
+.bottle4 img,
+.bottle5 img,
+.bottle6 img,
+.bottle7 img,
+.bottle8 img,
+.bottle9 img,
+.bottle10 img,
+.bottle11 img,
+.bottle12 img,
+.bottle13 img,
+.bottle14 img,
+.bottle15 img,
+.bottle16 img,
+.bottle17 img,
+.bottle18 img,
+.bottle19 img,
+.bottle20 img {
+  width: 60%;
+  vertical-align: middle;
+}
+
+.pin--2-3 {
+  top: 49vmin;
+  left: 2vmin;
+}
+
+.pin--2-4 {
+  top: 49vmin;
+  left: 2vmin;
+}
+
+.pin--2-5 {
+  top: 22vmin;
+  left: 88vmin;
+}
+
+.pin--2-6 {
+  top: 29vmin;
+  left: 88vmin;
+}
+
+.pin--2-7 {
+  top: 22vmin;
+  left: 80vmin;
+}
+
+.pin--2-8 {
+  top: 16vmin;
+  left: 86vmin;
+}
+
+.pin--2-9 {
+  top: 9vmin;
+  left: 93vmin;
+}
+
+.pin--2-10 {
+  top: 16vmin;
+  left: 90vmin;
+}
+
+.pin--2-11 {
+  top: 21vmin;
+  left: 86vmin;
+}
+
+.pin--2-12 {
+  top: 24vmin;
+  left: 82vmin;
+}
+
+.pin--2-13 {
+  top: 28vmin;
+  left: 86vmin;
+}
+
+.pin--2-14 {
+  top: 26vmin;
+  left: 84vmin;
+}
+
+.pin--2-15 {
+  top: 54vmin;
+  left: 77vmin;
+}
+
+.pin--2-16 {
+  top: 50vmin;
+  left: 81vmin;
+}
+
+.pin--2-17 {
+  top: 56vmin;
+  left: 79vmin;
+}
+
+.pin--2-18 {
+  top: 46vmin;
+  left: 86vmin;
+}
+
+.pin--2-19 {
+  top: 53vmin;
+  left: 83vmin;
+}
+
+.pin--2-20 {
+  top: 57vmin;
+  left: 83vmin;
+}
+
+.pin--2-21 {
+  top: 42vmin;
+  left: 90vmin;
+}
+
+.pin--2-22 {
+  top: 47vmin;
+  left: 90vmin;
+}
+
+.pin--2-23 {
+  top: 53vmin;
+  left: 88vmin;
+}
+
+.pin--2-24 {
+  top: 59vmin;
+  left: 86vmin;
+}
+
+/* 4F */
+
+.ball4f01 {
+  position: absolute;
+  display: block;
+  top: -579%;
+  left: 0%;
+  width: 50%;
+  height: 50%;
+}
+
+.ball4f01 img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.pin--4-1 {
+  top: 78vmin;
+  left: 7vmin;
+}
+
+.pin--4-4 {
+  top: 24vmin;
+  left: 54vmin;
+  animation: playjump2 1000ms infinite;
+}
+
+.pin--4-6 {
+  top: 34vmin;
+  left: 46vmin;
+}
+
+.pin--4-8 {
+  top: 78vmin;
+  left: 7vmin;
+}
+
+.player3f01 {
+  position: absolute;
+  top: -120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: playjump 1000ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+.player3f02 {
+  position: absolute;
+  top: -130%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.basketball-path {
+  position: absolute;
+  display: block;
+  top: -579%;
+  left: 0%;
+  width: 600%;
+  height: 600%;
+}
+
+.ball04 {
+  animation: ball04 6000ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+.ball4f01 {
+  offset-path: path('M52,166.7c0,0,97.3-338.7,241.3,56.7L250.7,308');
+  offset-distance: 0%;
+  animation: ball4f01 6000ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
 /* 擊飛動畫 */
 
 .bottle1 img {
@@ -212,5 +413,60 @@
   }
   to {
     transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes ball4f01 {
+  from {
+    offset-distance: 0%;
+  }
+  to {
+    offset-distance: 100%;
+  }
+}
+
+@keyframes ball04 {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  30% {
+    opacity: 1;
+  }
+  39% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  44% {
+    opacity: 0.4;
+  }
+  45% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(10240deg) scale(0.5);
+    opacity: 1;
+  }
+}
+
+@keyframes playjump {
+  from {
+    top: -120%;
+  }
+  to {
+    top: -172%;
+  }
+}
+
+@keyframes playjump2 {
+  0% {
+    top: 24vmin;
+  }
+  50% {
+    top: 37vmin;
+  }
+  100% {
+    top: 24vmin;
   }
 }
