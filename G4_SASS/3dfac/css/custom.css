@@ -9,212 +9,56 @@
   /*filter:alpha(opacity=80);*/
 }
 
-/* * FLOOR RENDER SECTION * */
+/*
+ * FLOOR RENDER SECTION *
+ */
 
 /* 1F BOWLING FLOOR */
-
-.level--1 .st0 {
-  display: none;
-}
-
-.level--1 .st1 {
-  display: inline;
-}
-
-.level--1 .st2 {
-  display: inline;
-  fill: #FFFFFF;
-  stroke: #010201;
-  stroke-miterlimit: 10;
-}
-
-.level--1 .st3 {
-  fill: #98A4CF;
-}
-
-.level--1 .st4 {
-  fill: #797DB5;
-}
-
-.level--1 .st5 {
-  fill: none;
-  stroke: #FFFFFF;
-  stroke-miterlimit: 10;
-}
-
-.level--1 .st6 {
-  fill: none;
-  stroke: #6D75B1;
-  stroke-miterlimit: 10;
-}
-
-.level--1 .st7 {
-  display: inline;
-  fill: #4D3B97;
-}
-
-.level--1 .st8 {
-  fill: #E8AA46;
-}
-
-.level--1 .st9 {
-  fill: none;
-  stroke: #FFFFFF;
-  stroke-width: 3;
-  stroke-miterlimit: 10;
-}
-
-.level--1 .st10 {
-  fill: none;
-  stroke: #5A525A;
-  stroke-width: 10;
-  stroke-miterlimit: 10;
-}
-
-.level--1 .st11 {
-  fill: none;
-  stroke: #9A2A71;
-  stroke-width: 5;
-  stroke-miterlimit: 10;
-}
-
-.level--1 .st12 {
-  fill: none;
-  stroke: #E6A127;
-  stroke-width: 10;
-  stroke-miterlimit: 10;
-}
+.level--2 .st0{display:none;}
+.level--2 .st1{display:inline;}
+.level--2 .st2{display:inline;fill:#FFFFFF;stroke:#010201;stroke-miterlimit:10;}
+.level--2 .st3{fill:#98A4CF;}
+.level--2 .st4{fill:#797DB5;}
+.level--2 .st5{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
+.level--2 .st6{fill:none;stroke:#6D75B1;stroke-miterlimit:10;}
+.level--2 .st7{display:inline;fill:#4D3B97;}
+.level--2 .st8{fill:#E8AA46;}
+.level--2 .st9{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}
+.level--2 .st10{fill:none;stroke:#5A525A;stroke-width:10;stroke-miterlimit:10;}
+.level--2 .st11{fill:none;stroke:#9A2A71;stroke-width:5;stroke-miterlimit:10;}
+.level--2 .st12{fill:none;stroke:#E6A127;stroke-width:10;stroke-miterlimit:10;}
 
 /* 2F BADMINTON FLOOR */
+.level--3 .st0{display:none;}
+.level--3 .st1{display:inline;}
+.level--3 .st2{display:inline;fill:#FFFFFF;stroke:#010201;stroke-miterlimit:10;}
+.level--3 .st3{fill:#98A4CF;}
+.level--3 .st4{fill:#797DB5;}
+.level--3 .st5{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
+.level--3 .st6{fill:none;stroke:#6D75B1;stroke-miterlimit:10;}
+.level--3 .st7{display:inline;fill:#4D3B97;}
+.level--3 .st8{fill:#2B76A5;}
+.level--3 .st9{fill:#4184B3;stroke:#FFFFFF;stroke-width:0.9928;stroke-miterlimit:10;}
 
-.level--2 .st0 {
-  display: none;
-}
+/* 4F BASKETBALL FLOOR */
+.level--4 .st0{display:none;}
+.level--4 .st1{display:inline;}
+.level--4 .st2{display:inline;fill:#FFFFFF;stroke:#010201;stroke-miterlimit:10;}
+.level--4 .st3{fill:#98A4CF;}
+.level--4 .st4{fill:#797DB5;}
+.level--4 .st5{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
+.level--4 .st6{fill:none;stroke:#6D75B1;stroke-miterlimit:10;}
+.level--4 .st7{display:inline;fill:#4D3B97;}
+.level--4 .st8{fill:#FFB336;stroke:#FFFFFF;stroke-miterlimit:10;}
 
-.level--2 .st1 {
-  display: inline;
-}
-
-.level--2 .st2 {
-  display: inline;
-  fill: #FFFFFF;
-  stroke: #010201;
-  stroke-miterlimit: 10;
-}
-
-.level--2 .st3 {
-  fill: #98A4CF;
-}
-
-.level--2 .st4 {
-  fill: #797DB5;
-}
-
-.level--2 .st5 {
-  fill: none;
-  stroke: #FFFFFF;
-  stroke-miterlimit: 10;
-}
-
-.level--2 .st6 {
-  fill: none;
-  stroke: #6D75B1;
-  stroke-miterlimit: 10;
-}
-
-.level--2 .st7 {
-  display: inline;
-  fill: #4D3B97;
-}
-
-.level--2 .st8 {
-  fill: #2B76A5;
-}
-
-.level--2 .st9 {
-  fill: #4184B3;
-  stroke: #FFFFFF;
-  stroke-width: 0.9928;
-  stroke-miterlimit: 10;
-}
-
-/* 3F BASKETBALL FLOOR */
-
-.level--3 .st0 {
-  display: none;
-}
-
-.level--3 .st1 {
-  display: inline;
-}
-
-.level--3 .st2 {
-  display: inline;
-  fill: #FFFFFF;
-  stroke: #010201;
-  stroke-miterlimit: 10;
-}
-
-.level--3 .st3 {
-  fill: #98A4CF;
-}
-
-.level--3 .st4 {
-  fill: #797DB5;
-}
-
-.level--3 .st5 {
-  fill: none;
-  stroke: #FFFFFF;
-  stroke-miterlimit: 10;
-}
-
-.level--3 .st6 {
-  fill: none;
-  stroke: #6D75B1;
-  stroke-miterlimit: 10;
-}
-
-.level--3 .st7 {
-  display: inline;
-  fill: #4D3B97;
-}
-
-.level--3 .st8 {
-  fill: #FFB336;
-  stroke: #FFFFFF;
-  stroke-miterlimit: 10;
-}
-
-/* 4F CLIMBING FLOOR */
-
-.level--4 .st0 {
-  display: none;
-}
-
-.level--4 .st1 {
-  display: inline;
-}
-
-.level--4 .st2 {
-  fill: #8C3C40;
-}
-
-.level--4 .st3 {
-  fill: #419363;
-}
-
-.level--4 .st4 {
-  fill: #427FAB;
-}
-
-.level--4 .st5 {
-  fill: #F6AF3F;
-}
-
-.level--4 .st6 {
-  fill: #7F1953;
-}
+/* 3F CLIMBING FLOOR */
+.level--1 .st0{display:none;}
+.level--1 .st1{display:inline;}
+.level--1 .st2{fill:#8C3C40;}
+.level--1 .st3{fill:#419363;}
+.level--1 .st4{fill:#427FAB;}
+.level--1 .st5{fill:#F6AF3F;}
+.level--1 .st6{fill:#7F1953;}
 
 /* * 3F BASKETBALL OBJ ** / /* HOOP RIGHT */
 
@@ -301,12 +145,12 @@
 
 /* 3F BASKETBALL OBJ */
 
-.pin--3-3 {
+.pin--4-3 {
   top: 32vmin;
   left: 93vmin;
 }
 
-.pin--3-2 {
+.pin--4-2 {
   top: 35vmin;
   left: 4vmin;
 }
@@ -322,7 +166,7 @@
 
 /* 3F BASKETBALL PLAYER */
 
-.pin--3-6 {
+.pin--4-6 {
   top: 30vmin;
   left: 57vmin;
 }
@@ -335,7 +179,7 @@
   height: 100%;
 }
 
-.pin--3-4 {
+.pin--4-4 {
   top: 25vmin;
   left: 68vmin;
 }
@@ -350,7 +194,7 @@
 
 /* 2F BADMINTON OBJ */
 
-.pin--2-4 {
+.pin--3-4 {
   top: 45vmin;
   left: 25vmin;
 }
@@ -365,7 +209,7 @@
 
 /* 2F BADMINTON PLAYER */
 
-.pin--2-3 {
+.pin--3-3 {
   top: 21vmin;
   left: 70vmin;
 }
@@ -380,7 +224,7 @@
 
 /* 1F BOWLING PLAYER */
 
-.pin--1-1 {
+.pin--2-1 {
   top: 25vmin;
   left: 2vmin;
 }
@@ -393,7 +237,7 @@
   height: 200%;
 }
 
-.pin--1-2 {
+.pin--2-2 {
   top: 49vmin;
   left: 2vmin;
 }

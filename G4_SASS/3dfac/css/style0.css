@@ -266,19 +266,19 @@ button:focus {
 }
 
 .level--1::after {
-	content: '1F 保齡球場';
+	content: '1F 攀岩場';
 }
 
 .level--2::after {
-	content: '2F 羽球場';
+	content: '2F 保齡球場';
 }
 
 .level--3::after {
-	content: '3F 籃球場';
+	content: '3F 羽球場';
 }
 
 .level--4::after {
-	content: 'L4 攀岩場';
+	content: '4F 籃球場';
 }
 
 .level:not(:first-child) {
