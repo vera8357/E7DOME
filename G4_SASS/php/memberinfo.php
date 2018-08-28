@@ -45,7 +45,12 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 
 
 
-       		 <div id="show_name"><?php echo $_SESSION['MEM_ID']; ?></div>
+       		 <div id="show_name">
+       		 	<span><img src="member_pic/photography-portrait-mode.png"><?php echo $_SESSION['MEM_ID']; ?></span>
+       		 	<span><img src="member_pic/coin.png"><?php echo $_SESSION['MEM_POINTS']; ?></span>
+       			<span><img src="member_pic/smartphone.png"><?php echo $_SESSION['MEM_PHONE']; ?></span>
+       		 
+       		 </div>
 
 
 
@@ -75,12 +80,12 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 				<h1>基本資料</h1>
 
 						<div class="div_style first">
-							會員名稱: <input id="clear_border" type="text" value="<?php echo$_SESSION['MEM_ID']; ?>" readonly="readonly">
+							會員名稱: <input id="clear_border" type="text" value="<?php echo$_SESSION['MEM_ID']; ?>" readonly="readonly" style="border:1px solid transparent; box-shadow: 0px 0px 0px 0px transparent;">
 
 						</div>
 
 						<div class="div_style">
-							手機號碼: <input id="phone_number" type="tel" name="change_tel"  placeholder="<?php echo$_SESSION['MEM_PHONE']; ?>">
+							手機號碼: <input id="phone_number" type="tel" name="change_tel"  value="<?php echo$_SESSION['MEM_PHONE']; ?>">
 
 						</div>
 						<div>

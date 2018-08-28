@@ -45,7 +45,11 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 
 
 
-       		 <div id="show_name"><?php echo $_SESSION['MEM_ID']; ?></div>
+       		 <div id="show_name">
+       		 	<span><img src="member_pic/photography-portrait-mode.png"><?php echo $_SESSION['MEM_ID']; ?></span>
+       		 	<span><img src="member_pic/coin.png"><?php echo $_SESSION['MEM_POINTS']; ?></span>
+       			<span><img src="member_pic/smartphone.png"><?php echo $_SESSION['MEM_PHONE']; ?></span>
+       		 </div>
 
 
 
@@ -79,13 +83,79 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 
 					<!-- 改用php產出 -->
 
-					<div class="booking">
+					<?php
 
-						<span class="hold">
+
+					try{
+							require_once("connect_g4.php");
+							$sql = "select * from booking where MEM_NO =".$_SESSION['MEM_NO'];
+							$member = $pdo->query($sql);
+							
+							if($member->rowCount()==0){
+								echo "<div class='booking'>無紀錄</div>";
+							}else{
+
+									while ($order = $member->fetch(PDO::FETCH_ASSOC)){
+									 switch ($order['BOO_TIME']) {
+									 	case '1':
+									 		$order['BOO_TIME'] = "早場";
+									 		break;
+									 	case '2':
+									 		$order['BOO_TIME'] = "午場";
+									 		break;
+									 	default:
+									 	    $order['BOO_TIME'] = "晚場";	
+									 }
+
+
+									  switch ($order['BOO_STATUS']) {
+									 	case '1':
+									 		$order['BOO_STATUS'] = "預約";
+									 		break;
+									 	case '2':
+									 		$order['BOO_STATUS'] = "已取消";
+									 		break;
+									 	default:
+									 	    $order['BOO_STATUS'] = "已報到";	
+									 }
+
+										echo "<div class='booking'>";
+										echo "<span class='hold1'>";
+										echo "<img src='member_pic/img.png'>";
+										echo "</span>";
+										echo "<span class='hold2'>";
+										echo "<p>訂單編號:<span id='booking_no'>".$order['BOO_NO']."</span></p>";
+										echo "<p>&nbsp;場&nbsp;&nbsp;&nbsp;&nbsp;地&nbsp;&nbsp;:<span id='booking_site'>".$order['FAC_NO']."</span></p>";
+										echo "<p>預約時段:<span id='booking_time'>".$order['BOO_TIME']."</span></p>";
+										echo "<p>預約日期:<span id='booking_date'>".$order['BOO_DATE']."</span></p>";
+										echo "<p>使用狀態:<span id='booking_check'>".$order['BOO_STATUS']."</span></p>";
+										echo "</span>";
+										echo "<span class='button'>";
+										echo "<input type='button' value='揪團去'>";
+										echo "<input type='button' value='取消預約'>";
+										echo "<input type='button' value='評價場地'>";
+										echo "</span>";
+										echo "</div>";
+
+									} 
+										
+							}
+
+						}catch(PDOException $e){
+
+							echo $e->getMessage();
+						}
+
+
+
+
+					?>
+			<!-- 		<div class="booking">
+						<span class="hold1">
 							<img src="member_pic/img.png">
 						</span>
 
-						<span class="hold">
+						<span class="hold2">
 							<p>訂單編號:<span id="booking_no">aaaaa</span></p>
 							<p>&nbsp;場&nbsp;&nbsp;&nbsp;&nbsp;地&nbsp;&nbsp;:<span id="booking_site"></span></p>
 							<p>日期時段:<span id="booking_time"></span></p>
@@ -97,10 +167,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 							<input type="button" value="取消預約">
 							<input type="button" value="評價場地">
 						</span>
-
-						
-
-					</div>
+					</div> -->
 
 					
 
