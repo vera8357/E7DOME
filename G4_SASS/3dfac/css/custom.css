@@ -1,5 +1,5 @@
 * {
-  /* outline: 1px solid #f00; */
+  outline: 1px solid #f00;
 }
 
 .home_pg2 {
@@ -240,6 +240,17 @@
   height: 125%;
 }
 
+
+.pin--4-5 { top: 33vmin; left: 38vmin; }
+.player4f03 {
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  width: 170%;
+  height: 170%;
+}
+
+.player4f03 img,
 .player4f01 img,
 .player3f01 img,
 .player3f02 img,
