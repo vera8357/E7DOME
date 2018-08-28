@@ -229,7 +229,17 @@
   height: 50%;
 }
 
-.ball4f01 img {
+.ball4f02 {
+  position: absolute;
+  display: block;
+  top: -230%;
+  left: 0%;
+  width: 50%;
+  height: 50%;
+}
+
+.ball04,
+.ball04-1 {
   width: 100%;
   vertical-align: middle;
 }
@@ -255,13 +265,23 @@
   left: 7vmin;
 }
 
+.pin--4-9 {
+  top: 19vmin;
+  left: 7vmin;
+}
+
+.pin--4-10 {
+  top: 19vmin;
+  left: 7vmin;
+}
+
 .player3f01 {
   position: absolute;
   top: -120%;
   left: 0;
   width: 100%;
   height: 100%;
-  animation: playjump 1000ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  animation: playjump 6500ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
 }
 
 .player3f02 {
@@ -281,14 +301,33 @@
   height: 600%;
 }
 
+.basketball-path2 {
+  position: absolute;
+  display: block;
+  top: -230%;
+  left: 0%;
+  width: 600%;
+  height: 600%;
+}
+
 .ball04 {
-  animation: ball04 6000ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  animation: ball04 6000ms 1000ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
 }
 
 .ball4f01 {
   offset-path: path('M52,166.7c0,0,97.3-338.7,241.3,56.7L250.7,308');
   offset-distance: 0%;
-  animation: ball4f01 6000ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  animation: ball4f01 6000ms 1000ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+.ball04-1 {
+  animation: ball04-1 3000ms 1000ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+.ball4f02 {
+  offset-path: path('M204.3,247.2l-154.7-50c23.3-178,142-42.7,142-42.7');
+  offset-distance: 0%;
+  animation: ball4f02 6000ms 1000ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
 }
 
 /* 擊飛動畫 */
@@ -443,6 +482,25 @@
   }
   45% {
     opacity: 1;
+  }
+  100% {
+    transform: rotate(10240deg) scale(0.5);
+    opacity: 1;
+  }
+}
+
+@keyframes ball4f02 {
+  from {
+    offset-distance: 100%;
+  }
+  to {
+    offset-distance: 0%;
+  }
+}
+
+@keyframes ball04-1 {
+  0% {
+    transform: rotate(0deg) scale(1.5);
   }
   100% {
     transform: rotate(10240deg) scale(0.5);
