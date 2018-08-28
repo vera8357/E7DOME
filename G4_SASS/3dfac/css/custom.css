@@ -9,9 +9,7 @@
   /*filter:alpha(opacity=80);*/
 }
 
-/*
- * FLOOR RENDER SECTION *
- */
+/* * FLOOR RENDER SECTION * */
 
 /* 1F BOWLING FLOOR */
 
@@ -218,11 +216,7 @@
   fill: #7F1953;
 }
 
-/*
-* 3F BASKETBALL OBJ **
-/
-
-/* HOOP RIGHT */
+/* * 3F BASKETBALL OBJ ** / /* HOOP RIGHT */
 
 #icon-hoop .st0 {
   fill: #A5A5A5;
@@ -283,9 +277,7 @@
   fill: #858283;
 }
 
-/*
- * 2F BADMINTON OBJ *
- */
+/* * 2F BADMINTON OBJ * */
 
 /* NET */
 
@@ -295,9 +287,7 @@
   stroke-miterlimit: 10;
 }
 
-/*
- * OBJ POS CONTROL *
- */
+/* * OBJ POS CONTROL * */
 
 /* 4F CLIMBER */
 
@@ -416,8 +406,6 @@
   height: 125%;
 }
 
-
-
 .player4f01 img,
 .player3f01 img,
 .player3f02 img,
@@ -428,11 +416,7 @@
   vertical-align: middle;
 }
 
-/*
- * BG PROJ LT ANIMATION
- */
-
-
+/* * BG PROJ LT ANIMATION */
 
 @keyframes top-right {
   0% {
@@ -491,9 +475,7 @@
   }
 }
 
-/*
- * info box 
- */
+/* * info box */
 
 .fac-container {
   width: 1200px;
@@ -574,6 +556,7 @@
 .box span {
   color: #fff;
 }
+
 .mallnav {
   top: 15%;
   /* right: 10%; */
