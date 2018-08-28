@@ -48,28 +48,28 @@
 }
 .bottle1 img, .bottle2 img, .bottle3 img, .bottle4 img, .bottle5 img, .bottle6 img, .bottle7 img, .bottle8 img, .bottle9 img, .bottle10 img, .bottle11 img, .bottle12 img, .bottle13 img, .bottle14 img, .bottle15 img, .bottle16 img, .bottle17 img, .bottle18 img, .bottle19 img, .bottle20 img { width: 60%; vertical-align: middle; }
 
-.pin--1-3 { top: 49vmin; left: 2vmin; }
-.pin--1-4 { top: 49vmin; left: 2vmin; }
-.pin--1-5 { top: 22vmin; left: 88vmin; }
-.pin--1-6 { top: 29vmin; left: 88vmin; }
-.pin--1-7 { top: 22vmin; left: 80vmin; }
-.pin--1-8 { top: 16vmin; left: 86vmin; }
-.pin--1-9 { top: 9vmin; left: 93vmin; }
-.pin--1-10 { top: 16vmin; left: 90vmin; }
-.pin--1-11 { top: 21vmin; left: 86vmin; }
-.pin--1-12 { top: 24vmin; left: 82vmin; }
-.pin--1-13 { top: 28vmin; left: 86vmin; }
-.pin--1-14 { top: 26vmin; left: 84vmin; }
-.pin--1-15 { top: 54vmin; left: 77vmin; }
-.pin--1-16 { top: 50vmin; left: 81vmin; }
-.pin--1-17 { top: 56vmin; left: 79vmin; }
-.pin--1-18 { top: 46vmin; left: 86vmin; }
-.pin--1-19 { top: 53vmin; left: 83vmin; }
-.pin--1-20 { top: 57vmin; left: 83vmin; }
-.pin--1-21 { top: 42vmin; left: 90vmin; }
-.pin--1-22 { top: 47vmin; left: 90vmin; }
-.pin--1-23 { top: 53vmin; left: 88vmin; }
-.pin--1-24 { top: 59vmin; left: 86vmin; }
+.pin--2-3 { top: 49vmin; left: 2vmin; }
+.pin--2-4 { top: 49vmin; left: 2vmin; }
+.pin--2-5 { top: 22vmin; left: 88vmin; }
+.pin--2-6 { top: 29vmin; left: 88vmin; }
+.pin--2-7 { top: 22vmin; left: 80vmin; }
+.pin--2-8 { top: 16vmin; left: 86vmin; }
+.pin--2-9 { top: 9vmin; left: 93vmin; }
+.pin--2-10 { top: 16vmin; left: 90vmin; }
+.pin--2-11 { top: 21vmin; left: 86vmin; }
+.pin--2-12 { top: 24vmin; left: 82vmin; }
+.pin--2-13 { top: 28vmin; left: 86vmin; }
+.pin--2-14 { top: 26vmin; left: 84vmin; }
+.pin--2-15 { top: 54vmin; left: 77vmin; }
+.pin--2-16 { top: 50vmin; left: 81vmin; }
+.pin--2-17 { top: 56vmin; left: 79vmin; }
+.pin--2-18 { top: 46vmin; left: 86vmin; }
+.pin--2-19 { top: 53vmin; left: 83vmin; }
+.pin--2-20 { top: 57vmin; left: 83vmin; }
+.pin--2-21 { top: 42vmin; left: 90vmin; }
+.pin--2-22 { top: 47vmin; left: 90vmin; }
+.pin--2-23 { top: 53vmin; left: 88vmin; }
+.pin--2-24 { top: 59vmin; left: 86vmin; }
 
 /* 擊飛動畫 */
 
