@@ -48,6 +48,7 @@
 }
 .bottle1 img, .bottle2 img, .bottle3 img, .bottle4 img, .bottle5 img, .bottle6 img, .bottle7 img, .bottle8 img, .bottle9 img, .bottle10 img, .bottle11 img, .bottle12 img, .bottle13 img, .bottle14 img, .bottle15 img, .bottle16 img, .bottle17 img, .bottle18 img, .bottle19 img, .bottle20 img { width: 60%; vertical-align: middle; }
 
+/* 2F */
 .pin--2-3 { top: 49vmin; left: 2vmin; }
 .pin--2-4 { top: 49vmin; left: 2vmin; }
 .pin--2-5 { top: 22vmin; left: 88vmin; }
@@ -71,6 +72,24 @@
 .pin--2-23 { top: 53vmin; left: 88vmin; }
 .pin--2-24 { top: 59vmin; left: 86vmin; }
 
+/* 1F */
+.player4f02 img {width: 100%; vertical-align: middle;}
+.pin--1-5 { top: 33vmin; left: 0vmin; }
+.player4f01 {
+  position: absolute;
+  top: -130%;
+  left: 0;
+  width: 150%;
+  height: 150%;
+}
+.pin--1-6 { top: 54vmin; left: 20vmin; }
+.player4f02 {
+  position: absolute;
+  top: -405%;
+  left: 0;
+  width: 470%;
+  height: 470%;
+}
 /* 擊飛動畫 */
 
 .bottle1 img {

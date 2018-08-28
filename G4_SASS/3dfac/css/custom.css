@@ -133,20 +133,6 @@
 
 /* * OBJ POS CONTROL * */
 
-/* 4F CLIMBER */
-
-.pin--1-5 {
-  top: 33vmin;
-  left: 38vmin;
-}
-.player4f01 {
-  position: absolute;
-  top: -130%;
-  left: 0;
-  width: 150%;
-  height: 150%;
-}
-
 /* 3F BASKETBALL OBJ */
 
 .pin--4-3 {
