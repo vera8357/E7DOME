@@ -4,8 +4,8 @@
 }
 body{
     font-family: $about-font;
-    /*background-image: url(../images/about-material/about-bg.png);*/
-    
+    background-image: url(../images/about-material/about-bg.png);
+    color:#fff;
 }
 
 a {
@@ -33,16 +33,18 @@ section {
 
 .member_item {
     width: 100%;
-    outline: 1px solid $wrap_color;
-    padding: 2%;
+   
+    padding: 5% 2% 0 2%;
+    background-color: rgba(3,12,120,.78);
+  
 }
 
 .content {
     width: 100%;
-    padding: 2%;
-    outline: 1px solid $wrap_color;
+    padding:5% 2% 0 2%;
     
-
+     background-color: rgba(3,12,120,.78);
+   
 }
 
 /*768以上*/
@@ -85,6 +87,7 @@ section {
   width: 150px;
     height: 150px;
      margin: auto;
+
 }
 
 .pic {
@@ -92,6 +95,8 @@ section {
     height: 150px;
     vertical-align: bottom;
     margin: auto;
+    box-shadow:  0px 1.5px 0px #333,-4px 3px 0px  #ffb505
+               ;
 }
 
 .change_pic {
@@ -109,18 +114,15 @@ input[type="file"] {
     margin: auto;
 }
 
-input[type="button"],
-input[type="submit"]{
-    margin-top: 18px;
-}
-
 #show_name {
    @include s_show_name();
+   display: none;
 }
 
 .m_item {
     width: 100%;
     display: flex;
+    padding:20px 0;
 }
 
 .m_item li {
@@ -131,7 +133,7 @@ input[type="submit"]{
 }
 
 .m_item li a {
-    border-bottom: 4px solid blue;
+    border-bottom: 4px solid rgba(30,100,240,.7);
     padding-bottom: 5px;
 }
 
@@ -171,10 +173,23 @@ input[type="submit"]{
         opacity: 1;
     }
     #show_name {
+        display: block;
        @include show_name();
-    
-        
     }
+
+    #show_name span{
+    display: inline-block;
+    width: 100%;
+    padding:5px;
+   
+}
+
+#show_name img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: text-bottom;
+}
     .m_item {
         width: 100%;
         display: block;
@@ -188,7 +203,7 @@ input[type="submit"]{
         display: inline-block;
         width: 5px;
         height: 20px;
-        background-color: blue;
+        background-color: rgba(30,100,240,.7);
         vertical-align: bottom;
         margin-right: 4px;
     }
@@ -242,6 +257,7 @@ input[type="password"] {
 input[type="button"],
 input[type="submit"]{
     @include btn_style();
+      margin-top: 20px;
 }
 
 #btn_logout{

@@ -1,0 +1,77 @@
+* {
+    @include all();
+    /*outline: 1px solid red;*/
+}
+body{
+    font-family: $about-font;
+  
+}
+
+/*------------------------------*/
+
+section{
+	width: 80%;
+	margin:auto;
+	display: flex;
+	justify-content: space-around;
+}
+
+.fac_img{
+	width: 45%;
+	padding: 2%	;
+}
+
+.evaluate_content{
+	width: 45%;
+	padding: 2%;
+	
+}
+
+/*------------------------------*/
+
+.star_content{
+	width: 40%;
+	margin:auto;
+}
+
+
+span{
+	display: inline-block;
+	widows: 49%;
+	letter-spacing: 2px;
+	font-size: 20px;
+	margin: auto;
+	padding:3px;
+}
+
+
+
+.evaluate_content ul{
+	display: flex;
+	width: 50%;
+	margin: 20px auto;
+}
+
+.evaluate_content li{
+	width: calc(100% / 5);
+	font-size: 36px;
+	text-align: center;
+	color:blue;
+}
+
+textarea{
+	display: block;
+	width: 100%;
+	height: 200px;
+	resize:none
+}
+
+.evaluate_btn{
+	width: 35%;
+	margin:20px auto 0 auto;
+}
+
+input[type="reset"],
+input[type="submit"]{
+	width: 48%;
+}

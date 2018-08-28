@@ -45,7 +45,9 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 
 
 
-             <div id="show_name"><?php echo $_SESSION['MEM_ID']; ?></div>
+             <div id="show_name"><span><img src="member_pic/photography-portrait-mode.png"><?php echo $_SESSION['MEM_ID']; ?></span>
+                <span><img src="member_pic/coin.png"><?php echo $_SESSION['MEM_POINTS']; ?></span>
+                <span><img src="member_pic/smartphone.png"><?php echo $_SESSION['MEM_PHONE']; ?></span></div>
 
 
 
@@ -84,7 +86,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
                 <div class="group_content">
 
 
-                    <div id="leader_content" class="text_content" style="background-color: blue;">
+                    <div id="leader_content" class="text_content" >
 
                         <ul class="text_title leader">
                             <li>揪團編號</li>
@@ -115,7 +117,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
                                         echo "<li><span>團隊名稱</span>".$booking['TEAM_NAME']."</li>";
                                         echo "<li><span>預定日期</span>".$booking['BOO_DATE']."</li>";
                                         echo "<li><span>預定人數</span>".$booking['TEAM_MEM']."</li>";
-                                        echo "<li><input type='button' value='團隊管理'></li>";
+                                        echo "<li><input  type='button' value='團隊管理'></li>";
                                         echo " </ul>";
                                     } 
                                         
@@ -133,7 +135,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
                     </div>
                         
 
-                     <div id="staff_content" class="text_content" style="background-color: #fcc;">
+                     <div id="staff_content" class="text_content">
 
 
                         <ul class="text_title staff">
@@ -168,7 +170,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
                                         echo "<li><span>團隊隊長</span>".$booking['MEM_NAME']."</li>";
                                         echo "<li><span>預定日期</span>".$booking['BOO_DATE']."</li>";
                                         echo "<li><span>預定人數</span>".$booking['TEAM_MEM']."</li>";
-                                        echo "<li><input id='logout' type='submit' value='退出隊伍'></li>";
+                                        echo "<li><input  id='logout' type='submit' value='退出隊伍'></li>";
                                         echo "</ul>";
                                         echo "</form>";
                                     } 

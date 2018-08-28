@@ -20,9 +20,9 @@ h2 {
     width: 40%;
     font-size: 22px;
     text-align: center;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     padding: 6px;
-    background-color: #aaa;
+    background-color: rgba(30,100,240,.7);
 }
 
 
@@ -37,23 +37,33 @@ h2 {
     height: 30px;
     letter-spacing: 2px;
     border-radius: 5px;
+    background-color: transparent;
+    color:#fff;
+    border:1px solid rgba(255,255,255,.7);
+    box-shadow: 2px 2px 5px 2px rgba(0,0,0,.4) inset;
 }
 
+
+
 @mixin btn_style() {
-    background-color: rgba(254, 180, 4, .7);
+    background-color: transparent;
     letter-spacing:2px;
     padding: 3px 10px;
-    border: transparent;
-     border-radius: 5px;
+    border:1px solid #ffb505;
+    color:#ffb505;
+    border-radius: 5px;
+    font-weight: bolder;
+    cursor: pointer;
 }
 
 @mixin s_show_name(){
     display: block;
-    width: 30%;
-    height: 22px;
-    margin: 20px auto;
-    text-align: center;
-    border-bottom:1px solid #bbb;
+    width: 50%;
+    margin:auto;
+    padding:10px 0;
+    border-bottom:2px solid #bbb;
+    letter-spacing: 1px;
+
 
 }
 
