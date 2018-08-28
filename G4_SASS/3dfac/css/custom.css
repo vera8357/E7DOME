@@ -135,6 +135,10 @@
 
 /* 4F CLIMBER */
 
+.pin--1-5 {
+  top: 33vmin;
+  left: 38vmin;
+}
 .player4f01 {
   position: absolute;
   top: -130%;
