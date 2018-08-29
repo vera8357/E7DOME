@@ -114,7 +114,7 @@
 }
 
 .pin--2-4 {
-  top: 49vmin;
+  top: 43vmin;
   left: 2vmin;
 }
 
@@ -216,6 +216,34 @@
 .pin--2-24 {
   top: 59vmin;
   left: 86vmin;
+}
+
+.pin--2-1 {
+  top: 32vmin;
+  left: -25vmin;
+  animation: player1f01 3000ms cubic-bezier(0.6, 0.04, 0.98, 0.335) infinite;
+}
+
+.player1f01 {
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  width: 200%;
+  height: 200%;
+}
+
+.pin--2-2 {
+  top: 52vmin;
+  left: -20vmin;
+  animation: player1f02 3000ms cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+}
+
+.player1f02 {
+  position: absolute;
+  top: -125%;
+  left: 0%;
+  width: 125%;
+  height: 125%;
 }
 
 /* 4F */
@@ -473,6 +501,24 @@
   }
   to {
     transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes player1f01 {
+  from {
+    left: -25vmin;
+  }
+  to {
+    left: -10vmin;
+  }
+}
+
+@keyframes player1f02 {
+  from {
+    left: -20vmin;
+  }
+  to {
+    left: -5vmin;
   }
 }
 
