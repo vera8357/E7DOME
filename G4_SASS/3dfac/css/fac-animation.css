@@ -275,6 +275,23 @@
   left: 7vmin;
 }
 
+.pin--4-5 {
+  top: 37vmin;
+  left: 29vmin;
+}
+
+.pin--4-5 {
+  animation: player4f03 3s infinite;
+}
+
+.player4f03 {
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  width: 170%;
+  height: 170%;
+}
+
 .player3f01 {
   position: absolute;
   top: -120%;
@@ -320,14 +337,18 @@
   animation: ball4f01 6000ms 1000ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
 }
 
+/* 殘障人士籃球轉速 */
+
 .ball04-1 {
-  animation: ball04-1 3000ms 1000ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  animation: ball04-1 3000ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
 }
+
+/* 殘障人士籃球路徑 */
 
 .ball4f02 {
   offset-path: path('M204.3,247.2l-154.7-50c23.3-178,142-42.7,142-42.7');
   offset-distance: 0%;
-  animation: ball4f02 6000ms 1000ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  animation: ball4f02 3000ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
 }
 
 /* 擊飛動畫 */
@@ -499,12 +520,20 @@
 }
 
 @keyframes ball04-1 {
-  0% {
-    transform: rotate(0deg) scale(1.5);
+  from {
+    transform: rotate(0deg) scale(2);
   }
-  100% {
-    transform: rotate(10240deg) scale(0.5);
-    opacity: 1;
+  to {
+    transform: rotate(3600deg) scale(1);
+  }
+}
+
+@keyframes player4f03 {
+  from {
+    left: 29vmin;
+  }
+  to {
+    left: 16vmin;
   }
 }
 
