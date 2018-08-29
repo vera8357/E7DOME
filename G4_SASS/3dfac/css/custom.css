@@ -1,5 +1,5 @@
 * {
-  /* outline: 1px solid #f00; */
+  outline: 1px solid #f00;
 }
 
 .home_pg2 {
@@ -270,6 +270,18 @@
   height: 150%;
 }
 
+
+.pin--1-2 { top: 12vmin; left: 14vmin; }
+.rock1f01 {
+  position: absolute;
+  top: -160%;
+  left: 0%;
+  width: 150%;
+  height: 150%;
+}
+
+
+.rock1f01 img,
 .bird3f01 img,
 .board4f01 img,
 .player3f03 img,
