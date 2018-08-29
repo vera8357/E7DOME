@@ -1,0 +1,821 @@
+/*spotlight start*/
+
+.light {
+  border-bottom: transparent;
+  border-left: solid 20vh transparent;
+  border-right: solid 20vh transparent;
+  border-top: solid 200vh rgba(255, 255, 255, 0.082);
+  bottom: 0;
+  height: 0;
+  left: 0;
+  position: absolute;
+  transform-origin: bottom;
+  width: 0;
+  animation: top-right 5s ease-in-out alternate infinite;
+  filter: blur(30px);
+}
+
+.light+.light {
+  left: auto;
+  right: 0;
+  animation: top-left 4s ease-in-out alternate infinite;
+}
+
+.light+.light+.light {
+  left: auto;
+  right: -20%;
+  animation: top-left 5.5s ease-in-out alternate infinite;
+}
+
+.light+.light+.light+.light {
+  left: 20%;
+  right: auto;
+  animation: top-right 6s ease-in-out alternate infinite;
+}
+
+/* 定位控制 */
+
+/* 1F */
+
+.player4f02 img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.pin--1-5 {
+  top: 33vmin;
+  left: 0vmin;
+}
+
+.player4f01 {
+  position: absolute;
+  top: -130%;
+  left: 0;
+  width: 150%;
+  height: 150%;
+}
+
+.pin--1-6 {
+  top: 54vmin;
+  left: 20vmin;
+}
+
+.player4f02 {
+  position: absolute;
+  top: -405%;
+  left: 0;
+  width: 470%;
+  height: 470%;
+}
+
+/* 2F */
+
+.ball01 {
+  position: absolute;
+  top: -154%;
+  left: -28%;
+  width: 70%;
+}
+
+.ball02 {
+  position: absolute;
+  top: -218%;
+  left: -61%;
+  width: 70%;
+}
+
+.bottle1 img,
+.bottle2 img,
+.bottle3 img,
+.bottle4 img,
+.bottle5 img,
+.bottle6 img,
+.bottle7 img,
+.bottle8 img,
+.bottle9 img,
+.bottle10 img,
+.bottle11 img,
+.bottle12 img,
+.bottle13 img,
+.bottle14 img,
+.bottle15 img,
+.bottle16 img,
+.bottle17 img,
+.bottle18 img,
+.bottle19 img,
+.bottle20 img {
+  width: 60%;
+  vertical-align: middle;
+}
+
+.pin--2-3 {
+  top: 49vmin;
+  left: 2vmin;
+}
+
+.pin--2-4 {
+  top: 43vmin;
+  left: 2vmin;
+}
+
+.pin--2-5 {
+  top: 22vmin;
+  left: 88vmin;
+}
+
+.pin--2-6 {
+  top: 29vmin;
+  left: 88vmin;
+}
+
+.pin--2-7 {
+  top: 22vmin;
+  left: 80vmin;
+}
+
+.pin--2-8 {
+  top: 16vmin;
+  left: 86vmin;
+}
+
+.pin--2-9 {
+  top: 9vmin;
+  left: 93vmin;
+}
+
+.pin--2-10 {
+  top: 16vmin;
+  left: 90vmin;
+}
+
+.pin--2-11 {
+  top: 21vmin;
+  left: 86vmin;
+}
+
+.pin--2-12 {
+  top: 24vmin;
+  left: 82vmin;
+}
+
+.pin--2-13 {
+  top: 28vmin;
+  left: 86vmin;
+}
+
+.pin--2-14 {
+  top: 26vmin;
+  left: 84vmin;
+}
+
+.pin--2-15 {
+  top: 54vmin;
+  left: 77vmin;
+}
+
+.pin--2-16 {
+  top: 50vmin;
+  left: 81vmin;
+}
+
+.pin--2-17 {
+  top: 56vmin;
+  left: 79vmin;
+}
+
+.pin--2-18 {
+  top: 46vmin;
+  left: 86vmin;
+}
+
+.pin--2-19 {
+  top: 53vmin;
+  left: 83vmin;
+}
+
+.pin--2-20 {
+  top: 57vmin;
+  left: 83vmin;
+}
+
+.pin--2-21 {
+  top: 42vmin;
+  left: 90vmin;
+}
+
+.pin--2-22 {
+  top: 47vmin;
+  left: 90vmin;
+}
+
+.pin--2-23 {
+  top: 53vmin;
+  left: 88vmin;
+}
+
+.pin--2-24 {
+  top: 59vmin;
+  left: 86vmin;
+}
+
+.pin--2-1 {
+  top: 32vmin;
+  left: -25vmin;
+  animation: player1f01 3000ms cubic-bezier(0.6, 0.04, 0.98, 0.335) infinite;
+}
+
+.player1f01 {
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  width: 200%;
+  height: 200%;
+}
+
+.pin--2-2 {
+  top: 52vmin;
+  left: -20vmin;
+  animation: player1f02 3000ms cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+}
+
+.player1f02 {
+  position: absolute;
+  top: -125%;
+  left: 0%;
+  width: 125%;
+  height: 125%;
+}
+
+/* 3F */
+
+.pin--3-6 {
+  top: 30vmin;
+  left: 0vmin;
+}
+
+.pin--4-11 {
+  top: 33vmin;
+  left: 34vmin;
+}
+
+.pin--4-12 {
+  top: 34vmin;
+  left: -3vmin;
+}
+
+.pin--3-6 {
+  animation: player3f03 6000ms cubic-bezier(0.19, 1, 0.22, 1) infinite;
+}
+
+.player3f03 {
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  width: 200%;
+  height: 200%;
+}
+
+.basball-path {
+  position: absolute;
+  display: block;
+  top: -271%;
+  left: -77%;
+  width: 600%;
+  height: 600%;
+}
+
+.basball-path2 {
+  position: absolute;
+  display: block;
+  top: -213%;
+  left: -77%;
+  width: 1460%;
+  height: 600%;
+}
+
+.pin--3-2 {
+  top: 33vmin;
+  left: 34vmin;
+}
+
+.pin--3-7 {
+  top: 3vmin;
+  left: 39vmin;
+}
+
+.pin--3-8 {
+  top: 34vmin;
+  left: -3vmin;
+}
+
+.bird3f01 {
+  position: absolute;
+  top: -271%;
+  left: -77%;
+  width: 60%;
+  height: 60%;
+}
+
+.bird3f01 {
+  offset-path: path('M266.4,18.5l-258,242');
+  offset-distance: 0%;
+  animation: bird3f01 4500ms cubic-bezier(1, 0, 0, 1) infinite;
+}
+
+.bird3f02 {
+  position: absolute;
+  top: -213%;
+  left: -77%;
+  width: 100%;
+  height: 100%;
+}
+
+.bird3f02 {
+  offset-path: path('M0,146l114-16.1L226,7l526,7');
+  offset-distance: 0%;
+  animation: bird3f02 3000ms cubic-bezier(0.95, 0.05, 0.795, 0.035) infinite;
+}
+
+.player3f05 {
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  width: 150%;
+  height: 150%;
+  animation-delay: 1s;
+  animation: player3f05 3000ms cubic-bezier(0.95, 0.05, 0.795, 0.035) infinite;
+}
+
+.pin--3-5 {
+  top: 50vmin;
+  left: 70vmin;
+}
+
+.player3f04 {
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  width: 200%;
+  height: 200%;
+  animation: player3f04 3000ms infinite;
+}
+
+/* 4F */
+
+.ball4f01 {
+  position: absolute;
+  display: block;
+  top: -579%;
+  left: 0%;
+  width: 50%;
+  height: 50%;
+}
+
+.ball4f02 {
+  position: absolute;
+  display: block;
+  top: -230%;
+  left: 0%;
+  width: 50%;
+  height: 50%;
+}
+
+.ball04,
+.ball04-1 {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.pin--4-1 {
+  top: 78vmin;
+  left: 7vmin;
+}
+
+.pin--4-4 {
+  top: 24vmin;
+  left: 54vmin;
+  animation: playjump2 1000ms infinite;
+}
+
+.pin--4-6 {
+  top: 34vmin;
+  left: 46vmin;
+}
+
+.pin--4-8 {
+  top: 78vmin;
+  left: 7vmin;
+}
+
+.pin--4-9 {
+  top: 19vmin;
+  left: 7vmin;
+}
+
+.pin--4-10 {
+  top: 19vmin;
+  left: 7vmin;
+}
+
+.pin--4-5 {
+  top: 37vmin;
+  left: 29vmin;
+}
+
+.pin--4-5 {
+  animation: player4f03 3s infinite;
+}
+
+.player4f03 {
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  width: 170%;
+  height: 170%;
+}
+
+.player3f01 {
+  position: absolute;
+  top: -120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: playjump 6500ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+.player3f02 {
+  position: absolute;
+  top: -130%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.basketball-path {
+  position: absolute;
+  display: block;
+  top: -579%;
+  left: 0%;
+  width: 600%;
+  height: 600%;
+}
+
+.basketball-path2 {
+  position: absolute;
+  display: block;
+  top: -230%;
+  left: 0%;
+  width: 600%;
+  height: 600%;
+}
+
+.pin--3-3 {
+  top: 21vmin;
+  left: 70vmin;
+}
+
+.player2f01 {
+  position: absolute;
+  top: -150%;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  animation: player2f01 3s infinite;
+}
+
+.ball04 {
+  animation: ball04 6000ms 1000ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+.ball4f01 {
+  offset-path: path('M52,166.7c0,0,97.3-338.7,241.3,56.7L250.7,308');
+  offset-distance: 0%;
+  animation: ball4f01 6000ms 1000ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+/* 殘障人士籃球轉速 */
+
+.ball04-1 {
+  animation: ball04-1 3000ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+/* 殘障人士籃球路徑 */
+
+.ball4f02 {
+  offset-path: path('M204.3,247.2l-154.7-50c23.3-178,142-42.7,142-42.7');
+  offset-distance: 0%;
+  animation: ball4f02 3000ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+/* 擊飛動畫 */
+
+.bottle1 img {
+  /* offset-path: path('M25,103l92-78'); */
+  offset-distance: 0%;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+}
+
+.bottle2 img {
+  /* offset-path: path('M14.1,84l113.8-40'); */
+  offset-distance: 0%;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+}
+
+.bottle3 img {
+  /* offset-path: path('M25,103l92-78'); */
+  offset-distance: 0%;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+}
+
+.bottle4 img {
+  /* offset-path: path('M25,103l92-78'); */
+  offset-distance: 0%;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+}
+
+.bottle5 img {
+  /* offset-path: path('M116.3,102.7l-104-82'); */
+  offset-distance: 0%;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+}
+
+.bottle6 img {
+  /* offset-path: path('M116.3,102.7l-104-82'); */
+  offset-distance: 0%;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+}
+
+.bottle7 img {
+  /* offset-path: path('M87,7.3c29.5,22.5-9.8,55-9.8,55l-61.5,38.3'); */
+  offset-distance: 0%;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+}
+
+.bottle8 img {
+  /* offset-path: path('M25,103l92-78'); */
+  offset-distance: 0%;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+}
+
+.bottle9 img {
+  /* offset-path: path('M25,103l92-78'); */
+  offset-distance: 0%;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+}
+
+.bottle10 img {
+  /* offset-path: path('M116.3,102.7l-104-82'); */
+  offset-distance: 0%;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+}
+
+@keyframes bottle1 {
+  0% {
+    offset-distance: 0%;
+    transform: rotate(0deg) scale(1);
+  }
+  90% {
+    offset-distance: 0%;
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    offset-path: path('M116.3,102.7l-104-82');
+    offset-distance: 100%;
+    transform: rotate(1024deg) scale(0);
+  }
+}
+
+/* 擊飛動畫 */
+
+/*保齡球路徑*/
+
+.ball01 {
+  offset-path: path('M544,46c-43,43-213.5,78-213.5,78L7,178');
+  offset-distance: 0%;
+  animation: ball 3000ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+.ball02 {
+  offset-path: path('M7,147L549,29');
+  offset-distance: 0%;
+  animation: ball2 3000ms cubic-bezier(0.23, 1, 0.32, 1) infinite;
+}
+
+@keyframes ball {
+  from {
+    offset-distance: 100%;
+    transform: rotate(0deg) scale(2);
+  }
+  to {
+    offset-distance: 0%;
+    transform: rotate(10240deg) scale(1);
+  }
+}
+
+@keyframes ball2 {
+  from {
+    offset-distance: 0%;
+    transform: rotate(0deg) scale(2);
+  }
+  to {
+    offset-distance: 100%;
+    transform: rotate(1800deg) scale(1);
+  }
+}
+
+@keyframes ball2-1 {
+  from {
+    transform: rotate(0deg) scale(2);
+  }
+  to {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes player1f01 {
+  from {
+    left: -25vmin;
+  }
+  to {
+    left: -10vmin;
+  }
+}
+
+@keyframes player1f02 {
+  from {
+    left: -20vmin;
+  }
+  to {
+    left: -5vmin;
+  }
+}
+
+@keyframes ball4f01 {
+  from {
+    offset-distance: 0%;
+  }
+  to {
+    offset-distance: 100%;
+  }
+}
+
+@keyframes ball04 {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  30% {
+    opacity: 1;
+  }
+  39% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  44% {
+    opacity: 0.4;
+  }
+  45% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(10240deg) scale(0.5);
+    opacity: 1;
+  }
+}
+
+@keyframes ball4f02 {
+  from {
+    offset-distance: 100%;
+  }
+  to {
+    offset-distance: 0%;
+  }
+}
+
+@keyframes ball04-1 {
+  from {
+    transform: rotate(0deg) scale(2);
+  }
+  to {
+    transform: rotate(3600deg) scale(1);
+  }
+}
+
+@keyframes player4f03 {
+  from {
+    left: 29vmin;
+  }
+  to {
+    left: 16vmin;
+  }
+}
+
+@keyframes playjump {
+  from {
+    top: -120%;
+  }
+  to {
+    top: -172%;
+  }
+}
+
+@keyframes playjump2 {
+  0% {
+    top: 24vmin;
+  }
+  50% {
+    top: 37vmin;
+  }
+  100% {
+    top: 24vmin;
+  }
+}
+
+@keyframes player3f03 {
+  0% {
+    top: 30vmin;
+  }
+  50% {
+    top: 60vmin;
+  }
+  0% {
+    top: 30vmin;
+  }
+}
+
+/* 棒球路徑 */
+
+@keyframes bird3f01 {
+  0% {
+    offset-distance: 0%;
+    transform: rotate(0deg)scale(1);
+    opacity: 1;
+  }
+  60% {
+    offset-distance: 0%;
+    transform: rotate(0deg)scale(2);
+    opacity: 1;
+  }
+  100% {
+    offset-distance: 100%;
+    transform: rotate(270deg)scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes player3f05 {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-5deg);
+  }
+  40% {
+    transform: rotate(5deg);
+  }
+  60% {
+    transform: rotate(-10deg);
+  }
+  80% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes player3f04 {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: -150%;
+  }
+}
+
+@keyframes player2f01 {
+  0% {
+    top: -95%;
+  }
+  100% {
+    top: -150%;
+  }
+}
+
+@keyframes bird3f02 {
+  0% {
+    offset-distance: 100%;
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    offset-distance: 0%;
+    opacity: 1;
+  }
+}
