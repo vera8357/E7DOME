@@ -30,6 +30,7 @@ gulp.task('default', ['sass'], function () {
   gulp.watch(["sass/*.scss", "sass/**/*.scss"], ['sass']).on('change', reload);
   gulp.watch("*.html").on('change', reload);
   gulp.watch("js/*.js").on('change', reload);
+  gulp.watch("3dfac/css/*.css").on('change', reload);
   // gulp.watch("images/*").on('change', reload);
 });
 
