@@ -258,6 +258,11 @@
   left: 34vmin;
 }
 
+.pin--4-12 {
+  top: 34vmin;
+  left: -3vmin;
+}
+
 .pin--3-6 {
   animation: player3f03 6000ms cubic-bezier(0.19, 1, 0.22, 1) infinite;
 }
@@ -266,8 +271,8 @@
   position: absolute;
   top: -100%;
   left: 0%;
-  width: 150%;
-  height: 150%;
+  width: 200%;
+  height: 200%;
 }
 
 .basball-path {
@@ -279,9 +284,28 @@
   height: 600%;
 }
 
+.basball-path2 {
+  position: absolute;
+  display: block;
+  top: -213%;
+  left: -77%;
+  width: 1460%;
+  height: 600%;
+}
+
 .pin--3-2 {
   top: 33vmin;
   left: 34vmin;
+}
+
+.pin--3-7 {
+  top: 3vmin;
+  left: 39vmin;
+}
+
+.pin--3-8 {
+  top: 34vmin;
+  left: -3vmin;
 }
 
 .bird3f01 {
@@ -298,9 +322,18 @@
   animation: bird3f01 4500ms cubic-bezier(1, 0, 0, 1) infinite;
 }
 
-.pin--3-7 {
-  top: 3vmin;
-  left: 39vmin;
+.bird3f02 {
+  position: absolute;
+  top: -213%;
+  left: -77%;
+  width: 100%;
+  height: 100%;
+}
+
+.bird3f02 {
+  offset-path: path('M0,146l114-16.1L226,7l526,7');
+  offset-distance: 0%;
+  animation: bird3f02 3000ms cubic-bezier(0.95, 0.05, 0.795, 0.035) infinite;
 }
 
 .player3f05 {
@@ -310,7 +343,21 @@
   width: 150%;
   height: 150%;
   animation-delay: 1s;
-  animation: player3f05 1000ms infinite;
+  animation: player3f05 3000ms cubic-bezier(0.95, 0.05, 0.795, 0.035) infinite;
+}
+
+.pin--3-5 {
+  top: 50vmin;
+  left: 70vmin;
+}
+
+.player3f04 {
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  width: 200%;
+  height: 200%;
+  animation: player3f04 3000ms infinite;
 }
 
 /* 4F */
@@ -420,6 +467,20 @@
   left: 0%;
   width: 600%;
   height: 600%;
+}
+
+.pin--3-3 {
+  top: 21vmin;
+  left: 70vmin;
+}
+
+.player2f01 {
+  position: absolute;
+  top: -150%;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  animation: player2f01 3s infinite;
 }
 
 .ball04 {
@@ -721,5 +782,40 @@
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+
+@keyframes player3f04 {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: -150%;
+  }
+}
+
+@keyframes player2f01 {
+  0% {
+    top: -95%;
+  }
+  100% {
+    top: -150%;
+  }
+}
+
+@keyframes bird3f02 {
+  0% {
+    offset-distance: 100%;
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    offset-distance: 0%;
+    opacity: 1;
   }
 }
