@@ -190,31 +190,7 @@
 
 /* 1F BOWLING PLAYER */
 
-.pin--2-1 {
-  top: 25vmin;
-  left: 2vmin;
-}
 
-.player1f01 {
-  position: absolute;
-  top: -100%;
-  left: 0%;
-  width: 200%;
-  height: 200%;
-}
-
-.pin--2-2 {
-  top: 49vmin;
-  left: 2vmin;
-}
-
-.player1f02 {
-  position: absolute;
-  top: -125%;
-  left: 0%;
-  width: 125%;
-  height: 125%;
-}
 
 
 
