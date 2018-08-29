@@ -184,8 +184,8 @@
   position: absolute;
   top: -150%;
   left: 0;
-  width: 300%;
-  height: 300%;
+  width: 200%;
+  height: 200%;
 }
 
 /* 1F BOWLING PLAYER */
@@ -237,7 +237,17 @@
 }
 
 
+.pin--3-6 { top: 62vmin; left: 0vmin; }
+.player3f03 {
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  width: 150%;
+  height: 150%;
+}
+
 .board4f01 img,
+.player3f03 img,
 .player4f03 img,
 .player4f01 img,
 .player3f01 img,
