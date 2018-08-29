@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/back.css">
     <link rel="stylesheet" href="css/font.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 </head>
 <body>
     <div class="back_nav">
@@ -47,8 +48,8 @@
     </div>
     <div class="back_content">
         <h2>儲值紀錄</h2>
-        
-        <form action="#">           
+        <form action="back_card_order.php" method="POST">  
+                <input type="text" placeholder="查詢會員" id="search" name="search">         
             <table>
                 <thead>
                     <tr>
@@ -60,18 +61,37 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>wesley</td>
-                        <td>500</td>
-                        <td>600</td>
-                        <td>
-                            1994/03/03
-                        </td>
-                    </tr>
+   
                 </tbody>
             </table>
         </form>
     </div>
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                url: 'back_card_order.php',
+                dataType: 'text',
+                tpye: 'GET',
+                success: function(data) {
+                    $('table tbody').append(data);    
+                }
+            });
+            $('#search').keyup(function(){
+                $.ajax({
+                url: 'back_card_order.php',
+                dataType: 'text',
+                tpye: 'GET',
+                data: {
+                        search: $(this).val()
+                        },
+                success: function(data) {
+                    $('table tbody').children().remove();    
+                    $('table tbody').append(data);    
+                }
+            }); 
+            });
+        });
+
+    </script>
 </body>
 </html>
