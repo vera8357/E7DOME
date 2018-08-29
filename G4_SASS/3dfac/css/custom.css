@@ -1,5 +1,5 @@
 * {
-  outline: 1px solid #f00;
+  /* outline: 1px solid #f00; */
 }
 
 .home_pg2 {
@@ -207,14 +207,7 @@
 
 
 
-.pin--3-2 { top: 36vmin; left: 59vmin; }
-.bird3f01 {
-  position: absolute;
-  top: -220%;
-  left: 0%;
-  width: 60%;
-  height: 60%;
-}
+
 
 
 .pin--3-5 { top: 50vmin; left: 70vmin; }
@@ -227,14 +220,7 @@
 }
 
 
-.pin--3-6 { top: 62vmin; left: 0vmin; }
-.player3f03 {
-  position: absolute;
-  top: -100%;
-  left: 0%;
-  width: 150%;
-  height: 150%;
-}
+
 
 
 .pin--3-7 { top: 3vmin; left: 39vmin; }
