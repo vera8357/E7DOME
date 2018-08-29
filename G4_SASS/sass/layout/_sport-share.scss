@@ -32,40 +32,22 @@ img{
     overflow:hidden;
     position: relative;
 }
-.control_next,
-.control_prev{
-    position: absolute;
-    background-color: #2a2a2a;
-    color:#fff;
-    width:10%;
-    line-height: 500%;
-    display: block;
-    font-size: 1vw;
-    top:50%;
-    z-index: 999;
-    text-align: center;
-}
-.control_next{
-    right:0;
-}
-.control_prev{
-    left:0;
-}
 .slider ul{
     position: relative;
-    width:400%;
+    width:100%;
     left:0;
     transition: 1s;
+    text-align: left;
 }
 .slider ul:after{
     display: block;
     content:'';
     clear: both;
 }
-.slider ul li{
-    float:left;
-    width:25%;
-}
+// .slider ul li{
+//     float:left;
+//     width:25%;
+// }
 .slider ul li img{
     width:100%;
     display:block;
@@ -192,7 +174,7 @@ img{
     width: 0;
     height: 0;
     right:-100%;
-    bottom:27%;
+    bottom:0;
     z-index: 0;
     border-style: solid;
     border-width: 0 0 13vw 15vw;
@@ -200,7 +182,7 @@ img{
 }
 
 .assess_tri3 {
-    display: block;
+    display: none;
     content: '';
     position: absolute;
     right: -100%;
@@ -322,6 +304,48 @@ td img{
     color:#ea4c89;
     text-align: right;
 }
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 40px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    opacity: .25;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: black;
+}
 @media screen and (max-width:1200px){
     .site_info_wrap{
         width:90%;
@@ -392,6 +416,13 @@ td img{
         margin:auto;
         float:initial;
     }
+    .slider ul{
+        position: relative;
+        width:100%;
+        left:0;
+        transition: 1s;
+        text-align: center;
+    }
     .info{
         width:100%;
         padding-left: 0;
@@ -449,8 +480,8 @@ td img{
     .assess_tri1{
         border-width: 66vw 50vw 0 0;}
     .assess_tri2{
-        border-width: 0 0 23vw 25vw;}
-    .group_page_tri{
-        top:-180%;
-        border-width: 0 25vw 23vw 0;}
+        border-width: 0 0 33vw 25vw;}
+    .assess_tri3{
+        border-width: 0 25vw 23vw 0;
+    }
 }
