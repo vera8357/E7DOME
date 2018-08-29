@@ -298,6 +298,21 @@
   animation: bird3f01 4500ms cubic-bezier(1, 0, 0, 1) infinite;
 }
 
+.pin--3-7 {
+  top: 3vmin;
+  left: 39vmin;
+}
+
+.player3f05 {
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  width: 150%;
+  height: 150%;
+  animation-delay: 1s;
+  animation: player3f05 1000ms infinite;
+}
+
 /* 4F */
 
 .ball4f01 {
@@ -685,5 +700,26 @@
     offset-distance: 100%;
     transform: rotate(270deg)scale(1);
     opacity: 0;
+  }
+}
+
+@keyframes player3f05 {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-5deg);
+  }
+  40% {
+    transform: rotate(5deg);
+  }
+  60% {
+    transform: rotate(-10deg);
+  }
+  80% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
