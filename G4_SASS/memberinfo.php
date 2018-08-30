@@ -10,8 +10,8 @@ session_start();
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="../css/style.css">
-	<link rel="stylesheet" type="text/css" href="../css/memberinfo.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/memberinfo.css">
 	<title>會員基本資料</title>
 	
 
@@ -19,7 +19,7 @@ session_start();
 <body>
 <div class="nav"></div>
 <?php
-$member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
+$member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 ?>
 
 <section>
@@ -29,7 +29,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 		<div class="member_item">
 
 
-			<form  id="file" action="new_upfile.php"   method="post" enctype="multipart/form-data">
+			<form  id="file" action="php/new_upfile.php"   method="post" enctype="multipart/form-data">
 
 				<div class="pic_wrap">
 					<label>
@@ -46,9 +46,9 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 
 
        		 <div id="show_name">
-       		 	<span><img src="member_pic/photography-portrait-mode.png"><?php echo $_SESSION['MEM_ID']; ?></span>
-       		 	<span><img src="member_pic/coin.png"><?php echo $_SESSION['MEM_POINTS']; ?></span>
-       			<span><img src="member_pic/smartphone.png"><?php echo $_SESSION['MEM_PHONE']; ?></span>
+       		 	<span><img src="images/member_pic/photography-portrait-mode.png"><?php echo $_SESSION['MEM_ID']; ?></span>
+       		 	<span><img src="images/member_pic/coin.png"><?php echo $_SESSION['MEM_POINTS']; ?></span>
+       			<span><img src="images/member_pic/smartphone.png"><?php echo $_SESSION['MEM_PHONE']; ?></span>
        		 
        		 </div>
 
@@ -61,7 +61,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 				<li><a href="memberbooking.php"><span class="line"></span>預約紀錄</a></li>
 				<li><a href="memberpoints.php"><span class="line"></span>儲值紀錄</a></li>
 				<li><a href="membergroup.php"><span class="line"></span>我的揪團</a></li>
-				<li><form action="logout.php" method="post"><input id="btn_logout" type="submit" value="登出"></form> </li>
+				<li><form action="php/logout.php" method="post"><input id="btn_logout" type="submit" value="登出"></form> </li>
 				
 			</ul>
 			
@@ -133,8 +133,8 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 </section>
 
 
-	<script src="../js/upfile.js"></script>
-	<script src="../js/update_phone_psw.js"></script>
+	<script src="js/upfile.js"></script>
+	<script src="js/update_phone_psw.js"></script>
 
 </body>
 </html>

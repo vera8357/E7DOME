@@ -22,7 +22,7 @@ function sendForm(){
             alert("帳密錯誤");
           }else{
             document.getElementById("link_member").href ='memberinfo.php';
-            document.getElementById("m_pic").src = 'member_pic/'+ xhr.responseText;
+            document.getElementById("m_pic").src = 'images/member_pic/'+ xhr.responseText;
             document.getElementById("link_member").innerHTML = "會員專區"; 
   
             
@@ -33,7 +33,7 @@ function sendForm(){
         }
     }
 
-      xhr.open("Post", "../php/ajax_login.php", true);
+      xhr.open("Post", "php/ajax_login.php", true);
       xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
       var data_info = "MEM_ID=" + document.getElementById("MEM_ID").value 
                     + "&MEM_PSW="+ document.getElementById("MEM_PSW").value;
@@ -126,7 +126,7 @@ function check_id(){
         
         }
   }
-  var url = "../php/check_id.php?enroll_id=" + document.getElementById("enroll_id").value;
+  var url = "php/check_id.php?enroll_id=" + document.getElementById("enroll_id").value;
   xhr.open("get", url, true);
   xhr.send(null);
 
