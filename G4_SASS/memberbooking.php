@@ -1,7 +1,4 @@
-<?php
-ob_start();
-session_start();
-?>
+
 
 
 <!DOCTYPE html>
@@ -10,16 +7,20 @@ session_start();
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="../css/style.css">
-	<link rel="stylesheet" type="text/css" href="../css/memberbooking.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/memberbooking.css">
 	<title>會員預約資訊</title>
 	
 
 </head>
 <body>
-<div class="nav"></div>
 <?php
-$member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
+		require_once("header.php");
+?>
+
+
+<?php
+$member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 ?>
 <section>
 
@@ -28,7 +29,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 		<div class="member_item">
 
 
-			<form  id="file" action="new_upfile.php"   method="post" enctype="multipart/form-data">
+			<form  id="file" action="php/new_upfile.php"   method="post" enctype="multipart/form-data">
 
 				<div class="pic_wrap">
 					<label>
@@ -46,9 +47,9 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 
 
        		 <div id="show_name">
-       		 	<span><img src="member_pic/photography-portrait-mode.png"><?php echo $_SESSION['MEM_ID']; ?></span>
-       		 	<span><img src="member_pic/coin.png"><?php echo $_SESSION['MEM_POINTS']; ?></span>
-       			<span><img src="member_pic/smartphone.png"><?php echo $_SESSION['MEM_PHONE']; ?></span>
+       		 	<span><img src="images/member_pic/photography-portrait-mode.png"><?php echo $_SESSION['MEM_ID']; ?></span>
+       		 	<span><img src="images/member_pic/coin.png"><?php echo $_SESSION['MEM_POINTS']; ?></span>
+       			<span><img src="images/member_pic/smartphone.png"><?php echo $_SESSION['MEM_PHONE']; ?></span>
        		 </div>
 
 
@@ -60,7 +61,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 				<li><a href="memberpoints.php"><span class="line"></span>儲值紀錄</a></li>
 				<li><a href="membergroup.php"><span class="line"></span>我的揪團</a></li>
 				
-				<li> <form action="logout.php" method="post"><input id="btn_logout" type="submit" value="登出"></form></li>
+				<li> <form action="php/logout.php" method="post"><input id="btn_logout" type="submit" value="登出"></form></li>
 				
 			</ul>
 			
@@ -87,7 +88,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 
 
 					try{
-							require_once("connect_g4.php");
+							require_once("php/connect_g4.php");
 							$sql = "select * from booking where MEM_NO =".$_SESSION['MEM_NO'];
 							$member = $pdo->query($sql);
 							
@@ -112,16 +113,16 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 									 	case '1':
 									 		$order['BOO_STATUS'] = "預約";
 									 		break;
-									 	case '2':
+									 	case '0':
 									 		$order['BOO_STATUS'] = "已取消";
 									 		break;
 									 	default:
 									 	    $order['BOO_STATUS'] = "已報到";	
 									 }
-
+									 	echo "<form action='evaluate.php'>";
 										echo "<div class='booking'>";
 										echo "<span class='hold1'>";
-										echo "<img src='member_pic/img.png'>";
+										echo "<img src='images/member_pic/img.png'>";
 										echo "</span>";
 										echo "<span class='hold2'>";
 										echo "<p>訂單編號:<span id='booking_no'>".$order['BOO_NO']."</span></p>";
@@ -132,11 +133,13 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 										echo "</span>";
 										echo "<span class='button'>";
 										echo "<input type='button' value='揪團去'>";
-										echo "<input type='button' value='取消預約'>";
-										echo "<input type='button' value='評價場地'>";
+										echo "<input class='cancel' type='button' value='取消預約'>";
+										echo "<input type='hidden' id='booking_no' name='booking_no' value=".$order['BOO_NO'].">";
+										echo "<input type='submit' value='評價場地'>";
 										echo "</span>";
+										
 										echo "</div>";
-
+										echo "</form>";
 									} 
 										
 							}
@@ -150,26 +153,9 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 
 
 					?>
-			<!-- 		<div class="booking">
-						<span class="hold1">
-							<img src="member_pic/img.png">
-						</span>
+		
 
-						<span class="hold2">
-							<p>訂單編號:<span id="booking_no">aaaaa</span></p>
-							<p>&nbsp;場&nbsp;&nbsp;&nbsp;&nbsp;地&nbsp;&nbsp;:<span id="booking_site"></span></p>
-							<p>日期時段:<span id="booking_time"></span></p>
-							<p>使用狀態:<span id="booking_check"></span></p>
-						</span>
-
-						<span class="button">
-							<input type="button" value="揪團去">
-							<input type="button" value="取消預約">
-							<input type="button" value="評價場地">
-						</span>
-					</div> -->
-
-					
+				
 
 				</div>
 
@@ -183,6 +169,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 </section>
 
 
-	<script src="../js/upfile.js"></script>
+	<script src="js/upfile.js"></script>
+	<script src="js/cancel.js"></script>
 </body>
 </html>

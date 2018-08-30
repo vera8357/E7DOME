@@ -24,7 +24,7 @@ function update_phone(){
 	}
 	
 
-	  xhr.open("Post", "../php/updata_phone.php", true);
+	  xhr.open("Post", "php/updata_phone.php", true);
       xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
       var data_info = "change_tel=" + document.getElementById("phone_number").value
       				+ "&MEM_NO=" + document.getElementById("MEM_NO").value;      
@@ -68,7 +68,7 @@ function  check_old_psw(){
 		}
 	}
 
-	 xhr.open("Post", "../php/check_old_psw.php", true);
+	 xhr.open("Post", "php/check_old_psw.php", true);
      xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
      var data_info = "old_psw=" + document.getElementById("old_psw").value
       				+ "&MEM_NO=" + document.getElementById("MEM_NO").value; 
@@ -117,7 +117,7 @@ function update_psw(){
 		}
 	
 
-		  xhr.open("Post", "../php/updata_psw.php", true);
+		  xhr.open("Post", "php/updata_psw.php", true);
 	      xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
 	      var data_info = "new_psw=" + document.getElementById("new_ps1").value
 	      				+ "&MEM_NO=" + document.getElementById("MEM_NO").value;      

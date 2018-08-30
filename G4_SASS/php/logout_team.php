@@ -9,7 +9,7 @@ try{
 	$member = $pdo->prepare($sql);
 	$member->bindValue(":TEAM_NO",$_REQUEST['TEAM_NO']);
 	$member->execute();
-header("location:membergroup.php");
+header("location:../membergroup.php");
 
 }catch(PDOException $e){
 

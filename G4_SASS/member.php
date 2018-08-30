@@ -10,8 +10,8 @@ session_start();
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="../css/style.css">
-	<link rel="stylesheet" type="text/css" href="../css/member.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/member.css">
 
 	<title>Document</title>
 </head>
@@ -19,17 +19,18 @@ session_start();
  
 <body>
 
+
 <!-- 登入 -->
 <div id="bar">
 	
 <?php
 //檢查是否已登入
 if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
-  echo '<img src="member_pic/'.$_SESSION["MEM_IMG"].'" id="m_pic">';
+  echo '<img src="images/member_pic/'.$_SESSION["MEM_IMG"].'" id="m_pic">';
   echo '<a href="memberinfo.php" id="link_member">會員專區</a>';
 }else{
-  echo '<img src="member_pic/pic.jpg" id="m_pic">';
-  echo '<a href="#" id="link_member">會員登入</a>';
+  echo '<img src="images/member_pic/pic.jpg" id="m_pic">';
+  echo '<a href="#" id="link_member">登入</a>';
 }
 ?>  
 
@@ -42,7 +43,7 @@ if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
 	
 	<div id="sing_wrap">
 		
-		<p>會員登入</p><span id="close_1"><img src="member_pic/close.png"></span>
+		<p>會員登入</p><span id="close_1"><img src="images/member_pic/close.png"></span>
 
 		<table id="table_login">
 			<tr>
@@ -76,8 +77,8 @@ if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
 
 <div id="enroll">
 	<div id="enroll_wrap">
-		<p>會員註冊</p><span id="close_2"><img src="member_pic/close.png"></span>
-		<form action="enroll.php">
+		<p>會員註冊</p><span id="close_2"><img src="images/member_pic/close.png"></span>
+		<form action="php/enroll.php">
 			<ul>
 				<li class="enroll_li" >
 
@@ -123,6 +124,8 @@ if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
 </div>
 
 
-	<script src="../js/login.js"></script>
+
+
+	<script src="js/login.js"></script>
 </body>
 </html>
