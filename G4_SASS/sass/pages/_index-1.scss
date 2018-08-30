@@ -72,13 +72,8 @@ a{
 }
 #home_bg1_vd{
     min-width: 100%; 
-<<<<<<< HEAD
 	min-height: 100%;
 	object-fit: cover;
-=======
-		min-height: 100%;
-		object-fit: cover;
->>>>>>> G4-1
 }
 .home_pg1_bluebox1{
 	position: absolute;
@@ -190,7 +185,17 @@ a{
 
 @media screen and (max-width: 1200px) {
 	  .wrapper {
-		width: 100%; }
+		width: 100%; 
+	}
+
+	  #home_bg1_vd{
+			display: none;
+		}
+	  .home_pg1{
+		  background: url("../images/index/e7dome.gif");
+		  background-repeat: no-repeat;
+		  background-size: cover;
+	  }
 	  .home_pg1_bluebox1 {
 		left: 0;
 		top: 0;
