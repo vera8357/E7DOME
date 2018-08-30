@@ -10,4 +10,4 @@ tl.to('.triangle-yellow', 1, {
 function action() {
 }
 
-$(".message").delay(3000).fadeIn(1000);
+$("#message").delay(3000).fadeIn(1000);
