@@ -1,5 +1,5 @@
 * {
-  outline: 1px solid #f00;
+  /* outline: 1px solid #f00; */
 }
 
 .home_pg2 {
@@ -172,30 +172,6 @@
   top: -280%;
   left: 0%;
 }
-
-/* 2F BADMINTON PLAYER */
-
-.pin--3-3 {
-  top: 21vmin;
-  left: 70vmin;
-}
-
-.player2f01 {
-  position: absolute;
-  top: -150%;
-  left: 0;
-  width: 200%;
-  height: 200%;
-}
-
-/* 1F BOWLING PLAYER */
-
-
-
-
-
-
-
 .pin--4-7 { top: 0vmin; left: 45vmin; }
 .board4f01 {
   position: absolute;
@@ -203,20 +179,6 @@
   left: 0%;
   width: 170%;
   height: 170%;
-}
-
-
-
-
-
-
-.pin--3-5 { top: 50vmin; left: 70vmin; }
-.player3f04 {
-  position: absolute;
-  top: -100%;
-  left: 0%;
-  width: 200%;
-  height: 200%;
 }
 .pin--1-2 { top: 12vmin; left: 14vmin; }
 .rock1f01 {
@@ -256,13 +218,15 @@
 .player3f03 img,
 .player3f04 img,
 .player3f05 img,
+.player3f06 img,
 .player4f03 img,
 .player4f01 img,
 .player3f01 img,
 .player3f02 img,
 .player2f01 img,
 .player1f01 img,
-.player1f02 img {
+.player1f02 img,
+.bird3f02 img {
   width: 100%;
   vertical-align: middle;
 }

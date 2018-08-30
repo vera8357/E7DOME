@@ -39,11 +39,11 @@ a {
 	outline: none;
 }
 
-a:hover,
+/* a:hover,
 button:hover {
 	color: #515158;
 	outline: none;
-}
+} */
 
 a:focus,
 button:focus {
