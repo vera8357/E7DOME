@@ -1,6 +1,21 @@
 img{
     vertical-align: middle;
 }
+html {
+    overflow: -moz-hidden-unscrollable;
+    height: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    height: 100%;
+	width: 100vw;
+	overflow: auto;
+}
 .site_info{
     width:100%;
     position: relative;
@@ -239,16 +254,20 @@ img{
     margin:auto;
 }
 .assess_table table tr{
-    // line-height: 5;
+    line-height: 5;
 }
 .assess_table table tr td{
     text-align: center;
 }
 .assess_table table tr td:nth-child(1) {
     width: 10%;
+    border-radius: 9487%;
+    // display: block;
 }
 td img{
     width:100%;
+    border-radius: 9487%;
+    // display: block;
 }
 .assess_table table tr td:nth-child(2) {
     font-size: 20px;
@@ -275,9 +294,10 @@ td img{
     // left:50px;
     animation: ball 2s 0s both;
     // z-index: 0;
-    width:66.66%;
+    width:42%;
     left:-100%;
     transform: rotate(0deg);
+    bottom:0;
 }
 // @keyframes ball {
 //     0% {
@@ -345,6 +365,21 @@ td img{
 .slick-dots li.slick-active button:before {
     opacity: .75;
     color: black;
+}
+.home_team{
+	font-size: 0;
+	float: inherit;
+    width: 100%;
+    padding:5% 0 5% 0;
+}
+.teamAll h3{
+	text-align: center;
+	color: #ffb505;
+	font-size: 24px;
+	margin-top: 15px;
+	margin-bottom: 45px;
+	font-style: oblique;
+	font-family: 'HanWangZonYi';
 }
 @media screen and (max-width:1200px){
     .site_info_wrap{
@@ -449,6 +484,29 @@ td img{
         margin-bottom: 2%;
         letter-spacing: 1px;
         font-weight: 100;
+    }
+    .assess_table table tr{
+        display:flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .assess_table table tr:last-child{
+        display: none;
+    }
+    .assess_table table tr td:nth-child(1){
+        width:20%;
+    }
+    .assess_table table tr td:nth-child(2){
+        width:30%;
+    }
+    .assess_table table tr td:nth-child(3){
+        order:4;
+        width:100%;
+        padding:5% 0 5% 0;
+        line-height: 1.5;
+    }
+    .assess_table table tr td:nth-child(4){
+        width:50%;
     }
     .assess_wrap{
         width:80%;
