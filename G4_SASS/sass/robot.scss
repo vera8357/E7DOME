@@ -1,8 +1,5 @@
-@import "layout/header";
 @import "base/var";
+@import "layout/header";
 @import "mixins/mixins";
-@import "layout/desktop";
-@import "layout/small";
 @import "pages/robot";
-@import "layout/footer";
-@import "components/buttons";
+@import "layout/robotmobile";
