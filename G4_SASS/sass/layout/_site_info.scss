@@ -452,17 +452,6 @@ img{
         top: 0;
         width: 100%;
         margin-top: 10vh;
-        animation: bluebox1_m .5s forwards;
-    }
-    @keyframes bluebox1_m{
-        0%{
-            top:-100%;
-            left:-20%;
-        }
-        100%{
-            top:1%;
-            left:0;
-        }
     }
     .site_info_pg_yellowbox {
         display: none;

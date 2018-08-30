@@ -58,40 +58,15 @@ a{ text-decoration: none; }
 .area:nth-child(4) .mask:before{ background-color: rgba(205,171,85,.7);}
 
 
-.content{
+
+.content img{
 	height: 100vh;
-	background-repeat: no-repeat;
-	background-size:cover;
+	width:100%;
+	position: relative;
+	vertical-align: middle;
+	z-index: -1;
+	top: 0;
 }
-
-.area:nth-child(1) .content{
-	background-image: url(../images/booking/01basketball.jpg);
-	background-position: 45%;
-}
-
-
-.area:nth-child(2) .content{
-	background-image: url(../images/booking/02badminton.jpg);
-	background-position: 50%;
-}
-
-.area:nth-child(3) .content{
-	background-image: url(../images/booking/03climbling.jpg);
-	background-position: 40%;
-}
-
-.area:nth-child(4) .content{
-	background-image: url(../images/booking/04bowling.jpg);
-	background-position: 70%;
-}
-// .content img{
-// 	height: 100vh;
-// 	width:100%;
-// 	position: relative;
-// 	vertical-align: middle;
-// 	z-index: -1;
-// 	top: 0;
-// }
 
 
 .active .mask:before{
