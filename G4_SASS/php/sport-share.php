@@ -3,7 +3,6 @@ try {
     require_once("connect_g4.php");
     $sql = "select * from facility";
     $site = $pdo->query( $sql);
-    // $site = $site->fetchAll(PDO::FETCH_ASSOC);
     while($site_info = $site->fetch(PDO::FETCH_ASSOC)){
 ?>
     <h3><?php echo $site_info["FAC_NAME"]?></h3>
