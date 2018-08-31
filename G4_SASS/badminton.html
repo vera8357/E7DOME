@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/sport-share.css">
     <link rel="stylesheet" href="css/
 badminton.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
     <script src="js/sport-share.js"></script>
     <script src="js/site_scrollmagic.js"></script>
     <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
@@ -20,42 +20,43 @@ badminton.css">
 </head>
 <body>
     <header>
-		<div class="wrapper">
-			<div class="humberger_btn">
-				<div class="humberger_line top"></div>
-				<div class="humberger_line mid"></div>
-				<div class="humberger_line bot"></div>
-			</div>
-			<div class="logo">
-			<a href="index.html">
-				<img src="images/e7logo.png" alt=""> </a>
-			</div>
-			<div class="login">
-					<!-- <a href="#"><img src="images/user-icon.png"></a> -->
-					<a href="#">登入</a>
-			</div>
-			<ul>
-			<li>
-				<a href="site_info.html"> 場地介紹 </a>
-			</li>
-			<li>
-				<a href="booking.html"> 預約場地 </a>
-			</li>
-			<li>
-				<a href="group.html"> 運動揪團 </a>
-			</li>
-			<li>
-				<a href="about.html"> 關於我們 </a>
-			</li>
-			<li>
-				<a href="chat-robot.html"> 諮詢專區 </a>
-			</li>
-			<!-- <li>
-				<a href="#">
-				<img src="images/user-icon.png"> </a>
-			</li> -->
-			</ul>
-		</div>
+        <div class="logo">
+            <a href="#">
+                <img src="images/e7logo.png" alt="">
+            </a>
+        </div>
+        <ul>
+            <li>
+                <a href="#">
+                    場地介紹
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    預約場地
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    運動揪團
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    關於我們
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    諮詢專區
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/user-icon.png" id="loginicon">
+                </a>
+            </li>
+        </ul>
     </header>
     <div class="bad_fp">
         <div class="bad_fp_rec"></div>
@@ -85,7 +86,9 @@ badminton.css">
         <div class="site_info_wrap">
             <h3>場地介紹</h3>
             <div class="slider">
-                <ul class="sport_slider">
+                <div class="control_prev"><</div>
+                <div class="control_next">>></div>
+                <ul>
                     <li>
                         <img src="images/bowling/bowlingball.png" alt="">
                     </li>
@@ -153,7 +156,7 @@ badminton.css">
                 <table>
                     <tr>
                         <td>
-                            <img src='http://fakeimg.pl/200x200?font=lobster' alt=''/>
+                            <img src='http://fakeimg.pl/200x200?font=lobster' alt='' />
                         </td>
                         <td>
                             邱顯成
@@ -167,7 +170,7 @@ badminton.css">
                     </tr>
                     <tr>
                         <td>
-                            <img src='http://fakeimg.pl/200x200?font=lobster' alt=''/>
+                            <img src='http://fakeimg.pl/200x200?font=lobster' alt='' />
                         </td>
                         <td>
                             邱顯成
@@ -181,7 +184,7 @@ badminton.css">
                     </tr>
                     <tr>
                         <td>
-                            <img src='http://fakeimg.pl/200x200?font=lobster' alt=''/>
+                            <img src='http://fakeimg.pl/200x200?font=lobster' alt='' />
                         </td>
                         <td>
                             邱顯成
@@ -195,7 +198,7 @@ badminton.css">
                     </tr>
                     <tr>
                         <td>
-                            <img src='http://fakeimg.pl/200x200?font=lobster' alt=''/>
+                            <img src='http://fakeimg.pl/200x200?font=lobster' alt='' />
                         </td>
                         <td>
                             邱顯成
@@ -219,23 +222,6 @@ badminton.css">
             <h3>加入揪團！尋找運動伙伴</h3>
         </div>
     </div>
-
-    <script src="js/slick.min.js"></script>
-    <script>
-        $('.sport_slider').slick({
-                dots: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows:false,
-                autoplay: true,
-                autoplaySpeed: 2000,
-                focusOnSelect:true,
-            });
-    </script>
-	<script>
-		$('.humberger_btn').click(function(){
-			$(this).toggleClass('active');
-		})
-	</script>
+    
 </body>
 </html>

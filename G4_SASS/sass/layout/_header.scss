@@ -117,9 +117,12 @@ width: 100%; }
         position: absolute;
         left:50%;
         transform: translateX(-50%);
-        background-color: #ffb505;
-        width: 20px;
-        height: 2px;
+        // background-color: #ffb505;
+        border: 1px solid #ffb505;
+        border-radius: 2px;
+        width: 30px;
+        height: 5px;
+        transition: .5s;
     }
     .humberger_line.top{
         top:20px;
@@ -135,14 +138,21 @@ width: 100%; }
         top:50%;
         transform: translateX(-50%) translateY(-50%) rotate(45deg);
         transform-origin: center;
+        background-color: #ffb505;
     }
     .humberger_btn.active .humberger_line.mid{
-        opacity: 0;
+        opacity: 0.3;
+        background-color: #ffb505;
+        height: 20px;
+        border-radius: 50%; 
+        border: 0;
+        transform: translateX(-50%) translateY(-50%) scale(0.7,0.7);
     }
     .humberger_btn.active .humberger_line.bot{
         bottom:initial;
         top:50%;
         transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+        background-color: #ffb505;
     }
     .logo{
         text-align: center;

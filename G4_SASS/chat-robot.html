@@ -50,7 +50,7 @@
     <div class="triangle-yellow"></div>
     <div class="trapezoid-blue"></div>
     <div class="rectangle-blue"></div>
-    <div class="message">
+    <div id="message">
       <div class="field">
         <input id="register" maxlength="20" type="text">
         <label for="register">
@@ -64,13 +64,44 @@
     </div>
     <!-- <img class="coach" src="images/chatrobot/coach.png" alt="coach"> -->
   </section>
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
   <script src="js/robot.js"></script>
   <script>
     $('.humberger_btn').click(function () {
       $(this).toggleClass('active');
     })
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      newUl = document.createElement('ul');
+      newUl.id = 'talk';
+      document.getElementById('message').appendChild(newUl);
+      $('#register').keyup(function (e) {
+        var convalue = this.value;
+        // console.log(convalue);
+        if (this.value == "") {
+        }
+        else {
+          if (event.keyCode == 13) {
+            $.ajax({
+              url: 'php/bot.php',
+              data: { content: convalue },
+              type: 'POST',
+              dataType: 'text',
+              success: function (data) {
+                var li = document.createElement("li");
+                newUl.appendChild(li);
+                li.className = "li_ans";
+                console.log(data);
+                li.innerHTML = data;
+              }
+            });
+            this.value = "";
+          }
+        }
+      });
+    });
   </script>
 </body>
 

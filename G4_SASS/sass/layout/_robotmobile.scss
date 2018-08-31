@@ -1,8 +1,14 @@
 @media screen and (max-width: 1200px) {
-  section .message {
-    width: 90%;
-    height: 500px;
+  section #message {
+    width: 100%;
+  }
+  section .field {
+    width: 100%;
+  }
+  .li_ans {
+    font-size: 5.5vw;
   }
 }
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+}
