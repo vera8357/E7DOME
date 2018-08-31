@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/back.css">
     <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/back_site_info.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="back_nav">
@@ -47,7 +49,8 @@
     </div>
     <div class="back_content">
         <h2>場地管理</h2>
-        <form action="#">       
+        <button id="add_new_site">新增</button>
+        <form action="php/sport-share.php" method="POST">       
             <table>
                 <thead>
                     <tr>
@@ -56,9 +59,7 @@
                         <th>場地名稱</th>
                         <th>場地介紹</th>
                         <th>場地點數</th>
-                        <th>場地照片</th>
-                        <th>場地照片</th>
-                        <th>場地照片</th>
+                        <th>人數</th>
                         <th>場地照片</th>
                         <th>場地狀態</th>
                         <th>編輯</th>
@@ -66,17 +67,27 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1</td>
-                        <td>籃球場</td>
-                        <td>超猛籃球場</td>
-                        <td>超好玩超大</td>
-                        <td>500</td>
-                        <td><img src="" alt=""></td>
-                        <td><img src="" alt=""></td>
-                        <td><img src="" alt=""></td>
-                        <td><img src="" alt=""></td>
                         <td>
-                            <select name="fac_status" id="fac_status">
+                            1
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <input type="text" name="FAC_NAME" id="" maxlength="10">
+                        </td>
+                        <td>
+                            <input type="text" name="FAC_DESC" id="" maxlength="255">
+                        </td>
+                        <td>
+                            <input type="number" name="FAC_POINTS" id="" min="0" max="10">
+                        </td>
+                        <td>
+                            <input type="number" name="FAC_MEM" id="" min="0" max="10000">
+                        </td>
+                        <td></td>
+                        <td>
+                            <select name="FAC_STATUS" id="FAC_STATUS">
                                 <option value="0">上架</option>
                                 <option value="1">下架</option>
                             </select>
@@ -84,17 +95,27 @@
                         <td><button>編輯</button></td>
                     </tr>
                     <tr>
-                        <td>1</td>
-                        <td>籃球場</td>
-                        <td>超猛籃球場</td>
-                        <td>超好玩超大</td>
-                        <td>500</td>
-                        <td><img src="" alt=""></td>
-                        <td><img src="" alt=""></td>
-                        <td><img src="" alt=""></td>
-                        <td><img src="" alt=""></td>
                         <td>
-                            <select name="fac_status" id="fac_status">
+                            1
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <input type="text" name="FAC_NAME" id="" maxlength="10">
+                        </td>
+                        <td>
+                            <input type="text" name="FAC_DESC" id="" maxlength="255">
+                        </td>
+                        <td>
+                            <input type="number" name="FAC_POINTS" id="" min="0" max="10">
+                        </td>
+                        <td>
+                            <input type="number" name="FAC_MEM" id="" min="0" max="10000">
+                        </td>
+                        <td></td>
+                        <td>
+                            <select name="FAC_STATUS" id="FAC_STATUS">
                                 <option value="0">上架</option>
                                 <option value="1">下架</option>
                             </select>
@@ -105,5 +126,76 @@
             </table>
         </form>
     </div>
+    <div class="bg_site_info_page">
+        <div class="update_site_info">
+            <h3>新增場地</h3>
+            <div id="xx">
+                X
+            </div>
+            <form action="#">
+                <table>
+                    <tr>
+                        <th>類別名稱</th>
+                        <td>
+                            <select name="cate_no" id="">
+                                <option value="basketball">1：籃球</option>
+                                <option value="bowling">2：保齡球</option>
+                                <option value="badminton">3：羽毛球</option>
+                                <option value="climbimg"">4：攀岩</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>場地名稱</th>
+                        <td>
+                            <input type="text" name="fac_name" maxlength="10">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>場地介紹</th>
+                        <td>
+                            <textarea name="fac_desc" id="" cols="30" rows="7"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>場地點數</th>
+                        <td>
+                            <input type="number" id="point" name="fac_points" min="0" max="10000">點
+                        </td>
+                    </tr>
+                    <tr>    
+                        <th>人數</th>
+                        <td>
+                            <input type="number" id="mem" name="fac_mem" min="0" max="100">人
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>場地照片</th>
+                        <td>
+                            <input type="file" name="fac_img">
+                        </td>
+                    </tr>
+                </table>
+                <div class="update_site_info_but">
+                    <button>
+                        確認新增
+                    </button>
+                    <button>
+                        重　置
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+<script>
+    $(function(){
+        $('#add_new_site').click(function () { 
+            $('.bg_site_info_page').toggleClass('active');
+        });
+        $('#xx').click(function () {
+            $('.bg_site_info_page').removeClass('active');
+        })
+    })
+</script>
 </body>
 </html>
