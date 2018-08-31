@@ -1,7 +1,7 @@
 <?php
 try {
-    require_once("connect_g4.php");
-    $sql = "select * from facility";
+    require_once("../connect_g4.php");
+    $sql = "select * from facility where CATE_NO = 2";
     $site = $pdo->query( $sql);
     while($site_info = $site->fetch(PDO::FETCH_ASSOC)){
 ?>
