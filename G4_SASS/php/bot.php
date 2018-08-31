@@ -6,29 +6,20 @@ try{
 	$sql="select * from qustion_and_answer where instr('$content',KEY_WORD)";
 	$bot = $pdo->query($sql);
 	$bots=$bot->fetchAll(PDO::FETCH_ASSOC);
-	// print_r(count($bots));4 
-	// echo empty($bots);//確定回傳的是陣列
+	
 	
 	if(empty($bots)){
-		$i = rand(1,6);
+		
+		$i = rand(1,10);
 		switch($i){
 			case 1: 
-				echo "這個問題我不清楚唷!";
+				echo "可以詢問E7DOME團隊:>";
 				break;
 			case 2:
 				echo "也許你旁邊的知道。";
 				break;
 			case 3:
 				echo "請不要問我這個問題。";
-				break;
-			case 4:
-				echo "再問你就試試看阿。";
-				break;
-			case 5:
-				echo "所以說你想清楚你要問甚麼了嗎?";
-				break;
-			case 6:
-				echo "喔。";
 				break;
 		}
 	}

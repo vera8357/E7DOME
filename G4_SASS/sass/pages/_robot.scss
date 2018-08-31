@@ -77,7 +77,7 @@ section {
         }
       }
       &.active {
-        background-color: rgb(0, 82, 178);
+        background-color: #ffb505;
         font-size: 23px;
       }
     }
@@ -96,16 +96,16 @@ section {
       cursor: pointer;
       transition: width 0.3s ease, background 0.3s ease, opacity 0.3s ease;
       opacity: 0;
-      color: #065cb7;
+      color: #ffb505;
       text-transform: uppercae;
       pointer-events: none;
       &.active {
         color: #ffffff;
-        background: #639edb;
+        background: #ffb505;
         opacity: 1;
         pointer-events: auto;
         &:hover {
-          background: #5e99d6;
+          background: #ffb505;
         }
       }
       &.full {
@@ -155,11 +155,28 @@ section {
     // margin: auto;
   }
 }
+
 // 機器人問答
-#talk{
+#talk {
   padding: 2%;
 }
-.li_ans{
+
+.li_ans {
   margin: 2% 0;
   font-size: 1.5vw;
+  text-align: left;
+}
+
+.rli_ans {
+  margin: 2% 0;
+  font-size: 1.5vw;
+  text-align: right;
+}
+
+section #message {
+  overflow-y: auto;
+}
+
+section .field {
+  width: 50%;
 }
