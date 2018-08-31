@@ -1,7 +1,4 @@
-<?php
-ob_start();
-session_start();
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,9 +11,14 @@ session_start();
 	<title>Document</title>
 </head>
 <body>
+	 <?php
+        require_once("header.php");
+?>
 
-	<div class="nav"></div>
-	<section>
+	<div class="div"></div>
+
+
+	<section id="evaluate_wrap">
 
 		<div class="fac_img">
 
@@ -59,11 +61,11 @@ session_start();
 			</div>
 
 				<ul>
-					<li>&#9733</li>
-					<li>&#9733</li>
-					<li>&#9733</li>
-					<li>&#9733</li>
-					<li>&#9733</li>
+					<li class="e_str">&#9733</li>
+					<li class="e_str">&#9733</li>
+					<li class="e_str">&#9733</li>
+					<li class="e_str">&#9733</li>
+					<li class="e_str">&#9733</li>
 				</ul>
 
 				<textarea name="evaluate_text" placeholder="輸入評價" style="color:#fff;" ></textarea>

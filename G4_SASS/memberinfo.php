@@ -1,7 +1,4 @@
-<?php
-ob_start();
-session_start();
-?>
+
 
 
 <!DOCTYPE html>
@@ -17,11 +14,16 @@ session_start();
 
 </head>
 <body>
-<div class="nav"></div>
+
+<?php
+		require_once("header.php");
+?>
+
+
 <?php
 $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 ?>
-
+<div class="div"></div>
 <section>
 
 	<div class="wrap">
@@ -77,7 +79,7 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 		<div class="content">
 
 			<div class="member_content">
-				<h1>基本資料</h1>
+				<h1 id="member_h1">基本資料</h1>
 
 						<div class="div_style first">
 							會員名稱: <input id="clear_border" type="text" value="<?php echo$_SESSION['MEM_ID']; ?>" readonly="readonly" style="border:1px solid transparent; box-shadow: 0px 0px 0px 0px transparent;">
@@ -100,7 +102,7 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 
 			<div class="change_paw">
 				
-				<h1>變更密碼</h1>
+				<h1 id="member_h1">變更密碼</h1>
 
 					
 					<div class="div_style first">
