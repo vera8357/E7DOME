@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/font.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <style lang="">
-        #back_add{
+        #back_add {
             text-align: right;
             width: 90%;
             margin: 10px auto;
@@ -55,33 +55,60 @@
             </li>
         </ul>
     </div>
-    <div class="back_content">
-        <h2>諮詢管理</h2>
-        <form>
-            <div id="back_add">
-                <input type="button" value="新增問答" id="new_qa">
-            </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>諮詢編號</th>
-                        <th>諮詢問題</th>
-                        <th>諮詢答案</th>
-                        <th>待解問題</th>
-                        <th>編輯儲存</th>
-                        <th>編輯刪除</th>
-                    </tr>
-                </thead>
-                <tbody>
-
-                </tbody>
-            </table>
-        </form>
+    <div id="tab-page">
+        <ul class="tab-title">
+            <li><a href="#tab01">諮詢問答管理</a></li>
+            <li><a href="#tab02">待回答問題</a></li>
+        </ul>
+        <div id="tab01" class="back_content">
+            <h2>諮詢管理</h2>
+            <form>
+                <div id="back_add">
+                    <input type="button" value="新增問答" id="new_qa">
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>諮詢編號</th>
+                            <th>諮詢問題</th>
+                            <th>諮詢答案</th>
+                            <th>待解問題</th>
+                            <th>編輯儲存</th>
+                            <th>編輯刪除</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        
+                    </tbody>
+                </table>
+            </form>
+        </div>
+        <div id="tab02" class="back_content">
+            <h2>待回答問題</h2>
+            <form>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>諮詢編號</th>
+                            <th>諮詢問題</th>
+                            <th>諮詢答案</th>
+                            <th>待解問題</th>
+                            <th>編輯儲存</th>
+                            <th>編輯刪除</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        
+                    </tbody>
+                </table>
+            </form>
+        </div>
     </div>
+    
     <script>
         $(document).ready(function () {
             window.onload = show;
-            $('.solve').click= show;
+            $('.solve').click = show;
             function show() {
                 $.ajax({
                     url: 'back_robot.php',
@@ -95,10 +122,10 @@
                             console.log($(this).parent().parent().find('input').eq(0).val());
                             console.log($(this).parent().parent().find('input').eq(1).val());
                             $.ajax({
-                                
+
                                 url: 'back_robot.php',
                                 data: {
-                                    KEY_WORD_NO:$(this).parent().parent().find('td').eq(0).text(),
+                                    KEY_WORD_NO: $(this).parent().parent().find('td').eq(0).text(),
                                     KEY_WORD: $(this).parent().parent().find('input').eq(0).val(),
                                     ANSWER: $(this).parent().parent().find('input').eq(1).val()
                                 },
@@ -107,11 +134,11 @@
                                 success: function (data) {
                                     // $('#table').append(data);
                                     alert('修改成功');
-                                     show();
+                                    show();
                                 }
                             });
                         });
-                        
+
 
                         $('.q_del').click(function () {
                             console.log(parseInt($(this).parent().parent().find('td').eq(0).text()));
@@ -126,7 +153,7 @@
                                 success: function (data) {
                                     // $('#table').append(data);
                                     alert('刪除成功');
-                                     show();
+                                    show();
                                 }
                             });
                         });
@@ -145,7 +172,19 @@
                 })
             });
         });
+
+        $(function () {
+                var $li = $('ul.tab-title li');
+                $($li.eq(0).addClass('active').find('a').attr('href')).siblings('.back_content').hide();
+
+                $li.click(function () {
+                    $($(this).find('a').attr('href')).show().siblings('.back_content').hide();
+                    $(this).addClass('active').siblings('.active').removeClass('active');
+                });
+            });
+
         
+
     </script>
 </body>
 
