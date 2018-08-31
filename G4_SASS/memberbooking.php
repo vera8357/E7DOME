@@ -18,10 +18,11 @@
 		require_once("header.php");
 ?>
 
-
 <?php
 $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 ?>
+
+<div class="div"></div>
 <section>
 
 	<div class="wrap">
@@ -77,7 +78,7 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 		<div class="content">
 
 			
-				<h1>預約記錄</h1>
+				<h1 id="member_h1">預約記錄</h1>
 
 
 				<div class="booking_content">

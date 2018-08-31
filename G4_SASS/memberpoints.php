@@ -1,7 +1,4 @@
-<?php
-ob_start();
-session_start();
-?>
+
 
 
 <!DOCTYPE html>
@@ -17,11 +14,15 @@ session_start();
 
 </head>
 <body>
-<div class="nav"></div>
+
+	<?php
+		require_once("header.php");
+?>
+
 <?php
 $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 ?>
-
+<div class="div"></div>
 <section>
 
 	<div class="wrap">
@@ -78,7 +79,7 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 		<div class="content">
 
 			<div class="points">
-				<h1>儲值紀錄</h1>
+				<h1 id="member_h1">儲值紀錄</h1>
 
 				
 					

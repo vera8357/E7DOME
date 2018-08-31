@@ -1,4 +1,4 @@
-var star = document.getElementsByTagName("li");
+var star = document.getElementsByClassName("e_str");
 for(var i=0; i<star.length; i++){
 	star[i].addEventListener('click',changecolor,false);
 }

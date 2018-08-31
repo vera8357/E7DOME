@@ -18,9 +18,16 @@ a {
 
 /*------------------------------------*/
 
-.nav {
+.div {
     width: 100%;
-    height: 150px;
+    height: 70px;
+}
+
+@media screen and (min-width: 768px){
+    .div {
+    width: 100%;
+    height: 180px;
+}
 }
 
 /*---------------------------------------*/
@@ -241,7 +248,7 @@ input[type="button"]{
     width: 100%;
 }
 
-h1{
+#member_h1{
      @include s_member_h1();
 }
 
@@ -326,7 +333,7 @@ h1{
 
 @media screen and (min-width: 1024px) {
 
-    h1{
+    #member_h1{
      @include member_h1();
 }
 

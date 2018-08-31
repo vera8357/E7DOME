@@ -26,10 +26,11 @@ session_start();
 <?php
 //檢查是否已登入
 if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
-  echo '<img src="images/member_pic/'.$_SESSION["MEM_IMG"].'" id="m_pic">';
-  echo '<a href="memberinfo.php" id="link_member">會員專區</a>';
+  echo '<a href="memberinfo.php" id="pic_a" style="display:block;"><img src="images/member_pic/'.$_SESSION["MEM_IMG"].'" id="m_pic"></a>';
+  echo '<a href="#" id="link_member"></a>';
+ 
 }else{
-  echo '<img src="images/member_pic/pic.jpg" id="m_pic">';
+  echo '<a href="#" id="pic_a"><img src="images/member_pic/pic.jpg" id="m_pic"></a>';
   echo '<a href="#" id="link_member">登入</a>';
 }
 ?>  
