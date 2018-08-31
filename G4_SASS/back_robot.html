@@ -67,6 +67,7 @@
                         <th>諮詢編號</th>
                         <th>諮詢問題</th>
                         <th>諮詢答案</th>
+                        <th>待解問題</th>
                         <th>編輯儲存</th>
                         <th>編輯刪除</th>
                     </tr>
@@ -80,6 +81,7 @@
     <script>
         $(document).ready(function () {
             window.onload = show;
+            $('.solve').click= show;
             function show() {
                 $.ajax({
                     url: 'back_robot.php',
@@ -143,7 +145,7 @@
                 })
             });
         });
-
+        
     </script>
 </body>
 

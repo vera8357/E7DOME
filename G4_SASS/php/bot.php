@@ -9,8 +9,9 @@ try{
 	
 	
 	if(empty($bots)){
-		
-		$i = rand(1,10);
+		$new = "insert into qustion_and_answer(UNSOLVED_QUESTION) VALUES('$content ')";
+		$pdo->exec($new);
+		$i = rand(1,3);
 		switch($i){
 			case 1: 
 				echo "可以詢問E7DOME團隊:>";
