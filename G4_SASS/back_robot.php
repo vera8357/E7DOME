@@ -19,9 +19,9 @@
         echo 
         "<tr>".
         "<td>".$row['KEY_WORD_NO']."</td>".
+        "<td>".$row['UNSOLVED_QUESTION']."</td>".
         "<td><input value=".$row['KEY_WORD']."></td>".
         "<td><input value=".$row['ANSWER']."></td>".
-        "<td>".$row['UNSOLVED_QUESTION']."</td>".
         "<td><button class='q_change'>儲存</button></td>".
         "<td><button class='q_del'>刪除</button></td>".
         "</tr>";

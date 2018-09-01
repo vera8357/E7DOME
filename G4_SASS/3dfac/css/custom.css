@@ -197,16 +197,7 @@
   left: 0%;
   width: 125%;
   height: 125%;
-}
-
-
-.pin--1-4 { top: 40vmin; left: 75vmin; }
-.player1f04 {
-  position: absolute;
-  top: -160%;
-  left: 0%;
-  width: 175%;
-  height: 175%;
+  display: none;
 }
 
 /* 1f wall *3 */
