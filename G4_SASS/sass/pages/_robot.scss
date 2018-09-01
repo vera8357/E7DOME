@@ -1,5 +1,5 @@
 * {
-  // outline: 1px solid;
+  outline: 1px solid;
 }
 
 section {
@@ -53,9 +53,9 @@ section {
   }
   .field {
     width: 90%;
-    height: 70px;
+    height: 100%;
     position: relative;
-    top: 80%;
+    top: -80px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -63,14 +63,14 @@ section {
     input {
       width: 100%;
       border-radius: 6px;
-      height: 70px;
+      height: 100%;
       border: 0;
       font-size: 0;
-      background-color: rgb(0, 82, 178);
+      background-color: #ffb505;
       transition: background 0.3s ease;
       color: #ffffff;
       &:focus {
-        background-color: rgb(0, 82, 178);
+        background-color: #ffb505;
         font-size: 23px;
         &::selection {
           background: rgba(188, 232, 255, 0.5);
