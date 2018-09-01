@@ -61,45 +61,21 @@
                     </tr>
                 </thead>
                 <tbody>
-                   
+                    <tr>
+                        <td>1</td>
+                        <td>500卡</td>
+                        <td>500</td>
+                        <td>600</td>
+                        <td>
+                            <select>
+                                <option value="0">下架</option>
+                                <option value="1">上架</option>
+                            </select>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
-            <div id="card_add">
-                    <div class="card_add_content">
-                        <div class="cancle"></div>
-                        <h3>新增點數商品</h3>
-                        <label for="card_name">商品名稱:</label>
-                        <input type="text" name="card_name" id="card_name">
-    
-                        <label for="card_price">商品售價:</label>
-                        <input type="text" name="card_price" id="card_price">
-    
-                        <label for="card_points">商品點數:</label>
-                        <input type="text" name="card_points" id="card_points">
-                        <input type="submit">
-                    </div>
-                </div>
         </form>
     </div>
-    <script>
-            $('.btn').click(function(){
-                $('#card_add').show();
-            });
-            $('.cancle').click(function(){
-                $('#card_add').hide();
-            });
-    </script>
-    <script>
-        $(document).ready(function(){
-                $.ajax({
-                    url: 'back_card.php',
-                    dataType: 'text',
-                    tpye: 'GET',
-                    success: function(data) {
-                        $('table tbody').append(data);    
-                    }
-                });
-            });
-    </script>
 </body>
 </html>
