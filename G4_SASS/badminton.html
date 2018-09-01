@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/sport-share.css">
     <link rel="stylesheet" href="css/
 badminton.css">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/sport-share.js"></script>
     <script src="js/site_scrollmagic.js"></script>
     <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
@@ -20,43 +20,42 @@ badminton.css">
 </head>
 <body>
     <header>
-        <div class="logo">
-            <a href="#">
-                <img src="images/e7logo.png" alt="">
-            </a>
-        </div>
-        <ul>
-            <li>
-                <a href="#">
-                    場地介紹
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    預約場地
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    運動揪團
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    關於我們
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    諮詢專區
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="images/user-icon.png" id="loginicon">
-                </a>
-            </li>
-        </ul>
+		<div class="wrapper">
+			<div class="humberger_btn">
+				<div class="humberger_line top"></div>
+				<div class="humberger_line mid"></div>
+				<div class="humberger_line bot"></div>
+			</div>
+			<div class="logo">
+			<a href="index.html">
+				<img src="images/e7logo.png" alt=""> </a>
+			</div>
+			<div class="login">
+					<!-- <a href="#"><img src="images/user-icon.png"></a> -->
+					<a href="#">登入</a>
+			</div>
+			<ul>
+			<li>
+				<a href="site_info.html"> 場地介紹 </a>
+			</li>
+			<li>
+				<a href="booking.html"> 預約場地 </a>
+			</li>
+			<li>
+				<a href="group.html"> 運動揪團 </a>
+			</li>
+			<li>
+				<a href="about.html"> 關於我們 </a>
+			</li>
+			<li>
+				<a href="chat-robot.html"> 諮詢專區 </a>
+			</li>
+			<!-- <li>
+				<a href="#">
+				<img src="images/user-icon.png"> </a>
+			</li> -->
+			</ul>
+		</div>
     </header>
     <div class="bad_fp">
         <div class="bad_fp_rec"></div>
@@ -86,12 +85,7 @@ badminton.css">
         <div class="site_info_wrap">
             <h3>場地介紹</h3>
             <div class="slider">
-                <div class="control_prev"><</div>
-                <div class="control_next">>></div>
-                <ul>
-                    <li>
-                        <img src="images/bowling/bowlingball.png" alt="">
-                    </li>
+                <ul class="sport_slider">
                     <li>
                         <img src="images/bowling/bowlingball.png" alt="">
                     </li>
@@ -104,10 +98,12 @@ badminton.css">
                 </ul>
             </div>
             <div class="info">
-                <h3>星幻球場</h3>
-                <p>文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案</p>
-                <p>名稱：室內球場A 費用：5000點/小時</p>
-                <p>建議人數：20人</p>
+                <div class="info_name">
+                    <!-- <h3>星幻球場</h3>
+                    <p>文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案文案</p>
+                    <p>名稱：室內球場A 費用：5000點/小時</p>
+                    <p>建議人數：20人</p> -->
+                </div>
                 <button class="reservation">
                     預約
                 </button>
@@ -156,7 +152,7 @@ badminton.css">
                 <table>
                     <tr>
                         <td>
-                            <img src='http://fakeimg.pl/200x200?font=lobster' alt='' />
+                            <img src='http://fakeimg.pl/200x200?font=lobster' alt=''/>
                         </td>
                         <td>
                             邱顯成
@@ -170,7 +166,7 @@ badminton.css">
                     </tr>
                     <tr>
                         <td>
-                            <img src='http://fakeimg.pl/200x200?font=lobster' alt='' />
+                            <img src='http://fakeimg.pl/200x200?font=lobster' alt=''/>
                         </td>
                         <td>
                             邱顯成
@@ -184,7 +180,7 @@ badminton.css">
                     </tr>
                     <tr>
                         <td>
-                            <img src='http://fakeimg.pl/200x200?font=lobster' alt='' />
+                            <img src='http://fakeimg.pl/200x200?font=lobster' alt=''/>
                         </td>
                         <td>
                             邱顯成
@@ -198,7 +194,7 @@ badminton.css">
                     </tr>
                     <tr>
                         <td>
-                            <img src='http://fakeimg.pl/200x200?font=lobster' alt='' />
+                            <img src='http://fakeimg.pl/200x200?font=lobster' alt=''/>
                         </td>
                         <td>
                             邱顯成
@@ -220,8 +216,166 @@ badminton.css">
         </div>
         <div class="group_page_content">
             <h3>加入揪團！尋找運動伙伴</h3>
+            <div class="home_team">
+                <ul class="teamGroup">
+                    <li class="teamItem all">
+                        <a href="#">
+                            <div class="teamAll">			
+                                <div class="all_img">
+                                    <img src="images/index/date.png">
+                                    <h3>
+                                        揪團日期
+                                    </h3>
+    
+                                </div>
+                                <div class="teamMore all">
+                                    <div class="morebg">查看更多</div>
+                                    <div class="moreSkew">></div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="teamItem">
+                        <a href="#">
+                            <div class="teamOne">
+                                <div class="teamDate_top">
+                                    <div class="dateGroup">
+                                        <div class="teamDay">23</div>
+                                        <div class="teamMonth">AUG</div>
+                                    </div>
+                                </div>
+                                <div class="teamPic">
+                                    <img src="images//index/bg2.png" alt="">
+                                </div>
+                                <div class="teamInfo">
+                                    <div class="teamMore">
+                                        <div class="morebg">更多資訊</div>
+                                        <div class="moreSkew">></div>						
+                                    </div>
+                                    <div class="teamName">
+                                        台北帥哥籃球團
+                                    </div>
+                                    <div class="teamDate">
+                                        2018/06/28
+                                    </div>
+                                    <div class="teamMem">
+                                        揪團人數
+                                        <span>3</span>
+                                        /
+                                        <span>6</span>
+                                        人
+                                    </div>
+                                    <div class="teamTxt">
+                                        Lorem ipsum dolor sit amet.
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="teamItem">
+                        <a href="#">
+                            <div class="teamOne">
+                                <div class="teamDate_top">
+                                    <div class="dateGroup">
+                                        <div class="teamDay">23</div>
+                                        <div class="teamMonth">AUG</div>
+                                    </div>
+                                </div>
+                                <div class="teamPic">
+                                    <img src="images//index/bg2.png" alt="">
+                                </div>
+                                <div class="teamInfo">
+                                    <div class="teamMore">
+                                        <div class="morebg">更多資訊</div>
+                                        <div class="moreSkew">></div>						
+                                    </div>
+                                    <div class="teamName">
+                                        台北帥哥籃球團
+                                    </div>
+                                    <div class="teamDate">
+                                        2018/06/28
+                                    </div>
+                                    <div class="teamMem">
+                                        揪團人數
+                                        <span>3</span>
+                                        /
+                                        <span>6</span>
+                                        人
+                                    </div>
+                                    <div class="teamTxt">
+                                        Lorem ipsum dolor sit amet.
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="teamItem">
+                        <a href="#">
+                            <div class="teamOne">
+                                <div class="teamDate_top">
+                                    <div class="dateGroup">
+                                        <div class="teamDay">23</div>
+                                        <div class="teamMonth">AUG</div>
+                                    </div>
+                                </div>
+                                <div class="teamPic">
+                                    <img src="images//index/bg2.png" alt="">
+                                </div>
+                                <div class="teamInfo">
+                                    <div class="teamMore">
+                                        <div class="morebg">更多資訊</div>
+                                        <div class="moreSkew">></div>						
+                                    </div>
+                                    <div class="teamName">
+                                        台北帥哥籃球團
+                                    </div>
+                                    <div class="teamDate">
+                                        2018/06/28
+                                    </div>
+                                    <div class="teamMem">
+                                        揪團人數
+                                        <span>3</span>
+                                        /
+                                        <span>6</span>
+                                        人
+                                    </div>
+                                    <div class="teamTxt">
+                                        Lorem ipsum dolor sit amet.
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-    
+
+    <script src="js/slick.min.js"></script>
+    <script>
+        $('.sport_slider').slick({
+                dots: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows:false,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                focusOnSelect:true,
+            });
+    </script>
+	<script>
+		$('.humberger_btn').click(function(){
+			$(this).toggleClass('active');
+		})
+    </script>
+    <script>
+        $.ajax({
+            url:'php/sport-share.php',
+            dataType:'text',
+            success:function(data){
+                $('.info_name').append(data);
+            }
+        });
+    </script>
 </body>
 </html>

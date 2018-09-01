@@ -6,8 +6,8 @@ tl.to('.triangle-yellow', 1, {
   x: -200
 }, 1).to('.trapezoid-blue , .rectangle-blue', 1, {
   x: 600
-}, 2);
+}, 1);
 function action() {
 }
 
-$(".message").delay(3000).fadeIn(1000);
+$("#message").delay(3000).fadeIn(1000);

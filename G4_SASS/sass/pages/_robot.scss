@@ -1,5 +1,5 @@
 * {
-  // outline: 1px solid;
+  outline: 1px solid;
 }
 
 section {
@@ -35,8 +35,7 @@ section {
     height: 150vw;
     background-color: rgb(0, 82, 178);
   }
-
-  .message {
+  #message {
     display: flex;
     display: none;
     position: absolute;
@@ -53,10 +52,10 @@ section {
     z-index: 2;
   }
   .field {
-    width: 500px;
-    height: 70px;
+    width: 90%;
+    height: 100%;
     position: relative;
-    top: 80%;
+    top: -80px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -64,23 +63,21 @@ section {
     input {
       width: 100%;
       border-radius: 6px;
-      height: 70px;
+      height: 100%;
       border: 0;
       font-size: 0;
-      background-color: rgb(0, 82, 178);
+      background-color: #ffb505;
       transition: background 0.3s ease;
       color: #ffffff;
-
       &:focus {
-        background-color: rgb(0, 82, 178);
+        background-color: #ffb505;
         font-size: 23px;
-
         &::selection {
           background: rgba(188, 232, 255, 0.5);
         }
       }
       &.active {
-        background-color: rgb(0, 82, 178);
+        background-color: #ffb505;
         font-size: 23px;
       }
     }
@@ -99,23 +96,23 @@ section {
       cursor: pointer;
       transition: width 0.3s ease, background 0.3s ease, opacity 0.3s ease;
       opacity: 0;
-      color: #065cb7;
+      color: #ffb505;
       text-transform: uppercae;
       pointer-events: none;
       &.active {
         color: #ffffff;
-        background: #639edb;
+        background: #ffb505;
         opacity: 1;
         pointer-events: auto;
         &:hover {
-          background: #5e99d6;
+          background: #ffb505;
         }
       }
       &.full {
         width: 100%;
       }
     }
-    input:focus + label {
+    input:focus+label {
       font-size: 19px;
       transform: translate(16px, 11px);
       color: rgba(255, 255, 255, 0.7);
@@ -132,18 +129,16 @@ section {
         color: rgba(255, 255, 255, 0.7);
       }
     }
-    input:focus + label + button {
+    input:focus+label+button {
       opacity: 1;
     }
-    span{
+    span {
       font-family: $span-family;
     }
   }
   .coach_img {
     width: 100%;
-    overflow: hidden;
-    // padding-top: 48.75%;
-
+    overflow: hidden; // padding-top: 48.75%;
     height: 70vh;
     position: absolute;
     top: 20%;
@@ -155,9 +150,33 @@ section {
     width: 100%;
     position: absolute;
     top: 0;
-    left: 0;
-    // right: 0;
+    left: 0; // right: 0;
     // bottom: 0;
     // margin: auto;
   }
+}
+
+// 機器人問答
+#talk {
+  padding: 2%;
+}
+
+.li_ans {
+  margin: 2% 0;
+  font-size: 1.5vw;
+  text-align: left;
+}
+
+.rli_ans {
+  margin: 2% 0;
+  font-size: 1.5vw;
+  text-align: right;
+}
+
+section #message {
+  overflow-y: auto;
+}
+
+section .field {
+  width: 50%;
 }

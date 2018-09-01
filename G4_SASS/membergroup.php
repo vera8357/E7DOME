@@ -1,7 +1,4 @@
-<?php
-ob_start();
-session_start();
-?>
+
 
 
 <!DOCTYPE html>
@@ -10,18 +7,22 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../css/membergroup.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/membergroup.css">
     <title>我的揪團</title>
     
 
 </head>
 <body>
-<div class="nav"></div>
-<?php
-$member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
+ <?php
+        require_once("header.php");
 ?>
 
+<?php
+$member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
+?>
+
+<div class="div"></div>
 <section>
 
     <div class="wrap">
@@ -29,7 +30,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
         <div class="member_item">
 
 
-            <form  id="file" action="new_upfile.php"   method="post" enctype="multipart/form-data">
+            <form  id="file" action="php/new_upfile.php"   method="post" enctype="multipart/form-data">
 
                 <div class="pic_wrap">
                     <label>
@@ -45,9 +46,9 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 
 
 
-             <div id="show_name"><span><img src="member_pic/photography-portrait-mode.png"><?php echo $_SESSION['MEM_ID']; ?></span>
-                <span><img src="member_pic/coin.png"><?php echo $_SESSION['MEM_POINTS']; ?></span>
-                <span><img src="member_pic/smartphone.png"><?php echo $_SESSION['MEM_PHONE']; ?></span></div>
+             <div id="show_name"><span><img src="images/member_pic/photography-portrait-mode.png"><?php echo $_SESSION['MEM_ID']; ?></span>
+                <span><img src="images/member_pic/coin.png"><?php echo $_SESSION['MEM_POINTS']; ?></span>
+                <span><img src="images/member_pic/smartphone.png"><?php echo $_SESSION['MEM_PHONE']; ?></span></div>
 
 
 
@@ -60,7 +61,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
                 <li><a href="#"><span class="line"></span>我的揪團</a></li>
 
               
-                <li><form action="logout.php" method="post"><input id="btn_logout" type="submit" value="登出"></form></li>
+                <li><form action="php/logout.php" method="post"><input id="btn_logout" type="submit" value="登出"></form></li>
                
             </ul>
             
@@ -76,7 +77,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
         <div class="content">
 
             <div class="group">
-                <h1>我的揪團</h1>
+                <h1 id="member_h1">我的揪團</h1>
 
                 <div class="group_title">
                     <span  id="show_leader" class="title title_line">開團管理</span>
@@ -99,7 +100,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
                      <?php
                         
                         try{
-                            require_once("connect_g4.php");
+                            require_once("php/connect_g4.php");
                             $sql = "select * from team join booking using(BOO_NO) where team.MEM_NO =".$_SESSION['MEM_NO'];
                             $member = $pdo->query($sql);
                             
@@ -151,7 +152,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
                          <?php
                         
                         try{
-                            require_once("connect_g4.php");
+                            require_once("php/connect_g4.php");
                             $sql = "SELECT * FROM booking JOIN team ON (booking.BOO_NO = team.BOO_NO) JOIN team_mem ON(team_mem.TEAM_NO =team.TEAM_NO) WHERE team_mem.MEM_NO =".$_SESSION['MEM_NO'];
                             $member = $pdo->query($sql);
                             
@@ -162,7 +163,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 
                                     while ($booking = $member->fetch(PDO::FETCH_ASSOC)){
 
-                                        echo " <form action='logout_team.php' method='post'> ";
+                                        echo " <form action='php/logout_team.php' method='post'> ";
                                         echo "<ul class='other_group'>";
                                         echo "<input type='hidden' name='TEAM_NO' value='".$booking['TEAM_NO']."'>";
                                         echo "<li><span>揪團編號</span>".$booking['TEAM_NO']."</li>";
@@ -204,9 +205,9 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
     </div>
 
 </section>
-    <script src="../js/upfile.js"></script>
+    <script src="js/upfile.js"></script>
 
-    <script src="../js/member_group.js"></script>
+    <script src="js/member_group.js"></script>
  
     
 

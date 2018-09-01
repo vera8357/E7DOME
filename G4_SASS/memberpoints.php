@@ -1,7 +1,4 @@
-<?php
-ob_start();
-session_start();
-?>
+
 
 
 <!DOCTYPE html>
@@ -10,18 +7,22 @@ session_start();
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="../css/style.css">
-	<link rel="stylesheet" type="text/css" href="../css/memberpoints.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/memberpoints.css">
 	<title>會員儲值資訊</title>
 	
 
 </head>
 <body>
-<div class="nav"></div>
-<?php
-$member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
+
+	<?php
+		require_once("header.php");
 ?>
 
+<?php
+$member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
+?>
+<div class="div"></div>
 <section>
 
 	<div class="wrap">
@@ -29,7 +30,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 		<div class="member_item">
 
 
-			<form  id="file" action="new_upfile.php"   method="post" enctype="multipart/form-data">
+			<form  id="file" action="php/new_upfile.php"   method="post" enctype="multipart/form-data">
 
 				<div class="pic_wrap">
 					<label>
@@ -46,9 +47,9 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 
 
        		 <div id="show_name">
-       		 	<span><img src="member_pic/photography-portrait-mode.png"><?php echo $_SESSION['MEM_ID']; ?></span>
-       		 	<span><img src="member_pic/coin.png"><?php echo $_SESSION['MEM_POINTS']; ?></span>
-       			<span><img src="member_pic/smartphone.png"><?php echo $_SESSION['MEM_PHONE']; ?></span>
+       		 	<span><img src="images/member_pic/photography-portrait-mode.png"><?php echo $_SESSION['MEM_ID']; ?></span>
+       		 	<span><img src="images/member_pic/coin.png"><?php echo $_SESSION['MEM_POINTS']; ?></span>
+       			<span><img src="images/member_pic/smartphone.png"><?php echo $_SESSION['MEM_PHONE']; ?></span>
        		 </div>
 
 
@@ -62,7 +63,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 				<li><a href="membergroup.php"><span class="line"></span>我的揪團</a></li>
 
 				
-				<li><form action="logout.php" method="post"> <input id="btn_logout" type="submit" value="登出"></form></li>
+				<li><form action="php/logout.php" method="post"> <input id="btn_logout" type="submit" value="登出"></form></li>
 				
 			</ul>
 			
@@ -78,7 +79,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 		<div class="content">
 
 			<div class="points">
-				<h1>儲值紀錄</h1>
+				<h1 id="member_h1">儲值紀錄</h1>
 
 				
 					
@@ -97,7 +98,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 					<?php
 						
 						try{
-							require_once("connect_g4.php");
+							require_once("php/connect_g4.php");
 							$sql = "select * from card_oder where MEM_NO =".$_SESSION['MEM_NO'];
 							$member = $pdo->query($sql);
 							
@@ -148,7 +149,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 </section>
 
 
-	<script src="../js/upfile.js"></script>
+	<script src="js/upfile.js"></script>
 	
 
 </body>

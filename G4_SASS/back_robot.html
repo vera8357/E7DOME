@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/back.css">
+    <link rel="stylesheet" href="css/font.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <style lang="">
+        #back_add {
+            text-align: right;
+            width: 90%;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="back_nav">
+        <div class="bcak_logo">
+            <img src="images/e7logo.png" alt="">
+            <h1>後台管理系統</h1>
+        </div>
+        <ul>
+            <li>
+                <a href="#">QRCODE掃描</a>
+            </li>
+            <li>
+                <a href="#">預約訂單管理</a>
+            </li>
+            <li>
+                <a href="#">點數卡商品管理</a>
+            </li>
+            <li>
+                <a href="#">儲值紀錄</a>
+            </li>
+            <li>
+                <a href="#">場地管理</a>
+            </li>
+            <li>
+                <a href="#">會員管理</a>
+            </li>
+            <li>
+                <a href="#">聊天機器人維護</a>
+            </li>
+            <li>
+                <a href="#">管理員管理</a>
+            </li>
+            <li>
+                <a href="#">登出</a>
+            </li>
+        </ul>
+    </div>
+    <div id="tab-page">
+        <ul class="tab-title">
+            <li><a href="#tab01">諮詢問答管理</a></li>
+            <li><a href="#tab02">待回答問題</a></li>
+        </ul>
+        <div id="tab01" class="back_content">
+            <h2>諮詢管理</h2>
+            <form>
+                <div id="back_add">
+                    <input type="button" value="新增問答" id="new_qa">
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>諮詢編號</th>
+                            <th>諮詢關鍵字</th>
+                            <th>諮詢答案</th>
+                            <th>編輯儲存</th>
+                            <th>編輯刪除</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        
+                    </tbody>
+                </table>
+            </form>
+        </div>
+        <div id="tab02" class="back_content">
+            <h2>待回答問題</h2>
+            <form>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>諮詢編號</th>
+                            <th>待回答問題</th>
+                            <th>設定關鍵字</th>
+                            <th>設定答案</th>
+                            <th>編輯儲存</th>
+                            <th>編輯刪除</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        $(document).ready(function () {
+            window.onload = show;
+            $('.solve').click = show;
+            function show() {
+                $.ajax({
+                    url: 'back_robot.php',
+                    dataType: 'text',
+                    tpye: 'POST',
+                    success: function (data) {
+                        $('table tbody').children().remove();
+                        $('table tbody').append(data);
+                        $('.q_change').click(function () {
+                            console.log(parseInt($(this).parent().parent().find('td').eq(0).text()));
+                            console.log($(this).parent().parent().find('input').eq(0).val());
+                            console.log($(this).parent().parent().find('input').eq(1).val());
+                            $.ajax({
+
+                                url: 'back_robot.php',
+                                data: {
+                                    KEY_WORD_NO: $(this).parent().parent().find('td').eq(0).text(),
+                                    KEY_WORD: $(this).parent().parent().find('input').eq(0).val(),
+                                    ANSWER: $(this).parent().parent().find('input').eq(1).val()
+                                },
+                                tpye: 'POST',
+                                dataType: 'text',
+                                success: function (data) {
+                                    // $('#table').append(data);
+                                    alert('修改成功');
+                                    show();
+                                }
+                            });
+                        });
+
+
+                        $('.q_del').click(function () {
+                            console.log(parseInt($(this).parent().parent().find('td').eq(0).text()));
+                            $.ajax({
+
+                                url: 'back_robot.php',
+                                data: {
+                                    DEl_KEY_WORD_NO: parseInt($(this).parent().parent().find('td').eq(0).text())
+                                },
+                                tpye: 'POST',
+                                dataType: 'text',
+                                success: function (data) {
+                                    // $('#table').append(data);
+                                    alert('刪除成功');
+                                    show();
+                                }
+                            });
+                        });
+                    }
+                });
+            }
+            $('#back_add').click(function () {
+                $.ajax({
+                    url: 'back_robot_add.php',
+                    dataType: 'text',
+                    tpye: 'GET',
+                    success: function (data) {
+                        // $('table tbody').append(data);
+                        show();
+                    }
+                })
+            });
+        });
+        
+        // 頁簽
+        $(function () {
+                var $li = $('ul.tab-title li');
+                $($li.eq(0).addClass('active').find('a').attr('href')).siblings('.back_content').hide();
+
+                $li.click(function () {
+                    $($(this).find('a').attr('href')).show().siblings('.back_content').hide();
+                    $(this).addClass('active').siblings('.active').removeClass('active');
+                });
+            });
+
+        
+
+    </script>
+</body>
+
+</html>

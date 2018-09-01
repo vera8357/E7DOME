@@ -15,7 +15,7 @@
         </div>
         <ul>
           <li>
-            <a href="#"> 場地介紹 </a>
+            <a href="site_info.html"> 場地介紹 </a>
           </li>
           <li>
             <a href="booking.html"> 預約場地 </a>

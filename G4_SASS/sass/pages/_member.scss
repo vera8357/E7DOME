@@ -10,17 +10,20 @@ body{
 
 #bar {
     width: 100px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    outline: 1px solid red;
+  
+}
+
+#pic_a{
+     display: none;
+
 }
 
 #m_pic {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     margin: auto;
+
 }
 #link_member{
     display: block;
@@ -41,6 +44,8 @@ body{
     top: 0;
     right: 0;
     display: none;
+
+
 }
 
 #sing_wrap,
@@ -56,6 +61,8 @@ body{
     background-color: #fff;
     top: 200px;
     padding: 15px;
+
+   
 }
 
 #sing_in p,
@@ -117,7 +124,16 @@ body{
     margin-right: 5px;
 }
 
+#enroll_wrap ul{
+    float: none;
+    margin-top: 0px;
+}
+
 .enroll_li {
     height: 36px;
     padding: 12px;
+    float: none;
+    margin-right: 0;
+    position: relative;
+    z-index: 0;
 }

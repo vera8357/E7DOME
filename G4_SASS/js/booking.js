@@ -6,7 +6,7 @@ var i;
 
 function removeActive() {
 	for (var i = 0; i < acc.length; i++) {
-		acc[i].classList.remove("active");
+		acc[i].classList.remove("activeNow");
 	}
 }
 
@@ -15,14 +15,14 @@ for (i = 0; i < acc.length; i++) {
  	// clear all active
  	removeActive();
  	// add class
-  	this.classList.add("active");
+  	this.classList.add("activeNow");
 	})
 }
 
 // booking calendar
-function $(className){
-	return document.getElementsByClassName(className);
-}
+// function $(className){
+// 	return document.getElementsByClassName(className);
+// }
 // create 7 days calendar from today
 function bookingCal(argument) {
 	var tdy = new Date(); // console.log(tdy);
@@ -36,7 +36,7 @@ function bookingCal(argument) {
 	for (var j = 0; j < 4; j++) {
 		for (var i = 0; i < 7; i++) {
 			var dds = dd + i;
-			$('date')[j*7 + i].innerHTML = '<a href="#" class="text-hover-yellow date-btn">' + mm + '/' + dds + '</a>';
+			$('.date')[j*7 + i].innerHTML = '<a href="#" class="text-hover-yellow date-btn">' + mm + '/' + dds + '</a>';
 		}
 	}
 

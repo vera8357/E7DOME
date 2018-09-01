@@ -1,10 +1,8 @@
-// $(document).ready(function () {
-//     $("#bowling_site").click(function () {
-//         $(".bowling").addClass("active");
-//         $(".bgc").addClass("active");
-//     });
-// });
-
+window.onpageshow = function(event) {
+    if (event.persisted) {
+        window.location.reload() 
+    }
+};
 $(function(){
     $("#bowling_site").click(function () {
         // var bowling = $(".bowling");

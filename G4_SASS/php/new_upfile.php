@@ -17,20 +17,20 @@ $MEM_NO = $_SESSION["MEM_NO"];
 require_once("connect_g4.php");
 switch($_FILES['upfile']['error']){
   case UPLOAD_ERR_OK:
-    if( file_exists("member_pic//")===false){
-    	mkdir("member_pic//");
+    if( file_exists("../images/member_pic/")===false){
+    	mkdir("../images/member_pic/");
     }
     $from = $_FILES['upfile']['tmp_name'];
     $fileto =pathinfo($_FILES['upfile']['name']);
     $filext = $fileto['basename'];
-    $to = "member_pic/{$filext}";
+    $to = "../images/member_pic/{$filext}";
     $filname = "{$filext}";
     if(copy( $from, $to)){
       $memberfile = "UPDATE member SET MEM_IMG = '{$filname}' WHERE MEM_NO = $MEM_NO";
       $pdo->exec($memberfile);
       $_SESSION["MEM_IMG"] = $filname;   
 
-      header('location:memberinfo.php');
+      header('location:../memberinfo.php');
 
     }
     break;

@@ -4,7 +4,7 @@ function $id(id){
 
 function showLoginForm(){
       
-      if($id('link_member').innerHTML == "會員登入"){
+      if($id('link_member').innerHTML == "登入"){
       $id('sing_in').style.display = 'block';
       }
 
@@ -21,9 +21,10 @@ function sendForm(){
           if( xhr.responseText == "NG"){
             alert("帳密錯誤");
           }else{
-            document.getElementById("link_member").href ='memberinfo.php';
-            document.getElementById("m_pic").src = 'member_pic/'+ xhr.responseText;
-            document.getElementById("link_member").innerHTML = "會員專區"; 
+            document.getElementById("pic_a").style.display="block";
+            document.getElementById("pic_a").href ='memberinfo.php';
+            document.getElementById("m_pic").src = 'images/member_pic/'+ xhr.responseText;
+            document.getElementById("link_member").innerHTML = ""; 
   
             
           }
@@ -33,7 +34,7 @@ function sendForm(){
         }
     }
 
-      xhr.open("Post", "../php/ajax_login.php", true);
+      xhr.open("Post", "php/ajax_login.php", true);
       xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
       var data_info = "MEM_ID=" + document.getElementById("MEM_ID").value 
                     + "&MEM_PSW="+ document.getElementById("MEM_PSW").value;
@@ -126,7 +127,7 @@ function check_id(){
         
         }
   }
-  var url = "../php/check_id.php?enroll_id=" + document.getElementById("enroll_id").value;
+  var url = "php/check_id.php?enroll_id=" + document.getElementById("enroll_id").value;
   xhr.open("get", url, true);
   xhr.send(null);
 

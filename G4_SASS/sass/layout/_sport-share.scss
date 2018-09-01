@@ -1,6 +1,21 @@
 img{
     vertical-align: middle;
 }
+html {
+    overflow: -moz-hidden-unscrollable;
+    height: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    height: 100%;
+	width: 100vw;
+	overflow: auto;
+}
 .site_info{
     width:100%;
     position: relative;
@@ -32,40 +47,22 @@ img{
     overflow:hidden;
     position: relative;
 }
-.control_next,
-.control_prev{
-    position: absolute;
-    background-color: #2a2a2a;
-    color:#fff;
-    width:10%;
-    line-height: 500%;
-    display: block;
-    font-size: 1vw;
-    top:50%;
-    z-index: 999;
-    text-align: center;
-}
-.control_next{
-    right:0;
-}
-.control_prev{
-    left:0;
-}
 .slider ul{
     position: relative;
-    width:400%;
+    width:100%;
     left:0;
     transition: 1s;
+    text-align: left;
 }
 .slider ul:after{
     display: block;
     content:'';
     clear: both;
 }
-.slider ul li{
-    float:left;
-    width:25%;
-}
+// .slider ul li{
+//     float:left;
+//     width:25%;
+// }
 .slider ul li img{
     width:100%;
     display:block;
@@ -192,7 +189,7 @@ img{
     width: 0;
     height: 0;
     right:-100%;
-    bottom:27%;
+    bottom:0;
     z-index: 0;
     border-style: solid;
     border-width: 0 0 13vw 15vw;
@@ -200,7 +197,7 @@ img{
 }
 
 .assess_tri3 {
-    display: block;
+    display: none;
     content: '';
     position: absolute;
     right: -100%;
@@ -257,16 +254,20 @@ img{
     margin:auto;
 }
 .assess_table table tr{
-    // line-height: 5;
+    line-height: 5;
 }
 .assess_table table tr td{
     text-align: center;
 }
 .assess_table table tr td:nth-child(1) {
     width: 10%;
+    border-radius: 9487%;
+    // display: block;
 }
 td img{
     width:100%;
+    border-radius: 9487%;
+    // display: block;
 }
 .assess_table table tr td:nth-child(2) {
     font-size: 20px;
@@ -293,9 +294,10 @@ td img{
     // left:50px;
     animation: ball 2s 0s both;
     // z-index: 0;
-    width:66.66%;
+    width:42%;
     left:-100%;
     transform: rotate(0deg);
+    bottom:0;
 }
 // @keyframes ball {
 //     0% {
@@ -321,6 +323,63 @@ td img{
 .group_page_content h3{
     color:#ea4c89;
     text-align: right;
+}
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 40px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    opacity: .25;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: black;
+}
+.home_team{
+	font-size: 0;
+	float: inherit;
+    width: 100%;
+    padding:5% 0 5% 0;
+}
+.teamAll h3{
+	text-align: center;
+	color: #ffb505;
+	font-size: 24px;
+	margin-top: 15px;
+	margin-bottom: 45px;
+	font-style: oblique;
+	font-family: 'HanWangZonYi';
 }
 @media screen and (max-width:1200px){
     .site_info_wrap{
@@ -392,6 +451,13 @@ td img{
         margin:auto;
         float:initial;
     }
+    .slider ul{
+        position: relative;
+        width:100%;
+        left:0;
+        transition: 1s;
+        text-align: center;
+    }
     .info{
         width:100%;
         padding-left: 0;
@@ -418,6 +484,29 @@ td img{
         margin-bottom: 2%;
         letter-spacing: 1px;
         font-weight: 100;
+    }
+    .assess_table table tr{
+        display:flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .assess_table table tr:last-child{
+        display: none;
+    }
+    .assess_table table tr td:nth-child(1){
+        width:20%;
+    }
+    .assess_table table tr td:nth-child(2){
+        width:30%;
+    }
+    .assess_table table tr td:nth-child(3){
+        order:4;
+        width:100%;
+        padding:5% 0 5% 0;
+        line-height: 1.5;
+    }
+    .assess_table table tr td:nth-child(4){
+        width:50%;
     }
     .assess_wrap{
         width:80%;
@@ -449,8 +538,8 @@ td img{
     .assess_tri1{
         border-width: 66vw 50vw 0 0;}
     .assess_tri2{
-        border-width: 0 0 23vw 25vw;}
-    .group_page_tri{
-        top:-180%;
-        border-width: 0 25vw 23vw 0;}
+        border-width: 0 0 33vw 25vw;}
+    .assess_tri3{
+        border-width: 0 25vw 23vw 0;
+    }
 }
