@@ -56,7 +56,8 @@
 .player1f04 {
   offset-path: path("M165.5,89.3L24.3,23.5");
   offset-distance: 0%;
-  animation: player1f04-climbing 5000ms cubic-bezier(0.39, 0.575, 0.565, 1) alternate infinite;
+  animation: player1f04-climbing 5000ms cubic-bezier(0.39, 0.575, 0.565, 1)
+    alternate infinite;
 }
 
 .pin--1-5 {
@@ -70,7 +71,8 @@
   left: 0;
   width: 150%;
   height: 150%;
-  animation: player4f01 3000ms cubic-bezier(0.77, 0, 0.175, 1) alternate infinite;
+  animation: player4f01 3000ms cubic-bezier(0.77, 0, 0.175, 1) alternate
+    infinite;
 }
 
 .pin--1-6 {
@@ -899,5 +901,57 @@
   100% {
     offset-distance: 100%;
     transform: rotate(-200deg);
+  }
+}
+
+/* e7dome文字 */
+#e7dome-text {
+  font: 5.5em/1 Open;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-transform: uppercase;
+  margin: 0;
+  transform: translateX(620px) translateY(-260px);
+}
+.text {
+  fill: none;
+  stroke-width: 3;
+  stroke-dasharray: 0 300;
+  stroke-dashoffset: 0;
+}
+.text:nth-child(3n + 1) {
+  stroke: #0052b2;
+  animation: stroke1 10s ease-in-out forwards;
+}
+
+.text:nth-child(3n + 2) {
+  stroke: #ffb505;
+  animation: stroke2 10s ease-in-out forwards;
+}
+
+.text:nth-child(3n + 3) {
+  stroke: #fff;
+  animation: stroke3 10s ease-in-out forwards;
+}
+
+@keyframes stroke1 {
+  100% {
+    stroke-dashoffset: 800;
+    stroke-dasharray: 40 80;
+  }
+}
+
+@keyframes stroke2 {
+  100% {
+    stroke-dashoffset: 840;
+    stroke-dasharray: 40 80;
+  }
+}
+
+@keyframes stroke3 {
+  100% {
+    stroke-dashoffset: 880;
+    stroke-dasharray: 40 80;
   }
 }

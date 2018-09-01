@@ -10,21 +10,40 @@
         $KEY_WORD_NO =  $_REQUEST['KEY_WORD_NO'];
         $KEY_WORD = $_REQUEST['KEY_WORD'];
         $ANSWER = $_REQUEST['ANSWER'];
+        
         $update_rob = "UPDATE qustion_and_answer SET KEY_WORD = '$KEY_WORD',ANSWER = '$ANSWER' where KEY_WORD_NO = '$KEY_WORD_NO'";
         $pdo->exec($update_rob);
     }
-        $show_rob = "SELECT * FROM qustion_and_answer WHERE UNSOLVED_QUESTION IS NOT NULL ORDER BY KEY_WORD_NO DESC";
+
+    if(isset($_REQUEST['solve'])){ //諮詢管理
+        $show_rob = "SELECT * FROM qustion_and_answer WHERE ANSWER IS NOT NULL ORDER BY KEY_WORD_NO DESC";//選出已有answer的
         $query = $pdo->query($show_rob);
         while($row = $query->fetch(PDO::FETCH_ASSOC)){
         echo 
         "<tr>".
         "<td>".$row['KEY_WORD_NO']."</td>".
-        "<td>".$row['UNSOLVED_QUESTION']."</td>".
+        // "<td>".$row['UNSOLVED_QUESTION']."</td>".
         "<td><input value=".$row['KEY_WORD']."></td>".
         "<td><input value=".$row['ANSWER']."></td>".
         "<td><button class='q_change'>儲存</button></td>".
         "<td><button class='q_del'>刪除</button></td>".
         "</tr>";
         }
-    
+    }
+
+    if(isset($_REQUEST['unsolve'])){
+        $show_rob = "SELECT * FROM qustion_and_answer WHERE ANSWER IS NULL ORDER BY KEY_WORD_NO DESC";////選出未有有answer的
+        $query = $pdo->query($show_rob);
+        while($row = $query->fetch(PDO::FETCH_ASSOC)){
+        echo 
+        "<tr>".
+        "<td>".$row['KEY_WORD_NO']."</td>".
+        // "<td>".$row['UNSOLVED_QUESTION']."</td>".
+        "<td>".$row['UNSOLVED_QUESTION']."</td>".
+        "<td><input value=".$row['ANSWER']."></td>".
+        "<td><button class='q_change'>儲存</button></td>".
+        "<td><button class='q_del'>刪除</button></td>".
+        "</tr>";
+        }
+    }
  ?>

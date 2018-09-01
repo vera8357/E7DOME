@@ -79,11 +79,8 @@
       newUl.id = 'talk';
       document.getElementById('message').prepend(newUl);
       $('#register').keyup(function (e) {
-        var convalue = this.value;
-        // console.log(convalue);
-        if (this.value == "") {
-        }
-        else {
+        var convalue = this.value.trim();
+        console.log(convalue);
           if (event.keyCode == 13) {
             $.ajax({
               url: 'php/bot.php',
@@ -97,14 +94,13 @@
                 newUl.appendChild(ri);  //使用者
                 li.className = "li_ans";  //機器人li
                 ri.className = "rli_ans"; //使用者li
-                console.log(data);
+                // console.log(data);
                 li.innerHTML = data;  
                 ri.innerHTML = convalue;
               }
             });
             this.value = "";
           }
-        }
       });
     });
   </script>

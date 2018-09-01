@@ -105,11 +105,12 @@ select {
   font-weight: normal;
 }
 
+// 頁簽樣式
+
 #tab-page > ul {
-  width: 85%;
-  float: right;
+  width: 90%;
   display: block;
-  margin: 0;
+  margin: 0 auto;
   list-style: none;
 }
 .tab-title {

@@ -9,8 +9,14 @@ try{
 	
 	
 	if(empty($bots)){
-		$new = "insert into qustion_and_answer(UNSOLVED_QUESTION) VALUES('$content ')";
+		if(empty($content))
+		{
+			echo "請輸入您的問題";
+		}
+		else{
+		$new = "insert into qustion_and_answer(UNSOLVED_QUESTION) VALUES('$content')";
 		$pdo->exec($new);
+
 		$i = rand(1,3);
 		switch($i){
 			case 1: 
@@ -23,6 +29,7 @@ try{
 				echo "請不要問我這個問題。";
 				break;
 		}
+	}
 	}
 	else{
 		foreach($bots as $ans){
