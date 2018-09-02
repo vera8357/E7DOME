@@ -73,8 +73,8 @@
         <div class="site_info_wrap">
             <h3>場地介紹</h3>
             <div class="slider">
-                <ul class="sport_slider">
-                    <li>
+                <ul class="sport_slider" name="fac_status" value="1">
+                    <!-- <li>
                         <img src="images/bowling/bowlingball.png" alt="">
                     </li>
                     <li>
@@ -82,7 +82,7 @@
                     </li>
                     <li>
                         <img src="images/bowling/bowlingball.png" alt="">
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <div class="info">
@@ -99,27 +99,29 @@
                     揪團
                 </button>
                 <div class="site_select">
-                    <div class="site_item1">
+                    <input type="hidden" name="cate_no" value="2"> //1.籃球場2.保齡球場3.羽球場4.攀岩場
+                    <input type="hidden" name="fac_status" value="1">//1.上架2.下架
+                    <!-- <div class="site_item">
                         <img src="images/bowling/bowlingsite.png" alt="">
                         <p>A球場</p>
                         <span>
                             文案文案文案文案文案文案文案文案文案
                         </span>
                     </div>
-                    <div class="site_item2">
+                    <div class="site_item">
                         <img src="images/bowling/bowlingsite.png" alt="">
                         <p>A球場</p>
                         <span>
                             文案文案文案文案文案文案文案文案文案
                         </span>
                     </div>
-                    <div class="site_item3">
+                    <div class="site_item">
                         <img src="images/bowling/bowlingsite.png" alt="">
                         <p>A球場</p>
                         <span>
                             文案文案文案文案文案文案文案文案文案
                         </span>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -341,15 +343,15 @@
 
     <script src="js/slick.min.js"></script>
     <script>
-        $('.sport_slider').slick({
-                dots: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows:false,
-                autoplay: true,
-                autoplaySpeed: 2000,
-                focusOnSelect:true,
-            });
+        // $('.sport_slider').slick({
+        //         dots: true,
+        //         slidesToShow: 1,
+        //         slidesToScroll: 1,
+        //         arrows:false,
+        //         autoplay: true,
+        //         autoplaySpeed: 2000,
+        //         focusOnSelect:true,
+        //     });
     </script>
 	<script>
 		$('.humberger_btn').click(function(){
@@ -358,12 +360,63 @@
     </script>
     <script>
         $.ajax({
-            url:'php/facility/bowling.php',
+            url:'php/facility/sports.php',
             dataType:'text',
+            type:'POST',
+            data:{
+                cate_no:parseInt($('.site_select').find('input').eq(0).val()),
+                fac_status:parseInt($('.site_select').find('input').eq(1).val()),
+            },
             success:function(data){
-                $('.info_name').append(data);
+                $('.site_select').append(data);
+                $('.site_item').on('click',function(){
+                    var sitem = parseInt($(this).find('input').eq(0).val());
+                    sayYes(sitem);
+                })
+                function sayYes(sitem){
+                    $.ajax({
+                        url:'php/facility/bowling_chang_info.php',
+                        dataType:'text',
+                        type:'POST',
+                        data:{
+                            change_info:sitem,
+                        },
+                        success:function(data2){
+                            $('.info_name').find('.info_cap').remove();
+                            $('.info_name').append(data2);
+                        }
+                    });
+                };
+                //找到第一個class的input的value值
+                var firsitem = parseInt($('.site_item').eq(0).find('input').eq(0).val());
+                window.addEventListener('load',sayYes(sitem=firsitem));
             }
         });
+        $.ajax({
+            url:'php/facility/change_img.php',
+            dataType:'text',
+            type:'POST',
+            data:{
+                cate_no:parseInt($('.site_select').find('input').eq(0).val()),
+                fac_status:parseInt($('.site_select').find('input').eq(1).val()),
+            },
+            success:function(data3){
+                $('.sport_slider').find('li').remove();
+                $('.sport_slider').append(data3);
+                $('.sport_slider').slick({
+                    dots: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows:false,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    focusOnSelect:true,
+                });
+            },
+            error:function(){
+                alert('ERROR');
+            }
+        })
     </script>
 </body>
 </html>
