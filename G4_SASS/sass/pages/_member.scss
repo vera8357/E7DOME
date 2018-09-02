@@ -39,13 +39,11 @@ body{
 #enroll {
     width: 100vw;
     height: 100vh;
-    background-origin: linear-gradient(0deg, rgba(219, 219, 219, .5) 0%, rgba(320, 320, 320, .5) 100%);
+    background: linear-gradient(rgba(219,219,219,.3),rgba(55,137,200,.4));
     position: fixed;
     top: 0;
     right: 0;
     display: none;
-
-
 }
 
 #sing_wrap,
@@ -54,15 +52,14 @@ body{
     max-width: 500px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    box-shadow: 0px 0px 16px 4px #ccc;
-    margin: auto;
+    box-shadow: 0px 0px 6px 1px #888;
     text-align: center;
     position: relative;
     background-color: #fff;
     top: 200px;
+    left: 0;
+ margin:auto;
     padding: 15px;
-
-   
 }
 
 #sing_in p,
