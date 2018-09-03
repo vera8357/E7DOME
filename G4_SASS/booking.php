@@ -11,7 +11,38 @@
 
 <body>
 	<header>
-		<?php include 'header.php';?>
+		<div class="wrapper">
+			<div class="humberger_btn">
+				<div class="humberger_line top"></div>
+				<div class="humberger_line mid"></div>
+				<div class="humberger_line bot"></div>
+			</div>
+			<div class="logo">
+				<a href="index.php">
+					<img src="images/e7logo.png" alt=""> </a>
+			</div>
+			<div class="login">
+				<!-- <a href="#"><img src="images/user-icon.png"></a> -->
+				<a href="#">登入</a>
+			</div>
+			<ul>
+				<li>
+					<a href="site_info.php"> 場地介紹 </a>
+				</li>
+				<li>
+					<a href="booking.php"> 預約場地 </a>
+				</li>
+				<li>
+					<a href="group.php"> 運動揪團 </a>
+				</li>
+				<li>
+					<a href="about.php"> 關於我們 </a>
+				</li>
+				<li>
+					<a href="chat-robot.php"> 諮詢專區 </a>
+				</li>
+			</ul>
+		</div>
 	</header>
 	<div class="container">
 		<div class="area accordion">

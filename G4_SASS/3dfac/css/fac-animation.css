@@ -953,9 +953,3 @@
     stroke-dasharray: 40 80;
   }
 }
-
-@media screen and (max-width: 768px) {
-  * {
-    animation: none !important;
-  }
-}
