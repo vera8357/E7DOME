@@ -55,11 +55,12 @@ section {
     width: 90%;
     height: 100%;
     position: relative;
-    top: -80px;
+    top: -180px;
     left: 0;
     right: 0;
     bottom: 0;
     margin: auto;
+    z-index: 10;
     input {
       width: 100%;
       border-radius: 6px;
@@ -179,4 +180,31 @@ section #message {
 
 section .field {
   width: 50%;
+}
+
+section .field {
+  width: 50%;
+  animation: input-w 2s;
+}
+
+section .ptm {
+  animation: ptm 2s 2s;
+}
+
+@keyframes input-w {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes ptm {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
