@@ -133,14 +133,16 @@
         <div class="assess_wrap">
             <h3>場地評價</h3>
             <div class="assess_table">
-                <input type="radio" id="A" name="check_site">
-                <input type="radio" id="B" name="check_site">
-                <input type="radio" id="C" name="check_site">
-                <label for="A">A場地</label>
-                <label for="B">B場地</label>
-                <label for="C">C場地</label>
-                <table>
-                    <tr>
+                <div class="assess_label_cap">
+                    <!-- <input type="radio" id="A" name="check_site">
+                    <input type="radio" id="B" name="check_site">
+                    <input type="radio" id="C" name="check_site">
+                    <label for="A" class="site_label">A場地</label>
+                    <label for="B" class="site_label">B場地</label>
+                    <label for="C" class="site_label">C場地</label> -->
+                </div>
+                <table id="bookin_list">
+                    <!-- <tr>
                         <td>
                             <img src='http://fakeimg.pl/200x200?font=lobster' alt=''/>
                         </td>
@@ -195,7 +197,7 @@
                         <td>
                             2018/12/10
                         </td>
-                    </tr>
+                    </tr> -->
                 </table>
             </div>
         </div>
@@ -375,7 +377,7 @@
                 })
                 function sayYes(sitem){
                     $.ajax({
-                        url:'php/facility/bowling_chang_info.php',
+                        url:'php/facility/change_info.php',
                         dataType:'text',
                         type:'POST',
                         data:{
@@ -416,6 +418,53 @@
             error:function(){
                 alert('ERROR');
             }
+        });
+        $.ajax({
+            url:'php/facility/change_label.php',
+            dataType:'text',
+            type:'POST',
+            data:{
+                cate_no:parseInt($('.site_select').find('input').eq(0).val()),
+                fac_status:parseInt($('.site_select').find('input').eq(1).val()),
+            },
+            success:function(data){
+                $('.assess_label_cap').children().remove();
+                $('.assess_label_cap').append(data);
+                $('.site_label').on('click',function(){
+                    var label = parseInt($(this).prev('input').val());
+                    hahaha(label);
+                })
+                function hahaha(label){
+                    $.ajax({
+                        url:'php/facility/change_bookin_list.php',
+                        dataType:'text',
+                        type:'POST',
+                        data:{
+                            fac_no:label,
+                        },
+                        success:function(data2){
+                            $('#bookin_list').children().remove();
+                            $('#bookin_list').append(data2);
+                            var star = $('.rank')
+                        }
+                    })
+                }
+                var firstlabel = parseInt($('.assess_label_cap').eq(0).find('input').eq(0).val());
+                window.addEventListener('load',hahaha(label=firstlabel));
+            }
+        });
+        $('.reservation').on('click',function(){
+            $.ajax({
+                url:'php/facility/session_sport.php',
+                dataType:'text',
+                type:'POST',
+                data:{
+                    cate_no:parseInt($('.site_select').find('input').eq(0).val()),
+                },
+                success:function(data3){
+                    alert(data3);
+                }
+            })
         })
     </script>
 </body>

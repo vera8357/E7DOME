@@ -266,14 +266,19 @@ td img{
     width:10%;
 }
 .assess_table table tr td:nth-child(3){
-    width:70%;
+    width:60%;
     text-align: left;
     font-size: 16px;
+    line-height: 1;
 }
 .assess_table table tr td:nth-child(4){
     font-size: 16px;
     color:#0052b2;
-    width:10%;
+    width:20%;
+}
+.rank{
+    color:yellow;
+    font-size: 20px;
 }
 .group_page{
     width:100%;
