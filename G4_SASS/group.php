@@ -89,7 +89,7 @@ try {
     $options = array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION);
     $pdo = new PDO($dsn, $user, $password, $options);
 
-    $sql = "SELECT * FROM team JOIN booking ON (team.BOO_NO = booking.BOO_NO) JOIN facility ON (facility.FAC_NO = booking.FAC_NO) JOIN team_mem ON (team.TEAM_NO = team_mem.TEAM_NO)";
+    $sql = "SELECT * FROM team JOIN booking ON (team.BOO_NO = booking.BOO_NO) JOIN facility ON (facility.FAC_NO = booking.FAC_NO) ";
     $team = $pdo->query( $sql);
 
 ;
@@ -127,8 +127,7 @@ try {
                     </div>
                 </a>
             </li>
-     
-   <?php        
+   <?php
     }
     echo '</table>';
 } catch (PDOException $e) {

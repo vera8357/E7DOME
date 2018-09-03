@@ -12,7 +12,7 @@ try {
     }else{
     $TEAM_NO=$_GET['TEAM_NO'];
 }
-    $sql = "SELECT * FROM team JOIN booking ON (team.BOO_NO = booking.BOO_NO) JOIN facility ON (facility.FAC_NO = booking.FAC_NO) JOIN member ON (team.MEM_NO = member.MEM_NO) JOIN team_mem ON (team.TEAM_NO = team_mem.TEAM_NO) WHERE team.TEAM_NO=$TEAM_NO";
+    $sql = "SELECT * FROM team JOIN booking ON (team.BOO_NO = booking.BOO_NO) JOIN facility ON (facility.FAC_NO = booking.FAC_NO) JOIN member ON (team.MEM_NO = member.MEM_NO)  WHERE team.TEAM_NO=$TEAM_NO";
     $team = $pdo->query( $sql);
     $teams = $team->fetchAll(PDO::FETCH_ASSOC);
     foreach($teams as $i=>$teamsRow){
@@ -83,7 +83,7 @@ try {
                     <img src="images/<?php echo $teamsRow["TEAM_IMG"];?>" alt="">
                 </div>
                 <div class="group-details">
-                    <div><span class="group-info-title"><?php echo $teamsRow["TEAM_NAME"];?></span><span class="group-owner">
+                    <div><span class="group-info-title"><?php echo $teamsRow["TEAM_NAME"];?></span>
 
                 <?php
                     $TEAM_NO=$teamsRow['TEAM_NO'];
@@ -92,8 +92,10 @@ try {
                     $teams = $team->fetchAll(PDO::FETCH_ASSOC);
                     $team_mem = $pdo->query( $sql);
                     ?>
-
-                    主揪人：<?php echo $teamsRow["MEM_NAME"];?></span></div>
+                    <span class="group-owner">
+                    主揪人：
+                    <?php echo $teamsRow["MEM_NAME"];?>
+                    </span></div>
                     <div class="group-txt">
                         <?php echo $teamsRow["TEAM_INFO"];?>
                     </div>
@@ -102,16 +104,33 @@ try {
                     </div>
                     <div class="group-mem">
                         揪團人數
-                        <span><?php $rows = $team_mem->fetch(); $rowCount = $rows[0];; echo $rowCount;?></span> /
+                        <span>
+                            <?php
+                            $MEM_NO=$teamsRow['MEM_NO'];
+                            $sql = "SELECT * FROM team_mem JOIN team ON (team_mem.TEAM_NO = team.TEAM_NO) JOIN member ON (team_mem.MEM_NO = member.MEM_NO)  WHERE team_mem.MEM_NO = $MEM_NO ";
+                            $teammem = $pdo->query( $sql);
+                            $rows = $teammem->fetch( );
+                            $rowCount = $rows[1];
+                            if($rowCount == 0){
+                                echo '1';
+                            }else
+                            echo $rowCount;
+                            ?>
+                            </span> /
                         <span><?php echo $teamsRow["TEAM_MEM"];?></span> 人
                     </div>
                     <div id="order-place">
                         場地：<span><?php echo $teamsRow["FAC_NAME"];?></span>
                     </div>
+                    <?php
+                    $MEM_NO=$teamsRow['MEM_NO'];
+                    $sql = "SELECT * FROM team_mem JOIN team ON (team_mem.TEAM_NO = team.TEAM_NO) JOIN member ON (team_mem.MEM_NO = member.MEM_NO)  WHERE team_mem.MEM_NO=$MEM_NO ";
+                    ?>
                     <div id="group-mem-list">
                         <div class="mem-head" id="mem-head1"><img src="images/<?php echo $teamsRow["MEM_IMG"];?>" alt=""></div>
                         <div class="line"></div>
                     <?php
+                    $sql = "SELECT * FROM team_mem JOIN team ON (team_mem.TEAM_NO = team.TEAM_NO) JOIN member ON (team_mem.MEM_NO = member.MEM_NO)  WHERE team_mem.TEAM_NO=$TEAM_NO ";
                     $team_mem = $pdo->query( $sql);
                     foreach($team_mem as $e=>$memRow){
                     ?>
