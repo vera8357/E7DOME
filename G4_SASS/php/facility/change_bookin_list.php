@@ -16,11 +16,11 @@
         <td>
             <span class="rank">
                 <?php
-                        $star ='';
-                        for($i = 0; $i<$site_info['BOO_RANK'] ; $i++){
-                            $star = $star."★";
-                        }
-                        echo $star;
+                    $star ='';
+                    for($i = 0; $i<$site_info['BOO_RANK'] ; $i++){
+                        $star = $star."★";
+                    }
+                    echo $star;
                 ?>
             </span><br>
             <?php echo $site_info['BOO_NOTE']?>
