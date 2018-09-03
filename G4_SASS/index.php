@@ -1423,7 +1423,7 @@
 	<script>
 		$(document).ready(function () {
 			$.ajax({
-				url: 'BG4.php',
+				url: 'php/pointlist.php',
 				dataType: 'text',
 				success: function (data) {
 					$('.pointCard').append(data);
