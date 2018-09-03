@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 <?php  
 try {
@@ -13,7 +12,7 @@ try {
     }else{
     $TEAM_NO=$_GET['TEAM_NO'];
 }
-    $sql = "SELECT * FROM team JOIN booking ON (team.BOO_NO = booking.BOO_NO) JOIN facility ON (facility.FAC_NO = booking.FAC_NO) JOIN team_mem ON (team.TEAM_NO = team_mem.TEAM_NO) WHERE team.TEAM_NO=$TEAM_NO";
+    $sql = "SELECT * FROM team JOIN booking ON (team.BOO_NO = booking.BOO_NO) JOIN facility ON (facility.FAC_NO = booking.FAC_NO) JOIN member ON (team.MEM_NO = member.MEM_NO) JOIN team_mem ON (team.TEAM_NO = team_mem.TEAM_NO) WHERE team.TEAM_NO=$TEAM_NO";
     $team = $pdo->query( $sql);
     $teams = $team->fetchAll(PDO::FETCH_ASSOC);
     foreach($teams as $i=>$teamsRow){
@@ -22,8 +21,6 @@ try {
 
 
 
-=======
->>>>>>> upstream/G4-1
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,11 +56,7 @@ try {
             </div>
             <ul>
                 <li>
-<<<<<<< HEAD
                     <a href="#"> 場地介紹 </a>
-=======
-                    <a href="site_info.php"> 場地介紹 </a>
->>>>>>> upstream/G4-1
                 </li>
                 <li>
                     <a href="booking.html"> 預約場地 </a>
@@ -80,57 +73,52 @@ try {
             </ul>
         </div>
     </header>
+                <div class="group-details">
+        </div>
+    </header>
     <section class="group-info-section">
         <div class="group-wrapper">
             <div class="first-wrapper">
                 <div class="group-info-image">
-<<<<<<< HEAD
                     <img src="images/<?php echo $teamsRow["TEAM_IMG"];?>" alt="">
                 </div>
                 <div class="group-details">
-                    <div><span class="group-info-title"><?php echo $teamsRow["TEAM_NAME"];?></span><span class="group-owner">主揪人：<?php echo $teamsRow["MEM_NAME"];?></span></div>
+                    <div><span class="group-info-title"><?php echo $teamsRow["TEAM_NAME"];?></span><span class="group-owner">
+
+                <?php
+                    $TEAM_NO=$teamsRow['TEAM_NO'];
+                    $sql = "SELECT * FROM team_mem JOIN team ON (team_mem.TEAM_NO = team.TEAM_NO) JOIN member ON (team_mem.MEM_NO = member.MEM_NO)  WHERE team_mem.TEAM_NO=$TEAM_NO ";
+
+                    $teams = $team->fetchAll(PDO::FETCH_ASSOC);
+                    $team_mem = $pdo->query( $sql);
+                    ?>
+
+                    主揪人：<?php echo $teamsRow["MEM_NAME"];?></span></div>
                     <div class="group-txt">
                         <?php echo $teamsRow["TEAM_INFO"];?>
                     </div>
                     <div id="order-date">
-                        預約日期：<span><?php echo $teamsRow["BOO_TIME"];?> <span></span></span>
-=======
-                    <img src="images/grouptitle.png" alt="">
-                </div>
-                <div class="group-details">
-                    <div><span class="group-info-title">中大籃球火</span><span class="group-owner">主揪人：小遙</span></div>
-                    <div class="group-txt">
-                        Lorem ipsum dolor sit amet.
-                    </div>
-                    <div id="order-date">
-                        預約日期：<span>2018/08/23 <span>16:00</span></span>
->>>>>>> upstream/G4-1
+                        預約日期：<span><?php echo $teamsRow["BOO_DATETIME"];?> <span></span></span>
                     </div>
                     <div class="group-mem">
                         揪團人數
-                        <span>3</span> /
-<<<<<<< HEAD
+                        <span><?php $rows = $team_mem->fetch(); $rowCount = $rows[0];; echo $rowCount;?></span> /
                         <span><?php echo $teamsRow["TEAM_MEM"];?></span> 人
                     </div>
                     <div id="order-place">
                         場地：<span><?php echo $teamsRow["FAC_NAME"];?></span>
-=======
-                        <span>6</span> 人
-                    </div>
-                    <div id="order-place">
-                        場地：<span>室內籃球場A</span>
->>>>>>> upstream/G4-1
                     </div>
                     <div id="group-mem-list">
-                        <div class="mem-head" id="mem-head1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXjEvEiGoERw9vOMfGBiA9E9HmbEB0lw1ui7WM8RwBpxfrsSiM" alt=""></div>
+                        <div class="mem-head" id="mem-head1"><img src="images/<?php echo $teamsRow["MEM_IMG"];?>" alt=""></div>
                         <div class="line"></div>
-                        <div class="mem-head" id="mem-head2"><img src="https://static-s.aa-cdn.net/img/ios/915308148/170f1f888a7c53a1650c585a796fc598?v=1" alt=""></div>
-                        <div class="mem-head" id="memHead3">
-                            <img src="images/user-icon.png" >
-                        </div>
-                        <div class="mem-head" id="memHead4">
-                            <img src="" alt="">
-                        </div>
+                    <?php
+                    $team_mem = $pdo->query( $sql);
+                    foreach($team_mem as $e=>$memRow){
+                    ?>
+                        <div class="mem-head" id="mem-head1"><img src="images/<?php echo $memRow["MEM_IMG"];?>" alt=""></div>
+                    <?php
+                    }
+                    ?>
                     </div>
                     <hr class="group-hr">
                     <div class="icon_area">
@@ -139,17 +127,9 @@ try {
                         </div>
                         <!-- <span class="icon"> -->
                             <img src="images/unlike.png" class="icon fb-share-button" id="heart" title="加入收藏">
-<<<<<<< HEAD
                                     <a href="javascript:void(0);" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u='+fbhtml_url+'&src=sdkpreparse');return false;" class="icon-a">
                                         <img src="images/share.png" class="icon">
 
-=======
-                               
-                                    <a href="javascript:void(0);" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u='+fbhtml_url+'&src=sdkpreparse');return false;" class="icon-a">
-                                        <img src="images/share.png" class="icon">
-
-                                    
->>>>>>> upstream/G4-1
                                 </a>
                     </div>
                 </div>
@@ -157,16 +137,14 @@ try {
         </div>
 
     </section>
-<<<<<<< HEAD
     <?php
-    }
+    
     ?>
-    
+    <?php
+                    }
+                    ?>
 
 
-=======
-    
->>>>>>> upstream/G4-1
     <section class="forum-wrapper">
         <div class="group-box1"></div>
         <div class="forum-box1"></div>
@@ -177,21 +155,17 @@ try {
         <div class="forum-border">
 
             <ul >
-<<<<<<< HEAD
     <?php  
     $sql = "SELECT * FROM team_msg JOIN team ON (team_msg.TEAM_NO = team.TEAM_NO) JOIN member ON (team_msg.MEM_NO = member.MEM_NO) WHERE team_msg.TEAM_NO=$TEAM_NO ORDER BY MSG_DATE ASC";
     $team = $pdo->query( $sql);
     $teams = $team->fetchAll(PDO::FETCH_ASSOC);
     foreach($teams as $i=>$teamsRow){
     ?>
-=======
->>>>>>> upstream/G4-1
                 <li class="message-box">
                     <div class="mem-head01">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXjEvEiGoERw9vOMfGBiA9E9HmbEB0lw1ui7WM8RwBpxfrsSiM" alt="">
+                        <img src="images/<?php echo $teamsRow["MEM_IMG"];?>" alt="">
                     </div>
                     <div class="mem-id">
-<<<<<<< HEAD
                         <?php echo $teamsRow["MEM_NAME"];?>
                     </div>
                     <div class="message">
@@ -229,93 +203,6 @@ try {
 
 }
 
-=======
-                        小遙
-                    </div>
-                    <div class="message">
-                        <p>大家一起來運動!
-                            <br> ヽ(∀ﾟ )人(ﾟ∀ﾟ)人( ﾟ∀)人(∀ﾟ )人(ﾟ∀ﾟ)人( ﾟ∀)ﾉ
-                        </p>
-                    </div>
-                    <div class="message-time">
-                        <span>2018/08/23 10:29</span>
-                    </div>
-                </li>
-                <li class="message-box">
-                    <div class="mem-head01">
-                        <img src="https://static-s.aa-cdn.net/img/ios/915308148/170f1f888a7c53a1650c585a796fc598?v=1" alt="">
-                    </div>
-                    <div class="mem-id">
-                        小拉
-                    </div>
-                    <div class="message">
-                        <p>有沒有不用動的運動???_(:з」∠)_
-                        </p>
-                    </div>
-                    <div class="message-time">
-                        <span>2018/08/23 12:29</span>
-                    </div>
-                </li>
-                <li class="message-box">
-                    <div class="mem-head01">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYs5zhb1TEbjQxZmQPajtHh5_CselWcqmWMr_3-wqDeIS6bzBg" alt="">
-                    </div>
-                    <div class="mem-id">
-                        小傑
-                    </div>
-                    <div class="message">
-                        <p>+1+1 d(d＇∀＇)
-                        </p>
-                    </div>
-                    <div class="message-time">
-                        <span>2018/08/23 12:35</span>
-                    </div>
-                </li>
-                <li class="message-box">
-                    <div class="mem-head01">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYs5zhb1TEbjQxZmQPajtHh5_CselWcqmWMr_3-wqDeIS6bzBg" alt="">
-                    </div>
-                    <div class="mem-id">
-                        小傑
-                    </div>
-                    <div class="message">
-                        <p>+1+1 d(d＇∀＇)
-                        </p>
-                    </div>
-                    <div class="message-time">
-                        <span>2018/08/23 12:35</span>
-                    </div>
-                </li>
-                <li class="message-box">
-                    <div class="mem-head01">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYs5zhb1TEbjQxZmQPajtHh5_CselWcqmWMr_3-wqDeIS6bzBg" alt="">
-                    </div>
-                    <div class="mem-id">
-                        小傑
-                    </div>
-                    <div class="message">
-                        <p>+1+1 d(d＇∀＇)
-                        </p>
-                    </div>
-                    <div class="message-time">
-                        <span>2018/08/23 12:35</span>
-                    </div>
-                </li>
-            </ul>
-            </div>
-            <div class="message-box01">
-                <textarea name=""></textarea>
-                <div class=" submit button">送出
-                </div>
-            </div>
-
-       </div>
-    </section>
-    <script src="libs/jquery/dist/jquery.min.js"></script>
-    <script>
-
-
->>>>>>> upstream/G4-1
 
         //收藏↓
     function switchFavorite() {
@@ -330,8 +217,6 @@ try {
 
     }
 
-
-    
 
     //     //
 
@@ -348,18 +233,11 @@ try {
 
     }
 
-<<<<<<< HEAD
           var fbhtml_url=window.location.toString();
 
     function init() {
         var submit = document.getElementById("submit");
         submit.addEventListener("click", submitPost, false);
-=======
-          var fbhtml_url=window.location.toString(); 
-
-    function init() {
-        
->>>>>>> upstream/G4-1
         //設定[加入收藏 或 取消收藏]的點按事件
         var join = document.getElementById("join");
         //heart.onclick = switchFavorite;
