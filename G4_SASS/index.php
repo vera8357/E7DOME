@@ -18,7 +18,7 @@
 	<link rel="stylesheet" type="text/css" href="3dfac/css/fac-animation.css" />
 	<script src="3dfac/js/modernizr-custom.js"></script>
 
-	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 </head>
 
 <body>
@@ -30,7 +30,7 @@
 				<div class="humberger_line bot"></div>
 			</div>
 			<div class="logo">
-				<a href="index.html">
+				<a href="index.php">
 					<img src="images/e7logo.png" alt=""> </a>
 			</div>
 			<div class="login">
@@ -39,19 +39,19 @@
 			</div>
 			<ul>
 				<li>
-					<a href="site_info.html"> 場地介紹 </a>
+					<a href="site_info.php"> 場地介紹 </a>
 				</li>
 				<li>
-					<a href="booking.html"> 預約場地 </a>
+					<a href="booking.php"> 預約場地 </a>
 				</li>
 				<li>
-					<a href="group.html"> 運動揪團 </a>
+					<a href="group.php"> 運動揪團 </a>
 				</li>
 				<li>
-					<a href="about.html"> 關於我們 </a>
+					<a href="about.php"> 關於我們 </a>
 				</li>
 				<li>
-					<a href="chat-robot.html"> 諮詢專區 </a>
+					<a href="chat-robot.php"> 諮詢專區 </a>
 				</li>
 			</ul>
 		</div>
@@ -142,6 +142,18 @@
 						<!-- <div class="surroundings">
 								<img class="surroundings__map" src="img/surroundings.svg" alt="Surroundings"/>
 							</div> -->
+						<svg id="e7dome-text" viewBox="0 0 1320 300">
+							<!-- Symbol -->
+							<symbol id="s-text">
+								<text text-anchor="middle" x="50%" y="50%" dy=".35em">
+									E7
+								</text>
+							</symbol>
+							<!-- Duplicate symbols -->
+							<use xlink:href="#s-text" class="text"></use>
+							<use xlink:href="#s-text" class="text"></use>
+							<use xlink:href="#s-text" class="text"></use>
+						</svg>
 						<div class="levels">
 							<div class="level level--1" aria-label="Level 1">
 								<svg id="bowlingsvg" class="map map--1" viewBox="0 0 419.5 262" style="enable-background:new 0 0 419.5 262;" width="100%"
@@ -197,7 +209,7 @@
 									</a>
 									<a class="pin pin--1-8" data-category="1" data-space="1.08" href="#" aria-label="Pin for The Wizard">
 										<span class="pin__icon">
-												<span class="wall1f01"><img src="3dfac/img/wall1f01.png" alt=""></span>
+											<span class="wall1f01"><img src="3dfac/img/wall1f01.png" alt=""></span>
 										</span>
 									</a>
 									<a class="pin pin--1-7" data-category="1" data-space="1.07" href="#" aria-label="Pin for Raw Delight">
@@ -208,7 +220,7 @@
 									<a class="pin pin--1-13" data-category="2" data-space="1.13" href="#" aria-label="Pin for Permaculture Hub">
 										<span class="pin__icon">
 											<svg class="rock-climbing-path">
-												<path fill="none"  d="M165.5,89.3L24.3,23.5" />
+												<path fill="none" d="M165.5,89.3L24.3,23.5" />
 											</svg>
 										</span>
 									</a>
@@ -266,7 +278,7 @@
 											<line class="st12" x1="0" y1="215.8" x2="425.3" y2="215.8" />
 											<line class="st12" x1="0" y1="234.4" x2="425.3" y2="234.4" />
 										</g>
-										
+
 									</g>
 								</svg>
 								<div class="level__pins">
@@ -292,28 +304,28 @@
 									</a>
 									<a class="pin pin--2-5" data-category="1" data-space="2.05" href="#" aria-label="Pin for The Eggplanthead">
 										<span class="pin__icon">
-											<span class="bottle1"><img  src="3dfac/img/bottle.png"></span>
+											<span class="bottle1"><img src="3dfac/img/bottle.png"></span>
 										</span>
 									</a>
 									<a class="pin pin--2-6" data-category="1" data-space="2.06" href="#" aria-label="Pin for Superfood">
 										<span class="pin__icon">
-											<span class="bottle2"><img  src="3dfac/img/bottle.png"></span>
+											<span class="bottle2"><img src="3dfac/img/bottle.png"></span>
 										</span>
 									</a>
 									<a class="pin pin--2-7" data-category="3" data-space="2.07" href="#" aria-label="Pin for No Princess">
 										<span class="pin__icon">
-											<span class="bottle3"><img  src="3dfac/img/bottle.png"></use></span>
+											<span class="bottle3"><img src="3dfac/img/bottle.png"></use></span>
 										</span>
 									</a>
 									<a class="pin pin--2-8" data-category="3" data-space="2.08" href="#" aria-label="Pin for Tool Exchange">
 										<span class="pin__icon">
-											<span class="bottle4"><img  src="3dfac/img/bottle.png"></use></span>
+											<span class="bottle4"><img src="3dfac/img/bottle.png"></use></span>
 										</span>
 									</a>
 									<a class="pin pin--2-9" data-category="1" data-space="1.09" href="#" aria-label="Pin for Smoothies &amp; Soul">
 										<span class="pin__icon">
 											<span class="pin__icon">
-												<span class="bottle5"><img  src="3dfac/img/bottle.png"></use></span>
+												<span class="bottle5"><img src="3dfac/img/bottle.png"></use></span>
 											</span>
 										</span>
 									</a>
@@ -451,17 +463,17 @@
 										</a> -->
 
 
-									<a class="pin pin--3-2" data-category="2" data-space="3.02" href="#" aria-label="Pin for Enlightend Path">
+									<!-- <a class="pin pin--3-2" data-category="2" data-space="3.02" href="#" aria-label="Pin for Enlightend Path">
 										<span class="pin__icon">
-											<span class="bird3f01"><img class="ball05"src="3dfac/img/bird3f01.png" alt=""></span>
+											<span class="bird3f01"><img class="ball05" src="3dfac/img/bird3f01.png" alt=""></span>
 										</span>
-									</a>
+									</a> -->
 
-									<a class="pin pin--3-3" data-category="3" data-space="3.03" href="#" aria-label="Pin for What makes us walk">
+									<!-- <a class="pin pin--3-3" data-category="3" data-space="3.03" href="#" aria-label="Pin for What makes us walk">
 										<span class="pin__icon">
 											<span class="player2f01"><img src="3dfac/img/player2f01.png" alt=""></span>
 										</span>
-									</a>
+									</a> -->
 
 									<a class="pin pin--3-4" data-category="3" data-space="3.04" href="#" aria-label="Pin for Your Last Shirt">
 										<span class="pin__icon">
@@ -483,7 +495,7 @@
 									<a class="pin pin--4-11" data-category="2" data-space="4.11" href="#" aria-label="Pin for Permaculture Hub">
 										<span class="pin__icon">
 											<svg class="basball-path">
-												<path fill="none"  d="M266.4,18.5l-258,242" />
+												<path fill="none" d="M266.4,18.5l-258,242" />
 											</svg>
 										</span>
 									</a>
@@ -496,7 +508,7 @@
 									<a class="pin pin--4-12" data-category="2" data-space="4.12" href="#" aria-label="Pin for Permaculture Hub">
 										<span class="pin__icon">
 											<svg class="basball-path2">
-												<path fill="none" d="M0,146l114-16.1L226,7l526,7" />
+												<path fill="none"  d="M801,24.2c0,0,45,220-193,199S94-44.8,26,19.2" />
 											</svg>
 										</span>
 									</a>
@@ -511,10 +523,10 @@
 							<div class="level level--4" aria-label="Level 4">
 								<svg class="map map--4" viewBox="0 0 419.5 262" style="enable-background:new 0 0 419.5 262;" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
 									<title>Map Level 4</title>
-										<g id="grid01" class="st1">
-											<path class="st6" d="M147.9,94.9V58.7l114.5,65V161 M147.9,58.7v21l114.5,66.1v-22.2L147.9,58.7z" />
-										</g>
-										<polygon class="st7" points="6.2,149.3 6.2,164.7 164,255.8 413.3,111.8 413.3,96.7 163.9,240.6     " />
+									<g id="grid01" class="st1">
+										<path class="st6" d="M147.9,94.9V58.7l114.5,65V161 M147.9,58.7v21l114.5,66.1v-22.2L147.9,58.7z" />
+									</g>
+									<polygon class="st7" points="6.2,149.3 6.2,164.7 164,255.8 413.3,111.8 413.3,96.7 163.9,240.6     " />
 									</g>
 									<g id="ground01">
 										<g>
@@ -524,7 +536,8 @@
 												<path class="st8" d="M144.3,131L144.3,131c0-58.7-48-106.7-106.7-106.7H0v73.8l87.7,8v0.5c13.5,0,24.4,10.9,24.4,24.4
 							c0,13.5-10.9,24.4-24.4,24.4v0.5l-87.7,8v73.8h37.7C96.3,237.7,144.3,189.7,144.3,131z" />
 												<path class="st8" d="M172.8,131c0,22,17.8,39.8,39.8,39.8V91.2C190.7,91.2,172.8,109,172.8,131z" />
-												<path class="st8" d="M87.7,155.9v-0.5c-13.5,0-24.4-10.9-24.4-24.4c0-13.5,10.9-24.4,24.4-24.4v-0.5L0,98.1v65.7L87.7,155.9z" />
+												<path class="st8" d="M87.7,155.9v-0.5c-13.5,0-24.4-10.9-24.4-24.4c0-13.5,10.9-24.4,24.4-24.4v-0.5L0,98.1v65.7L87.7,155.9z"
+												/>
 												<path class="st8" d="M112.1,131c0-13.5-10.9-24.4-24.4-24.4v48.8C101.1,155.4,112.1,144.5,112.1,131z" />
 												<path class="st8" d="M63.2,131c0,13.5,10.9,24.4,24.4,24.4v-48.8C74.2,106.6,63.2,117.5,63.2,131z" />
 											</g>
@@ -566,11 +579,11 @@
 											</svg>
 										</span>
 									</a>
-									<a class="pin pin--4-10" data-category="1" data-space="4.010" href="#" aria-label="Pin for Cold Soup Kitchen">
+									<!-- <a class="pin pin--4-10" data-category="1" data-space="4.010" href="#" aria-label="Pin for Cold Soup Kitchen">
 										<span class="pin__icon">
 											<span class="ball4f02"><img class="ball04-1" src="3dfac/img/ball03.png" alt=""></span>
 										</span>
-									</a>
+									</a> -->
 									<a class="pin pin--4-3" data-category="3" data-space="4.03" href="#" aria-label="Pin for Little Artist">
 										<span class="pin__icon">
 											<svg class="hoop"><use xlink:href="#icon-hoop"></use></svg>
@@ -581,11 +594,11 @@
 											<span class="player3f02"><img src="3dfac/img/player3f02.png" alt=""></span>
 										</span>
 									</a>
-										<a class="pin pin--4-5" data-category="4" data-space="4.05" href="#" aria-label="Pin for Hot Tub Festival">
+									<!-- <a class="pin pin--4-5" data-category="4" data-space="4.05" href="#" aria-label="Pin for Hot Tub Festival">
 										<span class="pin__icon">
 											<span class="player4f03"><img src="3dfac/img/player4f03.png" alt=""></span>
 										</span>
-									</a>
+									</a> -->
 
 									<a class="pin pin--4-6" data-category="2" data-space="4.06" href="#" aria-label="Pin for Love 2 Cook">
 										<span class="pin__icon">
@@ -888,7 +901,8 @@
 									<span class="content__meta-item"><strong>Phone:</strong> (0) 66 3365784</span>
 								</p>
 								<p class="content__desc">Lens culinaris vigna mungo, smallanthus sonchifolius. Cicer arietinum eruca sativa; valerianella
-									locusta.</p>
+									locusta.
+								</p>
 							</div>
 						</div>
 						<div class="content__item" data-space="3.05" data-category="4">
@@ -943,7 +957,8 @@
 									<span class="content__meta-item"><strong>Phone:</strong> (0) 66 2289786</span>
 								</p>
 								<p class="content__desc">Ipomoea aquatica smallanthus sonchifolius. The Docu Dome presents Sintel by the Blender
-									Foundation.</p>
+									Foundation.
+								</p>
 								<p class="content__desc">Book tickets <a href="http://tympanus.net/Development/SeatPreview/">here</a>.</p>
 							</div>
 						</div>
@@ -1036,21 +1051,26 @@
 						<li class="list__item" data-level="2" data-category="1" data-space="2.01"><a href="#" class="list__link">Grilled Chipotle</a></li>
 						<li class="list__item" data-level="3" data-category="1" data-space="3.01"><a href="#" class="list__link">Oolong House</a></li>
 						<li class="list__item" data-level="4" data-category="1" data-space="4.01"><a href="#" class="list__link">Cold Soup
-								Kitchen</a></li>
+								Kitchen
+							</a></li>
 						<li class="list__item" data-level="2" data-category="1" data-space="2.06"><a href="#" class="list__link">Superfood</a></li>
 						<li class="list__item" data-level="4" data-category="2" data-space="4.06"><a href="#" class="list__link">Love 2 Cook</a></li>
 						<li class="list__item" data-level="4" data-category="2" data-space="4.07"><a href="#" class="list__link">Permaculture
-								Hub</a></li>
+								Hub
+							</a></li>
 						<li class="list__item" data-level="1" data-category="2" data-space="1.03"><a href="#" class="list__link">Folding Life</a></li>
 						<li class="list__item" data-level="2" data-category="2" data-space="2.02"><a href="#" class="list__link">Rocketship
-								Tech</a></li>
+								Tech
+							</a></li>
 						<li class="list__item" data-level="2" data-category="2" data-space="2.03"><a href="#" class="list__link">Which Bug?</a></li>
 						<li class="list__item" data-level="3" data-category="2" data-space="3.02"><a href="#" class="list__link">Enlightend
-								Path</a></li>
+								Path
+							</a></li>
 						<li class="list__item" data-level="4" data-category="2" data-space="4.02"><a href="#" class="list__link">Docu Dome</a></li>
 						<li class="list__item" data-level="4" data-category="3" data-space="4.03"><a href="#" class="list__link">Little Artist</a></li>
 						<li class="list__item" data-level="3" data-category="3" data-space="3.04"><a href="#" class="list__link">Your Last
-								Shirt</a></li>
+								Shirt
+							</a></li>
 						<li class="list__item" data-level="2" data-category="3" data-space="2.08"><a href="#" class="list__link">Tool Exchange</a></li>
 						<li class="list__item" data-level="1" data-category="3" data-space="1.04"><a href="#" class="list__link">Dress me not</a></li>
 						<li class="list__item" data-level="2" data-category="3" data-space="2.04"><a href="#" class="list__link">Cognitio</a></li>
@@ -1061,7 +1081,8 @@
 						<li class="list__item" data-level="4" data-category="4" data-space="4.04"><a href="#" class="list__link">Space 16</a></li>
 						<li class="list__item" data-level="3" data-category="4" data-space="3.05"><a href="#" class="list__link">Breathe</a></li>
 						<li class="list__item" data-level="1" data-category="4" data-space="1.05"><a href="#" class="list__link">Meditation
-								Garden</a></li>
+								Garden
+							</a></li>
 						<li class="list__item" data-level="4" data-category="4" data-space="4.05"><a href="#" class="list__link">Hot Tub Festival</a></li>
 						<li class="list__item" data-level="3" data-category="4" data-space="3.06"><a href="#" class="list__link">Feel the Grass</a></li>
 					</ul>
@@ -1081,7 +1102,7 @@
 				<h2>加入揪團!尋找運動夥伴</h2>
 				<div class="teamItem all">
 					<a href="#">
-						<div class="teamAll">			
+						<div class="teamAll">
 							<div class="all_img">
 								<img src="images/index/date.png">
 								<h3>
@@ -1113,7 +1134,7 @@
 									<div class="teamInfo">
 										<div class="teamMore">
 											<div class="morebg">更多資訊</div>
-											<div class="moreSkew">></div>						
+											<div class="moreSkew">></div>
 										</div>
 										<div class="teamName">
 											台北帥哥籃球團
@@ -1150,7 +1171,7 @@
 									<div class="teamInfo">
 										<div class="teamMore">
 											<div class="morebg">更多資訊</div>
-											<div class="moreSkew">></div>						
+											<div class="moreSkew">></div>
 										</div>
 										<div class="teamName">
 											台北帥哥籃球團
@@ -1187,7 +1208,7 @@
 									<div class="teamInfo">
 										<div class="teamMore">
 											<div class="morebg">更多資訊</div>
-											<div class="moreSkew">></div>						
+											<div class="moreSkew">></div>
 										</div>
 										<div class="teamName">
 											台北帥哥籃球團
@@ -1224,7 +1245,7 @@
 									<div class="teamInfo">
 										<div class="teamMore">
 											<div class="morebg">更多資訊</div>
-											<div class="moreSkew">></div>						
+											<div class="moreSkew">></div>
 										</div>
 										<div class="teamName">
 											台北帥哥籃球團
@@ -1306,14 +1327,15 @@
 					$('.home_pg1').removeClass('active');
 				}
 				if (destination.index == 1) {
-					var bgd1 = $('.map--1');
-					var bgd2 = $('.map--2');
-					var bgd3 = $('.map--3');
-					var bgd4 = $('.map--4');
-					bgd1.hide();
-					bgd2.hide();
-					bgd3.hide();
-					bgd4.hide();
+					// var bgd1 = $('.map--1');
+					// var bgd2 = $('.map--2');
+					// var bgd3 = $('.map--3');
+					// var bgd4 = $('.map--4');
+					// bgd1.hide();
+					// bgd2.hide();
+					// bgd3.hide();
+					// bgd4.hide();
+					$('#e7dome-text').hide();
 				}
 				if (destination.index == 2) {
 					// for(var i = 1; i <= 3; i ++){
@@ -1336,24 +1358,25 @@
 
 				}
 				if (destination.index == 1) {
-					var tl = new TimelineMax({ delay: 0 });
-					var t2 = new TimelineMax({ delay: 0.5 });
-					var t3 = new TimelineMax({ delay: 1 });
-					var t4 = new TimelineMax({ delay: 1.5 });
+					$('#e7dome-text').show();
+					// var tl = new TimelineMax({ delay: 0 });
+					// var t2 = new TimelineMax({ delay: 0.5 });
+					// var t3 = new TimelineMax({ delay: 1 });
+					// var t4 = new TimelineMax({ delay: 1.5 });
 
-					var bgd1 = $('.map--1');
-					var bgd2 = $('.map--2');
-					var bgd3 = $('.map--3');
-					var bgd4 = $('.map--4');
-					bgd1.show();
-					bgd2.show();
-					bgd3.show();
-					bgd4.show();
+					// var bgd1 = $('.map--1');
+					// var bgd2 = $('.map--2');
+					// var bgd3 = $('.map--3');
+					// var bgd4 = $('.map--4');
+					// bgd1.show();
+					// bgd2.show();
+					// bgd3.show();
+					// bgd4.show();
 
-					tl.from(bgd1, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
-					t2.from(bgd2, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
-					t3.from(bgd3, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
-					t4.from(bgd4, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
+					// tl.from(bgd1, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
+					// t2.from(bgd2, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
+					// t3.from(bgd3, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
+					// t4.from(bgd4, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
 				}
 				if (destination.index == 2) {
 
@@ -1394,18 +1417,18 @@
 					]
 				}
 			);
-			
+
 		});
 	</script>
 	<script>
-		$(document).ready(function(){
-				$.ajax({
-					url: 'BG4.php',
-					dataType: 'text',
-					success: function(data) {
-						$('.pointCard').append(data);  
-						
-						$('.pointCard').slick(
+		$(document).ready(function () {
+			$.ajax({
+				url: 'BG4.php',
+				dataType: 'text',
+				success: function (data) {
+					$('.pointCard').append(data);
+
+					$('.pointCard').slick(
 						{
 							infinite: false,
 							speed: 300,
@@ -1423,20 +1446,20 @@
 								}
 							]
 						}
-						); 
-						const tilt = $(".card").tilt({
-							maxTilt: 15,
-							scale: 1.05,
-							perspective: 500,
-							// easing: "cubic-bezier(.03,.98,.52,.99)",
-							speed: 2500,
-							glare: true,
-							maxGlare:0.6,
-						}); 
-					}
-				});
+					);
+					const tilt = $(".card").tilt({
+						maxTilt: 15,
+						scale: 1.05,
+						perspective: 500,
+						// easing: "cubic-bezier(.03,.98,.52,.99)",
+						speed: 2500,
+						glare: true,
+						maxGlare: 0.6,
+					});
+				}
 			});
-		</script>
+		});
+	</script>
 	<script>
 		$('.humberger_btn').click(function () {
 			$(this).toggleClass('active');
