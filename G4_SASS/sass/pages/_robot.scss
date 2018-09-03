@@ -1,5 +1,5 @@
 * {
-  // outline: 1px solid;
+  outline: 1px solid;
 }
 
 section {
@@ -55,11 +55,10 @@ section {
     width: 90%;
     height: 100%;
     position: relative;
-    top: -180px;
+    top: -80px;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 10;
     margin: auto;
     input {
       width: 100%;
@@ -180,27 +179,4 @@ section #message {
 
 section .field {
   width: 50%;
-  animation: input-w 2s;
-}
-
-section .ptm {
-  animation: ptm 2s 2s;
-}
-
-@keyframes input-w {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 50%;
-  }
-}
-
-@keyframes ptm {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
