@@ -102,7 +102,7 @@
               li.className = "li_ans";  //機器人li
               ri.className = "rli_ans"; //使用者li
               // console.log(data);
-              li.innerHTML = data;
+              li.innerHTML = '<img class="portrait" src="images/chatrobot/anse.jpeg">' + data;
               ri.innerHTML = convalue;
             }
           });

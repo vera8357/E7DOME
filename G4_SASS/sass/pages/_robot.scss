@@ -1,5 +1,5 @@
 * {
-  outline: 1px solid;
+  // outline: 1px solid;
 }
 
 section {
@@ -207,4 +207,11 @@ section .ptm {
   100% {
     opacity: 1;
   }
+}
+
+.portrait {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  vertical-align: middle;
 }
