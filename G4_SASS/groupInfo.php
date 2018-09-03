@@ -1,11 +1,7 @@
 
 <?php  
 try {
-    $dsn = "mysql:host=localhost;port=3306;dbname=cd102g4;charset=utf8";
-    $user = "root";
-    $password = "root";
-    $options = array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION);
-    $pdo = new PDO($dsn, $user, $password, $options);
+    include("php/connect_g4.php");
     if(!isset($_GET['TEAM_NO'])){
     //沒有pid則直接跳轉回products.php
     header("location: group.php");

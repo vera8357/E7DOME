@@ -83,11 +83,7 @@
 
 //連線資料庫
 try {
-    $dsn = "mysql:host=localhost;port=3306;dbname=cd102g4;charset=utf8";
-    $user = "root";
-    $password = "root";
-    $options = array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION);
-    $pdo = new PDO($dsn, $user, $password, $options);
+    include("php/connect_g4.php");
 
     $sql = "SELECT * FROM team JOIN booking ON (team.BOO_NO = booking.BOO_NO) JOIN facility ON (facility.FAC_NO = booking.FAC_NO) ";
     $team = $pdo->query( $sql);
