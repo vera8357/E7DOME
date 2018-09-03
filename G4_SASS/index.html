@@ -463,17 +463,17 @@
 										</a> -->
 
 
-									<a class="pin pin--3-2" data-category="2" data-space="3.02" href="#" aria-label="Pin for Enlightend Path">
+									<!-- <a class="pin pin--3-2" data-category="2" data-space="3.02" href="#" aria-label="Pin for Enlightend Path">
 										<span class="pin__icon">
 											<span class="bird3f01"><img class="ball05" src="3dfac/img/bird3f01.png" alt=""></span>
 										</span>
-									</a>
+									</a> -->
 
-									<a class="pin pin--3-3" data-category="3" data-space="3.03" href="#" aria-label="Pin for What makes us walk">
+									<!-- <a class="pin pin--3-3" data-category="3" data-space="3.03" href="#" aria-label="Pin for What makes us walk">
 										<span class="pin__icon">
 											<span class="player2f01"><img src="3dfac/img/player2f01.png" alt=""></span>
 										</span>
-									</a>
+									</a> -->
 
 									<a class="pin pin--3-4" data-category="3" data-space="3.04" href="#" aria-label="Pin for Your Last Shirt">
 										<span class="pin__icon">
@@ -508,7 +508,7 @@
 									<a class="pin pin--4-12" data-category="2" data-space="4.12" href="#" aria-label="Pin for Permaculture Hub">
 										<span class="pin__icon">
 											<svg class="basball-path2">
-												<path fill="none" d="M0,146l114-16.1L226,7l526,7" />
+												<path fill="none"  d="M801,24.2c0,0,45,220-193,199S94-44.8,26,19.2" />
 											</svg>
 										</span>
 									</a>
@@ -579,11 +579,11 @@
 											</svg>
 										</span>
 									</a>
-									<a class="pin pin--4-10" data-category="1" data-space="4.010" href="#" aria-label="Pin for Cold Soup Kitchen">
+									<!-- <a class="pin pin--4-10" data-category="1" data-space="4.010" href="#" aria-label="Pin for Cold Soup Kitchen">
 										<span class="pin__icon">
 											<span class="ball4f02"><img class="ball04-1" src="3dfac/img/ball03.png" alt=""></span>
 										</span>
-									</a>
+									</a> -->
 									<a class="pin pin--4-3" data-category="3" data-space="4.03" href="#" aria-label="Pin for Little Artist">
 										<span class="pin__icon">
 											<svg class="hoop"><use xlink:href="#icon-hoop"></use></svg>
@@ -594,11 +594,11 @@
 											<span class="player3f02"><img src="3dfac/img/player3f02.png" alt=""></span>
 										</span>
 									</a>
-									<a class="pin pin--4-5" data-category="4" data-space="4.05" href="#" aria-label="Pin for Hot Tub Festival">
+									<!-- <a class="pin pin--4-5" data-category="4" data-space="4.05" href="#" aria-label="Pin for Hot Tub Festival">
 										<span class="pin__icon">
 											<span class="player4f03"><img src="3dfac/img/player4f03.png" alt=""></span>
 										</span>
-									</a>
+									</a> -->
 
 									<a class="pin pin--4-6" data-category="2" data-space="4.06" href="#" aria-label="Pin for Love 2 Cook">
 										<span class="pin__icon">
@@ -1327,14 +1327,15 @@
 					$('.home_pg1').removeClass('active');
 				}
 				if (destination.index == 1) {
-					var bgd1 = $('.map--1');
-					var bgd2 = $('.map--2');
-					var bgd3 = $('.map--3');
-					var bgd4 = $('.map--4');
-					bgd1.hide();
-					bgd2.hide();
-					bgd3.hide();
-					bgd4.hide();
+					// var bgd1 = $('.map--1');
+					// var bgd2 = $('.map--2');
+					// var bgd3 = $('.map--3');
+					// var bgd4 = $('.map--4');
+					// bgd1.hide();
+					// bgd2.hide();
+					// bgd3.hide();
+					// bgd4.hide();
+					$('#e7dome-text').hide();
 				}
 				if (destination.index == 2) {
 					// for(var i = 1; i <= 3; i ++){
@@ -1357,24 +1358,25 @@
 
 				}
 				if (destination.index == 1) {
-					var tl = new TimelineMax({ delay: 0 });
-					var t2 = new TimelineMax({ delay: 0.5 });
-					var t3 = new TimelineMax({ delay: 1 });
-					var t4 = new TimelineMax({ delay: 1.5 });
+					$('#e7dome-text').show();
+					// var tl = new TimelineMax({ delay: 0 });
+					// var t2 = new TimelineMax({ delay: 0.5 });
+					// var t3 = new TimelineMax({ delay: 1 });
+					// var t4 = new TimelineMax({ delay: 1.5 });
 
-					var bgd1 = $('.map--1');
-					var bgd2 = $('.map--2');
-					var bgd3 = $('.map--3');
-					var bgd4 = $('.map--4');
-					bgd1.show();
-					bgd2.show();
-					bgd3.show();
-					bgd4.show();
+					// var bgd1 = $('.map--1');
+					// var bgd2 = $('.map--2');
+					// var bgd3 = $('.map--3');
+					// var bgd4 = $('.map--4');
+					// bgd1.show();
+					// bgd2.show();
+					// bgd3.show();
+					// bgd4.show();
 
-					tl.from(bgd1, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
-					t2.from(bgd2, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
-					t3.from(bgd3, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
-					t4.from(bgd4, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
+					// tl.from(bgd1, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
+					// t2.from(bgd2, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
+					// t3.from(bgd3, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
+					// t4.from(bgd4, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
 				}
 				if (destination.index == 2) {
 
