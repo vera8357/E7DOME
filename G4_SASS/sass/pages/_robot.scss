@@ -85,7 +85,7 @@ section {
     input,
     button {
       position: absolute;
-      height: 70px;
+      height: 40px;
     }
     button {
       background: rgba(0, 0, 0, 0.3);
@@ -121,7 +121,7 @@ section {
     label {
       position: absolute;
       color: rgba(255, 255, 255, 1);
-      transform: translate(16px, 20px);
+      // transform: translate(16px, 20px);
       transition: transform 0.3s ease, font-size 0.3s ease, color 0.3s 0.1s ease;
       font-size: 28px;
       &.active {
@@ -160,6 +160,7 @@ section {
 // 機器人問答
 #talk {
   padding: 2%;
+  height: 350px;
 }
 
 .li_ans {
@@ -179,11 +180,11 @@ section #message {
 }
 
 section .field {
-  width: 50%;
+  width: 45%;
 }
 
 section .field {
-  width: 50%;
+  width: 45%;
   animation: input-w 2s;
 }
 
@@ -211,7 +212,7 @@ section .ptm {
 
 .portrait {
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   vertical-align: middle;
 }
