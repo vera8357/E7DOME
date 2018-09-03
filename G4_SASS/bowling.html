@@ -73,16 +73,16 @@
         <div class="site_info_wrap">
             <h3>場地介紹</h3>
             <div class="slider">
-                <ul class="sport_slider" name="fac_status" value="1">
-                    <!-- <li>
-                        <img src="images/bowling/bowlingball.png" alt="">
-                    </li>
+                <ul class="sport_slider">
                     <li>
                         <img src="images/bowling/bowlingball.png" alt="">
                     </li>
                     <li>
                         <img src="images/bowling/bowlingball.png" alt="">
-                    </li> -->
+                    </li>
+                    <li>
+                        <img src="images/bowling/bowlingball.png" alt="">
+                    </li>
                 </ul>
             </div>
             <div class="info">
@@ -99,29 +99,27 @@
                     揪團
                 </button>
                 <div class="site_select">
-                    <input type="hidden" name="cate_no" value="2"> //1.籃球場2.保齡球場3.羽球場4.攀岩場
-                    <input type="hidden" name="fac_status" value="1">//1.上架2.下架
-                    <!-- <div class="site_item">
+                    <div class="site_item1">
                         <img src="images/bowling/bowlingsite.png" alt="">
                         <p>A球場</p>
                         <span>
                             文案文案文案文案文案文案文案文案文案
                         </span>
                     </div>
-                    <div class="site_item">
+                    <div class="site_item2">
                         <img src="images/bowling/bowlingsite.png" alt="">
                         <p>A球場</p>
                         <span>
                             文案文案文案文案文案文案文案文案文案
                         </span>
                     </div>
-                    <div class="site_item">
+                    <div class="site_item3">
                         <img src="images/bowling/bowlingsite.png" alt="">
                         <p>A球場</p>
                         <span>
                             文案文案文案文案文案文案文案文案文案
                         </span>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -133,29 +131,13 @@
         <div class="assess_wrap">
             <h3>場地評價</h3>
             <div class="assess_table">
-                <div class="assess_label_cap">
-                    <!-- <input type="radio" id="A" name="check_site">
-                    <input type="radio" id="B" name="check_site">
-                    <input type="radio" id="C" name="check_site">
-                    <label for="A" class="site_label">A場地</label>
-                    <label for="B" class="site_label">B場地</label>
-                    <label for="C" class="site_label">C場地</label> -->
-                </div>
-                <table id="bookin_list">
-                    <!-- <tr>
-                        <td>
-                            <img src='http://fakeimg.pl/200x200?font=lobster' alt=''/>
-                        </td>
-                        <td>
-                            邱顯成
-                        </td>
-                        <td>
-                            文案文案文案文案文案文案文案文案文案文案文案文案
-                        </td>
-                        <td>
-                            2018/12/10
-                        </td>
-                    </tr>
+                <input type="radio" id="A" name="check_site">
+                <input type="radio" id="B" name="check_site">
+                <input type="radio" id="C" name="check_site">
+                <label for="A">A場地</label>
+                <label for="B">B場地</label>
+                <label for="C">C場地</label>
+                <table>
                     <tr>
                         <td>
                             <img src='http://fakeimg.pl/200x200?font=lobster' alt=''/>
@@ -197,7 +179,21 @@
                         <td>
                             2018/12/10
                         </td>
-                    </tr> -->
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src='http://fakeimg.pl/200x200?font=lobster' alt=''/>
+                        </td>
+                        <td>
+                            邱顯成
+                        </td>
+                        <td>
+                            文案文案文案文案文案文案文案文案文案文案文案文案
+                        </td>
+                        <td>
+                            2018/12/10
+                        </td>
+                    </tr>
                 </table>
             </div>
         </div>
@@ -345,15 +341,15 @@
 
     <script src="js/slick.min.js"></script>
     <script>
-        // $('.sport_slider').slick({
-        //         dots: true,
-        //         slidesToShow: 1,
-        //         slidesToScroll: 1,
-        //         arrows:false,
-        //         autoplay: true,
-        //         autoplaySpeed: 2000,
-        //         focusOnSelect:true,
-        //     });
+        $('.sport_slider').slick({
+                dots: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows:false,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                focusOnSelect:true,
+            });
     </script>
 	<script>
 		$('.humberger_btn').click(function(){
@@ -362,110 +358,12 @@
     </script>
     <script>
         $.ajax({
-            url:'php/facility/sports.php',
+            url:'php/sport-share.php',
             dataType:'text',
-            type:'POST',
-            data:{
-                cate_no:parseInt($('.site_select').find('input').eq(0).val()),
-                fac_status:parseInt($('.site_select').find('input').eq(1).val()),
-            },
             success:function(data){
-                $('.site_select').append(data);
-                $('.site_item').on('click',function(){
-                    var sitem = parseInt($(this).find('input').eq(0).val());
-                    sayYes(sitem);
-                })
-                function sayYes(sitem){
-                    $.ajax({
-                        url:'php/facility/change_info.php',
-                        dataType:'text',
-                        type:'POST',
-                        data:{
-                            change_info:sitem,
-                        },
-                        success:function(data2){
-                            $('.info_name').find('.info_cap').remove();
-                            $('.info_name').append(data2);
-                        }
-                    });
-                };
-                //找到第一個class的input的value值
-                var firsitem = parseInt($('.site_item').eq(0).find('input').eq(0).val());
-                window.addEventListener('load',sayYes(sitem=firsitem));
+                $('.info_name').append(data);
             }
         });
-        $.ajax({
-            url:'php/facility/change_img.php',
-            dataType:'text',
-            type:'POST',
-            data:{
-                cate_no:parseInt($('.site_select').find('input').eq(0).val()),
-                fac_status:parseInt($('.site_select').find('input').eq(1).val()),
-            },
-            success:function(data3){
-                $('.sport_slider').find('li').remove();
-                $('.sport_slider').append(data3);
-                $('.sport_slider').slick({
-                    dots: true,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows:false,
-                    autoplay: true,
-                    autoplaySpeed: 2000,
-                    focusOnSelect:true,
-                });
-            },
-            error:function(){
-                alert('ERROR');
-            }
-        });
-        $.ajax({
-            url:'php/facility/change_label.php',
-            dataType:'text',
-            type:'POST',
-            data:{
-                cate_no:parseInt($('.site_select').find('input').eq(0).val()),
-                fac_status:parseInt($('.site_select').find('input').eq(1).val()),
-            },
-            success:function(data){
-                $('.assess_label_cap').children().remove();
-                $('.assess_label_cap').append(data);
-                $('.site_label').on('click',function(){
-                    var label = parseInt($(this).prev('input').val());
-                    hahaha(label);
-                })
-                function hahaha(label){
-                    $.ajax({
-                        url:'php/facility/change_bookin_list.php',
-                        dataType:'text',
-                        type:'POST',
-                        data:{
-                            fac_no:label,
-                        },
-                        success:function(data2){
-                            $('#bookin_list').children().remove();
-                            $('#bookin_list').append(data2);
-                            var star = $('.rank')
-                        }
-                    })
-                }
-                var firstlabel = parseInt($('.assess_label_cap').eq(0).find('input').eq(0).val());
-                window.addEventListener('load',hahaha(label=firstlabel));
-            }
-        });
-        $('.reservation').on('click',function(){
-            $.ajax({
-                url:'php/facility/session_sport.php',
-                dataType:'text',
-                type:'POST',
-                data:{
-                    cate_no:parseInt($('.site_select').find('input').eq(0).val()),
-                },
-                success:function(data3){
-                    alert(data3);
-                }
-            })
-        })
     </script>
 </body>
 </html>

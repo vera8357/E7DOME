@@ -1,5 +1,5 @@
 * {
-  outline: 1px solid;
+  // outline: 1px solid;
 }
 
 section {
@@ -53,31 +53,32 @@ section {
   }
   .field {
     width: 90%;
-    height: 70px;
+    height: 100%;
     position: relative;
-    top: 80%;
+    top: -180px;
     left: 0;
     right: 0;
     bottom: 0;
     margin: auto;
+    z-index: 10;
     input {
       width: 100%;
       border-radius: 6px;
-      height: 70px;
+      height: 100%;
       border: 0;
       font-size: 0;
-      background-color: rgb(0, 82, 178);
+      background-color: #ffb505;
       transition: background 0.3s ease;
       color: #ffffff;
       &:focus {
-        background-color: rgb(0, 82, 178);
+        background-color: #ffb505;
         font-size: 23px;
         &::selection {
           background: rgba(188, 232, 255, 0.5);
         }
       }
       &.active {
-        background-color: rgb(0, 82, 178);
+        background-color: #ffb505;
         font-size: 23px;
       }
     }
@@ -96,16 +97,16 @@ section {
       cursor: pointer;
       transition: width 0.3s ease, background 0.3s ease, opacity 0.3s ease;
       opacity: 0;
-      color: #065cb7;
+      color: #ffb505;
       text-transform: uppercae;
       pointer-events: none;
       &.active {
         color: #ffffff;
-        background: #639edb;
+        background: #ffb505;
         opacity: 1;
         pointer-events: auto;
         &:hover {
-          background: #5e99d6;
+          background: #ffb505;
         }
       }
       &.full {
@@ -142,7 +143,7 @@ section {
     height: 70vh;
     position: absolute;
     top: 20%;
-    background-image: url("../../images/chatrobot/gym-background.png");
+    background-image: url("../images/chatrobot/gym-background.png");
     background-size: cover;
   }
   .coach_img img {
@@ -155,11 +156,62 @@ section {
     // margin: auto;
   }
 }
+
 // 機器人問答
-#talk{
+#talk {
   padding: 2%;
 }
-.li_ans{
+
+.li_ans {
   margin: 2% 0;
   font-size: 1.5vw;
+  text-align: left;
+}
+
+.rli_ans {
+  margin: 2% 0;
+  font-size: 1.5vw;
+  text-align: right;
+}
+
+section #message {
+  overflow-y: auto;
+}
+
+section .field {
+  width: 50%;
+}
+
+section .field {
+  width: 50%;
+  animation: input-w 2s;
+}
+
+section .ptm {
+  animation: ptm 2s 2s;
+}
+
+@keyframes input-w {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes ptm {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.portrait {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  vertical-align: middle;
 }

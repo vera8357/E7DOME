@@ -1,85 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<link rel="stylesheet" href="css/font.css">
-
-	<script type="text/javascript" src="js/fullpage.js"></script>
-
-	<!-- 3dfacModel -->
-	<link rel="stylesheet" type="text/css" href="3dfac/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" href="3dfac/css/style0.css" />
-	<link rel="stylesheet" type="text/css" href="3dfac/css/custom.css" />
-	<link rel="stylesheet" type="text/css" href="3dfac/css/fac-animation.css" />
-	<script src="3dfac/js/modernizr-custom.js"></script>
-
-	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-</head>
-
-<body>
-	<header>
-		<div class="wrapper">
-			<div class="humberger_btn">
-				<div class="humberger_line top"></div>
-				<div class="humberger_line mid"></div>
-				<div class="humberger_line bot"></div>
-			</div>
-			<div class="logo">
-				<a href="index.html">
-					<img src="images/e7logo.png" alt=""> </a>
-			</div>
-			<div class="login">
-				<!-- <a href="#"><img src="images/user-icon.png"></a> -->
-				<a href="#">登入</a>
-			</div>
-			<ul>
-				<li>
-					<a href="site_info.html"> 場地介紹 </a>
-				</li>
-				<li>
-					<a href="booking.html"> 預約場地 </a>
-				</li>
-				<li>
-					<a href="group.html"> 運動揪團 </a>
-				</li>
-				<li>
-					<a href="about.html"> 關於我們 </a>
-				</li>
-				<li>
-					<a href="chat-robot.html"> 諮詢專區 </a>
-				</li>
-			</ul>
-		</div>
-	</header>
-	<div id="homePage">
-		<div class="section home_pg1">
-			<video id="home_bg1_vd" data-src="images/index/EZDOME.mp4" type="video/mp4" autoplay muted loop="true" data-video="0">
-			</video>
-			<div class="home_pg1_bluebox1">
-				<div class="home_pg1_txt">
-					<h1>邊緣人?!<br>一起運動吧!</h1>
-					<div class="home_pg1_btng">
-						<div class="home_pg1_btn">
-							<a href="#">預約</a>
-						</div>
-						<div class="home_pg1_btn">
-							<a href="#">揪團</a>
-						</div>
-					</div>
-				</div>
-				<div class="home_pg1_yellowbox"></div>
-			</div>
-			<div class="home_pg1_bluebox2"></div>
-			<div class="home_pg1_bluebox3"></div>
-		</div>
-
-		<div class="section home_pg2">
-			<svg class="hidden">
+<svg class="hidden">
 				<defs>
 					<symbol id="icon-stack" viewBox="0 0 32 32">
 						<title>stack</title>
@@ -142,6 +61,18 @@
 						<!-- <div class="surroundings">
 								<img class="surroundings__map" src="img/surroundings.svg" alt="Surroundings"/>
 							</div> -->
+						<svg id="e7dome-text" viewBox="0 0 1320 300">
+							<!-- Symbol -->
+							<symbol id="s-text">
+								<text text-anchor="middle" x="50%" y="50%" dy=".35em">
+									E7
+								</text>
+							</symbol>
+							<!-- Duplicate symbols -->
+							<use xlink:href="#s-text" class="text"></use>
+							<use xlink:href="#s-text" class="text"></use>
+							<use xlink:href="#s-text" class="text"></use>
+						</svg>
 						<div class="levels">
 							<div class="level level--1" aria-label="Level 1">
 								<svg id="bowlingsvg" class="map map--1" viewBox="0 0 419.5 262" style="enable-background:new 0 0 419.5 262;" width="100%"
@@ -155,12 +86,6 @@
 										<path class="st5" d="M425.3,0v125l-99.8,32.1l-59.7-62.8L305.2,0H425.3z" />
 										<path class="st6" d="M0,0h305.2l-39.3,94.3L0,0z" />
 									</g>
-								</svg>
-								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 661 265">
-									<path id="bowling-linepath" fill="none" d="M544,46c-43,43-213.5,78-213.5,78L7,178" />
-								</svg>
-								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 661 265">
-									<path id="bowling-linepath2" fill="none" d="M7,147L549,29" />
 								</svg>
 								<div class="level__pins">
 									<!--                             <a class="pin pin--1-1" data-category="1" data-space="1.01" href="#" aria-label="Pin for Apple Heart">
@@ -191,8 +116,6 @@
 											<span class="wall1f01"><img src="3dfac/img/wall1f01.png" alt=""></span>
 										</span>
 									</a>
-
-									
 									<a class="pin pin--1-5" data-category="4" data-space="1.05" href="#" aria-label="Pin for Meditation Garden">
 										<span class="pin__icon">
 											<span class="player4f01"><img src="3dfac/img/player4f01.png" alt=""></span>
@@ -203,19 +126,23 @@
 											<span class="player4f02"><img src="3dfac/img/player4f02.png" alt=""></span>
 										</span>
 									</a>
+									<a class="pin pin--1-8" data-category="1" data-space="1.08" href="#" aria-label="Pin for The Wizard">
+										<span class="pin__icon">
+											<span class="wall1f01"><img src="3dfac/img/wall1f01.png" alt=""></span>
+										</span>
+									</a>
 									<a class="pin pin--1-7" data-category="1" data-space="1.07" href="#" aria-label="Pin for Raw Delight">
 										<span class="pin__icon">
 											<span class="wall1f01"><img src="3dfac/img/wall1f01.png" alt=""></span>
 										</span>
 									</a>
-									<a class="pin pin--1-8" data-category="1" data-space="1.08" href="#" aria-label="Pin for The Wizard">
+									<a class="pin pin--1-13" data-category="2" data-space="1.13" href="#" aria-label="Pin for Permaculture Hub">
 										<span class="pin__icon">
-											<span class="pin__icon">
-												<span class="wall1f01"><img src="3dfac/img/wall1f01.png" alt=""></span>
-											</span>
+											<svg class="rock-climbing-path">
+												<path fill="none" d="M165.5,89.3L24.3,23.5" />
+											</svg>
 										</span>
 									</a>
-
 								</div>
 								<!-- /level__pins -->
 							</div>
@@ -270,7 +197,7 @@
 											<line class="st12" x1="0" y1="215.8" x2="425.3" y2="215.8" />
 											<line class="st12" x1="0" y1="234.4" x2="425.3" y2="234.4" />
 										</g>
-										
+
 									</g>
 								</svg>
 								<div class="level__pins">
@@ -296,28 +223,28 @@
 									</a>
 									<a class="pin pin--2-5" data-category="1" data-space="2.05" href="#" aria-label="Pin for The Eggplanthead">
 										<span class="pin__icon">
-											<span class="bottle1"><img  src="3dfac/img/bottle.png"></span>
+											<span class="bottle1"><img src="3dfac/img/bottle.png"></span>
 										</span>
 									</a>
 									<a class="pin pin--2-6" data-category="1" data-space="2.06" href="#" aria-label="Pin for Superfood">
 										<span class="pin__icon">
-											<span class="bottle2"><img  src="3dfac/img/bottle.png"></span>
+											<span class="bottle2"><img src="3dfac/img/bottle.png"></span>
 										</span>
 									</a>
 									<a class="pin pin--2-7" data-category="3" data-space="2.07" href="#" aria-label="Pin for No Princess">
 										<span class="pin__icon">
-											<span class="bottle3"><img  src="3dfac/img/bottle.png"></use></span>
+											<span class="bottle3"><img src="3dfac/img/bottle.png"></use></span>
 										</span>
 									</a>
 									<a class="pin pin--2-8" data-category="3" data-space="2.08" href="#" aria-label="Pin for Tool Exchange">
 										<span class="pin__icon">
-											<span class="bottle4"><img  src="3dfac/img/bottle.png"></use></span>
+											<span class="bottle4"><img src="3dfac/img/bottle.png"></use></span>
 										</span>
 									</a>
 									<a class="pin pin--2-9" data-category="1" data-space="1.09" href="#" aria-label="Pin for Smoothies &amp; Soul">
 										<span class="pin__icon">
 											<span class="pin__icon">
-												<span class="bottle5"><img  src="3dfac/img/bottle.png"></use></span>
+												<span class="bottle5"><img src="3dfac/img/bottle.png"></use></span>
 											</span>
 										</span>
 									</a>
@@ -455,17 +382,17 @@
 										</a> -->
 
 
-									<a class="pin pin--3-2" data-category="2" data-space="3.02" href="#" aria-label="Pin for Enlightend Path">
+									<!-- <a class="pin pin--3-2" data-category="2" data-space="3.02" href="#" aria-label="Pin for Enlightend Path">
 										<span class="pin__icon">
-											<span class="bird3f01"><img class="ball05"src="3dfac/img/bird3f01.png" alt=""></span>
+											<span class="bird3f01"><img class="ball05" src="3dfac/img/bird3f01.png" alt=""></span>
 										</span>
-									</a>
+									</a> -->
 
-									<a class="pin pin--3-3" data-category="3" data-space="3.03" href="#" aria-label="Pin for What makes us walk">
+									<!-- <a class="pin pin--3-3" data-category="3" data-space="3.03" href="#" aria-label="Pin for What makes us walk">
 										<span class="pin__icon">
 											<span class="player2f01"><img src="3dfac/img/player2f01.png" alt=""></span>
 										</span>
-									</a>
+									</a> -->
 
 									<a class="pin pin--3-4" data-category="3" data-space="3.04" href="#" aria-label="Pin for Your Last Shirt">
 										<span class="pin__icon">
@@ -487,7 +414,7 @@
 									<a class="pin pin--4-11" data-category="2" data-space="4.11" href="#" aria-label="Pin for Permaculture Hub">
 										<span class="pin__icon">
 											<svg class="basball-path">
-												<path fill="none"  d="M266.4,18.5l-258,242" />
+												<path fill="none" d="M266.4,18.5l-258,242" />
 											</svg>
 										</span>
 									</a>
@@ -500,11 +427,10 @@
 									<a class="pin pin--4-12" data-category="2" data-space="4.12" href="#" aria-label="Pin for Permaculture Hub">
 										<span class="pin__icon">
 											<svg class="basball-path2">
-												<path fill="none" d="M0,146l114-16.1L226,7l526,7" />
+												<path fill="none"  d="M801,24.2c0,0,45,220-193,199S94-44.8,26,19.2" />
 											</svg>
 										</span>
 									</a>
-
 									<a class="pin pin--3-7" data-category="4" data-space="3.07" href="#" aria-label="Pin for Star Gazer">
 										<span class="pin__icon">
 											<span class="player3f05"><img src="3dfac/img/player3f05.png" alt=""></span>
@@ -516,10 +442,10 @@
 							<div class="level level--4" aria-label="Level 4">
 								<svg class="map map--4" viewBox="0 0 419.5 262" style="enable-background:new 0 0 419.5 262;" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
 									<title>Map Level 4</title>
-										<g id="grid01" class="st1">
-											<path class="st6" d="M147.9,94.9V58.7l114.5,65V161 M147.9,58.7v21l114.5,66.1v-22.2L147.9,58.7z" />
-										</g>
-										<polygon class="st7" points="6.2,149.3 6.2,164.7 164,255.8 413.3,111.8 413.3,96.7 163.9,240.6     " />
+									<g id="grid01" class="st1">
+										<path class="st6" d="M147.9,94.9V58.7l114.5,65V161 M147.9,58.7v21l114.5,66.1v-22.2L147.9,58.7z" />
+									</g>
+									<polygon class="st7" points="6.2,149.3 6.2,164.7 164,255.8 413.3,111.8 413.3,96.7 163.9,240.6     " />
 									</g>
 									<g id="ground01">
 										<g>
@@ -529,7 +455,8 @@
 												<path class="st8" d="M144.3,131L144.3,131c0-58.7-48-106.7-106.7-106.7H0v73.8l87.7,8v0.5c13.5,0,24.4,10.9,24.4,24.4
 							c0,13.5-10.9,24.4-24.4,24.4v0.5l-87.7,8v73.8h37.7C96.3,237.7,144.3,189.7,144.3,131z" />
 												<path class="st8" d="M172.8,131c0,22,17.8,39.8,39.8,39.8V91.2C190.7,91.2,172.8,109,172.8,131z" />
-												<path class="st8" d="M87.7,155.9v-0.5c-13.5,0-24.4-10.9-24.4-24.4c0-13.5,10.9-24.4,24.4-24.4v-0.5L0,98.1v65.7L87.7,155.9z" />
+												<path class="st8" d="M87.7,155.9v-0.5c-13.5,0-24.4-10.9-24.4-24.4c0-13.5,10.9-24.4,24.4-24.4v-0.5L0,98.1v65.7L87.7,155.9z"
+												/>
 												<path class="st8" d="M112.1,131c0-13.5-10.9-24.4-24.4-24.4v48.8C101.1,155.4,112.1,144.5,112.1,131z" />
 												<path class="st8" d="M63.2,131c0,13.5,10.9,24.4,24.4,24.4v-48.8C74.2,106.6,63.2,117.5,63.2,131z" />
 											</g>
@@ -571,11 +498,11 @@
 											</svg>
 										</span>
 									</a>
-									<a class="pin pin--4-10" data-category="1" data-space="4.010" href="#" aria-label="Pin for Cold Soup Kitchen">
+									<!-- <a class="pin pin--4-10" data-category="1" data-space="4.010" href="#" aria-label="Pin for Cold Soup Kitchen">
 										<span class="pin__icon">
 											<span class="ball4f02"><img class="ball04-1" src="3dfac/img/ball03.png" alt=""></span>
 										</span>
-									</a>
+									</a> -->
 									<a class="pin pin--4-3" data-category="3" data-space="4.03" href="#" aria-label="Pin for Little Artist">
 										<span class="pin__icon">
 											<svg class="hoop"><use xlink:href="#icon-hoop"></use></svg>
@@ -586,11 +513,11 @@
 											<span class="player3f02"><img src="3dfac/img/player3f02.png" alt=""></span>
 										</span>
 									</a>
-										<a class="pin pin--4-5" data-category="4" data-space="4.05" href="#" aria-label="Pin for Hot Tub Festival">
+									<!-- <a class="pin pin--4-5" data-category="4" data-space="4.05" href="#" aria-label="Pin for Hot Tub Festival">
 										<span class="pin__icon">
 											<span class="player4f03"><img src="3dfac/img/player4f03.png" alt=""></span>
 										</span>
-									</a>
+									</a> -->
 
 									<a class="pin pin--4-6" data-category="2" data-space="4.06" href="#" aria-label="Pin for Love 2 Cook">
 										<span class="pin__icon">
@@ -893,7 +820,8 @@
 									<span class="content__meta-item"><strong>Phone:</strong> (0) 66 3365784</span>
 								</p>
 								<p class="content__desc">Lens culinaris vigna mungo, smallanthus sonchifolius. Cicer arietinum eruca sativa; valerianella
-									locusta.</p>
+									locusta.
+								</p>
 							</div>
 						</div>
 						<div class="content__item" data-space="3.05" data-category="4">
@@ -948,7 +876,8 @@
 									<span class="content__meta-item"><strong>Phone:</strong> (0) 66 2289786</span>
 								</p>
 								<p class="content__desc">Ipomoea aquatica smallanthus sonchifolius. The Docu Dome presents Sintel by the Blender
-									Foundation.</p>
+									Foundation.
+								</p>
 								<p class="content__desc">Book tickets <a href="http://tympanus.net/Development/SeatPreview/">here</a>.</p>
 							</div>
 						</div>
@@ -1041,21 +970,26 @@
 						<li class="list__item" data-level="2" data-category="1" data-space="2.01"><a href="#" class="list__link">Grilled Chipotle</a></li>
 						<li class="list__item" data-level="3" data-category="1" data-space="3.01"><a href="#" class="list__link">Oolong House</a></li>
 						<li class="list__item" data-level="4" data-category="1" data-space="4.01"><a href="#" class="list__link">Cold Soup
-								Kitchen</a></li>
+								Kitchen
+							</a></li>
 						<li class="list__item" data-level="2" data-category="1" data-space="2.06"><a href="#" class="list__link">Superfood</a></li>
 						<li class="list__item" data-level="4" data-category="2" data-space="4.06"><a href="#" class="list__link">Love 2 Cook</a></li>
 						<li class="list__item" data-level="4" data-category="2" data-space="4.07"><a href="#" class="list__link">Permaculture
-								Hub</a></li>
+								Hub
+							</a></li>
 						<li class="list__item" data-level="1" data-category="2" data-space="1.03"><a href="#" class="list__link">Folding Life</a></li>
 						<li class="list__item" data-level="2" data-category="2" data-space="2.02"><a href="#" class="list__link">Rocketship
-								Tech</a></li>
+								Tech
+							</a></li>
 						<li class="list__item" data-level="2" data-category="2" data-space="2.03"><a href="#" class="list__link">Which Bug?</a></li>
 						<li class="list__item" data-level="3" data-category="2" data-space="3.02"><a href="#" class="list__link">Enlightend
-								Path</a></li>
+								Path
+							</a></li>
 						<li class="list__item" data-level="4" data-category="2" data-space="4.02"><a href="#" class="list__link">Docu Dome</a></li>
 						<li class="list__item" data-level="4" data-category="3" data-space="4.03"><a href="#" class="list__link">Little Artist</a></li>
 						<li class="list__item" data-level="3" data-category="3" data-space="3.04"><a href="#" class="list__link">Your Last
-								Shirt</a></li>
+								Shirt
+							</a></li>
 						<li class="list__item" data-level="2" data-category="3" data-space="2.08"><a href="#" class="list__link">Tool Exchange</a></li>
 						<li class="list__item" data-level="1" data-category="3" data-space="1.04"><a href="#" class="list__link">Dress me not</a></li>
 						<li class="list__item" data-level="2" data-category="3" data-space="2.04"><a href="#" class="list__link">Cognitio</a></li>
@@ -1066,7 +1000,8 @@
 						<li class="list__item" data-level="4" data-category="4" data-space="4.04"><a href="#" class="list__link">Space 16</a></li>
 						<li class="list__item" data-level="3" data-category="4" data-space="3.05"><a href="#" class="list__link">Breathe</a></li>
 						<li class="list__item" data-level="1" data-category="4" data-space="1.05"><a href="#" class="list__link">Meditation
-								Garden</a></li>
+								Garden
+							</a></li>
 						<li class="list__item" data-level="4" data-category="4" data-space="4.05"><a href="#" class="list__link">Hot Tub Festival</a></li>
 						<li class="list__item" data-level="3" data-category="4" data-space="3.06"><a href="#" class="list__link">Feel the Grass</a></li>
 					</ul>
@@ -1078,375 +1013,3 @@
 			<script src="3dfac/js/list.min.js"></script>
 			<script src="3dfac/js/main.js"></script>
 			<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
-		</div>
-
-		<div class="section home_pg3">
-			<div class="home_pg3_svg"></div>
-			<div class="wrapper">
-				<h2>加入揪團!尋找運動夥伴</h2>
-				<div class="teamItem all">
-					<a href="#">
-						<div class="teamAll">			
-							<div class="all_img">
-								<img src="images/index/date.png">
-								<h3>
-									揪團日期
-								</h3>
-
-							</div>
-							<div class="teamMore all">
-								<div class="morebg">查看更多</div>
-								<div class="moreSkew">></div>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="home_team">
-					<ul class="teamGroup">
-						<li class="teamItem">
-							<a href="#">
-								<div class="teamOne">
-									<div class="teamDate_top">
-										<div class="dateGroup">
-											<div class="teamDay">23</div>
-											<div class="teamMonth">AUG</div>
-										</div>
-									</div>
-									<div class="teamPic">
-										<img src="images//index/bg2.png" alt="">
-									</div>
-									<div class="teamInfo">
-										<div class="teamMore">
-											<div class="morebg">更多資訊</div>
-											<div class="moreSkew">></div>						
-										</div>
-										<div class="teamName">
-											台北帥哥籃球團
-										</div>
-										<div class="teamDate">
-											2018/06/28
-										</div>
-										<div class="teamMem">
-											揪團人數
-											<span>3</span>
-											/
-											<span>6</span>
-											人
-										</div>
-										<div class="teamTxt">
-											Lorem ipsum dolor sit amet.
-										</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="teamItem">
-							<a href="#">
-								<div class="teamOne">
-									<div class="teamDate_top">
-										<div class="dateGroup">
-											<div class="teamDay">23</div>
-											<div class="teamMonth">AUG</div>
-										</div>
-									</div>
-									<div class="teamPic">
-										<img src="images//index/bg2.png" alt="">
-									</div>
-									<div class="teamInfo">
-										<div class="teamMore">
-											<div class="morebg">更多資訊</div>
-											<div class="moreSkew">></div>						
-										</div>
-										<div class="teamName">
-											台北帥哥籃球團
-										</div>
-										<div class="teamDate">
-											2018/06/28
-										</div>
-										<div class="teamMem">
-											揪團人數
-											<span>3</span>
-											/
-											<span>6</span>
-											人
-										</div>
-										<div class="teamTxt">
-											Lorem ipsum dolor sit amet.
-										</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="teamItem">
-							<a href="#">
-								<div class="teamOne">
-									<div class="teamDate_top">
-										<div class="dateGroup">
-											<div class="teamDay">23</div>
-											<div class="teamMonth">AUG</div>
-										</div>
-									</div>
-									<div class="teamPic">
-										<img src="images//index/bg2.png" alt="">
-									</div>
-									<div class="teamInfo">
-										<div class="teamMore">
-											<div class="morebg">更多資訊</div>
-											<div class="moreSkew">></div>						
-										</div>
-										<div class="teamName">
-											台北帥哥籃球團
-										</div>
-										<div class="teamDate">
-											2018/06/28
-										</div>
-										<div class="teamMem">
-											揪團人數
-											<span>3</span>
-											/
-											<span>6</span>
-											人
-										</div>
-										<div class="teamTxt">
-											Lorem ipsum dolor sit amet.
-										</div>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="teamItem">
-							<a href="#">
-								<div class="teamOne">
-									<div class="teamDate_top">
-										<div class="dateGroup">
-											<div class="teamDay">23</div>
-											<div class="teamMonth">AUG</div>
-										</div>
-									</div>
-									<div class="teamPic">
-										<img src="images//index/bg2.png" alt="">
-									</div>
-									<div class="teamInfo">
-										<div class="teamMore">
-											<div class="morebg">更多資訊</div>
-											<div class="moreSkew">></div>						
-										</div>
-										<div class="teamName">
-											台北帥哥籃球團
-										</div>
-										<div class="teamDate">
-											2018/06/28
-										</div>
-										<div class="teamMem">
-											揪團人數
-											<span>3</span>
-											/
-											<span>6</span>
-											人
-										</div>
-										<div class="teamTxt">
-											Lorem ipsum dolor sit amet.
-										</div>
-									</div>
-								</div>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="section home_pg4">
-			<div class="home_pg4_bg"></div>
-			<div class="home_pg4_bluebox1">
-				<div class="home_pg4_txt">
-					<h2>點數儲值</h2>
-					<p>文案文案文案</p>
-				</div>
-				<div class="home_pg4_yellowbox"></div>
-				<div class="home_pg4_whitebox"></div>
-			</div>
-			<div class="home_pg4_bluebox2">
-				<h3>POINT</h3>
-			</div>
-			<div class="wrapper">
-				<ul class="pointCard">
-
-				</ul>
-			</div>
-		</div>
-		<div class="section home_pg5">
-			<div class="home_pg5_whitebox1"></div>
-			<div class="home_pg5_yellowbox1"></div>
-			<div class="home_pg5_yellowbox2">
-				<div class="home_pg5_whitebox2"></div>
-				<h3>E7 DOME</h3>
-			</div>
-			<div class="wrapper">
-				<h2>營業資訊</h2>
-				<div class="home_pg5_footer">
-					<div id="home_map">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7233.962258758776!2d121.19506222667539!3d24.966756662290436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346823c1ec904dcb%3A0xcdc129d4455ce456!2z5ZyL56uL5Lit5aSu5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1534423581293"
-						 width="600" height="350" frameborder="0" style="border:0" allowfullscreen></iframe<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7233.962258758776!2d121.19506222667539!3d24.966756662290436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346823c1ec904dcb%3A0xcdc129d4455ce456!2z5ZyL56uL5Lit5aSu5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1534423581293"
-							 width="600" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
-					</div>
-					<p>營業時間: 06:00 - 23:00</p>
-					<p>地 址: 桃園市中壢區中大路300號</p>
-					<p>電 話: 03-9876543</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-	<script>
-		new fullpage('#homePage', {
-			verticalCentered: false,
-			anchors: ['firstPage', 'secondPage', 'thirdPage', 'forthPage', 'lastPage'],
-			navigation: true,
-			// autoScrolling: false,
-			afterRender: function () {
-			},
-			onLeave: function (origin, destination, direction) {
-				if (destination.index == 0) {
-					$('.home_pg1').removeClass('active');
-				}
-				if (destination.index == 1) {
-					var bgd1 = $('.map--1');
-					var bgd2 = $('.map--2');
-					var bgd3 = $('.map--3');
-					var bgd4 = $('.map--4');
-					bgd1.hide();
-					bgd2.hide();
-					bgd3.hide();
-					bgd4.hide();
-				}
-				if (destination.index == 2) {
-					// for(var i = 1; i <= 3; i ++){
-					// 	$('.teamItem').css({			
-					// 		left: 0,
-					// 	})
-					// }
-				}
-				if (destination.index == 3) {
-					$('.home_pg4').removeClass('active');
-				}
-				if (destination.index == 4) {
-					$('.home_pg5').removeClass('active');
-				}
-			},
-			afterLoad: function (origin, destination, direction) {
-				if (destination.index == 0) {
-					$('.home_pg1').addClass('active');
-					$('#home_bg1_vd')[0].play();
-
-				}
-				if (destination.index == 1) {
-					var tl = new TimelineMax({ delay: 0 });
-					var t2 = new TimelineMax({ delay: 0.5 });
-					var t3 = new TimelineMax({ delay: 1 });
-					var t4 = new TimelineMax({ delay: 1.5 });
-
-					var bgd1 = $('.map--1');
-					var bgd2 = $('.map--2');
-					var bgd3 = $('.map--3');
-					var bgd4 = $('.map--4');
-					bgd1.show();
-					bgd2.show();
-					bgd3.show();
-					bgd4.show();
-
-					tl.from(bgd1, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
-					t2.from(bgd2, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
-					t3.from(bgd3, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
-					t4.from(bgd4, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
-				}
-				if (destination.index == 2) {
-
-				}
-				if (destination.index == 3) {
-
-					$('.home_pg4').addClass('active');
-				}
-				if (destination.index == 4) {
-
-					$('.home_pg5').addClass('active');
-				}
-			}
-		});
-	</script>
-	<script type="text/javascript" src="js/slick.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
-	<script>
-		$(document).ready(function () {
-			$('.teamGroup').slick(
-				{
-					infinite: false,
-					speed: 300,
-					slidesToShow: 3,
-					slidesToScroll: 3,
-					arrows: false,
-					dots: true,
-					responsive: [
-						{
-							breakpoint: 768,
-							settings: {
-								slidesToShow: 1,
-								slidesToScroll: 1,
-								infinite: true,
-								dots: true,
-							}
-						}
-					]
-				}
-			);
-			
-		});
-	</script>
-	<script>
-		$(document).ready(function(){
-				$.ajax({
-					url: 'BG4.php',
-					dataType: 'text',
-					success: function(data) {
-						$('.pointCard').append(data);  
-						
-						$('.pointCard').slick(
-						{
-							infinite: false,
-							speed: 300,
-							slidesToShow: 3,
-							arrows: false,
-							dots: false,
-							responsive: [
-								{
-									breakpoint: 768,
-									settings: {
-										slidesToShow: 1,
-										slidesToScroll: 1,
-										dots: true,
-									}
-								}
-							]
-						}
-						); 
-						const tilt = $(".card").tilt({
-							maxTilt: 15,
-							scale: 1.05,
-							perspective: 500,
-							// easing: "cubic-bezier(.03,.98,.52,.99)",
-							speed: 2500,
-							glare: true,
-							maxGlare:0.6,
-						}); 
-					}
-				});
-			});
-		</script>
-	<script>
-		$('.humberger_btn').click(function () {
-			$(this).toggleClass('active');
-		})
-	</script>
-</body>
-
-</html>

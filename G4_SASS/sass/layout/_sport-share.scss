@@ -113,20 +113,28 @@ body {
     font-size: 0;
     border-top: 1px solid #0052b2;
 }
-.site_item{
+.site_item1,
+.site_item2,
+.site_item3{
     display:inline-block;
     width:33.3%;
     padding-top: 6%;
     text-align: center;
 }
-.site_item img{
+.site_item1 img,
+.site_item2 img,
+.site_item3 img{
     width:100%;
 }
-.site_item p{
+.site_item1 p,
+.site_item2 p,
+.site_item3 p{
     font-size: 18px;
     line-height: 2;
 }
-.site_item span{
+.site_item1 span,
+.site_item2 span,
+.site_item3 span{
     display:block;
     font-size: 18px;
     font-family:'HanWangZonYi';
@@ -266,19 +274,14 @@ td img{
     width:10%;
 }
 .assess_table table tr td:nth-child(3){
-    width:60%;
+    width:70%;
     text-align: left;
     font-size: 16px;
-    line-height: 1;
 }
 .assess_table table tr td:nth-child(4){
     font-size: 16px;
     color:#0052b2;
-    width:20%;
-}
-.rank{
-    color:yellow;
-    font-size: 20px;
+    width:10%;
 }
 .group_page{
     width:100%;
