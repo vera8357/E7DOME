@@ -30,7 +30,7 @@
 				<div class="humberger_line bot"></div>
 			</div>
 			<div class="logo">
-				<a href="index.html">
+				<a href="index.php">
 					<img src="images/e7logo.png" alt=""> </a>
 			</div>
 			<div class="login">
@@ -39,19 +39,19 @@
 			</div>
 			<ul>
 				<li>
-					<a href="site_info.html"> 場地介紹 </a>
+					<a href="site_info.php"> 場地介紹 </a>
 				</li>
 				<li>
-					<a href="booking.html"> 預約場地 </a>
+					<a href="booking.php"> 預約場地 </a>
 				</li>
 				<li>
-					<a href="group.html"> 運動揪團 </a>
+					<a href="group.php"> 運動揪團 </a>
 				</li>
 				<li>
-					<a href="about.html"> 關於我們 </a>
+					<a href="about.php"> 關於我們 </a>
 				</li>
 				<li>
-					<a href="chat-robot.html"> 諮詢專區 </a>
+					<a href="chat-robot.php"> 諮詢專區 </a>
 				</li>
 			</ul>
 		</div>

@@ -15,7 +15,7 @@ requirejs( [ '../js/index' ], function( Flickity ) {
 // /*
 // pkgd
 requirejs( [
-  '../../dist/flickity.pkgd.js'
+  'dist/flickity.pkgd.js'
 ], function( Flickity ) {
   new Flickity('#gallery');
 });
