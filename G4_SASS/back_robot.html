@@ -107,6 +107,7 @@
             window.onload = solve;//一讀取就執行solve
 
             function solve() {//諮詢管理
+            $('#back_add').show();
                 $.ajax({
                     url: 'back_robot.php',
                     dataType: 'text',
@@ -161,7 +162,8 @@
                 });
             }
             
-            function unsolve() {////尚未回答管理}
+            function unsolve() {////尚未回答管理
+            $('#back_add').hide();
                 $.ajax({
                     url: 'back_robot.php',
                     dataType: 'text',
