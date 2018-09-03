@@ -28,9 +28,10 @@ try{
 			case 3:
 				echo "請不要問我這個問題。";
 				break;
+
 		}
 	}
-	}
+}
 	else{
 		foreach($bots as $ans){
 			echo $ans['ANSWER'];
