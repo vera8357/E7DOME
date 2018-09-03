@@ -56,14 +56,11 @@
     <div class="field">
       <input id="register" maxlength="20" type="text">
       <label for="register">
-        <span>please tell me</span>
+        <span class="ptm">please tell me</span>
       </label>
       <!-- <button id="okbtn">OK</button> -->
     </div>
-    <div class="coach_img">
-      <!-- <img class="coach" src="images/chatrobot/coach.png" alt="coach"> -->
-    </div>
-    <!-- <img class="coach" src="images/chatrobot/coach.png" alt="coach"> -->
+    <div class="coach_img"></div>
   </section>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
@@ -82,7 +79,7 @@
       var li = document.createElement("li");
       newUl.appendChild(li);
       li.className = "li_ans";
-      $('.li_ans').html("歡迎來到E7DOME,有任何問題都可問我"); //載入後出現的問候
+      $('.li_ans').html('<img class="portrait" src="images/brush/alert-d.png">歡迎來到E7DOME,有任何問題都可問我'); //載入後出現的問候
 
       $('#register').keyup(function (e) {
         var convalue = this.value.trim();
@@ -102,7 +99,7 @@
               li.className = "li_ans";  //機器人li
               ri.className = "rli_ans"; //使用者li
               // console.log(data);
-              li.innerHTML = data;
+              li.innerHTML = '<img class="portrait" src="images/brush/alert-d.png">'+ data;
               ri.innerHTML = convalue;
             }
           });
