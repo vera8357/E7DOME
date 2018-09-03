@@ -171,311 +171,6 @@ h1,
 h2 {
   font-family: 'HanWangZonYi'; }
 
-* {
-  box-sizing: border-box; }
-
-body {
-  overflow-x: hidden; }
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: "Questrial", " Microsoft JhengHei", "微軟正黑體", sans-serif; }
-
-h2 {
-  font-size: 3.5em;
-  margin: 0.83em 0;
-  padding: 10px; }
-
-p {
-  font-family: "Questrial", " Microsoft JhengHei", "微軟正黑體", sans-serif;
-  margin: 1em 0; }
-
-.min {
-  width: 100%; }
-
-.bg-top {
-  background-color: #0f0111;
-  background-image: url("../images/about-material/about-bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #fff; }
-
-.bg-blue {
-  background-color: #0f0111;
-  color: #fff; }
-
-.header-indent {
-  padding-top: 205px; }
-
-.container-big {
-  max-width: 1200px;
-  margin: auto; }
-
-.block-item {
-  display: flex;
-  flex-wrap: wrap;
-  padding-bottom: 6em; }
-
-.block-item .block-text:first-child {
-  padding-right: 4em; }
-
-.block-text {
-  width: 50%; }
-
-.block-aboutus {
-  opacity: 0.7;
-  line-height: 1.4; }
-
-.bolck-image {
-  width: 50%; }
-
-.an-first {
-  width: 608px;
-  height: calc((608px / 3.2) * 3);
-  position: relative;
-  float: right; }
-
-.block-item .block-text:last-child {
-  padding-left: 4em; }
-
-.block-item-introduction {
-  display: block;
-  overflow: hidden; }
-
-.sports-introduction {
-  width: 90%;
-  float: right;
-  background-size: 100%;
-  background-image: url("../../images/about-material/Introduction-page/Star-track.svg");
-  background-repeat: no-repeat;
-  position: relative;
-  background-position: top right;
-  padding-bottom: 50%; }
-
-.sports-introduction a {
-  color: #fff; }
-
-.basketball h3 {
-  position: absolute;
-  font-size: 2em;
-  top: 40%;
-  right: 20%; }
-
-.basketball-o {
-  position: absolute;
-  width: 20%;
-  top: 25%;
-  right: -4.5%; }
-
-.badminton h3 {
-  position: absolute;
-  font-size: 2em;
-  top: 30%;
-  right: 35%; }
-
-.badminton-o {
-  position: absolute;
-  border-radius: 50%;
-  width: 20%;
-  top: 5%;
-  right: 45%; }
-
-.bowling h3 {
-  position: absolute;
-  font-size: 2em;
-  top: 80%;
-  right: 70%; }
-
-.bowling-o {
-  position: absolute;
-  width: 20%;
-  top: 50%;
-  right: 80%; }
-
-.rock-climbing h3 {
-  position: absolute;
-  font-size: 2em;
-  top: 70%;
-  right: 25%; }
-
-.rock-climbing-o {
-  position: absolute;
-  border-radius: 50%;
-  width: 15%;
-  top: 55%;
-  right: 35%; }
-
-.point-txt1 {
-  position: absolute;
-  top: -25px;
-  right: 80%; }
-
-.point-txt2 {
-  position: absolute;
-  top: -25px;
-  right: 80%; }
-
-.point-txt3 {
-  position: absolute;
-  top: -25px;
-  right: 80%; }
-
-.point-txt4 {
-  position: absolute;
-  top: -25px;
-  right: 80%; }
-
-.business-info {
-  position: relative;
-  overflow: hidden; }
-
-.l-color-block {
-  position: absolute;
-  z-index: -1;
-  top: -10%;
-  left: -5%;
-  width: 500px;
-  height: 200%;
-  background-color: #ffb505;
-  transform: rotate(-20deg); }
-
-.r-color-block {
-  position: absolute;
-  z-index: -1;
-  top: -8%;
-  right: -10%;
-  width: 10%;
-  height: 100%;
-  background-color: #ffb505;
-  transform: rotate(-20deg); }
-
-.businfo {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  position: relative; }
-
-.business-text {
-  align-self: center;
-  margin-top: 6em;
-  margin-bottom: 6em; }
-
-.business-text h3 {
-  font-size: 2em;
-  line-height: 1.3em;
-  font-weight: bold;
-  padding: 10px; }
-
-.business-text span {
-  margin-left: 1em;
-  margin-right: 1em;
-  font-size: 1.5em;
-  font-family: "Questrial", " Microsoft JhengHei", "微軟正黑體", sans-serif; }
-
-.phone {
-  padding: 1em; }
-
-.time {
-  padding: 1em; }
-
-.landmark {
-  padding: 1em; }
-
-.phone img {
-  width: 50px;
-  height: 50px;
-  vertical-align: middle; }
-
-.time img {
-  width: 50px;
-  height: 50px;
-  vertical-align: middle; }
-
-.landmark img {
-  width: 50px;
-  height: 50px;
-  vertical-align: middle; }
-
-.container {
-  width: 100%; }
-
-.layer div {
-  position: absolute; }
-
-.redman {
-  top: 10px;
-  right: 1%; }
-
-.redman img {
-  width: 60%; }
-
-.blackman {
-  top: 300px;
-  right: 70%; }
-
-.blackman img {
-  width: 70%; }
-
-.fastball {
-  top: 50px;
-  right: 15%; }
-
-.fastball img {
-  width: 50%; }
-
-.speed-ball {
-  top: 10px;
-  left: 73%; }
-
-.speed-ball img {
-  width: 50%; }
-
-.bg-buttom {
-  background-image: url("../images/about-material/about-bg2.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #fff; }
-
-.slide-site {
-  padding: 0 1em; }
-
-.container-side {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 2em; }
-
-.site-text {
-  width: 50%;
-  padding-bottom: 20px;
-  padding-right: 10px; }
-
-.site-text p {
-  font-family: "Questrial", " Microsoft JhengHei", "微軟正黑體", sans-serif;
-  margin: 1em 0;
-  opacity: 0.7;
-  line-height: 1.4; }
-
-#map {
-  width: 100%;
-  height: 300px; }
-
-.cell img {
-  width: 100%;
-  margin: auto; }
-
-.side {
-  width: 50%;
-  padding-bottom: 20px;
-  padding-left: 10px; }
-
-footer {
-  height: 80px;
-  background-color: #ffb505; }
-
 .an-first > img,
 .an-first > div {
   position: absolute;
@@ -1418,3 +1113,318 @@ body {
   position: absolute;
   left: 10px;
   top: 10px; }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  overflow: -moz-hidden-unscrollable;
+  height: 100%; }
+
+body::-webkit-scrollbar {
+  display: none; }
+
+body {
+  -ms-overflow-style: none;
+  height: 100%;
+  width: 100vw;
+  overflow: auto; }
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Questrial", " Microsoft JhengHei", "微軟正黑體", sans-serif; }
+
+h2 {
+  font-size: 3.5em;
+  margin: 0.83em 0;
+  padding: 10px; }
+
+p {
+  font-family: "Questrial", " Microsoft JhengHei", "微軟正黑體", sans-serif;
+  margin: 1em 0; }
+
+.min {
+  width: 100%; }
+
+.bg-top {
+  background-color: #0f0111;
+  background-image: url("../images/about-material/about-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff; }
+
+.bg-blue {
+  background-color: #0f0111;
+  color: #fff; }
+
+.header-indent {
+  padding-top: 205px; }
+
+.container-big {
+  max-width: 1200px;
+  margin: auto; }
+
+.block-item {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 6em; }
+
+.block-item .block-text:first-child {
+  padding-right: 4em; }
+
+.block-text {
+  width: 50%; }
+
+.block-aboutus {
+  opacity: 0.7;
+  line-height: 1.4; }
+
+.bolck-image {
+  width: 50%; }
+
+.an-first {
+  width: 608px;
+  height: calc((608px / 3.2) * 3);
+  position: relative;
+  float: right; }
+
+.block-item .block-text:last-child {
+  padding-left: 4em; }
+
+.block-item-introduction {
+  display: block;
+  overflow: hidden; }
+
+.sports-introduction {
+  width: 90%;
+  float: right;
+  background-size: 100%;
+  background-image: url("../../images/about-material/Introduction-page/Star-track.svg");
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: top right;
+  padding-bottom: 50%; }
+
+.sports-introduction a {
+  color: #fff; }
+
+.basketball h3 {
+  position: absolute;
+  font-size: 2em;
+  top: 40%;
+  right: 20%; }
+
+.basketball-o {
+  position: absolute;
+  width: 20%;
+  top: 25%;
+  right: -4.5%; }
+
+.badminton h3 {
+  position: absolute;
+  font-size: 2em;
+  top: 30%;
+  right: 35%; }
+
+.badminton-o {
+  position: absolute;
+  border-radius: 50%;
+  width: 20%;
+  top: 5%;
+  right: 45%; }
+
+.bowling h3 {
+  position: absolute;
+  font-size: 2em;
+  top: 80%;
+  right: 70%; }
+
+.bowling-o {
+  position: absolute;
+  width: 20%;
+  top: 50%;
+  right: 80%; }
+
+.rock-climbing h3 {
+  position: absolute;
+  font-size: 2em;
+  top: 70%;
+  right: 25%; }
+
+.rock-climbing-o {
+  position: absolute;
+  border-radius: 50%;
+  width: 15%;
+  top: 55%;
+  right: 35%; }
+
+.point-txt1 {
+  position: absolute;
+  top: -25px;
+  right: 80%; }
+
+.point-txt2 {
+  position: absolute;
+  top: -25px;
+  right: 80%; }
+
+.point-txt3 {
+  position: absolute;
+  top: -25px;
+  right: 80%; }
+
+.point-txt4 {
+  position: absolute;
+  top: -25px;
+  right: 80%; }
+
+.business-info {
+  position: relative;
+  overflow: hidden; }
+
+.l-color-block {
+  position: absolute;
+  z-index: -1;
+  top: -10%;
+  left: -5%;
+  width: 500px;
+  height: 200%;
+  background-color: #ffb505;
+  transform: rotate(-20deg); }
+
+.r-color-block {
+  position: absolute;
+  z-index: -1;
+  top: -8%;
+  right: -10%;
+  width: 10%;
+  height: 100%;
+  background-color: #ffb505;
+  transform: rotate(-20deg); }
+
+.businfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative; }
+
+.business-text {
+  align-self: center;
+  margin-top: 6em;
+  margin-bottom: 6em; }
+
+.business-text h3 {
+  font-size: 2em;
+  line-height: 1.3em;
+  font-weight: bold;
+  padding: 10px; }
+
+.business-text span {
+  margin-left: 1em;
+  margin-right: 1em;
+  font-size: 1.5em;
+  font-family: "Questrial", " Microsoft JhengHei", "微軟正黑體", sans-serif; }
+
+.phone {
+  padding: 1em; }
+
+.time {
+  padding: 1em; }
+
+.landmark {
+  padding: 1em; }
+
+.phone img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle; }
+
+.time img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle; }
+
+.landmark img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle; }
+
+.container {
+  width: 100%; }
+
+.layer div {
+  position: absolute; }
+
+.redman {
+  top: 10px;
+  right: 1%; }
+
+.redman img {
+  width: 60%; }
+
+.blackman {
+  top: 300px;
+  right: 70%; }
+
+.blackman img {
+  width: 70%; }
+
+.fastball {
+  top: 50px;
+  right: 15%; }
+
+.fastball img {
+  width: 50%; }
+
+.speed-ball {
+  top: 10px;
+  left: 73%; }
+
+.speed-ball img {
+  width: 50%; }
+
+.bg-buttom {
+  background-image: url("../images/about-material/about-bg2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff; }
+
+.slide-site {
+  padding: 0 1em; }
+
+.container-side {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 2em; }
+
+.site-text {
+  width: 50%;
+  padding-bottom: 20px;
+  padding-right: 10px; }
+
+.site-text p {
+  font-family: "Questrial", " Microsoft JhengHei", "微軟正黑體", sans-serif;
+  margin: 1em 0;
+  opacity: 0.7;
+  line-height: 1.4; }
+
+#map {
+  width: 100%;
+  height: 300px; }
+
+.cell img {
+  width: 100%;
+  margin: auto; }
+
+.side {
+  width: 50%;
+  padding-bottom: 20px;
+  padding-left: 10px; }
+
+footer {
+  height: 80px;
+  background-color: #ffb505; }
