@@ -141,8 +141,7 @@
 											$teammem->execute(); 
 											$rows = $teammem->rowCount();//計算抓到幾筆資料
 											?>
-											<span><?php echo $rows+1;//揪團人數+1(團長)?></span>/
-											<span><?php echo $teamsRow["TEAM_MEM"];?></span>人
+											<span><?php echo $rows+1;//揪團人數+1(團長)?></span>/<span><?php echo $teamsRow["TEAM_MEM"];?></span>人				
 										</div>	
 										<div class="teamTxt">
 										<?php echo $teamsRow["TEAM_INFO"];?>
