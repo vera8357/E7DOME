@@ -13,42 +13,7 @@
 </head>
 <body>
     <header>
-		<div class="wrapper">
-			<div class="humberger_btn">
-				<div class="humberger_line top"></div>
-				<div class="humberger_line mid"></div>
-				<div class="humberger_line bot"></div>
-			</div>
-			<div class="logo">
-			<a href="index.html">
-				<img src="images/e7logo.png" alt=""> </a>
-			</div>
-			<div class="login">
-					<!-- <a href="#"><img src="images/user-icon.png"></a> -->
-					<a href="#">登入</a>
-			</div>
-			<ul>
-			<li>
-				<a href="site_info.html"> 場地介紹 </a>
-			</li>
-			<li>
-				<a href="booking.html"> 預約場地 </a>
-			</li>
-			<li>
-				<a href="group.html"> 運動揪團 </a>
-			</li>
-			<li>
-				<a href="about.html"> 關於我們 </a>
-			</li>
-			<li>
-				<a href="chat-robot.html"> 諮詢專區 </a>
-			</li>
-			<!-- <li>
-				<a href="#">
-				<img src="images/user-icon.png"> </a>
-			</li> -->
-			</ul>
-		</div>
+		<?php include 'header.php';?>
     </header>
     <div class="site_info_pg">
         <div class="site_info_pg_bluebox2">

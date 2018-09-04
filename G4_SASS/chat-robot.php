@@ -20,7 +20,7 @@
         <div class="humberger_line bot"></div>
       </div>
       <div class="logo">
-        <a href="index.html">
+        <a href="index.php">
           <img src="images/e7logo.png" alt=""> </a>
       </div>
       <div class="login">
@@ -29,19 +29,19 @@
       </div>
       <ul>
         <li>
-          <a href="#"> 場地介紹 </a>
+          <a href="site_info.php"> 場地介紹 </a>
         </li>
         <li>
-          <a href="booking.html"> 預約場地 </a>
+          <a href="booking.php"> 預約場地 </a>
         </li>
         <li>
-          <a href="group.html"> 運動揪團 </a>
+          <a href="group.php"> 運動揪團 </a>
         </li>
         <li>
-          <a href="about.html"> 關於我們 </a>
+          <a href="about.php"> 關於我們 </a>
         </li>
         <li>
-          <a href="chat-robot.html"> 諮詢專區 </a>
+          <a href="chat-robot.php"> 諮詢專區 </a>
         </li>
       </ul>
     </div>
@@ -58,7 +58,7 @@
       <label for="register">
         <span>please tell me</span>
       </label>
-      <button>OK</button>
+      <!-- <button id="okbtn">OK</button> -->
     </div>
     <div class="coach_img">
       <!-- <img class="coach" src="images/chatrobot/coach.png" alt="coach"> -->
@@ -78,29 +78,36 @@
       newUl = document.createElement('ul');
       newUl.id = 'talk';
       document.getElementById('message').prepend(newUl);
+
+      var li = document.createElement("li");
+      newUl.appendChild(li);
+      li.className = "li_ans";
+      $('.li_ans').html("歡迎來到E7DOME,有任何問題都可問我"); //載入後出現的問候
+
       $('#register').keyup(function (e) {
         var convalue = this.value.trim();
-        console.log(convalue);
-          if (event.keyCode == 13) {
-            $.ajax({
-              url: 'php/bot.php',
-              data: { content: convalue },
-              type: 'POST',
-              dataType: 'text',
-              success: function (data) {
-                var li = document.createElement("li");  //機器人的答案
-                var ri = document.createElement("li");  //使用者輸入問題
-                newUl.appendChild(li);  //機器人
-                newUl.appendChild(ri);  //使用者
-                li.className = "li_ans";  //機器人li
-                ri.className = "rli_ans"; //使用者li
-                // console.log(data);
-                li.innerHTML = data;  
-                ri.innerHTML = convalue;
-              }
-            });
-            this.value = "";
-          }
+        // console.log(convalue);
+        if (event.keyCode == 13) {
+          $.ajax({
+            url: 'php/bot.php',
+            data: { content: convalue },
+            type: 'POST',
+            dataType: 'text',
+            success: function (data) {
+              var li = document.createElement("li");  //機器人的答案
+              var ri = document.createElement("li");  //使用者輸入問題
+              newUl.appendChild(ri); //使用者
+              newUl.appendChild(li);  //機器人
+
+              li.className = "li_ans";  //機器人li
+              ri.className = "rli_ans"; //使用者li
+              // console.log(data);
+              li.innerHTML = '<img class="portrait" src="images/chatrobot/anse.jpeg">' + data;
+              ri.innerHTML = convalue;
+            }
+          });
+          this.value = "";
+        }
       });
     });
   </script>
