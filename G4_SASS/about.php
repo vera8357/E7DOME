@@ -13,38 +13,7 @@
 
 <body class="about-page">
   <header>
-    <div class="wrapper">
-      <div class="humberger_btn">
-        <div class="humberger_line top"></div>
-        <div class="humberger_line mid"></div>
-        <div class="humberger_line bot"></div>
-      </div>
-      <div class="logo">
-        <a href="index.php">
-          <img src="images/e7logo.png" alt=""> </a>
-      </div>
-      <div class="login">
-        <!-- <a href="#"><img src="images/user-icon.png"></a> -->
-        <a href="#">登入</a>
-      </div>
-      <ul>
-        <li>
-          <a href="site_info.php"> 場地介紹 </a>
-        </li>
-        <li>
-          <a href="booking.php"> 預約場地 </a>
-        </li>
-        <li>
-          <a href="group.php"> 運動揪團 </a>
-        </li>
-        <li>
-          <a href="about.php"> 關於我們 </a>
-        </li>
-        <li>
-          <a href="chat-robot.php"> 諮詢專區 </a>
-        </li>
-      </ul>
-    </div>
+     <?php include 'header.php';?> 
   </header>
   <div class="wrapper01">
     <div class="min">
@@ -252,12 +221,12 @@
   <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
   <script src="https://thefrontendblog.com/hosted/jquery.parallax.min.js"></script>
   <script src="js/about-anmation.js"></script>
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-  <script src="js/map.js"></script>
   <script src="libs/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
   <script src="libs/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
-  <script src="libs/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+  <!-- <script src="libs/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script> -->
   <script src="js/about-scrollmagic.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+  <script src="js/map.js"></script>
   <script data-main="main" src="https://unpkg.com/requirejs@2/require.js"></script>
     <script>
       $('.humberger_btn').click(function () {

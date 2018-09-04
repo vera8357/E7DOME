@@ -14,38 +14,7 @@
 
 <body class="group-body">
     <header>
-        <div class="wrapper">
-            <div class="humberger_btn">
-                <div class="humberger_line top"></div>
-                <div class="humberger_line mid"></div>
-                <div class="humberger_line bot"></div>
-            </div>
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/e7logo.png" alt=""> </a>
-            </div>
-            <div class="login">
-                <!-- <a href="#"><img src="images/user-icon.png"></a> -->
-                <a href="#">登入</a>
-            </div>
-            <ul>
-                <li>
-                    <a href="#"> 場地介紹 </a>
-                </li>
-                <li>
-                    <a href="booking.html"> 預約場地 </a>
-                </li>
-                <li>
-                    <a href="group.html"> 運動揪團 </a>
-                </li>
-                <li>
-                    <a href="about.html"> 關於我們 </a>
-                </li>
-                <li>
-                    <a href="chat-robot.html"> 諮詢專區 </a>
-                </li>
-            </ul>
-        </div>
+        <?php include 'header.php';?>
     </header>
     <section>
         <div class="select_bar cl-12">
@@ -79,11 +48,7 @@
 
 //連線資料庫
 try {
-    $dsn = "mysql:host=localhost;port=3306;dbname=cd102g4;charset=utf8";
-    $user = "root";
-    $password = "root";
-    $options = array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION);
-    $pdo = new PDO($dsn, $user, $password, $options);
+    include("php/connect_g4.php");
 
     $sql = "SELECT * FROM team JOIN booking ON (team.BOO_NO = booking.BOO_NO) JOIN facility ON (facility.FAC_NO = booking.FAC_NO) ";
     $team = $pdo->query( $sql);

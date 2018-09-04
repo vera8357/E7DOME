@@ -80,39 +80,53 @@ if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
 	<div id="enroll_wrap">
 		<p>會員註冊</p><span id="close_2"><img src="images/member_pic/close.png"></span>
 		<form action="php/enroll.php">
-			<ul>
-				<li class="enroll_li" >
+			<table id="enroll_table">
+				<tr>
 
-					<span id="check_id"></span>
-					<span id="check_psw"></span>
+					<td class="enroll_li">
+						<span id="check_id"></span>
+						<span id="check_psw"></span>
+					</td>
 					
-				</li>
+				</tr>
 
-				<li class="enroll_li">
-					會員帳號:<input id="enroll_id" type="text" name="enroll_id" required="required">
-				</li>
+				<tr>
+					<td class="enroll_li">
+						會員帳號:<input id="enroll_id" type="text" name="enroll_id" required="required">
+					</td>
+				</tr>
 
-				<li class="enroll_li"> 
-					會員密碼:<input id="enroll_psw1" type="password" name="enroll_psw1" required="required">
-				</li>
+				<tr> 
+					<td class="enroll_li">
+						會員密碼:<input id="enroll_psw1" type="password" name="enroll_psw1" required="required">
+					</td>
+				</tr>
 
-				<li class="enroll_li">
-					確認密碼:<input id="enroll_psw2" type="password" name="enroll_psw2" required="required">
-				</li>
+				<tr>
+					<td class="enroll_li">
+						確認密碼:<input id="enroll_psw2" type="password" name="enroll_psw2" required="required">
+					</td>
+				</tr>
 
-				<li class="enroll_li">
-					會員名稱:<input id="enroll_name" type="text" name="enroll_name" required="required">
-				</li>
+				<tr>
+					<td class="enroll_li">
+						會員名稱:<input id="enroll_name" type="text" name="enroll_name" required="required">
+					</td>
+				</tr>
 
-				<li class="enroll_li">
-					手機號碼:<input id="enroll_tel" type="tel" name="enroll_tel" required="required" placeholder="格式0912345678">
-				</li>
+				<tr>
+					<td class="enroll_li">
+						手機號碼:<input id="enroll_tel" type="tel" name="enroll_tel" required="required" placeholder="格式0912345678">
+					</td>
+				</tr>
 
-				<li class="enroll_li">
-					<input id="enroll_send" type="submit"  value="確認送出">
-				</li>
+				<tr>
+					<td class="enroll_li">
+						<input id="enroll_send" type="submit"  value="確認送出">
+					</td>
+				</tr>
 
-			</ul>
+			</table>
 
 			
 
