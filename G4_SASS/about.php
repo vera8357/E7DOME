@@ -223,7 +223,7 @@
   <script src="js/about-anmation.js"></script>
   <script src="libs/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
   <script src="libs/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
-  <script src="libs/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+  <!-- <script src="libs/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script> -->
   <script src="js/about-scrollmagic.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
   <script src="js/map.js"></script>

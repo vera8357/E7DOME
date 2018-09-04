@@ -7,6 +7,9 @@
     flex-direction: row;
     padding-bottom: 2em;
   }
+  .header-indent {
+    padding-top: 100px;
+  }
   .block-item .block-text:first-child {
     padding-right: 0em;
   }
@@ -19,7 +22,7 @@
     width: 50%;
     padding: 0px 10px 10px 10px;
   }
-  .block-text h2{
+  .block-text h2 {
     font-size: 2.5em;
     margin: 14px;
   }
@@ -30,7 +33,7 @@
     justify-content: center;
   }
   .block-image-video {
-    height: auto
+    height: auto;
   }
   .block-item .block-text:last-child {
     padding-left: 0em;
@@ -75,16 +78,15 @@
   .fastball img {
     width: 40%;
   }
-  
 }
+
 @media screen and (max-width: 768px) {
   .bg-top {
     width: 100%;
     height: 100%;
   }
   .block-item {
-    display: flex;
-    // flex-direction: column-reverse;
+    display: flex; // flex-direction: column-reverse;
     padding-bottom: 2em;
   }
   .block-item .block-text:first-child {
