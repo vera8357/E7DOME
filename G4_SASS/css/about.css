@@ -170,6 +170,338 @@ h1,
 h2 {
   font-family: 'HanWangZonYi'; }
 
+* {
+  box-sizing: border-box; }
+
+html {
+  overflow: -moz-hidden-unscrollable;
+  height: 100%; }
+
+body::-webkit-scrollbar {
+  display: none; }
+
+body {
+  -ms-overflow-style: none;
+  height: 100%;
+  width: 100vw;
+  overflow: auto; }
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Questrial", " Microsoft JhengHei", "微軟正黑體", sans-serif; }
+
+.block-text h2 {
+  font-size: 3.5em;
+  margin: 0.83em 0;
+  padding: 10px;
+  font-family: "Questrial", " Microsoft JhengHei", "微軟正黑體", sans-serif; }
+
+.business-text h2 {
+  font-size: 3.5em;
+  padding: 10px;
+  font-family: "Questrial", " Microsoft JhengHei", "微軟正黑體", sans-serif; }
+
+.site-text h2 {
+  font-size: 3.5em;
+  padding: 10px;
+  font-family: "Questrial", " Microsoft JhengHei", "微軟正黑體", sans-serif; }
+
+.block-aboutus p {
+  font-family: "Questrial", " Microsoft JhengHei", "微軟正黑體", sans-serif;
+  margin: 1em 0;
+  font-family: "Questrial", " Microsoft JhengHei", "微軟正黑體", sans-serif; }
+
+.site-text p {
+  font-family: "Questrial", " Microsoft JhengHei", "微軟正黑體", sans-serif;
+  margin: 1em 0;
+  font-family: "Questrial", " Microsoft JhengHei", "微軟正黑體", sans-serif; }
+
+.min {
+  width: 100%; }
+
+.bg-top {
+  background-color: #0f0111;
+  background-image: url("../images/about-material/about-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff; }
+
+.bg-blue {
+  background-color: #0f0111;
+  color: #fff; }
+
+.header-indent {
+  padding-top: 205px; }
+
+.container-big {
+  max-width: 1200px;
+  margin: auto; }
+
+.block-item {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 6em; }
+
+.block-item .block-text:first-child {
+  padding-right: 4em; }
+
+.block-text {
+  width: 50%; }
+
+.block-aboutus {
+  opacity: 0.7;
+  line-height: 1.4; }
+
+.bolck-image {
+  width: 50%; }
+
+.an-first {
+  width: 608px;
+  height: calc((608px / 3.2) * 3);
+  position: relative;
+  float: right; }
+
+.block-item .block-text:last-child {
+  padding-left: 4em; }
+
+.block-item-introduction {
+  display: block;
+  overflow: hidden; }
+
+.sports-introduction {
+  width: 90%;
+  float: right;
+  background-size: 100%;
+  background-image: url("../images/about-material/Introduction-page/Star-track.svg");
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: top right;
+  padding-bottom: 50%; }
+
+.sports-introduction a {
+  color: #fff; }
+
+.basketball h3 {
+  position: absolute;
+  font-size: 2em;
+  top: 40%;
+  right: 20%; }
+
+.basketball-o {
+  position: absolute;
+  width: 20%;
+  top: 25%;
+  right: -4.5%; }
+
+.badminton h3 {
+  position: absolute;
+  font-size: 2em;
+  top: 30%;
+  right: 35%; }
+
+.badminton-o {
+  position: absolute;
+  border-radius: 50%;
+  width: 20%;
+  top: 5%;
+  right: 45%; }
+
+.bowling h3 {
+  position: absolute;
+  font-size: 2em;
+  top: 80%;
+  right: 70%; }
+
+.bowling-o {
+  position: absolute;
+  width: 20%;
+  top: 50%;
+  right: 80%; }
+
+.rock-climbing h3 {
+  position: absolute;
+  font-size: 2em;
+  top: 70%;
+  right: 25%; }
+
+.rock-climbing-o {
+  position: absolute;
+  border-radius: 50%;
+  width: 15%;
+  top: 55%;
+  right: 35%; }
+
+.point-txt1 {
+  position: absolute;
+  top: -25px;
+  right: 80%; }
+
+.point-txt2 {
+  position: absolute;
+  top: -25px;
+  right: 80%; }
+
+.point-txt3 {
+  position: absolute;
+  top: -25px;
+  right: 80%; }
+
+.point-txt4 {
+  position: absolute;
+  top: -25px;
+  right: 80%; }
+
+.business-info {
+  position: relative;
+  overflow: hidden; }
+
+.l-color-block {
+  position: absolute;
+  z-index: -1;
+  top: -10%;
+  left: -5%;
+  width: 500px;
+  height: 200%;
+  background-color: #ffb505;
+  transform: rotate(-20deg); }
+
+.r-color-block {
+  position: absolute;
+  z-index: -1;
+  top: -8%;
+  right: -10%;
+  width: 10%;
+  height: 100%;
+  background-color: #ffb505;
+  transform: rotate(-20deg); }
+
+.businfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative; }
+
+.business-text {
+  align-self: center;
+  margin-top: 6em;
+  margin-bottom: 6em; }
+
+.business-text h3 {
+  font-size: 2em;
+  line-height: 1.3em;
+  font-weight: bold;
+  padding: 10px; }
+
+.business-text span {
+  margin-left: 1em;
+  margin-right: 1em;
+  font-size: 1.5em;
+  font-family: "Questrial", " Microsoft JhengHei", "微軟正黑體", sans-serif; }
+
+.phone {
+  padding: 1em; }
+
+.time {
+  padding: 1em; }
+
+.landmark {
+  padding: 1em; }
+
+.phone img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle; }
+
+.time img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle; }
+
+.landmark img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle; }
+
+.container {
+  width: 100%; }
+
+.layer div {
+  position: absolute; }
+
+.redman {
+  top: 10px;
+  right: 1%; }
+
+.redman img {
+  width: 60%; }
+
+.blackman {
+  top: 300px;
+  right: 70%; }
+
+.blackman img {
+  width: 70%; }
+
+.fastball {
+  top: 50px;
+  right: 15%; }
+
+.fastball img {
+  width: 50%; }
+
+.speed-ball {
+  top: 10px;
+  left: 73%; }
+
+.speed-ball img {
+  width: 50%; }
+
+.bg-buttom {
+  background-image: url("../images/about-material/about-bg2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff; }
+
+.slide-site {
+  padding: 0 1em; }
+
+.container-side {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 2em; }
+
+.site-text {
+  width: 50%;
+  padding-bottom: 20px;
+  padding-right: 10px; }
+
+.site-text p {
+  font-family: "Questrial", " Microsoft JhengHei", "微軟正黑體", sans-serif;
+  margin: 1em 0;
+  opacity: 0.7;
+  line-height: 1.4; }
+
+#map {
+  width: 100%;
+  height: 300px; }
+
+.cell img {
+  width: 100%;
+  margin: auto; }
+
+.side {
+  width: 50%;
+  padding-bottom: 20px;
+  padding-left: 10px; }
+
+footer {
+  height: 80px;
+  background-color: #ffb505; }
+
 .an-first > img,
 .an-first > div {
   position: absolute;
@@ -651,266 +983,6 @@ h2 {
     transform: scale(1.1);
     opacity: 1; } }
 
-@media screen and (max-width: 1200px) {
-  .bg-top {
-    width: 100%;
-    height: 100%; }
-  .block-item {
-    flex-direction: row;
-    padding-bottom: 2em; }
-  .block-item .block-text:first-child {
-    padding-right: 0em; }
-  .block-aboutus {
-    line-height: 30px;
-    padding: 1em;
-    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5); }
-  .block-text {
-    width: 50%;
-    padding: 0px 10px 10px 10px; }
-  .block-text h2 {
-    font-size: 2.5em;
-    margin: 0px; }
-  .bolck-image {
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center; }
-  .block-image-video {
-    height: auto; }
-  .block-item .block-text:last-child {
-    padding-left: 0em; }
-  .business-text {
-    align-self: center;
-    margin-top: 3em;
-    margin-bottom: 3em; }
-  .business-text h2 {
-    font-size: 3vw;
-    line-height: 1.3em;
-    font-weight: bold;
-    padding: 1em; }
-  .business-text h3 {
-    font-size: 2vw;
-    line-height: 1.3em;
-    font-weight: bold;
-    padding: 1em; }
-  .landmark {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center; }
-  .redman {
-    top: 10px;
-    right: -450px; }
-  .redman img {
-    width: 30%; }
-  .blackman img {
-    width: 70%; }
-  .fastball {
-    top: -10px;
-    right: -250px; }
-  .fastball img {
-    width: 40%; } }
-
-@media screen and (max-width: 768px) {
-  .bg-top {
-    width: 100%;
-    height: 100%; }
-  .block-item {
-    flex-direction: column-reverse;
-    padding-bottom: 2em; }
-  .block-item .block-text:first-child {
-    padding-right: 0em; }
-  .block-aboutus {
-    line-height: 30px;
-    padding: 1em;
-    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5); }
-  .block-text {
-    width: 100%; }
-  .bolck-image {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center; }
-  .block-image-video {
-    height: auto; }
-  .block-item .block-text:last-child {
-    padding-left: 0em; }
-  .sports-introduction {
-    min-width: 40%;
-    padding-bottom: 10%; }
-  .basketball {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center; }
-  .rock-climbing {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center; }
-  .badminton {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center; }
-  .bowling {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center; }
-  .basketball-o {
-    display: block;
-    margin: auto;
-    position: static;
-    min-width: 50%;
-    top: 0%;
-    left: 0%; }
-  .basketball h3 {
-    align-self: center;
-    position: relative;
-    font-size: 8vw;
-    top: 0%;
-    left: 0%; }
-  .rock-climbing-o {
-    display: block;
-    margin: auto;
-    position: static;
-    min-width: 50%;
-    top: 0%;
-    right: 0%; }
-  .rock-climbing h3 {
-    align-self: center;
-    position: relative;
-    font-size: 8vw;
-    top: 0%;
-    left: 0%; }
-  .badminton-o {
-    display: block;
-    margin: auto;
-    position: static;
-    min-width: 50%;
-    top: 0%;
-    right: 0%; }
-  .badminton h3 {
-    align-self: center;
-    position: relative;
-    font-size: 8vw;
-    top: 0%;
-    left: 0%; }
-  .bowling-o {
-    display: block;
-    margin: auto;
-    position: static;
-    min-width: 50%;
-    top: 0%;
-    right: 0%; }
-  .bowling h3 {
-    align-self: center;
-    position: relative;
-    font-size: 7vw;
-    top: 0%;
-    left: 0%; }
-  .point-txt1 {
-    position: absolute;
-    top: -28px;
-    left: -7%; }
-  .point-txt2 {
-    position: absolute;
-    top: -28px;
-    left: -7%; }
-  .point-txt3 {
-    position: absolute;
-    top: -28px;
-    left: -7%; }
-  .point-txt4 {
-    position: absolute;
-    top: -28px;
-    left: -7%; }
-  .l-color-block {
-    position: absolute;
-    z-index: -1;
-    top: -10%;
-    left: -5%;
-    width: 0vw;
-    height: 200%;
-    background-color: #ffb505;
-    transform: rotate(-20deg); }
-  .r-color-block {
-    position: absolute;
-    z-index: -1;
-    top: -8%;
-    right: -10%;
-    width: 100px;
-    height: 40%;
-    background-color: #ffb505;
-    transform: rotate(-20deg); }
-  .business-text {
-    align-self: center;
-    margin-top: 3em;
-    margin-bottom: 3em; }
-  .business-text h2 {
-    font-size: 8vw;
-    line-height: 1.3em;
-    font-weight: bold;
-    padding: 1em; }
-  .business-text h3 {
-    font-size: 5vw;
-    line-height: 1.3em;
-    font-weight: bold;
-    padding: 1em; }
-  .phone {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center; }
-  .time {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center; }
-  .landmark {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center; }
-  .business-text span {
-    display: inline-block;
-    box-sizing: border-box;
-    margin-left: 1em;
-    margin-right: 1em;
-    font-size: 5vw;
-    padding: 1.5em; }
-  .redman {
-    top: 10px;
-    right: -450px; }
-  .redman img {
-    width: 30%; }
-  .blackman img {
-    width: 70%;
-    display: none; }
-  .fastball {
-    top: -10px;
-    right: -250px; }
-  .fastball img {
-    width: 40%; }
-  .container-side {
-    flex-wrap: wrap;
-    flex-direction: column-reverse;
-    justify-content: space-between; }
-  .site-text h2 {
-    font-size: 8vw;
-    line-height: 1.3em;
-    font-weight: bold;
-    padding: 0.5em; }
-  .site-text p {
-    line-height: 30px;
-    padding: 1em;
-    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5); }
-  .site-text {
-    width: 100%; }
-  .side {
-    width: 100%; } }
-
 .flickity-enabled {
   position: relative; }
 
@@ -1113,317 +1185,264 @@ body {
   left: 10px;
   top: 10px; }
 
-* {
-  box-sizing: border-box; }
-
-html {
-  overflow: -moz-hidden-unscrollable;
-  height: 100%; }
-
-body::-webkit-scrollbar {
-  display: none; }
-
-body {
-  -ms-overflow-style: none;
-  height: 100%;
-  width: 100vw;
-  overflow: auto; }
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: "Questrial", " Microsoft JhengHei", "微軟正黑體", sans-serif; }
-
-h2 {
-  font-size: 3.5em;
-  margin: 0.83em 0;
-  padding: 10px; }
-
-p {
-  font-family: "Questrial", " Microsoft JhengHei", "微軟正黑體", sans-serif;
-  margin: 1em 0; }
-
-.min {
-  width: 100%; }
-
-.bg-top {
-  background-color: #0f0111;
-  background-image: url("../images/about-material/about-bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #fff; }
-
-.bg-blue {
-  background-color: #0f0111;
-  color: #fff; }
-
-.header-indent {
-  padding-top: 205px; }
-
-.container-big {
-  max-width: 1200px;
-  margin: auto; }
-
-.block-item {
-  display: flex;
-  flex-wrap: wrap;
-  padding-bottom: 6em; }
-
-.block-item .block-text:first-child {
-  padding-right: 4em; }
-
-.block-text {
-  width: 50%; }
-
-.block-aboutus {
-  opacity: 0.7;
-  line-height: 1.4; }
-
-.bolck-image {
-  width: 50%; }
-
-.an-first {
-  width: 608px;
-  height: calc((608px / 3.2) * 3);
-  position: relative;
-  float: right; }
-
-.block-item .block-text:last-child {
-  padding-left: 4em; }
-
-.block-item-introduction {
-  display: block;
-  overflow: hidden; }
-
-.sports-introduction {
-  width: 90%;
-  float: right;
-  background-size: 100%;
-  background-image: url("../../images/about-material/Introduction-page/Star-track.svg");
-  background-repeat: no-repeat;
-  position: relative;
-  background-position: top right;
-  padding-bottom: 50%; }
-
-.sports-introduction a {
-  color: #fff; }
-
-.basketball h3 {
-  position: absolute;
-  font-size: 2em;
-  top: 40%;
-  right: 20%; }
-
-.basketball-o {
-  position: absolute;
-  width: 20%;
-  top: 25%;
-  right: -4.5%; }
-
-.badminton h3 {
-  position: absolute;
-  font-size: 2em;
-  top: 30%;
-  right: 35%; }
-
-.badminton-o {
-  position: absolute;
-  border-radius: 50%;
-  width: 20%;
-  top: 5%;
-  right: 45%; }
-
-.bowling h3 {
-  position: absolute;
-  font-size: 2em;
-  top: 80%;
-  right: 70%; }
-
-.bowling-o {
-  position: absolute;
-  width: 20%;
-  top: 50%;
-  right: 80%; }
-
-.rock-climbing h3 {
-  position: absolute;
-  font-size: 2em;
-  top: 70%;
-  right: 25%; }
-
-.rock-climbing-o {
-  position: absolute;
-  border-radius: 50%;
-  width: 15%;
-  top: 55%;
-  right: 35%; }
-
-.point-txt1 {
-  position: absolute;
-  top: -25px;
-  right: 80%; }
-
-.point-txt2 {
-  position: absolute;
-  top: -25px;
-  right: 80%; }
-
-.point-txt3 {
-  position: absolute;
-  top: -25px;
-  right: 80%; }
-
-.point-txt4 {
-  position: absolute;
-  top: -25px;
-  right: 80%; }
-
-.business-info {
-  position: relative;
-  overflow: hidden; }
-
-.l-color-block {
-  position: absolute;
-  z-index: -1;
-  top: -10%;
-  left: -5%;
-  width: 500px;
-  height: 200%;
-  background-color: #ffb505;
-  transform: rotate(-20deg); }
-
-.r-color-block {
-  position: absolute;
-  z-index: -1;
-  top: -8%;
-  right: -10%;
-  width: 10%;
-  height: 100%;
-  background-color: #ffb505;
-  transform: rotate(-20deg); }
-
-.businfo {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  position: relative; }
-
-.business-text {
-  align-self: center;
-  margin-top: 6em;
-  margin-bottom: 6em; }
-
-.business-text h3 {
-  font-size: 2em;
-  line-height: 1.3em;
-  font-weight: bold;
-  padding: 10px; }
-
-.business-text span {
-  margin-left: 1em;
-  margin-right: 1em;
-  font-size: 1.5em;
-  font-family: "Questrial", " Microsoft JhengHei", "微軟正黑體", sans-serif; }
-
-.phone {
-  padding: 1em; }
-
-.time {
-  padding: 1em; }
-
-.landmark {
-  padding: 1em; }
-
-.phone img {
-  width: 50px;
-  height: 50px;
-  vertical-align: middle; }
-
-.time img {
-  width: 50px;
-  height: 50px;
-  vertical-align: middle; }
-
-.landmark img {
-  width: 50px;
-  height: 50px;
-  vertical-align: middle; }
-
-.container {
-  width: 100%; }
-
-.layer div {
-  position: absolute; }
-
-.redman {
-  top: 10px;
-  right: 1%; }
-
-.redman img {
-  width: 60%; }
-
-.blackman {
-  top: 300px;
-  right: 70%; }
-
-.blackman img {
-  width: 70%; }
-
-.fastball {
-  top: 50px;
-  right: 15%; }
-
-.fastball img {
-  width: 50%; }
-
-.speed-ball {
-  top: 10px;
-  left: 73%; }
-
-.speed-ball img {
-  width: 50%; }
-
-.bg-buttom {
-  background-image: url("../images/about-material/about-bg2.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #fff; }
-
-.slide-site {
-  padding: 0 1em; }
-
-.container-side {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 2em; }
-
-.site-text {
-  width: 50%;
-  padding-bottom: 20px;
-  padding-right: 10px; }
-
-.site-text p {
-  font-family: "Questrial", " Microsoft JhengHei", "微軟正黑體", sans-serif;
-  margin: 1em 0;
-  opacity: 0.7;
-  line-height: 1.4; }
-
-#map {
-  width: 100%;
-  height: 300px; }
-
-.cell img {
-  width: 100%;
-  margin: auto; }
-
-.side {
-  width: 50%;
-  padding-bottom: 20px;
-  padding-left: 10px; }
-
-footer {
-  height: 80px;
-  background-color: #ffb505; }
+@media screen and (max-width: 1200px) {
+  .bg-top {
+    width: 100%;
+    height: 100%; }
+  .block-item {
+    flex-direction: row;
+    padding-bottom: 2em; }
+  .header-indent {
+    padding-top: 100px; }
+  .block-item .block-text:first-child {
+    padding-right: 0em; }
+  .block-aboutus {
+    line-height: 30px;
+    padding: 1em;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5); }
+  .block-text {
+    width: 50%;
+    padding: 0px 10px 10px 10px; }
+  .block-text h2 {
+    font-size: 2.5em;
+    margin: 14px; }
+  .bolck-image {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+  .block-image-video {
+    height: auto; }
+  .block-item .block-text:last-child {
+    padding-left: 0em; }
+  .business-text {
+    align-self: center;
+    margin-top: 3em;
+    margin-bottom: 3em; }
+  .business-text h2 {
+    font-size: 3vw;
+    line-height: 1.3em;
+    font-weight: bold;
+    padding: 1em; }
+  .business-text h3 {
+    font-size: 2vw;
+    line-height: 1.3em;
+    font-weight: bold;
+    padding: 1em; }
+  .landmark {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center; }
+  .redman {
+    top: 10px;
+    right: -450px; }
+  .redman img {
+    width: 30%; }
+  .blackman img {
+    width: 70%; }
+  .fastball {
+    top: -10px;
+    right: -250px; }
+  .fastball img {
+    width: 40%; } }
+
+@media screen and (max-width: 768px) {
+  .bg-top {
+    width: 100%;
+    height: 100%; }
+  .block-item {
+    display: flex;
+    padding-bottom: 2em; }
+  .block-item .block-text:first-child {
+    padding-right: 0em;
+    order: 1; }
+  .block-aboutus {
+    line-height: 30px;
+    padding: 1em;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5); }
+  .block-text {
+    width: 100%; }
+  .bolck-image {
+    width: 100%;
+    align-self: center; }
+  .block-image-video {
+    height: auto;
+    order: 0; }
+  .block-item .block-text:last-child {
+    padding-left: 0em; }
+  .sports-introduction {
+    min-width: 40%;
+    padding-bottom: 10%; }
+  .basketball {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center; }
+  .rock-climbing {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center; }
+  .badminton {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center; }
+  .bowling {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center; }
+  .basketball-o {
+    display: block;
+    margin: auto;
+    position: static;
+    min-width: 50%;
+    top: 0%;
+    left: 0%; }
+  .basketball h3 {
+    align-self: center;
+    position: relative;
+    font-size: 8vw;
+    top: 0%;
+    left: 0%; }
+  .rock-climbing-o {
+    display: block;
+    margin: auto;
+    position: static;
+    min-width: 50%;
+    top: 0%;
+    right: 0%; }
+  .rock-climbing h3 {
+    align-self: center;
+    position: relative;
+    font-size: 8vw;
+    top: 0%;
+    left: 0%; }
+  .badminton-o {
+    display: block;
+    margin: auto;
+    position: static;
+    min-width: 50%;
+    top: 0%;
+    right: 0%; }
+  .badminton h3 {
+    align-self: center;
+    position: relative;
+    font-size: 8vw;
+    top: 0%;
+    left: 0%; }
+  .bowling-o {
+    display: block;
+    margin: auto;
+    position: static;
+    min-width: 50%;
+    top: 0%;
+    right: 0%; }
+  .bowling h3 {
+    align-self: center;
+    position: relative;
+    font-size: 7vw;
+    top: 0%;
+    left: 0%; }
+  .point-txt1 {
+    position: absolute;
+    top: -28px;
+    left: -7%; }
+  .point-txt2 {
+    position: absolute;
+    top: -28px;
+    left: -7%; }
+  .point-txt3 {
+    position: absolute;
+    top: -28px;
+    left: -7%; }
+  .point-txt4 {
+    position: absolute;
+    top: -28px;
+    left: -7%; }
+  .l-color-block {
+    position: absolute;
+    z-index: -1;
+    top: -10%;
+    left: -5%;
+    width: 0vw;
+    height: 200%;
+    background-color: #ffb505;
+    transform: rotate(-20deg); }
+  .r-color-block {
+    position: absolute;
+    z-index: -1;
+    top: -8%;
+    right: -10%;
+    width: 100px;
+    height: 40%;
+    background-color: #ffb505;
+    transform: rotate(-20deg); }
+  .business-text {
+    align-self: center;
+    margin-top: 3em;
+    margin-bottom: 3em; }
+  .business-text h2 {
+    font-size: 8vw;
+    line-height: 1.3em;
+    font-weight: bold;
+    padding: 1em; }
+  .business-text h3 {
+    font-size: 5vw;
+    line-height: 1.3em;
+    font-weight: bold;
+    padding: 1em; }
+  .phone {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center; }
+  .time {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center; }
+  .landmark {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center; }
+  .business-text span {
+    display: inline-block;
+    box-sizing: border-box;
+    margin-left: 1em;
+    margin-right: 1em;
+    font-size: 5vw;
+    padding: 1.5em; }
+  .redman {
+    top: 10px;
+    right: -450px; }
+  .redman img {
+    width: 30%; }
+  .blackman img {
+    width: 70%;
+    display: none; }
+  .fastball {
+    top: -10px;
+    right: -250px; }
+  .fastball img {
+    width: 40%; }
+  .container-side {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    justify-content: space-between; }
+  .site-text h2 {
+    font-size: 8vw;
+    line-height: 1.3em;
+    font-weight: bold;
+    padding: 0.5em; }
+  .site-text p {
+    line-height: 30px;
+    padding: 1em;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5); }
+  .site-text {
+    width: 100%; }
+  .side {
+    width: 100%; } }

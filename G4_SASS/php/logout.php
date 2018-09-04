@@ -3,5 +3,5 @@ ob_start();
 session_start();
 session_destroy();
 
-header("location:../header.php");
+header("location:../index.php");
 ?>
