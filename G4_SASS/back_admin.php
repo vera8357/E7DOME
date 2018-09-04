@@ -41,7 +41,11 @@
                 <a href="#">管理員管理</a>
             </li>
             <li>
-                <a href="#">登出</a>
+                <a href="#">
+                <form action="php/back_logout.php">
+                    <input type="submit" value='登出'>
+                </form>
+               </a>
             </li>
         </ul>
     </div>
@@ -74,13 +78,14 @@
 
                         $NO = $adm['ADMIN_NO'];
                         echo "<tr>";
-                        echo "<form>";
+                        echo "<form action='php/admin_alter.php'>";
+                        echo "<input type='hidden' name='admin_no' value='".$NO."'>";
                         echo "<td>".$NO."</td>";
                         echo "<td>".$adm['ADMIN_ID']."</td>";
                         echo "<td>".$adm['ADMIN_PSW']."</td>";
                         echo "<td>".$adm['ADMIN_NAME']."</td>";
                         echo "<td>";
-                        echo "<select name='mem_perm' disabled>";
+                        echo "<select name='mem_perm' id='perm".$NO."' disabled>";
 
                       if($adm['ADMIN_PERM'] == 0){
                          echo "<option value='0' selected>最高</option>";
@@ -92,7 +97,7 @@
                         echo "</select>";
                         echo "</td>";
                         echo "<td>";
-                        echo "<select name='mem_status' disabled>";
+                        echo "<select name='mem_status' id='status".$NO."' disabled>";
 
                       if($adm['ADMIN_STATUS'] == 0){
                          echo "<option value='0' selected>正常</option>";
@@ -104,8 +109,8 @@
                         echo "</select>";
                         echo "</td>";
                         echo "<td>";
-                        echo "<input class='btn_alter' type='button' value='修改'>";
-                        echo "<input type='button' value='確認'>";
+                        echo "<input class='btn_alter' type='button' value='修改' onclick='alert(".$NO.")'>";
+                        echo "<input type='submit' value='確認'>";
                         echo "</td>";
                         echo "</form>";
                         echo "</tr>";
@@ -113,7 +118,7 @@
                         }
 
                     }catch(PDOException $e){
-                        echo $e->getMassage();
+                        echo $e->getMessage();
                     }
 
                     

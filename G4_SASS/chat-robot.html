@@ -51,13 +51,14 @@
     <div class="trapezoid-blue"></div>
     <div class="rectangle-blue"></div>
     <div id="message">
-      <div class="field">
-        <input id="register" maxlength="20" type="text">
-        <label for="register">
-          <span>please tell me</span>
-        </label>
-        <button>OK</button>
-      </div>
+      <div class="clearboth"></div>
+    </div>
+    <div class="field">
+      <input id="register" maxlength="20" type="text">
+      <label for="register">
+        <span>please tell me</span>
+      </label>
+      <button>OK</button>
     </div>
     <div class="coach_img">
       <!-- <img class="coach" src="images/chatrobot/coach.png" alt="coach"> -->
@@ -76,13 +77,10 @@
     $(document).ready(function () {
       newUl = document.createElement('ul');
       newUl.id = 'talk';
-      document.getElementById('message').appendChild(newUl);
+      document.getElementById('message').prepend(newUl);
       $('#register').keyup(function (e) {
-        var convalue = this.value;
-        // console.log(convalue);
-        if (this.value == "") {
-        }
-        else {
+        var convalue = this.value.trim();
+        console.log(convalue);
           if (event.keyCode == 13) {
             $.ajax({
               url: 'php/bot.php',
@@ -90,16 +88,19 @@
               type: 'POST',
               dataType: 'text',
               success: function (data) {
-                var li = document.createElement("li");
-                newUl.appendChild(li);
-                li.className = "li_ans";
-                console.log(data);
-                li.innerHTML = data;
+                var li = document.createElement("li");  //機器人的答案
+                var ri = document.createElement("li");  //使用者輸入問題
+                newUl.appendChild(li);  //機器人
+                newUl.appendChild(ri);  //使用者
+                li.className = "li_ans";  //機器人li
+                ri.className = "rli_ans"; //使用者li
+                // console.log(data);
+                li.innerHTML = data;  
+                ri.innerHTML = convalue;
               }
             });
             this.value = "";
           }
-        }
       });
     });
   </script>

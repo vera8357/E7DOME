@@ -15,19 +15,19 @@
   filter: blur(30px);
 }
 
-.light+.light {
+.light + .light {
   left: auto;
   right: 0;
   animation: top-left 4s ease-in-out alternate infinite;
 }
 
-.light+.light+.light {
+.light + .light + .light {
   left: auto;
   right: -20%;
   animation: top-left 5.5s ease-in-out alternate infinite;
 }
 
-.light+.light+.light+.light {
+.light + .light + .light + .light {
   left: 20%;
   right: auto;
   animation: top-right 6s ease-in-out alternate infinite;
@@ -41,9 +41,27 @@
   width: 100%;
   vertical-align: middle;
 }
+.pin--1-4 {
+  top: 40vmin;
+  left: 75vmin;
+}
+.player1f04 {
+  position: absolute;
+  top: -100%;
+  left: 0%;
+  width: 175%;
+  height: 175%;
+  transform: rotate(-180deg);
+}
+.player1f04 {
+  offset-path: path("M165.5,89.3L24.3,23.5");
+  offset-distance: 0%;
+  animation: player1f04-climbing 5000ms cubic-bezier(0.39, 0.575, 0.565, 1)
+    alternate infinite;
+}
 
 .pin--1-5 {
-  top: 33vmin;
+  top: 28vmin;
   left: 0vmin;
 }
 
@@ -53,6 +71,8 @@
   left: 0;
   width: 150%;
   height: 150%;
+  animation: player4f01 3000ms cubic-bezier(0.77, 0, 0.175, 1) alternate
+    infinite;
 }
 
 .pin--1-6 {
@@ -67,7 +87,18 @@
   width: 470%;
   height: 470%;
 }
-
+.pin--1-13 {
+  top: 58vmin;
+  left: 57vmin;
+}
+.rock-climbing-path {
+  position: absolute;
+  display: block;
+  top: -185%;
+  left: 0%;
+  width: 335%;
+  height: 150%;
+}
 /* 2F */
 
 .ball01 {
@@ -317,7 +348,7 @@
 }
 
 .bird3f01 {
-  offset-path: path('M266.4,18.5l-258,242');
+  offset-path: path("M266.4,18.5l-258,242");
   offset-distance: 0%;
   animation: bird3f01 4500ms cubic-bezier(1, 0, 0, 1) infinite;
 }
@@ -331,7 +362,7 @@
 }
 
 .bird3f02 {
-  offset-path: path('M0,146l114-16.1L226,7l526,7');
+  offset-path: path("M0,146l114-16.1L226,7l526,7");
   offset-distance: 0%;
   animation: bird3f02 3000ms cubic-bezier(0.95, 0.05, 0.795, 0.035) infinite;
 }
@@ -488,7 +519,7 @@
 }
 
 .ball4f01 {
-  offset-path: path('M52,166.7c0,0,97.3-338.7,241.3,56.7L250.7,308');
+  offset-path: path("M52,166.7c0,0,97.3-338.7,241.3,56.7L250.7,308");
   offset-distance: 0%;
   animation: ball4f01 6000ms 1000ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
 }
@@ -502,7 +533,7 @@
 /* 殘障人士籃球路徑 */
 
 .ball4f02 {
-  offset-path: path('M204.3,247.2l-154.7-50c23.3-178,142-42.7,142-42.7');
+  offset-path: path("M204.3,247.2l-154.7-50c23.3-178,142-42.7,142-42.7");
   offset-distance: 0%;
   animation: ball4f02 3000ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
 }
@@ -512,61 +543,71 @@
 .bottle1 img {
   /* offset-path: path('M25,103l92-78'); */
   offset-distance: 0%;
-  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite
+    backwards;
 }
 
 .bottle2 img {
   /* offset-path: path('M14.1,84l113.8-40'); */
   offset-distance: 0%;
-  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite
+    backwards;
 }
 
 .bottle3 img {
   /* offset-path: path('M25,103l92-78'); */
   offset-distance: 0%;
-  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite
+    backwards;
 }
 
 .bottle4 img {
   /* offset-path: path('M25,103l92-78'); */
   offset-distance: 0%;
-  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite
+    backwards;
 }
 
 .bottle5 img {
   /* offset-path: path('M116.3,102.7l-104-82'); */
   offset-distance: 0%;
-  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite
+    backwards;
 }
 
 .bottle6 img {
   /* offset-path: path('M116.3,102.7l-104-82'); */
   offset-distance: 0%;
-  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite
+    backwards;
 }
 
 .bottle7 img {
   /* offset-path: path('M87,7.3c29.5,22.5-9.8,55-9.8,55l-61.5,38.3'); */
   offset-distance: 0%;
-  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite
+    backwards;
 }
 
 .bottle8 img {
   /* offset-path: path('M25,103l92-78'); */
   offset-distance: 0%;
-  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite
+    backwards;
 }
 
 .bottle9 img {
   /* offset-path: path('M25,103l92-78'); */
   offset-distance: 0%;
-  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite
+    backwards;
 }
 
 .bottle10 img {
   /* offset-path: path('M116.3,102.7l-104-82'); */
   offset-distance: 0%;
-  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite backwards;
+  animation: bottle1 3000ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite
+    backwards;
 }
 
 @keyframes bottle1 {
@@ -579,7 +620,7 @@
     transform: rotate(0deg) scale(1);
   }
   100% {
-    offset-path: path('M116.3,102.7l-104-82');
+    offset-path: path("M116.3,102.7l-104-82");
     offset-distance: 100%;
     transform: rotate(1024deg) scale(0);
   }
@@ -590,13 +631,13 @@
 /*保齡球路徑*/
 
 .ball01 {
-  offset-path: path('M544,46c-43,43-213.5,78-213.5,78L7,178');
+  offset-path: path("M544,46c-43,43-213.5,78-213.5,78L7,178");
   offset-distance: 0%;
   animation: ball 3000ms cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
 }
 
 .ball02 {
-  offset-path: path('M7,147L549,29');
+  offset-path: path("M7,147L549,29");
   offset-distance: 0%;
   animation: ball2 3000ms cubic-bezier(0.23, 1, 0.32, 1) infinite;
 }
@@ -749,17 +790,17 @@
 @keyframes bird3f01 {
   0% {
     offset-distance: 0%;
-    transform: rotate(0deg)scale(1);
+    transform: rotate(0deg) scale(1);
     opacity: 1;
   }
   60% {
     offset-distance: 0%;
-    transform: rotate(0deg)scale(2);
+    transform: rotate(0deg) scale(2);
     opacity: 1;
   }
   100% {
     offset-distance: 100%;
-    transform: rotate(270deg)scale(1);
+    transform: rotate(270deg) scale(1);
     opacity: 0;
   }
 }
@@ -817,5 +858,100 @@
   100% {
     offset-distance: 0%;
     opacity: 1;
+  }
+}
+
+/* 1F動畫 */
+
+@keyframes player4f01 {
+  0% {
+    top: -130%;
+  }
+  25% {
+    top: -70%;
+  }
+  50% {
+    top: -130%;
+  }
+  75% {
+    top: -200%;
+  }
+  100% {
+    top: -130%;
+  }
+}
+
+@keyframes player1f04-climbing {
+  0% {
+    offset-distance: 0%;
+    transform: rotate(-190deg);
+  }
+  20% {
+    transform: rotate(-200deg);
+  }
+  40% {
+    transform: rotate(-190deg);
+  }
+  60% {
+    transform: rotate(-200deg);
+  }
+  80% {
+    transform: rotate(-190deg);
+  }
+  100% {
+    offset-distance: 100%;
+    transform: rotate(-200deg);
+  }
+}
+
+/* e7dome文字 */
+#e7dome-text {
+  font: 5.5em/1 Open;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-transform: uppercase;
+  margin: 0;
+  transform: translateX(620px) translateY(-260px);
+}
+.text {
+  fill: none;
+  stroke-width: 3;
+  stroke-dasharray: 0 300;
+  stroke-dashoffset: 0;
+}
+.text:nth-child(3n + 1) {
+  stroke: #0052b2;
+  animation: stroke1 10s ease-in-out forwards;
+}
+
+.text:nth-child(3n + 2) {
+  stroke: #ffb505;
+  animation: stroke2 10s ease-in-out forwards;
+}
+
+.text:nth-child(3n + 3) {
+  stroke: #fff;
+  animation: stroke3 10s ease-in-out forwards;
+}
+
+@keyframes stroke1 {
+  100% {
+    stroke-dashoffset: 800;
+    stroke-dasharray: 40 80;
+  }
+}
+
+@keyframes stroke2 {
+  100% {
+    stroke-dashoffset: 840;
+    stroke-dasharray: 40 80;
+  }
+}
+
+@keyframes stroke3 {
+  100% {
+    stroke-dashoffset: 880;
+    stroke-dasharray: 40 80;
   }
 }
