@@ -1,8 +1,8 @@
 <?php
     try{
         require_once("../connect_g4.php");
-        $change_info = $_REQUEST["change_info"];
-        $sql = "select * from facility where FAC_NO = $change_info";
+        $fac_no = $_REQUEST["fac_no"];
+        $sql = "select * from facility where FAC_NO = $fac_no";
         $change = $pdo->query($sql);
         while($site_info = $change->fetch(PDO::FETCH_ASSOC)){
 ?>

@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/font.css">    
     <link rel="stylesheet" href="css/sport-share.css">
-    <link rel="stylesheet" href="css/basketball.css">
+    <link rel="stylesheet" href="css/climbimg.css">
+    <link rel="stylesheet" href="css/font.css">    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/sport-share.js"></script>
     <script src="js/site_scrollmagic.js"></script>
@@ -16,58 +15,20 @@
     <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
     <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
     <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+    <title>Document</title>
 </head>
 <body>
     <header>
-		<div class="wrapper">
-			<div class="humberger_btn">
-				<div class="humberger_line top"></div>
-				<div class="humberger_line mid"></div>
-				<div class="humberger_line bot"></div>
-			</div>
-			<div class="logo">
-			<a href="index.html">
-				<img src="images/e7logo.png" alt=""> </a>
-			</div>
-			<div class="login">
-					<!-- <a href="#"><img src="images/user-icon.png"></a> -->
-					<a href="#">登入</a>
-			</div>
-			<ul>
-			<li>
-				<a href="site_info.html"> 場地介紹 </a>
-			</li>
-			<li>
-				<a href="booking.html"> 預約場地 </a>
-			</li>
-			<li>
-				<a href="group.html"> 運動揪團 </a>
-			</li>
-			<li>
-				<a href="about.html"> 關於我們 </a>
-			</li>
-			<li>
-				<a href="chat-robot.html"> 諮詢專區 </a>
-			</li>
-			<!-- <li>
-				<a href="#">
-				<img src="images/user-icon.png"> </a>
-			</li> -->
-			</ul>
-		</div>
+        <?php include 'header.php';?>
     </header>
-    <div class="bkb_fp">
-        <div class="bkb_fp_blue"></div>
-        <div class="bkb_fp_black"></div>
-        <div class="bkb_fp_black2"></div>
-        <div class="bkb_fp_bgimg">
-            <img src="images/basketball/firstpage_bgimg.png" alt="">
+    <div class="clm_fp">
+        <div class="clm_fp_bgimg">
+            <img src="images/sport/climbimg_fp.png" alt="">
         </div>
-        <div class="kobe">
-            <img src="images/basketball/kobe.png" alt="">
-        </div>
-        <h1>Basketball</h1>
-        <h2>籃球場</h2>
+        <div class="clm_fp_orgtop"></div>
+        <div class="clm_fp_orgbot"></div>
+        <h1>CLIMBIMG</h1>
+        <h2>攀岩場</h2>
 </div>
 <div class="site_info">
     <div class="site_info_tri1"></div>
@@ -75,8 +36,8 @@
     <div class="site_info_wrap">
         <h3>場地介紹</h3>
         <div class="slider">
-            <ul class="sport_slider">
-                <li>
+            <ul class="sport_slider" name="fac_status" value="1">
+                <!-- <li>
                     <img src="images/bowling/bowlingball.png" alt="">
                 </li>
                 <li>
@@ -84,7 +45,7 @@
                 </li>
                 <li>
                     <img src="images/bowling/bowlingball.png" alt="">
-                </li>
+                </li> -->
             </ul>
         </div>
         <div class="info">
@@ -101,27 +62,29 @@
                 揪團
             </button>
             <div class="site_select">
-                <div class="site_item1">
+                <input type="hidden" name="cate_no" value="4"> //1.籃球場2.保齡球場3.羽球場4.攀岩場
+                <input type="hidden" name="fac_status" value="1">//1.上架2.下架
+                <!-- <div class="site_item">
                     <img src="images/bowling/bowlingsite.png" alt="">
                     <p>A球場</p>
                     <span>
                         文案文案文案文案文案文案文案文案文案
                     </span>
                 </div>
-                <div class="site_item2">
+                <div class="site_item">
                     <img src="images/bowling/bowlingsite.png" alt="">
                     <p>A球場</p>
                     <span>
                         文案文案文案文案文案文案文案文案文案
                     </span>
                 </div>
-                <div class="site_item3">
+                <div class="site_item">
                     <img src="images/bowling/bowlingsite.png" alt="">
                     <p>A球場</p>
                     <span>
                         文案文案文案文案文案文案文案文案文案
                     </span>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -133,14 +96,16 @@
     <div class="assess_wrap">
         <h3>場地評價</h3>
         <div class="assess_table">
-            <input type="radio" id="A" name="check_site">
-            <input type="radio" id="B" name="check_site">
-            <input type="radio" id="C" name="check_site">
-            <label for="A">A場地</label>
-            <label for="B">B場地</label>
-            <label for="C">C場地</label>
-            <table>
-                <tr>
+            <div class="assess_label_cap">
+                <!-- <input type="radio" id="A" name="check_site">
+                <input type="radio" id="B" name="check_site">
+                <input type="radio" id="C" name="check_site">
+                <label for="A" class="site_label">A場地</label>
+                <label for="B" class="site_label">B場地</label>
+                <label for="C" class="site_label">C場地</label> -->
+            </div>
+            <table id="bookin_list">
+                <!-- <tr>
                     <td>
                         <img src='http://fakeimg.pl/200x200?font=lobster' alt=''/>
                     </td>
@@ -195,14 +160,14 @@
                     <td>
                         2018/12/10
                     </td>
-                </tr>
+                </tr> -->
             </table>
         </div>
     </div>
 </div>
 <div class="group_page">
     <div class="bgcball">
-        <img src="images/basketball/basketball.png" alt="">
+        <img src="images/bowling/ball.png" alt="">
     </div>
     <div class="group_page_content">
         <h3>加入揪團！尋找運動伙伴</h3>
@@ -225,17 +190,25 @@
                         </div>
                     </a>
                 </li>
+                <?php
+                
+                    require_once("php/connect_g4.php");
+                    $sql = "SELECT * FROM team JOIN booking ON (team.BOO_NO = booking.BOO_NO) JOIN facility ON (facility.FAC_NO = booking.FAC_NO) where facility.CATE_NO = 4 order by facility.FAC_NO desc limit 3";
+                    $team = $pdo->query( $sql);
+                    $teams = $team->fetchAll(PDO::FETCH_ASSOC);
+                    foreach($teams as $i=>$teamsRow){
+                ?>
                 <li class="teamItem">
-                    <a href="#">
+                    <a href="groupInfo.php?TEAM_NO=<?php echo $teamsRow['TEAM_NO'];?>">
                         <div class="teamOne">
                             <div class="teamDate_top">
                                 <div class="dateGroup">
-                                    <div class="teamDay">23</div>
-                                    <div class="teamMonth">AUG</div>
+                                    <div class="teamDay"><?php echo substr($teamsRow['BOO_DATE'],8,2);?></div>
+                                    <div class="teamMonth"><?php echo date("M",strtotime($teamsRow['BOO_DATE']));?></div>
                                 </div>
                             </div>
                             <div class="teamPic">
-                                <img src="images//index/bg2.png" alt="">
+                                <img src="images/<?php echo $teamsRow['TEAM_IMG'];?>" alt="">
                             </div>
                             <div class="teamInfo">
                                 <div class="teamMore">
@@ -243,99 +216,37 @@
                                     <div class="moreSkew">></div>						
                                 </div>
                                 <div class="teamName">
-                                    台北帥哥籃球團
+                                    <?php echo $teamsRow['TEAM_NAME'];?>
                                 </div>
                                 <div class="teamDate">
-                                    2018/06/28
+                                    <?php echo date('Y/m/d',strtotime($teamsRow['BOO_DATE']));?>
                                 </div>
                                 <div class="teamMem">
                                     揪團人數
-                                    <span>3</span>
+                                    <?php
+                                        $TEAM_NO=$teamsRow['TEAM_NO'];//抓揪團編號
+                                        $memCount = "SELECT * FROM team_mem WHERE TEAM_NO = $TEAM_NO";//選擇所有資料 當 揪團編號=自己的揪團編號
+                                        $teammem = $pdo->prepare($memCount);
+                                        $teammem->execute(); 
+                                        $rows = $teammem->rowCount();//計算抓到幾筆資料
+                                    ?>
+                                    <span><?php echo $rows+1;//揪團人數+1(團長)?></span>
                                     /
-                                    <span>6</span>
+                                    <span><?php echo $teamsRow['TEAM_MEM'];?></span>
                                     人
                                 </div>
                                 <div class="teamTxt">
-                                    Lorem ipsum dolor sit amet.
+                                    <?php echo $teamsRow['TEAM_INFO'];?>
                                 </div>
                             </div>
                         </div>
                     </a>
                 </li>
-                <li class="teamItem">
-                    <a href="#">
-                        <div class="teamOne">
-                            <div class="teamDate_top">
-                                <div class="dateGroup">
-                                    <div class="teamDay">23</div>
-                                    <div class="teamMonth">AUG</div>
-                                </div>
-                            </div>
-                            <div class="teamPic">
-                                <img src="images//index/bg2.png" alt="">
-                            </div>
-                            <div class="teamInfo">
-                                <div class="teamMore">
-                                    <div class="morebg">更多資訊</div>
-                                    <div class="moreSkew">></div>						
-                                </div>
-                                <div class="teamName">
-                                    台北帥哥籃球團
-                                </div>
-                                <div class="teamDate">
-                                    2018/06/28
-                                </div>
-                                <div class="teamMem">
-                                    揪團人數
-                                    <span>3</span>
-                                    /
-                                    <span>6</span>
-                                    人
-                                </div>
-                                <div class="teamTxt">
-                                    Lorem ipsum dolor sit amet.
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="teamItem">
-                    <a href="#">
-                        <div class="teamOne">
-                            <div class="teamDate_top">
-                                <div class="dateGroup">
-                                    <div class="teamDay">23</div>
-                                    <div class="teamMonth">AUG</div>
-                                </div>
-                            </div>
-                            <div class="teamPic">
-                                <img src="images//index/bg2.png" alt="">
-                            </div>
-                            <div class="teamInfo">
-                                <div class="teamMore">
-                                    <div class="morebg">更多資訊</div>
-                                    <div class="moreSkew">></div>						
-                                </div>
-                                <div class="teamName">
-                                    台北帥哥籃球團
-                                </div>
-                                <div class="teamDate">
-                                    2018/06/28
-                                </div>
-                                <div class="teamMem">
-                                    揪團人數
-                                    <span>3</span>
-                                    /
-                                    <span>6</span>
-                                    人
-                                </div>
-                                <div class="teamTxt">
-                                    Lorem ipsum dolor sit amet.
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </li>
+                <?php
+                        
+                    }
+                    
+                ?>
             </ul>
         </div>
     </div>
@@ -343,15 +254,15 @@
 
 <script src="js/slick.min.js"></script>
 <script>
-    $('.sport_slider').slick({
-            dots: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows:false,
-            autoplay: true,
-            autoplaySpeed: 2000,
-            focusOnSelect:true,
-        });
+    // $('.sport_slider').slick({
+    //         dots: true,
+    //         slidesToShow: 1,
+    //         slidesToScroll: 1,
+    //         arrows:false,
+    //         autoplay: true,
+    //         autoplaySpeed: 2000,
+    //         focusOnSelect:true,
+    //     });
 </script>
 <script>
     $('.humberger_btn').click(function(){
@@ -360,12 +271,111 @@
 </script>
 <script>
     $.ajax({
-        url:'php/sport-share.php',
+        url:'php/facility/sports.php',
         dataType:'text',
+        type:'POST',
+        data:{
+            cate_no:parseInt($('.site_select').find('input').eq(0).val()),
+            fac_status:parseInt($('.site_select').find('input').eq(1).val()),
+        },
         success:function(data){
-            $('.info_name').append(data);
+            $('.site_select').append(data);
+            $('.site_item').on('click',function(){
+                var sitem = parseInt($(this).find('input').eq(0).val());
+                sayYes(sitem);
+                // alert(sitem);
+            })
+            function sayYes(sitem){
+                $.ajax({
+                    url:'php/facility/change_info.php',
+                    dataType:'text',
+                    type:'POST',
+                    data:{
+                        fac_no:sitem,
+                    },
+                    success:function(data2){
+                        $('.info_name').find('.info_cap').remove();
+                        $('.info_name').append(data2);
+                    }
+                });
+            };
+            //找到第一個class的input的value值
+            var firsitem = parseInt($('.site_item').eq(0).find('input').eq(0).val());
+            window.addEventListener('load',sayYes(sitem=firsitem));
         }
     });
+    $.ajax({
+        url:'php/facility/change_img.php',
+        dataType:'text',
+        type:'POST',
+        data:{
+            cate_no:parseInt($('.site_select').find('input').eq(0).val()),
+            fac_status:parseInt($('.site_select').find('input').eq(1).val()),
+        },
+        success:function(data3){
+            $('.sport_slider').find('li').remove();
+            $('.sport_slider').append(data3);
+            $('.sport_slider').slick({
+                dots: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows:false,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                focusOnSelect:true,
+            });
+        },
+        error:function(){
+            alert('ERROR');
+        }
+    });
+    $.ajax({
+        url:'php/facility/change_label.php',
+        dataType:'text',
+        type:'POST',
+        data:{
+            cate_no:parseInt($('.site_select').find('input').eq(0).val()),
+            fac_status:parseInt($('.site_select').find('input').eq(1).val()),
+        },
+        success:function(data){
+            $('.assess_label_cap').children().remove();
+            $('.assess_label_cap').append(data);
+            $('.site_label').on('click',function(){
+                var label = parseInt($(this).prev('input').val());
+                hahaha(label);
+            })
+            function hahaha(label){
+                $.ajax({
+                    url:'php/facility/change_bookin_list.php',
+                    dataType:'text',
+                    type:'POST',
+                    data:{
+                        fac_no:label,
+                    },
+                    success:function(data2){
+                        $('#bookin_list').children().remove();
+                        $('#bookin_list').append(data2);
+                        var star = $('.rank')
+                    }
+                })
+            }
+            var firstlabel = parseInt($('.assess_label_cap').eq(0).find('input').eq(0).val());
+            window.addEventListener('load',hahaha(label=firstlabel));
+        }
+    });
+    $('.reservation').on('click',function(){
+        $.ajax({
+            url:'php/facility/session_sport.php',
+            dataType:'text',
+            type:'POST',
+            data:{
+                cate_no:parseInt($('.site_select').find('input').eq(0).val()),
+            },
+            success:function(data3){
+                // alert(data3);
+            }
+        })
+    })
 </script>
 </body>
 </html>
