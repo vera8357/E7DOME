@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/font.css">
-  <title>Document</title>
-</head>
-<body>
+  <link rel="stylesheet" type="text/css" href="css/member.css">
   <header>
 		<div class="wrapper">
 			<div class="humberger_btn">
@@ -25,9 +17,7 @@
 				<!-- <a href="#">登入</a> -->
 				<?php
 					require_once("member.php");
-				?>
-
-				
+				?>		
 			</div>
 			<ul>
 				<li>
@@ -47,9 +37,4 @@
 				</li>
 			</ul>
 		</div>
-	</header>
-
-
-	
-</body>
-</html>
+</header>
