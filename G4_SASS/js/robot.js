@@ -11,3 +11,6 @@
 // }
 
 $("#message").delay(1000).fadeIn(1000);
+
+var $div = $("#message");
+$div.scrollTop($div[0].scrollHeight);

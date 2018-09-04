@@ -83,11 +83,6 @@
       });
     });
   </script>
-  <script>
-    var myDiv = document.getElementById('message');
-myDiv.scrollTop = myDiv.scrollHeight;
-
-  </script>
 </body>
 
 </html>
