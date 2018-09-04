@@ -13,44 +13,14 @@
 
 <body>
   <header>
-    <div class="wrapper">
-      <div class="humberger_btn">
-        <div class="humberger_line top"></div>
-        <div class="humberger_line mid"></div>
-        <div class="humberger_line bot"></div>
-      </div>
-      <div class="logo">
-        <a href="index.php">
-          <img src="images/e7logo.png" alt=""> </a>
-      </div>
-      <div class="login">
-        <!-- <a href="#"><img src="images/user-icon.png"></a> -->
-        <a href="#">登入</a>
-      </div>
-      <ul>
-        <li>
-          <a href="site_info.php"> 場地介紹 </a>
-        </li>
-        <li>
-          <a href="booking.php"> 預約場地 </a>
-        </li>
-        <li>
-          <a href="group.php"> 運動揪團 </a>
-        </li>
-        <li>
-          <a href="about.php"> 關於我們 </a>
-        </li>
-        <li>
-          <a href="chat-robot.php"> 諮詢專區 </a>
-        </li>
-      </ul>
-    </div>
+    <?php include 'header.php';?>
   </header>
   <section>
     <div class="triangle-yellow"></div>
     <div class="trapezoid-blue"></div>
     <div class="rectangle-blue"></div>
-    <div id="message">
+    <div id="messageall">
+      <div id="message">
       <div class="clearboth"></div>
     </div>
     <div class="field">
@@ -59,6 +29,7 @@
         <span>please tell me</span>
       </label>
       <!-- <button id="okbtn">OK</button> -->
+    </div>
     </div>
     <div class="coach_img">
       <!-- <img class="coach" src="images/chatrobot/coach.png" alt="coach"> -->
@@ -82,7 +53,7 @@
       var li = document.createElement("li");
       newUl.appendChild(li);
       li.className = "li_ans";
-      $('.li_ans').html("歡迎來到E7DOME,有任何問題都可問我"); //載入後出現的問候
+      $('.li_ans').html("<img class='portrait' src='images/chatrobot/anse.jpeg'>歡迎來到E7DOME,有任何問題都可問我"); //載入後出現的問候
 
       $('#register').keyup(function (e) {
         var convalue = this.value.trim();
@@ -103,13 +74,19 @@
               ri.className = "rli_ans"; //使用者li
               // console.log(data);
               li.innerHTML = '<img class="portrait" src="images/chatrobot/anse.jpeg">' + data;
-              ri.innerHTML = convalue;
+              ri.innerHTML = '<img class="portrait" src="images/chatrobot/user-default-light64x64.png">' + convalue;
+              
             }
           });
           this.value = "";
         }
       });
     });
+  </script>
+  <script>
+    var myDiv = document.getElementById('message');
+myDiv.scrollTop = myDiv.scrollHeight;
+
   </script>
 </body>
 
