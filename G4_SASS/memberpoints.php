@@ -99,7 +99,7 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 						
 						try{
 							require_once("php/connect_g4.php");
-							$sql = "select * from card_oder where MEM_NO =".$_SESSION['MEM_NO'];
+							$sql = "select * from card_oder where MEM_NO =".$_SESSION['MEM_NO']." ORDER BY ORDER_DATETIME DESC ";
 							$member = $pdo->query($sql);
 							
 

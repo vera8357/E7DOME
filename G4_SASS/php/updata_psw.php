@@ -5,7 +5,7 @@ session_start();
 try{
 	require_once("connect_g4.php");
 	$sql = "UPDATE member SET MEM_PSW = :MEM_PSW WHERE MEM_NO = :MEM_NO";
-	   $member_phone = $pdo->prepare( $sql );
+	  $member_phone = $pdo->prepare( $sql );
   	$member_phone->bindValue(":MEM_PSW", $_REQUEST["new_psw"]);
   	$member_phone->bindValue(":MEM_NO", $_REQUEST["MEM_NO"]);
   	$member_phone->execute();

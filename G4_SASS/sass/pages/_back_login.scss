@@ -1,0 +1,116 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+
+
+	background-image: url(../images/index/image-from-rawpixel-id-428053-jpeg.png);
+	background-size: cover;
+
+}
+
+.wrap{
+	width: 100%;
+
+}
+
+
+.log{
+	width: 180px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top:120px;
+	margin: auto;
+
+}
+.log img{
+	width: 100%;
+}
+
+#back_login{
+	width: 300px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 260px;
+	margin: auto;
+	border-radius: 15px;
+	background-color: #fff;
+}
+
+#back_login h1{
+	margin: 20px 0;
+	width: 100%;
+	text-align: center;
+	font-size: 23px;
+	letter-spacing: 2px;
+}
+
+#back_login td{
+	width: 100%;
+	padding-top: 20px;
+	background-color: #fff;
+	font-size:20px;
+	color:#ffb505;
+}
+
+#back_login input[type='text'],
+#back_login input[type='password']{
+	border: 0px;
+	border-bottom: 2px solid rgb(61,69,87);
+	padding: 5px 8px;
+}
+
+#back_login input[type='button']{
+	width: 60px;
+	padding: 4px 8px;
+	border-radius: 8px;
+	border:0px;
+	background-color: #ffb505;
+	cursor: pointer;
+}
+
+
+@media screen and (min-width: 768px){
+
+
+.log{
+	width: 22%;
+	top:40px;
+
+}
+
+#back_login{
+	width: 40%;
+	top: 260px;
+
+}
+
+#back_login h1{
+
+	font-size: 26px;
+
+}
+
+
+#back_login td{
+
+	font-size:24px;
+
+}
+
+}
+
+
+@media screen and (min-width: 1024px){
+
+
+
+	#back_login{
+	width: 28%;
+	
+}
+}

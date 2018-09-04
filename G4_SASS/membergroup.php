@@ -101,7 +101,7 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
                         
                         try{
                             require_once("php/connect_g4.php");
-                            $sql = "select * from team join booking using(BOO_NO) where team.MEM_NO =".$_SESSION['MEM_NO'];
+                            $sql = "select * from team join booking using(BOO_NO) where team.MEM_NO =".$_SESSION['MEM_NO']." ORDER BY BOOKING.BOO_DATE DESC ";
                             $member = $pdo->query($sql);
                             
 
@@ -153,7 +153,7 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
                         
                         try{
                             require_once("php/connect_g4.php");
-                            $sql = "SELECT * FROM booking JOIN team ON (booking.BOO_NO = team.BOO_NO) JOIN team_mem ON(team_mem.TEAM_NO =team.TEAM_NO) WHERE team_mem.MEM_NO =".$_SESSION['MEM_NO'];
+                            $sql = "SELECT * FROM booking JOIN team ON (booking.BOO_NO = team.BOO_NO) JOIN team_mem ON(team_mem.TEAM_NO =team.TEAM_NO) WHERE team_mem.MEM_NO =".$_SESSION['MEM_NO']." ORDER BY BOOKING.BOO_DATE DESC ";
                             $member = $pdo->query($sql);
                             
 

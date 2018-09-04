@@ -3,7 +3,6 @@
 .wrapper{
 	width: 1200px;
 	margin:0 auto;
-	position: relative;
 	height: 100%;
 }
 @media screen and (max-width: 1200px) {
@@ -14,7 +13,7 @@ header {
 width: 100%;
 font-family: 'HanWangZonYi';
 // src: url(../font/HanWangZonYi.woff);
-position: absolute;
+position: relative;
 z-index: 99; }
 
 header:after {
@@ -196,3 +195,4 @@ width: 100%; }
         transform: translateY(-50%);
     }
 }
+

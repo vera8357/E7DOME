@@ -1,4 +1,73 @@
 @import "base/var";
+/*<<<<<<< HEAD*/
+*{
+    //outline: 1px solid red;
+}
+a,table{
+    font-family: '微軟正黑體';
+    text-decoration: none;
+}
+a{
+    font-size: 24px;
+    font-weight: bold;
+}
+h2{
+    background-color: #0052B2;
+    color:#fff;
+    padding: 50px 5% 10px;
+    font-size: 48px;
+    margin-bottom: 50px;
+}
+.bcak_logo{
+    text-align: center;
+    margin-bottom: 5vh;
+    margin-top: 2vh;
+}
+.bcak_logo h1{
+    font-size: 24px;
+    color:#0052B2;
+    margin-top: 10px;
+}
+.bcak_logo img{
+    width: 100%;
+}
+.back_nav{
+    width: 15%;
+    float: left;
+    height: 100vh;
+    background-color: #ffb505;
+    padding: 0 20px;
+    text-align: center;
+    box-sizing: border-box;
+    // position: fixed;
+}
+.back_nav a{
+    color: $a_color;  
+}
+.back_nav li{
+    padding: 20px 0;
+}
+.back_content{
+    float: left;
+    background-color: #fff;   
+    // position: relative; 
+    height: 100vh;
+    width: 85%;   
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+.back_content::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.search{
+    width: 90%;
+    margin: 0 auto 10px;
+    // padding: 5px 10px;
+    text-align: left;
+  }
+/*=======*/
 * {
   // outline: 1px solid red;
 }
@@ -67,6 +136,7 @@ h2 {
   margin: 0 auto 10px;
   // padding: 5px 10px;
   text-align: left;
+/*>>>>>>> G4-1*/
 }
 
 #book_search {
@@ -105,7 +175,7 @@ select {
   font-weight: normal;
 }
 
-// 頁簽樣式
+/*// 頁簽樣式*/
 
 #tab-page > ul {
   width: 90%;
@@ -139,3 +209,9 @@ border-top-left-radius: 6px;
   border-bottom: 1px solid #4c9efe;
   background: #4c9efe;
 }
+
+
+
+
+
+
