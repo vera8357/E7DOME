@@ -167,7 +167,7 @@ body{
     z-index: 999;
     content: '';
     position: absolute;
-    left: calc(50% - 111px);
+    left: calc(50% - 95px);
     width: 0;
     height: 0;
     background: 0 0;
@@ -179,11 +179,15 @@ body{
 }
 .headerdropdown{
     opacity: 0;
-    transition: .5s;
+    transition: .2s;
 }
 #bar:hover .headerdropdown{
     opacity: 1;
 }
+.downlink-w{
+    margin: 10px;
+}
 .downlink{
     display: block;
+    padding: 1px;
 }
