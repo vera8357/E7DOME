@@ -13,7 +13,7 @@
 
 <body class="about-page">
   <header>
-    <?php include 'header.php';?>
+     <?php include 'header.php';?> 
   </header>
   <div class="wrapper01">
     <div class="min">
