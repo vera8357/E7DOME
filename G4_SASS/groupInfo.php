@@ -1,4 +1,3 @@
-
 <?php  
 try {
     $dsn = "mysql:host=localhost;port=3306;dbname=cd102g4;charset=utf8";
@@ -16,14 +15,10 @@ try {
     $team = $pdo->query( $sql);
     $teams = $team->fetchAll(PDO::FETCH_ASSOC);
     foreach($teams as $i=>$teamsRow){
-
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -73,9 +68,9 @@ try {
             </ul>
         </div>
     </header>
-                <div class="group-details">
-        </div>
-    </header>
+    <div class="group-details">
+    </div>
+    
     <section class="group-info-section">
         <div class="group-wrapper">
             <div class="first-wrapper">
@@ -106,15 +101,12 @@ try {
                         揪團人數
                         <span>
                             <?php
-                            $MEM_NO=$teamsRow['MEM_NO'];
-                            $sql = "SELECT * FROM team_mem JOIN team ON (team_mem.TEAM_NO = team.TEAM_NO) JOIN member ON (team_mem.MEM_NO = member.MEM_NO)  WHERE team_mem.MEM_NO = $MEM_NO ";
-                            $teammem = $pdo->query( $sql);
-                            $rows = $teammem->fetch( );
-                            $rowCount = $rows[1];
-                            if($rowCount == 0){
-                                echo '1';
-                            }else
-                            echo $rowCount;
+    
+                            $sql ="SELECT * FROM team_mem WHERE TEAM_NO = '$TEAM_NO'";
+                            $teammem = $pdo->prepare( $sql);
+                            $teammem->execute(); 
+                            $rows = $teammem->rowCount();//計算抓到幾筆資料
+                            echo $rows+1;//揪團人數+1(團長)
                             ?>
                             </span> /
                         <span><?php echo $teamsRow["TEAM_MEM"];?></span> 人
@@ -157,10 +149,10 @@ try {
 
     </section>
     <?php
-    
+    }
     ?>
     <?php
-                    }
+                    
                     ?>
 
 
