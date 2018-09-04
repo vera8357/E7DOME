@@ -26,6 +26,10 @@
     width: 7px!important; 
 	margin: 0!important; 
 	transform: translate(-50%,-50%);
+	// top: 0;
+	// left: 0;
+
+	// margin: auto!important;
 	border-radius: 0!important; 
 	background-color: #FB8C65;
 	opacity: 1;
@@ -47,7 +51,7 @@
 }
 .slick-dots {
     position: absolute;
-    bottom: -30px;
+    bottom: -20px;
     display: block;
     width: 100%;
     padding: 0;
@@ -363,7 +367,7 @@ a{
 	bottom: 0;
 	left: 0;
 }
-@-webkit-keyframes typing { from { width: 0; } to{ width: 14.8ch } }
+@-webkit-keyframes typing { from { width: 0; } to{ width: 15ch } }
 @-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
 .home_pg3 h2{
 	text-align: center;

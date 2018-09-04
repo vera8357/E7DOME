@@ -221,14 +221,6 @@
 					$('.home_pg1').removeClass('active');
 				}
 				if (destination.index == 1) {
-					// var bgd1 = $('.map--1');
-					// var bgd2 = $('.map--2');
-					// var bgd3 = $('.map--3');
-					// var bgd4 = $('.map--4');
-					// bgd1.hide();
-					// bgd2.hide();
-					// bgd3.hide();
-					// bgd4.hide();
 					$('#e7dome-text').hide();
 				}
 				if (destination.index == 2) {
@@ -329,6 +321,8 @@
 							slidesToShow: 3,
 							arrows: false,
 							dots: false,
+							autoplay: true,
+  							autoplaySpeed: 3000,
 							responsive: [
 								{
 									breakpoint: 768,
@@ -345,7 +339,7 @@
 						maxTilt: 15,
 						scale: 1.02,
 						perspective: 500,
-						// easing: "cubic-bezier(.03,.98,.52,.99)",
+						easing: "cubic-bezier(.03,.98,.52,.99)",
 						speed: 300,
 						glare: true,
 						maxGlare: 0.6,

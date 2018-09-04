@@ -11,7 +11,7 @@
 header {
   width: 100%;
   font-family: 'HanWangZonYi';
-  position: relative;
+  position: absolute;
   z-index: 99; }
 
 header:after {
