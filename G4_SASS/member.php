@@ -18,7 +18,7 @@ if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
 }
 ?>  
 <div class="headerdropdown">
-	<ul>
+	<ul class="downlink-ww">
 		<li class="downlink-w" ><a class="downlink" href="#">揪團</a></li>
 		<li class="downlink-w" ><a class="downlink" href="#">儲值</a></li>
 		<li class="downlink-w" ><a class="downlink" href="#">登出</a></li>
