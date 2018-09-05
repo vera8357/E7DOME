@@ -29,10 +29,10 @@
       <!-- <button id="okbtn">OK</button> -->
     </div>
     </div>
-    <div class="coach_img">
-      <!-- <img class="coach" src="images/chatrobot/coach.png" alt="coach"> -->
+    <div class="coach_img"></div>
+    <div class="coachman">
+      
     </div>
-    <!-- <img class="coach" src="images/chatrobot/coach.png" alt="coach"> -->
   </section>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
