@@ -1,8 +1,6 @@
 <?php
 try{
     require_once("php/connect_g4.php");
-    
-    
     if( file_exists("images/sport//")===false){
         mkdir("images/sport//");
     }

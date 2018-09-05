@@ -365,7 +365,7 @@
                 window.addEventListener('load',hahaha(label=firstlabel));
             }
         });
-        $('.reservation').on('click',function(){
+        $('.group').on('click',function(){
             $.ajax({
                 url:'php/facility/session_sport.php',
                 dataType:'text',
@@ -374,7 +374,10 @@
                     cate_no:parseInt($('.site_select').find('input').eq(0).val()),
                 },
                 success:function(data3){
-                    // alert(data3);
+                    window.location.href = "group.php";
+                },
+                error:function(){
+                    alert('gg');
                 }
             })
         })
