@@ -70,7 +70,7 @@
             <div class="vtb-intro-mask_hover-overlay"></div>
         </div>
         <div class="bg"></div>
-        <canvas id="mycanvas" class= "wow rollIn" data-wow-duration="2s" data-wow-delay=".5s"></canvas>
+        <canvas id="mycanvas" class= "wow rollIn" data-wow-duration="3s" data-wow-delay=".5s"></canvas>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://thefrontendblog.com/hosted/jquery.parallax.min.js"></script>
