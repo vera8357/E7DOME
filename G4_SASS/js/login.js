@@ -172,16 +172,20 @@ function init() {
 
   // 檢查帳號是否有重複
   $id('enroll_id').onchange = check_id;
-  $id('bar').onmouseover = show_headerdropdown;
+
+  if (document.body.clientWidth > 768) {
+    $id('bar').onmouseover = show_headerdropdown;
+
+    $id('bar').onmouseout = exit;
+  }
 
 
-
-  document.getElementsByClassName('headerdropdown')[0].onmouseout = exit;
 
 
 
 
 }; //window.onload
+
 
 window.onload = init;
 

@@ -22,12 +22,26 @@ function $id(id){
 
 
 
-
+        function show_headerdropdown() {
+            var link_member = document.getElementById('link_member');
+            if (link_member.innerHTML == '登入') {
+                document.getElementsByClassName('headerdropdown')[0].style.display = 'none';
+            } else {
+                document.getElementsByClassName('headerdropdown')[0].style.display = 'block';
+            }
+        }
+        function exit() {
+            document.getElementsByClassName('headerdropdown')[0].style.display = 'none';
+        }
         function init(){
 
             $id('show_leader').onclick = show_leader;
             $id('show_staff').onclick = show_staff;
-        
+            if (document.body.clientWidth > 768) {
+                $id('bar').onmouseover = show_headerdropdown;
+
+                $id('bar').onmouseout = exit;
+            }
         }
 
 
