@@ -42,7 +42,7 @@ if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
 			</tr>
 			<tr>
 				<td>
-					密碼: <input id="MEM_PSW" type="password" name="MEM_PSW" required="required">
+					密碼:<input id="MEM_PSW" type="password" name="MEM_PSW" required="required">
 				</td>
 			</tr>
 			<tr>
