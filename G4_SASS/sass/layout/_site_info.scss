@@ -522,8 +522,13 @@ img{
         cursor: pointer;
         padding:0 1% 0 1%;
         float:left;
+        transition: 2s;
+        transform: scale(1);   
     }
-
+    #basketball_site:hover{
+        transition: 2s;
+        transform: scale(1.5);
+    }
     #basketball_site {
         top: auto;
         left: auto;

@@ -132,7 +132,7 @@
             <div id="xx">
                 X
             </div>
-            <form id="addForm">
+            <form id="addForm" method="post" action="facility_add_site.php" enctype="multipart/form-data">
                 <table>
                     <tr>
                         <th>類別名稱</th>
@@ -172,14 +172,12 @@
                     <tr>
                         <th>場地照片</th>
                         <td>
-                            <input type="file" name="fac_img" id="fac_img">
+                            <input type="file" name="facimg" id="fac_img">
                         </td>
                     </tr>
                 </table>
                 <div class="add_site_info_but">
-                    <button id="add_site">
-                        確認新增
-                    </button>
+                    <input type="submit" id="add_site" value="確認新增">
                     <button>
                         重　置
                     </button>
@@ -201,7 +199,7 @@
                     url: 'php/facility/facility.php',				
                     dataType: 'text',
                     success:function(data2){
-                        $('#table_body').find('td').remove();
+                        $('#table_body').find('td').remove();   
                         $('#table_body').append(data2);
                         for(var i = 0;i<$('.update_status').length;i++){
                                 if($('.update_status').eq(i).text()=="下架"){
@@ -251,24 +249,24 @@
                 });
             }
             init();
+// <!-- 
+//             $('#add_site').click(function(e){
+//                 e.preventDefault();
 
-            $('#add_site').click(function(e){
-                e.preventDefault();
-
-                $.ajax({
-                    url: 'php/facility/facility.php',				
-                    data: $('#addForm').serialize(),//serialize是全部的值				
-                    type: 'POST',				
-                    dataType: 'text',
-                    success:function(data){
-                        alert('已成功新增');
-                        // window.location.reload();
-                        init();
-                        // $('#table_body').find('td').remove();
-                        // $('#table_body').append(data);
-                    }
-                });
-            });
+//                 $.ajax({
+//                     url: 'php/facility/facility_add_site.php',				
+//                     data: $('#addForm').serialize(),//serialize是全部的值				
+//                     type: 'POST',				
+//                     dataType: 'text',
+//                     success:function(data){
+//                         alert('已成功新增');
+//                         // window.location.reload();
+//                         init();
+//                         // $('#table_body').find('td').remove();
+//                         // $('#table_body').append(data);
+//                     }
+//                 });
+//             }); -->
         })
     </script>
 </body>

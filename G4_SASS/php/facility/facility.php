@@ -1,16 +1,16 @@
 <?php
     try{
         require_once("../connect_g4.php");
-        if(isset($_REQUEST["fac_name"])){
-            $fac_name = $_REQUEST["fac_name"];
-            $fac_desc = $_REQUEST["fac_desc"];
-            $fac_points = $_REQUEST["fac_points"];
-            $fac_mem = $_REQUEST["fac_mem"];
-            // $fac_img = $_REQUEST["fac_img"];
-            $cate_no = $_REQUEST["cate_no"];
-            $sql = "INSERT INTO facility(FAC_NO,CATE_NO,FAC_NAME,FAC_DESC,FAC_MEM,FAC_POINTS,FAC_STATUS)values(null,'$cate_no','$fac_name','$fac_desc','$fac_mem','$fac_points','0')";
-            $pdo->exec($sql);
-        }
+        // if(isset($_REQUEST["fac_name"])){
+        //     $fac_name = $_REQUEST["fac_name"];
+        //     $fac_desc = $_REQUEST["fac_desc"];
+        //     $fac_points = $_REQUEST["fac_points"];
+        //     $fac_mem = $_REQUEST["fac_mem"];
+        //     $fac_img = $_FLIES["fac_img"]["name"];
+        //     $cate_no = $_REQUEST["cate_no"];
+        //     $sql = "INSERT INTO facility(FAC_NO,CATE_NO,FAC_NAME,FAC_DESC,FAC_MEM,FAC_POINTS,FAC_IMG1,FAC_STATUS)values(null,'$cate_no','$fac_name','$fac_desc','$fac_mem','$fac_points','$fac_img','0')";
+        //     $pdo->exec($sql);
+        // }
         if(isset($_REQUEST["upfac_no"])){
             $upfac_no = $_REQUEST["upfac_no"];
             $upfac_desc = $_REQUEST["upfac_desc"];
@@ -65,6 +65,7 @@
                 <input type="number" class="tb_facmem" value="<?php echo $data["FAC_MEM"]?>">
             </td>
             <td>
+                <img src="images/sport/<?php echo $data["FAC_IMG1"]?>" alt="">
             </td>
             <td>
                 <button class="update_status"><?php echo $data["FAC_STATUS"]?></button>
