@@ -12,13 +12,13 @@ $(function(){
             $('.ani_bowling_bgc').animate({
                 left: '-50%',
             }, 1400, function () {
-                window.location.href = "bowling.html";
+                window.location.href = "bowling.php";
             });
         }else{
             $('.ani_bowling_bgc').animate({
                 left:'-50%',
             },1680,function(){
-                window.location.href = "bowling.html";
+                window.location.href = "bowling.php";
             });
         }
     });
@@ -30,13 +30,13 @@ $(function(){
             $('.ani_basketball_bgc').animate({
                 right: '-50%',
             }, 1500, function () {
-                window.location.href = "basketball.html";
+                window.location.href = "basketball.php";
             });
         }else{
             $('.ani_basketball_bgc').animate({
                 right: '-50%',
             }, 1900, function () {
-                window.location.href = "basketball.html";
+                window.location.href = "basketball.php";
             });
         }
     });
@@ -48,13 +48,13 @@ $(function(){
             $('.ani_badminton_bgc').animate({
                 top: '0',
             }, 1000, function () {
-                window.location.href = "badminton.html";
+                window.location.href = "badminton.php";
             });
         } else {
             $('.ani_badminton_bgc').animate({
                 top: '0',
             }, 1200, function () {
-                window.location.href = "badminton.html";
+                window.location.href = "badminton.php";
             });
         }
     });
@@ -66,13 +66,13 @@ $(function(){
             $('.ani_climbimg_bgc').animate({
                 bottom: '0',
             }, 1475, function () {
-                window.location.href = "climbimg.html";
+                window.location.href = "climbimg.php";
             });
         } else {
             $('.ani_climbimg_bgc').animate({
                 bottom: '0',
             }, 1425, function () {
-                window.location.href = "climbimg.html";
+                window.location.href = "climbimg.php";
             });
         }
     });

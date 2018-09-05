@@ -20,7 +20,7 @@ body{
     height: 35px;
     border-radius: 50%;
     margin: auto;
-
+    margin-top:-7.5px; 
 }
 #link_member{
     display: block;
@@ -31,9 +31,16 @@ body{
 /*--------------------------------------*/
 
 /*singe*/
+@media screen and (max-width: 1200px){
+    #m_pic {
+        margin-top:-9.5px; 
+    }
 
+}
 @media screen and (max-width: 768px){
-
+    #m_pic {
+        margin-top:0 
+    }
     #sing_in,
     #enroll {
         margin-top: -50%;
@@ -146,4 +153,52 @@ body{
     margin-right: 0;
     position: relative;
     z-index: 0;
+}
+// 隱藏下拉框框
+.headerdropdown{
+    position: relative;
+    top: 10px;
+    width: 200%;
+    margin-left: -15px;
+    background: rgba(255, 255, 255, 0.63);
+    padding-top: 100px;
+}
+.headerdropdown::after{
+    top: -16px;
+    z-index: 999;
+    content: '';
+    position: absolute;
+    left: calc(50% - 10px);
+    width: 0;
+    height: 0;
+    background: 0 0;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom-color: rgba(255, 255, 255, 0.63);
+    
+}
+.headerdropdown{
+    display: none;
+    transition: .2s;
+}
+#bar:hover .headerdropdown{
+    display: block;
+}
+.downlink-ww{
+    position: absolute;
+    top: 10px;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin: 0;
+}
+.downlink-w{
+    margin: 5px 12px;
+    float: none;
+    display: inline-block;
+    width: 50px;
+}
+.downlink{
+    display: block;
 }

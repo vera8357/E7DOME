@@ -3,23 +3,6 @@ ob_start();
 session_start();
 ?>
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/member.css">
-
-	<title>Document</title>
-</head>
-
- 
-<body>
-
-
 <!-- 登入 -->
 <div id="bar">
 	
@@ -34,9 +17,14 @@ if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
   echo '<a href="#" id="link_member">登入</a>';
 }
 ?>  
-
+<div class="headerdropdown">
+	<ul class="downlink-ww">
+		<li class="downlink-w" ><a class="downlink" href="#">揪團</a></li>
+		<li class="downlink-w" ><a class="downlink" href="#">儲值</a></li>
+		<li class="downlink-w" ><a class="downlink" href="#">登出</a></li>
+	</ul>
 </div>
-
+</div>
 
 <!-- 登入燈箱 -->
 
@@ -72,7 +60,6 @@ if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
 	</div>
 
 </div>
-
 
 <!-- 註冊燈箱 -->
 
@@ -127,20 +114,7 @@ if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
 				</tr>
 
 			</table>
-
-			
-
 		</form>
-
-
 	</div>
-
-
 </div>
-
-
-
-
-	<script src="js/login.js"></script>
-</body>
-</html>
+<script src="js/login.js"></script>

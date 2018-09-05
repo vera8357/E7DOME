@@ -23,8 +23,6 @@ try{
     $_SESSION["MEM_IMG"] = $memRow["MEM_IMG"];
  
   
-
-
     //送出登入者的姓名資料
     echo $_SESSION["MEM_IMG"];
   }
