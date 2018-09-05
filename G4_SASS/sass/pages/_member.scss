@@ -53,7 +53,7 @@ body{
 #enroll {
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(rgba(219,219,219,.3),rgba(55,137,200,.4));
+    background: linear-gradient(rgba(230,230,230,.7),rgba(55,137,200,.5));
     position: fixed;
     top: 0;
     right: 0;
@@ -95,6 +95,7 @@ body{
 
 #table_login {
     width: 100%;
+    text-align: center;
 }
 
 #table_login td {
@@ -142,6 +143,7 @@ body{
     position: relative;
     float: none;
     margin-top: 0px;
+     text-align: center;
 
 
 }

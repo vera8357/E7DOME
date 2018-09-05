@@ -82,12 +82,12 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 				<h1 id="member_h1">基本資料</h1>
 
 						<div class="div_style first">
-							會員名稱: <input id="clear_border" type="text" value="<?php echo$_SESSION['MEM_ID']; ?>" readonly="readonly" style="border:1px solid transparent; box-shadow: 0px 0px 0px 0px transparent;">
+							會員名稱 : <input id="clear_border" type="text" value="<?php echo$_SESSION['MEM_ID']; ?>" readonly="readonly" style="border:1px solid transparent; box-shadow: 0px 0px 0px 0px transparent;">
 
 						</div>
 
 						<div class="div_style">
-							手機號碼: <input id="phone_number" type="tel" name="change_tel"  value="<?php echo$_SESSION['MEM_PHONE']; ?>">
+							手機號碼 : <input id="phone_number" type="tel" name="change_tel"  value="<?php echo$_SESSION['MEM_PHONE']; ?>">
 
 						</div>
 						<div>
@@ -106,15 +106,15 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 
 					
 					<div class="div_style first">
-						輸入舊密碼: <input id="old_psw" type="password" name="old_psw"   >
+						輸入舊密碼 : <input id="old_psw" type="password" name="old_psw"   >
 					</div>
 
 					<div class="div_style">
-						輸入新密碼: <input id="new_ps1" type="password" name="new_psw"   >
+						輸入新密碼 : <input id="new_ps1" type="password" name="new_psw"   >
 					</div>
 
 					<div class="div_style">
-						確認新密碼: <input  id="new_ps2" type="password" name="chech_psw"  >
+						確認新密碼 : <input  id="new_ps2" type="password" name="chech_psw"  >
 					</div>
 
 					<div>
