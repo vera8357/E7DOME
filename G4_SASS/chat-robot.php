@@ -22,9 +22,9 @@
       <div class="clearboth"></div>
     </div>
     <div class="field">
-      <input id="register" maxlength="20" type="text">
+      <input id="register" maxlength="20" type="text" placeholder="please tell me">
       <label for="register">
-        <span>please tell me</span>
+        <!-- <span>please tell me</span> -->
       </label>
       <!-- <button id="okbtn">OK</button> -->
     </div>
@@ -51,7 +51,7 @@
       var li = document.createElement("li");
       newUl.appendChild(li);
       li.className = "li_ans";
-      $('.li_ans').html("<img class='portrait' src='images/chatrobot/anse.jpeg'>歡迎來到E7DOME,有任何問題都可問我"); //載入後出現的問候
+      $('.li_ans').html("<img class='portrait' src='images/chatrobot/anse.jpeg'><br>歡迎來到E7DOME,有任何問題都可問我"); //載入後出現的問候
 
       $('#register').keyup(function (e) {
         var convalue = this.value.trim();
@@ -65,7 +65,7 @@
             success: function (data) {
               var li = document.createElement("li");  //機器人的答案
               var ri = document.createElement("li");  //使用者輸入問題
-              var scrollHeight = $('#message').prop("scrollHeight");
+              var scrollHeight = $('#message').prop("scrollHeight"); //scrollbar自動在最下方
               
               newUl.appendChild(ri); //使用者
               newUl.appendChild(li);  //機器人
@@ -73,9 +73,9 @@
               li.className = "li_ans";  //機器人li
               ri.className = "rli_ans"; //使用者li
               // console.log(data);
-              li.innerHTML = '<img class="portrait" src="images/chatrobot/anse.jpeg">' + data;
-              ri.innerHTML = '<img class="portrait" src="images/chatrobot/user-default-light64x64.png">' + convalue;
-              $('#message').scrollTop(scrollHeight);
+              li.innerHTML = '<img class="portrait" src="images/chatrobot/anse.jpeg"><br>' + data;
+              ri.innerHTML = '<img class="portrait" src="images/chatrobot/user-default-light64x64.png"><br>' + convalue;
+              $('#message').scrollTop(scrollHeight); //scrollbar自動在最下方
               
             }
           });
