@@ -13,62 +13,34 @@
 	<header>
 		<?php include 'header.php';?>
 	</header>
-	<div class="container">
-		<div class="area accordion">
-			<h3 class="text-lg">籃球場</h3>
-			<div class="mask">
-				<div class="court panel">
-					<h3 class="text-xxlg padding-32">籃球場</h3>
-					<table id="tbl1" class="table-date">
-						<caption class="text-white text-lg padding-16">選擇預約日期</caption>
-						<tr>
-							<!-- 							<th>SUN</th>
-								<th>MON</th>
-								<th>TUE</th>
-								<th>WED</th>
-								<th>THU</th>
-								<th>FRI</th>
-								<th>SAT</th> -->
-						</tr>
-					</table>
-					<table class="table-select text-white">
+
+<div class="container">
+	<div class="area accordion">
+		<h3 class="text-lg">籃球場</h3>
+		<div class="mask">
+			<div class="court panel">
+				<h3 class="text-xxlg padding-32">籃球場</h3>
+				<table id="tbl1" class="table-date" data-cate="1">
+					<caption class="text-white text-lg padding-16">選擇預約日期</caption>
+					<tr></tr>
+				</table>
+				<table class="table-select text-white">
+					<thead class="table-select-thead">
 						<tr>
 							<th>場地</th>
 							<th>時段</th>
 							<th>點數</th>
 							<th>狀態</th>
 						</tr>
-						<tr>
-							<td>籃球場(A)</td>
-							<td>上午</td>
-							<td>500點</td>
-							<td><a href="#" class="btn dim-gray default opacity-1">已預約</a></td>
-						</tr>
-						<tr>
-							<td>籃球場(A)</td>
-							<td>下午</td>
-							<td>500點</td>
-							<td><a href="#" class="btn dim-orange">查看揪團</a></td>
-						</tr>
-						<tr>
-							<td>籃球場(B)</td>
-							<td>上午</td>
-							<td>500點</td>
-							<td><a href="#" class="btn dim-blue" id="myBtn">預約</a></td>
-						</tr>
-						<tr>
-							<td>籃球場(B)</td>
-							<td>下午</td>
-							<td>500點</td>
-							<td><a href="#" class="btn dim-orange">查看揪團</a></td>
-						</tr>
-					</table>
-				</div><!-- panel -->
-				<div class="content">
-					<!-- <img src="images/booking/01basketball.jpg"> -->
-				</div>
-			</div>
+					</thead>
+					<tbody class="table-select-scroll" id="queryFac1">
+
+			  		</tbody>
+				</table>
+			</div><!-- panel -->
+			<div class="content"></div>
 		</div>
+	</div>
 
 		<!-- BADMINTON -->
 		<div class="area accordion activeNow">
@@ -76,53 +48,26 @@
 			<div class="mask">
 				<div class="court panel">
 					<h3 class="text-xxlg padding-32">保齡球場</h3>
-					<table id="tbl2" class="table-date">
+					<table id="tbl2" class="table-date" data-cate="2">
 						<caption class="text-white text-lg padding-16">選擇預約日期</caption>
 						<tr>
-							<!-- 							<th>SUN</th>
-								<th>MON</th>
-								<th>TUE</th>
-								<th>WED</th>
-								<th>THU</th>
-								<th>FRI</th>
-								<th>SAT</th> -->
 						</tr>
 					</table>
 					<table class="table-select text-white">
-						<tr>
-							<th>場地</th>
-							<th>時段</th>
-							<th>點數</th>
-							<th>狀態</th>
-						</tr>
-						<tr>
-							<td>保齡球場(A)</td>
-							<td>上午</td>
-							<td>500點</td>
-							<td><a href="#" class="btn dim-gray default opacity-1">已預約</a></td>
-						</tr>
-						<tr>
-							<td>保齡球場(A)</td>
-							<td>下午</td>
-							<td>500點</td>
-							<td><a href="#" class="btn dim-orange">查看揪團</a></td>
-						</tr>
-						<tr>
-							<td>保齡球場(B)</td>
-							<td>上午</td>
-							<td>500點</td>
-							<td><a href="#" class="btn dim-blue">預約</a></td>
-						</tr>
-						<tr>
-							<td>保齡球場(B)</td>
-							<td>下午</td>
-							<td>500點</td>
-							<td><a href="#" class="btn dim-orange">查看揪團</a></td>
-						</tr>
+						<thead class="table-select-thead">
+							<tr>
+								<th>場地</th>
+								<th>時段</th>
+								<th>點數</th>
+								<th>狀態</th>
+							</tr>
+						</thead>
+						<tbody class="table-select-scroll" id="queryFac2">	
+
+				  		</tbody>
 					</table>
 				</div><!-- panel -->
 				<div class="content">
-					<!-- <img src="images/booking/02badminton.jpg"> -->
 				</div>
 			</div>
 		</div>
@@ -133,53 +78,25 @@
 			<div class="mask">
 				<div class="court panel">
 					<h3 class="text-xxlg padding-32">攀岩場</h3>
-					<table id="tbl3" class="table-date">
+					<table id="tbl3" class="table-date" data-cate="4">
 						<caption class="text-white text-lg padding-16">選擇預約日期</caption>
 						<tr>
-							<!-- 							<th>SUN</th>
-								<th>MON</th>
-								<th>TUE</th>
-								<th>WED</th>
-								<th>THU</th>
-								<th>FRI</th>
-								<th>SAT</th> -->
 						</tr>
-					</table>
-					<table class="table-select text-white">
+				<table class="table-select text-white">
+					<thead class="table-select-thead">
 						<tr>
 							<th>場地</th>
 							<th>時段</th>
 							<th>點數</th>
 							<th>狀態</th>
 						</tr>
-						<tr>
-							<td>攀岩場(A)</td>
-							<td>上午</td>
-							<td>500點</td>
-							<td><a href="#" class="btn dim-gray default opacity-1">已預約</a></td>
-						</tr>
-						<tr>
-							<td>攀岩場(A)</td>
-							<td>下午</td>
-							<td>500點</td>
-							<td><a href="#" class="btn dim-orange">查看揪團</a></td>
-						</tr>
-						<tr>
-							<td>攀岩場(B)</td>
-							<td>上午</td>
-							<td>500點</td>
-							<td><a href="#" class="btn dim-blue">預約</a></td>
-						</tr>
-						<tr>
-							<td>攀岩場(B)</td>
-							<td>下午</td>
-							<td>500點</td>
-							<td><a href="#" class="btn dim-orange">查看揪團</a></td>
-						</tr>
-					</table>
+					</thead>
+					<tbody class="table-select-scroll" id="queryFac4">
+
+			  		</tbody>
+				</table>
 				</div><!-- panel -->
 				<div class="content">
-					<!-- <img src="images/booking/03climbling.jpg"> -->
 				</div>
 			</div>
 		</div>
@@ -189,101 +106,152 @@
 			<div class="mask">
 				<div class="court panel">
 					<h3 class="text-xxlg padding-32">羽球場</h3>
-					<table id="tbl4" class="table-date">
+					<table id="tbl4" class="table-date" data-cate="3">
 						<caption class="text-white text-lg padding-16">選擇預約日期</caption>
 						<tr>
-							<!-- 							<th>SUN</th>
-								<th>MON</th>
-								<th>TUE</th>
-								<th>WED</th>
-								<th>THU</th>
-								<th>FRI</th>
-								<th>SAT</th> -->
 						</tr>
 					</table>
-					<table class="table-select text-white">
+				<table class="table-select text-white">
+					<thead class="table-select-thead">
 						<tr>
 							<th>場地</th>
 							<th>時段</th>
 							<th>點數</th>
 							<th>狀態</th>
 						</tr>
-						<tr>
-							<td>羽球場(A)</td>
-							<td>上午</td>
-							<td>500點</td>
-							<td><a href="#" class="btn dim-gray default opacity-1">已預約</a></td>
-						</tr>
-						<tr>
-							<td>羽球場(A)</td>
-							<td>下午</td>
-							<td>500點</td>
-							<td><a href="#" class="btn dim-orange">查看揪團</a></td>
-						</tr>
-						<tr>
-							<td>羽球場(B)</td>
-							<td>上午</td>
-							<td>500點</td>
-							<td><a href="#" class="btn dim-blue">預約</a></td>
-						</tr>
-						<tr>
-							<td>羽球場(B)</td>
-							<td>下午</td>
-							<td>500點</td>
-							<td><a href="#" class="btn dim-orange">查看揪團</a></td>
-						</tr>
-					</table>
+					</thead>
+					<tbody class="table-select-scroll" id="queryFac3">
+
+			  		</tbody>
+				</table>
 				</div><!-- panel -->
 				<div class="content">
-					<!-- <img src="images/booking/04bowling.jpg"> -->
 				</div>
 			</div>
 		</div>
 
-
-		<!-- The Modal -->
-		<div id="myModal" class="modal">
-
-			<!-- Modal content -->
-			<div class="modal-content">
-				<div class="modal-header">
-					<div class="padding-md dim-blue text-white clearfix">
-						<h3 class="left">確認預約</h3>
-						<span class="close">&times;</span>
-					</div>
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="padding-md dim-blue text-white clearfix">
+					<h3 class="left">確認預約</h3>
+					<span class="close">&times;</span>
 				</div>
-				<div class="modal-body padding-32">
-					<table class="table-modal">
-						<tr>
-							<th>預約場地</th>
-							<th>預約日期</th>
-							<th>預約時段</th>
-							<th>場地點數</th>
-						</tr>
-						<tr>
-							<td>羽球場(A)</td>
-							<td>2018/08/08</td>
-							<td>上午</td>
-							<td>500點</td>
-						</tr>
-					</table>
-					<div class="modal-btn-container margin-top-16">
-						<div class="modal-btn">
-							<input type="button" class="btn dim-orange cancel" value="取消預約">
-						</div>
-						<div class="modal-btn">
-							<input type="button" class="btn dim-blue" value="確認預約" onclick="window.location='bookingreceipt.html';">
-						</div>
-					</div>
-				</div><!-- modal-body -->
 			</div>
+			<div class="modal-body padding-32">
 
-		</div><!-- modal -->
 
-	</div><!-- container -->
+<form action="php/booInsert.php" method="post">
+	<table class="table-modal" id="tbl-md">
 	
-	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-	<script src="js/booking.js"></script>
+	</table>
+	<div class="modal-btn-container margin-top-16">
+		<div class="modal-btn">
+			<input type="button" class="btn dim-orange cancel" value="取消預約">
+		</div>
+		<div class="modal-btn">
+			<input type="submit" class="btn dim-blue" value="確認預約" name="submitBoo">
+		</div>
+	</div>
+</form>
+
+			</div><!-- modal-body -->
+		</div>
+	</div><!-- modal -->
+
+</div><!-- container -->
+	
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+
+<script src="js/booking.js"></script>
+
+<script>
+
+function x1x(){
+	var yyyy = new Date().getFullYear();
+	$('.date').click(function(){
+		var mm = 0 + $(this).text().split('/')[0].slice(-2);
+		var dd = 0 + $(this).text().split('/')[1].slice(-2);
+		var targetDate = yyyy +'-' + mm + '-' + dd;
+		var cate_no = $(this).parent().parent().parent().data('cate');
+
+	    $.post("php/booQuery.php",
+	    	{
+	    		CATE_NO: cate_no,
+	    		BOO_DATE: targetDate
+	    	},
+	    function(data){
+	    	var cateNo =  '#queryFac' + cate_no; console.log(cateNo);
+	        $(cateNo).html(data);
+
+	        $('.myBtn').click(function(){
+		    	var fac_no 		= $(this).nextAll().eq(0).val();
+		    	var boo_time_i 	= $(this).nextAll().eq(1).val();
+		    	showInfo(fac_no,targetDate,boo_time_i);
+	        });
+
+	    });
+
+	});
+}
+
+function showInfo(fac_no,targetDate,boo_time_i){
+	$.post("php/booModal.php",
+	{
+		FAC_NO: fac_no,
+		BOO_DATE: targetDate,
+		BOO_TIME_i: boo_time_i
+	},
+		function (data){
+			$('#tbl-md').html(data);
+			modalOpen();
+		}
+	);
+}
+
+
+function modalOpen(){
+	// Get the modal
+	var modal = document.getElementById('myModal');
+	console.log(modal);	   
+	
+	$(".myBtn").each(function(){
+		$(this).click(function(){
+		    
+			modal.style.display = "block";
+		});
+	});
+	
+	$(".close").each(function(){
+		$(this).click(function(){
+			modal.style.display = "none";
+		});
+	});
+	
+	$(".cancel").each(function(){
+		$(this).click(function(){
+			modal.style.display = "none";
+		});
+	});
+	
+	window.onclick = function(event) {
+    	if (event.target == modal) {
+        	modal.style.display = "none";
+    	}
+	}
+}
+
+
+
+
+</script>	
+<script>window.addEventListener('load',x1x);</script>
+
 	<script>
 		$('.humberger_btn').click(function () {
 			$(this).toggleClass('active');
