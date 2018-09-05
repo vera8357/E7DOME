@@ -2,7 +2,6 @@
 ob_start();
 session_start();
 ?>
-
 <!-- 登入 -->
 <div id="bar">
 	

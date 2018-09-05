@@ -228,11 +228,6 @@
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
   <script src="js/map.js"></script>
   <script data-main="main" src="https://unpkg.com/requirejs@2/require.js"></script>
-    <script>
-      $('.humberger_btn').click(function () {
-        $(this).toggleClass('active');
-      })
-    </script>
 </body>
 
 </html>
