@@ -8,44 +8,12 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/maskbrush.css">
     <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="libs/wow/css/libs/animate.css">
     <title>maskBrush</title>
 </head>
 
 <body>
-    <header>
-        <div class="wrapper">
-            <div class="humberger_btn">
-                <div class="humberger_line top"></div>
-                <div class="humberger_line mid"></div>
-                <div class="humberger_line bot"></div>
-            </div>
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/e7logo.png" alt=""> </a>
-            </div>
-            <div class="login">
-                <!-- <a href="#"><img src="images/user-icon.png"></a> -->
-                <a href="#">登入</a>
-            </div>
-            <ul>
-                <li>
-                    <a href="#"> 場地介紹 </a>
-                </li>
-                <li>
-                    <a href="booking.html"> 預約場地 </a>
-                </li>
-                <li>
-                    <a href="group.html"> 運動揪團 </a>
-                </li>
-                <li>
-                    <a href="about.html"> 關於我們 </a>
-                </li>
-                <li>
-                    <a href="chat-robot.html"> 諮詢專區 </a>
-                </li>
-            </ul>
-        </div>
-    </header>
+    <?php include 'header.php';?>
     <div class="layouts">
         <div class="bomb-rocket"></div>
         <div class="bomb-rocket"></div>
@@ -102,16 +70,16 @@
             <div class="vtb-intro-mask_hover-overlay"></div>
         </div>
         <div class="bg"></div>
-        <canvas id="mycanvas"></canvas>
+        <canvas id="mycanvas" class= "wow rollIn" data-wow-duration="2s" data-wow-delay=".5s"></canvas>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://thefrontendblog.com/hosted/jquery.parallax.min.js"></script>
     <script src="js/pixi.min.js"></script>
     <script src="js/maskbrush.js"></script>
+    <script src="libs/wow/dist/wow.min.js">
+    </script>
     <script>
-        $('.humberger_btn').click(function () {
-            $(this).toggleClass('active');
-        })
+        new WOW().init();
     </script>
 </body>
 

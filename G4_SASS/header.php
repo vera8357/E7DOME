@@ -1,6 +1,8 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/font.css">
-  <link rel="stylesheet" type="text/css" href="css/member.css">
+	<link rel="stylesheet" type="text/css" href="css/member.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js">
+	</script>
   <header>
 		<div class="wrapper">
 			<div class="humberger_btn">
@@ -37,4 +39,13 @@
 				</li>
 			</ul>
 		</div>
+		<script>
+		$(document).ready(function(){
+			$('.humberger_btn').click(function () {
+			$(this).toggleClass('active');
+		})
+		})
+		
+	</script>
 </header>
+	

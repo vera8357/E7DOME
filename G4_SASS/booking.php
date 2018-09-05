@@ -251,12 +251,6 @@ function modalOpen(){
 
 </script>	
 <script>window.addEventListener('load',x1x);</script>
-
-	<script>
-		$('.humberger_btn').click(function () {
-			$(this).toggleClass('active');
-		})
-	</script>
 </body>
 
 </html>

@@ -1,7 +1,7 @@
 var layouts = document.getElementsByClassName('layouts')[0];
 var app = document.getElementById('mycanvas');
 // var renderer = new PIXI.autoDetectRenderer(1000,400,);
-var app = new PIXI.Application(500, 300, { view: app });
+var app = new PIXI.Application(600, 300, { view: app });
 layouts.appendChild(app.view);
 var stage = app.stage;
 
