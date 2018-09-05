@@ -17,7 +17,13 @@ if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
   echo '<a href="#" id="link_member">登入</a>';
 }
 ?>  
-
+	<div class="headerdropdown">
+		<ul class="downlink-ww">
+			<li class="downlink-w" ><a class="downlink" href="#">揪團</a></li>
+			<li class="downlink-w" ><a class="downlink" href="#">儲值</a></li>
+			<li class="downlink-w"><form action="php/logout.php"><a class="downlink" ><input id="memberout" type="submit" value="登出"></a></form></li>
+		</ul>
+	</div>
 </div>
 
 <!-- 登入燈箱 -->

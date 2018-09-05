@@ -135,6 +135,19 @@ function update_psw(){
 }
 
 
+function show_headerdropdown() {
+  var link_member = document.getElementById('link_member');
+  if (link_member.innerHTML == '登入') {
+    document.getElementsByClassName('headerdropdown')[0].style.display = 'none';
+  } else {
+    document.getElementsByClassName('headerdropdown')[0].style.display = 'block';
+  }
+}
+function exit() {
+  document.getElementsByClassName('headerdropdown')[0].style.display = 'none';
+}
+
+
 
 
 function init(){
@@ -154,6 +167,12 @@ function init(){
 
 	//送出確認修改密碼
 	$id('update_psw').onclick = update_psw;
+
+	if (document.body.clientWidth > 768) {
+		$id('bar').onmouseover = show_headerdropdown;
+
+		$id('bar').onmouseout = exit;
+	}
 }
 
 
