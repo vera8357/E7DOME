@@ -64,7 +64,7 @@
             <td>
                 <input type="number" class="tb_facmem" value="<?php echo $data["FAC_MEM"]?>">
             </td>
-            <td>
+            <td class="td_img">
                 <img src="images/sport/<?php echo $data["FAC_IMG1"]?>" alt="">
             </td>
             <td>

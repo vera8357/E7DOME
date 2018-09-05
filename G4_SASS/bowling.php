@@ -380,7 +380,23 @@
                     alert('gg');
                 }
             })
-        })
+        });
+        $('.reservation').on('click',function(){
+            $.ajax({
+                url:'php/facility/session_sport.php',
+                dataType:'text',
+                type:'POST',
+                data:{
+                    cate_no:parseInt($('.site_select').find('input').eq(0).val()),
+                },
+                success:function(data3){
+                    window.location.href = "test.php";
+                },
+                error:function(){
+                    alert('gg');
+                }
+            })
+        });
     </script>
 </body>
 </html>
