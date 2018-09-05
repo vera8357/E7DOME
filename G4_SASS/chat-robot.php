@@ -65,6 +65,8 @@
             success: function (data) {
               var li = document.createElement("li");  //機器人的答案
               var ri = document.createElement("li");  //使用者輸入問題
+              var scrollHeight = $('#message').prop("scrollHeight");
+              
               newUl.appendChild(ri); //使用者
               newUl.appendChild(li);  //機器人
 
@@ -73,6 +75,7 @@
               // console.log(data);
               li.innerHTML = '<img class="portrait" src="images/chatrobot/anse.jpeg">' + data;
               ri.innerHTML = '<img class="portrait" src="images/chatrobot/user-default-light64x64.png">' + convalue;
+              $('#message').scrollTop(scrollHeight);
               
             }
           });
