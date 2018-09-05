@@ -1,6 +1,23 @@
 * {
     @include all();
+  /*outline: 1px solid red;*/
   
+}
+
+html {
+    overflow: -moz-hidden-unscrollable;
+    height: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    height: 100%;
+    width: 100vw;
+    overflow: auto;
 }
 body{
     font-family: $about-font;
@@ -102,7 +119,7 @@ section {
     height: 150px;
     vertical-align: bottom;
     margin: auto;
-    box-shadow:  0px 1.5px 0px #333,-4px 3px 0px  #ffb505
+    /*box-shadow:  0px 1.5px 0px #333,-4px 3px 0px  #ffb505*/
                ;
 }
 
@@ -265,7 +282,9 @@ input[type="button"],
 input[type="submit"]{
     @include btn_style();
       margin-top: 20px;
+
 }
+
 
 #btn_logout{
      margin-top: 0px;
@@ -283,4 +302,6 @@ input[type="submit"]{
 
 /*1024以上*/
 
-@media screen and (min-width: 1024px) {}
+@media screen and (min-width: 1024px) {
+
+}

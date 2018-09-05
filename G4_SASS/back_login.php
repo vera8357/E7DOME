@@ -66,20 +66,13 @@
 					if(xhr.responseText == "帳號密碼錯誤"){
 						alert(responseText);
 					}else{
-						window.location.href="back_admin.html";
+						window.location.href="back_admin.php";
 						alert('登入成功');
 					}
 				}else{
 					alert(xhr.status)
 				}
 			}
-
-			// xhr.open("Post", "php/back_ajax_login.php", true);
-			// xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
-			// var data_info = "admin_id" + document.getElementById("admin_id").value
-			//              +"&admin_psw" + document.getElementById("admin_psw").value;
-			// xhr.send(data_info);
-
 
 
 	         xhr.open("Post", "php/back_ajax_login.php", true);

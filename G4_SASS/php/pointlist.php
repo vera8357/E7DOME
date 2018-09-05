@@ -1,6 +1,4 @@
 <?php
-	ob_start();
-	session_start();
 	require_once('connect_g4.php');
 	$sql = "select * from pointcard limit 3 ";             
 	$query = $pdo->query($sql);
@@ -17,7 +15,7 @@
 				<span class="cardFree">送</span><span class="cardPoint">'.$freePoints.'</span>點
 			</div>
 			<div class="cardP3">現折<span>'.floor($discount).'</span>%</div>
-			<a href="php\card_buy.php?no='.$row['CARD_NO'].'"class=\'cardBuy\'>
+			<a href="points_buy.php?CARD_NO='.$row['CARD_NO'].'"class=\'cardBuy\'>
 				立即購買
 			</a>
 		</div>

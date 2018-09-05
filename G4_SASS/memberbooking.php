@@ -112,7 +112,7 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 
 									  switch ($order['BOO_STATUS']) {
 									 	case '1':
-									 		$order['BOO_STATUS'] = "預約";
+									 		$order['BOO_STATUS'] = "預約中";
 									 		break;
 									 	case '0':
 									 		$order['BOO_STATUS'] = "已取消";
