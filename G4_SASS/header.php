@@ -1,13 +1,8 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/font.css">
-<<<<<<< HEAD
-  <link rel="stylesheet" type="text/css" href="css/member.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-=======
 	<link rel="stylesheet" type="text/css" href="css/member.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js">
 	</script>
->>>>>>> G4-1
   <header>
 		<div class="wrapper">
 			<div class="humberger_btn">

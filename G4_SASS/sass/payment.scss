@@ -4,6 +4,7 @@
 }
 body{
     background-color: #0052B2;
+    overflow-x: hidden;
 }
 header{
     position: relative !important;
@@ -13,15 +14,43 @@ input.CARD_METHOD
 {
     display:none;
 }
+@keyframes title{
+    from{
+        left: -100%;
+    }
+    to{
+        left: 0%;
+    }
+}
+@keyframes title2{
+    from{
+        transform:scaleX(0);
+    }
+    to{
+        transform:scaleX(1);
+    }
+}
 .payment_title{
+    position: relative;
     text-align: center ;
     font-size: 48px ;
     background-color: #90E9FD;
     color:#003572;
     padding: 15px 0;
     margin-top: 30px;
+    animation: title 1s;
+    padding-bottom: 25px;
 }
-
+  .title_bg{
+        position: absolute;
+        transform: scaleX(0);
+        bottom: 0;
+        width: 100%;
+        height: 20px;
+        transform-origin: right;
+        background-color: #FFB405;
+        animation: title2 1s 1s forwards;
+    }
 .payment_select_title{
     font-size: 16px;
     color: #fff;
@@ -31,11 +60,12 @@ input.CARD_METHOD
 }
 .payment_select{
     float: left;
-    padding: 50px 50px 0 15px;
+    padding: 0 50px 0 15px;
+    margin-top: 50px;
     box-sizing: border-box;
     width: 50%;
-    height: 500px;
     font-size: 0;
+    border-right:1px solid #dfdfdf; 
 }
 .payment_method:nth-child(3){
     margin: 0 5px;
@@ -171,7 +201,7 @@ input.CARD_METHOD
     border-right: 1px solid transparent; 
     background-color: #0058BF;
     margin-top: -1px;
-    color:#fff;
+    color:#dfdfdf;
     cursor: pointer;
     transition: .3s;
     font-size: 18px;
@@ -237,4 +267,9 @@ input.CARD_METHOD
 .confirm_btn:hover{
     color:#FFB405;
     background-color: transparent;
+}
+.pay_note{
+    padding: 20px 0;
+    font-size: 14px;
+    color:#FFB405;
 }

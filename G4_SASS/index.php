@@ -343,20 +343,6 @@
 						maxGlare: 0.6,
 					});
 
-					<?php 
-					if(isset($_SESSION["MEM_NO"]))
-					$mem_no = $_SESSION["MEM_NO"];
-					else 
-					$mem_no = 0;	 
-					?>
-					var session = <?php echo $mem_no?>;
-					$('.cardBuy').click(function(event){
-						if(session==0){
-							event.preventDefault();
-							alert('請先登入會員');
-							showLoginForm();
-						}
-					});
 				
 				}
 

@@ -18,7 +18,10 @@
 		// $query = $pdo->query($sql);
 		// $row = $query->fetch(PDO::FETCH_ASSOC);	
 	?>
-	<h1 class="payment_title">儲值點數</h1>
+	<h1 class="payment_title">儲值點數
+		<div class="title_bg"></div>
+	</h1>
+	
 	<div class="wrapper">
 		<div class="payment_select">
 			<h3 class="payment_select_title">付費方式</h3>
@@ -46,7 +49,7 @@
 
 
 				<?php
-				$sql = "select * from pointcard";             
+				$sql = "select * from pointcard where CARD_STATUS = 1 LIMIT 3";             
 				$query = $pdo->query($sql);	
 				$rows = $query->fetchAll(PDO::FETCH_ASSOC);
 				foreach($rows as $keys => $row){
@@ -134,7 +137,21 @@
 						e.preventDefault();
 						setTimeout(function () {
 							form.submit();
-						}, 3000); // in milliseconds
+						}, 3000); 
+					});
+					<?php 
+						if(isset($_SESSION["MEM_NO"]))
+						$mem_no = $_SESSION["MEM_NO"];
+						else 
+						$mem_no = 0;	 
+					?>
+					var session = <?php echo $mem_no?>;
+					$('.confirm_btn').click(function(event){
+						if(session==0){
+							event.preventDefault();
+							alert('請先登入會員');
+							showLoginForm();
+						}
 					});
 				}
 			})
@@ -153,7 +170,6 @@
 		});
 
 	})
-
 	</script>
 </body>
 </html>
