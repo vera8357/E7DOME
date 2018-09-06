@@ -25,7 +25,7 @@ function sendForm() {
         document.getElementById("pic_a").href = 'memberinfo.php';
         document.getElementById("m_pic").src = 'images/member_pic/' + xhr.responseText;
         document.getElementById("link_member").innerHTML = "";
-
+        location.reload();
 
       }
 

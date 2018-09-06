@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="3dfac/css/fac-animation.css" />
 	<script src="3dfac/js/modernizr-custom.js"></script>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	
 </head>
 
 <body>
@@ -330,6 +331,7 @@
 							]
 						}
 					);
+
 					$(".card").tilt({
 						maxTilt: 15,
 						scale: 1.02,
@@ -339,7 +341,25 @@
 						glare: true,
 						maxGlare: 0.6,
 					});
+
+					<?php 
+					if(isset($_SESSION["MEM_NO"]))
+					$mem_no = $_SESSION["MEM_NO"];
+					else 
+					$mem_no = 0;	 
+					?>
+					var session = <?php echo $mem_no?>;
+					$('.cardBuy').click(function(event){
+						if(session==0){
+							event.preventDefault();
+							alert('請先登入會員');
+							showLoginForm();
+						}
+					});
+				
 				}
+
+				
 			});
 		});
 	</script>
