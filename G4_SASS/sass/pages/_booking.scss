@@ -222,13 +222,13 @@ a{ text-decoration: none; }
 	z-index: 0;
 }
 
-.date-btn:nth-child(1):after { content: 'SUN'; }
-.date-btn:nth-child(2):after { content: 'MON'; }
-.date-btn:nth-child(3):after { content: 'TUE'; }
-.date-btn:nth-child(4):after { content: 'WED'; }
-.date-btn:nth-child(5):after { content: 'THU'; }
-.date-btn:nth-child(6):after { content: 'FRI'; }
-.date-btn:nth-child(7):after { content: 'SAT'; }
+.date:nth-child(1) .date-btn:after { content: 'SUN'; }
+.date:nth-child(2) .date-btn:after { content: 'MON'; }
+.date:nth-child(3) .date-btn:after { content: 'TUE'; }
+.date:nth-child(4) .date-btn:after { content: 'WED'; }
+.date:nth-child(5) .date-btn:after { content: 'THU'; }
+.date:nth-child(6) .date-btn:after { content: 'FRI'; }
+.date:nth-child(7) .date-btn:after { content: 'SAT'; }
 
 
 .table-select th,
