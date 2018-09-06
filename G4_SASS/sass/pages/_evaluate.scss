@@ -1,6 +1,6 @@
 * {
     @include all();
-    /*outline: 1px solid red;*/
+    outline: 1px solid red;
     
 }
 body{
@@ -21,6 +21,9 @@ body{
     height: 180px;
 }
 }
+
+/*----------------------------------*/
+
 #evaluate_wrap{
 	width: 95%;
 	margin:auto;
@@ -28,6 +31,7 @@ body{
 
 .fac_img{
 	width: 100%;
+	padding: 5%;
 
 }
 
@@ -37,22 +41,22 @@ body{
 }
 
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 960px){
 
 	#evaluate_wrap{
 	width: 80%;
 	margin:auto;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
 .fac_img{
-	width: 45%;
+	width: 49%;
 	padding: 2%	;
 }
 
 .evaluate_content{
-	width: 45%;
+	width: 49%;
 	padding: 2%;
 }
 }
@@ -61,6 +65,8 @@ body{
 
 .fac_img img{
 	width: 100%;
+	
+
 }
 
 .fac_name{
@@ -87,15 +93,16 @@ span{
 
 
 .evaluate_content ul{
+
 	display: flex;
 	width: 100%;
-	margin: 30px auto 20px auto;
+	margin: 0 auto 20px auto;
 }
 
 .evaluate_content li{
-	width: calc(100% / 5);
+
+	width: 50px;
 	font-size: 40px;
-	text-align: center;
 	color:rgba(255,255,255,.7);
 
 }
@@ -103,12 +110,13 @@ span{
 textarea{
 	display: block;
 	width: 100%;
-	height: 200px;
+	height: 150px;
 	font-size: 18px;
 	resize:none;
 	background-color: #4c9efe;
 	border:2.5px solid #022084;
 	letter-spacing: 2.5px;
+	padding:8px;
 
 
 }
@@ -118,8 +126,10 @@ textarea{
 	margin: 30px auto 0 auto;
 }
 
-input[type="reset"],
-input[type="submit"]{
+
+
+.evaluate_btn input[type="reset"],
+.evaluate_btn input[type="submit"]{
 	width: 48%;
 	font-size: 18px;
 	@include btn_style();
@@ -127,7 +137,7 @@ input[type="submit"]{
 }
 
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 960px){
 
 
 
@@ -143,11 +153,9 @@ input[type="submit"]{
 
 }
 
+.fac_img img{
+	min-width: 370px;
 
-
-.evaluate_content ul{
-	width: 50%;
-	margin: 0 auto 20px auto;
 }
 
 
@@ -157,6 +165,10 @@ input[type="submit"]{
 }
 
 
+}
+
+
+@media screen and (min-width: 1024px){
 
 
 }

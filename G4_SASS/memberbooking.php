@@ -134,7 +134,13 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 										echo "</span>";
 										echo "<span class='button'>";
 										echo "<input type='button' value='揪團去'>";
+
+										if($order['BOO_STATUS'] === '預約中'){
 										echo "<input class='cancel' type='button' value='取消預約'>";
+										}else{
+										echo "<input id='book_cancel' class='cancel' type='button' value='取消預約' disabled>";
+										}
+										
 										echo "<input type='hidden' id='booking_no' name='booking_no' value=".$order['BOO_NO'].">";
 										echo "<input type='submit' value='評價場地'>";
 										echo "</span>";

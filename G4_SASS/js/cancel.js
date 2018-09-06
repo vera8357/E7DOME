@@ -6,8 +6,9 @@ function cancel_booking(e){
 	xhr.onload =function(){
 		if(xhr.status == 200){
 			
-			document.getElementById('booking_check').innerHTML="已取消";
-			alert('已完成取消');
+			// document.getElementById('booking_check').innerHTML="已取消";
+			// alert('已完成取消');
+			window.location.reload();
 		
 		}else{
 			alert(xhr.status);
