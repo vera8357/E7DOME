@@ -10,23 +10,20 @@
 
 
 <?php
-// session_start();
+ob_start();
+session_start();
 
+// prevent refresh
+if( isset($_SESSION['submitBoo']) ){
+  unset($_SESSION['submitBoo']);
+  // echo "session exist=$_SESSION[submitBoo]";
 
-// if( !isset($_SESSION['submitBoo']) ){
-//   $_SESSION['submitBoo'] = 0;
-// }else{
-//   $_SESSION['submitBoo'] +=1;
-// }
+  header("location: ../booking.php");
+  exit;
 
-
-// if( $_SESSION['submitBoo'] == $_POST['submitBoo'] ){
-//     header("location: booking.php");
-// }
-// else {
-//     // user submitted once
-//     $_SESSION['submit'] = $_POST['submitBoo'];        
-// }
+}else{
+  $_SESSION['submitBoo'] = 1;
+}
 
 // connect DB
 require_once("connect_g4.php");

@@ -38,10 +38,12 @@ html {
 
 #mycanvas {
   position: absolute;
-  top: 15%;
+  top: 18%;
   display: block;
-  width: 30%;
+  width: 60%;
   box-shadow: 10px 10px 10px 0.5px rgba(8, 8, 8, 0.452);
+  border-radius: 10px;
+  border: 20px solid #79C743;
 }
 .vtb-intro-mask{
   position: absolute;
@@ -144,45 +146,48 @@ html {
   font-weight: 300;
   color:rgba(0,0,0,.5);
 }
+#scene-mask{
+  position: relative;
+}
 .layer div {
   position: relative;
   z-index: 999;
 }
 .gift1 {
   top: 100px;
-  right: -200%;
+  right: -270%;
 }
 .gift1 img{
   width: 100%;
 }
 .gift2 {
   top: 100px;
-  right: -200%;;
+  right: -270%;;
 }
 .gift2 img{
   width: 60%;
 }
 .gift3 {
   top: 100px;
-  right: -200%;
+  right: -270%;
 }
 .gift3 img{
   width: 60%;
 }
 .gift4 {
   top: 100px;
-  right: -200%;
+  right: -270%;
 }
 .gift4 img{
   width: 60%;
 }
 .text {
   position: absolute;
-  right: -15%;
-  top: 55%;
+  right: -5%;
+  top: 25%;
   z-index: 0;
-  width: 35%;
-  transform: translate(-50%, -50%);
+  width: 15%;
+  transform: translate(-55%, -20%);
   text-align: center;
   font-size: 5vw;
   font-family: "Concert One", cursive;
@@ -7602,3 +7607,12 @@ html {
     opacity: 0;
   }
 }
+
+
+
+
+
+
+
+
+

@@ -48,6 +48,7 @@ body {
 
 #sing_in,
 #enroll {
+
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(219, 219, 219, .3), rgba(55, 137, 200, .4));
@@ -132,6 +133,7 @@ body {
   margin-right: 5px;
 }
 
+
 #enroll_wrap #enroll_table {
   width: 100%;
   position: relative;
@@ -150,8 +152,8 @@ body {
 
 // 隱藏下拉框框
 .headerdropdown {
-  position: relative;
-  top: 10px;
+  position: absolute;
+  bottom: -110px;
   width: 500%;
   margin-left: -143px;
   background: rgba(3, 3, 3, 0.2);
@@ -160,7 +162,7 @@ body {
 }
 
 .headerdropdown::after {
-  top: -16px;
+  top: -15.5px;
   z-index: 999;
   content: '';
   position: absolute;

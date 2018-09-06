@@ -1,16 +1,16 @@
 var layouts = document.getElementsByClassName('layouts')[0];
 var app = document.getElementById('mycanvas');
 // var renderer = new PIXI.autoDetectRenderer(1000,400,);
-var app = new PIXI.Application(500, 300, { view: app });
+var app = new PIXI.Application(1200, 600, { view: app });
 layouts.appendChild(app.view);
 var stage = app.stage;
 
 var brush = new PIXI.Graphics();
 brush.beginFill(0xE7ED26);
-brush.drawCircle(0, 0, 30);
+brush.drawCircle(0, 0, 60);
 brush.endFill();
 
-PIXI.loader.add("t1", "images/brush/proj8-1voetbal.jpg");
+PIXI.loader.add("t1", "images/brush/pointcard01.jpg");
 PIXI.loader.add("t2", "images/brush/BGrotate.jpg");
 PIXI.loader.load(setup);
 
