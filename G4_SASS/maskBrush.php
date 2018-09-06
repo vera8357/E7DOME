@@ -25,7 +25,7 @@
         <div class="normal-rocket"></div>
         <div class="normal-rocket"></div>
         <div class="normal-rocket"></div>
-        <div class="vtb-intro-body">
+        <!-- <div class="vtb-intro-body">
             <div class="vtb-intro-container">
                 <div class="vtb-intro-header">
                     <h1>
@@ -37,7 +37,7 @@
                     <p>註冊完成即可享有E7DOME<br>5000元儲值點數</p>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="text">Summer Games</div>
         <ul id="scene-mask" class="scene">
             <li class="layer" data-depth="-1">
@@ -70,14 +70,20 @@
             <div class="vtb-intro-mask_hover-overlay"></div>
         </div>
         <div class="bg"></div>
-        <canvas id="mycanvas" class= "wow rollIn" data-wow-duration="2s" data-wow-delay=".5s"></canvas>
+        <canvas id="mycanvas" class= "wow rollIn" data-wow-duration="3s" data-wow-delay=".5s"></canvas>
+
+        <div id="gui"></div>		
+        <div id="canvas-container">
+        <div id="mountains2"></div>
+        <div id="mountains1"></div>
+        <div id="skyline"></div>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://thefrontendblog.com/hosted/jquery.parallax.min.js"></script>
     <script src="js/pixi.min.js"></script>
     <script src="js/maskbrush.js"></script>
-    <script src="libs/wow/dist/wow.min.js">
-    </script>
+    <script src="libs/wow/dist/wow.min.js"></script>
     <script>
         new WOW().init();
     </script>
