@@ -13,9 +13,15 @@
 .update_site_info_page.active{
     display: flex;
 }
-// #add_new_site{
-
-// }
+#add_new_site{
+    margin-left: 5%;
+    margin-bottom: 10px;
+    padding:10px 20px ;
+    background-color: #4C9EFE;
+    border:0;
+    font-size: 18px;
+    cursor: pointer;
+}
 .add_site_info,
 .update_site_info{
     width:770px;
@@ -76,7 +82,7 @@
 textarea{
     resize: none;
     overflow: hidden;
-    width:235px;
+    width:120px;
     font-size: 18px;
     outline: 0;
 }
@@ -113,4 +119,23 @@ textarea{
     color:white;
     font-size: 18px;
     margin:10px;
+}
+thead tr th{
+    width:60px;
+    vertical-align: middle;
+    font-size: 16px;
+}
+tbody tr td{
+    width:60px;
+    vertical-align: middle;
+}
+tbody tr td:nth-child(7),
+tbody tr td:nth-child(4){
+    padding:0;
+}
+.tb_facmem{
+    width:60px;
+}
+.tb_facdesc{
+    width:150px;
 }

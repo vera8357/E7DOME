@@ -56,7 +56,7 @@
                 <?php echo $data["FAC_NAME"]?>
             </td>
             <td>
-                <textarea name="" class="tb_facdesc" cols="30" rows="1"><?php echo $data["FAC_DESC"]?></textarea>
+                <textarea name="" class="tb_facdesc" cols="30" rows="9"><?php echo $data["FAC_DESC"]?></textarea>
             </td>
             <td>
                 <?php echo $data["FAC_POINTS"]?>
