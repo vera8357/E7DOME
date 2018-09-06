@@ -388,6 +388,13 @@ a{
 	// animation: typing 2s steps(21, end),
 	//            blink-caret .5s step-end infinite alternate;
 }
+@media screen and (max-width: 768px) {
+	.typing{
+		border-right: 0px;
+		width:100%;	
+	}
+	
+}
 .home_pg4{
 
 }
@@ -978,6 +985,7 @@ a{
 		opacity: 0;
 	}
 	#home_map{
+	position: relative;
 	margin: 0 auto;
 	text-align: center;
 	border-radius: 10px;
@@ -989,8 +997,11 @@ a{
 	padding-bottom: 36.333333%;
 }
 	#map{
+		position: absolute;
+		top:0;
+		left: 0;
 		width: 100%;
-		height: auto;
+		height: 100%;
 	}
 	.home_pg5_footer{
 	top:25vh;
