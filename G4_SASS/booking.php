@@ -186,39 +186,36 @@
 	
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="libs/jquery/dist/jquery.min.js"></script>
 <script src="js/booking.js"></script>
 
 <script>
 // accordion
 function accActiveNow(){
-var cate_no = <?php echo $cate_no ?>;
+	var cate_no = <?php echo $cate_no ?>;
 
-switch(cate_no){
-    case 1:
-        $('.area1').addClass('activeNow');
-        break;
-    case 2:
-        $('.area2').addClass('activeNow');
-        break;
-    case 3:
-        $('.area3').addClass('activeNow');
-        break;
-    case 4:
-        $('.area4').addClass('activeNow');
-        break;
-    default:
-        $('.area1').addClass('activeNow');
-        break;
-};
+	switch(cate_no){
+	    case 1:
+	        $('.area1').addClass('activeNow');
+	        break;
+	    case 2:
+	        $('.area2').addClass('activeNow');
+	        break;
+	    case 3:
+	        $('.area3').addClass('activeNow');
+	        break;
+	    case 4:
+	        $('.area4').addClass('activeNow');
+	        break;
+	    default:
+	        $('.area1').addClass('activeNow');
+	        break;
+	};
 
-$('.area').on('click',function(){
-    $('.area').not(this).removeClass('activeNow');
-    $(this).addClass('activeNow');
-})
-
-
-
+	$('.area').on('click',function(){
+	    $('.area').not(this).removeClass('activeNow');
+	    $(this).addClass('activeNow');
+	});
 }
 
 
@@ -237,9 +234,14 @@ function showTdyInfo(){
     			BOO_DATE: tdyDate    		
     		},
     		success:function(data){
-    		var cateNo =  '#queryFac' + cate_no; // console.log(cateNo);
-        	$(cateNo).html(data);
-        	// console.log('hi');
+	    		var cateNo =  '#queryFac' + cate_no; // console.log(cateNo);
+	        	$(cateNo).html(data);
+				
+				$('.myBtn').click(function(){
+			    	var fac_no 		= $(this).nextAll().eq(0).val();
+			    	var boo_time_i 	= $(this).nextAll().eq(1).val();
+			    	showInfo(fac_no,tdyDate,boo_time_i);
+		        });
         	}
     	});
     	
@@ -253,8 +255,9 @@ function showTargetInfo(targetDate){
 		var dd 	 = ('0' + $(this).text().split('/')[1]).slice(-2);
 		var yyyy = $(this).children().data('yyyy');
 
-		var targetDate = yyyy +'-' + mm + '-' + dd; // console.log(targetDate);
+		var targetDate = yyyy +'-' + mm + '-' + dd;
 		var cate_no = $(this).closest('.table-date').data('cate');
+		// console.log(targetDate);
 
 	    $.post("php/booQuery.php",
 	    	{
