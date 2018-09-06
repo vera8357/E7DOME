@@ -55,18 +55,6 @@
 			<!-- <div class="surroundings">
 					<img class="surroundings__map" src="img/surroundings.svg" alt="Surroundings"/>
 				</div> -->
-			<svg id="e7dome-text" viewBox="0 0 1320 300">
-				<!-- Symbol -->
-				<symbol id="s-text">
-					<text text-anchor="middle" x="50%" y="50%" dy=".35em">
-						E7
-					</text>
-				</symbol>
-				<!-- Duplicate symbols -->
-				<use xlink:href="#s-text" class="text"></use>
-				<use xlink:href="#s-text" class="text"></use>
-				<use xlink:href="#s-text" class="text"></use>
-			</svg>
 
 			<div class="levels">
 				<div class="level level--1" aria-label="Level 1" data-category="4">
@@ -507,6 +495,18 @@
 			<label class="label__text">A - Z</label>
 		</span>
 		<ul class="list grouped-by-category">
+			<svg id="e7dome-text" viewBox="0 0 300 300">
+				<!-- Symbol -->
+				<symbol id="s-text">
+					<text text-anchor="middle" x="50%" y="50%" dy=".35em">
+						E7
+					</text>
+				</symbol>
+				<!-- Duplicate symbols -->
+				<use xlink:href="#s-text" class="text"></use>
+				<use xlink:href="#s-text" class="text"></use>
+				<use xlink:href="#s-text" class="text"></use>
+			</svg>
 			<li class="list__item" data-level="1" data-category="1" data-space="1.01"><a href="#" class="list__link">攀岩場</a></li>
 	        <li class="list__item" data-level="3" data-category="3" data-space="3.01"><a href="#" class="list__link">羽球場</a></li>
 	        <li class="list__item" data-level="2" data-category="2" data-space="2.01"><a href="#" class="list__link">保齡球場</a></li>
