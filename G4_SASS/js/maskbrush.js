@@ -11,7 +11,7 @@ brush.drawCircle(0, 0, 60);
 brush.endFill();
 
 PIXI.loader.add("t1", "images/brush/pointcard01.jpg");
-PIXI.loader.add("t2", "images/brush/BGrotate.jpg");
+PIXI.loader.add("t2", "images/brush/pointcard02.jpg");
 PIXI.loader.load(setup);
 
 function setup(loader, resources) {
