@@ -248,9 +248,9 @@ select {
 }
 
 #new_qa {
-  position: absolute;
-  top: 18%;
-  right: 5%;
+  position: relative;
+  top: 35px;
+  right: 0;
   background-color: #4c9efe;
   color: #fff;
   border: none;
@@ -263,9 +263,9 @@ select {
 }
 
 #back_add img {
-  position: absolute;
-  top: 18%;
-  right: 9%;
+  position: relative;
+  top: 50px;
+  right: 1%;
   width: 35px;
   height: 35px;
 }
