@@ -236,12 +236,20 @@ input[type="file"] {
         border-bottom: 1px solid transparent;
         padding-bottom: 0px;
     }
+
+  
+
 }
 
 
 #meminfo_active a{
     color: #ffb505;
 }
+
+#meminfo_active .line{
+     background-color:#ffb505;
+}
+
 
 @media screen and (min-width: 1024px) {
     .pic_wrap {

@@ -246,6 +246,15 @@ input[type="submit"]{
     }
 }
 
+
+#meminfo_active a{
+    color: #ffb505;
+}
+
+#meminfo_active .line{
+     background-color:#ffb505;
+}
+
 @media screen and (min-width: 1024px) {
     .pic_wrap {
         width: 90%;
