@@ -12,12 +12,11 @@
 <?php
 // session_start();
 
-
-// if( !isset($_SESSION['submitBoo']) ){
-//   $_SESSION['submitBoo'] = 0;
-// }else{
-//   $_SESSION['submitBoo'] +=1;
-// }
+// prevent refresh
+if( isset($_SESSION['submitBoo']) ){
+  unset($_SESSION['submitBoo']);
+  header("location: ../booking.php");
+  exit;
 
 
 // if( $_SESSION['submitBoo'] == $_POST['submitBoo'] ){
@@ -103,7 +102,10 @@ $booTicket = $pdo->query($sqlBoo);
 
     $tempDir = '../images/qrcode/'; 
 
-    $codeContents = "localhost/g4/booScan.php?BOO_NO=$lastBooNo";
+    $host= gethostname();
+    $ip = gethostbyname($host);
+    // $ip = $_SERVER['SERVER_ADDR'];
+    $codeContents = "$ip/php/booScan.php?BOO_NO=$lastBooNo";
      
     // we need to generate filename somehow,  
     // with md5 or with database ID used to obtains $codeContents... 
@@ -114,7 +116,15 @@ $booTicket = $pdo->query($sqlBoo);
      
     // generating 
     if (!file_exists($pngAbsoluteFilePath)) { 
-        QRcode::png($codeContents, $pngAbsoluteFilePath); 
+        QRcode::png($codeContents, $pngAbsoluteFilePath);
+
+        $sqlQrcode = "UPDATE booking SET BOO_QRCODE = :BOO_QRCODE WHERE BOO_NO = :BOO_NO";
+        $qrcode = $pdo->prepare($sqlQrcode);
+        
+        // UPDATE QRCODE PATH
+        $qrcode->bindValue(':BOO_QRCODE', $urlRelativeFilePath);
+        $qrcode->bindValue(':BOO_NO', $lastBooNo);
+        $qrcode->execute();
         // echo '預約完成！'; 
         // echo '<hr />'; 
     } else { 
