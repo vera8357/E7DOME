@@ -2,6 +2,25 @@
     @include all();
    
 }
+
+html {
+    overflow: -moz-hidden-unscrollable;
+    height: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    height: 100%;
+    width: 100vw;
+    overflow: auto;
+}
+
+
+
 body{
     font-family: $about-font;
    background-image: url(../images/about-material/about-bg.png);
@@ -143,7 +162,7 @@ input[type="submit"]{
 }
 
 .m_item li a {
-    border-bottom: 4px solid rgba(30,100,240,.7);
+    border-bottom: 4px solid #ffb505;
     padding-bottom: 5px;
 }
 
@@ -225,6 +244,15 @@ input[type="submit"]{
         border-bottom: 1px solid transparent;
         padding-bottom: 0px;
     }
+}
+
+
+#meminfo_active a{
+    color: #ffb505;
+}
+
+#meminfo_active .line{
+     background-color:#ffb505;
 }
 
 @media screen and (min-width: 1024px) {
