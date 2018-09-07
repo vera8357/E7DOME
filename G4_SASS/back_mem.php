@@ -45,7 +45,7 @@ session_start();
             </li>
             <li>
                 <?php
-                    if( $_SESSION['ADMIN_PRRM'] == 0){
+                    if( $_SESSION['ADMIN_PERM'] == 0){
                         echo "<a href='back_admin.php'>管理員管理</a>";
                     }else{
                         echo "<a href='#' style='display:none'>管理員管理</a>";

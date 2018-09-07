@@ -18,8 +18,8 @@ try{
   	$memRow = $member->fetch(PDO::FETCH_ASSOC);
   
   	$_SESSION["ADMIN_ID"] = $memRow["ADMIN_ID"];
-    $_SESSION["ADMIN_PRRM"] = $memRow["ADMIN_PERM"];
-   
+    $_SESSION["ADMIN_PERM"] = $memRow["ADMIN_PERM"];
+    $_SESSION["ADMIN_STATUS"] = $memRow["ADMIN_STATUS"];
   
     //送出登入者的姓名資料
     echo $_SESSION["ADMIN_ID"];
