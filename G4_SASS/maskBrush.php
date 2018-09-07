@@ -71,12 +71,6 @@
         </div>
         <div class="bg"></div>
         <canvas id="mycanvas" class= "wow rollIn" data-wow-duration="3s" data-wow-delay=".5s"></canvas>
-
-        <div id="gui"></div>		
-        <div id="canvas-container">
-        <div id="mountains2"></div>
-        <div id="mountains1"></div>
-        <div id="skyline"></div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
