@@ -1,0 +1,115 @@
+html,
+body {
+  user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+body {
+  background: url(../images/qrcode.png) #FB9A00;
+  /* background-size: cover; */
+}
+
+.background-logo {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.pattern-disp-box {
+  text-align: center;
+}
+
+.pattern-img {
+  width: 160px;
+}
+
+.touch-footer {
+  position: absolute;
+  Â Â bottom: 0px;
+  width: 100%;
+  text-align: center;
+  z-index: -1;
+}
+
+.image-logo {
+  width: 50%;
+  text-align: center;
+  z-index: 1;
+  margin: auto;
+}
+
+.container {
+  margin: 0 20px;
+  width: 80%;
+  height: 0;
+  position: relative;
+  opacity: 0;
+}
+
+p.count {
+  opacity: 0;
+  height: 0;
+}
+
+.container--graph {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+}
+
+.jumbo {
+  font-size: 5em;
+  color: #4d63bc;
+}
+
+#output {
+  position: absolute;
+  bottom: 5%;
+  left: 2%;
+}
+
+p {
+  margin: 2px;
+}
+
+section h1 {
+  padding: 6px 10px;
+  margin: 0;
+  background: #d9edf7;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.list {
+  padding: 0;
+  margin-top: 0;
+}
+
+.list li {
+  list-style: none;
+}
+
+ul.list li a {
+  position: relative;
+  display: block;
+  padding: 10px 25px 10px 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+ul.list li a::after {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  display: block;
+  content: '';
+  width: 8px;
+  height: 8px;
+  margin-top: -4px;
+  border-top: 1px solid #888;
+  border-right: 1px solid #888;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
