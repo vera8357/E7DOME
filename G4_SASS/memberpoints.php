@@ -91,6 +91,7 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 							<li>訂購日期</li>
 							<li>商品售價</li>
 							<li>商品點數</li>
+							<li>付款方式</li>
 						</ul>
 					
 					</div>
@@ -113,6 +114,20 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 										echo "<li><span class='small_show'>訂購日期</span>".$order['ORDER_DATETIME']."</li>";
 										echo "<li><span class='small_show'>儲值金額</span>".$order['CARD_PRICE']."</li>";
 										echo "<li><span class='small_show'>購買點數</span>".$order['CARD_POINTS']."</li>";
+										switch($order['CARD_METHOD']){
+											case 1:
+												$CARD_METHOD = '信用卡';
+												break;
+											case 2:
+												$CARD_METHOD = '超商繳費';
+												break;
+											case 3:
+												$CARD_METHOD = '第三方支付';
+												break;
+											default:
+												break;
+										}
+										echo "<li><span class='small_show'>付款方式</span>".$CARD_METHOD."</li>";
 										echo "</ul>";
 
 									} 
