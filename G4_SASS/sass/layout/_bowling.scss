@@ -91,8 +91,8 @@ img{
         left:15%;
     }
 }
-#sport_title_h1,
-#sport_title_h2{
+.bwl_h1,
+.bwl_h2{
     display:block;
     color:#0052b2;
     position: absolute;
@@ -105,7 +105,7 @@ img{
     text-shadow: #fff 0px 3px,#fff 0px -3px,#fff 3px 0px,#fff -3px 0px
 }
 
-#sport_title_h2{
+.bwl_h2{
     top:65%;
     right:15%;
     margin-right: 0;
@@ -168,8 +168,8 @@ img{
             left:-15%;
         }
     }
-    #sport_title_h1,
-    #sport_title_h2{
+    .bwl_h1,
+    .bwl_h2{
         z-index: 6;
         display:block;
         font-size: 40px;
@@ -182,7 +182,7 @@ img{
         margin-right: 8%;
         text-shadow: #fff 0px 3px,#fff 0px -3px,#fff 3px 0px,#fff -3px 0px
     }
-    #sport_title_h2{
+    .bwl_h2{
         top:55%;
         right:5%;
         margin-right: 0;

@@ -38,8 +38,8 @@
                 $data["FAC_STATUS"]="上架";
             };
 ?>
+        
         <tr>
-            <form action="facility_update_site.php" enctype="multipart/form-data">
             <td>
                 <input type="hidden" name="upfac_no" value="<?php echo $data["FAC_NO"]?>">
                 <?php echo $data["FAC_NO"]?>
@@ -51,7 +51,7 @@
                 <?php echo $data["FAC_NAME"]?>
             </td>
             <td>
-                <textarea name="upfac_desc" class="tb_facdesc" cols="30" rows="9"><?php echo $data["FAC_DESC"]?></textarea>
+                <textarea name="upfac_desc" class="tb_facdesc" cols="30" rows="7"><?php echo $data["FAC_DESC"]?></textarea>
             </td>
             <td>
                 <?php echo $data["FAC_POINTS"]?>
@@ -71,8 +71,7 @@
                 <!-- <button class="update">修改</button> -->
                 <input type="submit" value="修改" >
             </td>
-        </form>
-        </tr>
+        </tr> 
 <?php
     }
 }catch(PDOException $e){

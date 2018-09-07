@@ -25,10 +25,10 @@
         <img src="images/bowling/bowlingbgimg.png" alt="" id="bowlingbgimg">
         <img src="images/bowling/bowlingcan.png" id="bowlingcan">
         <img src="images/bowling/peteweber.png" id="peteweber">
-        <h1 id="sport_title_h1">
+        <h1 class="bwl_h1">
             BOWLING
         </h1>
-        <h2 id="sport_title_h2">
+        <h2 class="bwl_h2">
             保齡球
         </h2>
     </div>

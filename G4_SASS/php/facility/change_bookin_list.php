@@ -6,14 +6,14 @@
         $change = $pdo->query($sql);
         while($site_info = $change->fetch(PDO::FETCH_ASSOC)){
 ?> 
-    <tr>
-        <td id="sport_memPic">
+    <tr class="sport_tr">
+        <td id="sport_memPic" class="sport_td">
             <img src='http://fakeimg.pl/200x200?font=lobster' alt=''/>
         </td>
-        <td>
+        <td class="sport_td">
             <?php echo $site_info['MEM_NAME']?>
         </td>
-        <td>
+        <td class="sport_td">
             <span class="rank">
                 <?php
                     $star ='';
@@ -25,7 +25,7 @@
             </span><br>
             <?php echo $site_info['BOO_NOTE']?>
         </td>
-        <td>
+        <td class="sport_td">
             <?php echo $site_info['BOO_NOTETIME']?>
         </td>
     </tr>
