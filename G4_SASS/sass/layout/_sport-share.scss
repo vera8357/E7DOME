@@ -59,9 +59,10 @@ body {
     content:'';
     clear: both;
 }
-// .slider ul li{
-//     float:left;
-//     width:25%;
+// .slider_li{
+//     outline:0;
+//     height:485px;
+//     overflow: hidden;
 // }
 .slider ul li img{
     width:100%;
@@ -465,6 +466,12 @@ body {
         left:0;
         transition: 1s;
         text-align: center;
+    }
+    .slider li{
+        widows: 20%;
+    }
+    .slider ul li img{
+        width:100%;
     }
     .info{
         width:100%;
