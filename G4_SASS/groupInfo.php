@@ -101,10 +101,7 @@ try {
                     </div>
                     <hr class="group-hr">
                     <div class="icon_area">
-                        <div class="button join-button" id="join">
                         <?php include("php/memBn_check.php"); ?>
-                        </div>
-
                         <!-- <span class="icon"> -->
                             <img src="images/unlike.png" class="icon fb-share-button" id="heart" title="加入收藏">
                             <a href="javascript:void(0);" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u='+fbhtml_url+'&src=sdkpreparse');return false;" class="icon-a">

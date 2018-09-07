@@ -6,24 +6,35 @@
 @import "layout/footer";
 @import "components/buttons";
 @import "layout/team";
+html {
+    overflow: -moz-hidden-unscrollable;
+    height: 100%;
+}
 
+body::-webkit-scrollbar {
+    display: none;
+}
 *{
 	text-decoration: none;
 }
 .group-body{
 	background: url("../images/climb.jpg") no-repeat center center fixed;
 	background-size: cover;
-	overflow: scroll;
+	-ms-overflow-style: none;
+    height: 100%;
+ 	width: 100vw;
+ 	overflow: auto;
+ 	opacity:0.9;
 }
 
 header {
 	+ section {
-		padding-top: 160px;
+		padding-top: 120px;
 	}
 }
 
 .select_bar{
-	margin: 50px auto;
+	margin: 20px auto;
 	background:#ffb505;
 	padding:30px;
 	border-radius: 15px;
@@ -42,9 +53,8 @@ header {
 
 
 .button_a{
-	height: 20px;
 	border-radius: 5px;
-	padding: 20px 20px;
+	padding: 10px 10px;
 	color: #fff;
 	text-align:center;
 	font-size: 18px;
@@ -83,7 +93,7 @@ option{
 }
 
 input{
-	height: 22px;
+	height: 20px;
 
 }
 
@@ -99,7 +109,7 @@ input{
 }
 
 .select{
-	padding:20px;
+	padding: 10px 20px;;
 	border-radius: 5px;
 	margin: 10px;
 }
@@ -285,7 +295,7 @@ a{
 
 .select_bar{
 	width:1200px;
-	padding:30px;
+	padding:15px;
 }
 .filters-select{
 	width:10%;
@@ -298,7 +308,7 @@ a{
 @media screen and (max-width: 1200px) {
 
 header + section {
-    padding-top: 80px;
+    padding-top: 50px;
 }
 .select_bar{
 	width:80%;
@@ -335,7 +345,6 @@ header + section {
 .button_a{
 	width: calc(50% - 5px);
 	display: inline-block;
-    height: 60px;
 }
 .createGroup{
 	margin-left: 10px;

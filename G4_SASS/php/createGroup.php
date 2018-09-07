@@ -13,9 +13,8 @@
 <body>
     <form action="creatFinish.php" method="post">
     <?php
-        // $book_no=$_POST['BOO_NO'];
-        // $mem_no=$_SESSION["MEM_NO"];
-        $book_no=1;
+        @$book_no=$_POST['BOO_NO'];
+        $mem_no=$_SESSION["MEM_NO"];
         require_once("connect_g4.php");
         $team_mem = "SELECT FAC.FAC_MEM FROM booking book JOIN facility fac ON book.FAC_NO = fac.FAC_NO WHERE book.BOO_NO = '$book_no'";
         $team_memquery = $pdo->query($team_mem);
