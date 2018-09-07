@@ -1,3 +1,9 @@
+<?php 
+ob_start();
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,45 +56,7 @@
 
 	</section>
 
-	<script >
-		
-		function $id(id){
-			return document.getElementById(id);
-		}
 
-		function login(){
-
-			var xhr = new XMLHttpRequest();
-
-			xhr.onload = function(){
-
-				if(xhr.status == 200){
-					if(xhr.responseText == "帳號密碼錯誤"){
-						alert(responseText);
-					}else{
-						window.location.href="back_admin.php";
-						alert('登入成功');
-					}
-				}else{
-					alert(xhr.status)
-				}
-			}
-
-
-	         xhr.open("Post", "php/back_ajax_login.php", true);
-             xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
-             var data_info = "admin_id=" + document.getElementById("admin_id").value 
-                    + "&admin_psw="+ document.getElementById("admin_psw").value;
-             xhr.send(data_info);
-		}
-
-
-		$id('btn_login').addEventListener("click",login,false);
-
-
-
-
-	</script>
-
+<script src="js/back_login.js"></script>
 </body>
 </html>

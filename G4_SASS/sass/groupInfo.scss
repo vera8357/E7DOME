@@ -6,8 +6,12 @@
 @import "layout/footer";
 @import "components/buttons";
 
-body{
-	
+header{
+	position: relative!important;
+}
+
+header + section {
+    padding-top:0px!important;
 }
 
 .icon-a{
@@ -73,8 +77,6 @@ section{
 	width: calc(100% - 500px);
 }
 
-
-    
 .group-info-image img{
 	vertical-align: top;
   height: 100%;
@@ -289,8 +291,7 @@ textarea{
     height: 550px;
 }
 .first-wrapper:after{
-	content: '';
-    display: block;
+
     transform: rotate(180deg);
     border-color: #ffb505 transparent transparent transparent;
     border-style: solid;
@@ -299,7 +300,7 @@ textarea{
     right: 0;
 }
 .forum{
-	width: 70%;
+	width: 55%;
 }
 .message-time {
     margin: 40px 0;
@@ -309,8 +310,8 @@ textarea{
 
 textarea {
 	width:75%;
-    margin: 5px;
-    padding-right: 5px;
+    margin: 5px 45px;
+    padding-left: 8px;
 }
 .mem-id{
     vertical-align: top;
@@ -318,7 +319,7 @@ textarea {
 .forum-title {
     position: absolute;
     top: 5%;
-    left: 15%;
+    left: 21.8%;
 }
 .submit {
     margin: 8px 30px;

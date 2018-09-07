@@ -28,10 +28,10 @@ try {
         <div class="select_bar cl-12">
             <span class="selectSport black select-width select">
                 <select class="filters-select">
-                    <option value="*">全部</option>
+                    <option value="*" selected>全部</option>
                     <option value=".1">籃球</option>
-                    <option value=".2">羽毛球</option>
-                    <option value=".3">保齡球</option>
+                    <option value=".2">保齡球</option>
+                    <option value=".3">羽毛球</option>
                     <option value=".4">攀岩</option>
                 </select>
             </span>
@@ -46,7 +46,7 @@ try {
             <div class="groupbtn">
                 <input type="hidden" value="$MEM_NO";>
                 <a href="membergroup.php"><span class="myGroup button button_a">我的揪團</span></a>
-                <a href="edit-group.html"><span class="createGroup button button_a">開始揪團</span></a>
+                <span class="createGroup button button_a">開始揪團</span>
             </div>
         </div>
     </section>
@@ -63,7 +63,7 @@ try {
     foreach($teams as $i=>$teamsRow){
 ?>
 
-    <li class="teamItem cl-3 cl-12 <?php echo $teamsRow["FAC_NO"];?> <?php echo ($teamsRow["BOO_TIME"] + 4);?>">
+    <li class="teamItem cl-3 cl-12 <?php echo $teamsRow["CATE_NO"];?> <?php echo ($teamsRow["BOO_TIME"] + 4);?>">
         <a href="groupInfo.php?TEAM_NO=<?php echo $teamsRow["TEAM_NO"];?>">
 			<div class="teamOne ">
 				<div class="teamDate_top">
@@ -141,6 +141,38 @@ try {
 </ul>
      </section>
 
+
+
+     <div id="create_in">
+    <!--------揪團說明燈箱-------->
+    <div id="create_wrap">
+        <p>開始揪團</p><span id="close_3"><img src="images/member_pic/close.png"></span>
+        <table id="tableCreate">
+            <h1>揪團步驟</h1>
+            <div class="joincontent_wrap">
+                    <div class="step_line"></div>
+                    <div class="joincontent">預約場地</div>
+                    <div class="joincontent">確認訂單</div>
+                    <div class="joincontent">點揪團去</div>
+                    <div class="joincontent">填寫簡介</div>
+                    <div class="joincontent">開始揪團</div>
+            </div>
+            
+            <tr>
+                <td>
+                    <input id="enroll_btn" type="button" class="button_a" value="我已經預約">
+                    <input id="login_btn" type="button" class="button_a" value="我尚未預約">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
     <script src="libs/jquery/dist/jquery.min.js"></script>
     <script src="libs/isotope-layout/dist/isotope.pkgd.min.js"></script>
     <script src="js/groupinfo.js"></script>
@@ -177,6 +209,7 @@ try {
 
     </script>
     <script>
+
         $('.humberger_btn').click(function () {
             $(this).toggleClass('active');
         })
