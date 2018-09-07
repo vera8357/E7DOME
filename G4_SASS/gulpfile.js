@@ -23,7 +23,7 @@ gulp.task('default', ['sass'], function () {
     server: {
       //根目錄
       baseDir: "./",
-      index: "seal.html"
+      index: "index.html"
     }
   });
 
