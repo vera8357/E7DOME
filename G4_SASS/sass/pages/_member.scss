@@ -82,7 +82,7 @@ body {
   padding: 20px 0;
   animation: fadeup 1.5s;
 }
-@keyframes basketball{
+@keyframes basketball_login{
   from{
     transform: rotate(0deg);
   }
@@ -92,7 +92,7 @@ body {
 }
 .tennis_img{
   width: 25%;
-  animation: basketball 1.5s;
+  animation: basketball_login 1.5s;
 }
 #sing_in p{
   font-size: $light_p;
