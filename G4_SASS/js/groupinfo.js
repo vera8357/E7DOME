@@ -2,6 +2,18 @@
     $(document).ready(function(){
 
     var fbhtml_url=window.location.toString();
+    $(".createGroup").click(function createGroupCheck(){
+        if($("#link_member").text() == "登入"){
+            alert("請先登入");
+        }else{
+        $id('create_in').style.display = 'block';
+        }
+    });
+
+    $("#close_3").click(function close3(){
+        $id('create_in').style.display = 'none';
+    });
+
 
     $("#join").click(function checkJoin(){
         if($("#link_member").text() == "登入"){

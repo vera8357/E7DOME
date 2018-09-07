@@ -16,6 +16,7 @@ body::-webkit-scrollbar {
 }
 *{
 	text-decoration: none;
+	font-family: 'HanWangZonYi';
 }
 .group-body{
 	background: url("../images/climb.jpg") no-repeat center center fixed;
@@ -92,7 +93,7 @@ option{
    cursor: pointer;
 }
 
-input{
+.black input{
 	height: 20px;
 
 }
@@ -358,7 +359,94 @@ header + section {
 
 
 
+#create_in{
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(219, 219, 219, 0.3), rgba(55, 137, 200, 0.4));
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+#create_wrap{
+  width: 100%;
+  max-width: 1000px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 0px 6px 1px #888;
+  text-align: center;
+  position: relative;
+  background-color: #fff;
+  top: 200px;
+  left: 0;
+  margin: auto;
+  padding: 15px;
+}
+
+#create_in p{
+  font-size: 26px;
+    padding: 10px;
+    color: #0052b2;
+    text-shadow: #fff 1px 1px, #fff 1px -1px, #fff -1px 1px, #fff -1px -1px;
+    letter-spacing: 5px; }
+
+#tableCreate{
+	width: 100%;
+}
+
+#tableCreate td {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 18px; }
+
+#tableCreate input {
+  padding: 3px;
+  border-radius: 5px;
+  cursor: pointer; }
 
 
+#create_wrap input[type="button"]{
+  background-color: rgba(254, 180, 4, 0.7);
+  letter-spacing: 1px;
+  padding: 3px 10px;
+  border: transparent; }
 
+.joincontent{
+	display: inline-block;
+    border-radius: 50%;
+    background-color: #0052b2;
+    color: #fff;
+    padding: 50px;
+    position: relative;
+    margin: 10px;
+}
 
+#close_3 {
+  display: inline-block;
+  padding: 5px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;}
+.joincontent_wrap{
+	width: 100%;
+    margin: 10px auto;
+}
+.step_line{
+	background-color: #0052b2;
+    max-width: 90%;
+    max-height: 5px;
+    position: absolute;
+    padding: 5px;
+    margin: 150px auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  #screate_in{
+    margin-top: -50%;
+    margin-right: -15px; } }
