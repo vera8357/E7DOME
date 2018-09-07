@@ -35,13 +35,13 @@ try{
             $_SESSION["MEM_POINTS"] = $memRow["MEM_POINTS"];
             $_SESSION["MEM_PHONE"] = $memRow["MEM_PHONE"];
             $_SESSION["MEM_IMG"] = $memRow["MEM_IMG"];
-            header('location:../maskBrush.php');
+            echo "<a href='../memberinfo.php'>會員專區</a> ";
         }else{
             echo "註冊失敗";
         }
     }else{
         echo "<script>alert('帳號已存在，請重新註冊。');
-              window.location.href='../member.php'</script>";
+              window.location.href='../index.php'</script>";
     }
 
 

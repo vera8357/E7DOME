@@ -16,7 +16,7 @@ $(function () {
     duration: '85%',
     reverse: true
   }).setTween(tween_s)
-    // .addIndicators({name: '羽球爆發'})
+    .addIndicators({name: '羽球爆發'})
     .addTo(controller)
 
   console.log("scrollmagic")

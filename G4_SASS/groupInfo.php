@@ -194,6 +194,11 @@ try {
 
 
     </script>
+    <script>
+        $('.humberger_btn').click(function () {
+            $(this).toggleClass('active');
+        })
+    </script>
 </body>
 
 </html>

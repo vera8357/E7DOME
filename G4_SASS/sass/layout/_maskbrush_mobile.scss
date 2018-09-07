@@ -27,7 +27,10 @@
     animation: text-animation 5s linear infinite alternate;
   }
   .light {
-    display: none;
+    border-bottom: transparent;
+    border-left: solid 5vh transparent;
+    border-right: solid 5vh transparent;
+    border-top: solid 100vh rgba(255, 255, 255, 0.082);
   }
   @keyframes top-right {
     0% {
