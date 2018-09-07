@@ -31,18 +31,18 @@ if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
 <div id="sing_in">
 	
 	<div id="sing_wrap">
-		
+		<img src="images/basketball.png" alt="" class="tennis_img">
 		<p>會員登入</p><span id="close_1"><img src="images/member_pic/close.png"></span>
 
 		<table id="table_login">
 			<tr>
 				<td>
-					帳號:<input id="MEM_ID" type="text" name="MEM_ID" required="required">
+					<input id="MEM_ID" type="text" name="MEM_ID" required="required" placeholder="帳號" autocomplete="off">
 				</td>
 			</tr>
 			<tr>
 				<td>
-					密碼:<input  id="MEM_PSW" type="password" name="MEM_PSW" required="required">
+					<input  id="MEM_PSW" type="password" name="MEM_PSW" required="required" placeholder="密碼" autocomplete="off">
 				</td>
 			</tr>
 			<tr>

@@ -40,38 +40,39 @@
 
 
 		<div class="enroll_frame">
+			<div class="bowling_img"><img src="images/bowling.png" alt=""></div>
 			<p>會員註冊</p>
 		<form action="php/enroll.php">
+			
 			<table id="enroll_table">
-		
-
+				
 				<tr>
 					<td class="enroll_li">
-						會員帳號: <input id="enroll_id" type="text" name="enroll_id" required="required"><span id="check_id"></span>
+						<input id="enroll_id" type="text" name="enroll_id" required="required" placeholder='會員帳號'><span id="check_id"></span>
 					</td>
 				</tr>
 
 				<tr> 
 					<td class="enroll_li">
-						會員密碼: <input id="enroll_psw1" type="password" name="enroll_psw1" required="required">
+						<input id="enroll_psw1" type="password" name="enroll_psw1" required="required" placeholder='會員密碼'>
 					</td>
 				</tr>
 
 				<tr>
 					<td class="enroll_li">
-						確認密碼: <input id="enroll_psw2" type="password" name="enroll_psw2" required="required"><span id="check_psw"></span>
+						<input id="enroll_psw2" type="password" name="enroll_psw2" required="required" placeholder='確認密碼'><span id="check_psw" ></span>
 					</td>
 				</tr>
 
 				<tr>
 					<td class="enroll_li">
-						會員名稱: <input id="enroll_name" type="text" name="enroll_name" required="required">
+						<input id="enroll_name" type="text" name="enroll_name" required="required" placeholder="會員名稱">
 					</td>
 				</tr>
 
 				<tr>
 					<td class="enroll_li">
-						手機號碼: <input id="enroll_tel" type="tel" name="enroll_tel" required="required" placeholder="格式0912345678">
+						<input id="enroll_tel" type="tel" name="enroll_tel" required="required" placeholder="手機號碼">
 					</td>
 				</tr>
 
