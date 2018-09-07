@@ -1,3 +1,11 @@
+
+<?php
+//連線資料庫
+try {
+    include("php/connect_g4.php");
+    $MEM_NO = @$_SESSION['MEM_NO'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,8 +44,9 @@
                 </select>
             </span>
             <div class="groupbtn">
-                <a href="#.html"><span class="myGroup button button_a">我的揪團</span></a>
-                <a href="edit-group.html"><span class="createGroup button button_a">開始揪團</span></a>
+                <input type="hidden" value="$MEM_NO";>
+                <a href="membergroup.php"><span class="myGroup button button_a">我的揪團</span></a>
+                <a href="php/createGroup.php"><span class="createGroup button button_a">開始揪團</span></a>
             </div>
         </div>
     </section>
@@ -45,10 +54,6 @@
          <ul class="group-list grid">
 
 <?php
-
-//連線資料庫
-try {
-    include("php/connect_g4.php");
 
     $sql = "SELECT * FROM team JOIN booking ON (team.BOO_NO = booking.BOO_NO) JOIN facility ON (facility.FAC_NO = booking.FAC_NO) ";
     $team = $pdo->query( $sql);
@@ -83,12 +88,11 @@ try {
                         $TEAM_NO=$teamsRow['TEAM_NO'];//抓揪團編號
                         $memCount = "SELECT * FROM team_mem WHERE TEAM_NO = $TEAM_NO";//選擇所有資料 當 揪團編號=自己的揪團編號
                         $teammem = $pdo->prepare($memCount);
-                        $teammem->execute(); 
+                        $teammem->execute();
                         $rows = $teammem->rowCount();//計算抓到幾筆資料
                         ?>
                         <span><?php echo $rows+1;//揪團人數+1(團長)?></span>/<span><?php echo $teamsRow["TEAM_MEM"];?></span>人
-                        
-                    </div>	
+                    </div>
 				    <div class="teamTxt">
                     <?php echo $teamsRow["TEAM_INFO"];?>
 					</div>
@@ -137,8 +141,40 @@ try {
 </ul>
      </section>
 
+
+
+     <div id="create_in">
+    <!--------揪團說明燈箱-------->
+    <div id="create_wrap">
+        <p>開始揪團</p>
+        <table id="tableCreate">
+            <h1>揪團步驟</h1>
+            <div class="joincontent">預約場地</div>
+            →
+            <div class="joincontent">確認訂單</div>
+            →
+            <div class="joincontent">點揪團去</div>
+            →
+            <div class="joincontent">填寫簡介</div>
+            →
+            <div class="joincontent">開始揪團</div>
+            <tr>
+                <td>
+                    <input id="enroll_btn" type="button" name="" value="我已經預約">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="login_btn" type="button" name="" value="我尚未預約">
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
     <script src="libs/jquery/dist/jquery.min.js"></script>
     <script src="libs/isotope-layout/dist/isotope.pkgd.min.js"></script>
+    <script src="js/groupinfo.js"></script>
     <script>
         $(document).ready(function () {
 
@@ -170,6 +206,11 @@ try {
             });
         });
 
+    </script>
+    <script>
+        $('.humberger_btn').click(function () {
+            $(this).toggleClass('active');
+        })
     </script>
 </body>
 

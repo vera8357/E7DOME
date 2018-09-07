@@ -1,0 +1,207 @@
+*{
+  @include all();
+  /*outline: 1px solid red;*/
+}
+
+
+html {
+    overflow: -moz-hidden-unscrollable;
+    height: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    height: 100%;
+    width: 100vw;
+    overflow: auto;
+}
+body{
+
+    background-image: url(../images/member_pic/photo-1448743133657-f67644da3008.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+a {
+    text-decoration: none;
+    color: $a_color;
+    display: inline-block;
+}
+
+/*------------------------------------------*/
+
+.enroll_gap{
+	width: 100%;
+	height: 180px;
+}
+
+.enroll_wrap{
+	width: 80%;
+	margin:auto;
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.enroll_text{
+	width: 48%;
+	font-size: 36px;
+	color:#111;
+}
+
+.enroll_frame{
+  padding:5%;
+	width: 48%;
+	color:#111;
+	text-align: center;
+	background-color: rgba(250,250,250,.8);
+  font-family: 'HanWangZonYi';
+  font-size: 18px;
+	
+}
+
+
+/*-----------------------------------------------------*/
+.enroll_content{
+  width:80%;
+  margin: auto;
+  margin-top: 80px;
+}
+
+/*---------------------------------------------------*/
+.enroll_frame p{
+	 font-size: $light_p;
+  padding: 10px;
+}
+
+
+ #enroll_table {
+  width: 100%;
+  position: relative;
+  margin-top: 0px;
+}
+
+.enroll_li {
+  height: 36px;
+  padding: 12px;
+  float: none;
+  margin-right: 0;
+  position: relative;
+  z-index: 0;
+
+}
+
+#check_id,
+#check_psw {
+  font-size: 14px;
+  color: #f22;
+  display: inline-block;
+  position: absolute;
+
+  top:20px;
+  right: 0;
+
+}
+
+/*--------------------------------*/
+.enroll_li input{
+   height: 30px;
+   letter-spacing: 2px;
+   border-radius: 5px;
+   background-color: transparent;
+  border:1px solid rgba(255,255,255,.7);
+  box-shadow: 2px 2px 1px 1px rgba(0,0,0,.3) inset;
+  padding: 3px;
+
+  
+}
+
+#enroll_send{ 
+  border: transparent;
+  letter-spacing: 2px; 
+  padding: 3px 10px;
+  border-radius: 5px;
+  /*border:1px solid #ffb505;*/
+  background-color: #ffb505;
+  color:#111;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+
+/*----------------------------------------*/
+// 隱藏下拉框框
+.headerdropdown {
+  position: relative;
+  top: 10px;
+  width: 500%;
+  margin-left: -143px;
+  background: rgba(3, 3, 3, 0.2);
+  padding-top: 100px;
+  border-radius: 10px;
+}
+
+.headerdropdown::after {
+  top: -16px;
+  z-index: 999;
+  content: '';
+  position: absolute;
+  left: calc(50% - -65px);
+  width: 0;
+  height: 0;
+  background: 0 0;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent;
+  border-bottom-color: rgba(3, 3, 3, 0.2);
+}
+
+.headerdropdown {
+  display: none;
+  transition: .2s;
+}
+
+/* #bar:hover .headerdropdown{    
+  display: block;
+ }*/
+.downlink-ww {
+  position: absolute !important;
+  top: 10px !important;
+  display: inline-block !important;
+  width: 35px !important;
+  height: 35px !important;
+  margin: 0 !important;
+}
+
+.downlink-w {
+  margin: 5px 63px !important;
+  float: none !important;
+  display: inline-block !important;
+  width: 50px !important;
+}
+
+.downlink {
+  font-size: 16px !important;
+  &:after {
+    display: none !important;
+  }
+  text-shadow: none !important;
+  color: #fff !important;
+  text-align: left !important;
+}
+
+#memberout {
+  font-size: 16px !important;
+  margin: 0px !important;
+  color: #ffb505 !important;
+  border: 0 none !important;
+  background-color: transparent !important;
+  letter-spacing: 5px !important;
+  padding: 0px;
+  cursor: pointer;
+}
