@@ -25,8 +25,8 @@
         <div class="normal-rocket"></div>
         <div class="normal-rocket"></div>
         <div class="normal-rocket"></div>
-        <!-- <div class="vtb-intro-body">
-            <div class="vtb-intro-container">
+        <div class="vtb-intro-body">
+            <!-- <div class="vtb-intro-container">
                 <div class="vtb-intro-header">
                     <h1>
                         <span>SCRATCH</span>
@@ -36,31 +36,31 @@
                 <div class="vtb-intro-description">
                     <p>註冊完成即可享有E7DOME<br>5000元儲值點數</p>
                 </div>
-            </div>
-        </div> -->
-        <div class="text">Summer Games</div>
-        <ul id="scene-mask" class="scene">
-            <li class="layer" data-depth="-1">
+            </div> -->
+            <ul id="scene-mask" class="scene">
+            <li class="layer wow bounceIn" data-wow-duration=".3s" data-wow-delay="4s" data-depth="-1" >
                 <div class="gift1">
                     <img src="images/brush/alert.png" alt="gift2">
                 </div>
             </li>
-            <li class="layer" data-depth="-4">
+            <li class="layer wow bounceIn" data-wow-duration=".3s" data-wow-delay="4.5s" data-depth="-4">
                 <div class="gift2">
                     <img src="images/brush/no-prize.png" alt="gift2">
                 </div>
             </li>
-            <li class="layer" data-depth="-8">
+            <li class="layer wow bounceIn" data-wow-duration=".3s" data-wow-delay="5s" data-depth="-3">
                 <div class="gift3">
                     <img src="images/brush/ticket.png" alt="gift3">
                 </div>
             </li>
-            <li class="layer" data-depth="-15">
+            <li class="layer wow bounceIn" data-wow-duration=".3s" data-wow-delay="5.5s" data-depth="-6">
                 <div class="gift4">
                     <img src="images/brush/alert-d.png" alt="gift4">
                 </div>
             </li>
         </ul>
+        </div>
+        <div class="text">Summer Games</div>
         <div class="light"></div>
         <div class="light"></div>
         <div class="vtb-intro-mask">
@@ -71,12 +71,6 @@
         </div>
         <div class="bg"></div>
         <canvas id="mycanvas" class= "wow rollIn" data-wow-duration="3s" data-wow-delay=".5s"></canvas>
-
-        <div id="gui"></div>		
-        <div id="canvas-container">
-        <div id="mountains2"></div>
-        <div id="mountains1"></div>
-        <div id="skyline"></div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>

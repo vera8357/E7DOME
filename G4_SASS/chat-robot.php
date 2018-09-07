@@ -33,7 +33,7 @@
     </div>
     <div class="coach_img">
       <div class="coachman">
-        <img src="images/chatrobot/caoch.png" alt="" class= "wow bounceInUp" data-wow-duration=".8s" data-wow-delay=".3s">>
+        <img src="images/chatrobot/caoch.png" alt="" class= "wow bounceInUp" data-wow-duration=".8s" data-wow-delay=".3s">
     </div>
     </div>
   </section>

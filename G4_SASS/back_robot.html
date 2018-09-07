@@ -10,13 +10,6 @@
     <link rel="stylesheet" href="css/back.css">
     <link rel="stylesheet" href="css/font.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <style lang="">
-        #back_add {
-            text-align: right;
-            width: 90%;
-            margin: 10px auto;
-        }
-    </style>
 </head>
 
 <body>
@@ -27,16 +20,13 @@
         </div>
         <ul>
             <li>
-                <a href="#">QRCODE掃描</a>
+                <a href="back_book.html">預約訂單管理</a>
             </li>
             <li>
-                <a href="#">預約訂單管理</a>
+                <a href="back_card.html">點數卡商品管理</a>
             </li>
             <li>
-                <a href="#">點數卡商品管理</a>
-            </li>
-            <li>
-                <a href="#">儲值紀錄</a>
+                <a href="back_card_order.html">儲值紀錄</a>
             </li>
             <li>
                 <a href="#">場地管理</a>
@@ -45,7 +35,7 @@
                 <a href="#">會員管理</a>
             </li>
             <li>
-                <a href="#">聊天機器人維護</a>
+                <a href="back_robot.html">聊天機器人維護</a>
             </li>
             <li>
                 <a href="#">管理員管理</a>
@@ -59,6 +49,7 @@
         <h2>諮詢管理</h2>
         <div id="tab-page">
             <div id="back_add">
+                <img src="images/back_page/plus.png" alt="">
                 <input type="button" value="新增問答" id="new_qa">
             </div>
             <ul class="tab-title">
@@ -78,9 +69,9 @@
                     </tr>
                 </thead>
                 <tbody>
-        
+
                 </tbody>
-                </table>
+            </table>
             <table id="tab02">
                 <thead>
                     <tr>
@@ -88,15 +79,15 @@
                         <th>待回答問題</th>
                         <th>設定答案</th>
                         <th>編輯儲存</th>
-                         <th>編輯刪除</th>
+                        <th>編輯刪除</th>
                     </tr>
                 </thead>
                 <tbody>
-        
+
                 </tbody>
-        </table>
+            </table>
     </div>
-    
+
     <script>
         $(document).ready(function () {
             var tab = $('.tab-title li'); //頁籤按鈕
@@ -107,12 +98,12 @@
             window.onload = solve;//一讀取就執行solve
 
             function solve() {//諮詢管理
-            $('#back_add').show();
+                $('#back_add').show();
                 $.ajax({
                     url: 'back_robot.php',
                     dataType: 'text',
                     tpye: 'POST',
-                    data:{
+                    data: {
                         solve: 'solve',
                     },
                     success: function (data) {
@@ -161,14 +152,14 @@
                     }
                 });
             }
-            
+
             function unsolve() {////尚未回答管理
-            $('#back_add').hide();
+                $('#back_add').hide();
                 $.ajax({
                     url: 'back_robot.php',
                     dataType: 'text',
                     tpye: 'POST',
-                    data:{
+                    data: {
                         unsolve: 'unsolve',
                     },
                     success: function (data) {
@@ -216,7 +207,7 @@
                     }
                 });
             }
-            
+
 
             $('#back_add').click(function () {
                 $.ajax({
@@ -230,35 +221,35 @@
                 })
             });
         });
-        
+
         // 頁簽
         $(function () {
             var tab = $('.tab-title li'); //頁籤按鈕
-            var table =$('table');      //table
+            var table = $('table');      //table
             $('table#tab02').hide();    //先隱藏table2
 
-            tab.click(function(){   //頁籤點選
+            tab.click(function () {   //頁籤點選
 
                 var index = $(this).index();   //抓到點選頁籤的索引值
                 $(this).addClass('active'); //被點選的頁籤+active 
                 tab.not($(this)).removeClass('active'); //除了被點選的頁籤 其他頁籤remove active
                 table.hide();//所有table隱藏
                 table.eq(index).show(); //table 對應到的table show
-                
+
             });
 
 
 
-                // var $li = $('ul.tab-title li');
-                // $($li.eq(0).addClass('active').find('a').attr('href')).siblings('.back_content').hide();
+            // var $li = $('ul.tab-title li');
+            // $($li.eq(0).addClass('active').find('a').attr('href')).siblings('.back_content').hide();
 
-                // $li.click(function () {
-                //     $($(this).find('a').attr('href')).show().siblings('.back_content').hide();
-                //     $(this).addClass('active').siblings('.active').removeClass('active');
-                // });
-            });
+            // $li.click(function () {
+            //     $($(this).find('a').attr('href')).show().siblings('.back_content').hide();
+            //     $(this).addClass('active').siblings('.active').removeClass('active');
+            // });
+        });
 
-        
+
 
     </script>
 </body>
