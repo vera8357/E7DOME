@@ -1,6 +1,6 @@
 <?php
 	require_once('connect_g4.php');
-	$sql = "select * from pointcard where CARD_STATUS = 1 limit 3 ";             
+	$sql = "select * from pointcard limit 3 ";             
 	$query = $pdo->query($sql);
 	while($row = $query->fetch(PDO::FETCH_ASSOC)){
 		$freePoints = $row["CARD_POINTS"]-$row["CARD_PRICE"];

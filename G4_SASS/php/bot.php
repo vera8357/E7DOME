@@ -23,10 +23,10 @@ try{
 				echo "可以詢問E7DOME團隊:>";
 				break;
 			case 2:
-				echo "稍等我去詢問";
+				echo "也許你旁邊的知道。";
 				break;
 			case 3:
-				echo "跟著我一起動DOME";
+				echo "請不要問我這個問題。";
 				break;
 		}
 	}

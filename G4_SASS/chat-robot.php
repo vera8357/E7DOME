@@ -9,8 +9,6 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/robot.css">
   <link rel="stylesheet" href="css/font.css">
-  <link rel="stylesheet" href="libs/wow/css/libs/animate.css">
-
 </head>
 
 <body>
@@ -31,15 +29,19 @@
       <!-- <button id="okbtn">OK</button> -->
     </div>
     </div>
-    <div class="coach_img">
-      <div class="coachman">
-        <img src="images/chatrobot/caoch.png" alt="" class= "wow bounceInUp" data-wow-duration=".8s" data-wow-delay=".3s">
-    </div>
+    <div class="coach_img"></div>
+    <div class="coachman">
+      
     </div>
   </section>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
   <script src="js/robot.js"></script>
+  <script>
+    $('.humberger_btn').click(function () {
+      $(this).toggleClass('active');
+    })
+  </script>
   <script type="text/javascript">
     $(document).ready(function () {
       newUl = document.createElement('ul');
@@ -82,11 +84,6 @@
       });
     });
   </script>
-  <script src="libs/wow/dist/wow.min.js">
-    </script>
-    <script>
-        new WOW().init();
-    </script>
 </body>
 
 </html>

@@ -89,40 +89,40 @@
         <div class="block-item-introduction">
           <div class="sports-introduction">
             <div class="basketball">
-              <a href="basketball.php">
+              <a href="#">
                 <img class="basketball-o ball-animation" src="images/about-material/ball/Basketballplayer.png" alt="basketball">
               </a>
-              <a href="basketball.php">
+              <a href="#">
                 <h3>籃球揪團
                   <img class="point-txt1" src="images/about-material/ball/point.png" alt="point">
                 </h3>
               </a>
             </div>
             <div class="rock-climbing">
-              <a href="climbimg.php">
+              <a href="#">
                 <img class="rock-climbing-o ball-animation ball-ani-line3" src="images/about-material/ball/Mountaineer.png" alt="rock-climbing">
               </a>
-              <a href="climbimg.php">
+              <a href="#">
                 <h3>攀岩揪團
                   <img class="point-txt2" src="images/about-material/ball/point.png" alt="point">
                 </h3>
               </a>
             </div>
             <div class="badminton">
-              <a href="badminton.php">
+              <a href="#">
                 <img class="badminton-o ball-animation ball-ani-line1" src="images/about-material/ball/Featherplayer.png" alt="badminton">
               </a>
-              <a href="badminton.php">
+              <a href="#">
                 <h3>羽球揪團
                   <img class="point-txt3" src="images/about-material/ball/point.png" alt="point">
                 </h3>
               </a>
             </div>
             <div class="bowling">
-              <a href="bowling.php">
+              <a href="#">
                 <img class="bowling-o ball-animation ball-ani-line2" src="images/about-material/ball/footerplayer.png" alt="bowling">
               </a>
-              <a href="bowling.php">
+              <a href="#">
                 <h3>保齡球揪團
                   <img class="point-txt4" src="images/about-material/ball/point.png" alt="point">
                 </h3>
@@ -187,9 +187,10 @@
         <div class="container-big">
           <div class="slide-site container-side">
             <div class="site-text">
-              <h2>E7DOME運動中心 Gymnasium</h2>
-              <p>館內可同時容納1,500至2,300位觀眾之多功能室內運動場館。場地採用運動競賽專用楓木地板，以提供本市各運動單項協會辦理各項運動競賽外，亦可提供一般市民進行各項室內相關體育運動活動。
-另靠近北寧路口之行政大樓為臺北市政府體育局所在位置，主要業務辦理本市各項體育運動相關之事項。
+              <h2>Lorem ipsum dolor sit amet.</h2>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus expedita culpa sed neque id eligendi nisi
+                deleniti tempore velit pariatur! Laudantium suscipit rem magni, adipisci saepe beatae consequatur minima
+                libero!
               </p>
               <div id="map"></div>
             </div>
@@ -214,9 +215,7 @@
       </section>
       <!-- 輪播場地結束 -->
     </div>
-    <footer>
-      <h3 class="footer-e7">&copy;&nbsp;E7DOME</h3>
-    </footer>
+    <footer></footer>
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
   <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
@@ -229,6 +228,11 @@
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
   <script src="js/map.js"></script>
   <script data-main="main" src="https://unpkg.com/requirejs@2/require.js"></script>
+    <script>
+      $('.humberger_btn').click(function () {
+        $(this).toggleClass('active');
+      })
+    </script>
 </body>
 
 </html>

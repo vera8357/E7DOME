@@ -62,17 +62,36 @@
 
 /* * 3F BASKETBALL OBJ ** / /* HOOP RIGHT */
 
-#icon-hoop .st0 {fill: #A5A5A5;}
-#icon-hoop .st1 {fill: #382E51;}
-#icon-hoop .st2 {fill: #FFFFFF;}
-#icon-hoop .st3 {fill: #63606C;}
-#icon-hoop .st4 {fill: #868284;}
-#icon-hoop .st5 {fill: none;
+#icon-hoop .st0 {
+  fill: #A5A5A5;
+}
+
+#icon-hoop .st1 {
+  fill: #382E51;
+}
+
+#icon-hoop .st2 {
+  fill: #FFFFFF;
+}
+
+#icon-hoop .st3 {
+  fill: #63606C;
+}
+
+#icon-hoop .st4 {
+  fill: #868284;
+}
+
+#icon-hoop .st5 {
+  fill: none;
   stroke: #373837;
   stroke-width: 5;
   stroke-miterlimit: 10;
 }
-#icon-hoop .st6 {fill: #D6D6D6;}
+
+#icon-hoop .st6 {
+  fill: #D6D6D6;
+}
 
 /* HOOP LEFT */
 
@@ -82,11 +101,25 @@
   stroke-miterlimit: 10;
 }
 
-#icon-hoopLeft .st1 {fill: #ffffff;}
-#icon-hoopLeft .st2 {fill: #372D4F;}
-#icon-hoopLeft .st3 {fill: #625F6B;}
-#icon-hoopLeft .st4 {fill: #A5A5A5;}
-#icon-hoopLeft .st5 {fill: #858283;}
+#icon-hoopLeft .st1 {
+  fill: #ffffff;
+}
+
+#icon-hoopLeft .st2 {
+  fill: #372D4F;
+}
+
+#icon-hoopLeft .st3 {
+  fill: #625F6B;
+}
+
+#icon-hoopLeft .st4 {
+  fill: #A5A5A5;
+}
+
+#icon-hoopLeft .st5 {
+  fill: #858283;
+}
 
 /* * 2F BADMINTON OBJ * */
 
@@ -102,8 +135,15 @@
 
 /* 3F BASKETBALL OBJ */
 
-.pin--4-3 {  top: 32vmin;  left: 93vmin;}
-.pin--4-2 {  top: 35vmin;  left: 4vmin;}
+.pin--4-3 {
+  top: 32vmin;
+  left: 93vmin;
+}
+
+.pin--4-2 {
+  top: 35vmin;
+  left: 4vmin;
+}
 
 .hoop,
 .hoopLeft {
@@ -120,7 +160,10 @@
 
 /* 2F BADMINTON OBJ */
 
-.pin--3-4 {  top: 45vmin;  left: 25vmin;}
+.pin--3-4 {
+  top: 45vmin;
+  left: 25vmin;
+}
 
 .net {
   position: absolute;
@@ -228,10 +271,21 @@
   animation-fill-mode: forwards;
 }
 
-.level--1::after {  animation-delay: .5s;}
-.level--2::after {  animation-delay: 1s;}
-.level--3::after {  animation-delay: 1.5s;}
-.level--4::after {  animation-delay: 2s;}
+.level--1::after {
+  animation-delay: .5s;
+}
+
+.level--2::after {
+  animation-delay: 1s;
+}
+
+.level--3::after {
+  animation-delay: 1.5s;
+}
+
+.level--4::after {
+  animation-delay: 2s;
+}
 
 @keyframes fadeIn {
   0% {
@@ -325,334 +379,14 @@
 }
 
 .mallnav {
-  top: 25vmin;
-  right: 15vmin;
+  top: 15%;
+  /* right: 10%; */
 }
 
 .content__item {
-  padding: 1em;
   height: 75%;
-  background-color: #E8AA46;
 }
 
 .content__button {
   top: -75%;
-  right: 38.5vmin;
-}
-
-
-/* INFO BOX */
-
-
-.fac-container {
-  max-width: 1200px;
-  text-align: center;
-  margin: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap:wrap;
-}
-@media only screen and (max-width: 767px) {
-  .fac-container{
-    /*flex-direction: column;*/
-  }
-}
-
-
-
- .box {
-  width: 16.66%;
-  margin: 0.2%;
-  padding: 0 32px;
-  box-sizing: border-box;
-  padding-top: 16px;
-  background: #801A52;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 0 5px rgba(0,0,0,0.4);
-  cursor: pointer;
-}
-@media only screen and (max-width: 767px) {
-  .box{
-    flex-shrink: 0;
-    margin: 0;
-  }
-
-  .box:not(.box01){
-    width: 33.3%;
-    padding: 0 16px;
-  }
-}
-
-.box .icon-cont {
-  border: 6px solid rgba(255,255,255,0.3);
-  border-radius: 50%;
-  width: 75px;
-  height: 75px;
-  margin: 20px auto;
-  display: block; 
-  text-align: center;
-  box-shadow: 0 0 0 0px rgba(255,255,255,0.5), 0 0 0 0px rgba(3, 108, 129, 0.5);
-}
-@media only screen and (max-width: 767px) {
-  .box .icon-cont{
-
-  }
-}
-
-
-.box .icon-cont i {
-  color: #fff;
-  opacity: 0.6;
-  font-size: 2.5em;
-  line-height: 63px;
-}
-.box:hover .icon-cont {
-  animation: shady 4s linear infinite;
-}
-
-@keyframes shady {
-  0% {box-shadow: 0 0 0 0px rgba(255,255,255,0.5), 0 0 0 0px rgba(3, 108, 129, 0.5);}
-  20% {box-shadow: 0 0 0 100px rgba(255,255,255,0), 0 0 0 0px rgba(3, 108, 129, 0);}
-  20.1% {box-shadow: 0 0 0 0px rgba(255,255,255,0.5), 0 0 0 0px rgba(3, 108, 129, 0.5);}
-  50% {box-shadow: 0 0 0 0px rgba(255,255,255,0.5), 0 0 0 0px rgba(3, 108, 129, 0.5);}
-  70% {box-shadow: 0 0 0 100px rgba(255,255,255,0), 0 0 0 0px rgba(3, 108, 129, 0);}
-  70.1% {box-shadow: 0 0 0 0px rgba(255,255,255,0.5), 0 0 0 0px rgba(3, 108, 129, 0.5);}
-  100% {box-shadow: 0 0 0 0px rgba(255,255,255,0.5), 0 0 0 0px rgba(3, 108, 129, 0.5);}
-}
-
-.box h3 {
-  color: #fff;
-  font-family: 'Open Sans', Arial, sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 2px;
-  padding: 16px;
-  border-bottom: 1px solid rgba(255,255,255,1);
-}
-@media only screen and (max-width: 767px) {
-  .box h3{
-    padding: 16px 0;
-  }
-}
-
-
-.box span{
-  color: #fff;
-}
-
-.first{
-  padding: 0;
-}
-
-.first img{
-  width: 100%;
-}
-
-.box01{
-  flex-grow: 1;
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-}
-@media only screen and (max-width: 767px) {
-  .box01{
-    flex-direction: column;
-    width: 100%;
-  }
-}
-
-
-.box01 h3{
-  text-align: left;
-  border-bottom: 0;
-}
-
-.box strong{
-  display: block;
-  margin: 16px;
-  font-size: 24px;
-  color: #fff;
-}
-
-.fac-list{
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 16px;
-}
-
-.fac-info{
-  padding: 16px;
-  color: #fff;
-  line-height: 1.5;
-}
-
-.fac-info h3{  font-size: 28px;}
-.fac-info span{  font-size: 24px;}
-.fac-info small{  font-size: 16px;}
-
-.fac-img{  width: 100%;}
-
-.fac-img img{
-  width: 100%;
-  vertical-align: middle;
-}
-
-
-.fac-btn{
-  margin-top: 16px;
-  display: inline-block;
-  color: #fff;
-  text-align: center;
-  padding: 8px 16px;
-  border-radius: 4px;
-  width: 100px;
-  opacity: .7;
-  background-color: #E8AA46;
-}
-
-@media only screen and (max-width: 767px) {
-  .fac-status{
-    display: flex;
-    flex-direction: row;
-  }
-}
-
-
-.spaces-list {
-  position: absolute;
-  top: 25vmin;
-  left: 15vmin;
-  width: 300px;
-  min-height: 30vh;
-  padding: 5em 0 1em;
-  background: transparent;
-}
-
-.search{
-  display: none;
-}
-
-
-.list {
-  margin: 0 0 0em;
-  padding: 0 1em;
-  list-style: none;
-}
-
-
-.grouped-by-category [data-category='1']:first-child::before,
-.grouped-by-category :not([data-category='1']) + [data-category='1']::before,
-.grouped-by-category [data-category='2']:first-child::before,
-.grouped-by-category :not([data-category='2']) + [data-category='2']::before,
-.grouped-by-category [data-category='3']:first-child::before,
-.grouped-by-category :not([data-category='3']) + [data-category='3']::before,
-.grouped-by-category [data-category='4']:first-child::before,
-.grouped-by-category :not([data-category='4']) + [data-category='4']::before {
-  opacity: 0;
-}
-
-
-.grouped-by-category [data-category='1']:first-child,
-.grouped-by-category :not([data-category='1']) + [data-category='1'],
-.grouped-by-category [data-category='2']:first-child,
-.grouped-by-category :not([data-category='2']) + [data-category='2'],
-.grouped-by-category [data-category='3']:first-child,
-.grouped-by-category :not([data-category='3']) + [data-category='3'],
-.grouped-by-category [data-category='4']:first-child,
-.grouped-by-category :not([data-category='4']) + [data-category='4'] {
-  margin-top: 2em;
-}
-
-
-.list__item::after {
-  content:'';
-}
-
-
-.list__link {
-  font-size: 2em;
-  display: block;
-  padding: 0em;
-}
-
-.label__text{
-  display: none;
-}
-
-
-
-.level--1::after {
-  content: '攀岩場';
-}
-
-.level--2::after {
-  content: '保齡球場';
-}
-
-.level--3::after {
-  content: '羽球場';
-}
-
-.level--4::after {
-  content: '籃球場';
-}
-
-.level--1::after,
-.level--2::after,
-.level--3::after,
-.level--4::after,
-.list__item a{
-  color: #fff;
-}
-
-
-.level:hover::after,
-.list__item--active .list__link,
-.list__link:hover {
-  color: #E8AA46;
-}
-
-
-
-/* Style the tab */
-.tab {
-  overflow: hidden;
-}
-
-/* Style the buttons that are used to open the tab content */
-.tab button {
-  background-color: #f1f1f1;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  /*padding: 6px 12px;*/
-  /*border: 1px solid #ccc;*/
-  /*border-top: none;*/
-}
-
-.fac-container:nth-child(2){
-  display: flex;
 }

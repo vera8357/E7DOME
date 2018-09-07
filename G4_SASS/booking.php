@@ -1,17 +1,6 @@
-<?php
-	ob_start();
-    // session_start();
-
-    if(isset($_SESSION["cate_no"])){
-        $cate_no = $_SESSION["cate_no"];
-        unset($_SESSION["cate_no"]);
-    }else{
-        $cate_no = 2;
-    }
-?>
-
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +15,7 @@
 	</header>
 
 <div class="container">
-	<div class="area area1">
+	<div class="area accordion">
 		<h3 class="text-lg">籃球場</h3>
 		<div class="mask">
 			<div class="court panel">
@@ -54,7 +43,7 @@
 	</div>
 
 		<!-- BADMINTON -->
-		<div class="area area2">
+		<div class="area accordion activeNow">
 			<h3 class="text-lg">保齡球場</h3>
 			<div class="mask">
 				<div class="court panel">
@@ -84,7 +73,7 @@
 		</div>
 
 		<!-- CLIMBLING -->
-		<div class="area area4">
+		<div class="area accordion">
 			<h3 class="text-lg">攀岩場</h3>
 			<div class="mask">
 				<div class="court panel">
@@ -112,7 +101,7 @@
 			</div>
 		</div>
 
-		<div class="area area3">
+		<div class="area accordion">
 			<h3 class="text-lg">羽球場</h3>
 			<div class="mask">
 				<div class="court panel">
@@ -155,25 +144,15 @@
 
 
 <form action="php/booInsert.php" method="post">
-	<table class="table-modal">
-		<thead>
-			<tr>
-				<th>預約場地</th>
-				<th>預約日期</th>
-				<th>預約時段</th>
-				<th>場地點數</th>
-			</tr>
-		</thead>
-		<tbody id="tbl-md">
-			
-		</tbody>
+	<table class="table-modal" id="tbl-md">
+	
 	</table>
 	<div class="modal-btn-container margin-top-16">
 		<div class="modal-btn">
 			<input type="button" class="btn dim-orange cancel" value="取消預約">
 		</div>
 		<div class="modal-btn">
-			<input type="submit" class="btn dim-blue" value="確認預約">
+			<input type="submit" class="btn dim-blue" value="確認預約" name="submitBoo">
 		</div>
 	</div>
 </form>
@@ -186,78 +165,20 @@
 	
 
 
-<script src="libs/jquery/dist/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+
 <script src="js/booking.js"></script>
 
 <script>
-// accordion
-function accActiveNow(){
-	var cate_no = <?php echo $cate_no ?>;
 
-	switch(cate_no){
-	    case 1:
-	        $('.area1').addClass('activeNow');
-	        break;
-	    case 2:
-	        $('.area2').addClass('activeNow');
-	        break;
-	    case 3:
-	        $('.area3').addClass('activeNow');
-	        break;
-	    case 4:
-	        $('.area4').addClass('activeNow');
-	        break;
-	    default:
-	        $('.area1').addClass('activeNow');
-	        break;
-	};
-
-	$('.area').on('click',function(){
-	    $('.area').not(this).removeClass('activeNow');
-	    $(this).addClass('activeNow');
-	});
-}
-
-
-function showTdyInfo(){
-	var tdy = new Date(); 
-	var tdyDate = tdy.toISOString().slice(0,10);
-
-	for (var i = 1; i <=4 ; i++) {
-		var cate_no = i; // console.log(i);
-    	$.ajax({
-    		url: "php/booQuery.php",
-    		type: 'post',
-    		async: false,
-    		data: {
-    			CATE_NO: cate_no,
-    			BOO_DATE: tdyDate    		
-    		},
-    		success:function(data){
-	    		var cateNo =  '#queryFac' + cate_no; // console.log(cateNo);
-	        	$(cateNo).html(data);
-				
-				$('.myBtn').click(function(){
-			    	var fac_no 		= $(this).nextAll().eq(0).val();
-			    	var boo_time_i 	= $(this).nextAll().eq(1).val();
-			    	showInfo(fac_no,tdyDate,boo_time_i);
-		        });
-        	}
-    	});
-    	
-	}
-
-}
-
-function showTargetInfo(targetDate){
+function x1x(){
+	var yyyy = new Date().getFullYear();
 	$('.date').click(function(){
-		var mm 	 = ('0' + $(this).text().split('/')[0]).slice(-2);
-		var dd 	 = ('0' + $(this).text().split('/')[1]).slice(-2);
-		var yyyy = $(this).children().data('yyyy');
-
+		var mm = 0 + $(this).text().split('/')[0].slice(-2);
+		var dd = 0 + $(this).text().split('/')[1].slice(-2);
 		var targetDate = yyyy +'-' + mm + '-' + dd;
-		var cate_no = $(this).closest('.table-date').data('cate');
-		// console.log(targetDate);
+		var cate_no = $(this).parent().parent().parent().data('cate');
 
 	    $.post("php/booQuery.php",
 	    	{
@@ -265,9 +186,8 @@ function showTargetInfo(targetDate){
 	    		BOO_DATE: targetDate
 	    	},
 	    function(data){
-	    	var cateNo =  '#queryFac' + cate_no; // console.log(cateNo);
+	    	var cateNo =  '#queryFac' + cate_no; console.log(cateNo);
 	        $(cateNo).html(data);
-	        modalOpen();console.log('hi1');
 
 	        $('.myBtn').click(function(){
 		    	var fac_no 		= $(this).nextAll().eq(0).val();
@@ -281,7 +201,6 @@ function showTargetInfo(targetDate){
 }
 
 function showInfo(fac_no,targetDate,boo_time_i){
-	console.log('hi2');
 	$.post("php/booModal.php",
 	{
 		FAC_NO: fac_no,
@@ -290,7 +209,7 @@ function showInfo(fac_no,targetDate,boo_time_i){
 	},
 		function (data){
 			$('#tbl-md').html(data);
-			// modalOpen();
+			modalOpen();
 		}
 	);
 }
@@ -299,11 +218,11 @@ function showInfo(fac_no,targetDate,boo_time_i){
 function modalOpen(){
 	// Get the modal
 	var modal = document.getElementById('myModal');
-	// console.log(modal);   
+	console.log(modal);	   
 	
 	$(".myBtn").each(function(){
-		$(this).click(function(){ 
-			// console.log('hi');
+		$(this).click(function(){
+		    
 			modal.style.display = "block";
 		});
 	});
@@ -329,25 +248,15 @@ function modalOpen(){
 
 
 
-function targetBgc(){
-	$('.date-btn').each(function(){
-		$(this).click(function(){
-			$('.date-btn').not(this).css("background-color", "#FFFFFF");
-			$(this).css("background-color", "#FB9A00");
-			
-		});
-	});
-}
-</script>
 
-<script>
-	window.addEventListener('load',showTdyInfo);
-	window.addEventListener('load',modalOpen);
-	window.addEventListener('load',showTargetInfo);
-	window.addEventListener('load',accActiveNow);
-	window.addEventListener('load',targetBgc);
-</script>
+</script>	
+<script>window.addEventListener('load',x1x);</script>
 
+	<script>
+		$('.humberger_btn').click(function () {
+			$(this).toggleClass('active');
+		})
+	</script>
 </body>
 
 </html>

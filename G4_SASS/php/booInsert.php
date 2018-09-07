@@ -10,8 +10,7 @@
 
 
 <?php
-ob_start();
-session_start();
+// session_start();
 
 // prevent refresh
 if( isset($_SESSION['submitBoo']) ){
@@ -19,9 +18,14 @@ if( isset($_SESSION['submitBoo']) ){
   header("location: ../booking.php");
   exit;
 
-}else{
-  $_SESSION['submitBoo'] = 1;
-}
+
+// if( $_SESSION['submitBoo'] == $_POST['submitBoo'] ){
+//     header("location: booking.php");
+// }
+// else {
+//     // user submitted once
+//     $_SESSION['submit'] = $_POST['submitBoo'];        
+// }
 
 // connect DB
 require_once("connect_g4.php");

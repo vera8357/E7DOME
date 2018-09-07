@@ -11,5 +11,4 @@ $addPoints = "UPDATE member SET MEM_POINTS = MEM_POINTS + '$CARD_POINTS' WHERE M
 $pdo->exec($addPoints);
 $card_order = "INSERT INTO card_order(CARD_NO,MEM_NO,ORDER_DATETIME,CARD_PRICE,CARD_POINTS) VALUES('$CARD_NO','$MEM_NO',CURDATE(),'$CARD_PRICE','$CARD_POINTS')";
 $pdo->exec($card_order);
-echo"<script>history.go(-2);</script>";
 ?>
