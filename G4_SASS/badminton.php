@@ -207,7 +207,7 @@ badminton.css">
                     <?php
                     
                         require_once("php/connect_g4.php");
-                        $sql = "SELECT * FROM team JOIN booking ON (team.BOO_NO = booking.BOO_NO) JOIN facility ON (facility.FAC_NO = booking.FAC_NO) where facility.CATE_NO = 3 order by facility.FAC_NO desc limit 3";
+                        $sql = "SELECT * FROM team JOIN booking ON (team.BOO_NO = booking.BOO_NO) JOIN facility ON (facility.FAC_NO = booking.FAC_NO) where booking.BOO_DATE > CURRENT_DATE() and facility.CATE_NO = 2 order by facility.FAC_NO desc limit 3";
                         $team = $pdo->query( $sql);
                         $teams = $team->fetchAll(PDO::FETCH_ASSOC);
                         foreach($teams as $i=>$teamsRow){
@@ -377,6 +377,22 @@ badminton.css">
                 window.addEventListener('load',hahaha(label=firstlabel));
             }
         });
+        $('.group').on('click',function(){
+            $.ajax({
+                url:'php/facility/session_sport.php',
+                dataType:'text',
+                type:'POST',
+                data:{
+                    cate_no:parseInt($('.site_select').find('input').eq(0).val()),
+                },
+                success:function(data3){
+                    window.location.href = "group.php";
+                },
+                error:function(){
+                    alert('gg');
+                }
+            })
+        });
         $('.reservation').on('click',function(){
             $.ajax({
                 url:'php/facility/session_sport.php',
@@ -386,10 +402,13 @@ badminton.css">
                     cate_no:parseInt($('.site_select').find('input').eq(0).val()),
                 },
                 success:function(data3){
-                    // alert(data3);
+                    window.location.href = "booking.php";
+                },
+                error:function(){
+                    alert('gg');
                 }
             })
-        })
+        });
     </script>
 </body>
 </html>

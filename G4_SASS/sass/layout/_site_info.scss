@@ -407,6 +407,23 @@ img{
 #climbimg_site img{
     width:100%;
 }
+#basketball_site,
+#bowling_site,
+#badminton_site,
+#climbimg_site{
+    transform: scale(1);
+    transition: .3s;
+    // z-index: 5;
+}
+#basketball_site:hover,
+#bowling_site:hover,
+#badminton_site:hover,
+#climbimg_site:hover{
+    transition: .3s;
+    transform: scale(1.5);
+    z-index: 5;
+    // animation:jump 2s;
+}
 #basketball_site{
     top:25%;
     left:16%;
@@ -522,8 +539,8 @@ img{
         cursor: pointer;
         padding:0 1% 0 1%;
         float:left;
+        transition: 2s;
     }
-
     #basketball_site {
         top: auto;
         left: auto;
