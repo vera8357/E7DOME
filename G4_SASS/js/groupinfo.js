@@ -6,7 +6,7 @@
         if($("#link_member").text() == "登入"){
             alert("請先登入");
         }else{
-        $id('create_in').style.display = 'none';
+        $id('create_in').style.display = 'block';
         }
     });
 
