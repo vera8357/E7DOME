@@ -1,8 +1,3 @@
-<?php 
-ob_start();
-session_start();
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,13 +38,7 @@ session_start();
                 <a href="#">聊天機器人維護</a>
             </li>
             <li>
-                <?php
-                    if( $_SESSION['ADMIN_PERM'] == 0){
-                        echo "<a href='#'>管理員管理</a>";
-                    }else{
-                        echo "<a href='#' style='display:none'>管理員管理</a>";
-                    }
-                ?>
+                <a href="#">管理員管理</a>
             </li>
             <li>
                 <a href="#">

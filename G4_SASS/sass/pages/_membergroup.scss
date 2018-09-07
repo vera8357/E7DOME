@@ -2,23 +2,6 @@
     @include all();
   
 }
-
-
-html {
-    overflow: -moz-hidden-unscrollable;
-    height: 100%;
-}
-
-body::-webkit-scrollbar {
-    display: none;
-}
-
-body {
-    -ms-overflow-style: none;
-    height: 100%;
-    width: 100vw;
-    overflow: auto;
-}
 body{
     font-family: $about-font;
     background-image: url(../images/about-material/about-bg.png);
@@ -116,6 +99,8 @@ section {
     height: 150px;
     vertical-align: bottom;
     margin: auto;
+     /*box-shadow:  0px 1.5px 0px #333,-4px 3px 0px  #ffb505*/
+               ;
 }
 
 .change_pic {
@@ -164,7 +149,7 @@ input[type="button"]{
 }
 
 .m_item li a {
-    border-bottom: 4px solid #ffb505;
+    border-bottom: 4px solid rgba(30,100,240,.7);
     padding-bottom: 5px;
 }
 
@@ -249,14 +234,6 @@ input[type="button"]{
         border-bottom: 1px solid transparent;
         padding-bottom: 0px;
     }
-}
-
-#meminfo_active a{
-    color: #ffb505;
-}
-
-#meminfo_active .line{
-     background-color:#ffb505;
 }
 
 @media screen and (min-width: 1024px) {
@@ -351,11 +328,7 @@ input[type="button"]{
     font-size: 20px;
 }
 
-.my_group .link_group,
-.other_group .link_group{
-    font-weight:bold;
-    color:#ffb505;
-}
+
 
 
 

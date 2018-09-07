@@ -58,7 +58,7 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
                 <li><a href="memberinfo.php"><span class="line"></span>個人資料</a></li>
                 <li><a href="memberbooking.php"><span class="line"></span>預約紀錄</a></li>
                 <li><a href="memberpoints.php"><span class="line"></span>儲值紀錄</a></li>
-                <li id="meminfo_active"><a href="#"><span class="line"></span>我的揪團</a></li>
+                <li><a href="#"><span class="line"></span>我的揪團</a></li>
 
               
                 <li><form action="php/logout.php" method="post"><input id="btn_logout" type="submit" value="登出"></form></li>
@@ -80,8 +80,8 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
                 <h1 id="member_h1">我的揪團</h1>
 
                 <div class="group_title">
-                    <span  id="show_leader" class="title title_line">我的開團</span>
-                    <span  id="show_staff" class="title">我的參團</span>
+                    <span  id="show_leader" class="title title_line">開團管理</span>
+                    <span  id="show_staff" class="title">參團管理</span>
                 </div>
                     
                 <div class="group_content">
@@ -90,9 +90,8 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
                     <div id="leader_content" class="text_content" >
 
                         <ul class="text_title leader">
-                            
+                            <li>揪團編號</li>
                             <li>團隊名稱</li>
-                            <li>場地名稱</li>
                             <li>預約日期</li>
                             <li>預定人數</li>
                             <li></li>
@@ -102,7 +101,7 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
                         
                         try{
                             require_once("php/connect_g4.php");
-                            $sql = "select * from facility join booking on (facility.FAC_NO = booking.FAC_NO)join team on (team.BOO_NO = booking.BOO_NO) where team.MEM_NO =".$_SESSION['MEM_NO']." ORDER BY BOOKING.BOO_DATE DESC";
+                            $sql = "select * from team join booking using(BOO_NO) where team.MEM_NO =".$_SESSION['MEM_NO']." ORDER BY BOOKING.BOO_DATE DESC ";
                             $member = $pdo->query($sql);
                             
 
@@ -115,11 +114,11 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
                               
                             
                                         echo " <ul class='my_group'>";
+                                        echo "<li><span>揪團編號</span>".$booking['TEAM_NO']."</li>";
                                         echo "<li><span>團隊名稱</span>".$booking['TEAM_NAME']."</li>";
-                                        echo "<li><span>場地名稱</span>".$booking['FAC_NAME']."</li>";
                                         echo "<li><span>預定日期</span>".$booking['BOO_DATE']."</li>";
                                         echo "<li><span>預定人數</span>".$booking['TEAM_MEM']."</li>";
-                                        echo "<li><a class='link_group' href='groupinfo.php?TEAM_NO=".$booking['TEAM_NO']."'> 前往團隊</a></li>";
+                                        echo "<li><input  type='button' value='團隊管理'></li>";
                                         echo " </ul>";
                                     } 
                                         
@@ -141,9 +140,8 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 
 
                         <ul class="text_title staff">
-                          
+                            <li>揪團編號</li>
                             <li>團隊名稱</li>
-                            <li>場地名稱</li>
                             <li>團隊隊長</li>
                             <li>預約日期</li>
                             <li>預定人數</li>
@@ -155,7 +153,7 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
                         
                         try{
                             require_once("php/connect_g4.php");
-                            $sql = "SELECT * FROM facility JOIN booking ON (facility.FAC_NO = booking.FAC_NO) JOIN team ON (booking.BOO_NO = team.BOO_NO) JOIN team_mem ON(team_mem.TEAM_NO =team.TEAM_NO) WHERE team_mem.MEM_NO =".$_SESSION['MEM_NO']." ORDER BY BOOKING.BOO_DATE DESC ";
+                            $sql = "SELECT * FROM booking JOIN team ON (booking.BOO_NO = team.BOO_NO) JOIN team_mem ON(team_mem.TEAM_NO =team.TEAM_NO) WHERE team_mem.MEM_NO =".$_SESSION['MEM_NO']." ORDER BY BOOKING.BOO_DATE DESC ";
                             $member = $pdo->query($sql);
                             
 
@@ -165,17 +163,17 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 
                                     while ($booking = $member->fetch(PDO::FETCH_ASSOC)){
 
-                                   
+                                        echo " <form action='php/logout_team.php' method='post'> ";
                                         echo "<ul class='other_group'>";
                                         echo "<input type='hidden' name='TEAM_NO' value='".$booking['TEAM_NO']."'>";
+                                        echo "<li><span>揪團編號</span>".$booking['TEAM_NO']."</li>";
                                         echo "<li><span>團隊名稱</span>".$booking['TEAM_NAME']."</li>";
-                                        echo "<li><span>場地名稱</span>".$booking['FAC_NAME']."</li>";
                                         echo "<li><span>團隊隊長</span>".$booking['MEM_NAME']."</li>";
                                         echo "<li><span>預定日期</span>".$booking['BOO_DATE']."</li>";
                                         echo "<li><span>預定人數</span>".$booking['TEAM_MEM']."</li>";
-                                        echo "<li><a class='link_group' href='groupinfo.php?TEAM_NO=".$booking['TEAM_NO']."'>前往團隊</a></li>";
+                                        echo "<li><input  id='logout' type='submit' value='退出隊伍'></li>";
                                         echo "</ul>";
-                                       
+                                        echo "</form>";
                                     } 
                                         
                             }
@@ -187,12 +185,20 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 
 
                          ?>
+                       
+                      
 
                     </div>
 
+
+
                 </div>
 
+                    
+
             </div>
+
+
 
         </div>
 

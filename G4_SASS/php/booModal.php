@@ -20,15 +20,6 @@ $MEM_POINTS = 5000;
 
 ?>
 
-
-	<tr>
-		<th>預約場地</th>
-		<th>預約日期</th>
-		<th>預約時段</th>
-		<th>場地點數</th>
-	</tr>
-
-
 	<tr>
 		<td><?php echo $rowFacBoo['FAC_NAME'] ?></td>
 		<td><?php echo $BOO_DATE ?></td>

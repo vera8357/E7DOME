@@ -110,7 +110,7 @@ $(".showPlayer").mousemove(function(e) {
       "deg) translateY(" +
       -a / 10 +
       "%)",
-    boxShadow: a / 2 + "px " + -r / 2 + "px 30px 0 rgba(211, 201, 47, 0.781)" //陰影計算
+    boxShadow: a / 2 + "px " + -r / 2 + "px 30px 0 rgba(253, 196, 72, 0.514)" //陰影計算
   });
 }),
   $(document).ready(function() {

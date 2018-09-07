@@ -59,7 +59,7 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 
 				<li><a href="memberinfo.php"><span class="line"></span>個人資料</a></li>
 				<li><a href="memberbooking.php"><span class="line"></span>預約紀錄</a></li>
-				<li id="meminfo_active"><a href="#"><span class="line"></span>儲值紀錄</a></li>
+				<li><a href="#"><span class="line"></span>儲值紀錄</a></li>
 				<li><a href="membergroup.php"><span class="line"></span>我的揪團</a></li>
 
 				

@@ -157,7 +157,7 @@ input[type="file"] {
 }
 
 .m_item li a {
-    border-bottom: 4px solid #ffb505;
+    border-bottom: 4px solid rgba(30,100,240,.7);
     padding-bottom: 5px;
 }
 
@@ -222,7 +222,6 @@ input[type="file"] {
         width: 100%;
         font-size: 20px;
         padding: 15px;
-       
     }
     .line {
         display: inline-block;
@@ -236,20 +235,7 @@ input[type="file"] {
         border-bottom: 1px solid transparent;
         padding-bottom: 0px;
     }
-
-  
-
 }
-
-
-#meminfo_active a{
-    color: #ffb505;
-}
-
-#meminfo_active .line{
-     background-color:#ffb505;
-}
-
 
 @media screen and (min-width: 1024px) {
     .pic_wrap {

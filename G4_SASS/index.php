@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,9 +14,10 @@
 	<link rel="stylesheet" type="text/css" href="3dfac/css/style0.css" />
 	<link rel="stylesheet" type="text/css" href="3dfac/css/custom.css" />
 	<link rel="stylesheet" type="text/css" href="3dfac/css/fac-animation.css" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<script src="3dfac/js/modernizr-custom.js"></script>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	
 </head>
 
 <body>
@@ -330,6 +332,7 @@
 							]
 						}
 					);
+
 					$(".card").tilt({
 						maxTilt: 15,
 						scale: 1.02,
@@ -339,15 +342,15 @@
 						glare: true,
 						maxGlare: 0.6,
 					});
+
+				
 				}
+
+				
 			});
 		});
 	</script>
-	<script>
-		$('.humberger_btn').click(function () {
-			$(this).toggleClass('active');
-		})
-	</script>
+
 </body>
 
 </html>
