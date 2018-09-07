@@ -123,7 +123,8 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 									 	echo "<form action='evaluate.php'>";
 										echo "<div class='booking'>";
 										echo "<span class='hold1'>";
-										echo "<img src='images/member_pic/img.png'>";
+										echo "<img src='".$order['BOO_QRCODE']."'>";
+									
 										echo "</span>";
 										echo "<span class='hold2'>";
 										echo "<p>訂單編號:<span id='booking_no'>".$order['BOO_NO']."</span></p>";

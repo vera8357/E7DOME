@@ -1,17 +1,17 @@
+<html>
 
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
   <meta name="viewport" content="width=320, user-scalable=no">
   <meta name="touch_num" content="4">
   <meta name="code" content="401">
 
-  <link rel="stylesheet" href="./ffbe_files/normalize.css">
-  <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="./ffbe_files/toastr.css">
-  <link rel="stylesheet" href="./ffbe_files/jquery-ui.min.css">
+  <link rel="stylesheet" href="sealcss/sealmain.css">
+  <link rel="stylesheet" type="text/css" href="css/bookingTicket.css">
 
   <style>
-  .mask {
+    /* .mask {
       color: #ffffff;
       background: url(ffbe_files/bg.jpg) center;
       background-size: cover;
@@ -24,29 +24,30 @@
       text-align: center;
       vertical-align: middle;
     }
+
     .mask div {
       width: 100%;
       height: 100%;
       background: url(ffbe_files/icon_loader.gif) center no-repeat;
       display: table;
     }
+
     .mask p {
-      text-shadow: 
-        0 0 25px #000, 
-        0 0 20px #000, 
-        0 0 0.40px #000;
+      text-shadow: 0 0 25px #000,
+      0 0 20px #000,
+      0 0 0.40px #000;
       margin: 0;
       padding: 0;
       font-size: 140%;
       text-align: center;
       display: table-cell;
       vertical-align: middle;
-  }
+    } */
   </style>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+  <script src="js/jq.js"> </script>
   <script src="js/jqui.js"></script>
   <script src="js/progressbar.js"></script>
-  <script src="js/toastr.js"></script>
+  <!-- <script src="js/toastr.js"></script> -->
   <!-- <script src="progressbar.js"></script> -->
 
   <script type="text/javascript" charset="utf-8">
@@ -56,7 +57,7 @@
     var ACCESS_TOKEN = "099efcf65d7c21c825f5b0047b0b075a1dba1783e8441d808e32f29df1d36660";
     var CODE_TYPE = 1402;
 
-    window.onpageshow = function(evt) {
+    window.onpageshow = function (evt) {
       if (evt.persisted) {
         ProgressBar.set(0);
         displayTouchNum(0);
@@ -91,10 +92,10 @@
       }
 
       var isVibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
-      if(isVibrate){
-          navigator.vibrate(375);
+      if (isVibrate) {
+        navigator.vibrate(375);
       } else {
-        $("#effect").effect("highlight", {"color": "#ff9b00"}, 1000);
+        $("#effect").effect("highlight", { "color": "#1C2BFF" }, 2000);
       }
 
       var points = '';
@@ -102,7 +103,7 @@
         points += event.touches[i].pageX;
         points += ',';
         points += event.touches[i].pageY;
-        if (i != POINT_NUM -1) {
+        if (i != POINT_NUM - 1) {
           points += ',';
         }
       }
@@ -113,17 +114,17 @@
         "access_token": ACCESS_TOKEN,
         "code_type": CODE_TYPE,
         "vertexes": points,
-      }, function(data){
+      }, function (data) {
         $("#mask").css("visibility", "visible");
         if (data.match && data.match != -1) {
-          if(data.url != null && data.url != '') {
+          if (data.url != null && data.url != '') {
             setTimeout(movePage, 0, data.url);
           } else {
             setTimeout(hiddenMask, 1000);
           }
         } else {
           setTimeout(hiddenMask, 1000);
-          toastr.info('Please touch to retry!', null,  {timeOut: 700})
+          toastr.info('Please touch to retry!', null, { timeOut: 700 })
         }
       });
     }
@@ -137,7 +138,7 @@
     }
 
     function hiddenMask() {
-      ProgressBar.animate(0, null, function() {
+      ProgressBar.animate(0, null, function () {
         displayTouchNum(0);
       });
       $("#mask").css("visibility", "hidden");
@@ -146,25 +147,102 @@
   </script>
 </head>
 
-  <body id="effect" class="background-logo" onload="init_body();" ontouchmove="event.preventDefault()" style="width:100%;overflow:hidden;">
+<body id="effect" class="background-logo" onload="init_body();" ontouchmove="event.preventDefault()" style="width:100%;overflow:hidden;">
 
-    <div align="center">
-      <div class="container"><svg viewBox="0 0 100 4" preserveAspectRatio="none" style="width: 100%; height: 100%;"><path d="M 0,2 L 100,2" stroke="#eee" stroke-width="1" fill-opacity="0"></path><path d="M 0,2 L 100,2" stroke="#FFEA82" stroke-width="4" fill-opacity="0" style="stroke-dasharray: 100, 100; stroke-dashoffset: 100;"></path></svg><div class="progressbar-text" style="color: rgb(153, 153, 153); position: absolute; right: 0px; top: 30px; padding: 0px; margin: 0px;">0 %</div></div>
-      <p class="count">タッチ数: <span id="touchnum">0</span></p>
+  <div align="center">
+    <div class="container">
+      <svg viewBox="0 0 100 4" preserveAspectRatio="none" style="width: 100%; height: 100%;">
+        <path d="M 0,2 L 100,2" stroke="#eee" stroke-width="1" fill-opacity="0"></path>
+        <path d="M 0,2 L 100,2" stroke="#FFEA82" stroke-width="4" fill-opacity="0" style="stroke-dasharray: 100, 100; stroke-dashoffset: 100;"></path>
+      </svg>
+      <div class="progressbar-text" style="color: rgb(153, 153, 153); position: absolute; right: 0px; top: 30px; padding: 0px; margin: 0px;">0
+        %
+      </div>
     </div>
+    <p class="count">タッチ数: <span id="touchnum">0</span></p>
+  </div>
 
-    <p class="image-logo">
-      <img style="width:100%" src="./ffbe_files/logo.png">
-    </p>
+  <!-- <div class="ticket inverse">
+    <header>
+      <div class="company-name">
+        預約明細
+      </div>
+      <div class="gate">
+        <div>
+          訂單編號
+        </div>
+        <div>
+        </div>
+      </div>
+    </header>
+    <section class="airports">
+      <div class="airport">
+        <div class="airport-name">
+          預約場地
+        </div>
+        <div class="airport-code">
+        </div>
+    </section>
+    <section class="place">
+      <div class="place-block">
+        <div class="place-label">
+          預約日期
+        </div>
+        <div class="place-value">
+        </div>
+      </div>
+      <div class="place-block">
+        <div class="place-label">
+          預約時段
+        </div>
+        <div class="place-value">
+        </div>
+      </div>
+      <div class="place-block">
+        <div class="place-label">
+          花費點數
+        </div>
+        <div class="place-value">
+        </div>
+      </div>
+      <div class="qr">
+        <img src="images/qrcode.png" />
+      </div>
+      <footer>
+        <div class="footer-text">
+          感謝您的預約！
+        </div>
+      </footer>
+    </section>
+    </div> -->
 
-    <div class="container--graph">
-      <canvas id="graph"></canvas>
+    <!-- <p class="image-logo">
+    <img style="width:100%" src="images/qrcode/005_file_1eda7d922df3e4a7defb3126032ab488.png">
+  </p> -->
+
+    <!-- <div class="container--graph">
+    <canvas id="graph"></canvas>
+  </div> -->
+
+    <!-- <p class="pull-right" style="text-align:right;margin-top:5px;margin-right:0px; margin-left:2px;">
+    <img id="touch-image" class="pull-right" style="width:85%; margin:-5% 0;" src="./ffbe_files/img_card.png">
+  </p> -->
+    <!-- <p><img style="width:100%" src="./ffbe_files/img_txt.png" alt=""></p> -->
+    <div id="mask" class="mask" style="visibility: hidden">
+      <div>
+        <p class="mask_p">Please wait...</p>
+      </div>
     </div>
-
-    <p class="pull-right" style="text-align:right;margin-top:5px;margin-right:0px; margin-left:2px;">
-      <img id="touch-image" class="pull-right" style="width:85%; margin:-5% 0;" src="./ffbe_files/img_card.png">
-    </p>
-    <p><img style="width:100%" src="./ffbe_files/img_txt.png" alt=""></p>
-    <div id="mask" class="mask" style="visibility: hidden"><div><p class="mask_p">Please wait...</p></div></div>
+    <script>
+      $('#effect').on('touchstart', function (e) {
+        $(this).css(
+      
+          {
+            'background': "url('images/qrcode2.jpg')",
+            'background-repeat': 'no-repeat'
+          });
+        });
+    </script>
 </body>
+
 </html>

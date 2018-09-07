@@ -25,10 +25,10 @@
         <img src="images/bowling/bowlingbgimg.png" alt="" id="bowlingbgimg">
         <img src="images/bowling/bowlingcan.png" id="bowlingcan">
         <img src="images/bowling/peteweber.png" id="peteweber">
-        <h1>
+        <h1 class="bwl_h1">
             BOWLING
         </h1>
-        <h2>
+        <h2 class="bwl_h2">
             保齡球
         </h2>
     </div>
@@ -365,6 +365,22 @@
                 window.addEventListener('load',hahaha(label=firstlabel));
             }
         });
+        $('.group').on('click',function(){
+            $.ajax({
+                url:'php/facility/session_sport.php',
+                dataType:'text',
+                type:'POST',
+                data:{
+                    cate_no:parseInt($('.site_select').find('input').eq(0).val()),
+                },
+                success:function(data3){
+                    window.location.href = "group.php";
+                },
+                error:function(){
+                    alert('gg');
+                }
+            })
+        });
         $('.reservation').on('click',function(){
             $.ajax({
                 url:'php/facility/session_sport.php',
@@ -374,10 +390,13 @@
                     cate_no:parseInt($('.site_select').find('input').eq(0).val()),
                 },
                 success:function(data3){
-                    // alert(data3);
+                    window.location.href = "test.php";
+                },
+                error:function(){
+                    alert('gg');
                 }
             })
-        })
+        });
     </script>
 </body>
 </html>

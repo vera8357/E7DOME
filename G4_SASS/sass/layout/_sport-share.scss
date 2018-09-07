@@ -245,33 +245,40 @@ body {
     width:80%;
     margin:auto;
 }
-.assess_table table tr{
+.sport_tr{
     line-height: 5;
 }
-.assess_table table tr td{
+.sport_td{
     text-align: center;
 }
-.assess_table table tr td:nth-child(1) {
+#sport_memPic {
     width: 10%;
     border-radius: 9487%;
     // display: block;
 }
-td img{
+#sport_memPic img{
     width:100%;
     border-radius: 9487%;
     // display: block;
 }
-.assess_table table tr td:nth-child(2) {
+.rank span{
+    width:200px;
+}
+.rank img{
+    width:5%;
+    margin:0 1%;
+}
+.sport_td:nth-child(2) {
     font-size: 20px;
     width:10%;
 }
-.assess_table table tr td:nth-child(3){
+.sport_td:nth-child(3){
     width:60%;
     text-align: left;
     font-size: 16px;
     line-height: 1;
 }
-.assess_table table tr td:nth-child(4){
+.sport_td:nth-child(4){
     font-size: 16px;
     color:#0052b2;
     width:20%;
@@ -378,6 +385,9 @@ td img{
 	font-style: oblique;
 	font-family: 'HanWangZonYi';
 }
+.bookin_list tr td span img{
+    width:16px;
+}
 @media screen and (max-width:1200px){
     .site_info_wrap{
         width:90%;
@@ -480,27 +490,27 @@ td img{
         letter-spacing: 1px;
         font-weight: 100;
     }
-    .assess_table table tr{
+    .sport_tr{
         display:flex;
         flex-wrap: wrap;
         align-items: center;
     }
-    .assess_table table tr:last-child{
+    .sport_td:last-child{
         display: none;
     }
-    .assess_table table tr td:nth-child(1){
+    .sport_td:nth-child(1){
         width:20%;
     }
-    .assess_table table tr td:nth-child(2){
+    .sport_td:nth-child(2){
         width:30%;
     }
-    .assess_table table tr td:nth-child(3){
+    .sport_td:nth-child(3){
         order:4;
         width:100%;
         padding:5% 0 5% 0;
         line-height: 1.5;
     }
-    .assess_table table tr td:nth-child(4){
+    .sport_td:nth-child(4){
         width:50%;
     }
     .assess_wrap{
