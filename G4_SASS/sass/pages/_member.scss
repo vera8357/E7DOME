@@ -49,31 +49,55 @@ body {
 
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(rgba(219, 219, 219, .3), rgba(55, 137, 200, .4));
+  background: rgba(0,0,0,.8);
   position: fixed;
   top: 0;
   right: 0;
   display: none;
+  z-index: 5;
+}
+@keyframes fadeup{
+  from{
+    opacity: 0;
+    margin-top:50px 
+  }
+  to{
+    opacity: 1;
+    margin-top:0px 
+  }
 }
 
 #sing_wrap{
   width: 85%;
-  max-width: 500px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0px 0px 6px 1px #888;
+  max-width: 300px;
+  // border-radius: 10px;
+  // box-shadow: 0px 0px 6px 1px #888;
   text-align: center;
-  position: relative;
-  background-color: #fff;
-  top: 200px;
-  left: 0;
+  position: absolute;
+  background-color: #0052b1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   margin: auto;
-  padding: 15px;
+  padding: 20px 0;
+  animation: fadeup 1.5s;
 }
-
+@keyframes basketball{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+.tennis_img{
+  width: 25%;
+  animation: basketball 1.5s;
+}
 #sing_in p{
   font-size: $light_p;
   padding: 10px;
+  color:#fff;
 }
 
 #close_1{
@@ -93,11 +117,31 @@ body {
   padding: 15px;
   font-size: 18px;
 }
-
 #table_login input,
 #enroll input {
-  padding: 3px;
-  border-radius: 5px;
+  padding: 5px;
+  border-radius: 2px;
+  width: 60%;
+  border: 0px;
+  color:#fff;
+  background-color: rgba(255,255,255,.2);
+  border:1px solid rgba(255,255,255,.7);
+  font-weight: normal;
+  text-align: center;
+  transition: .3s;
+  &::placeholder{
+    color:#fff !important;
+   }  
+   &:hover{
+    background-color: rgba(255,255,255,.5);
+    }
+  
+    &:focus{
+      background-color: white;
+      border:1px solid rgba(255,255,255,.7);
+      color: #0052b1;
+    }
+    
 }
 
 #close_1,
@@ -105,17 +149,30 @@ body {
   cursor: pointer;
 }
 
-#sing_wrap input[type="button"],{
-  background-color: rgba(254, 180, 4, .7);
-  letter-spacing: 2px;
-  padding: 3px 10px;
-  border: transparent;
+#sing_wrap input[type="button"]{
+  width: 60%;
+  padding: 5px;
+  border: 1px solid #fff;
+  letter-spacing: 2px; 
+  border-radius: 2px;
+  /*border:1px solid #ffb505;*/
+  background-color: #fff;
+  color:#0052b1;
+  cursor: pointer;
+  box-shadow: none;
+  transition: .3s;
+  &:hover{
+    background-color:#0052b1;
+    color:#fff;
+  }
+
 }
 
 #link_enroll{
-  color:#666;
+  color:#FFB405;
   font-size: 16px;
-  font-weight: lighter;
+  text-shadow: transparent 1px 1px, transparent 1px -1px, transparent -1px 1px, transparent -1px -1px;
+  
 }
 
 /*-------------------------------------------------------------*/
@@ -124,11 +181,11 @@ body {
 
 // 隱藏下拉框框
 .headerdropdown {
-  position: relative;
-  top: 10px;
+  position: absolute;
+  top: 40px;
   width: 500%;
   margin-left: -143px;
-  background: rgba(3, 3, 3, 0.2);
+  background: rgba(3, 3, 3, 0.575);
   padding-top: 100px;
   border-radius: 10px;
 }
@@ -138,14 +195,14 @@ body {
   z-index: 999;
   content: '';
   position: absolute;
-  left: calc(50% - -65px);
+  left: calc(50% - -60px);
   width: 0;
   height: 0;
   background: 0 0;
   border-width: 8px;
   border-style: solid;
   border-color: transparent;
-  border-bottom-color: rgba(3, 3, 3, 0.2);
+  border-bottom-color: rgba(3, 3, 3, 0.575);
 }
 
 .headerdropdown {
