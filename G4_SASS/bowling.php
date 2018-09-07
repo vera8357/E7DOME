@@ -19,7 +19,7 @@
 </head>
 <body>
     <header>
-        <?php include 'header.php';?>
+    <?php include 'header.php';?>
     </header>
     <div class="bownling_first_page">
         <img src="images/bowling/bowlingbgimg.png" alt="" id="bowlingbgimg">
@@ -390,7 +390,7 @@
                     cate_no:parseInt($('.site_select').find('input').eq(0).val()),
                 },
                 success:function(data3){
-                    window.location.href = "test.php";
+                    window.location.href = "booking.php";
                 },
                 error:function(){
                     alert('gg');

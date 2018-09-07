@@ -250,6 +250,7 @@ body {
 }
 .sport_td{
     text-align: center;
+    vertical-align: middle !important;
 }
 #sport_memPic {
     width: 10%;
@@ -525,6 +526,8 @@ body {
     }
     .assess_table table{
         width:100%;
+        height:500px;
+        overflow:scroll;
     }
     .group_page_content{
         width:80%;
