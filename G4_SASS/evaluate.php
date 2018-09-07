@@ -73,8 +73,8 @@
 
 
 				<div class="evaluate_btn">
-				<input type="reset" name="" value="重設">
-				<input type="submit" name="" value="送出">
+				<input  type="reset"  value="重設">
+				<input  type="submit"  value="送出">
 				</div>
 			</form>
 
