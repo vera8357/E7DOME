@@ -46,7 +46,7 @@ try {
             <div class="groupbtn">
                 <input type="hidden" value="$MEM_NO";>
                 <a href="membergroup.php"><span class="myGroup button button_a">我的揪團</span></a>
-                <a href="edit-group.html"><span class="createGroup button button_a">開始揪團</span></a>
+                <a href="php/createGroup.php"><span class="createGroup button button_a">開始揪團</span></a>
             </div>
         </div>
     </section>
@@ -140,6 +140,37 @@ try {
 ?>
 </ul>
      </section>
+
+
+
+     <div id="create_in">
+    <!--------揪團說明燈箱-------->
+    <div id="create_wrap">
+        <p>開始揪團</p>
+        <table id="tableCreate">
+            <h1>揪團步驟</h1>
+            <div class="joincontent">預約場地</div>
+            →
+            <div class="joincontent">確認訂單</div>
+            →
+            <div class="joincontent">點揪團去</div>
+            →
+            <div class="joincontent">填寫簡介</div>
+            →
+            <div class="joincontent">開始揪團</div>
+            <tr>
+                <td>
+                    <input id="enroll_btn" type="button" name="" value="我已經預約">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="login_btn" type="button" name="" value="我尚未預約">
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
 
     <script src="libs/jquery/dist/jquery.min.js"></script>
     <script src="libs/isotope-layout/dist/isotope.pkgd.min.js"></script>

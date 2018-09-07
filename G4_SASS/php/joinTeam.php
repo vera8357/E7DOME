@@ -15,7 +15,7 @@ $joinGroup->execute();
 
     header("Location: ../groupInfo.php?TEAM_NO=$TEAM_NO");
 }else{
-	echo '';
+	echo '失敗';
     }
 
 ?>
