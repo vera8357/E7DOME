@@ -7,7 +7,7 @@
         while($site_info = $change->fetch(PDO::FETCH_ASSOC)){
 ?> 
     <tr>
-        <td>
+        <td id="sport_memPic">
             <img src='http://fakeimg.pl/200x200?font=lobster' alt=''/>
         </td>
         <td>
@@ -18,7 +18,7 @@
                 <?php
                     $star ='';
                     for($i = 0; $i<$site_info['BOO_RANK'] ; $i++){
-                        $star = $star."★";
+                        $star = $star."<img src='images/sport/champ.png'/>";
                     }
                     echo $star;
                 ?>

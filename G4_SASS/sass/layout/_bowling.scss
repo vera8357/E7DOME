@@ -91,7 +91,8 @@ img{
         left:15%;
     }
 }
-h1,h2{
+#sport_title_h1,
+#sport_title_h2{
     display:block;
     color:#0052b2;
     position: absolute;
@@ -103,12 +104,14 @@ h1,h2{
     font-size: 88px;
     text-shadow: #fff 0px 3px,#fff 0px -3px,#fff 3px 0px,#fff -3px 0px
 }
-h2{
+
+#sport_title_h2{
     top:65%;
     right:15%;
     margin-right: 0;
     font-size: 66px;
 }
+
 @media screen and (max-width:747px){
     .bownling_first_page{
         height:75vh;
@@ -165,7 +168,8 @@ h2{
             left:-15%;
         }
     }
-    h1,h2{
+    #sport_title_h1,
+    #sport_title_h2{
         z-index: 6;
         display:block;
         font-size: 40px;
@@ -178,7 +182,7 @@ h2{
         margin-right: 8%;
         text-shadow: #fff 0px 3px,#fff 0px -3px,#fff 3px 0px,#fff -3px 0px
     }
-    h2{
+    #sport_title_h2{
         top:55%;
         right:5%;
         margin-right: 0;

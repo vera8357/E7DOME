@@ -16,11 +16,12 @@
 #add_new_site{
     margin-left: 5%;
     margin-bottom: 10px;
-    padding:10px 20px ;
+    padding:15px 15px ;
     background-color: #4C9EFE;
     border:0;
-    font-size: 18px;
+    font-size: 24px;
     cursor: pointer;
+    font-family: '微軟正黑體';
 }
 .add_site_info,
 .update_site_info{
@@ -83,7 +84,7 @@ textarea{
     resize: none;
     overflow: hidden;
     width:120px;
-    font-size: 18px;
+    font-size: 16px;
     outline: 0;
 }
 .add_site_info th,
@@ -131,7 +132,10 @@ tbody tr td{
 }
 tbody tr td:nth-child(7),
 tbody tr td:nth-child(4){
-    padding:0;
+    padding: 10px 0;
+}
+tbody tr td:nth-child(7) img{
+    cursor: pointer;
 }
 .tb_facmem{
     width:60px;

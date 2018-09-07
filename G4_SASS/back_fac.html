@@ -50,26 +50,24 @@
     <div class="back_content">
         <h2>場地管理</h2>
         <button id="add_new_site">新增場地</button>
-        <form action="php/sport-share.php" method="POST" id="updateForm">       
-            <table id="updateTable">
-                <thead>
-                    <tr>
-                        <th>場地編號</th>
-                        <th>類別名稱</th>
-                        <th>場地名稱</th>
-                        <th>場地介紹</th>
-                        <th>場地點數</th>
-                        <th>人數</th>
-                        <th>場地照片</th>
-                        <th>場地狀態</th>
-                        <th>編輯</th>
-                    </tr>
-                </thead>
-                <tbody id="table_body">
-                
-                </tbody>
-            </table>
-        </form>
+        <table id="updateTable">
+            <thead>
+                <tr>
+                    <th>場地編號</th>
+                    <th>類別名稱</th>
+                    <th>場地名稱</th>
+                    <th>場地介紹</th>
+                    <th>場地點數</th>
+                    <th>人數</th>
+                    <th>場地照片</th>
+                    <th>場地狀態</th>
+                    <th>編輯</th>
+                </tr>
+            </thead>
+            <tbody id="table_body">
+            
+            </tbody>
+        </table>
     </div>
     <div class="bg_site_info_page">
         <div class="add_site_info">
@@ -131,7 +129,24 @@
         </div>
     </div>
     <script>
+       function setChange(){
+           console.log("---------")
+            let inputfiles = document.getElementsByClassName("file");
+            for(var i=0; i<inputfiles.length;i++){
+                inputfiles[i].onchange=function(e){
+                    var curInputFile = e.target;
+                    var file = e.target.files[0];
+                    var reader = new FileReader();
+                    reader.onload = function(){
+                        curInputFile.nextSibling.src = reader.result;
+                    }
+                    reader.readAsDataURL(file);
+                };
+            }
+        }	
+
         $(function(){
+            // alert($('.file').val());
             $('#add_new_site').click(function () { 
                 $('.bg_site_info_page').toggleClass('active');
             });
@@ -153,24 +168,33 @@
                                     $('.update_status').eq(i).css('backgroundColor','rgb(255,255,0)');
                                 }
                             }
-                        $('.update').on('click',function(e){
-                            e.preventDefault();
-                            $.ajax({
-                                url:'php/facility/facility.php',
-                                dataType:'text',    
-                                data:{
-                                    upfac_no:parseInt($(this).parent().parent().find('td').eq(0).text()),
-                                    upfac_desc:$(this).parent().parent().find('td').eq(3).find('textarea').val(),
-                                    upfac_mem:parseInt($(this).parent().parent().find('td').eq(5).find('input').val()),
-                                },
-                                success:function(data3){
-                                    alert('修改已成功'); 
-                                },
-                                error:function(){
-                                    alert('修改失敗，請聯絡您的網路工程師。');
-                                }
-                            });
-                        });
+                        setChange();    
+                        // $('.update').on('click',function(e){
+                        //     e.preventDefault();
+                        //     $.ajax({
+                        //         url:'php/facility/facility.php',
+                        //         dataType:'text',    
+                        //         // data:{
+                        //         //     upfac_no:parseInt($(this).parent().parent().find('td').eq(0).text()),
+                        //         //     upfac_desc:$(this).parent().parent().find('td').eq(3).find('textarea').val(),
+                        //         //     upfac_mem:parseInt($(this).parent().parent().find('td').eq(5).find('input').val()),
+                        //         // },
+                        //         data: new FormData(this),
+                        //         type:'POST',
+                        //         contentType:false,
+                        //         cache:false,
+                        //         processData:false,
+                        //         success:function(data3){
+                        //             $('#table_body').find('tr').remove();  
+                        //             $('#table_body').append(data2);
+
+                        //             alert('修改已成功'); 
+                        //         },
+                        //         error:function(){
+                        //             alert('修改失敗，請聯絡您的網路工程師。');
+                        //         }
+                        //     });
+                        // });
                         $('.update_status').on('click',function(e){
                             e.preventDefault();
                             
@@ -189,29 +213,14 @@
                                     alert('修改失敗，請聯絡您的網路工程師。');
                                 }
                             })
-                        })
+                        });
                     },
                 });
+                $.ajax({
+                    url:'facility'
+                })
             }
             init();
-// <!-- 
-//             $('#add_site').click(function(e){
-//                 e.preventDefault();
-
-//                 $.ajax({
-//                     url: 'php/facility/facility_add_site.php',				
-//                     data: $('#addForm').serialize(),//serialize是全部的值				
-//                     type: 'POST',				
-//                     dataType: 'text',
-//                     success:function(data){
-//                         alert('已成功新增');
-//                         // window.location.reload();
-//                         init();
-//                         // $('#table_body').find('td').remove();
-//                         // $('#table_body').append(data);
-//                     }
-//                 });
-//             }); -->
         })
     </script>
 </body>

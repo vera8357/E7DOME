@@ -1,30 +1,23 @@
 <?php
     try{
         require_once("../connect_g4.php");
-        // if(isset($_REQUEST["fac_name"])){
-        //     $fac_name = $_REQUEST["fac_name"];
-        //     $fac_desc = $_REQUEST["fac_desc"];
-        //     $fac_points = $_REQUEST["fac_points"];
-        //     $fac_mem = $_REQUEST["fac_mem"];
-        //     $fac_img = $_FLIES["fac_img"]["name"];
-        //     $cate_no = $_REQUEST["cate_no"];
-        //     $sql = "INSERT INTO facility(FAC_NO,CATE_NO,FAC_NAME,FAC_DESC,FAC_MEM,FAC_POINTS,FAC_IMG1,FAC_STATUS)values(null,'$cate_no','$fac_name','$fac_desc','$fac_mem','$fac_points','$fac_img','0')";
-        //     $pdo->exec($sql);
-        // }
-        if(isset($_REQUEST["upfac_no"])){
-            $upfac_no = $_REQUEST["upfac_no"];
-            $upfac_desc = $_REQUEST["upfac_desc"];
-            $upfac_mem = $_REQUEST["upfac_mem"];
-            // $upfac_img = $_REQUEST["upfac_img"];
-            // echo $upfac_no,$upfac_desc,$upfac_mem;
-            $sql2 = "UPDATE facility set FAC_DESC = '$upfac_desc', FAC_MEM = $upfac_mem where FAC_NO = $upfac_no";
-            $upfac = $pdo->exec($sql2);
+        
+
+
+
+
+
+        
+        // if(isset($_REQUEST["upfac_no"])){
+        //     $upfac_no = $_REQUEST["upfac_no"];
+        //     $upfac_desc = $_REQUEST["upfac_desc"];
+        //     $upfac_mem = $_REQUEST["upfac_mem"];
+        //     // $upfac_img = $_REQUEST["upfac_img"];
+        //     // echo $upfac_no,$upfac_desc,$upfac_mem;
+        //     $sql2 = "UPDATE facility set FAC_DESC = '$upfac_desc', FAC_MEM = $upfac_mem where FAC_NO = $upfac_no";
+        //     $upfac = $pdo->exec($sql2);
             
-            // $upfac->bindParam(':upfac_desc', $upfac_desc);
-            // $upfac->bindParam(':upfac_mem',$upfac_mem);
-            // $upfac->bindParam(':upfac_no',$upfac_no);
-            // $upfac->execute();
-        }
+        // }
         $sql = "select * from facility";
         $facility = $pdo->query( $sql);
         $facility_info = $facility->fetchAll(PDO::FETCH_ASSOC);
@@ -46,7 +39,9 @@
             };
 ?>
         <tr>
+            <form action="facility_update_site.php" enctype="multipart/form-data">
             <td>
+                <input type="hidden" name="upfac_no" value="<?php echo $data["FAC_NO"]?>">
                 <?php echo $data["FAC_NO"]?>
             </td>
             <td> 
@@ -56,23 +51,27 @@
                 <?php echo $data["FAC_NAME"]?>
             </td>
             <td>
-                <textarea name="" class="tb_facdesc" cols="30" rows="9"><?php echo $data["FAC_DESC"]?></textarea>
+                <textarea name="upfac_desc" class="tb_facdesc" cols="30" rows="9"><?php echo $data["FAC_DESC"]?></textarea>
             </td>
             <td>
                 <?php echo $data["FAC_POINTS"]?>
             </td>
             <td>
-                <input type="number" class="tb_facmem" value="<?php echo $data["FAC_MEM"]?>">
+                <input type="number" name="upfac_mem" class="tb_facmem" value="<?php echo $data["FAC_MEM"]?>">
             </td>
             <td class="td_img">
-                <img src="images/sport/<?php echo $data["FAC_IMG1"]?>" alt="">
+                <label id="update_img">
+                    <input type="file" name="facimg" class="file"><img src="images/sport/<?php echo $data["FAC_IMG1"]?>" id="upimg">
+                </label>
             </td>
             <td>
                 <button class="update_status"><?php echo $data["FAC_STATUS"]?></button>
             </td>
             <td>
-                <button class="update">修改</button>
+                <!-- <button class="update">修改</button> -->
+                <input type="submit" value="修改" >
             </td>
+        </form>
         </tr>
 <?php
     }
