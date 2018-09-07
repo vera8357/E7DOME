@@ -134,9 +134,6 @@ $booTicket = $pdo->query($sqlBoo);
 
 ?>
 
-
-<body>
-
 <div class="ticket inverse">
   <header>
     <div class="company-name">
