@@ -18,6 +18,10 @@
                                 echo "<a href='membergroup.php'>";
                                 echo "<button class='button join-button' id='join'>管理揪團";
                                 echo "</button></a>";
+                            }elseif($rows+1 == ($teamsRow["TEAM_MEM"])){
+                                echo "<a href='membergroup.php'>";
+                                echo "<button class='button join-button' id='join' disabled>人數已滿";
+                                echo "</button></a>";
                             }else{
                                 echo "<form action='php/joinTeam.php' method='get' id='joinForm' name='joinForm'>";
                                 echo "<input type='hidden' name='TEAM_NO' value='$TEAM_NO'>";
