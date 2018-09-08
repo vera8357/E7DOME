@@ -63,7 +63,7 @@ try {
                         <?php echo $teamsRow["TEAM_INFO"];?>
                     </div>
                     <div id="order-date">
-                        預約日期： <span><?php echo $teamsRow["BOO_DATETIME"];?> <span></span></span>
+                        預約日期： <span><?php echo $teamsRow["BOO_DATE"];?> <span></span></span>
                     </div>
                     <div class="group-mem">
                         揪團人數：
