@@ -31,7 +31,7 @@ require_once('connect_g4.php');
     <span class="confirm_left">儲值帳戶</span><span class="confirm_right">'.$MEM_ID.'</span>
     </div>
     <div class="confirm_list">
-    <span class="confirm_left">商品</span><span class="confirm_right">E7DOME點數 X '.$row['CARD_POINTS'].'</span>
+    <span class="confirm_left">商品</span><span class="confirm_right">E7DOME點數 x '.$row['CARD_POINTS'].'</span>
     </div>
     <div class="confirm_list">
     <span class="confirm_left">價格</span><span class="confirm_right">NT '.$row['CARD_PRICE'].'</span>

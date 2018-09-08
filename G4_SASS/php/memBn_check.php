@@ -1,12 +1,12 @@
 <?php
-                    if(!isset($_GET["MEM_NO"]))
+                    if(!isset($_SESSION["MEM_NO"]) != "null"){
                     $team_leader = "SELECT * FROM team WHERE team.TEAM_NO=$TEAM_NO ";
                     $team_member = "SELECT * FROM team_mem WHERE team_mem.TEAM_NO=$TEAM_NO";
                     $leader = $pdo->query( $team_leader );
                     $member = $pdo->query( $team_member );
                     $leader = $leader->fetch(PDO::FETCH_ASSOC);
                     $member = $member->fetch(PDO::FETCH_ASSOC);
-                    @$MEM_NO = $_SESSION["MEM_NO"];
+                    $MEM_NO = $_SESSION["MEM_NO"];
                     $mem = $member["MEM_NO"];
                             if($MEM_NO == $mem){
                                 echo "<form action='php/leaveTeam.php' method='get' id='leaveForm' name='leaveForm'>";
@@ -28,6 +28,10 @@
                                 echo "<button class='button join-button' id='join'>我要參團";
                                 echo "</button></form>";
                             }
-                   
+                        }else{
+                            echo "<button class='button join-button' id='join'>";
+                            echo"請先登入";
+                            echo "</button></a>";
+                        }
 
 ?>

@@ -5,6 +5,7 @@
     $(".createGroup").click(function createGroupCheck(){
         if($("#link_member").text() == "登入"){
             alert("請先登入");
+            $("#sing_in").css("display","block");
         }else{
         $id('create_in').style.display = 'block';
         }
@@ -17,7 +18,7 @@
 
     $("#join").click(function checkJoin(){
         if($("#link_member").text() == "登入"){
-            alert("請先登入");
+            $("#sing_in").css("display","block");
             return false;
         }else{
             $('#join').submit()
@@ -29,6 +30,7 @@
     $(".myGroup").click(function checkMem(){
         if($("#link_member").text() == "登入"){
             alert("請先登入");
+            $("#sing_in").css("display","block");
             return false;
         }else{
             $('.myGroup').submit()
@@ -50,6 +52,14 @@
         }else{
             $('messageForm').submit()
         }
+        });
+        $('#heart').click(function(){
+            if($("#link_member").text() == "登入"){
+                alert("請先登入");
+                return false;
+            }else{
+                $('#heart').submit()
+            }
         });
 });
 
