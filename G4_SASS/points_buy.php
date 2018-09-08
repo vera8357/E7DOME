@@ -62,7 +62,7 @@
 										NT$'.$row['CARD_PRICE'].
 									'</div>
 									<div class="payment_points_right">
-										一起動點數 X'.$row['CARD_POINTS'].
+										一起動點數 x '.$row['CARD_POINTS'].
 									'</div>
 									<input type="radio" name="CARD_NO" id="" class="CARD_NO" value="'.$row["CARD_NO"].'"checked='.'"checked" \">
 								</label>';
@@ -75,7 +75,7 @@
 										NT$'.$row['CARD_PRICE'].
 									'</div>
 									<div class="payment_points_right">
-										一起動點數 X'.$row['CARD_POINTS'].
+										一起動點數 x '.$row['CARD_POINTS'].
 									'</div>
 									<input type="radio" name="CARD_NO" id="" class="CARD_NO" value="'.$row["CARD_NO"].'">
 								</label>';			
@@ -90,7 +90,7 @@
 										NT$'.$row['CARD_PRICE'].
 									'</div>
 									<div class="payment_points_right">
-										一起動點數 X'.$row['CARD_POINTS'].
+										一起動點數 x '.$row['CARD_POINTS'].
 									'</div>
 									<input type="radio" name="CARD_NO" id="" class="CARD_NO" value="'.$row["CARD_NO"].'"checked='.'"checked"'.'">
 								</label>';
@@ -103,7 +103,7 @@
 										NT$'.$row['CARD_PRICE'].
 									'</div>
 									<div class="payment_points_right">
-										一起動點數 X'.$row['CARD_POINTS'].
+										一起動點數 x '.$row['CARD_POINTS'].
 									'</div>
 									<input type="radio" name="CARD_NO" id="" class="CARD_NO" value="'.$row["CARD_NO"].'">
 								</label>';			

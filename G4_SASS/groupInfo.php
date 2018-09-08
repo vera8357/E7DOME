@@ -63,7 +63,14 @@ try {
                         <?php echo $teamsRow["TEAM_INFO"];?>
                     </div>
                     <div id="order-date">
-                        預約日期： <span><?php echo $teamsRow["BOO_DATETIME"];?> <span></span></span>
+                        預約日期： <span><?php echo $teamsRow["BOO_DATE"];?> </span><span><?php 
+                        if($teamsRow["BOO_TIME"]==1)
+                            $BOO_TIME='10:00';
+                        else if($teamsRow["BOO_TIME"]==2)
+                        $BOO_TIME='14:00';
+                        else if($teamsRow["BOO_TIME"]==3)
+                        $BOO_TIME='16:00';
+                        echo $BOO_TIME;?></span>
                     </div>
                     <div class="group-mem">
                         揪團人數：
@@ -138,16 +145,18 @@ try {
                     <div class="mem-head01">
                         <img src="images/<?php echo $teamsRow["MEM_IMG"];?>" alt="">
                     </div>
-                    <div class="mem-id">
-                        <?php echo $teamsRow["MEM_NAME"];?>
-                    </div>
-                    <div class="message">
-                        <p>
-                            <?php 
-                            $MSG_INFO = htmlspecialchars ($teamsRow["MSG_INFO"]); 
-                            echo $MSG_INFO;
-                            ?>
-                        </p>
+                    <div class="mem-mid">
+                        <div class="mem-id">
+                            <?php echo $teamsRow["MEM_NAME"];?>
+                        </div>
+                        <div class="message">
+                            <p>
+                                <?php 
+                                $MSG_INFO = htmlspecialchars ($teamsRow["MSG_INFO"]); 
+                                echo $MSG_INFO;
+                                ?>
+                            </p>
+                        </div>
                     </div>
                     <div class="message-time">
                         <span><?php echo $teamsRow["MSG_DATE"];?></span>
@@ -168,7 +177,7 @@ try {
             <div class="message-box01">
                 <div id="MEM-NO">
                 </div>
-                <textarea name="MSG_INFO" id="MSG_INFO"></textarea>
+                <textarea name="MSG_INFO" id="MSG_INFO" placeholder="請輸入內容..."></textarea>
                 <input type="hidden" name="TEAM_NO" value="<?php echo $TEAM_NO ?>">
                 <button type="submit" class="submit button" id="submit">送出</div>
             </button>
