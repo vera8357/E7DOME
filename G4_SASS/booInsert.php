@@ -4,27 +4,37 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <title>Examples</title>
-<link rel="stylesheet" type="text/css" href="../css/bookingTicket.css">
+<link rel="stylesheet" type="text/css" href="css/bookingTicket.css">
 </head>
 <body>
 
+	<header><?php include 'header.php';?></header>
 
 <?php
-ob_start();
-session_start();
+
 
 // prevent refresh
-if( isset($_SESSION['submitBoo']) ){
-  unset($_SESSION['submitBoo']);
-  header("location: ../booking.php");
+if( isset($_SESSION['refreshChk']) ){
+  unset($_SESSION['refreshChk']);
+  header("location: booking.php");
   exit;
-
 }else{
-  $_SESSION['submitBoo'] = 1;
+  $_SESSION['refreshChk'] = rand();
+}
+
+// MEM_POINTS CHK
+$FAC_POINTS = $_REQUEST["FAC_POINTS"];
+$MEM_POINTS = $_REQUEST["MEM_POINTS"];
+if ( $MEM_POINTS < $FAC_POINTS ) {
+    echo '<script language="javascript">';
+    echo 'alert("會員點數不足請儲值");';
+    echo "setTimeout(\"location.href = 'memberpoints.php';\",1500);";
+    echo '</script>';
+  exit;
 }
 
 // connect DB
-require_once("connect_g4.php");
+require_once("php/connect_g4.php");
 
 // Insert
 $sqlInsert = "INSERT into booking (FAC_NO, BOO_DATETIME, BOO_DATE, BOO_TIME, MEM_NO, BOO_STATUS)
@@ -94,21 +104,21 @@ $booTicket = $pdo->query($sqlBoo);
   $BOO_TIME = array('上午','下午','晚上');
   while ( $rowBoo = $booTicket->fetch() ) {
 
-    include('phpqrcode/qrlib.php');
+    include('php/phpqrcode/qrlib.php');
 
-    $tempDir = '../images/qrcode/'; 
+    $tempDir = 'images/qrcode/'; 
 
     $host= gethostname();
     $ip = gethostbyname($host);
     // $ip = $_SERVER['SERVER_ADDR'];
-    $codeContents = "$ip/php/booScan.php?BOO_NO=$lastBooNo";
+    $codeContents = "$ip/demo-projects/CD102/CD102G4/php/booScan.php?BOO_NO=$lastBooNo";
      
     // we need to generate filename somehow,  
     // with md5 or with database ID used to obtains $codeContents... 
     $fileName = '005_file_'.md5($codeContents).'.png'; 
      
     $pngAbsoluteFilePath = $tempDir.$fileName; 
-    $urlRelativeFilePath = '../images/qrcode/'.$fileName; 
+    $urlRelativeFilePath = 'images/qrcode/'.$fileName; 
      
     // generating 
     if (!file_exists($pngAbsoluteFilePath)) { 
@@ -206,7 +216,7 @@ try {
 ?>
 
 
-<div class="group">
+<!-- <div class="group">
   <div>
     找不到人一起玩？來開團吧！
   </div>
@@ -215,7 +225,7 @@ try {
       立即開團
     </button>
   </div>
-</div>
+</div> -->
 
 
 </body>
