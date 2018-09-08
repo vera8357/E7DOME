@@ -7,8 +7,8 @@
         while($site_info = $change->fetch(PDO::FETCH_ASSOC)){
 ?> 
     <tr class="sport_tr">
-        <td id="sport_memPic" class="sport_td">
-            <img src='http://fakeimg.pl/200x200?font=lobster' alt=''/>
+        <td class="sport_memPic" class="sport_td">
+            <img class="memPic" src='images/member_pic/<?php echo $site_info['MEM_IMG']?>' alt=''/>
         </td>
         <td class="sport_td">
             <?php echo $site_info['MEM_NAME']?>

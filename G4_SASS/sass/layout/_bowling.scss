@@ -112,6 +112,14 @@ img{
     margin-right: 0;
     font-size: 66px;
 }
+@media screen and (max-width:1200px){
+    .bwl_h1{
+        font-size: 66px;
+    }
+    .bwl_h2{
+        font-size: 44px;
+    }
+}
 
 @media screen and (max-width:747px){
     .bownling_first_page{
