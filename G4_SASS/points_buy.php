@@ -9,6 +9,11 @@
 	<link rel="stylesheet" type="text/css" href="css/font.css">
 </head>
 <body>
+	<div class="pay_finish">
+		<div class="text_bg">
+			<p class="text">儲值成功</p>
+		</div>
+	</div>
 	<?php include 'header.php';?>
 	<?php 
 		require_once('php/connect_g4.php');
@@ -18,11 +23,12 @@
 		// $query = $pdo->query($sql);
 		// $row = $query->fetch(PDO::FETCH_ASSOC);	
 	?>
+	
+	
+	<div class="point_wrapper">
 	<h1 class="payment_title">儲值點數
 		<div class="title_bg"></div>
 	</h1>
-	
-	<div class="wrapper">
 		<div class="payment_select">
 			<h3 class="payment_select_title">付費方式</h3>
 			<label class="payment_method active">
@@ -152,6 +158,10 @@
 							alert('請先登入會員');
 							showLoginForm();
 						}
+						else{
+							$('.pay_finish').show();
+						}
+						
 					});
 				}
 			})
