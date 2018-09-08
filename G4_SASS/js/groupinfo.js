@@ -44,6 +44,7 @@
             eval("document.messageForm['MSG_INFO'].focus()");
             return false;
         }else if($("#link_member").text()=="登入"){
+            $("#sing_in").css("display","block");
             alert("請先登入");
             return false;
         }else if($("#join").text()=="我要參團"){
