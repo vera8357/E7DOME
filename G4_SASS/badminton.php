@@ -19,9 +19,7 @@ badminton.css">
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <?php include 'header.php';?>
-    </header>
+    <?php include 'header.php';?>
     <div class="bad_fp">
         <div class="bad_fp_rec"></div>
         <div class="bad_fp_tri"></div>
@@ -278,11 +276,7 @@ badminton.css">
         //         focusOnSelect:true,
         //     });
     </script>
-	<script>
-		$('.humberger_btn').click(function(){
-			$(this).toggleClass('active');
-		})
-    </script>
+	
     <script>
         $.ajax({
             url:'php/facility/sports.php',

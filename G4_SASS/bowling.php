@@ -18,9 +18,7 @@
     <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
 </head>
 <body>
-    <header>
     <?php include 'header.php';?>
-    </header>
     <div class="bownling_first_page">
         <img src="images/bowling/bowlingbgimg.png" alt="" id="bowlingbgimg">
         <img src="images/bowling/bowlingcan.png" id="bowlingcan">
@@ -265,12 +263,6 @@
         //         autoplaySpeed: 2000,
         //         focusOnSelect:true,
         //     });
-    </script>
-	<script>
-		$('.humberger_btn').click(function(){
-			$(this).toggleClass('active');
-		});
-        
     </script>
     <script>
         $.ajax({
