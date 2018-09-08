@@ -51,6 +51,14 @@
             $('messageForm').submit()
         }
         });
+        $('#heart').click(function(){
+            if($("#link_member").text() == "登入"){
+                alert("請先登入");
+                return false;
+            }else{
+                $('#heart').submit()
+            }
+        });
 });
 
 

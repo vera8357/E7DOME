@@ -60,7 +60,7 @@ section{
 	margin:5px 5px;
 }
 .group-details{
-
+    padding: 50px 0;
 }
 .group-owner{
 	vertical-align: sub;
@@ -107,6 +107,7 @@ section{
 	cursor: pointer;
 	width: 35px;
     height: 35px;
+    vertical-align: top;
 }
 
 
@@ -200,21 +201,22 @@ section{
 
 }
 .message-box{
-    display: flex;
     padding: 0 5px;
-    justify-content: space-around;
-    align-items: center;
     box-sizing: border-box;
     margin-bottom:40px; 
-	color:#000;
+    color:#000;
+    width: 100%;
+    position: relative;
 }
+
 .message{
 	// display: inline-block;
-    // width: 400px;
+    width: 100%;
 }
 
 .mem-head01{
-    vertical-align: middle;
+    display: inline-block;
+    vertical-align: top;
     object-fit: contain;
     width: 80px;
     height:80px;
@@ -225,19 +227,23 @@ section{
 	width: 100%;
 	height:100%;
 }
-.mem-mid{
-    align-self: flex-start;
-    padding: 0 15px;
-    width: 60%;
-}
 .mem-id{
     
     margin-bottom: 10px;
 }
+.mem-mid{
+    display: inline-block;;
+    box-sizing: border-box;
+    padding: 0 15px;
+    width: calc( 100% - 90px);
+    overflow-wrap: break-word;
+}
 .message-time{
     color: #aaa;
     font-size: 14px;
-    width: 30%;
+    position: absolute;
+    top:0;
+    right: 5px;
 }
 .message-box01{
 	width: 100%;
@@ -253,7 +259,12 @@ section{
     border-bottom:1px solid #aaa;
 }
 textarea{
-	// width: calc(100% - 30px);
+    width: calc(100% - 125px);
+    // width:80%;
+     // margin: 20px 15px;
+    padding-left: 5px;
+    padding-top: 5px;
+    display:inline-block;
     background-color: rgb(238,238,238);
     border-radius: 5px;
     font-size:16px;
@@ -270,9 +281,8 @@ textarea{
     margin-left: 5px;
     padding: 5px 35px;
     display: inline-block;
-    // vertical-align: bottom;
-    // margin: 22px;
     box-sizing: border-box;
+    width: 110px;
     border-radius: 20px;
     border: 2px solid #ffb505;
     color:#0052B2;
@@ -328,13 +338,6 @@ textarea{
     text-align: right;
 }
 
-textarea {
-	width:75%;
-    // margin: 20px 15px;
-    padding-left: 5px;
-    padding-top: 5px;
-    display:inline-block;
-}
 .mem-id{
     vertical-align: top;
 }
@@ -350,7 +353,7 @@ textarea {
 @media screen and (max-width: 1200px) {
 .group-details {
     // background-color: rgba(0,0,0,0.5);
-    right: 0;
+    // right: 0;
 }
 
 .forum-board { //ok
@@ -362,8 +365,46 @@ textarea {
 .message-box {
     margin: 50px 0;
 }
-.group-info-image{
-    // width: 60%;
-}
 
+
+}
+@media screen and (max-width: 768px) {
+    .group-info-image{
+        width: 100%;
+    }
+    .forum{
+        width: 100%;
+    }
+    .forum-box1{
+        display: none;
+    }
+    .mem-head01{
+        width: 30px;
+        height: 30px;
+    }
+    .mem-head{
+        width: 30px;
+        height: 30px;
+    }
+    .group-info-title{
+        font-size: 24px;
+    }
+    .join-button,.submit{
+        font-size: 14px !important;
+    }
+    .icon{
+        width: 30px;
+        height: 30px;
+    }
+    textarea{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .mem-id,.message-time{
+        font-size: 12px;
+    }
+    .mem-mid{
+        width: calc(100% - 40px);
+    }
+    
 }

@@ -34,11 +34,9 @@ try {
 </head>
 
 <body>
-    <header>
-        <?php include 'header.php';?>
-    </header>
-    <div class="group-details">
-    </div>
+    <?php include 'header.php';?>
+    <!-- <div class="group-details">
+    </div> -->
     <section class="group-info-section">
         <div class="group-wrapper">
             <div class="first-wrapper">
@@ -110,7 +108,32 @@ try {
                     <div class="icon_area">
                         <?php include("php/memBn_check.php"); ?>
                         <!-- <span class="icon"> -->
-                            <img src="images/unlike.png" class="icon fb-share-button" id="heart" title="加入收藏">
+                            <?php
+                                if(isset($_SESSION['MEM_NO'])) {
+                                    $MEM_NO = $_SESSION['MEM_NO'];
+                                    $sql = "SELECT * FROM team_keep WHERE team_keep.TEAM_NO = $TEAM_NO AND team_keep.MEM_NO =  $MEM_NO";
+                                    $team_keep = $pdo->prepare($sql);
+                                    $team_keep->execute(); 
+                                    $rows = $team_keep->rowCount();
+                               
+                                    echo '<form action="php/team_keep.php" method="POST">
+                                    <input type="hidden" name="team_no" value="'. $TEAM_NO.'">
+                                    <input type="hidden" name="mem_no" value="'. $MEM_NO.'">';
+                                    
+                                    if($rows==0)
+                                    echo '<input type="image" src="images/unlike.png" class="icon fb-share-button" id="heart" title="加入收藏" border="0" name="team_keep" value="1"/>';
+                                        // echo '<img src="images/unlike.png" >
+                                        // <input type="hidden" name="team_keep" value="1">';
+                                    else
+                                    echo '<input type="image" src="images/like.png" class="icon fb-share-button" id="heart" title="取消收藏" border="0" name="team_keep" value="2"/>';
+                                        // echo '<img src="images/like.png" class="icon fb-share-button" id="heart" title="取消收藏">
+                                        // <input type="hidden" name="team_keep" value="2">';
+                                    echo'</form>';
+                                 }
+                                else
+                                echo '<input type="image" src="images/unlike.png" class="icon fb-share-button" id="heart" title="加入收藏" border="0" alt="Submit" value="1"/>';
+                            ?>
+                            
                             <a href="javascript:void(0);" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u='+fbhtml_url+'&src=sdkpreparse');return false;" class="icon-a">
                             <img src="images/share.png" class="icon">
 
