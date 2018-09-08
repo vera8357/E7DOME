@@ -58,11 +58,11 @@ a {
 @keyframes fadeup{
   from{
     opacity: 0;
-    margin-top:50px 
+    margin-top:50px ;
   }
   to{
     opacity: 1;
-    margin-top:0px 
+    margin-top:0px ;
   }
 }
 .enroll_frame{
@@ -76,6 +76,7 @@ a {
 	background-color: #0052b1;
   font-family: 'HanWangZonYi';
   font-size: 18px;
+  position: relative;
   animation: fadeup 1.5s;
 	
 }

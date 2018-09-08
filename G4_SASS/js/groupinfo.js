@@ -54,7 +54,10 @@
             $('messageForm').submit()
         }
         });
+<<<<<<< HEAD
 
+=======
+>>>>>>> upstream/G4-1
         $('#heart').click(function(){
             if($("#link_member").text() == "登入"){
                 alert("請先登入");
