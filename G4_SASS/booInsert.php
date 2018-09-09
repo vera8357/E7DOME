@@ -9,16 +9,29 @@
 </head>
 <body>
 
-<?php include 'header.php';?>
-<?php
-// prevent refresh
-if( isset($_SESSION['submitBoo']) ){
-  // unset($_SESSION['submitBoo']);
-  // header("location: booking.php");
-  // exit;
+	<header><?php include 'header.php';?></header>
 
+<?php
+
+
+// prevent refresh
+if( isset($_SESSION['refreshChk']) ){
+  unset($_SESSION['refreshChk']);
+  header("location: booking.php");
+  exit;
 }else{
-  $_SESSION['submitBoo'] = 1;
+  $_SESSION['refreshChk'] = rand();
+}
+
+// MEM_POINTS CHK
+$FAC_POINTS = $_REQUEST["FAC_POINTS"];
+$MEM_POINTS = $_REQUEST["MEM_POINTS"];
+if ( $MEM_POINTS < $FAC_POINTS ) {
+    echo '<script language="javascript">';
+    echo 'alert("會員點數不足請儲值");';
+    echo "setTimeout(\"location.href = 'memberpoints.php';\",1500);";
+    echo '</script>';
+  exit;
 }
 
 // connect DB
@@ -99,7 +112,7 @@ $booTicket = $pdo->query($sqlBoo);
     $host= gethostname();
     $ip = gethostbyname($host);
     // $ip = $_SERVER['SERVER_ADDR'];
-    $codeContents = "$ip/php/booScan.php?BOO_NO=$lastBooNo";
+    $codeContents = "$ip/demo-projects/CD102/CD102G4/php/booScan.php?BOO_NO=$lastBooNo";
      
     // we need to generate filename somehow,  
     // with md5 or with database ID used to obtains $codeContents... 
