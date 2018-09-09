@@ -20,6 +20,9 @@ img{
     height:0;
     background-color: #70d9f1;
     clear: both;
+    position:absolute;
+    bottom:0;
+    z-index: 5;
 }
 .bownling_first_page:before{
     display: block;
@@ -139,6 +142,8 @@ img{
         right:auto;
         background-color: #ea4c89;
     }
+    
+// .bownling_first_page:after{}
     #bowlingbgimg{
         width:auto;
         height:73vh;
