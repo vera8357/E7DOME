@@ -1,3 +1,6 @@
+*{
+    outline:1px solid red;
+}
 img{
     vertical-align: middle;
 }
@@ -59,10 +62,11 @@ body {
     content:'';
     clear: both;
 }
-// .slider ul li{
-//     float:left;
-//     width:25%;
-// }
+.slider_li{
+    outline:0;
+    height:485px;
+    overflow: hidden;
+}
 .slider ul li img{
     width:100%;
     display:block;
@@ -83,6 +87,16 @@ body {
     font-family:'HanWangZonYi';
     line-height: 1.5;
 }
+.info_desc{
+    height:80px;
+    overflow:hidden;
+    display:-webkit-box;
+    text-overflow:ellipsis;
+    -webkit-line-clamp: 3;      // 想顯示的行數 lines you want to display
+    -webkit-box-orient: vertical;
+    line-height: 3;       //解決firefox不支援-webkit-line-clamp的問題
+    max-height: 3*3;      //解決firefox不支援-webkit-line-clamp的問題
+}
 .info p:nth-child(3),
 .info p:nth-child(4){
     line-height: 2;
@@ -92,7 +106,8 @@ body {
 }
 .reservation,
 .group{
-    width:20%;
+    cursor: pointer;
+    width:45%;
     background-color: #0052b2;
     color:#fff;
     font-family:'HanWangZonYi';
@@ -118,21 +133,37 @@ body {
     width:33.3%;
     padding-top: 6%;
     text-align: center;
+    cursor: pointer;
 }
-.site_item img{
+.site_item_img{
     width:100%;
+    padding-top: 100%;
+    height:0;
+    position: relative;
 }
-.site_item p{
-    font-size: 18px;
-    line-height: 2;
+.site_item_img img{
+    width:90%;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    margin:auto;
 }
-.site_item span{
-    display:block;
-    font-size: 18px;
+.site_button{
+    width:90%;
+    font-size: 20px;
+    margin:auto;
+    outline:0;
+    cursor: pointer;
+    background-color: transparent;
+    padding:5% 0;
+    position: relative;
     font-family:'HanWangZonYi';
-    text-align: left;
-    padding-left: 10px;
-    padding-right: 10px;
+    // border-radius: 9487px;
+    // border:#70d9f1 5px solid;
+    // border:0;
+    transition: .5s;
+    text-align: center;
 }
 .site_info_tri1{
     position: absolute;
@@ -244,36 +275,59 @@ body {
 .assess_table table{
     width:80%;
     margin:auto;
+    height:500px;
+    overflow-y: scroll;
+    display:block;
 }
 .sport_tr{
-    line-height: 5;
+    line-height: 1;
+    padding-bottom: 2%;
+    display: block;
+    font-size: 0;
 }
 .sport_td{
     text-align: center;
+    vertical-align: top !important;
+    display: inline-block;
+    font-size: 18px;
 }
-#sport_memPic {
+.sport_memPic {
     width: 10%;
+    padding-top: 10%;
+    height:0;
     border-radius: 9487%;
-    // display: block;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
 }
-#sport_memPic img{
+.sport_memPic img{
+    position: absolute;
     width:100%;
-    border-radius: 9487%;
+    // height:100%;
+    top:0;
+    left:0;
+    // border-radius: 9487%;
     // display: block;
 }
-.rank span{
-    width:200px;
+.memPic{
+
+}
+.rank{
+    // width:200px;
+    display:block;
 }
 .rank img{
     width:5%;
     margin:0 1%;
+    vertical-align: middle;
 }
 .sport_td:nth-child(2) {
     font-size: 20px;
-    width:10%;
+    width:20%;
+    padding-top:4%;
 }
 .sport_td:nth-child(3){
-    width:60%;
+    width:50%;
     text-align: left;
     font-size: 16px;
     line-height: 1;
@@ -282,6 +336,7 @@ body {
     font-size: 16px;
     color:#0052b2;
     width:20%;
+    padding-top:4%;
 }
 .rank{
     color:yellow;
@@ -334,7 +389,7 @@ body {
     width: 20px;
     height: 20px;
     margin: 0 5px;
-    padding: 0;
+    // padding-bottom: 100px;
     cursor: pointer;
 }
 .slick-dots li button {
@@ -465,6 +520,12 @@ body {
         transition: 1s;
         text-align: center;
     }
+    .slider li{
+        widows: 20%;
+    }
+    .slider ul li img{
+        width:100%;
+    }
     .info{
         width:100%;
         padding-left: 0;
@@ -525,6 +586,8 @@ body {
     }
     .assess_table table{
         width:100%;
+        height:500px;
+        overflow:scroll;
     }
     .group_page_content{
         width:80%;

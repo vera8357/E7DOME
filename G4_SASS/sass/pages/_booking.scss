@@ -25,10 +25,11 @@ a{ text-decoration: none; }
 
 
 .area{
-	width: calc(50%/3);
+	width: 25%;
 	height: 100vh;
 	position: relative;
 	overflow: hidden;
+	transition: .9s;
 }
 @media only screen and (max-width: 767px) {
     .area {
@@ -115,7 +116,7 @@ a{ text-decoration: none; }
 
 
 .activeNow{
-	width: 50%;
+	width: 75%;
 }
 @media only screen and (max-width: 767px) {
     .activeNow {
@@ -438,7 +439,7 @@ a{ text-decoration: none; }
 #queryFac4::-webkit-scrollbar
 {
   /*background-color: #ffb505;*/
-  background-color: rgb(0, 82, 178);
+//   background-color: rgb(0, 82, 178);
 }
 #queryFac1::-webkit-scrollbar-thumb,
 #queryFac2::-webkit-scrollbar-thumb,

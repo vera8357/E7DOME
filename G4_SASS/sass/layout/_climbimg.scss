@@ -60,6 +60,14 @@
     margin-right: 0;
     font-size: 66px;
 }
+@media screen and (max-width:1200px){
+    .clm_fp h1{
+        font-size: 66px;
+    }
+    .clm_fp h2{
+        font-size: 44px;
+    }
+}
 @media screen and (max-width:767px){
     .clm_fp{
         height:75vh;

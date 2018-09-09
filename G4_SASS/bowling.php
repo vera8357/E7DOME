@@ -18,9 +18,7 @@
     <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
 </head>
 <body>
-    <header>
-        <?php include 'header.php';?>
-    </header>
+    <?php include 'header.php';?>
     <div class="bownling_first_page">
         <img src="images/bowling/bowlingbgimg.png" alt="" id="bowlingbgimg">
         <img src="images/bowling/bowlingcan.png" id="bowlingcan">
@@ -266,11 +264,6 @@
         //         focusOnSelect:true,
         //     });
     </script>
-	<script>
-		$('.humberger_btn').click(function(){
-			$(this).toggleClass('active');
-		})
-    </script>
     <script>
         $.ajax({
             url:'php/facility/sports.php',
@@ -390,7 +383,7 @@
                     cate_no:parseInt($('.site_select').find('input').eq(0).val()),
                 },
                 success:function(data3){
-                    window.location.href = "test.php";
+                    window.location.href = "booking.php";
                 },
                 error:function(){
                     alert('gg');

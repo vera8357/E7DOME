@@ -18,9 +18,7 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <?php include 'header.php';?>
-    </header>
+    <?php include 'header.php';?>
     <div class="clm_fp">
         <div class="clm_fp_bgimg">
             <img src="images/sport/climbimg_fp.png" alt="">
@@ -264,11 +262,7 @@
         //         focusOnSelect:true,
         //     });
     </script>
-	<script>
-		$('.humberger_btn').click(function(){
-			$(this).toggleClass('active');
-		})
-    </script>
+	
     <script>
         $.ajax({
             url:'php/facility/sports.php',
