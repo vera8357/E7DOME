@@ -10,20 +10,19 @@
 	<title>Document</title>
 </head>
 <body>
-	
+	<div class="enroll_overlay">
+
+	</div>
 
 	<?php
 		require_once('header.php');
 	?>
-
-	<div class="enroll_gap"></div>
-
 	<section class="enroll_wrap">
 
 		<div class="enroll_text">
 
 			<div class="enroll_content">
-					加入E7DOME
+			<h1>加入E7DOME</h1>
 			<br>
 			<br>
 			健康一起動

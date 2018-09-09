@@ -136,6 +136,7 @@ width: 100%; }
     }
     .humberger_line.mid{
         top:50%;
+        
         transform: translateX(-50%) translateY(-50%);
     }
     .humberger_line.bot{
@@ -151,6 +152,7 @@ width: 100%; }
         opacity: 0.3;
         background-color: #ffb505;
         height: 20px;
+        width:  20px;
         border-radius: 50%; 
         border: 0;
         transform: translateX(-50%) translateY(-50%) scale(0.7,0.7);
