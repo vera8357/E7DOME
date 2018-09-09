@@ -107,6 +107,14 @@ img{
     font-size: 66px;
     z-index: 3;
 }
+@media screen and (max-width:1200px){
+    .bkb_fp h1{
+        font-size: 66px;
+    }
+    .bkb_fp h2{
+        font-size: 44px;
+    }
+}
 
 @media screen and (max-width:767px){
     .bkb_fp{
