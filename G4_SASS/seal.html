@@ -66,7 +66,7 @@
       }
     };
 
-    // 初期化
+    // 初使
     function init() {
       document.addEventListener("touchmove", touchHandler, false);
     }
@@ -90,12 +90,13 @@
       if (event.touches.length !== POINT_NUM) {
         return;
       }
-
+      
+      // 印章狀態
       var isVibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
       if (isVibrate) {
         navigator.vibrate(375);
       } else {
-        $("#effect").effect("highlight", { "color": "#1C2BFF" }, 2000);
+        $("#effect").effect("highlight", { "color": "#FC0A5B" }, 2000);
       }
 
       var points = '';
@@ -161,84 +162,17 @@
     </div>
     <p class="count">タッチ数: <span id="touchnum">0</span></p>
   </div>
-
-  <!-- <div class="ticket inverse">
-    <header>
-      <div class="company-name">
-        預約明細
-      </div>
-      <div class="gate">
-        <div>
-          訂單編號
-        </div>
-        <div>
-        </div>
-      </div>
-    </header>
-    <section class="airports">
-      <div class="airport">
-        <div class="airport-name">
-          預約場地
-        </div>
-        <div class="airport-code">
-        </div>
-    </section>
-    <section class="place">
-      <div class="place-block">
-        <div class="place-label">
-          預約日期
-        </div>
-        <div class="place-value">
-        </div>
-      </div>
-      <div class="place-block">
-        <div class="place-label">
-          預約時段
-        </div>
-        <div class="place-value">
-        </div>
-      </div>
-      <div class="place-block">
-        <div class="place-label">
-          花費點數
-        </div>
-        <div class="place-value">
-        </div>
-      </div>
-      <div class="qr">
-        <img src="images/qrcode.png" />
-      </div>
-      <footer>
-        <div class="footer-text">
-          感謝您的預約！
-        </div>
-      </footer>
-    </section>
-    </div> -->
-
-    <!-- <p class="image-logo">
-    <img style="width:100%" src="images/qrcode/005_file_1eda7d922df3e4a7defb3126032ab488.png">
-  </p> -->
-
-    <!-- <div class="container--graph">
-    <canvas id="graph"></canvas>
-  </div> -->
-
-    <!-- <p class="pull-right" style="text-align:right;margin-top:5px;margin-right:0px; margin-left:2px;">
-    <img id="touch-image" class="pull-right" style="width:85%; margin:-5% 0;" src="./ffbe_files/img_card.png">
-  </p> -->
-    <!-- <p><img style="width:100%" src="./ffbe_files/img_txt.png" alt=""></p> -->
     <div id="mask" class="mask" style="visibility: hidden">
       <div>
         <p class="mask_p">Please wait...</p>
       </div>
     </div>
     <script>
-      $('#effect').on('touchstart', function (e) {
+      // #effect是 body的 ID
+      $('body').on('touchstart', function (e) {
         $(this).css(
-      
           {
-            'background': "url('images/qrcode2.jpg')",
+            'background-image': "url('images/coupon-dialog2.png')",
             'background-repeat': 'no-repeat'
           });
         });
