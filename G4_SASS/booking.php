@@ -154,7 +154,7 @@
 			<div class="modal-body padding-32">
 
 
-<form action="booInsert.php" method="POST">
+<form action="booInsert.php" method="get">
 	<table class="table-modal">
 		<thead>
 			<tr>
