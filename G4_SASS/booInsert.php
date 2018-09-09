@@ -3,11 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <title>Examples</title>
 <link rel="stylesheet" type="text/css" href="css/bookingTicket.css">
 </head>
 <body>
 
+<<<<<<< HEAD:G4_SASS/booInsert.php
 	<header><?php include 'header.php';?></header>
 
 <?php
@@ -18,6 +20,16 @@ if( isset($_SESSION['refreshChk']) ){
   unset($_SESSION['refreshChk']);
   header("location: booking.php");
   exit;
+=======
+<?php include 'header.php';?>
+<?php
+// prevent refresh
+if( isset($_SESSION['submitBoo']) ){
+  // unset($_SESSION['submitBoo']);
+  // header("location: booking.php");
+  // exit;
+
+>>>>>>> upstream/G4-1:G4_SASS/booInsert.php
 }else{
   $_SESSION['refreshChk'] = rand();
 }
@@ -143,66 +155,101 @@ $booTicket = $pdo->query($sqlBoo);
 
 
 ?>
+<div class="book_and_team">
+  <div class="ticket inverse">
+    <header>
+      <div class="company-name">
+        預約明細
+      </div>
+      <div class="gate">
+        <div>
+          訂單編號
+        </div>
+        <div>
+          <?php printf("%'.05d\n", $rowBoo['BOO_NO']); ?>
+        </div>
+      </div>
+    </header>
+    <section class="airports">
+      <div class="airport">
+        <div class="airport-name">
+          預約場地
+        </div>
+        <div class="airport-code">
+          <?php echo $rowBoo["FAC_NAME"] ?>
+        </div>
+    </section>
+    <section class="place">
+      <div class="place-block">
+        <div class="place-label">
+          預約日期
+        </div>
+        <div class="place-value">
+          <?php echo $rowBoo["BOO_DATE"] ?>
+        </div>
+      </div>
+      <div class="place-block">
+        <div class="place-label">
+          預約時段
+        </div>
+        <div class="place-value">
+          <?php echo $BOO_TIME[$rowBoo["BOO_TIME"]] ?>
+        </div>
+      </div>
+      <div class="place-block">
+        <div class="place-label">
+          花費點數
+        </div>
+        <div class="place-value">
+          <?php echo $rowBoo["FAC_POINTS"] ?>
+        </div>
+      </div>
+      <div class="qr">
+        <?php echo '<img src="'.$urlRelativeFilePath.'" />'; ?>
+      </div>
+      <footer>
+        <div class="footer-text">
+          感謝您的預約！
+        </div>
+      </footer>
+    </section>
+  </div>
 
-<div class="ticket inverse">
-  <header>
-    <div class="company-name">
-      預約明細
-    </div>
-    <div class="gate">
-      <div>
-        訂單編號
-      </div>
-      <div>
-        <?php printf("%'.05d\n", $rowBoo['BOO_NO']); ?>
-      </div>
-    </div>
-  </header>
-  <section class="airports">
-    <div class="airport">
-      <div class="airport-name">
-        預約場地
-      </div>
-      <div class="airport-code">
-        <?php echo $rowBoo["FAC_NAME"] ?>
-      </div>
-  </section>
-  <section class="place">
-    <div class="place-block">
-      <div class="place-label">
-        預約日期
-      </div>
-      <div class="place-value">
-        <?php echo $rowBoo["BOO_DATE"] ?>
-      </div>
-    </div>
-    <div class="place-block">
-      <div class="place-label">
-        預約時段
-      </div>
-      <div class="place-value">
-        <?php echo $BOO_TIME[$rowBoo["BOO_TIME"]] ?>
-      </div>
-    </div>
-    <div class="place-block">
-      <div class="place-label">
-        花費點數
-      </div>
-      <div class="place-value">
-        <?php echo $rowBoo["FAC_POINTS"] ?>
-      </div>
-    </div>
-    <div class="qr">
-       <?php echo '<img src="'.$urlRelativeFilePath.'" />'; ?>
-    </div>
-    <footer>
-      <div class="footer-text">
-        感謝您的預約！
-      </div>
-    </footer>
-  </section>
+  <div class="group">
+    <h2>
+        找不到人一起玩？來開團吧！
+    </h2>
+    <form action="php/creatFinish.php" method="post">
+    <?php
+        $boo_no= $rowBoo['BOO_NO'];
+        echo '<div>'.$boo_no.'</div>';
+        $mem_no=$_SESSION["MEM_NO"];
+        $team_mem = "SELECT FAC.FAC_MEM FROM booking book JOIN facility fac ON book.FAC_NO = fac.FAC_NO WHERE book.BOO_NO = '$boo_no'";
+        $team_memquery = $pdo->query($team_mem);
+        $team_row = $team_memquery->fetch(PDO::FETCH_ASSOC);
+        echo $team_row['FAC_MEM'];
+        echo '<input type="hidden" name="BOO_NO" value='.$boo_no.'>';//book編號
+
+        echo '<label for="">揪團名稱:</label>';
+        echo '<input type="text" name="TEAM_NAME" minlength="3" maxlength="10" required>';//揪團名稱
+
+        echo '<label for="">揪團簡介:</label>';
+        echo '<textarea name="TEAM_INFO" id="" cols="30" rows="10" required></textarea>';//揪團簡介
+
+        echo '<label for="">揪團人數:</label>';//揪團人數
+        echo '<select name="TEAM_MEM" id="" required>';
+        for($i=1; $i<$team_row['FAC_MEM']; $i++){
+            echo '<option value="'.$i.'">'.$i.'</option>';
+        }
+        echo '</select>';
+
+        echo '<label for="">揪團照片:</label>';//揪團照片
+        echo'<input type="file" name="TEAM_IMG" id="">';
+        ?>
+        <input type="submit" value="送出">
+    </form>
+  <div>
 </div>
-
 <?php
   } // while
 
@@ -215,6 +262,7 @@ try {
 
 ?>
 
+<<<<<<< HEAD:G4_SASS/booInsert.php
 
 <!-- <div class="group">
   <div>
@@ -228,5 +276,7 @@ try {
 </div> -->
 
 
+=======
+>>>>>>> upstream/G4-1:G4_SASS/booInsert.php
 </body>
 </html>

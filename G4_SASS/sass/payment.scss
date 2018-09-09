@@ -9,6 +9,10 @@ body{
 header{
     position: relative !important;
 }
+.point_wrapper{
+    width: 1200px;
+    margin: auto;
+}
 input.CARD_NO,
 input.CARD_METHOD
 {
@@ -26,14 +30,12 @@ input.CARD_METHOD
     position: relative;
     text-align: center ;
     font-size: 48px ;
-    width: 1200px;
-    margin: 0 auto;
     background-color: #0052B2;
     color:#fff;
     padding: 15px;
     box-sizing: border-box;
     text-align: left;
-    margin-top: 30px;
+    margin-bottom: 50px;
     padding-bottom: 25px;
 }
   .title_bg{
@@ -56,8 +58,7 @@ input.CARD_METHOD
 }
 .payment_select{
     float: left;
-    padding: 0 50px 0 15px;
-    margin-top: 50px;
+    padding: 0px 50px 0 15px;
     box-sizing: border-box;
     width: 50%;
     font-size: 0;
@@ -88,7 +89,11 @@ input.CARD_METHOD
     padding-top: 50px;
     box-sizing: border-box;
     width: 50%;
-    height: 500px;
+}
+.wrapper:after{
+    display:block;
+    content: '';
+    clear: both;
 }
 .confirm_title{
     color:#0052B2;
@@ -271,3 +276,87 @@ input.CARD_METHOD
     font-weight: bold;
     color:#FFB405;
 }
+.pay_finish{
+    display: none;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(2,2,2,.8);
+    text-align: center;
+    z-index: 999;
+}
+.text_bg{
+    display: inline-block;
+    text-align: left;
+    font-size: 80px;
+    font-family: 'HanWangZonYi';
+    letter-spacing: 5px;
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+}
+    .text{
+        display: inline-block;
+        text-align: left;
+        color:rgba(255, 255, 255, .1);
+        background-image: linear-gradient(to right,#FFB405 0%,#FFB405 20%, #FFD783 20%, #FFD783 40%,#fff 40%,#fff 60%,
+                                            #70D9F1 60%,#70D9F1 80%,#0052B1 80%,#0052B1 100%);
+        background-size: 500px;
+        -webkit-background-clip: text;
+        -o-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        overflow: hidden;
+        animation: bgpos 1.5s forwards,
+                  chacolor 3s 1s forwards; 
+        // transform-origin: left;
+        white-space: nowrap;
+        position: relative;
+    }
+    
+    @keyframes bgpos{
+        from{
+            width: 0;
+            background-size: 90%;
+        }
+        to{
+            width:100%;
+            background-size: 100%;
+        }
+    }
+    @keyframes chacolor{
+        from{
+            
+            background-position-x: 0px;
+        }
+        to{
+            
+            background-position-x: 50px;
+        }
+    }
+    @media screen and (max-width: 992px) {
+        header{
+                    position: fixed !important;
+                }
+        .point_wrapper{
+            width: 100%;
+            padding: 65px 0 0;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .payment_select,
+        .payment_confirm{
+                width: 100%;
+                padding: 25px 15px;
+                border-right: 0px;
+
+            }
+        .payment_title{
+                font-size: 24px;
+                text-align: center;
+                margin-bottom: 30px;
+                // margin-top: 65px;
+         }   
+    }

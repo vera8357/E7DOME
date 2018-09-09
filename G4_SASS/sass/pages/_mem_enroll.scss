@@ -20,11 +20,10 @@ body {
     overflow: auto;
 }
 body{
-
-    background-image: url(../images/sport-basketbol-basketball-2751.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-
+  background-image: url(../images/enrollbg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 70%; 
 }
 
 a {
@@ -35,48 +34,57 @@ a {
 
 /*------------------------------------------*/
 
-.enroll_gap{
-	width: 100%;
-	height: 180px;
+.enroll_overlay{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #004697;
+  opacity: 0.7;
 }
 
 .enroll_wrap{
+  height: 100vh;
   width:1200px;
-  padding: 0 15px;
+  padding: 0 40px;
   box-sizing: border-box;
-	margin:auto;
-	display: flex;
-	justify-content: space-between;
-
+  margin:auto;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
 .enroll_text{
-	width: 48%;
-	font-size: 36px;
+  width: 50%;
+  font-size: 36px;
+  font-family: 'HanWangZonYi';
 	color:#fff;
+}
+.enroll_text h1{
+  font-size:60px;
 }
 @keyframes fadeup{
   from{
     opacity: 0;
-    margin-top:50px ;
+    top:50px ;
   }
   to{
     opacity: 1;
-    margin-top:0px ;
+    top:0px ;
   }
 }
 .enroll_frame{
+  right: 15px;
   overflow: hidden;
   padding:20px 0;
   width: 50%;
   box-sizing: border-box;
-  max-width:400px;
+  max-width:350px;
 	color:#FFF;
 	text-align: center;
 	background-color: #0052b1;
   font-family: 'HanWangZonYi';
   font-size: 18px;
-  position: relative;
   animation: fadeup 1.5s;
 	
 }
