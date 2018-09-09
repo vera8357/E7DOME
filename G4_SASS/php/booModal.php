@@ -5,7 +5,7 @@ $BOO_DATE = $_POST["BOO_DATE"];
 $BOO_TIME_i = $_POST["BOO_TIME_i"];
 
 $MEM_NO = 1;
-$MEM_POINTS = 5000;
+$MEM_POINTS = 500;
 
 
 	// connect DB
@@ -29,7 +29,7 @@ $MEM_POINTS = 5000;
 			<?php echo '<input type="hidden" name="FAC_NO" value="'.$FAC_NO.'">' ?>
 			<?php echo '<input type="hidden" name="FAC_POINTS" value="'.$rowFacBoo["FAC_POINTS"].'">' ?>
 
-			<?php echo '<input type="hidden" name="BOO_DATETIME" value="2018-08-09 04:08:22">' ?>
+			<?php echo '<input type="hidden" name="BOO_DATETIME" value="'.date("Y-m-d H:i:s").'">' ?>
 			<?php echo '<input type="hidden" name="BOO_DATE" value="'.$BOO_DATE.'">' ?>
 			<?php echo '<input type="hidden" name="BOO_TIME" value="'.$BOO_TIME_i.'">' ?>
 
