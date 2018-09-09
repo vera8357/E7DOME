@@ -151,11 +151,7 @@
 			<div class="modal-body padding-32">
 
 
-<<<<<<< HEAD
-<form action="booInsert.php" method="post">
-=======
 <form action="booInsert.php" method="POST">
->>>>>>> upstream/G4-1
 	<table class="table-modal">
 		<thead>
 			<tr>

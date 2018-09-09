@@ -9,7 +9,6 @@
 </head>
 <body>
 
-<<<<<<< HEAD:G4_SASS/booInsert.php
 	<header><?php include 'header.php';?></header>
 
 <?php
@@ -20,16 +19,6 @@ if( isset($_SESSION['refreshChk']) ){
   unset($_SESSION['refreshChk']);
   header("location: booking.php");
   exit;
-=======
-<?php include 'header.php';?>
-<?php
-// prevent refresh
-if( isset($_SESSION['submitBoo']) ){
-  // unset($_SESSION['submitBoo']);
-  // header("location: booking.php");
-  // exit;
-
->>>>>>> upstream/G4-1:G4_SASS/booInsert.php
 }else{
   $_SESSION['refreshChk'] = rand();
 }
@@ -262,21 +251,5 @@ try {
 
 ?>
 
-<<<<<<< HEAD:G4_SASS/booInsert.php
-
-<!-- <div class="group">
-  <div>
-    找不到人一起玩？來開團吧！
-  </div>
-  <div>
-    <button class="group-btn">
-      立即開團
-    </button>
-  </div>
-</div> -->
-
-
-=======
->>>>>>> upstream/G4-1:G4_SASS/booInsert.php
 </body>
 </html>
