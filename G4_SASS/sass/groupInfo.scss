@@ -48,10 +48,12 @@ section{
 }
 #group-mem-list{
 	display: flex;
+    flex-flow: row wrap;
 	margin: 20px 0;
 }
 .mem-head{
 	margin: 0 5px;
+    vertical-align: middle;
 }
 
 .line{
@@ -60,11 +62,10 @@ section{
 	margin:5px 5px;
 }
 .group-details{
-    padding: 50px 0;
+    width: 400px;
 }
 .group-owner{
 	vertical-align: sub;
-    margin: 10px;
     font-size: 14px;
 }
 .group-hr{
@@ -85,7 +86,6 @@ section{
 .icon_area{
 	display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
     width: 100%;
     align-items: center;
 }
@@ -110,6 +110,9 @@ section{
     vertical-align: top;
 }
 
+.icon-a{
+    margin: 0 10px ;
+}
 
 .mem-head{
 	width:50px;
@@ -125,8 +128,9 @@ section{
 
 
 .group-txt{
-	width:100%;
-	margin: 20px 0;
+	width:400px;
+	margin: 15px 0;
+    overflow-wrap: break-word;
 }
 
 
@@ -216,7 +220,7 @@ section{
 
 .mem-head01{
     display: inline-block;
-    vertical-align: top;
+    vertical-align: middle;
     object-fit: contain;
     width: 80px;
     height:80px;
@@ -406,5 +410,7 @@ textarea{
     .mem-mid{
         width: calc(100% - 40px);
     }
-    
+    .group-txt{
+    width:100%;
+}
 }
