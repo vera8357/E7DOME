@@ -194,6 +194,7 @@ a{ text-decoration: none; }
 .table-select-scroll{
 	overflow: auto;
 	height: 40vmin;
+	border-top: 1px solid #fff;
 }
 
 @media only screen and (max-width: 767px) {
@@ -244,9 +245,6 @@ a{ text-decoration: none; }
 }
 
 
-.table-select th{
-	border-bottom: 1px solid #fff;
-}
 
 .btn{
 	display: inline-block;
@@ -461,7 +459,7 @@ a{ text-decoration: none; }
 #queryFac2::-webkit-scrollbar-thumb:active,
 #queryFac3::-webkit-scrollbar-thumb:active,
 #queryFac4::-webkit-scrollbar-thumb:active {
-  background-color: rgb(1, 48, 102);
+  background-color: #ffb505;
 }
 #queryFac1::-webkit-scrollbar-track,
 #queryFac2::-webkit-scrollbar-track,

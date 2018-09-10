@@ -29,6 +29,7 @@ $MEM_POINTS = $_REQUEST["MEM_POINTS"];
 if ( $MEM_POINTS < $FAC_POINTS ) {
     echo '<script language="javascript">';
     echo 'alert("會員點數不足請儲值");';
+    // echo 'alert("'.$FAC_POINTS.'");';
     echo "setTimeout(\"location.href = 'memberpoints.php';\",1500);";
     echo '</script>';
   exit;
@@ -43,7 +44,7 @@ values (:FAC_NO, :BOO_DATETIME, :BOO_DATE, :BOO_TIME, :MEM_NO, :BOO_STATUS)";
 $boo = $pdo->prepare($sqlInsert);
 
 // Update
-$sqlUpdate = "update member set MEM_POINTS = :MEM_POINTS - :FAC_POINTS WHERE MEM_NO = :MEM_NO";
+$sqlUpdate = "update member set MEM_POINTS = :MEM_POINTS-:FAC_POINTS WHERE MEM_NO = :MEM_NO";
 $mem = $pdo->prepare($sqlUpdate);
 
 
@@ -65,12 +66,15 @@ $boo->execute();
 $lastBooNo = $pdo->lastInsertId();
 
 $mem->bindValue(':MEM_NO', $_REQUEST["MEM_NO"]);
-$mem->bindValue(':FAC_POINTS', $_REQUEST["FAC_POINTS"]);
 $mem->bindValue(':MEM_POINTS', $_REQUEST["MEM_POINTS"]);
+$mem->bindValue(':FAC_POINTS', $FAC_POINTS);
+
 $mem->execute();
 
 // insert DB
 $pdo->commit();
+
+$_SESSION["MEM_POINTS"] = $MEM_POINTS - $FAC_POINTS;
 	
 } catch (Exception $e) {
 	echo $e->getMessage(), '<br>';
