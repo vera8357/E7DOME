@@ -254,15 +254,21 @@
 
     <script src="js/slick.min.js"></script>
     <script>
-        // $('.sport_slider').slick({
-        //         dots: true,
-        //         slidesToShow: 1,
-        //         slidesToScroll: 1,
-        //         arrows:false,
-        //         autoplay: true,
-        //         autoplaySpeed: 2000,
-        //         focusOnSelect:true,
-        //     });
+        function slickItem() {
+            if($(window).width()<767){
+                $('.teamGroup').slick({
+                    dots: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows:false,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    focusOnSelect:true,
+                });
+            }
+        }
+        $(window).on('resize',slickItem);
+        
     </script>
     <script>
         $.ajax({
