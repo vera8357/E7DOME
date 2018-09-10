@@ -62,12 +62,12 @@ try {
                     <?php echo $teamsRow["MEM_NAME"];?><img src="images/<?php echo $teamsRow["MEM_IMG"]; ?>" alt="" class="mem-head" id="mem-head1">
                     </div>
                     <div id="order-date">
-                        預約日期： <span><?php echo $teamsRow["BOO_DATE"];?> </span><span><?php 
-                        if($teamsRow["BOO_TIME"]==0)
+                        預約日期： <span><?php echo $teamsRow["BOO_DATE"];?> </span><span><?php
+                        if($teamsRow["BOO_TIME"]==1)
                             $BOO_TIME='10:00';
-                        else if($teamsRow["BOO_TIME"]==1)
-                        $BOO_TIME='14:00';
                         else if($teamsRow["BOO_TIME"]==2)
+                        $BOO_TIME='14:00';
+                        else if($teamsRow["BOO_TIME"]==3)
                         $BOO_TIME='16:00';
                         echo $BOO_TIME;?></span>
                     </div>
@@ -78,7 +78,7 @@ try {
     
                             $sql ="SELECT * FROM team_mem WHERE TEAM_NO = '$TEAM_NO'";
                             $teammem = $pdo->prepare( $sql);
-                            $teammem->execute(); 
+                            $teammem->execute();
                             $rows = $teammem->rowCount();//計算抓到幾筆資料
                             echo $rows+1;//揪團人數+1(團長)
                             ?>
@@ -199,7 +199,7 @@ try {
                 </div>
                 <textarea name="MSG_INFO" id="MSG_INFO" placeholder="請輸入內容..."></textarea>
                 <input type="hidden" name="TEAM_NO" value="<?php echo $TEAM_NO ?>">
-                <button type="submit" class="submit button" id="submit">送出</div>
+                <button type="submit" class="submit button" id="submit">送出
             </button>
     </form>
     </div>
@@ -211,9 +211,7 @@ try {
 
     <script>
 
-        $('.humberger_btn').click(function () {
-            $(this).toggleClass('active');
-        });
+
 
         var myDiv = document.getElementById('forum-border');
         myDiv.scrollTop = myDiv.scrollHeight;

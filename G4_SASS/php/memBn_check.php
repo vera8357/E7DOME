@@ -22,7 +22,7 @@
                                         return;
                                     }
                                 }
-                                if($rows+1 === $teamsRow["TEAM_MEM"]){
+                                if($rows+1 == $teamsRow["TEAM_MEM"]){
                                     echo "<a href='membergroup.php'>";
                                     echo "<button class='button join-button' id='join' disabled>人數已滿";
                                     echo "</button></a>";

@@ -11,10 +11,17 @@ session_start();
 </head>
 <body>
 
-<?php 
+<?php
 
-$MEM_NO = $_GET["TEAM_NO"];
+
 require_once("connect_g4.php");
+
+ $TEAM_NO = $_REQUEST["TEAM_NAME"];
+ $TEAM_INFO = $_REQUEST["TEAM_INFO"];
+ $TEAM_NO= $_REQUEST['TEAM_NO'];
+echo "$TEAM_INFO";
+exit;
+
 switch($_FILES['upfile']['error']){
   case UPLOAD_ERR_OK:
     if( file_exists("../images")===false){
@@ -26,11 +33,11 @@ switch($_FILES['upfile']['error']){
     $to = "../images{$filext}";
     $filname = "{$filext}";
     if(copy( $from, $to)){
-      $memberfile = "UPDATE member SET MEM_IMG = '{$filname}' WHERE MEM_NO = $MEM_NO";
-      $pdo->exec($memberfile);
-      $_SESSION["MEM_IMG"] = $filname;   
+      $teamfile = "UPDATE team SET TEAM_IMG = '{$filname}',TEAM_NAME = :TEAM_NAME,TEAM_INFO = :TEAM_INFO WHERE TEAM_NO = $TEAM_NO";
+      $pdo->exec($teamfile);
+      $_GET["TEAM_NO"] = $filname;
 
-      header('location:../grou.php');
+      header('location:../php/editgroup.php?TEAM_NO=$TEAM_NO');
 
     }
     break;
@@ -43,8 +50,8 @@ switch($_FILES['upfile']['error']){
   case UPLOAD_ERR_PARTIAL:
     echo "上傳失敗，請重新上傳檔案<br>";
     break;
-  case UPLOAD_ERR_NO_FILE:
-    echo "echo 未上傳檔案太大<br>";
+  //case UPLOAD_ERR_NO_FILE:
+  //  echo "echo 未上傳檔案太大<br>";
 }
 
 ?>

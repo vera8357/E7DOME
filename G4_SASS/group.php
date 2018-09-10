@@ -55,7 +55,7 @@ try {
 
 <?php
 
-    $sql = "SELECT * FROM team JOIN booking ON (team.BOO_NO = booking.BOO_NO) JOIN facility ON (facility.FAC_NO = booking.FAC_NO) where BOO_DATETIME > NOW()";
+    $sql = "SELECT * FROM team JOIN booking ON (team.BOO_NO = booking.BOO_NO) JOIN facility ON (facility.FAC_NO = booking.FAC_NO) where BOO_DATE > NOW()";
     $team = $pdo->query( $sql);
 
 
@@ -81,7 +81,7 @@ try {
 					    <div class="moreSkew">></div>
 				    </div>
 					<div class="teamName"><?php echo $teamsRow["TEAM_NAME"];?></div>
-					<div class="teamDate"><?php echo date('Y/m/d',strtotime($teamsRow["BOO_DATETIME"]));?></div>
+					<div class="teamDate"><?php echo date('Y/m/d',strtotime($teamsRow["BOO_DATE"]));?></div>
 					<div class="teamMem">
                         揪團人數
                         <?php
@@ -210,9 +210,6 @@ try {
     </script>
     <script>
 
-        $('.humberger_btn').click(function () {
-            $(this).toggleClass('active');
-        })
     </script>
 </body>
 
