@@ -174,6 +174,7 @@
 			verticalCentered: false,
 			anchors: ['firstPage', 'secondPage', 'thirdPage', 'forthPage', 'lastPage'],
 			navigation: true,
+			// responsiveWidth : 992,
 			navigationTooltips: ['首頁','場地介紹','快來揪團','儲值點數','營業資訊'],
 			// showActiveTooltip: true,
 			// autoScrolling: false,
