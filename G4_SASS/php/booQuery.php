@@ -1,4 +1,7 @@
 <?php
+ob_start();
+session_start();
+
 $CATE_NO = $_POST["CATE_NO"];
 $BOO_DATE = $_POST["BOO_DATE"];
 

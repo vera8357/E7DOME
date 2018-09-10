@@ -1,11 +1,14 @@
 <?php
+ob_start();
+session_start();
+
 
 $FAC_NO = $_POST["FAC_NO"];
 $BOO_DATE = $_POST["BOO_DATE"];
 $BOO_TIME_i = $_POST["BOO_TIME_i"];
 
-$MEM_NO = 1;
-$MEM_POINTS = 500;
+$MEM_NO = $_SESSION["MEM_NO"];
+$MEM_POINTS = $_SESSION["MEM_POINTS"];
 
 
 	// connect DB

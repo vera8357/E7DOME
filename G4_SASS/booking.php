@@ -12,6 +12,10 @@
 	<?php include 'header.php';?>
 
 <?php
+	if( isset($_SESSION['refreshChk']) ){
+		unset($_SESSION['refreshChk']);
+	}
+
     if(isset($_SESSION["cate_no"])){
         $cate_no = $_SESSION["cate_no"];
         // unset($_SESSION["cate_no"]);
