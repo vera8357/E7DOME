@@ -9,14 +9,12 @@
 </head>
 
 <body>
-	<header>
-		<?php include 'header.php';?>
-	</header>
+	<?php include 'header.php';?>
 
 <?php
     if(isset($_SESSION["cate_no"])){
         $cate_no = $_SESSION["cate_no"];
-        unset($_SESSION["cate_no"]);
+        // unset($_SESSION["cate_no"]);
     }else{
         $cate_no = 2;
     }
