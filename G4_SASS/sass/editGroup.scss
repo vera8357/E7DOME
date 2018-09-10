@@ -1,0 +1,48 @@
+form {
+        width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    table {
+        margin: 0 auto;
+        padding: 10px;
+        width: 500px;
+        border: 0px dotted #000;
+    }
+
+    td {
+        padding: 10px;
+    }
+    .btn-info {
+    color: #fff;
+    background-color: #0052b2;
+    border-color: #0052b2;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0px 5px;
+	}
+    .describe{
+        height: 80px;
+    }
+
+    .submit{
+        width: 80px;
+        padding: 5px;
+        border-radius: 5px; 
+        margin: auto;
+        cursor: pointer;
+    }
+
+    .submit{
+        background-color: #0052b2;
+        color: #fff;
+        border: 2px solid #0052b2;
+        &:hover{
+        color:#0052b2;
+        border: 2px solid #0052b2;
+        background-color: transparent;
+    }
+    }
+
+

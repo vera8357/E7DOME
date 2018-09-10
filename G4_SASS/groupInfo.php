@@ -3,7 +3,7 @@
 
 
 try {
-    include("php/connect_g4.php");
+    require_once("php/connect_g4.php");
     if(!isset($_GET['TEAM_NO'])){
     header("location: group.php");
     }else{
@@ -53,12 +53,13 @@ try {
                     $teams = $team->fetchAll(PDO::FETCH_ASSOC);
                     $team_mem = $pdo->query( $sql);
                     ?>
-                    <span class="group-owner">
-                    主揪人：
-                    <?php echo $teamsRow["MEM_NAME"];?>
-                    </span></div>
+                    
                     <div class="group-txt">
                         <?php echo $teamsRow["TEAM_INFO"];?>
+                    </div>
+                    <div class="group-owner">
+                    主揪人：
+                    <?php echo $teamsRow["MEM_NAME"];?><img src="images/<?php echo $teamsRow["MEM_IMG"]; ?>" alt="" class="mem-head" id="mem-head1">
                     </div>
                     <div id="order-date">
                         預約日期： <span><?php echo $teamsRow["BOO_DATE"];?> </span><span><?php 
@@ -92,8 +93,6 @@ try {
                     $sql = "SELECT * FROM team_mem JOIN team ON (team_mem.TEAM_NO = team.TEAM_NO) JOIN member ON (team_mem.MEM_NO = member.MEM_NO)  WHERE team_mem.MEM_NO=$MEM_NO ";
                     ?>
                     <div id="group-mem-list">
-                        <div class="mem-head" id="mem-head1"><img src="images/<?php echo $teamsRow["MEM_IMG"];?>" alt=""></div>
-                        <div class="line"></div>
                     <?php
                     $sql = "SELECT * FROM team_mem JOIN team ON (team_mem.TEAM_NO = team.TEAM_NO) JOIN member ON (team_mem.MEM_NO = member.MEM_NO)  WHERE team_mem.TEAM_NO=$TEAM_NO ORDER BY TEAM_MEM_NO ASC";
                     $team_mem = $pdo->query( $sql);
@@ -115,26 +114,24 @@ try {
                                     $team_keep = $pdo->prepare($sql);
                                     $team_keep->execute(); 
                                     $rows = $team_keep->rowCount();
-                               
                                     echo '<form action="php/team_keep.php" method="POST">
                                     <input type="hidden" name="team_no" value="'. $TEAM_NO.'">
                                     <input type="hidden" name="mem_no" value="'. $MEM_NO.'">';
-                                    
                                     if($rows==0)
-                                    echo '<input type="image" src="images/unlike.png" class="icon fb-share-button" id="heart" title="加入收藏" border="0" name="team_keep" value="1"/>';
+                                    echo '<input type="image" src="images/unlike.png" class="icon icon-a" id="heart" title="加入收藏" border="0" name="team_keep" value="1"/>';
                                         // echo '<img src="images/unlike.png" >
                                         // <input type="hidden" name="team_keep" value="1">';
                                     else
-                                    echo '<input type="image" src="images/like.png" class="icon fb-share-button" id="heart" title="取消收藏" border="0" name="team_keep" value="2"/>';
+                                    echo '<input type="image" src="images/like.png" class="icon icon-a" id="heart" title="取消收藏" border="0" name="team_keep" value="2"/>';
                                         // echo '<img src="images/like.png" class="icon fb-share-button" id="heart" title="取消收藏">
                                         // <input type="hidden" name="team_keep" value="2">';
                                     echo'</form>';
                                  }
                                 else
-                                echo '<input type="image" src="images/unlike.png" class="icon fb-share-button" id="heart" title="加入收藏" border="0" alt="Submit" value="1"/>';
+                                echo '<input type="image" src="images/unlike.png" class="icon  icon-a" id="heart" title="加入收藏" border="0" alt="Submit" value="1"/>';
                             ?>
                             
-                            <a href="javascript:void(0);" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u='+fbhtml_url+'&src=sdkpreparse');return false;" class="icon-a">
+                            <a href="javascript:void(0);" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u='+fbhtml_url+'&src=sdkpreparse');return false;" class="icon-a fb-share-button" >
                             <img src="images/share.png" class="icon">
 
                             </a>

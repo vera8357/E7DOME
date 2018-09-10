@@ -1,7 +1,39 @@
 @media screen and (max-width: 1200px) {
+  .coachman {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 400px;
+    height: 500px;
+  }
   section #messageall {
-    width: 80%;
-    height: 50%;
+    position: absolute;
+    top: 10%;
+    left: 2%;
+    right: auto;
+    bottom: 0;
+    width: 65%;
+    height: 65%;
+    z-index: 5;
+  }
+  .li_ans {
+    font-size: 2.5vw;
+  }
+  .rli_ans {
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .coachman {
+    display: none;
+  }
+  section #messageall {
+    width: 100%;
+    height: calc(100% - 60px);
+    left: auto;
+    top: 60px;
+    border-radius: 0px;
   }
   section #message {
     width: 100%;
@@ -10,15 +42,9 @@
     width: 100%;
   }
   .li_ans {
-    font-size: 5.5vw;
+    font-size: 4.5vw;
   }
   .rli_ans {
-    font-size: 5.5vw;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .coachman{
-    display: none;
+    font-size: 4.5vw;
   }
 }

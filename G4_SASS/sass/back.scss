@@ -52,11 +52,46 @@ h2 {
 
 .back_nav a {
   color: $a_color;
-}
-
-.back_nav li {
   padding: 20px 0;
 }
+
+/* Outline In */
+
+.hover-a {
+  width: 248px;
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+}
+
+.hover-a:before {
+  pointer-events: none;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  border: #0052B2 solid 5px;
+  background-color: rgba(39, 133, 240, 0.52);
+  top: -16px;
+  right: -16px;
+  bottom: -16px;
+  left: -16px;
+  opacity: 0;
+  transition-duration: 0.3s;
+  transition-property: top, right, bottom, left;
+}
+
+.hover-a:hover:before,
+.hover-a:focus:before,
+.hover-a:active:before {
+  top: 0px;
+  right: -8px;
+  bottom: 0px;
+  left: -8px;
+  opacity: 1;
+}
+
 
 .back_content {
   float: left;
@@ -80,86 +115,6 @@ h2 {
 }
 
 /*=======*/
-
-* {
-  // outline: 1px solid red;
-}
-
-a,
-table {
-  font-family: "微軟正黑體";
-  text-decoration: none;
-}
-
-a {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-h2 {
-  background-color: #0052b2;
-  color: #fff;
-  padding: 50px 5% 10px;
-  font-size: 48px;
-  margin-bottom: 50px;
-}
-
-.bcak_logo {
-  text-align: center;
-  margin-bottom: 5vh;
-  margin-top: 2vh;
-}
-
-.bcak_logo h1 {
-  font-size: 24px;
-  color: #0052b2;
-  margin-top: 10px;
-}
-
-.bcak_logo img {
-  width: 100%;
-}
-
-.back_nav {
-  position: fixed;
-  width: 15%;
-  float: left;
-  height: 100vh;
-  background-color: #ffb505;
-  padding: 0 20px;
-  text-align: center;
-  box-sizing: border-box; // position: fixed;
-}
-
-.back_nav a {
-  color: $a_color;
-}
-
-.back_nav li {
-  padding: 20px 0;
-}
-
-.back_content {
-  float: right;
-  background-color: #fff; // position: relative;
-  //   height: 100vh;
-  width: 85%;
-  box-sizing: border-box;
-  overflow-y: scroll;
-}
-
-.back_content::after {
-  display: block;
-  content: "";
-  clear: both;
-}
-
-.search {
-  width: 90%;
-  margin: 0 auto 10px; // padding: 5px 10px;
-  text-align: left;
-  /*>>>>>>> G4-1*/
-}
 
 #book_search {
   font-size: 18px;
@@ -249,8 +204,8 @@ select {
 
 #new_qa {
   position: relative;
-  top: 35px;
   right: 0;
+  bottom: -70px;
   background-color: #4c9efe;
   color: #fff;
   border: none;

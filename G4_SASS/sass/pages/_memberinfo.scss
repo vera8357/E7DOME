@@ -250,6 +250,13 @@ input[type="file"] {
      background-color:#ffb505;
 }
 
+.m_item li:hover a{
+     color: #ffb505;
+}
+.m_item li:hover a span{
+     background-color: #ffb505;
+}
+
 
 @media screen and (min-width: 1024px) {
     .pic_wrap {
