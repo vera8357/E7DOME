@@ -55,7 +55,7 @@ try {
 
 <?php
 
-    $sql = "SELECT * FROM team JOIN booking ON (team.BOO_NO = booking.BOO_NO) JOIN facility ON (facility.FAC_NO = booking.FAC_NO) ";
+    $sql = "SELECT * FROM team JOIN booking ON (team.BOO_NO = booking.BOO_NO) JOIN facility ON (facility.FAC_NO = booking.FAC_NO) where BOO_DATETIME > NOW()";
     $team = $pdo->query( $sql);
 
 
@@ -68,8 +68,8 @@ try {
 			<div class="teamOne ">
 				<div class="teamDate_top">
 					<div class="dateGroup">
-						<div class="teamDay"><?php echo substr($teamsRow["BOO_DATE"],8,2);?></div>
-						<div class="teamMonth"><?php echo date("M",strtotime($teamsRow["BOO_DATE"]));?></div>
+						<div class="teamDay"><?php echo substr($teamsRow["BOO_DATETIME"],8,2);?></div>
+						<div class="teamMonth"><?php echo date("M",strtotime($teamsRow["BOO_DATETIME"]));?></div>
 					</div>
 				</div>
 				<div class="teamPic">
@@ -81,7 +81,7 @@ try {
 					    <div class="moreSkew">></div>
 				    </div>
 					<div class="teamName"><?php echo $teamsRow["TEAM_NAME"];?></div>
-					<div class="teamDate"><?php echo date('Y/m/d',strtotime($teamsRow["BOO_DATE"]));?></div>
+					<div class="teamDate"><?php echo date('Y/m/d',strtotime($teamsRow["BOO_DATETIME"]));?></div>
 					<div class="teamMem">
                         揪團人數
                         <?php
@@ -146,7 +146,7 @@ try {
      <div id="create_in">
     <!--------揪團說明燈箱-------->
     <div id="create_wrap">
-        <p>開始揪團</p><span id="close_3"><img src="images/member_pic/close.png"></span>
+        <p></p><span id="close_3"><img src="images/member_pic/close.png"></span>
         <table id="tableCreate">
             <h1>揪團步驟</h1>
             <div class="joincontent_wrap">
@@ -157,16 +157,16 @@ try {
                     <div class="joincontent">填寫簡介</div>
                     <div class="joincontent">開始揪團</div>
             </div>
-            
             <tr>
                 <td>
-                    <input id="enroll_btn" type="button" class="button_a" value="我已經預約">
-                    <input id="login_btn" type="button" class="button_a" value="我尚未預約">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    
+                    <a href="memberbooking.php"><button id="enroll_btn" type="button" class="button_a bookingReady">我已經預約
+                    </button>
+                    </a>
+                    <a href="booking.php">
+                    <button id="login_btn" type="button" class="button_a notBooking">
+                    我尚未預約
+                    </button>
+                    </a>
                 </td>
             </tr>
         </table>
