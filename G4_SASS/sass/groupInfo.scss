@@ -6,9 +6,7 @@
 @import "layout/footer";
 @import "components/buttons";
 
-header{
-	position: relative!important;
-}
+
 
 header + section {
     padding-top:0px!important;
@@ -63,6 +61,8 @@ section{
 }
 .group-details{
     width: 400px;
+    box-sizing: border-box;
+    padding: 15px;
 }
 .group-owner{
 	vertical-align: sub;
@@ -141,7 +141,6 @@ section{
 	background-color:#e2e2e2;
 	// height:800px;
     width: 100%;
-    margin: auto;
 	font-family: 'HanWangZonYi';
 	position: relative;
     overflow: hidden;
@@ -188,11 +187,11 @@ section{
 .forum-title{
     color: #0052b2;
     width: 80%;
-    margin:0 auto; 
+    margin:0 auto;
     padding: 50px 0;
     line-height: 50px;
-    font-size: 3em;
     text-align: center;
+    font-size: 3em;
 }
 .forum{
     background-color: rgba(255,255,255,1);
@@ -299,6 +298,9 @@ textarea{
 
 
 @media screen and (min-width: 1200px) {
+header{
+    position: relative!important;
+}
 .group-box1{
 	display: block;
     background: #ffb505;
@@ -351,6 +353,7 @@ textarea{
     // left: 21.8%;
     text-align: left;
     // padding-left: 30px;
+
 }
 }
 
@@ -362,6 +365,7 @@ textarea{
 
 .forum-board { //ok
     width: 100%;
+    padding-bottom: 0px;
 }
 .message-time {
     float: right;
@@ -375,9 +379,14 @@ textarea{
 @media screen and (max-width: 768px) {
     .group-info-image{
         width: 100%;
+        padding-top: 60px;
     }
     .forum{
         width: 100%;
+    }
+    .forum-title{
+        font-size: 2em;
+        padding: 20px 0;
     }
     .forum-box1{
         display: none;
