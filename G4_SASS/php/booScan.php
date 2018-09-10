@@ -7,7 +7,7 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <link rel="stylesheet" href="../sealcss/sealmain.css">
-<link rel="stylesheet" type="text/css" href="../css/bookingTicket.css">
+<!-- <link rel="stylesheet" type="text/css" href="../css/bookingTicket.css"> -->
   <script src="../js/jq.js"> </script>
   <script src="../js/jqui.js"></script>
   <script src="../js/progressbar.js"></script>

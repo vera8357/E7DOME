@@ -22,7 +22,7 @@
                     }
                     echo $star;
                 ?>
-            </span><br>
+            </span>
             <?php echo $site_info['BOO_NOTE']?>
         </td>
         <td class="sport_td">
