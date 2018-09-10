@@ -1,5 +1,7 @@
 <?php
+session_start();
 $CATE_NO = $_POST["CATE_NO"];
+
 
     // connect DB
     require_once("connect_g4.php");  
@@ -27,7 +29,7 @@ $CATE_NO = $_POST["CATE_NO"];
 
     while ($rowIdxFac = $idxFac->fetch()){
 
-    $sqlFacStat = "SELECT COUNT(TEAM_NO), AVG(BOO_RANK), booking.FAC_NO from facility
+    $sqlFacStat = "SELECT COUNT(TEAM_NO), IFNULL(AVG(BOO_RANK),0), booking.FAC_NO from facility
     LEFT JOIN booking ON facility.FAC_NO = booking.FAC_NO
     LEFT JOIN team ON booking.BOO_NO = team.BOO_NO
     where CATE_NO =1 AND booking.FAC_NO = $rowIdxFac[FAC_NO]
@@ -48,22 +50,25 @@ $CATE_NO = $_POST["CATE_NO"];
             </h3>
             <p><?php echo $rowIdxFac['FAC_DESC'] ?></p>
             <div class="fac-btn-group">
-                <button class="fac-btn">立即預約</button>
-                <button class="fac-btn">更多資訊</button>
+                <?php $_SESSION["cate_no"] = $rowIdxFac['CATE_NO'] ?>
+                <a href="booking.php" class="fac-btn">立即預約</a>
+
+                <?php $cate_page = array("basketball.php", "bowling.php", "climbimg.php", "badminton.php"); ?>
+                <a href="<?php echo $cate_page[$rowIdxFac['CATE_NO'] - 1] ?>" class="fac-btn">更多資訊</a>
             </div>
         </div>
       </div>
-      <div class="box box03">
+      <div class="box box02">
         <span class="icon-cont"><i class="fas fa-money-bill-alt"></i></span>
         <h3>花費點數</h3>
         <strong><?php echo $rowIdxFac['FAC_POINTS'] ?></strong>
       </div>  
-      <div class="box box04">
+      <div class="box box03">
         <span class="icon-cont"><i class="fas fa-grin-stars"></i></span>
         <h3>場地評價</h3>
-        <strong><?php echo $rowfacStat['AVG(BOO_RANK)'] ?></strong>
+        <strong><?php echo $rowfacStat['IFNULL(AVG(BOO_RANK),0)'] ?></strong>
       </div>  
-      <div class="box box05">
+      <div class="box box04">
         <span class="icon-cont"><i class="fas fa-users"></i></span>
         <h3>目前開團</h3>
         <strong><?php echo $rowfacStat['COUNT(TEAM_NO)'] ?></strong>
