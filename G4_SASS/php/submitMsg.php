@@ -8,7 +8,9 @@ if($_GET["MSG_INFO"]){
 $TEAM_NO = $_REQUEST["TEAM_NO"];
 $MEM_NO = $_SESSION["MEM_NO"];
 $MSG_INFO = $_GET["MSG_INFO"];
+date_default_timezone_set("Asia/Taipei");
 $MSG_DATE = date("Y-m-d H:i:s ");
+
 
 $newPost = ("INSERT INTO team_msg (MSG_NO, TEAM_NO, MEM_NO, MSG_INFO, MSG_DATE)
 VALUES (null, '$TEAM_NO', '$MEM_NO',  '$MSG_INFO', '$MSG_DATE')");

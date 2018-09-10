@@ -9,11 +9,13 @@ try {
 ?>   
     <div class="site_item">
         <input type="hidden" name="" value="<?php echo $site_info["FAC_NO"]?>">
-        <img src="images/bowling/bowlingsite.png" alt="">
-        <p><?php echo $site_info["FAC_NAME"]?></p>
-        <span>
-            <?php echo $site_info["FAC_DESC"]?>
-        </span>
+        <div class="site_item_img">
+            <img src="images/sport/<?php echo $site_info["FAC_IMG1"]?>" alt="">
+        </div>
+        <div class="site_button">
+            <?php echo $site_info["FAC_NAME"]?>
+            <div class="button_border"></div>
+        </div>
     </div>
 <?php 
     }

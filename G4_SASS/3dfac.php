@@ -429,7 +429,7 @@
 						</a>
 						<a class="pin pin--4-6" data-category="2" data-space="4.06" href="#" aria-label="Pin for Love 2 Cook">
 							<span class="pin__icon">
-								<sapn class="player3f01"><img src="3dfac/img/player3f01.png" alt=""></sapn>
+								<span class="player3f01"><img src="3dfac/img/player3f01.png" alt=""></sapn>
 							</span>
 						</a>
 						<a class="pin pin--4-7" data-category="2" data-space="4.07" href="#" aria-label="Pin for Permaculture Hub">
@@ -518,10 +518,7 @@
 <!-- /container -->
 
 
-<script src="3dfac/js/classie.js"></script>
-<script src="3dfac/js/list.min.js"></script>
-<script src="3dfac/js/main.js"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
+
 
 <script type="text/javascript">
 function openCity(evt, cityName) {
@@ -535,31 +532,31 @@ function openCity(evt, cityName) {
     // Get all elements with class="tablinks" and remove the class "active"
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+        tablinks[i].className = tablinks[i].className.replace(" activeNow", "");
     }
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(cityName).style.display = "flex";
-    evt.currentTarget.className += " active";
+    evt.currentTarget.className += " activeNow";
 }
 </script>
 
 <script>
-function facInfo() {
-    $('.level').each(function(){
-        $(this).click(function(){
-            var cate_no = $(this).data('category');
-            console.log(cate_no);
+function facInfo(level) {
+            var cate_no = level.data('category');
             $.post("php/3dfacInfo.php",
                 {
                     CATE_NO: cate_no
                 },
                 function(data){
-                    var cateNo = '#queryCate' + cate_no; console.log(cateNo);
+                    var cateNo = '#queryCate' + cate_no; // console.log(cateNo);
                     $(cateNo).html(data);
             });
-        });
-    });
-
 }
-window.addEventListener('load', facInfo);
 </script>
+
+
+<script src="3dfac/js/classie.js"></script>
+<script src="3dfac/js/list.min.js"></script>
+<script src="3dfac/js/main.js"></script>
+<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script> -->
+<script src="libs/gsap/src/minified/TweenMax.min.js"></script>

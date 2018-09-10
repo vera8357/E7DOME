@@ -14,7 +14,9 @@ width: 100%;
 font-family: 'HanWangZonYi';
 // src: url(../font/HanWangZonYi.woff);
 position: absolute;
-z-index: 99; }
+z-index: 99; 
+padding-bottom: 10px;
+}
 
 header:after {
 display: block;
@@ -71,6 +73,9 @@ z-index: -1;
 opacity: 0;
 display: block;
 }
+.logo a:after{
+    display: none;
+}
 header ul li a:hover:after{
 opacity: 1;
 left:10px;
@@ -82,7 +87,7 @@ float: right;
 margin-top:40px ;
 margin-right: 15px;  
 position: relative;
-z-index: 2;
+z-index: 5;
 }
 // header ul li:last-child {
 // line-height: 1;
@@ -100,11 +105,12 @@ width: 100%; }
         font-size: 16px;
     }
 }
-@media screen and (max-width:768px){
+@media screen and (max-width:992px){
     header{
         background-color: rgba(255,255,255,.8);
         position: fixed;
         height: 60px;
+        padding-bottom: 0px;
     }
     .humberger_btn{
         display: block;
@@ -130,6 +136,7 @@ width: 100%; }
     }
     .humberger_line.mid{
         top:50%;
+        
         transform: translateX(-50%) translateY(-50%);
     }
     .humberger_line.bot{
@@ -145,6 +152,7 @@ width: 100%; }
         opacity: 0.3;
         background-color: #ffb505;
         height: 20px;
+        width:  20px;
         border-radius: 50%; 
         border: 0;
         transform: translateX(-50%) translateY(-50%) scale(0.7,0.7);

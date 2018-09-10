@@ -1,15 +1,3 @@
-<?php
-	ob_start();
-    // session_start();
-
-    if(isset($_SESSION["cate_no"])){
-        $cate_no = $_SESSION["cate_no"];
-        unset($_SESSION["cate_no"]);
-    }else{
-        $cate_no = 2;
-    }
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,6 +12,15 @@
 	<header>
 		<?php include 'header.php';?>
 	</header>
+
+<?php
+    if(isset($_SESSION["cate_no"])){
+        $cate_no = $_SESSION["cate_no"];
+        unset($_SESSION["cate_no"]);
+    }else{
+        $cate_no = 2;
+    }
+?>
 
 <div class="container">
 	<div class="area area1">
@@ -154,7 +151,7 @@
 			<div class="modal-body padding-32">
 
 
-<form action="php/booInsert.php" method="post">
+<form action="booInsert.php" method="POST">
 	<table class="table-modal">
 		<thead>
 			<tr>
@@ -220,6 +217,7 @@ function accActiveNow(){
 
 
 function showTdyInfo(){
+	console.log('hi');
 	var tdy = new Date(); 
 	var tdyDate = tdy.toISOString().slice(0,10);
 
@@ -235,7 +233,7 @@ function showTdyInfo(){
     		},
     		success:function(data){
 	    		var cateNo =  '#queryFac' + cate_no; // console.log(cateNo);
-	        	$(cateNo).html(data);
+	        	$(cateNo).html(data); console.log('hi');
 				
 				$('.myBtn').click(function(){
 			    	var fac_no 		= $(this).nextAll().eq(0).val();
@@ -341,11 +339,13 @@ function targetBgc(){
 </script>
 
 <script>
-	window.addEventListener('load',showTdyInfo);
-	window.addEventListener('load',modalOpen);
-	window.addEventListener('load',showTargetInfo);
-	window.addEventListener('load',accActiveNow);
-	window.addEventListener('load',targetBgc);
+	window.addEventListener('load',function(){
+		showTdyInfo();
+		accActiveNow();
+		modalOpen();
+		showTargetInfo();
+		targetBgc();
+	});
 </script>
 
 </body>

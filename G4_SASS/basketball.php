@@ -18,9 +18,7 @@
     <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
 </head>
 <body>
-    <header>
-        <?php include 'header.php';?>
-    </header>
+    <?php include 'header.php';?>
     <div class="bkb_fp">
         <div class="bkb_fp_blue"></div>
         <div class="bkb_fp_black"></div>
@@ -268,11 +266,7 @@
         //         focusOnSelect:true,
         //     });
     </script>
-	<script>
-		$('.humberger_btn').click(function(){
-			$(this).toggleClass('active');
-		})
-    </script>
+	
     <script>
         $.ajax({
             url:'php/facility/sports.php',

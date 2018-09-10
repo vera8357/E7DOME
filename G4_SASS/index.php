@@ -74,7 +74,7 @@
 					<ul class="teamGroup">
 					<?php
 					require_once('php/connect_g4.php');
-					$sql = "SELECT * FROM team JOIN booking ON (team.BOO_NO = booking.BOO_NO) JOIN facility ON (facility.FAC_NO = booking.FAC_NO) ";
+					$sql = "SELECT * FROM team JOIN booking ON (team.BOO_NO = booking.BOO_NO) JOIN facility ON (facility.FAC_NO = booking.FAC_NO)  WHERE booking.BOO_DATE > CURDATE() ";
 					$team = $pdo->query( $sql);
 					$teams = $team->fetchAll(PDO::FETCH_ASSOC);
 					foreach($teams as $i=>$teamsRow){
@@ -119,43 +119,7 @@
 					<?php
 						} 
 					?> 
-						<!-- <li class="teamItem">
-							<a href="#">
-								<div class="teamOne">
-									<div class="teamDate_top">
-										<div class="dateGroup">
-											<div class="teamDay">23</div>
-											<div class="teamMonth">AUG</div>
-										</div>
-									</div>
-									<div class="teamPic">
-										<img src="images//index/bg2.png" alt="">
-									</div>
-									<div class="teamInfo">
-										<div class="teamMore">
-											<div class="morebg">更多資訊</div>
-											<div class="moreSkew">></div>
-										</div>
-										<div class="teamName">
-											台北帥哥籃球團
-										</div>
-										<div class="teamDate">
-											2018/06/28
-										</div>
-										<div class="teamMem">
-											揪團人數
-											<span>3</span>
-											/
-											<span>6</span>
-											人
-										</div>
-										<div class="teamTxt">
-											Lorem ipsum dolor sit amet.
-										</div>
-									</div>
-								</div>
-							</a>
-						</li> -->
+]
 					</ul>
 				</div>
 			</div>
