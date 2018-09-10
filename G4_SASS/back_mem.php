@@ -23,25 +23,22 @@ session_start();
         </div>
         <ul>
             <li>
-                <a href="#">QRCODE掃描</a>
+                <a href="back_book.php" class="hover-a">預約訂單管理</a>
             </li>
             <li>
-                <a href="#">預約訂單管理</a>
+                <a href="back_card.php" class="hover-a">點數卡商品管理</a>
             </li>
             <li>
-                <a href="#">點數卡商品管理</a>
+                <a href="back_card_order.php" class="hover-a">儲值紀錄</a>
             </li>
             <li>
-                <a href="#">儲值紀錄</a>
+                <a href="#" class="hover-a">場地管理</a>
             </li>
             <li>
-                <a href="#">場地管理</a>
+                <a href="#" class="hover-a">會員管理</a>
             </li>
             <li>
-                <a href="#">會員管理</a>
-            </li>
-            <li>
-                <a href="#">聊天機器人維護</a>
+                <a href="back_robot.php_1" class="hover-a">聊天機器人維護</a>
             </li>
             <li>
                 <?php
