@@ -1,7 +1,9 @@
 @media screen and (max-width: 1200px) {
   section #messageall {
-    width: 80%;
-    height: 50%;
+    width: 100%;
+    height: calc(100% - 60px);
+    top: 60px;
+    border-radius: 0px;
   }
   section #message {
     width: 100%;
@@ -18,7 +20,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .coachman{
+  .coachman {
     display: none;
   }
 }
