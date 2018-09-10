@@ -6,6 +6,7 @@
 	<meta charset="UTF-8">
 	<title>E7DOME</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<script type="text/javascript" src="js/fullpage.js"></script>
 
@@ -13,6 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="3dfac/css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="3dfac/css/style0.css" />
 	<link rel="stylesheet" type="text/css" href="3dfac/css/custom.css" />
+	<link rel="stylesheet" href="3dfac/css/fac-info.css">
 	<link rel="stylesheet" type="text/css" href="3dfac/css/fac-animation.css" />
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<script src="3dfac/js/modernizr-custom.js"></script>
