@@ -277,7 +277,7 @@ body {
     opacity: 0;
 }
 .assess_table table{
-    width:80%;
+    width:98%;
     margin:auto;
     height:500px;
     overflow-y: scroll;
@@ -449,6 +449,13 @@ body {
 }
 .morebg{
     padding:10% 20%;
+}
+.teamDate,
+.teamMem,
+.teamTxt{
+    // font-size: 1.5vw;
+    // line-height: 1.5;
+    color:#aaaaaa;
 }
 @media screen and (max-width:1200px){
     .site_info_wrap{
