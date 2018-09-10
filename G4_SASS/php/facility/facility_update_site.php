@@ -4,12 +4,12 @@ try{
     $fac_no = $_REQUEST["upfac_no"];
     $fac_desc = $_REQUEST["upfac_desc"];
     $fac_mem = $_REQUEST["upfac_mem"];
-    if( file_exists("../../images/sport//")===false){
-        mkdir("../../images/sport//");
+    if( file_exists("../../images/fac_img//")===false){
+        mkdir("../../images/fac_img//");
     }
     if($_FILES["facimg"]["name"]!=""){
         $from = $_FILES['facimg']['tmp_name'];
-        $to = "../../images/sport//" . $_FILES['facimg']['name'];
+        $to = "../../images/fac_img//" . $_FILES['facimg']['name'];
         copy( $from, $to);
         $facimg = $_FILES["facimg"]["name"];
         $sql = "UPDATE facility set FAC_DESC = '$fac_desc',FAC_MEM = $fac_mem,FAC_IMG1 = '$facimg' where FAC_NO = $fac_no";

@@ -8,7 +8,7 @@
         while($site_info = $change->fetch(PDO::FETCH_ASSOC)){
 ?>
         <li class="slider_li">
-            <img src="images/sport/<?php echo $site_info['FAC_IMG1']?>" alt="">
+            <img src="images/fac_img/<?php echo $site_info['FAC_IMG1']?>" alt="">
         </li>
 <?php
         }

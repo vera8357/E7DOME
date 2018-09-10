@@ -109,10 +109,10 @@ img{
 }
 @media screen and (max-width:1200px){
     .bkb_fp h1{
-        font-size: 66px;
+        font-size: 55px;
     }
     .bkb_fp h2{
-        font-size: 44px;
+        font-size: 33px;
     }
 }
 
@@ -149,6 +149,8 @@ img{
     .kobe{
         width:125%;
         animation:kobe_m .5s forwards;
+        z-index: 3;
+        top:20px;
     }
     @keyframes kobe_m{
         from{
@@ -173,7 +175,7 @@ img{
         margin-right: auto;
         margin:auto;
         font-size: 36px;
-        z-index: 2;
+        z-index: 5;
     }
     .bkb_fp h2{
         top:auto;
@@ -181,7 +183,7 @@ img{
         right:15%;
         margin-right: 0;
         font-size: 24px;
-        z-index: 2;
+        z-index: 5;
     }
 }
 .site_info{
