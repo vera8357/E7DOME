@@ -181,10 +181,15 @@
         font-size: 16px;
         background-color: #FFC131;
         outline: 0px;
-        border: 1px solid #FFC131 ;
-        padding: 5px 15px;
+        border: 2px solid #FFC131 ;
+        padding: 5px 20px;
         cursor: pointer;
         color:#0052B1;
+        transition: .3s;
         border-radius: 10px;
+        &:hover{
+            background-color: transparent;
+            color:#FFC131;
+        }
     }
 }
