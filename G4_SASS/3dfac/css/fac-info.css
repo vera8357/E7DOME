@@ -11,17 +11,10 @@
   }
 
   
-  .mallnav {
-    top: 15vmin;
-    right: 5vmin;
-  }
-  
-  .surroundings,
-  .levels {
-    position: absolute;
-    top: 50%;
-    left: 60%;
-  }
+
+
+
+
 
   .content__item {
     padding: 0 1em;
