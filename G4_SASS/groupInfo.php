@@ -63,11 +63,11 @@ try {
                     </div>
                     <div id="order-date">
                         預約日期： <span><?php echo $teamsRow["BOO_DATE"];?> </span><span><?php 
-                        if($teamsRow["BOO_TIME"]==1)
+                        if($teamsRow["BOO_TIME"]==0)
                             $BOO_TIME='10:00';
-                        else if($teamsRow["BOO_TIME"]==2)
+                        else if($teamsRow["BOO_TIME"]==1)
                         $BOO_TIME='14:00';
-                        else if($teamsRow["BOO_TIME"]==3)
+                        else if($teamsRow["BOO_TIME"]==2)
                         $BOO_TIME='16:00';
                         echo $BOO_TIME;?></span>
                     </div>

@@ -2,35 +2,41 @@
 body {
   // text-align: center;
   font-family: '微軟正黑體';
-}
-.book_and_team{
-  width: 1200px;
-  height: 100vh;
-  margin: auto;
-  padding: 0 15px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  // background-color: #0052B2;
+  background-color: #f6f6f6;
+  background-image: url('../images/boo_bowling.png'),
+                    url('../images/boo_basket.png');
+  background-size: 35%,18%;
+  background-repeat: no-repeat,no-repeat;
+  background-position: right bottom,-5px 35%; 
 }
 .ticket {
   display: block;
+  position: absolute;
+  top:50%;
+  transform: translateY(-60%);
+  left:45px;
   width: 350px;
-  margin-top: 50px;
-  background-color: #273138;
+  // opacity: 0;
   border-radius: 10px;
   color: #fff;
-  // font-family: Helvetica Neue;
-  // font-weight: 300;
   letter-spacing: 1px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: .5s ease;
+  box-shadow: 0 0 10px rgba(3, 3, 3, 0.5);
+}
+.ticket.right{
+  left:calc( 100% - 395px);
+}
+.ticket.inverse.right{
+  opacity: 0;
 }
 .ticket header {
   width: auto;
   position: relative;
-  height: 50px;
-  background-color: #1B252E;
+  // height: 50px !important;
   padding: 10px;
   border-radius: 10px;
+  z-index: 2 !important;
 }
 .ticket header .company-name {
   line-height: 30px;
@@ -49,23 +55,23 @@ body {
   content: '';
   width: 16px;
   height: 16px;
-  background-color: #fff;
+  background-color: #f6f6f6;
   position: absolute;
   bottom: -8px;
   right: -8px;
   border-radius: 50%;
-  box-shadow: inset 12px 0px 18px -11px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 12px 0px 18px -11px rgba(3, 3, 3, 0.5);
 }
 .ticket header:before {
   content: '';
   width: 16px;
   height: 16px;
-  background-color: #fff;
+  background-color: #f6f6f6;
   position: absolute;
   bottom: -8px;
   left: -8px;
   border-radius: 50%;
-  box-shadow: inset -12px 0px 18px -11px rgba(0, 0, 0, 0.5);
+  box-shadow: inset -12px 0px 18px -11px rgba(3, 3, 3, 0.5);
 }
 .ticket .airports {
   padding: 5px 10px 10px 10px;
@@ -83,12 +89,12 @@ body {
 .ticket .airports .airport .airport-name {
   color: #FFB405;
   font-size: 16px;
-  font-weight: bold;
+  // font-weight: bold;
 }
 .ticket .airports .airport .airport-code {
   font-size: 24px;
   font-weight: 400;
-  margin: 5px 0;
+  margin: 10px 0;
 }
 .ticket .airports .airport .dep-arr-label {
   color: #9299A0;
@@ -100,28 +106,30 @@ body {
   content: '';
   width: 16px;
   height: 16px;
-  background-color: #fff;
+  background-color: #f6f6f6;
   position: absolute;
   bottom: -8px;
   right: -8px;
   border-radius: 50%;
-  box-shadow: inset 12px 0px 18px -11px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 12px 0px 18px -11px rgba(3, 3, 3, 0.5);
 }
 .ticket .airports:before {
   content: '';
   width: 16px;
   height: 16px;
-  background-color: #fff;
+  background-color: #f6f6f6;
   position: absolute;
   bottom: -8px;
   left: -8px;
   border-radius: 50%;
-  box-shadow: inset -12px 0px 18px -11px rgba(0, 0, 0, 0.5);
+  box-shadow: inset -12px 0px 18px -11px rgba(3, 3, 3, 0.5);
 }
 .ticket .place {
   padding: 10px;
   text-align: center;
   /*height: 330px;*/
+
+  
 }
 .ticket .place-block {
   display: inline-block;
@@ -131,7 +139,7 @@ body {
 .ticket .place-block .place-label {
   color: #FFB405;
   text-transform: uppercase;
-  font-weight: bold;
+  // font-weight: bold;
   // font-weight: 400;
   font-size: 16px;
   margin-bottom: 10px;
@@ -144,7 +152,7 @@ body {
 .ticket .qr {
   width: 220px;
   height: 220px;
-  margin: 20px auto;
+  margin: 20px auto 10px;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -182,12 +190,12 @@ body {
   font-size: 36px;
   color:#0052B2;
 }
+
 @media screen and (max-width: 1200px) {
   .book_and_team{
     width: 100%;
-    flex-wrap: wrap;
   }
   .ticket{
-    margin-top: 75px;
+    // margin-top: 75px;
   }
 }

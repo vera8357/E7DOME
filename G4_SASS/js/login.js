@@ -80,7 +80,7 @@ function init() {
   $id('close_1').onclick = close_1;
   // $id('close_2').onclick = close_2;
 
-  if (document.body.clientWidth > 768) {
+  if (document.body.clientWidth > 992) {
     $id('bar').onmouseover = show_headerdropdown;
 
     $id('bar').onmouseout = exit;
