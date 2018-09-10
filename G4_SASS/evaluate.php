@@ -17,6 +17,10 @@
 
 	<div class="div"></div>
 
+	<div class="evaluate_title">評價場地
+	<div class="evaluate_line"></div>
+	</div>
+
 
 	<section id="evaluate_wrap">
 
@@ -34,9 +38,11 @@
                             }else{
 
                                 while ($fac = $member->fetch(PDO::FETCH_ASSOC)){
-
-                       				echo "<img src='images/fac_img/".$fac['FAC_IMG1']."'>";
+                                	echo "<div class='pic_wrap'>";
+                                	echo "<img src='images/fac_img/".$fac['FAC_IMG1']."'>";
+                                	
                        				echo "<div class='fac_name'>場地名稱:".$fac['FAC_NAME']."</div>";
+                       				echo "</div>";
                                 }       
                             }
 
@@ -57,7 +63,7 @@
 			<form action="php/update_boonote.php" method="post">
 				
 			<div class="star_content">
-				<span>星級評比:</span> <input id="star" type="text" name="star" value=""/>
+				<span>星級評比:</span> <input required id="star" type="text" name="star" value=""/>
 			</div>
 
 				<ul>

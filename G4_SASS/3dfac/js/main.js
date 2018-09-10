@@ -110,9 +110,12 @@
 		// click on a Mall´s level
 		mallLevels.forEach(function(level, pos) {
 			level.addEventListener('click', function() {
+				// console.log(level);
+				// console.log(pos);
 				// shows this level
 				showLevel(pos+1);
 				openContent( (pos+1) + '.01' );
+				facInfo($(level).data('category'));
 			});
 		});
 
@@ -142,23 +145,23 @@
 		pins.forEach(function(pin) {
 			var contentItem = contentEl.querySelector('.content__item[data-space="' + pin.getAttribute('data-space') + '"]');
 
-			pin.addEventListener('mouseenter', function() {
-				if( !isOpenContentArea ) {
-					classie.add(contentItem, 'content__item--hover');
-				}
-			});
-			pin.addEventListener('mouseleave', function() {
-				if( !isOpenContentArea ) {
-					classie.remove(contentItem, 'content__item--hover');
-				}
-			});
-			pin.addEventListener('click', function(ev) {
-				ev.preventDefault();
-				// open content for this pin
-				openContent(pin.getAttribute('data-space'));
-				// remove hover class (showing the title)
-				classie.remove(contentItem, 'content__item--hover');
-			});
+			// pin.addEventListener('mouseenter', function() {
+			// 	if( !isOpenContentArea ) {
+			// 		classie.add(contentItem, 'content__item--hover');
+			// 	}
+			// });
+			// pin.addEventListener('mouseleave', function() {
+			// 	if( !isOpenContentArea ) {
+			// 		classie.remove(contentItem, 'content__item--hover');
+			// 	}
+			// });
+			// pin.addEventListener('click', function(ev) {
+			// 	ev.preventDefault();
+			// 	// open content for this pin
+			// 	openContent(pin.getAttribute('data-space'));
+			// 	// remove hover class (showing the title)
+			// 	classie.remove(contentItem, 'content__item--hover');
+			// });
 		});
 
 		// closing the content area
@@ -177,9 +180,11 @@
 				// for smaller screens: close search bar
 				closeSearch();
 				// open level
-				showLevel(level);
+				showLevel(level); console.log(level);
 				// open content for this space
 				openContent(spacerefval);
+				// open facInfoBox
+				facInfo(level);
 			});
 		});
 
@@ -335,16 +340,24 @@
 		// current level
 		var currentLevel = mallLevels[prevSelectedLevel-1];
 
+		openContent( (prevSelectedLevel) + '.01' );
+		var levelFix = ["1", "2", "3", "4"];
+		facInfo(prevSelectedLevel);
+		// console.log(selectedLevel-1 + '.01');
+		// console.log(prevSelectedLevel);
+		// console.log($(currentLevel).data('category'));
+
 		if( direction === 'Up' && prevSelectedLevel > 1 ) {
-			--selectedLevel;
+			--selectedLevel; // console.log(prevSelectedLevel);
 		}
 		else if( direction === 'Down' && prevSelectedLevel < mallLevelsTotal ) {
-			++selectedLevel;
+			++selectedLevel; // console.log(prevSelectedLevel);
 		}
 		else {
 			isNavigating = false;	
 			return false;
 		}
+
 
 		// control navigation controls state (enabled/disabled)
 		setNavigationState();
@@ -375,6 +388,7 @@
 
 		// hide the previous level´s pins
 		removePins(currentLevel);
+		
 	}
 
 	/**
@@ -400,7 +414,6 @@
 	 * Opens/Reveals a content item.
 	 */
 	function openContent(spacerefval) {
-		console.log(spacerefval);
 		// if one already shown:
 		if( isOpenContentArea ) {
 			hideSpace();
@@ -512,6 +525,22 @@
 		classie.add(spacesListEl, 'spaces-list--open');
 		classie.add(containerEl, 'container--overflow');
 	}
+
+
+	// facInfoBox
+	function facInfo(level) {
+		var cate_no = level;
+		$.post("php/3dfacInfo.php",
+			{
+				CATE_NO: cate_no
+			},
+			function(data){
+				var cateNo = '#queryCate' + cate_no; // console.log(cateNo);
+				$(cateNo).html(data);
+		});
+	}
+
+
 
 	/**
 	 * for smaller screens: close search bar

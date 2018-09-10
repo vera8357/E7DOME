@@ -9,14 +9,16 @@
 </head>
 
 <body>
-	<header>
-		<?php include 'header.php';?>
-	</header>
+	<?php include 'header.php';?>
 
 <?php
+	if( isset($_SESSION['refreshChk']) ){
+		unset($_SESSION['refreshChk']);
+	}
+
     if(isset($_SESSION["cate_no"])){
         $cate_no = $_SESSION["cate_no"];
-        unset($_SESSION["cate_no"]);
+        // unset($_SESSION["cate_no"]);
     }else{
         $cate_no = 2;
     }
@@ -151,7 +153,7 @@
 			<div class="modal-body padding-32">
 
 
-<form action="booInsert.php" method="POST">
+<form action="booInsert.php" method="get">
 	<table class="table-modal">
 		<thead>
 			<tr>

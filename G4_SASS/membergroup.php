@@ -59,9 +59,10 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
                 <li><a href="memberbooking.php"><span class="line"></span>預約紀錄</a></li>
                 <li><a href="memberpoints.php"><span class="line"></span>儲值紀錄</a></li>
                 <li id="meminfo_active"><a href="#"><span class="line"></span>我的揪團</a></li>
+                <li><form action="php/logout.php" method="post"><input id="btn_logout" type="submit" value="登出"></form> </li>
 
               
-                <li><form action="php/logout.php" method="post"><input id="btn_logout" type="submit" value="登出"></form></li>
+                
                
             </ul>
             
@@ -81,7 +82,8 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 
                 <div class="group_title">
                     <span  id="show_leader" class="title title_line">我的開團</span>
-                    <span  id="show_staff" class="title">我的參團</span>
+                    <span  id="show_staff" class="title title_line">我的參團</span>
+                    <span  id="show_collect" class="title">我的收藏</span>
                 </div>
                     
                 <div class="group_content">
@@ -187,6 +189,62 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 
 
                          ?>
+
+                    </div>
+
+                    <div id="collect_content" class="text_content">
+
+
+                        <ul class="text_title staff">
+                          
+                            <li>團隊名稱</li>
+                            <li>場地名稱</li>
+                            <li>團隊隊長</li>
+                            <li>預約日期</li>
+                            <li>預定人數</li>
+                            <li></li>
+                        </ul>
+   
+                       
+                         <?php
+                        
+                        try{
+                            require_once("php/connect_g4.php");
+                            $sql = "SELECT * FROM facility JOIN booking ON (facility.FAC_NO = booking.FAC_NO) JOIN team ON (booking.BOO_NO = team.BOO_NO) JOIN team_keep ON(team_keep.TEAM_NO = team.TEAM_NO) WHERE team_keep.MEM_NO =".$_SESSION['MEM_NO']." ORDER BY BOOKING.BOO_DATE DESC ";
+                            $member = $pdo->query($sql);
+                            
+
+                            if($member->rowCount()==0){
+                                echo "<ul class='other_group'><li style='width:100%; text-align: center;'>無紀錄</li><ul>";
+                            }else{
+
+                                    while ($booking = $member->fetch(PDO::FETCH_ASSOC)){
+
+                                   
+                                        echo "<ul class='other_group'>";
+                                        echo "<input type='hidden' name='TEAM_NO' value='".$booking['TEAM_NO']."'>";
+                                        echo "<li><span>團隊名稱</span>".$booking['TEAM_NAME']."</li>";
+                                        echo "<li><span>場地名稱</span>".$booking['FAC_NAME']."</li>";
+                                        echo "<li><span>團隊隊長</span>".$booking['MEM_NAME']."</li>";
+                                        echo "<li><span>預定日期</span>".$booking['BOO_DATE']."</li>";
+                                        echo "<li><span>預定人數</span>".$booking['TEAM_MEM']."</li>";
+                                        echo "<li><a class='link_group' href='groupinfo.php?TEAM_NO=".$booking['TEAM_NO']."'>前往團隊</a></li>";
+                                        echo "</ul>";
+                                       
+                                    } 
+                                        
+                            }
+
+                        }catch(PDOException $e){
+
+                            echo $e->getMessage();
+                        }
+
+
+                         ?>
+                        
+
+
 
                     </div>
 

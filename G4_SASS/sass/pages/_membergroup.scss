@@ -259,6 +259,13 @@ input[type="button"]{
      background-color:#ffb505;
 }
 
+.m_item li:hover a{
+     color: #ffb505;
+}
+.m_item li:hover a span{
+     background-color: #ffb505;
+}
+
 @media screen and (min-width: 1024px) {
     .pic_wrap {
         width: 90%;
@@ -311,9 +318,9 @@ input[type="button"]{
     color:#000;
 }
 
-#staff_content{
+#staff_content,
+#collect_content{
     display: none;
-
     background-color: rgba(255,255,255,.8);
     color:#000;
 }
@@ -354,7 +361,7 @@ input[type="button"]{
 .my_group .link_group,
 .other_group .link_group{
     font-weight:bold;
-    color:#ffb505;
+    color:#d39501;
 }
 
 
@@ -376,7 +383,8 @@ input[type="button"]{
     color:#000;
 }
 
-#show_staff{
+#show_staff,
+#show_collect{
     background-color: #022084;
     color:#fff;
 }

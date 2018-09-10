@@ -10,7 +10,7 @@ brush.beginFill(0xE7ED26);
 brush.drawCircle(0, 0, 100);
 brush.endFill();
 
-PIXI.loader.add("t1", "images/brush/pointcard03.jpg");
+PIXI.loader.add("t1", "images/brush/pointcardtest.jpg");
 PIXI.loader.add("t2", "images/brush/pointcard02.jpg");
 PIXI.loader.load(setup);
 
