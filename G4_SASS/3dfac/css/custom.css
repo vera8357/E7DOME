@@ -301,6 +301,15 @@
   padding: 0em;
 }
 
+@media only screen and (max-width: 767px) {
+  .list__item--active .list__link{
+    position: absolute;
+    top: -55vmin;
+    left: -15vmin;
+  }
+}
+
+
 .label__text{
   display: none;
 }
@@ -308,6 +317,19 @@
 .level--current::after {
 	top: 13em;
   left: -13em;
+}
+@media only screen and (max-width: 767px) {
+  .level--current::after{
+    top: 15em;
+    left: -7em; 
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+  .level--current::after{
+    font-size: 5vmin;
+  }
 }
 
 .level--1::after {
