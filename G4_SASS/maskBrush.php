@@ -15,7 +15,7 @@
 <body>
     <?php include 'header.php';?>
     <div class="layouts">
-        <div class="bomb-rocket"></div>
+        <!-- <div class="bomb-rocket"></div>
         <div class="bomb-rocket"></div>
         <div class="bomb-rocket"></div>
         <div class="bomb-rocket"></div>
@@ -24,7 +24,8 @@
         <div class="normal-rocket"></div>
         <div class="normal-rocket"></div>
         <div class="normal-rocket"></div>
-        <div class="normal-rocket"></div>
+        <div class="normal-rocket"></div> -->
+        <button class="maskbrush-button wow bounceIn" data-wow-duration=".5s" data-wow-delay="10s" data-depth="-1" onclick="location.href='index.php'">BACK!</button>
         <div class="vtb-intro-body">
             <!-- <div class="vtb-intro-container">
                 <div class="vtb-intro-header">
@@ -40,7 +41,7 @@
             <ul id="scene-mask" class="scene">
             <li class="layer wow bounceIn" data-wow-duration=".3s" data-wow-delay="4s" data-depth="-1" >
                 <div class="gift1">
-                    <img src="images/brush/alert.png" alt="gift2">
+                    <img src="images/brush/alert.png" alt="gift1">
                 </div>
             </li>
             <li class="layer wow bounceIn" data-wow-duration=".3s" data-wow-delay="4.5s" data-depth="-4">
@@ -48,7 +49,7 @@
                     <img src="images/brush/no-prize.png" alt="gift2">
                 </div>
             </li>
-            <li class="layer wow bounceIn" data-wow-duration=".3s" data-wow-delay="5s" data-depth="-3">
+            <!-- <li class="layer wow bounceIn" data-wow-duration=".3s" data-wow-delay="5s" data-depth="-3">
                 <div class="gift3">
                     <img src="images/brush/ticket.png" alt="gift3">
                 </div>
@@ -57,7 +58,7 @@
                 <div class="gift4">
                     <img src="images/brush/alert-d.png" alt="gift4">
                 </div>
-            </li>
+            </li> -->
         </ul>
         </div>
         <div class="text">Summer Games</div>
