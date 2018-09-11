@@ -1,6 +1,16 @@
 *{
 	// outline: 1px solid red;
 }
+.fp-controlArrow.fp-prev{
+	left:60px !important;
+	border-color: transparent #FFB505 transparent transparent !important;
+	opacity: .5;
+}
+.fp-controlArrow.fp-next{
+	right: 60px !important;
+	border-color: transparent transparent transparent #FFB505 !important;
+	opacity: .5;
+}
 #fp-nav{
 	background-color: rgba(3, 3, 3,.2);
 }
@@ -435,7 +445,7 @@ a{
 .home_pg4_txt{
 	position: absolute;	
 	left: 20vw;
-	top:35vh;
+	top:30vh;
 	transform: skewX(-23deg);
 	opacity: 0;
 
@@ -534,7 +544,9 @@ a{
 	position: relative;
 	left:25%;
 	width: 75%;
-	top:25vh;
+	// top:25vh;
+	top:55%;
+	transform: translateY(-50%);
 	z-index: 5;
 }
 .pointCard li{
@@ -685,11 +697,11 @@ a{
 	display: none;
 }
 	.home_pg4_bluebox2{
-		bottom: 10vh;
+		bottom: 0;
 	}
 	.home_pg4_bluebox1{
 	width: 100%;
-	top:10vh;
+	top:120px;
 	height: 5vh;
 	left:0;
 	transform: skewX(0deg) scaleX(0);
@@ -789,8 +801,9 @@ a{
 }
 @media screen and (max-width: 767px) {
 	.pointCard{
+		top:50%;
 		width: 80%;
-		top:20vh;
+		margin: auto;
 	}
 	.cardP1{
 		font-size: 30px;
@@ -972,17 +985,17 @@ a{
 }
 	.home_pg5_yellowbox2 h3{
 	font-size: 8vw;
-	bottom: 10vh;
+	bottom: 10px;
 }
 	.home_pg5_whitebox1{
-		top:15vh;
+		top:100px;
 	}
 	.home_pg5 h2{
 		padding-left: 0px;
 		width: 100%;
 		text-align: center;
 		font-size: 24px;
-		top:calc(15vh + 4vw);
+		top:calc(100px + 4vw);
 		z-index: 3;
 		opacity: 0;
 	}
@@ -1006,7 +1019,8 @@ a{
 		height: 100%;
 	}
 	.home_pg5_footer{
-	top:25vh;
+	top:50%;
+	transform: translateY(-50%);
 	padding-left: 0px;
 	text-align: center;
 	color:#fff;

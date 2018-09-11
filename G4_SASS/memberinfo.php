@@ -48,6 +48,7 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 
 
        		 <div id="show_name">
+				
        		 	<span><img src="images/member_pic/photography-portrait-mode.png"><?php echo $_SESSION['MEM_ID']; ?></span>
        		 	<span><img src="images/member_pic/coin.png"><?php echo $_SESSION['MEM_POINTS']; ?></span>
        			<span><img src="images/member_pic/smartphone.png"><?php echo $_SESSION['MEM_PHONE']; ?></span>

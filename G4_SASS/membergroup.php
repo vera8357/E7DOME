@@ -46,9 +46,11 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 
 
 
-             <div id="show_name"><span><img src="images/member_pic/photography-portrait-mode.png"><?php echo $_SESSION['MEM_ID']; ?></span>
+             <div id="show_name">
+                <span><img src="images/member_pic/photography-portrait-mode.png"><?php echo $_SESSION['MEM_ID']; ?></span>
                 <span><img src="images/member_pic/coin.png"><?php echo $_SESSION['MEM_POINTS']; ?></span>
-                <span><img src="images/member_pic/smartphone.png"><?php echo $_SESSION['MEM_PHONE']; ?></span></div>
+                <span><img src="images/member_pic/smartphone.png"><?php echo $_SESSION['MEM_PHONE']; ?></span>
+                </div>
 
 
 
@@ -210,7 +212,7 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
                         
                         try{
                             require_once("php/connect_g4.php");
-                            $sql = "SELECT * FROM facility JOIN booking ON (facility.FAC_NO = booking.FAC_NO) JOIN team ON (booking.BOO_NO = team.BOO_NO) JOIN team_keep ON(team_keep.TEAM_NO = team.TEAM_NO) WHERE team_keep.MEM_NO =".$_SESSION['MEM_NO']." ORDER BY BOOKING.BOO_DATE DESC ";
+                            $sql = "SELECT * FROM facility JOIN booking ON (facility.FAC_NO = booking.FAC_NO) JOIN team ON (booking.BOO_NO = team.BOO_NO) JOIN team_keep ON(team_keep.TEAM_NO = team.TEAM_NO) WHERE team_keep.MEM_NO =".$_SESSION['MEM_NO']." AND  booking.BOO_DATE > CURDATE() ORDER BY BOOKING.BOO_DATE DESC ";
                             $member = $pdo->query($sql);
                             
 

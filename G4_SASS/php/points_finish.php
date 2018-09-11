@@ -14,10 +14,17 @@ $addPoints = "UPDATE member SET MEM_POINTS = MEM_POINTS + $CARD_POINTS WHERE MEM
 $pdo->exec($addPoints);
 $card_order = "INSERT INTO card_order(CARD_NO,MEM_NO,ORDER_DATETIME,CARD_PRICE,CARD_POINTS,CARD_METHOD) VALUES('$CARD_NO','$MEM_NO',CURDATE(),'$CARD_PRICE','$CARD_POINTS','$CARD_METHOD')";
 $pdo->exec($card_order);
-// echo"<script>
-// if(window.history.length<=2)
-// window.location.assign('../index.php');
-// else
-// history.go(-2);
-// </script>";
+$sql ="select MEM_POINTS from member where MEM_NO = ".$_SESSION['MEM_NO'];
+$mem_ponints = $pdo->query($sql);
+
+$rows = $mem_ponints->fetch(PDO::FETCH_ASSOC);
+
+$_SESSION["MEM_POINTS"] = $rows['MEM_POINTS'];
+
+echo"<script>
+if(window.history.length<=2)
+window.location.assign('../index.php');
+else
+history.go(-2);
+</script>";
 ?>
