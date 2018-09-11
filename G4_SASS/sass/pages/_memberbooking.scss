@@ -271,11 +271,46 @@ input[type="file"] {
 
 .booking_content{
     width: 100%;
-    height: 700px;
+    max-height: 700px;
     overflow-y: auto;
     margin-top: 30px;
    
 }
+
+/*-----------------------------------*/
+
+.booking_content::-webkit-scrollbar {
+  background-color: #ffb505;
+}
+
+.booking_content::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgb(0, 82, 178);
+}
+
+.booking_content::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(0, 67, 143);
+}
+
+.booking_content::-webkit-scrollbar-thumb:active {
+  background-color: rgb(1, 48, 102);
+}
+
+.booking_content::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #eee;
+}
+
+.booking_content::-webkit-scrollbar-button {
+  color: rgb(0, 82, 178);
+}
+
+
+
+
+/*---------------------------------------*/
 
 .booking{
     width: 90%;
@@ -285,6 +320,7 @@ input[type="file"] {
     padding: 7px;
     
 }
+
 
 .hold1{
    width: 100%;
