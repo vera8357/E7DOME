@@ -12,67 +12,50 @@ try {
     $teams = $team->fetchAll(PDO::FETCH_ASSOC);
     foreach($teams as $i=>$teamsRow){
     $selectitem=$teamsRow["TEAM_MEM"];
-    $TEAM_INFO = $teamsRow["TEAM_INFO"];
+    $TEAM_INFO = trim($teamsRow["TEAM_INFO"]);
     $TEAM_NAME = $teamsRow["TEAM_NAME"];
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>編輯揪團</title>
-    <link rel="stylesheet" type="text/css" href="../css/editGroup.css">
-</head>
-<body>
-    <form  id="file" action="upfile_group.php" method="POST" enctype="multipart/form-data">
-        <table border="1">
-            <tr>
-                <th>揪團標題：</th>
-                <td>
-                    <input type="text" minlength="3" maxlength="10" value="<?php echo $TEAM_NAME?>" required>
-                </td>
-            </tr>
-            <tr>
-                <th>揪團簡介：
-                </th>
-                <td>
-                    <textarea class="describe" required><?php echo $TEAM_INFO;?></textarea>
-                </td>
-            </tr>
-            <tr>
-                <th>揪團人數：</td>
-                    <td>
-                        <select name="group">
-                            <option value="2">2人</option>
-                            <option value="3">3人</option>
-                            <option value="4">4人</option>
-                            <option value="5">5人</option>
-                            <option value="6">6人</option>
-                        </select>
-                    </td>
-            </tr>
-            <tr>
-                <th>上傳揪團海報：</td>
-                    <td>
-                    	<label class="btn btn-info">
-						<input Type="File" name="upfile" id="upfile" style="display:none;" ;>
-                        <input Type="hidden" value="<?php echo $TEAM_NO; ?>";>
-						<i class="fa fa-photo"></i> +
-						</label>
-                    </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <img src="../images/<?php echo $teamsRow["TEAM_IMG"];?>" id="show_pic" id="" width="300" height="250" >
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <button class="submit">送出揪團</button>
-                </td>
-            </tr>
-        </table>
+    <form  id="file" action="php/upfile_group.php" method="POST" enctype="multipart/form-data">
+        <input Type="hidden" name="TEAM_NO" value="<?php echo $TEAM_NO; ?>";>
+        <h1>管理揪團</h1>
+        <span id="close_4"><img src="images/member_pic/close.png"></span>
+        <div class="edittd">
+        <label class="editth">揪團標題：</label>
+            <input type="text" minlength="3" maxlength="10" value="<?php echo $TEAM_NAME?>" name="TEAM_NAME" required>
+        </div>
+        <div class="edittd">
+            <label class="editth">揪團簡介：</label>
+            <textarea class="describe" name="TEAM_INFO" required><?php echo $TEAM_INFO?></textarea>
+        </div>
+        <div class="edittd">
+        <label class="editth">揪團人數：</label>
+            <div class="select-td">
+                <select name="TEAM_MEM" required>
+                    <?php
+                    for($i=1; $i<$teamsRow['FAC_MEM']; $i++){
+                        if($i == $teamsRow['TEAM_MEM']){
+                        echo '<option value="'.$i.'" selected>'.$i.'</option>';
+                        }else{
+                        echo '<option value="'.$i.'">'.$i.'</option>';
+                        };
+                    }
+
+                    ?>
+                </select>
+
+            </div>
+        </div>
+        <div class="edittd">
+        <label class="editth">上傳揪團海報：</label>
+        <label class="btn btn-info">
+            <input Type="File" name="upfile" id="upfile" style="display:none;" ;>
+                <img src="images/<?php echo $teamsRow["TEAM_IMG"];?>" id="show_pic" id="" wideditth="300" height="250" >
+        </div>
+        </label>
+            <div class="td">
+                <button class="submit">修改完成</button>
+            </div>
+        </div>
      </form>
 <?php
  }
@@ -83,12 +66,7 @@ try {
     echo "錯誤行號 : " , $e->getLine(), "<br>";
 };
 ?>
-<script src="../js/upfile.js"></script>
-<script>
-
-</script>
-</body>
-</html>
+<script src="js/upfile.js"></script>
 
 
 
