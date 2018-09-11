@@ -182,6 +182,8 @@ a{ text-decoration: none; }
 
 .table-date{
 	text-align: center;
+	font-family: 'HanWangZonYi';
+
 }
 
 .table-select{
@@ -192,6 +194,7 @@ a{ text-decoration: none; }
 .table-select-thead{
 	width: 100%;
 	display: block;
+	font-family: 'HanWangZonYi';
 }
 .table-select-scroll{
 	overflow: auto;
@@ -266,6 +269,9 @@ a{ text-decoration: none; }
 	border-radius: 4px;
 	width: 100%;
 	opacity: .7;
+	cursor: pointer;
+	border: none;
+	font-family: 'HanWangZonYi';
 }
 @media only screen and (max-width: 767px) {
 	
@@ -353,6 +359,9 @@ a{ text-decoration: none; }
 .padding-16{ padding: 16px 0; }
 .padding-32{ padding: 32px 0; }
 
+.padding-top-16{ padding-top: 16px; }
+
+
 @media only screen and (max-width: 767px) {
 	.padding-32{ padding: 16px 0; }
 }
@@ -421,7 +430,8 @@ a{ text-decoration: none; }
 }
 
 .table-modal{
-    width: 95%;
+	table-layout: auto;
+    width: 95%;  
     margin: auto;
     border-collapse: collapse;
 }
@@ -521,4 +531,27 @@ a{ text-decoration: none; }
 #queryFac4::-webkit-scrollbar-button {
   /*color: rgb(0, 82, 178);*/
   color: #ffb505;
+}
+
+.close{
+	float: right;
+	line-height: 0;
+}
+
+.modal-font{
+	font-size: 24px;
+	font-family: 'HanWangZonYi';
+}
+
+.modal-header{
+	padding: 16px 16px 0 16px;
+}
+
+.modal-body{
+	font-family: 'HanWangZonYi';
+}
+
+.modal-btn .btn{
+	padding: 16px 0;
+	font-size: 24px;
 }
