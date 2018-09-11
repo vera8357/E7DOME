@@ -226,14 +226,6 @@ a{ text-decoration: none; }
 	z-index: 0;
 }
 
-// .date:nth-child(1) .date-btn:after { content: 'SUN'; }
-// .date:nth-child(2) .date-btn:after { content: 'MON'; }
-// .date:nth-child(3) .date-btn:after { content: 'TUE'; }
-// .date:nth-child(4) .date-btn:after { content: 'WED'; }
-// .date:nth-child(5) .date-btn:after { content: 'THU'; }
-// .date:nth-child(6) .date-btn:after { content: 'FRI'; }
-// .date:nth-child(7) .date-btn:after { content: 'SAT'; }
-
 
 .table-select th,
 .table-select td{
@@ -540,14 +532,14 @@ a{ text-decoration: none; }
 
 
 /*scroll樣式更換*/
-// #queryFac1::-webkit-scrollbar,
-// #queryFac2::-webkit-scrollbar,
-// #queryFac3::-webkit-scrollbar,
-// #queryFac4::-webkit-scrollbar
-// {
-//   background-color: #ffb505;
-//   background-color: rgb(0, 82, 178);
-// }
+#queryFac1::-webkit-scrollbar,
+#queryFac2::-webkit-scrollbar,
+#queryFac3::-webkit-scrollbar,
+#queryFac4::-webkit-scrollbar
+{
+  background-color: #ffb505;
+  background-color: transparent;
+}
 #queryFac1::-webkit-scrollbar-thumb,
 #queryFac2::-webkit-scrollbar-thumb,
 #queryFac3::-webkit-scrollbar-thumb,
