@@ -115,7 +115,7 @@
 				<div class="wrapper">
 					<div class="pg2_fac_info">
 						<div class="fac_info_content">
-							<h2>羽球球場</h2>
+							<h2>攀岩場</h2>
 							<p>文案文案文案文案</p>
 							<p>文案文案文案文案</p>
 							<p>文案文案文案文案</p>
@@ -266,7 +266,7 @@
 					$('.home_pg1').removeClass('active');
 				}
 				if (destination.index == 1) {
-					$('#e7dome-text').hide();
+					$('.svg_none').hide();
 				}
 				if (destination.index == 2) {
 					$('.typing').css('animation','');
@@ -285,7 +285,11 @@
 
 				}
 				if (destination.index == 1) {
-					$('#e7dome-text').show();
+					$('.svg_none').show();
+					tl.from(bgd, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
+					t2.from('.item01', 0.5, { opacity: 0 }).from('.item01', 0.5, { y: -20, ease: Elastic.easeOut.config(1, 0.3) });
+					t3.from('.item02', 0.5, { opacity: 0 }).from('.item02', 0.5, { y: -20, ease: Elastic.easeOut.config(1, 0.3) });
+					t4.from('.player01,.player02,#pinkball,#blueball', 0.5, { opacity: 0 });
 
 				}
 				if (destination.index == 2) {
