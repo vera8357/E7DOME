@@ -83,7 +83,7 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 				<h1 id="member_h1">儲值紀錄</h1>
 
 				
-					
+					<div class="points_scrollbar">
 			
 
 					<div class="text_title">
@@ -146,7 +146,7 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 					
 					
 				
-
+			</div>
 
 
 			</div>

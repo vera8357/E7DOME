@@ -101,21 +101,21 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 									while ($order = $member->fetch(PDO::FETCH_ASSOC)){
 									 switch ($order['BOO_TIME']) {
 									 	case '1':
-									 		$order['BOO_TIME'] = "早場";
+									 		$order['BOO_TIME'] = "10:00";
 									 		break;
 									 	case '2':
-									 		$order['BOO_TIME'] = "午場";
+									 		$order['BOO_TIME'] = "14:00";
 									 		break;
 									 	default:
-									 	    $order['BOO_TIME'] = "晚場";	
+									 	    $order['BOO_TIME'] = "16:00";	
 									 }
 
 
 									  switch ($order['BOO_STATUS']) {
 									 	case '1':
-									 		$order['BOO_STATUS'] = "預約中";
+									 		$order['BOO_STATUS'] = "已預約";
 									 		break;
-									 	case '0':
+									 	case '2':
 									 		$order['BOO_STATUS'] = "已取消";
 									 		break;
 									 	default:
@@ -137,8 +137,8 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 										echo "<span class='button'>";
 										echo "<input type='button' value='揪團去'>";
 
-										if($order['BOO_STATUS'] === '預約中'){
-										echo "<input class='cancel' type='button' value='取消預約'>";
+										if($order['BOO_STATUS'] === '已預約'){
+										echo "<input class='cancel' type='button' value='取消預約' >";
 										}else{
 										echo "<input id='book_cancel' class='cancel' type='button' value='取消預約' disabled>";
 										}

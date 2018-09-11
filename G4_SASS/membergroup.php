@@ -99,6 +99,8 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
                             <li>預定人數</li>
                             <li></li>
                         </ul>
+
+                        <div class="group_scrollbar">
                       
                      <?php
                         
@@ -135,7 +137,7 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 
                     ?>    
                         
-                          
+                     </div>
                     </div>
                         
 
@@ -152,7 +154,7 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
                             <li></li>
                         </ul>
    
-                       
+                       <div class="group_scrollbar">
                          <?php
                         
                         try{
@@ -189,6 +191,7 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 
 
                          ?>
+                     </div>
 
                     </div>
 
@@ -205,7 +208,7 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
                             <li></li>
                         </ul>
    
-                       
+                       <div class="group_scrollbar">
                          <?php
                         
                         try{
@@ -244,7 +247,7 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
                          ?>
                         
 
-
+                        </div>
 
                     </div>
 
