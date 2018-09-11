@@ -49,8 +49,14 @@
 		</div>
 
 		<div class="section home_pg2">
-		
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
+		<script src="js/svgfloor.js">
 			
+		</script>
+		<div class="light"></div>
+		<div class="light"></div>
+		<div class="light"></div>
+		<div class="light"></div>
 			<div class="slide">
 				<div class="wrapper">
 					<div class="pg2_fac_info">
@@ -217,8 +223,6 @@
 			navigation: true,
 			// responsiveWidth : 992,
 			navigationTooltips: ['首頁','場地介紹','快來揪團','儲值點數','營業資訊'],
-			afterRender: function () {
-			},
 			onLeave: function (origin, destination, direction) {
 				if (destination.index == 0) {
 					$('.home_pg1').removeClass('active');
@@ -257,7 +261,51 @@
 
 					$('.home_pg5').addClass('active');
 				}
+			},
+			afterSlideLoad: function(section, origin, destination, direction){
+				var tl = new TimelineMax({ delay: 0 });
+				var t2 = new TimelineMax({ delay: .5 });
+				var t3 = new TimelineMax({ delay: 1});
+				var bgd = $('.basketfloor , .bowlingfloor , .badminfloor , .climbingfloor');
+				if (destination.index == 0) {
+					$('.svg_none').show();
+					tl.from(bgd, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
+					t2.from('.item01', 0.5, { opacity: 0 }).from('.item01', 0.5, { y: -20, ease: Elastic.easeOut.config(1, 0.3) });
+					t3.from('.item02', 0.5, { opacity: 0 }).from('.item02', 0.5, { y: -20, ease: Elastic.easeOut.config(1, 0.3) });
+				}
+				if (destination.index == 1) {
+					$('.svg_none').show();
+					tl.from(bgd, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
+					t2.from('.item01', 0.5, { opacity: 0 }).from('.item01', 0.5, { y: -20, ease: Elastic.easeOut.config(1, 0.3) });
+					t3.from('.item02', 0.5, { opacity: 0 }).from('.item02', 0.5, { y: -20, ease: Elastic.easeOut.config(1, 0.3) });
+				}
+				if (destination.index == 2) {
+					$('.svg_none').show();
+					tl.from(bgd, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
+					t2.from('.item01', 0.5, { opacity: 0 }).from('.item01', 0.5, { y: -20, ease: Elastic.easeOut.config(1, 0.3) });
+					
+				}
+				if (destination.index == 3) {
+					$('.svg_none').show();
+					tl.from(bgd, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
+				}
+			},
+			onSlideLeave: function(section, origin, destination, direction){
+				if (destination.index == 0) {
+					$('.svg_none').hide();
+				}
+				if (destination.index == 1) {
+					$('.svg_none').hide();
+				}
+				if (destination.index == 2) {
+					$('.svg_none').hide();
+				}
+				if (destination.index == 3) {
+					$('.svg_none').hide();
+
+				}
 			}
+			
 		});
 	</script>
 	<script type="text/javascript" src="js/slick.min.js"></script>
