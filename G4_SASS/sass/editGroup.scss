@@ -1,40 +1,82 @@
-form {
-        width: 1000px;
-        margin: 0 auto;
-        text-align: center;
+
+
+*{
+    text-decoration: none;
+    font-family: 'HanWangZonYi';
+}
+    #edit{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(219, 219, 219, 0.3), rgba(55, 137, 200, 0.4));
+    top: 0;
+    right: 0;
+    display:none;
+    position: fixed;
+
     }
 
-    table {
-        margin: 0 auto;
-        padding: 10px;
-        width: 500px;
-        border: 0px dotted #000;
+    #file {
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px 1px #888;
+    text-align: center;
+    position: relative;
+    background-color: #F8F8F8;
+    top: 150px;
+    left: 0;
+    margin: auto;
+    padding: 15px;
     }
 
-    td {
-        padding: 10px;
+    #file .select-td select{
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid rgb(169, 169, 169);
+    margin: 0px;
+    }
+    #file .select-td option{
+    background-color: #fff;
+    }
+    #file input{
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 5px;
+    text-align: left;
+    transition: .3s;
+    border: 0px;
+    background-color: transparent;
+    background-color: #fff;
+    font-size: 16px;
+    }
+    #file .editth {
+        text-align:left;
+        color: #0052B2;
+        margin-bottom: 10px;
+    }
+    #file .edittd{
+    padding: 15px 50px;
+    box-sizing: border-box;
     }
     .btn-info {
     color: #fff;
-    background-color: #0052b2;
-    border-color: #0052b2;
     cursor: pointer;
-    font-size: 20px;
-    padding: 0px 5px;
 	}
     .describe{
         height: 80px;
     }
 
-    .submit{
+    #file .submit{
         width: 80px;
         padding: 5px;
         border-radius: 5px; 
-        margin: auto;
+        margin: 20px auto;
         cursor: pointer;
     }
 
-    .submit{
+    #file .submit{
         background-color: #0052b2;
         color: #fff;
         border: 2px solid #0052b2;
@@ -44,5 +86,23 @@ form {
         background-color: transparent;
     }
     }
+    
 
+    #close_4 {
+      display: inline-block;
+    padding: 5px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;}
+
+  .info-des{
+    vertical-align: top;
+  }
+
+  
+    #file textarea{
+    width: 100%;
+    background-color: #fff;
+    }
 

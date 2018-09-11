@@ -2,6 +2,7 @@
     $(document).ready(function(){
 
     var fbhtml_url=window.location.toString();
+
     $(".createGroup").click(function createGroupCheck(){
         if($("#link_member").text() == "登入"){
             alert("請先登入");
@@ -14,6 +15,7 @@
     $("#close_3").click(function close3(){
         $id('create_in').style.display = 'none';
     });
+
 
 
     $("#join").click(function checkJoin(){
@@ -37,6 +39,12 @@
         }
     });
 
+    $("#editGroup").click(function editGroup(){
+            $("#edit").css("display","block");
+    });
+    $("#close_4").click(function close4(){
+        $('#edit').css("display","none");
+    });
 
     $("#submit").click(function checkMsg(){
         if($("#MSG_INFO").val()==""){
