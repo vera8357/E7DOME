@@ -192,6 +192,9 @@
 	#fp-nav{
 		display: none;
 	}
+	.teamItem.all{
+		display: none;
+	}
 	.teamMore.all .moreSkew{
 		display: none;
 	}
@@ -226,6 +229,9 @@
 		display: none;
 	}
 	.home_team {
+		position: absolute;
+		top:50%;
+		transform: translateY(-50%);
 		width: 100%;
 	}
 	.teamGroup{
