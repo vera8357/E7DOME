@@ -22,8 +22,8 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/groupInfo.css">
+    <link rel="stylesheet" type="text/css" href="css/editGroup.css">
     <link rel="stylesheet" href="css/group.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font.css">
@@ -62,14 +62,43 @@ try {
                     <?php echo $teamsRow["MEM_NAME"];?><img src="images/<?php echo $teamsRow["MEM_IMG"]; ?>" alt="" class="mem-head" id="mem-head1">
                     </div>
                     <div id="order-date">
-                        預約日期： <span><?php echo $teamsRow["BOO_DATE"];?> </span><span><?php
-                        if($teamsRow["BOO_TIME"]==1)
-                            $BOO_TIME='10:00';
-                        else if($teamsRow["BOO_TIME"]==2)
-                        $BOO_TIME='14:00';
-                        else if($teamsRow["BOO_TIME"]==3)
-                        $BOO_TIME='16:00';
-                        echo $BOO_TIME;?></span>
+                        預約日期： <span><?php echo $teamsRow["BOO_DATE"];?> </span>
+
+                        <span>
+                            <?php
+
+                        // if($teamsRow["BOO_TIME"]==1){
+                        //     $BOO_TIME='10:00';
+                        // }
+                        // else if($teamsRow["BOO_TIME"]==2){
+                        //      $BOO_TIME='14:00';
+                        // }
+                       
+                        // else if($teamsRow["BOO_TIME"]==3){
+                        //     $BOO_TIME='16:00';
+                        // }
+
+                             switch ($teamsRow["BOO_TIME"]) {
+                                        case '1':
+
+                                            $teamsRow['BOO_TIME'] = "10:00";
+                                            break;
+                                        case '2':
+                                            $teamsRow['BOO_TIME'] = "14:00";
+                                            break;
+                                        default:
+                                            $teamsRow['BOO_TIME'] = "16:00";   
+                                     }
+
+                                     echo $teamsRow['BOO_TIME'];
+
+
+
+
+                        
+                        ?>
+
+                        </span>
                     </div>
                     <div class="group-mem">
                         揪團人數：
@@ -205,6 +234,11 @@ try {
     </div>
 
     </section>
+    <div class="edit" id="edit">
+        <?php include 'php/editgroup.php';?>
+    </div>
+
+
     <script src="libs/jquery/dist/jquery.min.js"></script>
     <script src="js/groupinfo.js"></script>
 
