@@ -1,6 +1,9 @@
 body{ box-sizing: border-box; }
 
-a{ text-decoration: none; }
+a{ 
+	text-decoration: none; 
+	
+}
 
 .clearfix:after{
 	display: inline-block;
@@ -183,7 +186,9 @@ a{ text-decoration: none; }
 .table-date{
 	text-align: center;
 }
-
+.date a{
+	color:#555;
+}
 .table-select{
 	margin-top: 2%;
 }
@@ -219,7 +224,7 @@ a{ text-decoration: none; }
 	right: 0;
 	bottom: 0;
 	margin: auto;
-	line-height: 22px;
+	line-height: 32px;
 	z-index: 0;
 }
 
@@ -283,7 +288,7 @@ a{ text-decoration: none; }
 	width: 56px;
 	height: 56px;
 	text-align: center;
-	line-height: 24px;
+	line-height: 32px;
 	background-color: #fff;
 	border-radius: 8px;
 	cursor: pointer;
@@ -301,6 +306,7 @@ a{ text-decoration: none; }
 		width: 12vw;
 		height: 12vw;
 		font-size: 12px;
+		line-height:22px;
 	}
 }
 
