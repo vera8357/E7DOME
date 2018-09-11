@@ -17,13 +17,17 @@
     height: 300px;
     border: 10px solid #79C743;
   }
-  .vtb-intro-mask-overlay{
+  .bomb-rocket,
+  .normal-rocket {
     display: none;
   }
-  .vtb-intro-mask{
+  .vtb-intro-mask-overlay {
     display: none;
   }
-  .vtb-intro-mask_hover-overlay{
+  .vtb-intro-mask {
+    display: none;
+  }
+  .vtb-intro-mask_hover-overlay {
     display: none;
   }
   .text {
@@ -46,7 +50,6 @@
   .gift4 img {
     display: none;
   }
-
   @keyframes top-right {
     0% {
       transform: rotate(0deg);

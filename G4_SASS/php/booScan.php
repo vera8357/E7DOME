@@ -1,18 +1,56 @@
-<!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Examples</title>
-<meta name="description" content="">
-<meta name="keywords" content="">
-<link rel="stylesheet" href="../sealcss/sealmain.css">
-<link rel="stylesheet" type="text/css" href="../css/bookingTicket.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=320, user-scalable=no">
+  <meta name="touch_num" content="4">
+  <meta name="code" content="401">
+
+  <link rel="stylesheet" href="../sealcss/sealmain.css">
+  <!-- <link rel="stylesheet" type="text/css" href="css/bookingTicket.css"> -->
+
+  <style>
+    /* .mask {
+      color: #ffffff;
+      background: url(ffbe_files/bg.jpg) center;
+      background-size: cover;
+      opacity: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .mask div {
+      width: 100%;
+      height: 100%;
+      background: url(ffbe_files/icon_loader.gif) center no-repeat;
+      display: table;
+    }
+
+    .mask p {
+      text-shadow: 0 0 25px #000,
+      0 0 20px #000,
+      0 0 0.40px #000;
+      margin: 0;
+      padding: 0;
+      font-size: 140%;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+    } */
+  </style>
   <script src="../js/jq.js"> </script>
   <script src="../js/jqui.js"></script>
   <script src="../js/progressbar.js"></script>
-</head>
-<script type="text/javascript" charset="utf-8">
+  <!-- <script src="js/toastr.js"></script> -->
+  <!-- <script src="progressbar.js"></script> -->
+
+  <script type="text/javascript" charset="utf-8">
 
 
     var POINT_NUM = 4;
@@ -109,6 +147,7 @@
     }
   </script>
 </head>
+
 <body id="effect" class="background-logo" onload="init_body();" ontouchmove="event.preventDefault()" style="width:100%;overflow:hidden;">
 
   <div align="center">
@@ -133,7 +172,7 @@
       $('body').on('touchstart', function (e) {
         $(this).css(
           {
-            'background-image': "url('images/coupon-dialog2.png')",
+            'background-image': "url('../images/coupon-dialog2.png')",
             'background-repeat': 'no-repeat'
           });
         });
@@ -176,11 +215,9 @@ $booStatus = $pdo->prepare($sqlUpdate);
 $booStatus->bindValue(':BOO_NO', 1);
 $booStatus->execute();
 
-echo '已報到！歡迎進入E7DOME！'
+
 
 
 
 ?>
 
-</body>
-</html>

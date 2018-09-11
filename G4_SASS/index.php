@@ -14,8 +14,9 @@
 	<link rel="stylesheet" type="text/css" href="3dfac/css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="3dfac/css/style0.css" />
 	<link rel="stylesheet" type="text/css" href="3dfac/css/custom.css" />
-	<link rel="stylesheet" href="3dfac/css/fac-info.css">
+	<link rel="stylesheet" type="text/css" href="3dfac/css/fac-info.css">
 	<link rel="stylesheet" type="text/css" href="3dfac/css/fac-animation.css" />
+	<link rel="stylesheet" type="text/css" href="3dfac/css/fac-info.css" />
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<script src="3dfac/js/modernizr-custom.js"></script>
 
@@ -48,7 +49,11 @@
 		</div>
 
 		<div class="section home_pg2">
-			<?php include '3dfac.php';?>
+		
+			<div class="slide"><?php include '3dfac.php';?></div>
+			<div class="slide"></div>
+			<div class="slide"></div>
+			
 		</div>
 
 		<div class="section home_pg3">
@@ -174,9 +179,8 @@
 			verticalCentered: false,
 			anchors: ['firstPage', 'secondPage', 'thirdPage', 'forthPage', 'lastPage'],
 			navigation: true,
+			// responsiveWidth : 992,
 			navigationTooltips: ['首頁','場地介紹','快來揪團','儲值點數','營業資訊'],
-			// showActiveTooltip: true,
-			// autoScrolling: false,
 			afterRender: function () {
 			},
 			onLeave: function (origin, destination, direction) {
@@ -204,24 +208,7 @@
 				}
 				if (destination.index == 1) {
 					$('#e7dome-text').show();
-					// var tl = new TimelineMax({ delay: 0 });
-					// var t2 = new TimelineMax({ delay: 0.5 });
-					// var t3 = new TimelineMax({ delay: 1 });
-					// var t4 = new TimelineMax({ delay: 1.5 });
 
-					// var bgd1 = $('.map--1');
-					// var bgd2 = $('.map--2');
-					// var bgd3 = $('.map--3');
-					// var bgd4 = $('.map--4');
-					// bgd1.show();
-					// bgd2.show();
-					// bgd3.show();
-					// bgd4.show();
-
-					// tl.from(bgd1, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
-					// t2.from(bgd2, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
-					// t3.from(bgd3, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
-					// t4.from(bgd4, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
 				}
 				if (destination.index == 2) {
 					$('.typing').css('animation','typing 2s steps(21, end) forwards,blink-caret .5s step-end infinite alternate');

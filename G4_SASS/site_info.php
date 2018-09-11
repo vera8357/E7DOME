@@ -12,9 +12,9 @@
     <script src="js/site_info.js"></script>
 </head>
 <body>
-    <header>
+    
 		<?php include 'header.php';?>
-    </header>
+    
     <div class="site_info_pg">
         <div class="site_info_pg_bluebox2">
             <h3>場地介紹</h3>

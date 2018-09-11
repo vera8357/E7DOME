@@ -12,6 +12,10 @@
 	<?php include 'header.php';?>
 
 <?php
+	if( isset($_SESSION['refreshChk']) ){
+		unset($_SESSION['refreshChk']);
+	}
+
     if(isset($_SESSION["cate_no"])){
         $cate_no = $_SESSION["cate_no"];
         // unset($_SESSION["cate_no"]);
@@ -168,7 +172,7 @@
 			<input type="button" class="btn dim-orange cancel" value="取消預約">
 		</div>
 		<div class="modal-btn">
-			<input type="submit" class="btn dim-blue" value="確認預約">
+			<input type="submit" class="btn dim-blue" value="確認預約" id="submit-btn">
 		</div>
 	</div>
 </form>
@@ -213,14 +217,18 @@ function accActiveNow(){
 	});
 }
 
-
+var counter =1;
 function showTdyInfo(){
-	console.log('hi');
+	console.log('hiTDY');
 	var tdy = new Date(); 
 	var tdyDate = tdy.toISOString().slice(0,10);
 
-	for (var i = 1; i <=4 ; i++) {
-		var cate_no = i; // console.log(i);
+    if (counter===5) {
+        counter = 1;
+    }
+
+	// for (var i = 1; i <=4 ; i++) {
+		var cate_no = counter; // console.log(i);
     	$.ajax({
     		url: "php/booQuery.php",
     		type: 'post',
@@ -232,16 +240,23 @@ function showTdyInfo(){
     		success:function(data){
 	    		var cateNo =  '#queryFac' + cate_no; // console.log(cateNo);
 	        	$(cateNo).html(data); console.log('hi');
-				
-				$('.myBtn').click(function(){
+				console.log(counter);
+				counter++;
+				if (counter < 5) showTdyInfo();	
+			
+        	},
+			complete: function(){
+				$('.myBtn').click(function(e){
+					e.preventDefault();
 			    	var fac_no 		= $(this).nextAll().eq(0).val();
 			    	var boo_time_i 	= $(this).nextAll().eq(1).val();
 			    	showInfo(fac_no,tdyDate,boo_time_i);
 		        });
-        	}
+
+			}
     	});
     	
-	}
+	// }
 
 }
 
@@ -276,6 +291,7 @@ function showTargetInfo(targetDate){
 	});
 }
 
+
 function showInfo(fac_no,targetDate,boo_time_i){
 	console.log('hi2');
 	$.post("php/booModal.php",
@@ -286,7 +302,39 @@ function showInfo(fac_no,targetDate,boo_time_i){
 	},
 		function (data){
 			$('#tbl-md').html(data);
-			// modalOpen();
+
+					<?php 
+						if(isset($_SESSION["MEM_NO"]))
+						$mem_no = $_SESSION["MEM_NO"];
+						else 
+						$mem_no = 0;	 
+					?>
+
+					var session = <?php echo $mem_no?>;
+
+					$('#submit-btn').on('click', x2x)
+
+					function x2x(e){
+						e.preventDefault();
+						// var that = $(this);
+    					$(this).off('click'); // remove handler
+						if(session==0){
+							e.preventDefault();
+							alert('請先登入會員');
+							showLoginForm();
+						}
+					}
+
+
+
+					// $('#submit-btn').click(function(e){
+					// 	if(session==0){
+					// 		e.preventDefault();
+					// 		alert('請先登入會員');
+					// 		showLoginForm();
+					// 	}
+					// });
+
 		}
 	);
 }

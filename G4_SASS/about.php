@@ -45,7 +45,7 @@
               </div>
               <div class="block-video playControl">
                 <video class="video-item playItem" muted>
-                  <source src="images/about-material/about-animation/video/NEW CAMP NOU - Phased construction while continuing to play matches.mp4">
+                  <source src="images/about-material/about-animation/video/e7video-about.mp4">
                 </video>
               </div>
             </div>

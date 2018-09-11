@@ -193,3 +193,28 @@
         }
     }
 }
+@media screen and (max-width: 992px) {
+    .bg{
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    .book_and_team{
+        position: relative;
+        top:100px;
+        width: 100%;
+        margin: 0 auto;
+        background-color: transparent;
+        // height: 380px;
+        h2{
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+      }
+      .select_book,.select_team{
+          display: none;
+      }
+      .group.ticket{
+        opacity: 1;}
+      
+}

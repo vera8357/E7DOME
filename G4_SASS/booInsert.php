@@ -24,23 +24,26 @@
 </script>
 <?php
 
-
 // prevent refresh
-// if( isset($_SESSION['refreshChk']) ){
-//   unset($_SESSION['refreshChk']);
-//   header("location: booking.php");
-//   exit;
-// }else{
-//   $_SESSION['refreshChk'] = rand();
-// }
+if( isset($_SESSION['refreshChk']) ){
+  unset($_SESSION['refreshChk']);
+  header("location: booking.php");
+  exit;
+}else{
+  $_SESSION['refreshChk'] = rand();
+}
+
+// GET MEM_NO
+$MEM_NO = $_SESSION["MEM_NO"];
 
 // MEM_POINTS CHK
+$MEM_POINTS = $_SESSION["MEM_POINTS"];
 $FAC_POINTS = $_REQUEST["FAC_POINTS"];
-$MEM_POINTS = $_REQUEST["MEM_POINTS"];
 if ( $MEM_POINTS < $FAC_POINTS ) {
     echo '<script language="javascript">';
     echo 'alert("會員點數不足請儲值");';
-    echo "setTimeout(\"location.href = 'memberpoints.php';\",1500);";
+    // echo 'alert("'.$FAC_POINTS.'");';
+    echo "setTimeout(\"location.href = 'points_buy.php';\",1500);";
     echo '</script>';
   exit;
 }
@@ -54,7 +57,7 @@ values (:FAC_NO, :BOO_DATETIME, :BOO_DATE, :BOO_TIME, :MEM_NO, :BOO_STATUS)";
 $boo = $pdo->prepare($sqlInsert);
 
 // Update
-$sqlUpdate = "update member set MEM_POINTS = :MEM_POINTS - :FAC_POINTS WHERE MEM_NO = :MEM_NO";
+$sqlUpdate = "update member set MEM_POINTS = :MEM_POINTS-:FAC_POINTS WHERE MEM_NO = :MEM_NO";
 $mem = $pdo->prepare($sqlUpdate);
 
 
@@ -69,19 +72,22 @@ $boo->bindValue(':BOO_DATETIME', $_REQUEST["BOO_DATETIME"]);
 $boo->bindValue(':BOO_DATE',$_REQUEST["BOO_DATE"]);
 $boo->bindValue(':BOO_TIME', $_REQUEST["BOO_TIME"]);
 
-$boo->bindValue(':MEM_NO',$_REQUEST["MEM_NO"]);
+$boo->bindValue(':MEM_NO',$MEM_NO);
 
 $boo->bindValue(':BOO_STATUS', $_REQUEST["BOO_STATUS"]);
 $boo->execute();
 $lastBooNo = $pdo->lastInsertId();
 
-$mem->bindValue(':MEM_NO', $_REQUEST["MEM_NO"]);
-$mem->bindValue(':FAC_POINTS', $_REQUEST["FAC_POINTS"]);
-$mem->bindValue(':MEM_POINTS', $_REQUEST["MEM_POINTS"]);
+$mem->bindValue(':MEM_NO', $MEM_NO);
+$mem->bindValue(':MEM_POINTS', $MEM_POINTS);
+$mem->bindValue(':FAC_POINTS', $FAC_POINTS);
+
 $mem->execute();
 
 // insert DB
 $pdo->commit();
+
+$_SESSION["MEM_POINTS"] = $MEM_POINTS - $FAC_POINTS;
 	
 } catch (Exception $e) {
 	echo $e->getMessage(), '<br>';
@@ -123,7 +129,7 @@ $booTicket = $pdo->query($sqlBoo);
     $host= gethostname();
     $ip = gethostbyname($host);
     // $ip = $_SERVER['SERVER_ADDR'];
-    $codeContents = "$ip/demo-projects/CD102/CD102G4/php/booScan.php?BOO_NO=$lastBooNo";
+    $codeContents = "http://".$ip."/demo-projects/CD102/CD102G4/php/booScan.php?BOO_NO=$lastBooNo";
      
     // we need to generate filename somehow,  
     // with md5 or with database ID used to obtains $codeContents... 

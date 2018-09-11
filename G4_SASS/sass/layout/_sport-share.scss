@@ -1,5 +1,8 @@
 *{
-    outline:1px solid red;
+    // outline:1px solid red;
+}
+a{
+    text-decoration: none;
 }
 img{
     vertical-align: middle;
@@ -131,13 +134,13 @@ body {
 .site_item{
     display:inline-block;
     width:33.3%;
-    padding-top: 6%;
+    padding-top: 0%;
     text-align: center;
     cursor: pointer;
 }
 .site_item_img{
     width:100%;
-    padding-top: 100%;
+    padding-top: 85%;
     height:0;
     position: relative;
 }
@@ -151,7 +154,7 @@ body {
 }
 .site_button{
     width:90%;
-    font-size: 20px;
+    font-size: 16px;
     margin:auto;
     outline:0;
     cursor: pointer;
@@ -266,6 +269,7 @@ body {
     font-size: 30px;
     line-height: 2;
     margin-bottom: 50px;
+    cursor: pointer;
 }
 .assess_table input{
     position: absolute;
@@ -273,9 +277,9 @@ body {
     opacity: 0;
 }
 .assess_table table{
-    width:80%;
+    width:98%;
     margin:auto;
-    height:500px;
+    height:350px;
     overflow-y: scroll;
     display:block;
 }
@@ -434,7 +438,7 @@ body {
 .teamAll h3{
 	text-align: center;
 	color: #ffb505;
-	font-size: 24px;
+	font-size: 2vw;
 	margin-top: 15px;
 	margin-bottom: 45px;
 	font-style: oblique;
@@ -443,10 +447,21 @@ body {
 .bookin_list tr td span img{
     width:16px;
 }
+.morebg{
+    padding:10% 20%;
+}
+.teamDate,
+.teamMem,
+.teamTxt{
+    // font-size: 1.5vw;
+    // line-height: 1.5;
+    color:#aaaaaa;
+}
 @media screen and (max-width:1200px){
     .site_info_wrap{
         width:90%;
     }
+    
     .site_info_wrap h3,
     .assess_wrap h3,
     .group_page h3{
@@ -474,13 +489,44 @@ body {
         padding-bottom: 10%;
     }
     .assess_table table{
-        width:90%;
+        width:98%;
     }
     .group_page_content{
         width:90%;
     }
     .group_page_tri{
         top:-180%;
+    }
+    .teamAll h3{
+        text-align: center;
+        color: #ffb505;
+        font-size: 2vw;
+        margin-top: 15px;
+        margin-bottom: 35px;
+        font-style: oblique;
+        font-family: 'HanWangZonYi';
+    }
+    .morebg{
+        padding:5% 10%;
+    }
+    .teamDay{
+        font-size: 2vw;
+        line-height: 1;
+    }
+    .teamMonth{
+        font-size: 1.5vw;
+        line-height: 1;
+    }
+    .teamName{
+        font-size: 2vw;
+        padding-bottom: 0;
+    }
+    .teamDate,
+    .teamMem,
+    .teamTxt{
+        font-size: 1.5vw;
+        line-height: 1.5;
+        color:#aaaaaa;
     }
     // .site_info_tri1{
     //     border-width: 0 0 60vw 70vw;}
@@ -495,18 +541,20 @@ body {
     //     top:-180%;
     //     border-width: 0 25vw 23vw 0;}
 }
-@media screen and (max-width:768px){
+@media screen and (max-width:767px){
     .site_info_wrap{
         width:90%;
     }
     .site_info_wrap h3,
     .assess_wrap h3,
     .group_page h3{
-        font-size: 24px;
+        font-size: 6vw;
         line-height: 2;
     }
     .group_page h3{
-        font-size: 20px;
+        padding-top: 5%;
+        font-size: 7vw;
+        text-align: center;
     }
     .slider{
         width:100%;
@@ -545,11 +593,18 @@ body {
         padding:10% 1% 0 1%;
     }
     
+    .home_team{
+        font-size: 0;
+        float: inherit;
+        width: 100%;
+        padding:0 0 5% 0;
+    }
     .assess_table label{
-        font-size: 18px;
+        font-size: 14px;
         margin-bottom: 2%;
         letter-spacing: 1px;
         font-weight: 100;
+        cursor: pointer;
     }
     .sport_tr{
         display:flex;
@@ -573,6 +628,7 @@ body {
     }
     .sport_td:nth-child(4){
         width:50%;
+        // order:3;
     }
     .assess_wrap{
         width:80%;
@@ -609,5 +665,55 @@ body {
         border-width: 0 0 33vw 25vw;}
     .assess_tri3{
         border-width: 0 25vw 23vw 0;
+    }
+    .morebg{
+        padding:5% 10%;
+    }
+    .teamGroup{
+        width:100%;
+    }
+    .all_img{
+        display: block;
+    }
+    .teamAll{
+        background-image: url(../images/index/teamAll.png);
+    }
+    .teamItem,
+    .teamItem.all{
+        width:100%;
+        // margin:auto;
+    }
+    .teamItem.all{
+        display: none;
+    }
+    .teamOne{
+        padding-bottom: 120%;
+    }
+    .teamDay{
+        font-size: 6vw;
+        line-height: 1;
+    }
+    .teamMonth{
+        font-size: 6vw;
+        line-height: 1;
+    }
+    .teamName{
+        font-size: 6vw;
+        padding-bottom: 10px;
+    }
+    .teamDate,
+    .teamMem,
+    .teamTxt{
+        font-size: 4vw;
+        line-height: 1.5;
+        color:#aaaaaa;
+    }
+    .bgcball{
+        display:none;
+    }
+    .slider_li{
+        outline:0;
+        height:250px;
+        overflow: hidden;
     }
 }

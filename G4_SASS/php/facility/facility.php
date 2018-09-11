@@ -61,7 +61,7 @@
             </td>
             <td class="td_img">
                 <label id="update_img">
-                    <input type="file" name="facimg" class="file"><img src="images/sport/<?php echo $data["FAC_IMG1"]?>" id="upimg">
+                    <input type="file" name="facimg" class="file"><img src="images/fac_img/<?php echo $data["FAC_IMG1"]?>" id="upimg">
                 </label>
             </td>
             <td>

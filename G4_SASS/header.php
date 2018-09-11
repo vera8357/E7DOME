@@ -37,6 +37,7 @@
 				<li>
 					<a href="chat-robot.php"> 諮詢專區 </a>
 				</li>
+				<li class="buy_hidden"><a href="points_buy.php"> 儲值點數</a></li>
 			</ul>
 		</div>
 		<script>
