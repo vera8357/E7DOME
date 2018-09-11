@@ -50,9 +50,6 @@
 
 		<div class="section home_pg2">
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
-		<script src="js/svgfloor.js">
-			
-		</script>
 		<div class="light"></div>
 		<div class="light"></div>
 		<div class="light"></div>
@@ -60,8 +57,9 @@
 			<div class="slide">
 				<div class="wrapper">
 					<div class="pg2_fac_info">
-						<h2>籃球場</h2>
-						<p>文案文案文案文案文案</p>
+						<div class="fac_info_content">
+							<h2>籃球場</h2>
+						</div>
 					</div>
 					<div class = "pg2_fac_svg">
 					<?php include 'pg2_basket.php';?>
@@ -71,7 +69,11 @@
 			</div>	
 			<div class="slide">
 				<div class="wrapper">
-					<div class="pg2_fac_info"></div>
+					<div class="pg2_fac_info">
+						<div class="fac_info_content">
+							
+						</div>
+					</div>
 					<div class = "pg2_fac_svg">
 					<?php include 'pg2_bowling.php';?>
 				</div>
@@ -80,7 +82,11 @@
 			</div>
 			<div class="slide">
 				<div class="wrapper">
-					<div class="pg2_fac_info"></div>
+					<div class="pg2_fac_info">
+						<div class="fac_info_content">
+
+						</div>
+					</div>
 					<div class = "pg2_fac_svg">
 					<?php include 'pg2_badmin.php';?>
 				</div>
@@ -89,7 +95,11 @@
 			</div>
 			<div class="slide">
 				<div class="wrapper">
-					<div class="pg2_fac_info"></div>
+					<div class="pg2_fac_info">
+						<div class="fac_info_content">
+
+						</div>
+					</div>
 					<div class = "pg2_fac_svg">
 					<?php include 'pg2_climbing.php';?>
 				</div>
