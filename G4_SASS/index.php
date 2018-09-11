@@ -50,9 +50,6 @@
 
 		<div class="section home_pg2">
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
-		<script src="js/svgfloor.js">
-			
-		</script>
 		<div class="light"></div>
 		<div class="light"></div>
 		<div class="light"></div>
@@ -60,8 +57,9 @@
 			<div class="slide">
 				<div class="wrapper">
 					<div class="pg2_fac_info">
-						<h2>籃球場</h2>
-						<p>文案文案文案文案文案</p>
+						<div class="fac_info_content">
+							<h2>籃球場</h2>
+						</div>
 					</div>
 					<div class = "pg2_fac_svg">
 					<?php include 'pg2_basket.php';?>
@@ -71,7 +69,11 @@
 			</div>	
 			<div class="slide">
 				<div class="wrapper">
-					<div class="pg2_fac_info"></div>
+					<div class="pg2_fac_info">
+						<div class="fac_info_content">
+							
+						</div>
+					</div>
 					<div class = "pg2_fac_svg">
 					<?php include 'pg2_bowling.php';?>
 				</div>
@@ -80,7 +82,11 @@
 			</div>
 			<div class="slide">
 				<div class="wrapper">
-					<div class="pg2_fac_info"></div>
+					<div class="pg2_fac_info">
+						<div class="fac_info_content">
+
+						</div>
+					</div>
 					<div class = "pg2_fac_svg">
 					<?php include 'pg2_badmin.php';?>
 				</div>
@@ -89,7 +95,11 @@
 			</div>
 			<div class="slide">
 				<div class="wrapper">
-					<div class="pg2_fac_info"></div>
+					<div class="pg2_fac_info">
+						<div class="fac_info_content">
+
+						</div>
+					</div>
 					<div class = "pg2_fac_svg">
 					<?php include 'pg2_climbing.php';?>
 				</div>
@@ -223,8 +233,6 @@
 			navigation: true,
 			// responsiveWidth : 992,
 			navigationTooltips: ['首頁','場地介紹','快來揪團','儲值點數','營業資訊'],
-			afterRender: function () {
-			},
 			onLeave: function (origin, destination, direction) {
 				if (destination.index == 0) {
 					$('.home_pg1').removeClass('active');
@@ -263,7 +271,54 @@
 
 					$('.home_pg5').addClass('active');
 				}
+			},
+			afterSlideLoad: function(section, origin, destination, direction){
+				var tl = new TimelineMax({ delay: 0 });
+				var t2 = new TimelineMax({ delay: .5 });
+				var t3 = new TimelineMax({ delay: 1});
+				var t4 = new TimelineMax({ delay: 1.5});
+				var bgd = $('.basketfloor , .bowlingfloor , .badminfloor , .climbingfloor');
+				if (destination.index == 0) {
+					$('.svg_none').show();
+					tl.from(bgd, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
+					t2.from('.item01', 0.5, { opacity: 0 }).from('.item01', 0.5, { y: -20, ease: Elastic.easeOut.config(1, 0.3) });
+					t3.from('.item02', 0.5, { opacity: 0 }).from('.item02', 0.5, { y: -20, ease: Elastic.easeOut.config(1, 0.3) });
+					t4.from('.player01,.player02', 0.5, { opacity: 0 });
+				}
+				if (destination.index == 1) {
+					$('.svg_none').show();
+					tl.from(bgd, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
+					t2.from('.item01', 0.5, { opacity: 0 }).from('.item01', 0.5, { y: -20, ease: Elastic.easeOut.config(1, 0.3) });
+					t3.from('.item02', 0.5, { opacity: 0 }).from('.item02', 0.5, { y: -20, ease: Elastic.easeOut.config(1, 0.3) });
+					t4.from('.player01,#pinkball,#blueball', 0.5, { opacity: 0 });
+				}
+				if (destination.index == 2) {
+					$('.svg_none').show();
+					tl.from(bgd, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
+					t2.from('.item01', 0.5, { opacity: 0 }).from('.item01', 0.5, { y: -20, ease: Elastic.easeOut.config(1, 0.3) });
+					t4.from('.player01,.player02', 0.5, { opacity: 0 });
+				}
+				if (destination.index == 3) {
+					$('.svg_none').show();
+					tl.from(bgd, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
+				}
+			},
+			onSlideLeave: function(section, origin, destination, direction){
+				if (destination.index == 0) {
+					$('.svg_none').hide();
+				}
+				if (destination.index == 1) {
+					$('.svg_none').hide();
+				}
+				if (destination.index == 2) {
+					$('.svg_none').hide();
+				}
+				if (destination.index == 3) {
+					$('.svg_none').hide();
+
+				}
 			}
+			
 		});
 	</script>
 	<script type="text/javascript" src="js/slick.min.js"></script>
