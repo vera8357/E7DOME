@@ -20,25 +20,25 @@
         </div>
         <ul>
             <li>
-                <a href="back_book.php" class="hover-a">預約訂單管理</a>
+                <a href="back_book.html" class="hover-a">預約訂單管理</a>
             </li>
             <li>
-                <a href="back_card.php" class="hover-a">點數卡商品管理</a>
+                <a href="back_card.html" class="hover-a">點數卡商品管理</a>
             </li>
             <li>
-                <a href="back_card_order.php" class="hover-a">儲值紀錄</a>
+                <a href="back_card_order.html" class="hover-a">儲值紀錄</a>
             </li>
             <li>
-                <a href="#" class="hover-a">場地管理</a>
+                <a href="back_fac.php" class="hover-a">場地管理</a>
             </li>
             <li>
-                <a href="#" class="hover-a">會員管理</a>
+                <a href="back_mem.php" class="hover-a">會員管理</a>
             </li>
             <li>
-                <a href="back_robot.php" class="hover-a">聊天機器人維護</a>
+                <a href="back_robot_1.php" class="hover-a">聊天機器人維護</a>
             </li>
             <li>
-                <a href="#" class="hover-a">管理員管理</a>
+                <a href="back_admin.php" class="hover-a">管理員管理</a>
             </li>
             <li>
                 <a href="#" class="hover-a">登出</a>
@@ -48,13 +48,10 @@
     <div class="back_content">
         <h2>聊天機器人維護</h2>
         <div id="tab-page">
-            <div id="back_add">
-                <!-- <img src="images/back_page/plus.png" alt=""> -->
-                <input type="button" value="新增問答" id="new_qa">
-            </div>
             <ul class="tab-title">
                 <li class="active"><a href="#tab01">諮詢問答</a></li>
                 <li><a href="#tab02">待回答問題</a></li>
+                <li><input type="button" value="新增問答" id="new_qa"></li>
             </ul>
         </div>
         <form>

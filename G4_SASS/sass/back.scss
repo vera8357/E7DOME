@@ -109,30 +109,32 @@ h2 {
 }
 
 .search {
-  width: 90%;
+  width: 95%;
   margin: 0 auto 10px; // padding: 5px 10px;
   text-align: left;
 }
 
 /*=======*/
 
-#book_search {
+#book_search,
+#search {
   font-size: 18px;
   font-family: "微軟正黑體";
   padding: 5px 10px;
-  width: 10%;
+  width: 15%;
 }
 
 .btn {
   font-size: 18px;
   font-family: "微軟正黑體";
   padding: 5px 20px;
+  // margin-left: 2.5%;
 }
 
 table {
   // display: block;
   margin: 0 auto; // height: 90%;
-  width: 90%;
+  width: 95%;
 }
 
 th,
@@ -160,7 +162,7 @@ select {
 /*// 頁簽樣式*/
 
 #tab-page>ul {
-  width: 90%;
+  width: 95%;
   display: block;
   margin: 0 auto;
   list-style: none;
@@ -198,19 +200,20 @@ select {
 
 #back_add {
   text-align: right;
-  width: 90%;
+  width: 95%;
   margin: 10px auto;
 }
 
 #new_qa {
   position: relative;
   right: 0;
-  bottom: -70px;
-  background-color: #4c9efe;
-  color: #fff;
+  bottom: 3px;
+  // background-color: #4c9efe;
+  color: #000;
   border: none;
   padding: 10px;
   cursor: pointer;
+  font-family: '微軟正黑體';
 }
 
 #new_qa:active {
