@@ -18,7 +18,7 @@
                 <?php
                     $star ='';
                     for($i = 0; $i<$site_info['BOO_RANK'] ; $i++){
-                        $star = $star."<img src='images/sport/champ.png'/>";
+                        $star = $star."★";
                     }
                     echo $star;
                 ?>
