@@ -625,7 +625,14 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+  .home_pg3  .home_team {
+		position: absolute;
+		top:50%;
+		transform: translateY(-50%);
+		width: 100%;
+	}
   .typing {
+    display: none;
     border-right: 0px;
     width: 100%;
   }
