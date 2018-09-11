@@ -32,6 +32,8 @@ if ( 'classList' in document.documentElement ) {
     return elem.classList.contains( c );
   };
   addClass = function( elem, c ) {
+    // console.log(elem);
+    // console.log(c);
     elem.classList.add( c );
   };
   removeClass = function( elem, c ) {

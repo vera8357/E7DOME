@@ -134,13 +134,13 @@ body {
 .site_item{
     display:inline-block;
     width:33.3%;
-    padding-top: 6%;
+    padding-top: 0%;
     text-align: center;
     cursor: pointer;
 }
 .site_item_img{
     width:100%;
-    padding-top: 100%;
+    padding-top: 85%;
     height:0;
     position: relative;
 }
@@ -154,7 +154,7 @@ body {
 }
 .site_button{
     width:90%;
-    font-size: 20px;
+    font-size: 16px;
     margin:auto;
     outline:0;
     cursor: pointer;
@@ -279,7 +279,7 @@ body {
 .assess_table table{
     width:98%;
     margin:auto;
-    height:500px;
+    height:350px;
     overflow-y: scroll;
     display:block;
 }
@@ -489,7 +489,7 @@ body {
         padding-bottom: 10%;
     }
     .assess_table table{
-        width:90%;
+        width:98%;
     }
     .group_page_content{
         width:90%;
@@ -541,18 +541,18 @@ body {
     //     top:-180%;
     //     border-width: 0 25vw 23vw 0;}
 }
-@media screen and (max-width:768px){
+@media screen and (max-width:767px){
     .site_info_wrap{
         width:90%;
     }
     .site_info_wrap h3,
     .assess_wrap h3,
     .group_page h3{
-        font-size: 8vw;
+        font-size: 6vw;
         line-height: 2;
     }
     .group_page h3{
-        padding-top: 3%;
+        padding-top: 5%;
         font-size: 7vw;
         text-align: center;
     }
@@ -593,8 +593,14 @@ body {
         padding:10% 1% 0 1%;
     }
     
+    .home_team{
+        font-size: 0;
+        float: inherit;
+        width: 100%;
+        padding:0 0 5% 0;
+    }
     .assess_table label{
-        font-size: 18px;
+        font-size: 14px;
         margin-bottom: 2%;
         letter-spacing: 1px;
         font-weight: 100;
@@ -677,6 +683,9 @@ body {
         width:100%;
         // margin:auto;
     }
+    .teamItem.all{
+        display: none;
+    }
     .teamOne{
         padding-bottom: 120%;
     }
@@ -701,5 +710,10 @@ body {
     }
     .bgcball{
         display:none;
+    }
+    .slider_li{
+        outline:0;
+        height:250px;
+        overflow: hidden;
     }
 }

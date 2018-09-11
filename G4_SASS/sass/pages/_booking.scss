@@ -134,18 +134,19 @@ a{ text-decoration: none; }
 
 .activeNow .panel{
 	padding: 16px;
-	max-width: 75%;
+	max-width: 100%;
 }
 @media only screen and (max-width: 767px) {
     .activeNow .panel {
         max-width: 100%;
-    }
+	}
 }
 
-
-.panel h3{
-	display: block;
-	position: relative;
+.panel h3 {
+    display: block;
+    position: relative;
+    font-family: 'HanWangZonYi';
+    letter-spacing: 4px;
 }
 
 .panel {
@@ -155,14 +156,15 @@ a{ text-decoration: none; }
     position: absolute;
     left: 0;
     right: 0;
-    top: 0;
+    // top: 0;
     bottom: 0;
     z-index: 1;
     margin: auto;
 }
 @media only screen and (max-width: 767px) {
     .panel {
-        height: auto;
+		height: auto;
+		bottom:auto;
     }
 }
 
@@ -183,7 +185,7 @@ a{ text-decoration: none; }
 }
 
 .table-select{
-	margin-top: 10%;
+	margin-top: 2%;
 }
 
 .table-select-scroll,
@@ -193,8 +195,13 @@ a{ text-decoration: none; }
 }
 .table-select-scroll{
 	overflow: auto;
-	height: 40vmin;
+	height: 30vmin;
 	border-top: 1px solid #fff;
+}
+@media only screen and (max-width: 767px){
+	.table-select-scroll{
+		height: 53vmin;
+	}
 }
 
 @media only screen and (max-width: 767px) {
@@ -212,7 +219,7 @@ a{ text-decoration: none; }
 	right: 0;
 	bottom: 0;
 	margin: auto;
-	line-height: 32px;
+	line-height: 22px;
 	z-index: 0;
 }
 
@@ -234,13 +241,18 @@ a{ text-decoration: none; }
 
 
 
+
 .table-select tr:nth-child(1) td{
 	padding-top: 32px;
 }
 
 @media only screen and (max-width: 767px) {
+	
 	.table-select tr:nth-child(1) td{
 		padding-top: 16px;
+	}
+	.table-select td{
+		font-size: 14px;
 	}
 }
 
@@ -255,6 +267,12 @@ a{ text-decoration: none; }
 	width: 100%;
 	opacity: .7;
 }
+@media only screen and (max-width: 767px) {
+	
+	.btn{
+		font-size: 12px;
+	}
+}
 
 .btn:hover{
 	opacity: 1;
@@ -265,15 +283,24 @@ a{ text-decoration: none; }
 	width: 56px;
 	height: 56px;
 	text-align: center;
-	line-height: 32px;
+	line-height: 24px;
 	background-color: #fff;
 	border-radius: 8px;
 	cursor: pointer;
 }
+
+@media only screen and (max-width: 1200px) {
+	.date-btn{
+		width: 4vw;
+		height: 4vw;
+		font-size: 12px;
+	}
+}
 @media only screen and (max-width: 767px) {
 	.date-btn{
-		width: 48px;
-		height: 48px;
+		width: 12vw;
+		height: 12vw;
+		font-size: 12px;
 	}
 }
 
@@ -291,9 +318,24 @@ a{ text-decoration: none; }
 
 .text-white {color: #fff;}
 
-.text-lg {font-size: 24px;}
+.text-lg {
+	font-size: 24px;
+	// letter-spacing: 5px;
+    font-family: 'HanWangZonYi';
+}
+
+@media only screen and (max-width: 767px) {
+    .text-lg {
+		font-size: 16px;
+		letter-spacing: 5px;
+		font-family: 'HanWangZonYi';
+	}
+}
 .text-xlg {font-size: 36px;}
 .text-xxlg {font-size: 48px;}
+.text-xxlg{
+	font-size: 36px;
+}
 
 .align-left {text-align: left;}
 
@@ -310,6 +352,10 @@ a{ text-decoration: none; }
 .padding-md{ padding: 16px; }
 .padding-16{ padding: 16px 0; }
 .padding-32{ padding: 32px 0; }
+
+@media only screen and (max-width: 767px) {
+	.padding-32{ padding: 16px 0; }
+}
 
 .margin-top-16{margin-top: 16px;}
 .margin-bottom-16{ margin-bottom: 16px; }
