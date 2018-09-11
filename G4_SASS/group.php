@@ -20,7 +20,7 @@ try {
         crossorigin="anonymous">
 </head>
 
-<body class="group-body">
+<body class="group-body" id="group-body">
     <header>
         <?php include 'header.php';?>
     </header>
@@ -208,9 +208,7 @@ try {
         });
 
     </script>
-    <script>
-
-    </script>
+    <script src="js/groupinfo.js"></script>
 </body>
 
 </html>
