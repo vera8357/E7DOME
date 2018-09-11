@@ -364,6 +364,21 @@ a{
 		transition: .5s;
 		transition-delay: .5s; } 
 }
+	.home_pg2 .wrapper{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.pg2_fac_info{
+		width:40%;
+		background-color: #fff;
+	}
+	.home_pg2 .pg2_fac_svg{
+		width:60%;
+		svg{
+			width: 100%;
+	}
+	}
 
 .home_pg3{
 	background-image: url("../images/index/bg2.png");
