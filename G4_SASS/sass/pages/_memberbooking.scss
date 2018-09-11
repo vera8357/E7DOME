@@ -383,9 +383,13 @@ input[type="submit"]{
 
 }
 
-#book_cancel{
+.cancel.book_cancel{
     border:1px solid #666;
     color:#666;
+    &:hover{
+        border:1px solid #666;
+        color:#666 !important; 
+    }
 }
 
 
