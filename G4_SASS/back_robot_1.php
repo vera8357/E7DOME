@@ -1,3 +1,9 @@
+<?php 
+ob_start();
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,39 +29,49 @@
                 <a href="back_book.php" class="hover-a">預約訂單管理</a>
             </li>
             <li>
-                <a href="back_card.php" class="hover-a">點數卡商品管理</a>
+                <a href="back_card01.php" class="hover-a">點數卡商品管理</a>
             </li>
             <li>
-                <a href="back_card_order.php" class="hover-a">儲值紀錄</a>
+                <a href="back_card_order01.php" class="hover-a">儲值紀錄</a>
             </li>
             <li>
-                <a href="#" class="hover-a">場地管理</a>
+                <a href="back_fac.php" class="hover-a">場地管理</a>
             </li>
             <li>
-                <a href="#" class="hover-a">會員管理</a>
+                <a href="back_mem.php" class="hover-a">會員管理</a>
             </li>
             <li>
-                <a href="back_robot.php" class="hover-a">聊天機器人維護</a>
+                <a href="back_robot_1.php" class="hover-a">聊天機器人維護</a>
             </li>
             <li>
-                <a href="#" class="hover-a">管理員管理</a>
+                <?php
+                    if( $_SESSION['ADMIN_PERM'] == 0){
+                        echo "<a href='back_admin.php' class='hover-a'>管理員管理</a>";
+                    }else{
+                        echo "<a href='#' style='display:none' class='hover-a'>管理員管理</a>";
+                    }
+                ?>
             </li>
             <li>
-                <a href="#" class="hover-a">登出</a>
+                <form action="php/back_logout.php" class="lout">
+                    <input type="submit" value='登出' class="loutbtn">
+                </form>
             </li>
         </ul>
     </div>
     <div class="back_content">
         <h2>聊天機器人維護</h2>
-        <div id="tab-page">
-            <div id="back_add">
-                <!-- <img src="images/back_page/plus.png" alt=""> -->
-                <input type="button" value="新增問答" id="new_qa">
-            </div>
-            <ul class="tab-title">
+        <!-- <div id="tab-page"> -->
+            <!-- <ul class="tab-title">
                 <li class="active"><a href="#tab01">諮詢問答</a></li>
                 <li><a href="#tab02">待回答問題</a></li>
-            </ul>
+                <li><input type="button" value="新增問答" id="new_qa"></li>
+            </ul> -->
+        <!-- </div> -->
+        <div class="search">
+            <input type="button" value="諮詢問答"  class="btn active">
+            <input type="button" value="待回答問題" class="btn">
+            <input type="button" value="新增問答" id="new_qa" class="btn">
         </div>
         <form>
             <table id="tab01">
@@ -90,7 +106,8 @@
 
     <script>
         $(document).ready(function () {
-            var tab = $('.tab-title li'); //頁籤按鈕
+            // var tab = $('.tab-title li'); //頁籤按鈕
+            var tab = $('.search input');
             console.log(tab.eq(0));
             console.log(tab.eq(1));
             tab.eq(0).click(solve); //頁籤 1被按到執行solve
@@ -98,7 +115,7 @@
             window.onload = solve;//一讀取就執行solve
 
             function solve() {//諮詢管理
-                $('#back_add').show();
+                $('#new_qa').show();
                 $.ajax({
                     url: 'back_robot.php',
                     dataType: 'text',
@@ -154,7 +171,7 @@
             }
 
             function unsolve() {////尚未回答管理
-                $('#back_add').hide();
+                $('#new_qa').hide();
                 $.ajax({
                     url: 'back_robot.php',
                     dataType: 'text',
@@ -209,7 +226,7 @@
             }
 
 
-            $('#back_add').click(function () {
+            $('#new_qa').click(function () {
                 $.ajax({
                     url: 'back_robot_add.php',
                     dataType: 'text',

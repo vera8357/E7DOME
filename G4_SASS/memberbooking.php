@@ -91,7 +91,7 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 
 					try{
 							require_once("php/connect_g4.php");
-							$sql = "select * from booking where MEM_NO =".$_SESSION['MEM_NO']." ORDER BY BOO_DATE DESC";
+							$sql = "select * from booking left join facility  on booking.fac_no = facility.fac_no  where MEM_NO =".$_SESSION['MEM_NO']." ORDER BY BOO_DATE DESC";
 							$member = $pdo->query($sql);
 							
 							if($member->rowCount()==0){
@@ -101,27 +101,27 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 									while ($order = $member->fetch(PDO::FETCH_ASSOC)){
 									 switch ($order['BOO_TIME']) {
 									 	case '1':
-									 		$order['BOO_TIME'] = "早場";
+									 		$order['BOO_TIME'] = "10:00";
 									 		break;
 									 	case '2':
-									 		$order['BOO_TIME'] = "午場";
+									 		$order['BOO_TIME'] = "14:00";
 									 		break;
 									 	default:
-									 	    $order['BOO_TIME'] = "晚場";	
+									 	    $order['BOO_TIME'] = "16:00";	
 									 }
 
 
 									  switch ($order['BOO_STATUS']) {
 									 	case '1':
-									 		$order['BOO_STATUS'] = "預約中";
+									 		$order['BOO_STATUS'] = "已預約";
 									 		break;
-									 	case '0':
+									 	case '2':
 									 		$order['BOO_STATUS'] = "已取消";
 									 		break;
 									 	default:
 									 	    $order['BOO_STATUS'] = "已報到";	
 									 }
-									 	echo "<form action='evaluate.php'>";
+									 	
 										echo "<div class='booking'>";
 										echo "<span class='hold1'>";
 										echo "<img src='".$order['BOO_QRCODE']."'>";
@@ -129,7 +129,7 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 										echo "</span>";
 										echo "<span class='hold2'>";
 										echo "<p>訂單編號:<span id='booking_no'>".$order['BOO_NO']."</span></p>";
-										echo "<p>&nbsp;場&nbsp;&nbsp;&nbsp;&nbsp;地&nbsp;&nbsp;:<span id='booking_site'>".$order['FAC_NO']."</span></p>";
+										echo "<p>&nbsp;場&nbsp;&nbsp;&nbsp;&nbsp;地&nbsp;&nbsp;:<span id='booking_site'>".$order['FAC_NAME']."</span></p>";
 										echo "<p>預約時段:<span id='booking_time'>".$order['BOO_TIME']."</span></p>";
 										echo "<p>預約日期:<span id='booking_date'>".$order['BOO_DATE']."</span></p>";
 										echo "<p>使用狀態:<span id='booking_check'>".$order['BOO_STATUS']."</span></p>";
@@ -137,18 +137,20 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 										echo "<span class='button'>";
 										echo "<input type='button' value='揪團去'>";
 
-										if($order['BOO_STATUS'] === '預約中'){
-										echo "<input class='cancel' type='button' value='取消預約'>";
+										if($order['BOO_STATUS'] === '已預約'){
+										echo "<input class='cancel' type='button' value='取消預約' >";
 										}else{
 										echo "<input id='book_cancel' class='cancel' type='button' value='取消預約' disabled>";
 										}
 										
 										echo "<input type='hidden' id='booking_no' name='booking_no' value=".$order['BOO_NO'].">";
+										echo "<form action='evaluate.php'>";
 										echo "<input type='submit' value='評價場地'>";
-										echo "</span>";
-										
-										echo "</div>";
+										echo "<input type='hidden' id='booking_no' name='evaluate_booking_no' value=".$order['BOO_NO'].">";
 										echo "</form>";
+										echo "</span>";
+										echo "</div>";
+										
 									} 
 										
 							}
