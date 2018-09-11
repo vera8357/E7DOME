@@ -226,6 +226,11 @@
 
 
 	<script>
+				var tl = new TimelineMax({ });
+				var t2 = new TimelineMax({  });
+				var t3 = new TimelineMax({ });
+				var t4 = new TimelineMax({ });
+				var bgd = $('.basketfloor , .bowlingfloor , .badminfloor , .climbingfloor');
 		new fullpage('#homePage', {
 			licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
 			verticalCentered: false,
@@ -273,11 +278,6 @@
 				}
 			},
 			afterSlideLoad: function(section, origin, destination, direction){
-				var tl = new TimelineMax({ delay: 0 });
-				var t2 = new TimelineMax({ delay: .5 });
-				var t3 = new TimelineMax({ delay: 1});
-				var t4 = new TimelineMax({ delay: 1.5});
-				var bgd = $('.basketfloor , .bowlingfloor , .badminfloor , .climbingfloor');
 				if (destination.index == 0) {
 					$('.svg_none').show();
 					tl.from(bgd, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
@@ -304,17 +304,22 @@
 				}
 			},
 			onSlideLeave: function(section, origin, destination, direction){
+
 				if (destination.index == 0) {
 					$('.svg_none').hide();
+					
 				}
 				if (destination.index == 1) {
 					$('.svg_none').hide();
+					
 				}
 				if (destination.index == 2) {
 					$('.svg_none').hide();
+					
 				}
 				if (destination.index == 3) {
 					$('.svg_none').hide();
+					
 
 				}
 			}
