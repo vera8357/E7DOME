@@ -24,7 +24,7 @@
     text-align: center;
     position: relative;
     background-color: #F8F8F8;
-    top: 150px;
+    top: 145px;
     left: 0;
     margin: auto;
     padding: 15px;
@@ -53,8 +53,9 @@
     }
     #file .editth {
         text-align:left;
+        display: block;
         color: #0052B2;
-        margin-bottom: 10px;
+        margin: 10px 0;
     }
     #file .edittd{
     padding: 15px 50px;
@@ -105,4 +106,22 @@
     width: 100%;
     background-color: #fff;
     }
+    #show_pic{
+    max-width:50%;
+    max-height:300px;
+    }
 
+@media screen and (max-width: 768px) {
+    #edit{
+        position: absolute;
+        top: 50px;
+    }
+    #file{
+    width: 85%;
+    }
+    #file .edittd {
+    padding: 0px;
+    }
+
+
+}
