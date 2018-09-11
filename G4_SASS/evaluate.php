@@ -30,7 +30,7 @@
 
 			try{
 				require_once("php/connect_g4.php");
-				$sql ="select * from BOOKING join FACILITY using(FAC_NO) where BOOKING.MEM_NO =".$_SESSION['MEM_NO']." and BOOKING.BOO_NO =".$_REQUEST['booking_no'];
+				$sql ="select * from BOOKING join FACILITY using(FAC_NO) where BOOKING.MEM_NO =".$_SESSION['MEM_NO']." and BOOKING.BOO_NO =".$_REQUEST['evaluate_booking_no'];
 				 $member = $pdo->query($sql);
 
 				           if($member->rowCount()==0){
@@ -47,7 +47,7 @@
                             }
 
 
-                          $_SESSION['BOO_NO'] = $_REQUEST['booking_no'];
+                          $_SESSION['BOO_NO'] = $_REQUEST['evaluate_booking_no'];
 
 			}catch(PDOExcption $e){
 				echo $e->getMessage();

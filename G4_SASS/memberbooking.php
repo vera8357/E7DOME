@@ -115,13 +115,13 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 									 	case '1':
 									 		$order['BOO_STATUS'] = "已預約";
 									 		break;
-									 	case '0':
+									 	case '2':
 									 		$order['BOO_STATUS'] = "已取消";
 									 		break;
 									 	default:
 									 	    $order['BOO_STATUS'] = "已報到";	
 									 }
-									 	echo "<form action='evaluate.php'>";
+									 	
 										echo "<div class='booking'>";
 										echo "<span class='hold1'>";
 										echo "<img src='".$order['BOO_QRCODE']."'>";
@@ -136,19 +136,21 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 										echo "</span>";
 										echo "<span class='button'>";
 										echo "<input type='button' value='揪團去'>";
-										$today = date('Y-m-d');
-										if($order['BOO_STATUS'] === '預約中' && strtotime($order['BOO_DATE']) > strtotime($today)){
-										echo "<input class='cancel' type='button' value='取消預約'>";
+
+										if($order['BOO_STATUS'] === '已預約'){
+										echo "<input class='cancel' type='button' value='取消預約' >";
 										}else{
 										echo "<input id='book_cancel' class='cancel' type='button' value='取消預約' disabled>";
 										}
 										
 										echo "<input type='hidden' id='booking_no' name='booking_no' value=".$order['BOO_NO'].">";
+										echo "<form action='evaluate.php'>";
 										echo "<input type='submit' value='評價場地'>";
-										echo "</span>";
-										
-										echo "</div>";
+										echo "<input type='hidden' id='booking_no' name='evaluate_booking_no' value=".$order['BOO_NO'].">";
 										echo "</form>";
+										echo "</span>";
+										echo "</div>";
+										
 									} 
 										
 							}

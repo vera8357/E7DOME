@@ -6,8 +6,11 @@ function cancel_booking(e){
 	xhr.onload =function(){
 		if(xhr.status == 200){
 			
-			document.getElementById('booking_check').innerHTML="已取消";
-			alert('已完成取消');
+			// document.getElementById('booking_check').innerHTML="已取消";
+			// alert('已完成取消');
+		
+			window.location.reload();
+		
 		
 		}else{
 			alert(xhr.status);
@@ -34,10 +37,12 @@ function exit() {
 }
 
 function init(){
+
 var cancel= document.getElementsByClassName('cancel');
 	for(var i=0; i<cancel.length; i++){
 		cancel[i].addEventListener("click", cancel_booking , false);
 	}
+
 	if (document.body.clientWidth > 768) {
 		$id('bar').onmouseover = show_headerdropdown;
 
