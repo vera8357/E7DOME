@@ -148,17 +148,11 @@
 	<div id="myModal" class="modal">
 		<!-- Modal content -->
 		<div class="modal-content">
-<<<<<<< HEAD
 			<div class="modal-header">
 				<div class="title">
 					<h3 class="left">確認預約</h3>
 					<span class="close">&times;</span>
 				</div>
-=======
-			<div class="modal-header dim-blue text-white clearfix">
-					<h3 class="left modal-font">確認預約</h3>
-					<span class="close"><i class="fas fa-times"></i></span>
->>>>>>> hotFixBoo
 			</div>
 			<div class="modal-body padding-32">
 
