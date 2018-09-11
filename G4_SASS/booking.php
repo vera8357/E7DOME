@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Examples</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/booking.css">
 	<link rel="stylesheet" href="css/font.css">
 </head>
@@ -23,9 +24,12 @@
         $cate_no = 2;
     }
 ?>
+<script type="text/javascript">
+	let cate_no = <?php echo $cate_no;?>
+</script>
 
 <div class="container">
-	<div class="area area1">
+	<div class="area area1" data-cate="1">
 		<h3 class="text-lg">籃球場</h3>
 		<div class="mask">
 			<div class="court panel">
@@ -53,7 +57,7 @@
 	</div>
 
 		<!-- BADMINTON -->
-		<div class="area area2">
+		<div class="area area2" data-cate="2">
 			<h3 class="text-lg">保齡球場</h3>
 			<div class="mask">
 				<div class="court panel">
@@ -83,7 +87,7 @@
 		</div>
 
 		<!-- CLIMBLING -->
-		<div class="area area4">
+		<div class="area area4" data-cate="4">
 			<h3 class="text-lg">攀岩場</h3>
 			<div class="mask">
 				<div class="court panel">
@@ -111,7 +115,7 @@
 			</div>
 		</div>
 
-		<div class="area area3">
+		<div class="area area3" data-cate="3">
 			<h3 class="text-lg">羽球場</h3>
 			<div class="mask">
 				<div class="court panel">
@@ -144,11 +148,17 @@
 	<div id="myModal" class="modal">
 		<!-- Modal content -->
 		<div class="modal-content">
+<<<<<<< HEAD
 			<div class="modal-header">
 				<div class="title">
 					<h3 class="left">確認預約</h3>
 					<span class="close">&times;</span>
 				</div>
+=======
+			<div class="modal-header dim-blue text-white clearfix">
+					<h3 class="left modal-font">確認預約</h3>
+					<span class="close"><i class="fas fa-times"></i></span>
+>>>>>>> hotFixBoo
 			</div>
 			<div class="modal-body padding-32">
 
@@ -161,10 +171,14 @@
 				<th>預約日期</th>
 				<th>預約時段</th>
 				<th>場地點數</th>
+				<th></th>
 			</tr>
 		</thead>
 		<tbody id="tbl-md">
 			
+
+
+
 		</tbody>
 	</table>
 	<div class="modal-btn-container margin-top-16">
@@ -217,22 +231,19 @@ function accActiveNow(){
 	});
 }
 
-var counter =1;
-function showTdyInfo(){
-	console.log('hiTDY');
-	var tdy = new Date(); 
+// var counter = 1;
+function showTdyInfo(counter){
+	// console.log('hiTDY');
+	var tdy = new Date();
+	tdy.setDate(tdy.getDate()+1); // OFFSET DATE TO TOMORROW!!!
 	var tdyDate = tdy.toISOString().slice(0,10);
-
-    if (counter===5) {
-        counter = 1;
-    }
 
 	// for (var i = 1; i <=4 ; i++) {
 		var cate_no = counter; // console.log(i);
     	$.ajax({
     		url: "php/booQuery.php",
     		type: 'post',
-    		async: false,
+    		// async: false,
     		data: {
     			CATE_NO: cate_no,
     			BOO_DATE: tdyDate    		
@@ -240,20 +251,15 @@ function showTdyInfo(){
     		success:function(data){
 	    		var cateNo =  '#queryFac' + cate_no; // console.log(cateNo);
 	        	$(cateNo).html(data); console.log('hi');
-				console.log(counter);
-				counter++;
-				if (counter < 5) showTdyInfo();	
-			
-        	},
-			complete: function(){
-				$('.myBtn').click(function(e){
-					e.preventDefault();
+	        	modalOpen();
+        		$('.myBtn').click(function(e){
+					//e.preventDefault();
 			    	var fac_no 		= $(this).nextAll().eq(0).val();
 			    	var boo_time_i 	= $(this).nextAll().eq(1).val();
 			    	showInfo(fac_no,tdyDate,boo_time_i);
-		        });
-
-			}
+			    	
+		        });	        	
+	     	}
     	});
     	
 	// }
@@ -316,10 +322,10 @@ function showInfo(fac_no,targetDate,boo_time_i){
 
 					function x2x(e){
 						e.preventDefault();
-						// var that = $(this);
+						var that = $(this);
     					$(this).off('click'); // remove handler
 						if(session==0){
-							e.preventDefault();
+							//e.preventDefault();
 							alert('請先登入會員');
 							showLoginForm();
 						}
@@ -386,9 +392,18 @@ function targetBgc(){
 
 <script>
 	window.addEventListener('load',function(){
-		showTdyInfo();
+		// for(let counter=1; counter<=4; counter++){
+		// 	showTdyInfo(counter);
+		// }
+//-------------
+	$('.area').on('click',function(){
+		// console.log();
+		showTdyInfo($(this).data('cate'));
+	});
+//--------------		
+		showTdyInfo(cate_no);
 		accActiveNow();
-		modalOpen();
+		// modalOpen();
 		showTargetInfo();
 		targetBgc();
 	});
