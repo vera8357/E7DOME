@@ -276,24 +276,27 @@
 				var tl = new TimelineMax({ delay: 0 });
 				var t2 = new TimelineMax({ delay: .5 });
 				var t3 = new TimelineMax({ delay: 1});
+				var t4 = new TimelineMax({ delay: 1.5});
 				var bgd = $('.basketfloor , .bowlingfloor , .badminfloor , .climbingfloor');
 				if (destination.index == 0) {
 					$('.svg_none').show();
 					tl.from(bgd, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
 					t2.from('.item01', 0.5, { opacity: 0 }).from('.item01', 0.5, { y: -20, ease: Elastic.easeOut.config(1, 0.3) });
 					t3.from('.item02', 0.5, { opacity: 0 }).from('.item02', 0.5, { y: -20, ease: Elastic.easeOut.config(1, 0.3) });
+					t4.from('.player01,.player02', 0.5, { opacity: 0 });
 				}
 				if (destination.index == 1) {
 					$('.svg_none').show();
 					tl.from(bgd, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
 					t2.from('.item01', 0.5, { opacity: 0 }).from('.item01', 0.5, { y: -20, ease: Elastic.easeOut.config(1, 0.3) });
 					t3.from('.item02', 0.5, { opacity: 0 }).from('.item02', 0.5, { y: -20, ease: Elastic.easeOut.config(1, 0.3) });
+					t4.from('.player01,#pinkball,#blueball', 0.5, { opacity: 0 });
 				}
 				if (destination.index == 2) {
 					$('.svg_none').show();
 					tl.from(bgd, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
 					t2.from('.item01', 0.5, { opacity: 0 }).from('.item01', 0.5, { y: -20, ease: Elastic.easeOut.config(1, 0.3) });
-					
+					t4.from('.player01,.player02', 0.5, { opacity: 0 });
 				}
 				if (destination.index == 3) {
 					$('.svg_none').show();
