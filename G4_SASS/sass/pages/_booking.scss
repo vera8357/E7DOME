@@ -311,10 +311,28 @@ a{ text-decoration: none; }
 
 
 /*COLOR CODE*/
-.dim-blue	{background-color: #0052B2;}
-.dim-orange {background-color: #FB9A00;}
-.dim-gray	{background-color: #BFBFBF;}
-.dim-yellow {background-color: #FFD884;}
+.dim-blue	{
+	background-color: #0052B2;
+	cursor: pointer;
+	border:0;
+	font-size: 16px;
+}
+.dim-orange {
+	background-color: #FB9A00;
+	cursor: pointer;
+	border:0;
+	font-size: 16px;
+}
+.dim-gray	{
+	background-color: #BFBFBF;
+	cursor: pointer;
+	border:0;
+}
+.dim-yellow {
+	background-color: #FFD884;
+	cursor: pointer;
+	border:0;
+}
 
 .text-white {color: #fff;}
 
@@ -361,9 +379,16 @@ a{ text-decoration: none; }
 .margin-bottom-16{ margin-bottom: 16px; }
 
 
-
+.title{
+	background-color: #0052B2;
+	color:white;
+	padding:2% 0;
+	position: relative;
+}
 .left{
-	float: left;
+	text-align: center;
+	font-family: 'HanWangZonYi';
+	font-size: 24px;
 }
 
 .default {cursor: default;}
@@ -408,9 +433,15 @@ a{ text-decoration: none; }
 /* The Close Button */
 .close {
     /*color: #fff;*/
-    float: right;
+    // float: right;
     font-size: 28px;
-    font-weight: bold;
+	font-weight: bold;
+	position: absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:auto;
+	margin:auto;
 }
 
 .close:hover,

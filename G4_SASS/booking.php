@@ -145,7 +145,7 @@
 		<!-- Modal content -->
 		<div class="modal-content">
 			<div class="modal-header">
-				<div class="padding-md dim-blue text-white clearfix">
+				<div class="title">
 					<h3 class="left">確認預約</h3>
 					<span class="close">&times;</span>
 				</div>
