@@ -957,8 +957,22 @@ a {
 }
 
 @media screen and (max-width: 767px) {
+  .home_pg4_bluebox2{
+    height: 50px;
+    h3{
+      font-size: 24px;
+      line-height: 50px;
+    }
+  }
+  .home_pg4_bluebox1{
+    display: none;
+  }
+  .home_pg4_txt {
+    display: none;
+  }
   .pointCard {
     top: 50%;
+    transform: translateY(-50%);
     width: 80%;
     margin: auto;
   }
@@ -991,6 +1005,7 @@ a {
     padding: 5% 15%;
     border-radius: 30px;
   }
+
 }
 
 .home_pg5 {
