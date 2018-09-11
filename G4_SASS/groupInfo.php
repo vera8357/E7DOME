@@ -41,7 +41,7 @@ try {
         <div class="group-wrapper">
             <div class="first-wrapper">
                 <div class="group-info-image">
-                    <img src="images/<?php echo $teamsRow["TEAM_IMG"];?>" alt="">
+                    <img src="images/team_pic/<?php echo $teamsRow["TEAM_IMG"];?>" alt="">
                 </div>
                 <div class="group-details">
                     <div><span class="group-info-title"><?php echo $teamsRow["TEAM_NAME"];?></span>
