@@ -22,41 +22,36 @@ session_start();
         </div>
         <ul>
             <li>
-                <a href="#">QRCODE掃描</a>
+                <a href="back_book.php" class="hover-a">預約訂單管理</a>
             </li>
             <li>
-                <a href="#">預約訂單管理</a>
+                <a href="back_card01.php" class="hover-a">點數卡商品管理</a>
             </li>
             <li>
-                <a href="#">點數卡商品管理</a>
+                <a href="back_card_order01.php" class="hover-a">儲值紀錄</a>
             </li>
             <li>
-                <a href="#">儲值紀錄</a>
+                <a href="back_fac.php" class="hover-a">場地管理</a>
             </li>
             <li>
-                <a href="#">場地管理</a>
+                <a href="back_mem.php" class="hover-a">會員管理</a>
             </li>
             <li>
-                <a href="#">會員管理</a>
-            </li>
-            <li>
-                <a href="#">聊天機器人維護</a>
+                <a href="back_robot_1.php" class="hover-a">聊天機器人維護</a>
             </li>
             <li>
                 <?php
                     if( $_SESSION['ADMIN_PERM'] == 0){
-                        echo "<a href='#'>管理員管理</a>";
+                        echo "<a href='back_admin.php' class='hover-a'>管理員管理</a>";
                     }else{
-                        echo "<a href='#' style='display:none'>管理員管理</a>";
+                        echo "<a href='#' style='display:none' class='hover-a'>管理員管理</a>";
                     }
                 ?>
             </li>
             <li>
-                <a href="#">
-                <form action="php/back_logout.php">
-                    <input type="submit" value='登出'>
+                <form action="php/back_logout.php" class="lout">
+                    <input type="submit" value='登出' class="loutbtn">
                 </form>
-               </a>
             </li>
         </ul>
     </div>

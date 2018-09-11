@@ -1,3 +1,9 @@
+<?php 
+ob_start();
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,13 +25,13 @@
         </div>
         <ul>
             <li>
-                <a href="back_book.html" class="hover-a">預約訂單管理</a>
+                <a href="back_book.php" class="hover-a">預約訂單管理</a>
             </li>
             <li>
-                <a href="back_card.html" class="hover-a">點數卡商品管理</a>
+                <a href="back_card01.php" class="hover-a">點數卡商品管理</a>
             </li>
             <li>
-                <a href="back_card_order.html" class="hover-a">儲值紀錄</a>
+                <a href="back_card_order01.php" class="hover-a">儲值紀錄</a>
             </li>
             <li>
                 <a href="back_fac.php" class="hover-a">場地管理</a>
@@ -37,16 +43,26 @@
                 <a href="back_robot_1.php" class="hover-a">聊天機器人維護</a>
             </li>
             <li>
-                <a href="back_admin.php" class="hover-a">管理員管理</a>
+                <?php
+                    if( $_SESSION['ADMIN_PERM'] == 0){
+                        echo "<a href='back_admin.php' class='hover-a'>管理員管理</a>";
+                    }else{
+                        echo "<a href='#' style='display:none' class='hover-a'>管理員管理</a>";
+                    }
+                ?>
             </li>
             <li>
-                <a href="#" class="hover-a">登出</a>
+                <form action="php/back_logout.php" class="lout">
+                    <input type="submit" value='登出' class="loutbtn">
+                </form>
             </li>
         </ul>
     </div>
     <div class="back_content">
         <h2>場地管理</h2>
-        <button id="add_new_site">新增場地</button>
+        <div class="search">
+        <button class="btn">新增場地</button>
+        </div>
         <form action="php/facility/facility_update_site.php" method="POST" enctype="multipart/form-data">
         <table id="updateTable">
             <thead>
@@ -146,7 +162,7 @@
 
         $(function(){
             // alert($('.file').val());
-            $('#add_new_site').click(function () { 
+            $('.btn').click(function () { 
                 $('.bg_site_info_page').toggleClass('active');
             });
             $('#xx').click(function () {
