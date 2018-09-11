@@ -7,8 +7,8 @@ $FAC_NO = $_POST["FAC_NO"];
 $BOO_DATE = $_POST["BOO_DATE"];
 $BOO_TIME_i = $_POST["BOO_TIME_i"];
 
-$MEM_NO = $_SESSION["MEM_NO"];
-$MEM_POINTS = $_SESSION["MEM_POINTS"];
+// $MEM_NO = $_SESSION["MEM_NO"];
+// $MEM_POINTS = $_SESSION["MEM_POINTS"];
 
 
 	// connect DB
@@ -36,14 +36,8 @@ $MEM_POINTS = $_SESSION["MEM_POINTS"];
 			<?php echo '<input type="hidden" name="BOO_DATE" value="'.$BOO_DATE.'">' ?>
 			<?php echo '<input type="hidden" name="BOO_TIME" value="'.$BOO_TIME_i.'">' ?>
 
-			<?php echo '<input type="hidden" name="MEM_NO" value="'.$MEM_NO.'">' ?>
-			<?php echo '<input type="hidden" name="MEM_POINTS" value="'.$MEM_POINTS.'">' ?>
+
 
 			<?php echo '<input type="hidden" name="BOO_STATUS" value="1">' ?>
 		</td>
 	</tr>
-					
-
-
-
-

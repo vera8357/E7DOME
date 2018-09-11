@@ -115,7 +115,9 @@
 				// shows this level
 				showLevel(pos+1);
 				openContent( (pos+1) + '.01' );
+				// console.log( (pos+1) + '.01');
 				facInfo($(level).data('category'));
+				// console.log((pos+1) + '.01');
 			});
 		});
 
@@ -126,8 +128,8 @@
 		});
 
 		// navigating through the levels
-		levelUpCtrl.addEventListener('click', function() { navigate('Down'); });
-		levelDownCtrl.addEventListener('click', function() { navigate('Up'); });
+		levelUpCtrl.addEventListener('click', function() { navigate('Down'); openContentArea(); });
+		levelDownCtrl.addEventListener('click', function() { navigate('Up'); openContentArea(); });
 
 		// sort by name ctrl - add/remove category name (css pseudo element) from list and sorts the spaces by name 
 		sortByNameCtrl.addEventListener('click', function() {
@@ -180,7 +182,7 @@
 				// for smaller screens: close search bar
 				closeSearch();
 				// open level
-				showLevel(level); console.log(level);
+				showLevel(level); // console.log(level);
 				// open content for this space
 				openContent(spacerefval);
 				// open facInfoBox
@@ -229,7 +231,7 @@
 		}, 'transform');
 		
 		// hide surroundings element
-		hideSurroundings();
+		// hideSurroundings();
 		
 		// show mall nav ctrls
 		showMallNav();
@@ -255,7 +257,7 @@
 		removePins();
 
 		// shows surrounding element
-		showSurroundings();
+		// showSurroundings();
 		
 		// hide mall nav ctrls
 		hideMallNav();
@@ -340,18 +342,11 @@
 		// current level
 		var currentLevel = mallLevels[prevSelectedLevel-1];
 
-		openContent( (prevSelectedLevel) + '.01' );
-		var levelFix = ["1", "2", "3", "4"];
-		facInfo(prevSelectedLevel);
-		// console.log(selectedLevel-1 + '.01');
-		// console.log(prevSelectedLevel);
-		// console.log($(currentLevel).data('category'));
-
 		if( direction === 'Up' && prevSelectedLevel > 1 ) {
-			--selectedLevel; // console.log(prevSelectedLevel);
+			--selectedLevel;  
 		}
 		else if( direction === 'Down' && prevSelectedLevel < mallLevelsTotal ) {
-			++selectedLevel; // console.log(prevSelectedLevel);
+			++selectedLevel;  
 		}
 		else {
 			isNavigating = false;	
@@ -388,7 +383,11 @@
 
 		// hide the previous level´s pins
 		removePins(currentLevel);
-		
+
+		// openContent
+		openContent((selectedLevel) + '.01');
+		var levelFix = {1: 4, 2: 2, 3: 3, 4: 1};
+		facInfo(levelFix[selectedLevel]);
 	}
 
 	/**
@@ -472,7 +471,7 @@
 			});
 		}
 		// map pin gets selected
-		classie.add(mallLevelsEl.querySelector('.pin[data-space="' + spaceref + '"]'), 'pin--active');
+		// classie.add(mallLevelsEl.querySelector('.pin[data-space="' + spaceref + '"]'), 'pin--active');
 	}
 
 	/**
@@ -529,13 +528,14 @@
 
 	// facInfoBox
 	function facInfo(level) {
+		console.log(level);
 		var cate_no = level;
 		$.post("php/3dfacInfo.php",
 			{
 				CATE_NO: cate_no
 			},
 			function(data){
-				var cateNo = '#queryCate' + cate_no; // console.log(cateNo);
+				var cateNo = '#queryCate' + cate_no;  console.log(cateNo);
 				$(cateNo).html(data);
 		});
 	}
