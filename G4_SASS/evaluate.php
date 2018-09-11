@@ -17,8 +17,10 @@
 
 	<div class="div"></div>
 
-	<div class="evaluate_title">評價場地
+	<div class="evaluate_title">
+		評價場地
 	<div class="evaluate_line"></div>
+
 	</div>
 
 
@@ -72,6 +74,7 @@
 					<li class="e_str">&#9733</li>
 					<li class="e_str">&#9733</li>
 					<li class="e_str">&#9733</li>
+					
 				</ul>
 
 				<textarea name="evaluate_text" placeholder="輸入評價" style="color:#fff;" ></textarea>

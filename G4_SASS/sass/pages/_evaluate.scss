@@ -1,11 +1,13 @@
 * {
     @include all();
     /*outline: 1px solid red;*/
+   
     
 }
 body{
     font-family: $about-font;
-  	/*background-color:#0052b2;*/
+    background-color: #f8f8f8;
+  	
   
 }
 
@@ -33,7 +35,7 @@ body{
     transform: scaleX(1); } }
 
 .evaluate_title{
-	width: 95%;
+	width: 100%;
 	margin:auto;
 	position: relative;
 	font-family: 'HanWangZonYi';
@@ -57,11 +59,12 @@ body{
   background-color: #FFB405;
   animation: title2 1s  forwards; }
 
+
 /*-------------------------------------*/
 
 
 #evaluate_wrap{
-	width: 95%;
+	width: 100%;
 	margin:auto;
 }
 
@@ -81,12 +84,7 @@ body{
 
 @media screen and (min-width: 960px){
 
-	.evaluate_title{
-	width: 80%;
-}
-
 	#evaluate_wrap{
-	width: 80%;
 	margin:auto;
 	display: flex;
 	justify-content: space-between;
@@ -102,6 +100,20 @@ body{
 	width: 49%;
 	padding: 2%;
 }
+}
+
+
+
+@media screen and (min-width: 1200px) {
+  .evaluate_title{
+    width: 1200px;
+  }
+
+	#evaluate_wrap{
+		width: 1200px;
+		margin:auto;
+	}
+
 }
 
 /*------------------------------*/
@@ -172,6 +184,7 @@ body{
 .star_content{
 	width: 100%;
 	visibility: hidden;
+	color:#000;
 }
 
 
@@ -187,16 +200,13 @@ span{
 
 	display: flex;
 	width: 90%;
-	margin: 0 auto 20px auto;
+	margin: 0 auto 15px auto;
 }
 
 .evaluate_content li{
-
-	width: 60px;
-	font-size: 40px;
+	font-size: 55px;
 	color:rgba(40,45,40,.7);
-
-
+	cursor: pointer;
 }
 
 textarea{
