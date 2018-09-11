@@ -12,35 +12,28 @@ session_start();
 <body>
 
 <?php
-
-
 require_once("connect_g4.php");
 
- $TEAM_NO = $_REQUEST["TEAM_NAME"];
- $TEAM_INFO = $_REQUEST["TEAM_INFO"];
- $TEAM_NO= $_REQUEST['TEAM_NO'];
-echo "$TEAM_INFO";
-exit;
+$TEAM_NO = $_REQUEST["TEAM_NO"];
 
 switch($_FILES['upfile']['error']){
   case UPLOAD_ERR_OK:
-    if( file_exists("../images")===false){
-    	mkdir("../images");
+    if( file_exists("../images/")===false){
+    	mkdir("../images/");
     }
     $from = $_FILES['upfile']['tmp_name'];
     $fileto =pathinfo($_FILES['upfile']['name']);
     $filext = $fileto['basename'];
-    $to = "../images{$filext}";
+    $to = "../images/{$filext}";
     $filname = "{$filext}";
     if(copy( $from, $to)){
-      $teamfile = "UPDATE team SET TEAM_IMG = '{$filname}',TEAM_NAME = :TEAM_NAME,TEAM_INFO = :TEAM_INFO WHERE TEAM_NO = $TEAM_NO";
-      $pdo->exec($teamfile);
-      $_GET["TEAM_NO"] = $filname;
-
-      header('location:../php/editgroup.php?TEAM_NO=$TEAM_NO');
-
+      $file = "
+      UPDATE team
+      SET TEAM_IMG = '{$filname}'
+      WHERE TEAM_NO = $TEAM_NO";
+      $pdo->exec($file);
     }
-    break;
+
   case UPLOAD_ERR_INI_SIZE:
     echo "上傳檔案太大，不得超過", ini_get("upload_max_filesize"),"<br>";
     break;
@@ -50,9 +43,22 @@ switch($_FILES['upfile']['error']){
   case UPLOAD_ERR_PARTIAL:
     echo "上傳失敗，請重新上傳檔案<br>";
     break;
-  //case UPLOAD_ERR_NO_FILE:
-  //  echo "echo 未上傳檔案太大<br>";
+  case UPLOAD_ERR_NO_FILE:
+   echo "echo 未上傳檔案太大<br>";
 }
+
+$teamfile =
+    "UPDATE team
+    SET TEAM_NAME = :TEAM_NAME, TEAM_INFO = :TEAM_INFO, TEAM_MEM = :TEAM_MEM
+    WHERE TEAM_NO = :TEAM_NO";
+    $teamval = $pdo->prepare( $teamfile );
+    $teamval->bindValue(":TEAM_NAME", $_REQUEST["TEAM_NAME"]);
+    $teamval->bindValue(":TEAM_INFO", $_REQUEST["TEAM_INFO"]);
+    $teamval->bindValue(":TEAM_NO", $_REQUEST["TEAM_NO"]);
+    $teamval->bindValue(":TEAM_MEM", $_REQUEST["TEAM_MEM"]);
+    $teamval->execute();
+    header("location:../groupInfo.php?TEAM_NO= $TEAM_NO");
+
 
 ?>
 

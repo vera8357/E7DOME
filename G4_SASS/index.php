@@ -49,8 +49,14 @@
 		</div>
 
 		<div class="section home_pg2">
-		
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
+		<script src="js/svgfloor.js">
 			
+		</script>
+		<div class="light"></div>
+		<div class="light"></div>
+		<div class="light"></div>
+		<div class="light"></div>
 			<div class="slide">
 				<div class="wrapper">
 					<div class="pg2_fac_info">

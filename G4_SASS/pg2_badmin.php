@@ -14,12 +14,12 @@
 	.climb8{fill:none;stroke:#767AAE;stroke-width:0.6412;stroke-miterlimit:10;}
 	.climb9{opacity:0.5;fill:#FFFFFF;enable-background:new    ;}
 </style>
-<g id="bigfloor">
+<g>
 	<polygon class="climb0" points="170.6,242.4 0,143.9 0,113.6 170.6,212.1 	"/>
 	<polygon class="climb1" points="170.6,212.1 367.5,98.5 367.5,128.8 170.6,242.4 	"/>
 	<polygon class="climb2" points="0,113.6 196.9,0 367.5,98.5 170.6,212.1 	"/>
 </g>
-<g id="floor">
+<g class="badminfloor" style="display:none;">
 	<g>
 		<g>
 			<g class="climb3">
@@ -54,7 +54,7 @@
 		</g>
 	</g>
 </g>
-<g id="net">
+<g id="net" class="item01" style="display:none;">
 	<g id="網子">
 		<path class="climb8" d="M120.3,79.9V50.7l109.4,63.2V143"/>
 		<path class="climb9" d="M229.7,133.3L120.3,70.2V50.8l109.4,63.2V133.3z"/>

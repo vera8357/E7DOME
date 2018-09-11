@@ -50,14 +50,14 @@ h2 {
   box-sizing: border-box; // position: fixed;
 }
 
-.back_nav a {
+.back_nav a,
+.lout{
   color: $a_color;
   padding: 14px 0;
 }
-
 /* Outline In */
 
-.hover-a {
+.hover-a{
   width: 160px;
   display: inline-block;
   vertical-align: middle;
@@ -122,6 +122,7 @@ h2 {
   font-family: "微軟正黑體";
   padding: 5px 10px;
   width: 15%;
+  outline:0;
 }
 
 .btn {
@@ -130,7 +131,9 @@ h2 {
   padding: 5px 20px;
   // margin-left: 2.5%;
 }
-
+.btn_fac{
+  margin-left:2.5%;
+}
 table {
   // display: block;
   margin: 0 auto; // height: 90%;
@@ -147,7 +150,7 @@ th {
   background-color: #4c9efe;
   color: #fff;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 tr:nth-child(odd) {
@@ -204,17 +207,17 @@ select {
   margin: 10px auto;
 }
 
-#new_qa {
-  position: relative;
-  right: 0;
-  bottom: 3px;
-  // background-color: #4c9efe;
-  color: #000;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-family: '微軟正黑體';
-}
+// #new_qa {
+//   position: relative;
+//   right: 0;
+//   bottom: 3px;
+//   // background-color: #4c9efe;
+//   color: #000;
+//   border: none;
+//   padding: 10px;
+//   cursor: pointer;
+//   font-family: '微軟正黑體';
+// }
 
 #new_qa:active {
   background-color: #3175c4;
@@ -226,4 +229,14 @@ select {
   right: 1%;
   width: 35px;
   height: 35px;
+}
+.loutbtn{
+  padding:5px 20px;
+  cursor: pointer;
+  background-color: #0052b2;
+  outline:0;
+  border:0;
+  color:white;
+  font-size: 18px;
+  border-radius: 20px;
 }

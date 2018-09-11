@@ -18,12 +18,12 @@
 	.bowl12{fill:#FFFFFF;stroke:#000000;stroke-width:0.2;stroke-miterlimit:10;}
 	.bowl13{fill:#DC4D83;stroke:#000000;stroke-width:0.2;stroke-miterlimit:10;}
 </style>
-<g id="bigfloor">
+<g>
 	<polygon class="bowl0" points="170.6,242.4 0,143.9 0,113.6 170.6,212.1 	"/>
 	<polygon class="bowl1" points="170.6,212.1 367.5,98.5 367.5,128.8 170.6,242.4 	"/>
 	<polygon class="bowl2" points="0,113.6 196.9,0 367.5,98.5 170.6,212.1 	"/>
 </g>
-<g id="圖層_6">
+<g class="bowlingfloor" style="display:none;">
 	<g>
 		<g>
 			<g class="bowl3">
@@ -79,7 +79,7 @@
 		</g>
 	</g>
 </g>
-<g id="blueball">
+<g id="blueball" style="display:none;">
 	<g>
 		<circle class="bowl10" cx="145.3" cy="159.8" r="9.6"/>
 		<circle class="bowl11" cx="146.1" cy="158" r="0.8"/>
@@ -87,7 +87,7 @@
 		<circle class="bowl11" cx="147.6" cy="155.7" r="0.8"/>
 	</g>
 </g>
-<g id="pinkball">
+<g id="pinkball" style="display:none;">
 	<g>
 		<circle class="bowl2" cx="85.3" cy="124.1" r="9.6"/>
 		<circle class="bowl0" cx="86.1" cy="122.4" r="0.8"/>
@@ -95,7 +95,7 @@
 		<circle class="bowl0" cx="87.6" cy="120" r="0.8"/>
 	</g>
 </g>
-<g id="bollowingball1">
+<g id="bollowingball1" class="item01" style="display:none;">
 	<g>
 		<path class="bowl12" d="M301,77.5c-0.8,0.2-1.3,0.7-1.6,1.3c-0.2,0.5-0.1,1.1,0.3,2.3c0.2,0.5,0.3,1,0.3,1.1c0,0.1,0.1,0.1,1.7,0.1
 			h1.7l0.1-0.3c0-0.1,0.2-0.7,0.4-1.2c0.4-1.1,0.4-1.6,0.1-2.2c-0.3-0.6-0.9-1.1-1.6-1.2C301.9,77.4,301.5,77.4,301,77.5z"/>
@@ -158,7 +158,7 @@
 			l0.4-0.7c0.9-1.8,1.4-4,1.2-5.8c-0.1-1-0.5-2.5-0.9-3.5l-0.3-0.7l-2.1,0l-2.1,0L287.3,88.2z"/>
 	</g>
 </g>
-<g id="bollowingball2">
+<g id="bollowingball2" class="item02" style="display:none;">
 	<g>
 		<path class="bowl12" d="M244,37.5c-0.8,0.2-1.3,0.7-1.6,1.3c-0.2,0.5-0.1,1.1,0.3,2.3c0.2,0.5,0.3,1,0.3,1.1c0,0.1,0.1,0.1,1.7,0.1
 			h1.7l0.1-0.3c0-0.1,0.2-0.7,0.4-1.2c0.4-1.1,0.4-1.6,0.1-2.2c-0.3-0.6-0.9-1.1-1.6-1.2C244.9,37.4,244.6,37.4,244,37.5z"/>
