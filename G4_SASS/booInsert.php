@@ -119,7 +119,7 @@ $booTicket = $pdo->query($sqlBoo);
 
 
 <?php
-  $BOO_TIME = array('上午','下午','晚上');
+  $BOO_TIME = array('清晨', '上午', '下午', '晚上');
   while ( $rowBoo = $booTicket->fetch() ) {
 
     include('php/phpqrcode/qrlib.php');
@@ -237,7 +237,7 @@ $booTicket = $pdo->query($sqlBoo);
     <div class="group ticket">
       <header>找不到人一起玩？來開團吧！</header>
       <div class="group_form">
-        <form action="php/creatFinish.php" method="post">
+        <form action="php/creatFinish.php" method="post" enctype="multipart/form-data">
         <?php
             $boo_no= $rowBoo['BOO_NO'];
             $mem_no= $_SESSION["MEM_NO"];

@@ -19,7 +19,7 @@ $BOO_TIME_i = $_POST["BOO_TIME_i"];
 
 	$rowFacBoo = $facBoo->fetch();
 
-	$BOO_TIME = array('上午', '下午', '晚上');
+	$BOO_TIME = array('清晨', '上午', '下午', '晚上');
 
 ?>
 

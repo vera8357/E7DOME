@@ -9,6 +9,8 @@ LEFT JOIN facility ON booking.FAC_NO = facility.FAC_NO
 LEFT JOIN member ON booking.MEM_NO = member.MEM_NO
 WHERE booking.MEM_NO = $MEM_NO";
     $boo = $pdo->query($sqlBoo);
+    
+    $BOO_TIME = array('清晨', '上午', '下午', '晚上');
 
     while ($rowBoo = $boo->fetch()){
 ?>
@@ -17,7 +19,7 @@ WHERE booking.MEM_NO = $MEM_NO";
         <td><?php echo $rowBoo["MEM_NO"] ?></td>
         <td><?php echo $rowBoo["FAC_NAME"] ?></td>
         <td><?php echo $rowBoo["BOO_DATE"] ?></td>
-        <td><?php echo $rowBoo["BOO_TIME"] ?></td>
+        <td><?php echo $BOO_TIME[$rowBoo["BOO_TIME"]] ?></td>
         <td>
         <form action="php/back_bookUpdate.php" method="post">
             <select id="book_status" name="BOO_STATUS">
@@ -60,7 +62,7 @@ switch ($rowBoo["BOO_STATUS"]) {
 
             </select>
             <input type="hidden" name="BOO_NO" value="<?php echo $rowBoo['BOO_NO'] ?>">
-            <input type="submit" value="Submit">
+            <input type="submit" value="修改">
         </form>
         </td>
     </tr>
