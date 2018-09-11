@@ -11,12 +11,12 @@
 	.st5{fill:#735525;}
 	.st6{fill:#87663E;}
 </style>
-<g id="bigfloor">
+<g>
 	<polygon class="st0" points="170.6,242.4 0,143.9 0,113.6 170.6,212.1 	"/>
 	<polygon class="st1" points="170.6,212.1 367.5,98.5 367.5,128.8 170.6,242.4 	"/>
 	<polygon class="st2" points="0,113.6 196.9,0 367.5,98.5 170.6,212.1 	"/>
 </g>
-<g id="floor">
+<g class="climbingfloor" style="display:none;">
 	<g>
 		<g>
 			<g class="st3">

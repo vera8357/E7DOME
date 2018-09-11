@@ -21,12 +21,12 @@
 	.basket15{fill:#625F6B;}
 	.basket16{fill:#858283;}
 </style>
-<g id="bigfloor">
+<g>
 	<polygon class="basket0" points="170.6,242.4 0,143.9 0,113.6 170.6,212.1 	"/>
 	<polygon class="basket1" points="170.6,212.1 367.5,98.5 367.5,128.8 170.6,242.4 	"/>
 	<polygon class="basket2" points="0,113.6 196.9,0 367.5,98.5 170.6,212.1 	"/>
 </g>
-<g id="floor">
+<g class="basketfloor" style="display:none;">
 	<g>
 		<g>
 			<g class="basket3">
@@ -268,7 +268,7 @@
 		</g>
 	</g>
 </g>
-<g id="basket01">
+<g class="item01" style="opacity: 1; display:none;">
 	<g>
 		<path class="basket7" d="M263.3,34.3v31.6l-2-2V32.3L263.3,34.3z"/>
 		<path class="basket8" d="M249.6,2.8l1.7-1l23.9,13.8l-1.7,1L249.6,2.8z"/>
@@ -281,7 +281,7 @@
 			C261.5,23.5,262.9,24.6,262.9,25.8z"/>
 	</g>
 </g>
-<g id="basket02">
+<g class="item02" style="opacity: 1; display:none;">
 	<g>
 		<path class="basket6" d="M93.8,86l27.5,15.9l-0.2,22.4l-27.3-15.6V86z"/>
 		<path class="basket14" d="M93.8,86l2-1.1l27.5,15.9l-2,1.1L93.8,86z"/>
