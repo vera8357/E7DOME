@@ -11,15 +11,15 @@
 	<script type="text/javascript" src="js/fullpage.js"></script>
 
 	<!-- 3dfacModel -->
-	<link rel="stylesheet" type="text/css" href="3dfac/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" href="3dfac/css/style0.css" />
-	<link rel="stylesheet" type="text/css" href="3dfac/css/custom.css" />
-	<link rel="stylesheet" type="text/css" href="3dfac/css/fac-info.css">
-	<link rel="stylesheet" type="text/css" href="3dfac/css/fac-animation.css" />
-	<link rel="stylesheet" type="text/css" href="3dfac/css/fac-info.css" />
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-	<script src="3dfac/js/modernizr-custom.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="3dfac/css/normalize.css" /> -->
+	<!-- <link rel="stylesheet" type="text/css" href="3dfac/css/style0.css" /> -->
+	<!-- <link rel="stylesheet" type="text/css" href="3dfac/css/custom.css" /> -->
+	<!-- <link rel="stylesheet" type="text/css" href="3dfac/css/fac-info.css"> -->
 
+	<!-- <link rel="stylesheet" type="text/css" href="3dfac/css/fac-info.css" /> -->
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<script src="3dfac/js/modernizr-custom.js"></script> -->
+	<!-- <link rel="stylesheet" type="text/css" href="3dfac/css/fac-animation.css" /> -->
 	
 </head>
 
@@ -59,6 +59,13 @@
 					<div class="pg2_fac_info">
 						<div class="fac_info_content">
 							<h2>籃球場</h2>
+							<p>文案文案文案文案</p>
+							<p>文案文案文案文案</p>
+							<p>文案文案文案文案</p>
+							
+							<a href="basketball.php">更多資訊</a>
+							<a href="booking.php">立即預約</a>
+
 						</div>
 					</div>
 					<div class = "pg2_fac_svg">
@@ -71,7 +78,13 @@
 				<div class="wrapper">
 					<div class="pg2_fac_info">
 						<div class="fac_info_content">
-							
+							<h2>保齡球場</h2>
+							<p>文案文案文案文案</p>
+							<p>文案文案文案文案</p>
+							<p>文案文案文案文案</p>
+							<a href="bowling.php">更多資訊</a>
+							<a href="booking.php">立即預約</a>
+
 						</div>
 					</div>
 					<div class = "pg2_fac_svg">
@@ -84,7 +97,12 @@
 				<div class="wrapper">
 					<div class="pg2_fac_info">
 						<div class="fac_info_content">
-
+							<h2>羽球球場</h2>
+							<p>文案文案文案文案</p>
+							<p>文案文案文案文案</p>
+							<p>文案文案文案文案</p>
+							<a href="badminton.php">更多資訊</a>
+							<a href="booking.php">立即預約</a>
 						</div>
 					</div>
 					<div class = "pg2_fac_svg">
@@ -97,7 +115,12 @@
 				<div class="wrapper">
 					<div class="pg2_fac_info">
 						<div class="fac_info_content">
-
+							<h2>羽球球場</h2>
+							<p>文案文案文案文案</p>
+							<p>文案文案文案文案</p>
+							<p>文案文案文案文案</p>
+							<a href="climbimg.php">更多資訊</a>
+							<a href="booking.php">立即預約</a>
 						</div>
 					</div>
 					<div class = "pg2_fac_svg">
