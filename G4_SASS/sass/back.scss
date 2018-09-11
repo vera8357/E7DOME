@@ -12,16 +12,16 @@ table {
 }
 
 a {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
 }
 
 h2 {
   background-color: #0052B2;
   color: #fff;
-  padding: 50px 5% 10px;
-  font-size: 48px;
-  margin-bottom: 50px;
+  padding: 20px 2.5% 20px;
+  font-size: 36px;
+  margin-bottom: 25px;
 }
 
 .bcak_logo {
@@ -52,13 +52,13 @@ h2 {
 
 .back_nav a {
   color: $a_color;
-  padding: 20px 0;
+  padding: 14px 0;
 }
 
 /* Outline In */
 
 .hover-a {
-  width: 248px;
+  width: 160px;
   display: inline-block;
   vertical-align: middle;
   transform: perspective(1px) translateZ(0);
