@@ -50,10 +50,46 @@
 
 		<div class="section home_pg2">
 		
-			<div class="slide"><?php include '3dfac.php';?></div>
-			<div class="slide"></div>
-			<div class="slide"></div>
 			
+			<div class="slide">
+				<div class="wrapper">
+					<div class="pg2_fac_info">
+						<h2>籃球場</h2>
+						<p>文案文案文案文案文案</p>
+					</div>
+					<div class = "pg2_fac_svg">
+					<?php include 'pg2_basket.php';?>
+				</div>
+				
+				</div>
+			</div>	
+			<div class="slide">
+				<div class="wrapper">
+					<div class="pg2_fac_info"></div>
+					<div class = "pg2_fac_svg">
+					<?php include 'pg2_bowling.php';?>
+				</div>
+				
+				</div>
+			</div>
+			<div class="slide">
+				<div class="wrapper">
+					<div class="pg2_fac_info"></div>
+					<div class = "pg2_fac_svg">
+					<?php include 'pg2_badmin.php';?>
+				</div>
+				
+				</div>
+			</div>
+			<div class="slide">
+				<div class="wrapper">
+					<div class="pg2_fac_info"></div>
+					<div class = "pg2_fac_svg">
+					<?php include 'pg2_climbing.php';?>
+				</div>
+				
+				</div>
+			</div>	
 		</div>
 
 		<div class="section home_pg3">
