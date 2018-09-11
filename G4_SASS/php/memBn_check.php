@@ -6,9 +6,8 @@
                         $leader = $pdo->query( $team_leader );
                         $leader = $leader->fetch(PDO::FETCH_ASSOC);
                         if(isset($leader) && is_array($leader) && ($MEM_NO === $leader["MEM_NO"])){
-                            echo "<a href='php/editgroup.php?TEAM_NO=$TEAM_NO'>";
-                            echo "<button class='button join-button' id='join'>管理揪團";
-                            echo "</button></a>";
+                            echo "<button class='button join-button' id='editGroup'>管理揪團";
+                            echo "</button>";
                         } else {
                             $members = $pdo->query( $team_member );
                             $members = $members->fetchAll(PDO::FETCH_ASSOC);

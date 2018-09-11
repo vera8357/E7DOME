@@ -26,7 +26,7 @@
         echo '<input type="text" name="TEAM_NAME" minlength="3" maxlength="10" required>';//揪團名稱
 
         echo '<label for="">揪團簡介:</label>';
-        echo '<textarea name="TEAM_INFO" id="" cols="30" rows="10" required></textarea>';//揪團簡介
+        echo '<textarea name="TEAM_INFO" required></textarea>';//揪團簡介
 
         echo '<label for="">揪團人數:</label>';//揪團人數
         echo '<select name="TEAM_MEM" id="" required>';
