@@ -136,7 +136,7 @@
 			<div class="wrapper">
 				<h2><div class="typing">加入揪團!尋找運動夥伴</div></h2>
 				<div class="teamItem all">
-					<a href="#">
+					<a href="group.php">
 						<div class="teamAll">
 							<div class="all_img">
 								<img src="images/index/date.png">
