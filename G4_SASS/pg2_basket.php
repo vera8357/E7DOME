@@ -22,10 +22,11 @@
 	.basket16{fill:#858283;}
 </style>
 <g>
-	<polygon class="basket0" points="170.6,242.4 0,143.9 0,113.6 170.6,212.1 	"/>
-	<polygon class="basket1" points="170.6,212.1 367.5,98.5 367.5,128.8 170.6,242.4 	"/>
-	<polygon class="basket2" points="0,113.6 196.9,0 367.5,98.5 170.6,212.1 	"/>
+	<polygon class="basket0" points="0,113.6 196.9,0 367.5,98.5 170.6,212.1 	"/>
+	<polygon class="basket1" points="170.6,212.1 170.9,227.7 0.3,129.2 0,113.6 	"/>
+	<polygon class="basket2" points="367.5,98.5 367.8,114.1 170.9,227.7 170.6,212.1 	"/>
 </g>
+
 <g class="svg_none">
 	<g class="basketfloor">
 		<g>

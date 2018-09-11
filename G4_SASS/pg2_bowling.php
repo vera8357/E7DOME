@@ -19,9 +19,9 @@
 	.bowl13{fill:#DC4D83;stroke:#000000;stroke-width:0.2;stroke-miterlimit:10;}
 </style>
 <g>
-	<polygon class="bowl0" points="170.6,242.4 0,143.9 0,113.6 170.6,212.1 	"/>
-	<polygon class="bowl1" points="170.6,212.1 367.5,98.5 367.5,128.8 170.6,242.4 	"/>
-	<polygon class="bowl2" points="0,113.6 196.9,0 367.5,98.5 170.6,212.1 	"/>
+	<polygon class="bowl0" points="0,113.6 196.9,0 367.5,98.5 170.6,212.1 	"/>
+	<polygon class="bowl1" points="170.6,212.1 170.5,227.2 -0.1,128.7 0,113.6 	"/>
+	<polygon class="bowl2" points="367.5,98.5 367.3,113.5 170.5,227.2 170.6,212.1 	"/>
 </g>
 <g class="svg_none">
 	<g class="bowlingfloor">

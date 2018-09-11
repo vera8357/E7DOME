@@ -15,10 +15,11 @@
 	.climb9{opacity:0.5;fill:#FFFFFF;enable-background:new    ;}
 </style>
 <g>
-	<polygon class="climb0" points="170.6,242.4 0,143.9 0,113.6 170.6,212.1 	"/>
-	<polygon class="climb1" points="170.6,212.1 367.5,98.5 367.5,128.8 170.6,242.4 	"/>
-	<polygon class="climb2" points="0,113.6 196.9,0 367.5,98.5 170.6,212.1 	"/>
+	<polygon class="climb0" points="0,113.6 196.9,0 367.5,98.5 170.6,212.1 	"/>
+	<polygon class="climb1" points="170.8,212.4 170.8,227.6 0.2,129.1 0,113.6 	"/>
+	<polygon class="climb2" points="367.5,98.5 367.7,113.9 170.8,227.6 170.8,212.4 	"/>
 </g>
+
 <g class="svg_none">
 	<g class="badminfloor">
 		<g>
