@@ -28,16 +28,16 @@
                 <a href="back_card_order.html" class="hover-a">儲值紀錄</a>
             </li>
             <li>
-                <a href="#" class="hover-a">場地管理</a>
+                <a href="back_fac.php" class="hover-a">場地管理</a>
             </li>
             <li>
-                <a href="#" class="hover-a">會員管理</a>
+                <a href="back_mem.php" class="hover-a">會員管理</a>
             </li>
             <li>
-                <a href="back_robot.html" class="hover-a">聊天機器人維護</a>
+                <a href="back_robot_1.php" class="hover-a">聊天機器人維護</a>
             </li>
             <li>
-                <a href="#" class="hover-a">管理員管理</a>
+                <a href="back_admin.php" class="hover-a">管理員管理</a>
             </li>
             <li>
                 <a href="#" class="hover-a">登出</a>

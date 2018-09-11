@@ -35,7 +35,7 @@ session_start();
                 <a href="#" class="hover-a">場地管理</a>
             </li>
             <li>
-                <a href="#" class="hover-a">會員管理</a>
+                <a href="back_mem.php" class="hover-a">會員管理</a>
             </li>
             <li>
                 <a href="back_robot.php_1" class="hover-a">聊天機器人維護</a>
