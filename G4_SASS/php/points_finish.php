@@ -8,10 +8,19 @@ $CARD_PRICE = $_POST['CARD_PRICE'];
 $CARD_POINTS = $_POST['CARD_POINTS'];
 $CARD_METHOD = $_POST['CARD_METHOD'];
 $MEM_NO = $_SESSION["MEM_NO"];
-$addPoints = "UPDATE member SET MEM_POINTS = MEM_POINTS + '$CARD_POINTS' WHERE MEM_NO = '$MEM_NO'";
+echo $MEM_NO;
+echo $CARD_POINTS;
+$addPoints = "UPDATE member SET MEM_POINTS = MEM_POINTS + $CARD_POINTS WHERE MEM_NO = '$MEM_NO'";
 $pdo->exec($addPoints);
 $card_order = "INSERT INTO card_order(CARD_NO,MEM_NO,ORDER_DATETIME,CARD_PRICE,CARD_POINTS,CARD_METHOD) VALUES('$CARD_NO','$MEM_NO',CURDATE(),'$CARD_PRICE','$CARD_POINTS','$CARD_METHOD')";
 $pdo->exec($card_order);
+$sql ="select MEM_POINTS from member where MEM_NO = ".$_SESSION['MEM_NO'];
+$mem_ponints = $pdo->query($sql);
+
+$rows = $mem_ponints->fetch(PDO::FETCH_ASSOC);
+
+$_SESSION["MEM_POINTS"] = $rows['MEM_POINTS'];
+
 echo"<script>
 if(window.history.length<=2)
 window.location.assign('../index.php');

@@ -10,6 +10,7 @@ body {
   background-repeat: no-repeat,no-repeat;
   background-position: right bottom,-5px 35%; 
 }
+
 .ticket {
   display: block;
   position: absolute;
@@ -192,10 +193,26 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
+  body{
+    background-image: url('../images/boo_bowling.png');
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: right bottom; 
+  }
   .book_and_team{
-    width: 100%;
+  }
+}
+@media screen and (max-width: 992px) {
+  body{
+    background-image: none; 
   }
   .ticket{
-    // margin-top: 75px;
+    position: static;
+    opacity: 1;
+    margin: 0 auto 50px ;
+    transform: translateY(0);
+  }
+  .ticket header{
+    height: auto !important;
   }
 }
