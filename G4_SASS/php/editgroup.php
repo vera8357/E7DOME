@@ -49,7 +49,7 @@ try {
         <label class="editth">上傳揪團海報：</label>
         <label class="btn btn-info">
             <input Type="File" name="upfile" id="upfile" style="display:none;" ;>
-                <img src="images/<?php echo $teamsRow["TEAM_IMG"];?>" id="show_pic" id="" wideditth="300" height="250" >
+                <img src="images/<?php echo $teamsRow["TEAM_IMG"];?>" id="show_pic" id="">
         </div>
         </label>
             <div class="td">

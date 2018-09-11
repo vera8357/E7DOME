@@ -148,11 +148,9 @@
 	<div id="myModal" class="modal">
 		<!-- Modal content -->
 		<div class="modal-content">
-			<div class="modal-header">
-				<div class="title">
-					<h3 class="left">確認預約</h3>
-					<span class="close">&times;</span>
-				</div>
+			<div class="modal-header dim-blue text-white clearfix">
+				<h3 class="left modal-font">確認預約</h3>
+				<span class="close"><i class="fas fa-times"></i></span>
 			</div>
 			<div class="modal-body padding-32">
 
@@ -244,7 +242,7 @@ function showTdyInfo(counter){
     		},
     		success:function(data){
 	    		var cateNo =  '#queryFac' + cate_no; // console.log(cateNo);
-	        	$(cateNo).html(data); console.log('hi');
+	        	$(cateNo).html(data); console.log('showTdyInfo');
 	        	modalOpen();
         		$('.myBtn').click(function(e){
 					//e.preventDefault();
@@ -268,7 +266,7 @@ function showTargetInfo(targetDate){
 
 		var targetDate = yyyy +'-' + mm + '-' + dd;
 		var cate_no = $(this).closest('.table-date').data('cate');
-		// console.log(targetDate);
+		console.log(targetDate);
 
 	    $.post("php/booQuery.php",
 	    	{
@@ -293,7 +291,9 @@ function showTargetInfo(targetDate){
 
 
 function showInfo(fac_no,targetDate,boo_time_i){
-	console.log('hi2');
+	console.log('showInfo');
+	console.log(targetDate);
+
 	$.post("php/booModal.php",
 	{
 		FAC_NO: fac_no,
@@ -386,12 +386,10 @@ function targetBgc(){
 
 <script>
 	window.addEventListener('load',function(){
-		// for(let counter=1; counter<=4; counter++){
-		// 	showTdyInfo(counter);
-		// }
+
 //-------------
-	$('.area').on('click',function(){
-		// console.log();
+	$('.area').one('click',function(){
+		console.log('area');
 		showTdyInfo($(this).data('cate'));
 	});
 //--------------		
