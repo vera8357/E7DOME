@@ -17,6 +17,7 @@ body::-webkit-scrollbar {
 *{
 	text-decoration: none;
 	font-family: 'HanWangZonYi';
+	outline:0px;
 }
 .group-body{
 	background: url("../images/climb.jpg") no-repeat center center fixed;
@@ -325,7 +326,7 @@ header + section {
     padding-top: 50px;
 }
 .select_bar{
-	width:80%;
+	width:90%;
 }
 }
 
@@ -517,6 +518,9 @@ position: fixed;
   	width: 120px;
     height: 120px;
     line-height: 120px;
+  }
+  #create_wrap{
+  width: 80%;
   }
 
 

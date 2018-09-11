@@ -28,7 +28,7 @@ $(function(){
         reverse:true
     })
     
-    .addIndicators()
+    // .addIndicators()
     .setTween(tween)
     .addTo(controller);
     
@@ -42,7 +42,7 @@ $(function(){
         reverse:true
     })
 
-    .addIndicators()
+    // .addIndicators()
     .setTween(tween2)
     .addTo(controller);
 
@@ -56,7 +56,7 @@ $(function(){
         reverse:true
     })
 
-    .addIndicators()
+    // .addIndicators()
     .setTween(tween3)
     .addTo(controller);
 
@@ -70,7 +70,7 @@ $(function(){
         reverse:true
     })
 
-    .addIndicators()
+    // .addIndicators()
     .setTween(tween4)
     .addTo(controller);
 
@@ -84,7 +84,7 @@ $(function(){
         reverse:true
     })
 
-    .addIndicators()
+    // .addIndicators()
     .setTween(tween5)
     .addTo(controller);
 
@@ -100,7 +100,7 @@ $(function(){
         reverse:true
     })
 
-    .addIndicators()
+    // .addIndicators()
     .setTween(tween6)
     .addTo(controller);
 });

@@ -266,6 +266,23 @@
             }
         }
         $(window).resize(slickItem);
+        // $('.teamGroup').slick({
+        //     dots: true,
+        //     slidesToShow: 1,
+        //     slidesToScroll: 1,
+        //     arrows:false,
+        //     autoplay: true,
+        //     autoplaySpeed: 2000,
+        //     focusOnSelect:true,
+        //     responsive: [{
+        //         breakpoint: 768,
+        //         settings: {
+        //         slidesToShow: 1,
+        //         slidesToScroll: 1,
+        //         dots: true,
+        //         }
+        //     }]
+        // });
     </script>
 	
     <script>

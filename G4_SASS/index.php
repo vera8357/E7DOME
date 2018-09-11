@@ -11,15 +11,15 @@
 	<script type="text/javascript" src="js/fullpage.js"></script>
 
 	<!-- 3dfacModel -->
-	<link rel="stylesheet" type="text/css" href="3dfac/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" href="3dfac/css/style0.css" />
-	<link rel="stylesheet" type="text/css" href="3dfac/css/custom.css" />
-	<link rel="stylesheet" type="text/css" href="3dfac/css/fac-info.css">
-	<link rel="stylesheet" type="text/css" href="3dfac/css/fac-animation.css" />
-	<link rel="stylesheet" type="text/css" href="3dfac/css/fac-info.css" />
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-	<script src="3dfac/js/modernizr-custom.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="3dfac/css/normalize.css" /> -->
+	<!-- <link rel="stylesheet" type="text/css" href="3dfac/css/style0.css" /> -->
+	<!-- <link rel="stylesheet" type="text/css" href="3dfac/css/custom.css" /> -->
+	<!-- <link rel="stylesheet" type="text/css" href="3dfac/css/fac-info.css"> -->
 
+	<!-- <link rel="stylesheet" type="text/css" href="3dfac/css/fac-info.css" /> -->
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<script src="3dfac/js/modernizr-custom.js"></script> -->
+	<!-- <link rel="stylesheet" type="text/css" href="3dfac/css/fac-animation.css" /> -->
 	
 </head>
 
@@ -50,9 +50,6 @@
 
 		<div class="section home_pg2">
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
-		<script src="js/svgfloor.js">
-			
-		</script>
 		<div class="light"></div>
 		<div class="light"></div>
 		<div class="light"></div>
@@ -60,8 +57,16 @@
 			<div class="slide">
 				<div class="wrapper">
 					<div class="pg2_fac_info">
-						<h2>籃球場</h2>
-						<p>文案文案文案文案文案</p>
+						<div class="fac_info_content">
+							<h2>籃球場</h2>
+							<p>文案文案文案文案</p>
+							<p>文案文案文案文案</p>
+							<p>文案文案文案文案</p>
+							
+							<a href="basketball.php">更多資訊</a>
+							<a href="booking.php">立即預約</a>
+
+						</div>
 					</div>
 					<div class = "pg2_fac_svg">
 					<?php include 'pg2_basket.php';?>
@@ -71,7 +76,17 @@
 			</div>	
 			<div class="slide">
 				<div class="wrapper">
-					<div class="pg2_fac_info"></div>
+					<div class="pg2_fac_info">
+						<div class="fac_info_content">
+							<h2>保齡球場</h2>
+							<p>文案文案文案文案</p>
+							<p>文案文案文案文案</p>
+							<p>文案文案文案文案</p>
+							<a href="bowling.php">更多資訊</a>
+							<a href="booking.php">立即預約</a>
+
+						</div>
+					</div>
 					<div class = "pg2_fac_svg">
 					<?php include 'pg2_bowling.php';?>
 				</div>
@@ -80,7 +95,16 @@
 			</div>
 			<div class="slide">
 				<div class="wrapper">
-					<div class="pg2_fac_info"></div>
+					<div class="pg2_fac_info">
+						<div class="fac_info_content">
+							<h2>羽球球場</h2>
+							<p>文案文案文案文案</p>
+							<p>文案文案文案文案</p>
+							<p>文案文案文案文案</p>
+							<a href="badminton.php">更多資訊</a>
+							<a href="booking.php">立即預約</a>
+						</div>
+					</div>
 					<div class = "pg2_fac_svg">
 					<?php include 'pg2_badmin.php';?>
 				</div>
@@ -89,7 +113,16 @@
 			</div>
 			<div class="slide">
 				<div class="wrapper">
-					<div class="pg2_fac_info"></div>
+					<div class="pg2_fac_info">
+						<div class="fac_info_content">
+							<h2>羽球球場</h2>
+							<p>文案文案文案文案</p>
+							<p>文案文案文案文案</p>
+							<p>文案文案文案文案</p>
+							<a href="climbimg.php">更多資訊</a>
+							<a href="booking.php">立即預約</a>
+						</div>
+					</div>
 					<div class = "pg2_fac_svg">
 					<?php include 'pg2_climbing.php';?>
 				</div>
@@ -216,6 +249,11 @@
 
 
 	<script>
+				var tl = new TimelineMax({ });
+				var t2 = new TimelineMax({  });
+				var t3 = new TimelineMax({ });
+				var t4 = new TimelineMax({ });
+				var bgd = $('.basketfloor , .bowlingfloor , .badminfloor , .climbingfloor');
 		new fullpage('#homePage', {
 			licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
 			verticalCentered: false,
@@ -223,8 +261,6 @@
 			navigation: true,
 			// responsiveWidth : 992,
 			navigationTooltips: ['首頁','場地介紹','快來揪團','儲值點數','營業資訊'],
-			afterRender: function () {
-			},
 			onLeave: function (origin, destination, direction) {
 				if (destination.index == 0) {
 					$('.home_pg1').removeClass('active');
@@ -263,7 +299,54 @@
 
 					$('.home_pg5').addClass('active');
 				}
+			},
+			afterSlideLoad: function(section, origin, destination, direction){
+				if (destination.index == 0) {
+					$('.svg_none').show();
+					tl.from(bgd, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
+					t2.from('.item01', 0.5, { opacity: 0 }).from('.item01', 0.5, { y: -20, ease: Elastic.easeOut.config(1, 0.3) });
+					t3.from('.item02', 0.5, { opacity: 0 }).from('.item02', 0.5, { y: -20, ease: Elastic.easeOut.config(1, 0.3) });
+					t4.from('.player01,.player02', 0.5, { opacity: 0 });
+				}
+				if (destination.index == 1) {
+					$('.svg_none').show();
+					tl.from(bgd, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
+					t2.from('.item01', 0.5, { opacity: 0 }).from('.item01', 0.5, { y: -20, ease: Elastic.easeOut.config(1, 0.3) });
+					t3.from('.item02', 0.5, { opacity: 0 }).from('.item02', 0.5, { y: -20, ease: Elastic.easeOut.config(1, 0.3) });
+					t4.from('.player01,#pinkball,#blueball', 0.5, { opacity: 0 });
+				}
+				if (destination.index == 2) {
+					$('.svg_none').show();
+					tl.from(bgd, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
+					t2.from('.item01', 0.5, { opacity: 0 }).from('.item01', 0.5, { y: -20, ease: Elastic.easeOut.config(1, 0.3) });
+					t4.from('.player01,.player02', 0.5, { opacity: 0 });
+				}
+				if (destination.index == 3) {
+					$('.svg_none').show();
+					tl.from(bgd, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
+				}
+			},
+			onSlideLeave: function(section, origin, destination, direction){
+
+				if (destination.index == 0) {
+					$('.svg_none').hide();
+					
+				}
+				if (destination.index == 1) {
+					$('.svg_none').hide();
+					
+				}
+				if (destination.index == 2) {
+					$('.svg_none').hide();
+					
+				}
+				if (destination.index == 3) {
+					$('.svg_none').hide();
+					
+
+				}
 			}
+			
 		});
 	</script>
 	<script type="text/javascript" src="js/slick.min.js"></script>

@@ -161,7 +161,7 @@
 
 @media only screen and (max-width: 767px) {
   .fac-list{
-    margin-top: 36px;
+    margin: 32px auto;
   }
 }
   
@@ -171,10 +171,12 @@
     color: #fff;
     line-height: 1.5;
   }
-  /* @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 767px) {
     .fac-info{
+      padding-bottom: 32px;
+      height: 45vmin;
     }
-  } */
+  }
 
 
 
@@ -212,7 +214,13 @@
     text-align: right;
     margin-top: -16px;
   }
-
+  @media only screen and (max-width: 767px) {
+    .fac-btn-group  {
+      position: absolute;
+      right: 0;
+      bottom: 16px;
+    }
+  }
 
   
   .fac-btn{
@@ -256,8 +264,8 @@
   }
 @media only screen and (max-width: 767px) {
   .content__item .tab button {
-    padding: 8px 16px;
-    margin-top: 16px;
+    padding: 21px 16px;
+    /* margin-top: 16px; */
   }
 }
 

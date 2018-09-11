@@ -2,6 +2,7 @@ console.log('booking.js');
 // create 7 days calendar from today
 function bookingCal() {
 	let tdy = new Date();
+	tdy.setDate(tdy.getDate()+1); // OFFSET DATE TO TOMORROW!!!
 	
 	let y = tdy.getFullYear(); // console.log(y);
 	let d = tdy.getDate(); 
