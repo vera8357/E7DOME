@@ -237,7 +237,7 @@ $booTicket = $pdo->query($sqlBoo);
     <div class="group ticket">
       <header>找不到人一起玩？來開團吧！</header>
       <div class="group_form">
-        <form action="php/creatFinish.php" method="post">
+        <form action="php/creatFinish.php" method="post" enctype="multipart/form-data">
         <?php
             $boo_no= $rowBoo['BOO_NO'];
             $mem_no= $_SESSION["MEM_NO"];

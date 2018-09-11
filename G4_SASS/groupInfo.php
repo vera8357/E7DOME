@@ -62,14 +62,43 @@ try {
                     <?php echo $teamsRow["MEM_NAME"];?><img src="images/<?php echo $teamsRow["MEM_IMG"]; ?>" alt="" class="mem-head" id="mem-head1">
                     </div>
                     <div id="order-date">
-                        預約日期： <span><?php echo $teamsRow["BOO_DATE"];?> </span><span><?php
-                        if($teamsRow["BOO_TIME"]==1)
-                            $BOO_TIME='10:00';
-                        else if($teamsRow["BOO_TIME"]==2)
-                        $BOO_TIME='14:00';
-                        else if($teamsRow["BOO_TIME"]==3)
-                        $BOO_TIME='16:00';
-                        echo $BOO_TIME;?></span>
+                        預約日期： <span><?php echo $teamsRow["BOO_DATE"];?> </span>
+
+                        <span>
+                            <?php
+
+                        // if($teamsRow["BOO_TIME"]==1){
+                        //     $BOO_TIME='10:00';
+                        // }
+                        // else if($teamsRow["BOO_TIME"]==2){
+                        //      $BOO_TIME='14:00';
+                        // }
+                       
+                        // else if($teamsRow["BOO_TIME"]==3){
+                        //     $BOO_TIME='16:00';
+                        // }
+
+                             switch ($teamsRow["BOO_TIME"]) {
+                                        case '1':
+
+                                            $teamsRow['BOO_TIME'] = "10:00";
+                                            break;
+                                        case '2':
+                                            $teamsRow['BOO_TIME'] = "14:00";
+                                            break;
+                                        default:
+                                            $teamsRow['BOO_TIME'] = "16:00";   
+                                     }
+
+                                     echo $teamsRow['BOO_TIME'];
+
+
+
+
+                        
+                        ?>
+
+                        </span>
                     </div>
                     <div class="group-mem">
                         揪團人數：
