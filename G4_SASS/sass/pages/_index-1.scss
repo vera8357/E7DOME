@@ -372,6 +372,9 @@ a{
 	.pg2_fac_info{
 		width:40%;
 		background-color: #fff;
+			h2{
+				text-align: center;
+		}
 	}
 	.home_pg2 .pg2_fac_svg{
 		width:60%;
@@ -379,6 +382,33 @@ a{
 			width: 100%;
 	}
 	}
+	@media screen and (max-width: 992px) {
+		.home_pg2 .wrapper{
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap
+		}
+		.pg2_fac_info{
+			order:2;
+			width:80%;
+			background-color: #fff;
+			height: 20vh;
+		}
+		.home_pg2 .pg2_fac_svg{
+			width:100%;
+			height: 80vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			svg{
+				order:1;
+				width: 50%;
+		}
+		}
+	}
+
 
 .home_pg3{
 	background-image: url("../images/index/bg2.png");
