@@ -33,13 +33,13 @@ session_start();
 						<h1>管理員登入平台</h1>
 					<tr>
 						<td>
-							<span>帳號</span><input id="admin_id" type="text" name="admin_id">
+							<span class="back_neknhpe">帳號</span><input id="admin_id" type="text" name="admin_id">
 						</td>
 					</tr>
 
 					<tr>
 						<td>
-							<span>密碼</span><input id="admin_psw" type="password" name="admin_psw">
+							<span class="back_neknhpe">密碼</span><input id="admin_psw" type="password" name="admin_psw">
 						</td>
 					</tr>
 
