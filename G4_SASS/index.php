@@ -48,7 +48,7 @@
 			<div class="home_pg1_bluebox3"></div>
 		</div>
 
-		<div class="section home_pg2">
+		<div class="section home_pg2 fp-auto-height-responsive">
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
 		<div class="light"></div>
 		<div class="light"></div>
@@ -131,7 +131,7 @@
 			</div>	
 		</div>
 
-		<div class="section home_pg3">
+		<div class="section home_pg3 fp-auto-height-responsive">
 			<div class="home_pg3_svg"></div>
 			<div class="wrapper">
 				<h2><div class="typing">加入揪團!尋找運動夥伴</div></h2>
@@ -206,7 +206,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="section home_pg4">
+		<div class="section home_pg4 fp-auto-height-responsive">
 			<div class="home_pg4_bg"></div>
 			<div class="home_pg4_bluebox1">
 				<div class="home_pg4_txt">
@@ -259,14 +259,15 @@
 			verticalCentered: false,
 			anchors: ['firstPage', 'secondPage', 'thirdPage', 'forthPage', 'lastPage'],
 			navigation: true,
-			// responsiveWidth : 992,
+			responsiveWidth : 992,
 			navigationTooltips: ['首頁','場地介紹','快來揪團','儲值點數','營業資訊'],
 			onLeave: function (origin, destination, direction) {
 				if (destination.index == 0) {
 					$('.home_pg1').removeClass('active');
 				}
 				if (destination.index == 1) {
-					$('.svg_none').hide();
+					if (document.body.clientWidth > 767) {
+					$('.svg_none').hide();}
 				}
 				if (destination.index == 2) {
 					$('.typing').css('animation','');
@@ -286,10 +287,12 @@
 				}
 				if (destination.index == 1) {
 					$('.svg_none').show();
+					if (document.body.clientWidth > 767) {
 					tl.from(bgd, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
 					t2.from('.item01', 0.5, { opacity: 0 }).from('.item01', 0.5, { y: -20, ease: Elastic.easeOut.config(1, 0.3) });
 					t3.from('.item02', 0.5, { opacity: 0 }).from('.item02', 0.5, { y: -20, ease: Elastic.easeOut.config(1, 0.3) });
 					t4.from('.player01,.player02,#pinkball,#blueball', 0.5, { opacity: 0 });
+					}
 
 				}
 				if (destination.index == 2) {
@@ -305,6 +308,7 @@
 				}
 			},
 			afterSlideLoad: function(section, origin, destination, direction){
+				if (document.body.clientWidth > 767) {
 				if (destination.index == 0) {
 					$('.svg_none').show();
 					tl.from(bgd, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
@@ -329,9 +333,10 @@
 					$('.svg_none').show();
 					tl.from(bgd, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
 				}
+			}
 			},
 			onSlideLeave: function(section, origin, destination, direction){
-
+				if (document.body.clientWidth > 767) {
 				if (destination.index == 0) {
 					$('.svg_none').hide();
 					
@@ -350,6 +355,7 @@
 
 				}
 			}
+		}
 			
 		});
 	</script>

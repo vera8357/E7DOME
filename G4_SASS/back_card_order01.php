@@ -67,7 +67,7 @@ session_start();
             <thead>
                 <tr>
                     <th>訂單編號</th>
-                    <th>會員名稱</th>
+                    <th>會員帳號</th>
                     <th>商品售價</th>
                     <th>商品點數</th>
                     <th>下單日期</th>
