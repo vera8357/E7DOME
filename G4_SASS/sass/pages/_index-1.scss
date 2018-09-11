@@ -3,6 +3,23 @@
 }
 
 /*spotlight start*/
+@keyframes top-right {
+  0% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(70deg);
+  }
+}
+
+@keyframes top-left {
+  0% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-70deg);
+  }
+}
 
 .light {
   border-bottom: transparent;
@@ -443,6 +460,10 @@ a {
     transition-delay: .5s;
   }
 }
+.home_pg2 {
+  background-image: url('../images/index/pag2-bg-1.jpg');
+  background-size: cover;
+}
 .svg_none{
 	display: none;
 }
@@ -455,12 +476,37 @@ a {
 .pg2_fac_info {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 	width: 40%;
 
   .fac_info_content{
-	background-color: #fff;
-	width: 80%;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  width: 80%;
+  padding: 30px 50px 100px;
+  box-sizing: border-box;
+  h2{
+    font-size: 36px;
+    margin-bottom: 15px
+  }
+  p{
+    line-height: 24px;
+  }
+  a{
+    display: inline-block;
+    margin-top: 60px;
+    background-color: #fff;
+    border: 2px solid #fff;
+    color:#666; 
+    padding: 5px 10px;
+    margin-right: 20px;
+    font-weight: bold;
+    transition: .3s;
+    &:hover{
+      background-color: transparent;
+      color:#fff;
+    }
+  }
   }
 }
 
@@ -486,11 +532,33 @@ a {
 	  }
 	  
 	  .pg2_fac_info {
-		height: 60vh;
+		height: 40vh;
 		order: 2;
 		width: 80%;
 		// background-color: #fff;
-		
+    .fac_info_content{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px 15px 30px;
+      a{
+        margin-top: 20px;
+        margin-right: 10px;
+        padding: 3px 5px;
+        font-size: 16px;
+      }
+      h2{
+        width: 100%;
+        font-size: 24px;
+        text-align: center;
+      }
+      p{
+        width: 100%;
+      }
+      width: 100%;
+      height: 90%;
+    }
 	  }
 	  
 	  .home_pg2 .pg2_fac_svg {
@@ -499,7 +567,7 @@ a {
 		align-items: center;
 		order:1;
 		width: 100%;
-		height: 40vh;
+		height: 60vh;
 		svg {
 		  width: 80%;
 		  align-self: flex-end;
@@ -557,7 +625,14 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+  .home_pg3  .home_team {
+		position: absolute;
+		top:50%;
+		transform: translateY(-50%);
+		width: 100%;
+	}
   .typing {
+    display: none;
     border-right: 0px;
     width: 100%;
   }
@@ -957,8 +1032,22 @@ a {
 }
 
 @media screen and (max-width: 767px) {
+  .home_pg4_bluebox2{
+    height: 50px;
+    h3{
+      font-size: 24px;
+      line-height: 50px;
+    }
+  }
+  .home_pg4_bluebox1{
+    display: none;
+  }
+  .home_pg4_txt {
+    display: none;
+  }
   .pointCard {
     top: 50%;
+    transform: translateY(-50%);
     width: 80%;
     margin: auto;
   }
@@ -991,6 +1080,7 @@ a {
     padding: 5% 15%;
     border-radius: 30px;
   }
+
 }
 
 .home_pg5 {

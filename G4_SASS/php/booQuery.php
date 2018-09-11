@@ -15,10 +15,10 @@ $BOO_DATE = $_POST["BOO_DATE"];
 	$fac = $pdo->query($sqlFac);
 
 	// BOO_TIME convertor
-	$BOO_TIME = array('上午', '下午', '晚上');						
+	$BOO_TIME = array('清晨', '上午', '下午', '晚上');						
 	while ($rowFac = $fac->fetch())
 	{	
-		$i = 0; 
+		$i = 1; 
 		for ($j=0; $j <3 ; $j++) { 
 ?>						
 	<tr>

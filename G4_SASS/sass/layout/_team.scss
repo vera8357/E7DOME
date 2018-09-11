@@ -192,6 +192,9 @@
 	#fp-nav{
 		display: none;
 	}
+	.teamItem.all{
+		display: none;
+	}
 	.teamMore.all .moreSkew{
 		display: none;
 	}
@@ -207,7 +210,7 @@
 		text-align: center;
 	}
 	.home_pg3 h2{
-		padding-top: 120px;
+		padding-top: 80px;
 		margin-bottom: 20px;
 		font-size: 24px;
 	}
@@ -225,9 +228,7 @@
 	.all_img{
 		display: none;
 	}
-	.home_team {
-		width: 100%;
-	}
+	
 	.teamGroup{
 		width: 75%;
 		margin: 0 auto;
