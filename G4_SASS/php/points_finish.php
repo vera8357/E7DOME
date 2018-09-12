@@ -21,10 +21,10 @@ $rows = $mem_ponints->fetch(PDO::FETCH_ASSOC);
 
 $_SESSION["MEM_POINTS"] = $rows['MEM_POINTS'];
 
-echo"<script>
-if(window.history.length<=2)
-window.location.assign('../index.php');
-else
-history.go(-2);
-</script>";
+// echo"<script>
+// if(window.history.length<=2)
+// window.location.assign('../index.php');
+// else
+// history.go(-2);
+// </script>";
 ?>
