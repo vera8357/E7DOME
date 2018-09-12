@@ -43,7 +43,7 @@
                                 	echo "<div class='pic_wrap'>";
                                 	echo "<img src='images/fac_img/".$fac['FAC_IMG1']."'>";
                                 	
-                       				echo "<div class='fac_name'>場地名稱:".$fac['FAC_NAME']."</div>";
+                       				echo "<div class='fac_name'>".$fac['FAC_NAME']."</div>";
                        				echo "</div>";
                                 }       
                             }

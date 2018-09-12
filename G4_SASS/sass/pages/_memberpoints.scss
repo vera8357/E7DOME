@@ -151,6 +151,8 @@ input[type="submit"]{
 
 .phone_show{
     display: block;
+     text-align: center;
+    margin-top: 25px;
 }
 
 .phone_show span{
@@ -163,6 +165,11 @@ input[type="submit"]{
     height: 20px;
     margin-right: 10px;
     vertical-align: text-bottom;
+}
+
+
+.phone_show #btn_logout{
+    border: transparent;
 }
 
 .m_item {
@@ -323,7 +330,14 @@ input[type="submit"]{
  
 }
 
-.points_scrollbar::-webkit-scrollbar {
+
+@media screen and (min-width: 768px){
+        
+        .points_scrollbar{
+            max-height: 700px;
+        }
+
+        .points_scrollbar::-webkit-scrollbar {
   background-color: #ffb505;
 }
 
@@ -350,6 +364,10 @@ input[type="submit"]{
 .points_scrollbar::-webkit-scrollbar-button {
   color: rgb(0, 82, 178);
 }
+
+}
+
+
 
 
 
