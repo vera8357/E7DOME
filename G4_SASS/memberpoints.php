@@ -51,6 +51,15 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
        		 </div>
 
 
+			<div class="phone_show">
+				<span>
+					<img src="images/member_pic/coin.png"><?php echo $_SESSION['MEM_POINTS']; ?>
+					
+				</span>
+
+				<span><form action="php/logout.php" method="post"><input id="btn_logout" type="submit" value="登出"></form></span>
+				
+			</div>
 
 
 			<ul class="m_item">
@@ -64,15 +73,6 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 			</ul>
 
 
-			<div class="phone_show">
-				<span>
-					<img src="images/member_pic/coin.png"><?php echo $_SESSION['MEM_POINTS']; ?>
-					
-				</span>
-
-				<span><form action="php/logout.php" method="post"><input id="btn_logout" type="submit" value="登出"></form></span>
-				
-			</div>
 			
 
 		</div>

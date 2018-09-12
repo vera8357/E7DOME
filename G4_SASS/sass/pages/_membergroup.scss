@@ -152,6 +152,8 @@ input[type="button"]{
 
 .phone_show{
     display: block;
+    text-align: center;
+    margin-top: 25px;
 }
 
 .phone_show span{
@@ -166,7 +168,9 @@ input[type="button"]{
     vertical-align: text-bottom;
 }
 
-
+.phone_show #btn_logout{
+    border: transparent;
+}
 
 
 
@@ -509,10 +513,19 @@ input[type="button"]{
 /*內容卷軸*/
 .group_scrollbar{
     width: 100%;
-    max-height: 700px;
     overflow-y: auto;
  
 }
+
+
+
+@media screen and (min-width: 768px){
+
+        .group_scrollbar{
+            max-height: 550px;
+         
+
+        }
 
 .group_scrollbar::-webkit-scrollbar {
   background-color: #ffb505;
@@ -541,8 +554,7 @@ input[type="button"]{
 .group_scrollbar::-webkit-scrollbar-button {
   color: rgb(0, 82, 178);
 }
-
-
+}
 
 
 

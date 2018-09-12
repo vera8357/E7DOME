@@ -145,6 +145,8 @@ input[type="file"] {
 
 .phone_show{
     display: block;
+    text-align: center;
+    margin-top: 25px;
 }
 
 .phone_show span{
@@ -157,6 +159,11 @@ input[type="file"] {
     height: 20px;
     margin-right: 10px;
     vertical-align: text-bottom;
+}
+
+
+.phone_show #btn_logout{
+    border: transparent;
 }
 
 
