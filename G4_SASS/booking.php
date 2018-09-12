@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Examples</title>
+	<title>預約場地</title>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/booking.css">
 	<link rel="stylesheet" href="css/font.css">
@@ -35,7 +35,7 @@
 			<div class="court panel">
 				<h3 class="text-xxlg padding-32">籃球場</h3>
 				<table id="tbl1" class="table-date" data-cate="1">
-					<caption class="text-white text-lg padding-16">選擇預約日期</caption>
+					<caption class="text-white text-lg padding-16 padding-top-0">選擇預約日期</caption>
 					<tr></tr>
 				</table>
 				<table class="table-select text-white">
@@ -63,7 +63,7 @@
 				<div class="court panel">
 					<h3 class="text-xxlg padding-32">保齡球場</h3>
 					<table id="tbl2" class="table-date" data-cate="2">
-						<caption class="text-white text-lg padding-16">選擇預約日期</caption>
+						<caption class="text-white text-lg padding-16 padding-top-0">選擇預約日期</caption>
 						<tr>
 						</tr>
 					</table>
@@ -93,7 +93,7 @@
 				<div class="court panel">
 					<h3 class="text-xxlg padding-32">攀岩場</h3>
 					<table id="tbl3" class="table-date" data-cate="4">
-						<caption class="text-white text-lg padding-16">選擇預約日期</caption>
+						<caption class="text-white text-lg padding-16 padding-top-0">選擇預約日期</caption>
 						<tr>
 						</tr>
 				<table class="table-select text-white">
@@ -121,7 +121,7 @@
 				<div class="court panel">
 					<h3 class="text-xxlg padding-32">羽球場</h3>
 					<table id="tbl4" class="table-date" data-cate="3">
-						<caption class="text-white text-lg padding-16">選擇預約日期</caption>
+						<caption class="text-white text-lg padding-16 padding-top-0">選擇預約日期</caption>
 						<tr>
 						</tr>
 					</table>
@@ -198,7 +198,6 @@
 // accordion
 function accActiveNow(){
 	var cate_no = <?php echo $cate_no ?>;
-
 	switch(cate_no){
 	    case 1:
 	        $('.area1').addClass('activeNow');
@@ -225,36 +224,30 @@ function accActiveNow(){
 
 
 function showTdyInfo(counter){
-	// console.log('hiTDY');
 	var tdy = new Date();
-	tdy.setDate(tdy.getDate()+1);
-	// OFFSET DATE TO TOMORROW!!!
+	tdy.setDate(tdy.getDate()+1);	// OFFSET DATE TO TOMORROW!!!
 	var tzoffset = tdy.getTimezoneOffset() * 60000;
 	var tmrDate = (new Date(tdy - tzoffset)).toISOString().slice(0,10);
-	// var tmrDate = tdy.toISOString().slice(0,10);
 	
-		var cate_no = counter; // console.log(i);
-    	$.ajax({
-    		url: "php/booQuery.php",
-    		type: 'post',
-    		data: {
-    			CATE_NO: cate_no,
-    			BOO_DATE: tmrDate    		
-    		},
-    		success:function(data){
-	    		var cateNo =  '#queryFac' + cate_no; // console.log(cateNo);
-	        	$(cateNo).html(data); console.log('showTdyInfo');
-	        	modalOpen();
-        		$('.myBtn').click(function(e){
-					//e.preventDefault();
-			    	var fac_no 		= $(this).nextAll().eq(0).val();
-			    	var boo_time_i 	= $(this).nextAll().eq(1).val();
-			    	showInfo(fac_no,tmrDate,boo_time_i);
-			    	
-		        });	        	
-	     	}
-    	});
-
+	var cate_no = counter;
+   	$.ajax({
+   		url: "php/booQuery.php",
+   		type: 'post',
+   		data: {
+   			CATE_NO: cate_no,
+   			BOO_DATE: tmrDate    		
+   		},
+   		success:function(data){
+    		var cateNo =  '#queryFac' + cate_no;
+        	$(cateNo).html(data);
+        	modalOpen();
+       		$('.myBtn').click(function(e){
+		    	var fac_no 		= $(this).nextAll().eq(0).val();
+		    	var boo_time_i 	= $(this).nextAll().eq(1).val();
+		    	showInfo(fac_no,tmrDate,boo_time_i);
+	        });	        	
+     	}
+   	});
 }
 
 function showTargetInfo(targetDate){
@@ -265,7 +258,6 @@ function showTargetInfo(targetDate){
 
 		var targetDate = yyyy +'-' + mm + '-' + dd;
 		var cate_no = $(this).closest('.table-date').data('cate');
-		console.log(targetDate);
 
 	    $.post("php/booQuery.php",
 	    	{
@@ -273,9 +265,9 @@ function showTargetInfo(targetDate){
 	    		BOO_DATE: targetDate
 	    	},
 	    function(data){
-	    	var cateNo =  '#queryFac' + cate_no; // console.log(cateNo);
+	    	var cateNo =  '#queryFac' + cate_no;
 	        $(cateNo).html(data);
-	        modalOpen();console.log('hi1');
+	        modalOpen();
 
 	        $('.myBtn').click(function(){
 		    	var fac_no 		= $(this).nextAll().eq(0).val();
@@ -290,51 +282,40 @@ function showTargetInfo(targetDate){
 
 
 function showInfo(fac_no,targetDate,boo_time_i){
-	console.log('showInfo');
-	console.log(targetDate);
-
 	$.post("php/booModal.php",
-	{
-		FAC_NO: fac_no,
-		BOO_DATE: targetDate,
-		BOO_TIME_i: boo_time_i
-	},
+		{
+			FAC_NO: fac_no,
+			BOO_DATE: targetDate,
+			BOO_TIME_i: boo_time_i
+		},
 		function (data){
 			$('#tbl-md').html(data);
-
-					<?php 
-						if(isset($_SESSION["MEM_NO"]))
-						$mem_no = $_SESSION["MEM_NO"];
-						else 
-						$mem_no = 0;	 
-					?>
-
-					var session = <?php echo $mem_no?>;
-
-					$('#submit-btn').on('click', x2x)
-
-					function x2x(e){
-    					$(this).off('click'); // remove handler
-						if(session==0){
-							e.preventDefault();
-							alert('請先登入會員');
-							showLoginForm();
-						}
-					}
-
+			<?php 
+				if(isset($_SESSION["MEM_NO"]))
+				$mem_no = $_SESSION["MEM_NO"];
+				else 
+				$mem_no = 0;	 
+			?>
+			var session = <?php echo $mem_no?>;
+			$('#submit-btn').on('click', memChk)
+			function memChk(e){
+	 				$(this).off('click'); // remove handler
+				if(session==0){
+					e.preventDefault();
+					alert('請先登入會員');
+					showLoginForm();
+				}
+			}
 		}
 	);
 }
 
-
 function modalOpen(){
 	// Get the modal
 	var modal = document.getElementById('myModal');
-	// console.log(modal);   
 	
 	$(".myBtn").each(function(){
 		$(this).click(function(){ 
-			// console.log('hi');
 			modal.style.display = "block";
 		});
 	});
@@ -357,37 +338,20 @@ function modalOpen(){
     	}
 	}
 }
-
-
-
-function targetBgc(){
-	$('.date-btn').each(function(){
-		$(this).click(function(){
-			$('.date-btn').not(this).css("background-color", "#FFFFFF");
-			$(this).css("background-color", "#FB9A00");
-			
-		});
-	});
-}
 </script>
 
 <script>
-	window.addEventListener('load',function(){
-
-//-------------
+window.addEventListener('load',function(){
+	bookingCal();
 	$('.area').one('click',function(){
-		// console.log('area');
 		showTdyInfo($(this).data('cate'));
 	});
-//--------------		
-		showTdyInfo(cate_no);
-		accActiveNow();
-		// modalOpen();
-		showTargetInfo();
-		targetBgc();
-	});
+	showTdyInfo(cate_no);
+	accActiveNow();
+	showTargetInfo();
+	targetBgc();
+});
 </script>
 
 </body>
-
 </html>
