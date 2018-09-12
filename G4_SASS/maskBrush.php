@@ -25,7 +25,7 @@
         <div class="normal-rocket"></div>
         <div class="normal-rocket"></div>
         <div class="normal-rocket"></div> -->
-        <button class="maskbrush-button wow bounceIn" data-wow-duration=".5s" data-wow-delay="10s" data-depth="-1" onclick="location.href='index.php'">BACK!</button>
+        <button class="maskbrush-button wow bounceIn" data-wow-duration=".5s" data-wow-delay="5s" data-depth="-1" onclick="location.href='index.php'">回首頁</button>
         <div class="vtb-intro-body">
             <!-- <div class="vtb-intro-container">
                 <div class="vtb-intro-header">
