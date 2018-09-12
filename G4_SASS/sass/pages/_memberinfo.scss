@@ -1,6 +1,6 @@
 * {
     @include all();
-  /*outline: 1px solid red;*/
+ 
   
 }
 
@@ -143,6 +143,25 @@ input[type="file"] {
    display: none;
 }
 
+.phone_show{
+    display: block;
+}
+
+.phone_show span{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.phone_show img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: text-bottom;
+}
+
+
+
+
 .m_item {
     width: 100%;
     display: flex;
@@ -150,7 +169,7 @@ input[type="file"] {
 }
 
 .m_item li {
-    width: calc(100% / 5);
+    width: calc(100% / 4);
     text-align: center;
     font-size: 16px;
     padding: 2px 0;
@@ -160,6 +179,10 @@ input[type="file"] {
     border-bottom: 4px solid #ffb505;
     padding-bottom: 5px;
     font-size: 4.5vw;
+}
+
+.computer_logout{
+    display: none;
 }
 
 /*768以上*/
@@ -207,6 +230,10 @@ input[type="file"] {
        @include show_name();
     }
 
+    .phone_show{
+        display: none;
+    }
+
     #show_name span{
     display: inline-block;
     width: 100%;
@@ -242,6 +269,10 @@ input[type="file"] {
         border-bottom: 1px solid transparent;
         padding-bottom: 0px;
     }
+
+    .computer_logout{
+    display: block;
+}
 
   
 

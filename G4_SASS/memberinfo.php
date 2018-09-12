@@ -1,6 +1,4 @@
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,10 +62,21 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 				<li><a href="memberbooking.php"><span class="line"></span>預約紀錄</a></li>
 				<li><a href="memberpoints.php"><span class="line"></span>儲值紀錄</a></li>
 				<li><a href="membergroup.php"><span class="line"></span>我的揪團</a></li>
-				<li><form action="php/logout.php" method="post"><input id="btn_logout" type="submit" value="登出"></form> </li>
+				<li class="computer_logout"><form action="php/logout.php" method="post"><input id="btn_logout" type="submit" value="登出"></form> </li>
 				
 				
 			</ul>
+
+
+			<div class="phone_show">
+				<span>
+					<img src="images/member_pic/coin.png"><?php echo $_SESSION['MEM_POINTS']; ?>
+					
+				</span>
+
+				<span><form action="php/logout.php" method="post"><input id="btn_logout" type="submit" value="登出"></form></span>
+				
+			</div>
 			
 
 		</div>

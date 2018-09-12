@@ -135,7 +135,7 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 									
 										echo "</span>";
 										echo "<span class='hold2'>";
-										echo "<p>訂單編號:<span id='booking_no'>".$order['BOO_NO']."</span></p>";
+										echo "<p>訂單編號:<span>".$order['BOO_NO']."</span></p>";
 										echo "<p>&nbsp;場&nbsp;&nbsp;&nbsp;&nbsp;地&nbsp;&nbsp;:<span id='booking_site'>".$order['FAC_NAME']."</span></p>";
 										echo "<p>預約時段:<span id='booking_time'>".$order['BOO_TIME']."</span></p>";
 										echo "<p>預約日期:<span id='booking_date'>".$order['BOO_DATE']."</span></p>";
