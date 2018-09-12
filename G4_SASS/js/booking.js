@@ -73,4 +73,13 @@ function tbl() {
 
 	}
 }
-window.addEventListener('load',bookingCal);
+
+function targetBgc(){
+	$('.date-btn').each(function(){
+		$(this).click(function(){
+			$('.date-btn').not(this).css("background-color", "#FFFFFF");
+			$(this).css("background-color", "#FB9A00");
+			
+		});
+	});
+}

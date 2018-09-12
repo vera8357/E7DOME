@@ -201,6 +201,8 @@ a{
 	display: block;
 	font-family: 'HanWangZonYi';
 }
+
+
 .table-select-scroll{
 	overflow: auto;
 	height: 30vmin;
@@ -236,8 +238,14 @@ a{
 .table-select td{
 	padding: 8px;
 	text-align: center;
-	width: 10%;
+	width: 150px;
 }
+
+
+// .table-select th:nth-child(2),
+// .table-select td:nth-child(2){
+// 	width: 100px;
+// }
 
 
 
@@ -269,10 +277,11 @@ a{
 	cursor: pointer;
 	border: none;
 	font-family: 'HanWangZonYi';
+	font-size: 16px;
 }
 @media only screen and (max-width: 767px) {
-	
 	.btn{
+		padding: 12px 0;
 		font-size: 12px;
 	}
 }
@@ -319,13 +328,11 @@ a{
 	background-color: #0052B2;
 	cursor: pointer;
 	border:0;
-	font-size: 16px;
 }
 .dim-orange {
 	background-color: #FB9A00;
 	cursor: pointer;
 	border:0;
-	font-size: 16px;
 }
 .dim-gray	{
 	background-color: #BFBFBF;
@@ -377,6 +384,11 @@ a{
 
 .padding-top-16{ padding-top: 16px; }
 
+@media only screen and (max-width: 767px) {
+.padding-top-0{
+	padding-top: 0;
+}
+}
 
 @media only screen and (max-width: 767px) {
 	.padding-32{ padding: 16px 0; }
@@ -537,6 +549,7 @@ a{
 }
 
 
+@media only screen and (min-width: 767px) {
 /*scroll樣式更換*/
 #queryFac1::-webkit-scrollbar,
 #queryFac2::-webkit-scrollbar,
@@ -583,6 +596,8 @@ a{
   /*color: rgb(0, 82, 178);*/
   color: #ffb505;
 }
+}
+
 
 .close{
 	float: right;
