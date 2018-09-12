@@ -93,7 +93,7 @@
                 <img class="basketball-o ball-animation" src="images/about-material/ball/Basketballplayer.png" alt="basketball">
               </a>
               <a href="basketball.php">
-                <h3>籃球揪團
+                <h3>籃球場地
                   <img class="point-txt1" src="images/about-material/ball/point.png" alt="point">
                 </h3>
               </a>
@@ -103,7 +103,7 @@
                 <img class="rock-climbing-o ball-animation ball-ani-line3" src="images/about-material/ball/Mountaineer.png" alt="rock-climbing">
               </a>
               <a href="climbimg.php">
-                <h3>攀岩揪團
+                <h3>攀岩場地
                   <img class="point-txt2" src="images/about-material/ball/point.png" alt="point">
                 </h3>
               </a>
@@ -113,7 +113,7 @@
                 <img class="badminton-o ball-animation ball-ani-line1" src="images/about-material/ball/Featherplayer.png" alt="badminton">
               </a>
               <a href="badminton.php">
-                <h3>羽球揪團
+                <h3>羽球場地
                   <img class="point-txt3" src="images/about-material/ball/point.png" alt="point">
                 </h3>
               </a>
@@ -123,7 +123,7 @@
                 <img class="bowling-o ball-animation ball-ani-line2" src="images/about-material/ball/footerplayer.png" alt="bowling">
               </a>
               <a href="bowling.php">
-                <h3>保齡球揪團
+                <h3>保齡球場地
                   <img class="point-txt4" src="images/about-material/ball/point.png" alt="point">
                 </h3>
               </a>
@@ -162,16 +162,18 @@
           <div class="business-text">
             <h2>營業資訊
               <br>Business information</h2>
-            <h3>消費注意事項
-              <br>低消100點/人，消費需另加計10%服務費
-              <br>禁帶外食、禁帶寵物、提供WIFI無線上網</h3>
+            <h3>
+                1.即刻起註冊會員享有5000點數。<br>
+                2.可線上預約場地主題館。<br>
+                3.提供線上揪團服務。<br>
+                4.機車免費停車。</h3>
             <div class="phone">
               <img src="images/about-material/business-man/phone01.png" alt="phone">
               <span>電話 TEL：+886.2.2704.8195 傳真 FAX：+886.2.2704.4933</span>
             </div>
             <div class="time">
               <img src="images/about-material/business-man/time01.png" alt="time">
-              <span>開放時間: 上午: 8 : 00 - 12: 00 中午: 1:00 - 5:00 晚上:6:00 - 10:00</span>
+              <span>開放時間: 上午: 10 : 00 - 12: 00 中午: 14:00 - 16:00 晚上:16:00 - 18:00</span>
             </div>
             <div class="landmark">
               <img src="images/about-material/business-man/landmark01.png" alt="landmark">
