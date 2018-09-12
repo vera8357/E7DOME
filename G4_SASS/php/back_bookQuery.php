@@ -1,5 +1,5 @@
 <?php
-$MEM_NO = $_POST["MEM_NO"];
+$MEM_ID = $_POST["MEM_ID"];
 
 // connect DB
     require_once("connect_g4.php");
@@ -7,16 +7,18 @@ $MEM_NO = $_POST["MEM_NO"];
     $sqlBoo = "SELECT * FROM booking
 LEFT JOIN facility ON booking.FAC_NO = facility.FAC_NO
 LEFT JOIN member ON booking.MEM_NO = member.MEM_NO
-WHERE booking.MEM_NO = $MEM_NO";
+WHERE member.MEM_ID = '$MEM_ID'
+ORDER BY booking.BOO_NO DESC";
     $boo = $pdo->query($sqlBoo);
     
-    $BOO_TIME = array('清晨', '上午', '下午', '晚上');
+   
 
     while ($rowBoo = $boo->fetch()){
+        $BOO_TIME = array('清晨', '上午', '下午', '晚上');
 ?>
     <tr>
         <td><?php echo $rowBoo["BOO_NO"] ?></td>
-        <td><?php echo $rowBoo["MEM_NO"] ?></td>
+        <td><?php echo $rowBoo["MEM_ID"] ?></td>
         <td><?php echo $rowBoo["FAC_NAME"] ?></td>
         <td><?php echo $rowBoo["BOO_DATE"] ?></td>
         <td><?php echo $BOO_TIME[$rowBoo["BOO_TIME"]] ?></td>
