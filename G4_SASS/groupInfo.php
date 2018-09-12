@@ -1,4 +1,3 @@
-
 <?php
 
 
@@ -28,12 +27,20 @@ try {
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font.css">
     <title>中大籃球火</title>
-    <style type="text/css" media="screen">
-    ul {}
-    </style>
 </head>
 
 <body>
+    <script>
+
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v3.1&appId=499403757194446&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+    </script>
+
     <?php include 'header.php';?>
     <!-- <div class="group-details">
     </div> -->
@@ -41,7 +48,7 @@ try {
         <div class="group-wrapper">
             <div class="first-wrapper">
                 <div class="group-info-image">
-                    <img src="images/<?php echo $teamsRow["TEAM_IMG"];?>" alt="">
+                    <img src="images/team_pic/<?php echo $teamsRow["TEAM_IMG"];?>" alt="">
                 </div>
                 <div class="group-details">
                     <div><span class="group-info-title"><?php echo $teamsRow["TEAM_NAME"];?></span>
@@ -53,30 +60,16 @@ try {
                     $teams = $team->fetchAll(PDO::FETCH_ASSOC);
                     $team_mem = $pdo->query( $sql);
                     ?>
-                    
                     <div class="group-txt">
                         <?php echo $teamsRow["TEAM_INFO"];?>
                     </div>
                     <div class="group-owner">
                     主揪人：
-                    <?php echo $teamsRow["MEM_NAME"];?><img src="images/<?php echo $teamsRow["MEM_IMG"]; ?>" alt="" class="mem-head" id="mem-head1">
+                    <?php echo $teamsRow["MEM_NAME"];?>
                     </div>
                     <div id="order-date">
-                        預約日期： <span><?php echo $teamsRow["BOO_DATE"];?> </span>
-
-                        <span>
+                        預約日期： <span><?php echo $teamsRow["BOO_DATE"];?> </span><span>
                             <?php
-
-                        // if($teamsRow["BOO_TIME"]==1){
-                        //     $BOO_TIME='10:00';
-                        // }
-                        // else if($teamsRow["BOO_TIME"]==2){
-                        //      $BOO_TIME='14:00';
-                        // }
-                       
-                        // else if($teamsRow["BOO_TIME"]==3){
-                        //     $BOO_TIME='16:00';
-                        // }
 
                              switch ($teamsRow["BOO_TIME"]) {
                                         case '1':
@@ -87,17 +80,11 @@ try {
                                             $teamsRow['BOO_TIME'] = "14:00";
                                             break;
                                         default:
-                                            $teamsRow['BOO_TIME'] = "16:00";   
+                                            $teamsRow['BOO_TIME'] = "16:00";
                                      }
 
                                      echo $teamsRow['BOO_TIME'];
-
-
-
-
-                        
                         ?>
-
                         </span>
                     </div>
                     <div class="group-mem">
@@ -127,7 +114,7 @@ try {
                     $team_mem = $pdo->query( $sql);
                     foreach($team_mem as $e=>$memRow){
                     ?>
-                        <div class="mem-head" id="mem-head1"><img src="images/<?php echo $memRow["MEM_IMG"];?>" alt=""></div>
+                        <div class="mem-head" id="mem-head1"><img src="images/member_pic/<?php echo $memRow["MEM_IMG"];?>" alt=""></div>
                     <?php
                     }
                     ?>
@@ -159,16 +146,16 @@ try {
                                 else
                                 echo '<input type="image" src="images/unlike.png" class="icon  icon-a" id="heart" title="加入收藏" border="0" alt="Submit" value="1"/>';
                             ?>
-                            
-                            <a href="javascript:void(0);" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u='+fbhtml_url+'&src=sdkpreparse');return false;" class="icon-a fb-share-button" >
-                            <img src="images/share.png" class="icon">
 
-                            </a>
+                            <a id="icon" class="icon" target="_blank" href="https://social-plugins.line.me/lineit/share?url=http://140.115.236.72/demo-projects/CD102/CD102G4/groupInfo.php?TEAM_NO=<?php echo $teamsRow["TEAM_NO"];?>">
+                            <img src="images/share.png" class="icon";>
+    
+                  </a>
+                            </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </section>
     <?php
     }
@@ -200,7 +187,7 @@ try {
                         </div>
                         <div class="message">
                             <p>
-                                <?php 
+                                <?php
                                 $MSG_INFO = htmlspecialchars ($teamsRow["MSG_INFO"]); 
                                 echo $MSG_INFO;
                                 ?>
@@ -224,34 +211,33 @@ try {
             </div>
     <form action="php/submitMsg.php" method="get" class="messageForm" id="messageForm" name="messageForm" onclick="return checkMsg()">
             <div class="message-box01">
-                <div id="MEM-NO">
-                </div>
+                <!-- <div id="MEM-NO"></div> -->
                 <textarea name="MSG_INFO" id="MSG_INFO" placeholder="請輸入內容..."></textarea>
                 <input type="hidden" name="TEAM_NO" value="<?php echo $TEAM_NO ?>">
-                <button type="submit" class="submit button" id="submit">送出
-            </button>
+                <button type="submit" class="submit button" id="submit">送出</button>
+            </div>
     </form>
-    </div>
+
 
     </section>
     <div class="edit" id="edit">
         <?php include 'php/editgroup.php';?>
     </div>
 
-
-    <script src="libs/jquery/dist/jquery.min.js"></script>
+<script src="libs/jquery/dist/jquery.min.js"></script>
     <script src="js/groupinfo.js"></script>
-
-
+    
     <script>
 
-
+    $(document).ready(function(){
 
         var myDiv = document.getElementById('forum-border');
         myDiv.scrollTop = myDiv.scrollHeight;
 
+});
 
     </script>
+
 </body>
 
 </html>

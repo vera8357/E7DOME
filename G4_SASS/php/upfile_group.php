@@ -18,13 +18,13 @@ $TEAM_NO = $_REQUEST["TEAM_NO"];
 
 switch($_FILES['upfile']['error']){
   case UPLOAD_ERR_OK:
-    if( file_exists("../images/")===false){
-    	mkdir("../images/");
+    if( file_exists("../images/team_pic/")===false){
+    	mkdir("../images/team_pic/");
     }
     $from = $_FILES['upfile']['tmp_name'];
     $fileto =pathinfo($_FILES['upfile']['name']);
     $filext = $fileto['basename'];
-    $to = "../images/{$filext}";
+    $to = "../images/team_pic/{$filext}";
     $filname = "{$filext}";
     if(copy( $from, $to)){
       $file = "
