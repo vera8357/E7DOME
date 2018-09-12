@@ -178,6 +178,7 @@ input[type="file"] {
 .m_item li a {
     border-bottom: 4px solid #ffb505;
     padding-bottom: 5px;
+    font-size: 4.5vw;
 }
 
 .computer_logout{
@@ -187,6 +188,11 @@ input[type="file"] {
 /*768以上*/
 
 @media screen and (min-width: 768px) {
+    .m_item li a {
+        border-bottom: 4px solid #ffb505;
+        padding-bottom: 5px;
+        font-size: 22px;
+    }
     .pic_wrap {
         position: relative;
         width: 180px;

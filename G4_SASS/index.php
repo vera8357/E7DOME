@@ -48,7 +48,7 @@
 			<div class="home_pg1_bluebox3"></div>
 		</div>
 
-		<div class="section home_pg2">
+		<div class="section home_pg2 fp-auto-height-responsive">
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
 		<div class="light"></div>
 		<div class="light"></div>
@@ -59,9 +59,8 @@
 					<div class="pg2_fac_info">
 						<div class="fac_info_content">
 							<h2>籃球場</h2>
-							<p>文案文案文案文案</p>
-							<p>文案文案文案文案</p>
-							<p>文案文案文案文案</p>
+							<p>想像curry一樣射滿全場嗎?</p>
+							<p>來我們籃球場揮灑汗水吧!</p>
 							
 							<a href="basketball.php">更多資訊</a>
 							<a href="booking.php">立即預約</a>
@@ -79,9 +78,8 @@
 					<div class="pg2_fac_info">
 						<div class="fac_info_content">
 							<h2>保齡球場</h2>
-							<p>文案文案文案文案</p>
-							<p>文案文案文案文案</p>
-							<p>文案文案文案文案</p>
+							<p>來打一場漂亮的全倒吧!</p>
+							<p>歡迎來最漂亮的保齡球場</p>
 							<a href="bowling.php">更多資訊</a>
 							<a href="booking.php">立即預約</a>
 
@@ -98,9 +96,8 @@
 					<div class="pg2_fac_info">
 						<div class="fac_info_content">
 							<h2>羽球球場</h2>
-							<p>文案文案文案文案</p>
-							<p>文案文案文案文案</p>
-							<p>文案文案文案文案</p>
+							<p>一起揪麻吉來場2對2吧!</p>
+							<p>世界上最大的羽球場</p>
 							<a href="badminton.php">更多資訊</a>
 							<a href="booking.php">立即預約</a>
 						</div>
@@ -115,10 +112,8 @@
 				<div class="wrapper">
 					<div class="pg2_fac_info">
 						<div class="fac_info_content">
-							<h2>羽球球場</h2>
-							<p>文案文案文案文案</p>
-							<p>文案文案文案文案</p>
-							<p>文案文案文案文案</p>
+							<h2>攀岩場</h2>
+							<p>爬爬爬!</p>
 							<a href="climbimg.php">更多資訊</a>
 							<a href="booking.php">立即預約</a>
 						</div>
@@ -131,12 +126,12 @@
 			</div>	
 		</div>
 
-		<div class="section home_pg3">
+		<div class="section home_pg3 fp-auto-height-responsive">
 			<div class="home_pg3_svg"></div>
 			<div class="wrapper">
 				<h2><div class="typing">加入揪團!尋找運動夥伴</div></h2>
 				<div class="teamItem all">
-					<a href="#">
+					<a href="group.php">
 						<div class="teamAll">
 							<div class="all_img">
 								<img src="images/index/date.png">
@@ -156,7 +151,7 @@
 					<ul class="teamGroup">
 					<?php
 					require_once('php/connect_g4.php');
-					$sql = "SELECT * FROM team JOIN booking ON (team.BOO_NO = booking.BOO_NO) JOIN facility ON (facility.FAC_NO = booking.FAC_NO)  WHERE booking.BOO_DATE > CURDATE() ";
+					$sql = "SELECT * FROM team JOIN booking ON (team.BOO_NO = booking.BOO_NO) JOIN facility ON (facility.FAC_NO = booking.FAC_NO)  WHERE booking.BOO_DATE > CURDATE() limit 6";
 					$team = $pdo->query( $sql);
 					$teams = $team->fetchAll(PDO::FETCH_ASSOC);
 					foreach($teams as $i=>$teamsRow){
@@ -171,7 +166,7 @@
 										</div>
 									</div>
 									<div class="teamPic">
-										<img src="images/<?php echo $teamsRow["TEAM_IMG"];?>" alt="">
+										<img src="images/team_pic/<?php echo $teamsRow["TEAM_IMG"];?>" alt="">
 									</div>
 									<div class="teamInfo">
 										<div class="teamMore">
@@ -206,12 +201,13 @@
 				</div>
 			</div>
 		</div>
-		<div class="section home_pg4">
+		<div class="section home_pg4 fp-auto-height-responsive">
 			<div class="home_pg4_bg"></div>
 			<div class="home_pg4_bluebox1">
 				<div class="home_pg4_txt">
 					<h2>點數儲值</h2>
-					<p>文案文案文案</p>
+					<p>場地點數制</p>
+					<p>買越多送越多!</p>
 				</div>
 				<div class="home_pg4_yellowbox"></div>
 				<div class="home_pg4_whitebox"></div>
@@ -259,14 +255,15 @@
 			verticalCentered: false,
 			anchors: ['firstPage', 'secondPage', 'thirdPage', 'forthPage', 'lastPage'],
 			navigation: true,
-			// responsiveWidth : 992,
+			responsiveWidth : 992,
 			navigationTooltips: ['首頁','場地介紹','快來揪團','儲值點數','營業資訊'],
 			onLeave: function (origin, destination, direction) {
 				if (destination.index == 0) {
 					$('.home_pg1').removeClass('active');
 				}
 				if (destination.index == 1) {
-					$('#e7dome-text').hide();
+					if (document.body.clientWidth > 767) {
+					$('.svg_none').hide();}
 				}
 				if (destination.index == 2) {
 					$('.typing').css('animation','');
@@ -285,7 +282,13 @@
 
 				}
 				if (destination.index == 1) {
-					$('#e7dome-text').show();
+					$('.svg_none').show();
+					if (document.body.clientWidth > 767) {
+					tl.from(bgd, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
+					t2.from('.item01', 0.5, { opacity: 0 }).from('.item01', 0.5, { y: -20, ease: Elastic.easeOut.config(1, 0.3) });
+					t3.from('.item02', 0.5, { opacity: 0 }).from('.item02', 0.5, { y: -20, ease: Elastic.easeOut.config(1, 0.3) });
+					t4.from('.player01,.player02,#pinkball,#blueball', 0.5, { opacity: 0 });
+					}
 
 				}
 				if (destination.index == 2) {
@@ -301,6 +304,7 @@
 				}
 			},
 			afterSlideLoad: function(section, origin, destination, direction){
+				if (document.body.clientWidth > 767) {
 				if (destination.index == 0) {
 					$('.svg_none').show();
 					tl.from(bgd, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
@@ -325,9 +329,10 @@
 					$('.svg_none').show();
 					tl.from(bgd, 1, { opacity: 0, scale: 0, transformOrigin: 'center center', ease: Elastic.easeOut.config(1, 0.3) });
 				}
+			}
 			},
 			onSlideLeave: function(section, origin, destination, direction){
-
+				if (document.body.clientWidth > 767) {
 				if (destination.index == 0) {
 					$('.svg_none').hide();
 					
@@ -346,6 +351,7 @@
 
 				}
 			}
+		}
 			
 		});
 	</script>

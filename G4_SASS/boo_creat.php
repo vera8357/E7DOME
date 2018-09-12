@@ -25,77 +25,14 @@
 <?php
 
 // prevent refresh
-if( isset($_SESSION['refreshChk']) ){
-  unset($_SESSION['refreshChk']);
-  header("location: booking.php");
-  exit;
-}else{
-  $_SESSION['refreshChk'] = rand();
-}
 
 // GET MEM_NO
 $MEM_NO = $_SESSION["MEM_NO"];
-
+$BOO_NO =$_POST['booking_no'];
 // MEM_POINTS CHK
-$MEM_POINTS = $_SESSION["MEM_POINTS"];
-$FAC_POINTS = $_REQUEST["FAC_POINTS"];
-if ( $MEM_POINTS < $FAC_POINTS ) {
-    echo '<script language="javascript">';
-    echo 'alert("會員點數不足請儲值");';
-    // echo 'alert("'.$FAC_POINTS.'");';
-    echo "setTimeout(\"location.href = 'points_buy.php';\",1500);";
-    echo '</script>';
-  exit;
-}
 
 // connect DB
 require_once("php/connect_g4.php");
-
-// Insert
-$sqlInsert = "INSERT into booking (FAC_NO, BOO_DATETIME, BOO_DATE, BOO_TIME, MEM_NO, BOO_STATUS)
-values (:FAC_NO, :BOO_DATETIME, :BOO_DATE, :BOO_TIME, :MEM_NO, :BOO_STATUS)";
-$boo = $pdo->prepare($sqlInsert);
-
-// Update
-$sqlUpdate = "update member set MEM_POINTS = :MEM_POINTS-:FAC_POINTS WHERE MEM_NO = :MEM_NO";
-$mem = $pdo->prepare($sqlUpdate);
-
-
-try {
-
-/* Begin a transaction, turning off autocommit */
-$pdo->beginTransaction();
-
-$boo->bindValue(':FAC_NO', $_REQUEST["FAC_NO"]);
-
-$boo->bindValue(':BOO_DATETIME', $_REQUEST["BOO_DATETIME"]);
-$boo->bindValue(':BOO_DATE',$_REQUEST["BOO_DATE"]);
-$boo->bindValue(':BOO_TIME', $_REQUEST["BOO_TIME"]);
-
-$boo->bindValue(':MEM_NO',$MEM_NO);
-
-$boo->bindValue(':BOO_STATUS', $_REQUEST["BOO_STATUS"]);
-$boo->execute();
-$lastBooNo = $pdo->lastInsertId();
-
-$mem->bindValue(':MEM_NO', $MEM_NO);
-$mem->bindValue(':MEM_POINTS', $MEM_POINTS);
-$mem->bindValue(':FAC_POINTS', $FAC_POINTS);
-
-$mem->execute();
-
-// insert DB
-$pdo->commit();
-
-$_SESSION["MEM_POINTS"] = $MEM_POINTS - $FAC_POINTS;
-	
-} catch (Exception $e) {
-	echo $e->getMessage(), '<br>';
-	echo $e->getLine();
-}
-
-
-
 ?>
 
 
@@ -111,7 +48,7 @@ $_SESSION["MEM_POINTS"] = $MEM_POINTS - $FAC_POINTS;
 $sqlBoo = "SELECT * from booking
 LEFT JOIN facility
 ON booking.FAC_NO = facility.FAC_NO
-WHERE BOO_NO = $lastBooNo";
+WHERE BOO_NO = $BOO_NO";
 $booTicket = $pdo->query($sqlBoo);
 
 
@@ -120,45 +57,7 @@ $booTicket = $pdo->query($sqlBoo);
 
 <?php
   $BOO_TIME = array('清晨', '上午', '下午', '晚上');
-  while ( $rowBoo = $booTicket->fetch() ) {
-
-    include('php/phpqrcode/qrlib.php');
-
-    $tempDir = 'images/qrcode/'; 
-
-    $host= gethostname();
-    $ip = gethostbyname($host);
-    // $ip = $_SERVER['SERVER_ADDR'];
-    $codeContents = "http://".$ip."/demo-projects/CD102/CD102G4/php/booScan.php?BOO_NO=$lastBooNo";
-     
-    // we need to generate filename somehow,  
-    // with md5 or with database ID used to obtains $codeContents... 
-    $fileName = '005_file_'.md5($codeContents).'.png'; 
-     
-    $pngAbsoluteFilePath = $tempDir.$fileName; 
-    $urlRelativeFilePath = 'images/qrcode/'.$fileName; 
-     
-    // generating 
-    if (!file_exists($pngAbsoluteFilePath)) { 
-        QRcode::png($codeContents, $pngAbsoluteFilePath);
-
-        $sqlQrcode = "UPDATE booking SET BOO_QRCODE = :BOO_QRCODE WHERE BOO_NO = :BOO_NO";
-        $qrcode = $pdo->prepare($sqlQrcode);
-        
-        // UPDATE QRCODE PATH
-        $qrcode->bindValue(':BOO_QRCODE', $urlRelativeFilePath);
-        $qrcode->bindValue(':BOO_NO', $lastBooNo);
-        $qrcode->execute();
-        // echo '預約完成！'; 
-        // echo '<hr />'; 
-    } else { 
-        echo 'File already generated! We can use this cached file to speed up site on common codes!';
-        echo '<hr />'; 
-    } 
-     
-    // echo 'Server PNG File: '.$pngAbsoluteFilePath; 
-    // echo '<hr />';
-
+  while ( $rowBoo = $booTicket->fetch() ) {     
 
 ?>
 <div class="bg">
@@ -225,7 +124,7 @@ $booTicket = $pdo->query($sqlBoo);
           </div>
         </div>
         <div class="qr">
-          <?php echo '<img src="'.$urlRelativeFilePath.'" />'; ?>
+          <?php echo '<img src="'.$rowBoo["BOO_QRCODE"].'" />'; ?>
         </div>
         <footer>
           <div class="footer-text">

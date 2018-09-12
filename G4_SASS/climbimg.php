@@ -15,7 +15,7 @@
     <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
     <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
     <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
-    <title>Document</title>
+    <title>E7DOME</title>
 </head>
 <body>
     <?php include 'header.php';?>
@@ -165,7 +165,7 @@
     </div>
     <div class="group_page">
         <div class="bgcball">
-            <img src="images/bowling/ball.png" alt="">
+            <img src="images/sport/ston.png" alt="">
         </div>
         <div class="group_page_content">
             <h3>加入揪團！尋找運動伙伴</h3>
@@ -191,7 +191,7 @@
                     <?php
                     
                         require_once("php/connect_g4.php");
-                        $sql = "SELECT * FROM team JOIN booking ON (team.BOO_NO = booking.BOO_NO) JOIN facility ON (facility.FAC_NO = booking.FAC_NO) where booking.BOO_DATE > CURRENT_DATE() and facility.CATE_NO = 2 order by facility.FAC_NO desc limit 3";
+                        $sql = "SELECT * FROM team JOIN booking ON (team.BOO_NO = booking.BOO_NO) JOIN facility ON (facility.FAC_NO = booking.FAC_NO) where booking.BOO_DATE > CURRENT_DATE() and facility.CATE_NO = 4 order by facility.FAC_NO desc limit 3";
                         $team = $pdo->query( $sql);
                         $teams = $team->fetchAll(PDO::FETCH_ASSOC);
                         foreach($teams as $i=>$teamsRow){
@@ -206,7 +206,7 @@
                                     </div>
                                 </div>
                                 <div class="teamPic">
-                                    <img src="images/<?php echo $teamsRow['TEAM_IMG'];?>" alt="">
+                                    <img src="images/team_pic/<?php echo $teamsRow['TEAM_IMG'];?>" alt="">
                                 </div>
                                 <div class="teamInfo">
                                     <div class="teamMore">
@@ -266,23 +266,6 @@
             }
         }
         $(window).resize(slickItem);
-        // $('.teamGroup').slick({
-        //     dots: true,
-        //     slidesToShow: 1,
-        //     slidesToScroll: 1,
-        //     arrows:false,
-        //     autoplay: true,
-        //     autoplaySpeed: 2000,
-        //     focusOnSelect:true,
-        //     responsive: [{
-        //         breakpoint: 768,
-        //         settings: {
-        //         slidesToShow: 1,
-        //         slidesToScroll: 1,
-        //         dots: true,
-        //         }
-        //     }]
-        // });
     </script>
 	
     <script>

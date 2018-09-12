@@ -1,3 +1,8 @@
+<?php 
+ob_start();
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +13,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/back.css">
     <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/back_site_info.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 </head>
 <body>
@@ -18,40 +24,83 @@
         </div>
         <ul>
             <li>
-                <a href="#">QRCODE掃描</a>
+                <a href="back_book.php" class="hover-a">預約訂單管理</a>
             </li>
             <li>
-                <a href="#">預約訂單管理</a>
+                <a href="back_card.php" class="hover-a">點數卡商品管理</a>
             </li>
             <li>
-                <a href="#">點數卡商品管理</a>
+                <a href="back_card_order01.php" class="hover-a">儲值紀錄</a>
             </li>
             <li>
-                <a href="#">儲值紀錄</a>
+                <a href="back_fac.php" class="hover-a">場地管理</a>
             </li>
             <li>
-                <a href="#">場地管理</a>
+                <a href="back_mem.php" class="hover-a">會員管理</a>
             </li>
             <li>
-                <a href="#">會員管理</a>
+                <a href="back_robot_1.php" class="hover-a">聊天機器人維護</a>
             </li>
             <li>
-                <a href="#">聊天機器人維護</a>
+                <?php
+                    if( $_SESSION['ADMIN_PERM'] == 0){
+                        echo "<a href='back_admin.php' class='hover-a'>管理員管理</a>";
+                    }else{
+                        echo "<a href='#' style='display:none' class='hover-a'>管理員管理</a>";
+                    }
+                ?>
             </li>
             <li>
-                <a href="#">管理員管理</a>
-            </li>
-            <li>
-                <a href="#">登出</a>
+                <form action="php/back_logout.php" class="lout">
+                    <input type="submit" value='登出' class="loutbtn">
+                </form>
             </li>
         </ul>
     </div>
     <div class="back_content">
+    <div class="bg_site_info_page">
+        <div class="add_site_info">
+            <h3>新增商品</h3>
+            <div id="xx">
+                X
+            </div>
+            <form action="back_card_add.php" method="post">         
+                <table>
+                    <tr>
+                        <th>商品名稱</th>
+                        <td>
+                        <input type="text" name="card_name" id="card_name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>商品價格</th>
+                        <td>
+                        <input type="text" name="card_price" id="card_price">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>商品點數</th>
+                        <td>
+                        <input type="text" name="card_points" id="card_points">
+                        </td>
+                    </tr>
+                   
+                </table>
+                <div class="add_site_info_but">
+                    <input type="submit" id="add_site" value="確認新增">
+ 
+                </div>
+            </form>
+        </div>
+    </div>
+
         <h2>點數卡商品管理</h2>
+        <div class="search">
+            <button class="btn">新增商品</button>
+        </div>
         
-        <button class="btn">新增商品</button>
-        <form action="back_card_add.php" method="post">           
-            <table>
+
+         <table>
                 <thead>
                     <tr>
                         <th>商品編號</th>
@@ -77,10 +126,16 @@
                 }
                 ?>
                 </tbody>
-            </table>
+            </table>              
+        
+                    
+
+        <!-- <form action="back_card_add.php" method="post">           
+            
             <div id="card_add">
                 <div class="card_add_content">
                     <div class="cancle"></div>
+                    
                     <h3>新增點數商品</h3>
                     <label for="card_name">商品名稱:</label>
                     <input type="text" name="card_name" id="card_name">
@@ -93,15 +148,15 @@
                     <input type="submit">
                 </div>
             </div>
-        </form>
+        </form> -->
     </div>
     <script>
-        $('.btn').click(function(){
-            $('#card_add').show();
-        });
-        $('.cancle').click(function(){
-            $('#card_add').hide();
-        });
+            $('.btn').click(function () { 
+                $('.bg_site_info_page').toggleClass('active');
+            });
+            $('#xx').click(function () {
+                $('.bg_site_info_page').removeClass('active');
+            })
     </script>
     
 </body>

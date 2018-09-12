@@ -27,10 +27,10 @@ session_start();
                 <a href="back_book.php" class="hover-a">預約訂單管理</a>
             </li>
             <li>
-                <a href="back_card01.php" class="hover-a">點數卡商品管理</a>
+                <a href="back_card.php" class="hover-a">點數卡商品管理</a>
             </li>
             <li>
-                <a href="back_card_order01.php" class="hover-a">儲值紀錄</a>
+                <a href="back_card_order.php" class="hover-a">儲值紀錄</a>
             </li>
             <li>
                 <a href="back_fac.php" class="hover-a">場地管理</a>
@@ -67,7 +67,7 @@ session_start();
             <thead>
                 <tr>
                     <th>訂單編號</th>
-                    <th>會員名稱</th>
+                    <th>會員帳號</th>
                     <th>商品售價</th>
                     <th>商品點數</th>
                     <th>下單日期</th>

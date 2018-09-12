@@ -142,18 +142,40 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 										echo "<p>使用狀態:<span id='booking_check'>".$order['BOO_STATUS']."</span></p>";
 										echo "</span>";
 										echo "<span class='button'>";
-										echo "<input type='button' value='揪團去'>";
+										$status=$order['BOO_STATUS'];
+										if($status=="已取消")
+										echo "<input type='button' class='cancel book_cancel' value='已取消' disabled>";
+									 	else{			 
+											$sql = "select * from team join booking on team.BOO_NO = booking.BOO_NO WHERE booking.BOO_NO = ".$order['BOO_NO'];
+											$team = $pdo->prepare($sql);
+											$team->execute(); 
+											$rows = $team->rowCount();//看他有沒有揪過團
+											if($rows!=0){
+												
+											$teaminfo = $team->fetch(PDO::FETCH_ASSOC);					
+											$href = 'groupInfo.php?TEAM_NO='.$teaminfo['TEAM_NO'];
+											
+											echo "<a href='$href'><input type='button' value='已揪團'></a>";
+										}
+											else{
+												echo "<form action='boo_creat.php' method='POST'>";
+												echo "<input type='submit' value='揪團去'>";
+												echo "<input type='hidden' name='booking_no' value=".$order['BOO_NO'].">";
+												echo "</form>";
+										}
+										}
 
-										if($order['BOO_STATUS'] === '已預約'){
+										$today = date('Y-m-d');
+										if($order['BOO_STATUS'] === '已預約'  && strtotime($order['BOO_DATE']) > strtotime($today)){
 										echo "<input class='cancel' type='button' value='取消預約' >";
 										}else{
-										echo "<input  id='book_cancel'  class='cancel' type='button' value='取消預約' disabled>";
+										echo "<input class='cancel book_cancel' type='button' value='取消預約' disabled>";
 										}
 										
-										echo "<input type='hidden'  name='booking_no' value=".$order['BOO_NO'].">";
+										echo "<input type='hidden' name='booking_no' value=".$order['BOO_NO'].">";
 										echo "<form action='evaluate.php'>";
 										echo "<input type='submit' value='評價場地'>";
-										echo "<input type='hidden'  name='evaluate_booking_no' value=".$order['BOO_NO'].">";
+										echo "<input type='hidden' name='evaluate_booking_no' value=".$order['BOO_NO'].">";
 										echo "</form>";
 										echo "</span>";
 										echo "</div>";

@@ -53,7 +53,11 @@
   right: auto;
   animation: top-right 6s ease-in-out alternate infinite;
 }
-
+@media screen and (max-width: 768px) {
+  .light{
+    display: none;
+  }
+}
 .fp-controlArrow.fp-prev {
   left: 60px !important;
   border-color: transparent #FFB505 transparent transparent !important;
@@ -626,13 +630,13 @@ a {
 
 @media screen and (max-width: 768px) {
   .home_pg3  .home_team {
-		position: absolute;
-		top:50%;
-		transform: translateY(-50%);
+		// position: absolute;
+		// top:50%;
+		// transform: translateY(-50%);
 		width: 100%;
 	}
   .typing {
-    display: none;
+    // display: none;
     border-right: 0px;
     width: 100%;
   }
@@ -813,6 +817,7 @@ a {
   box-sizing: border-box;
   padding-bottom: 150%;
   font-family: 'HanWangZonYi';
+  margin-bottom: 30px;
   transition: 0; // box-shadow: 0 15px 20px -15px rgba(0, 0, 0, 0.3), 0 55px 50px -35px rgba(0, 0, 0, 0.3);
 }
 
@@ -1034,22 +1039,29 @@ a {
 @media screen and (max-width: 767px) {
   .home_pg4_bluebox2{
     height: 50px;
+    background-color: #FFB505;
     h3{
       font-size: 24px;
       line-height: 50px;
     }
   }
   .home_pg4_bluebox1{
-    display: none;
+    // display: none;
+    position: static;
+    margin-top: 80px;
+    margin-bottom: 20px;
   }
   .home_pg4_txt {
-    display: none;
+    // display: none;
+    position: static;
   }
   .pointCard {
-    top: 50%;
-    transform: translateY(-50%);
+    top:0;
+    transform: translateY(0);
+    // top: 50%;
+    // transform: translateY(-50%);
     width: 80%;
-    margin: auto;
+    margin: 0 auto 20px;
   }
   .cardP1 {
     font-size: 30px;
