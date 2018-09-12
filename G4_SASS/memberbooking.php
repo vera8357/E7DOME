@@ -1,6 +1,4 @@
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,11 +59,20 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 				<li id="meminfo_active"><a href="#"><span class="line"></span>預約紀錄</a></li>
 				<li><a href="memberpoints.php"><span class="line"></span>儲值紀錄</a></li>
 				<li><a href="membergroup.php"><span class="line"></span>我的揪團</a></li>
-				<li><form action="php/logout.php" method="post"><input id="btn_logout" type="submit" value="登出"></form> </li>
-				
-				
+				<li class="computer_logout"><form action="php/logout.php" method="post"><input id="btn_logout" type="submit" value="登出"></form> </li>
 				
 			</ul>
+
+
+			<div class="phone_show">
+				<span>
+					<img src="images/member_pic/coin.png"><?php echo $_SESSION['MEM_POINTS']; ?>
+					
+				</span>
+
+				<span><form action="php/logout.php" method="post"><input id="btn_logout" type="submit" value="登出"></form></span>
+				
+			</div>
 			
 
 		</div>
@@ -128,7 +135,7 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 									
 										echo "</span>";
 										echo "<span class='hold2'>";
-										echo "<p>訂單編號:<span id='booking_no'>".$order['BOO_NO']."</span></p>";
+										echo "<p>訂單編號:<span>".$order['BOO_NO']."</span></p>";
 										echo "<p>&nbsp;場&nbsp;&nbsp;&nbsp;&nbsp;地&nbsp;&nbsp;:<span id='booking_site'>".$order['FAC_NAME']."</span></p>";
 										echo "<p>預約時段:<span id='booking_time'>".$order['BOO_TIME']."</span></p>";
 										echo "<p>預約日期:<span id='booking_date'>".$order['BOO_DATE']."</span></p>";

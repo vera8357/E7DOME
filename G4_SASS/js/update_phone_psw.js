@@ -16,6 +16,8 @@ function update_phone(){
 			}else{
 				document.getElementById("phone_number").value = reply_phone;
 				alert('更新成功');
+				window.location.reload();
+
 			}
 
 		}else{
@@ -85,9 +87,10 @@ function  check_new_psw(){
     if( new_psw1 == new_psw2 ){
         
        console.log('密碼相符');
-
+        $id('update_psw').disabled = false;
     }else{
       alert('密碼不一致,請更改');
+       $id('update_psw').disabled = true;
      
     }
 

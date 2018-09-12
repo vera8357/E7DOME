@@ -10,7 +10,7 @@ try {
     <div class="site_item">
         <input type="hidden" name="" value="<?php echo $site_info["FAC_NO"]?>">
         <div class="site_item_img">
-            <img src="images/sport/<?php echo $site_info["FAC_IMG1"]?>" alt="">
+            <img src="images/fac_img/<?php echo $site_info["FAC_IMG1"]?>" alt="">
         </div>
         <div class="site_button">
             <?php echo $site_info["FAC_NAME"]?>

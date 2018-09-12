@@ -28,7 +28,7 @@ session_start();
                 <a href="back_book.php" class="hover-a">預約訂單管理</a>
             </li>
             <li>
-                <a href="back_card01.php" class="hover-a">點數卡商品管理</a>
+                <a href="back_card.php" class="hover-a">點數卡商品管理</a>
             </li>
             <li>
                 <a href="back_card_order01.php" class="hover-a">儲值紀錄</a>
@@ -136,9 +136,9 @@ session_start();
                 </table>
                 <div class="add_site_info_but">
                     <input type="submit" id="add_site" value="確認新增">
-                    <button>
+                    <!-- <button>
                         重　置
-                    </button>
+                    </button> -->
                 </div>
             </form>
         </div>
