@@ -136,9 +136,9 @@ session_start();
                 </table>
                 <div class="add_site_info_but">
                     <input type="submit" id="add_site" value="確認新增">
-                    <button>
+                    <!-- <button>
                         重　置
-                    </button>
+                    </button> -->
                 </div>
             </form>
         </div>
