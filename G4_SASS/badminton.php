@@ -16,7 +16,7 @@ badminton.css">
     <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
     <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
     <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
-    <title>Document</title>
+    <title>E7DOME</title>
 </head>
 <body>
     <?php include 'header.php';?>
@@ -205,7 +205,7 @@ badminton.css">
                     <?php
                     
                         require_once("php/connect_g4.php");
-                        $sql = "SELECT * FROM team JOIN booking ON (team.BOO_NO = booking.BOO_NO) JOIN facility ON (facility.FAC_NO = booking.FAC_NO) where booking.BOO_DATE > CURRENT_DATE() and facility.CATE_NO = 2 order by facility.FAC_NO desc limit 3";
+                        $sql = "SELECT * FROM team JOIN booking ON (team.BOO_NO = booking.BOO_NO) JOIN facility ON (facility.FAC_NO = booking.FAC_NO) where booking.BOO_DATE > CURRENT_DATE() and facility.CATE_NO = 3 order by facility.FAC_NO desc limit 3";
                         $team = $pdo->query( $sql);
                         $teams = $team->fetchAll(PDO::FETCH_ASSOC);
                         foreach($teams as $i=>$teamsRow){

@@ -68,20 +68,20 @@
         font-size: 33px;
     }
 }
-@media screen and (max-height:823px){
+// @media screen and (max-height:823px){
     
-    .clm_fp_bgimg img{
-        width:140%;
-        position: relative;
-        left:-5%;
-    }
-}
+//     .clm_fp_bgimg img{
+//         width:140%;
+//         position: relative;
+//         left:-5%;
+//     }
+// }
 @media screen and (max-height:736px){
     
     .clm_fp_bgimg img{
         width:115%;
         position: relative;
-        left:-2%;
+        // left:-2%;
     }
 }
 @media screen and (max-width:767px){
@@ -148,5 +148,5 @@
     border-color: transparent #f6682f transparent transparent;
 }
 .bgcball{
-    width:46%;
+    width:40%;
 }
