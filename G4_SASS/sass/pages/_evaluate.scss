@@ -122,45 +122,46 @@ body{
 	margin: auto;
 	padding: 1%;
 	position: relative;
-	background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#acf), to(#8ad), color-stop(0.1, #9be));
+	// background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#acf), to(#8ad), color-stop(0.1, #9be));
     border-top: 1px solid #ccc;
     border-right: 1px solid #ccc;
-    -webkit-border-bottom-right-radius: 60px 60px;
-    -webkit-box-shadow: -1px 2px 2px rgba(0, 0, 0, 0.2);
+    // -webkit-border-bottom-right-radius: 60px 60px;
+	// -webkit-box-shadow: -1px 2px 2px rgba(0, 0, 0, 0.2);
+	box-shadow: 10px 10px #FFB405;
 	
 }
 
 
-.pic_wrap:before{
-    content:'';    
-    width: 25px;
-    height: 20px;
-    position: absolute;
-    bottom:0;
-    right:0;
-    -webkit-border-bottom-right-radius: 30px;
-    -webkit-box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
-    -webkit-transform:
-    rotate(-20deg)
-    skew(-40deg,-3deg)
-    translate(-13px,-13px);
-}
+// .pic_wrap:before{
+//     content:'';    
+//     width: 25px;
+//     height: 20px;
+//     position: absolute;
+//     bottom:0;
+//     right:0;
+//     -webkit-border-bottom-right-radius: 30px;
+//     -webkit-box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3);
+//     -webkit-transform:
+//     rotate(-20deg)
+//     skew(-40deg,-3deg)
+//     translate(-13px,-13px);
+// }
 
-.pic_wrap:after{
-    content: '';
-    z-index: -1;
-    width: 100px;
-    height: 100px;
-    position:absolute;
-    bottom:0;
-    right:0;
-    background: rgba(0, 0, 0, 0.2);
-    display: inline-block;
-    -webkit-box-shadow: 20px 20px 8px rgba(0, 0, 0, 0.2);
-    -webkit-transform: rotate(0deg)
-                        translate(-45px,-20px)
-                           skew(20deg);
-}
+// .pic_wrap:after{
+//     content: '';
+//     z-index: -1;
+//     width: 100px;
+//     height: 100px;
+//     position:absolute;
+//     bottom:0;
+//     right:0;
+//     background: rgba(0, 0, 0, 0.2);
+//     display: inline-block;
+//     -webkit-box-shadow: 20px 20px 8px rgba(0, 0, 0, 0.2);
+//     -webkit-transform: rotate(0deg)
+//                         translate(-45px,-20px)
+//                            skew(20deg);
+// }
 
 
 
@@ -205,7 +206,7 @@ span{
 
 .evaluate_content li{
 	font-size: 55px;
-	color:rgba(40,45,40,.7);
+	color:#E7E7E7;
 	cursor: pointer;
 }
 
@@ -215,8 +216,8 @@ textarea{
 	height: 160px;
 	font-size: 18px;
 	resize:none;
-	background-color: #4c9efe;
-	border:2.5px solid #022084;
+	background-color: #E7E7E7;
+	border:2.5px solid #FFB405;
 	letter-spacing: 2.5px;
 	padding:8px;margin: auto;
 

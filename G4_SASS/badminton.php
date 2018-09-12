@@ -220,7 +220,7 @@ badminton.css">
                                     </div>
                                 </div>
                                 <div class="teamPic">
-                                    <img src="images/<?php echo $teamsRow['TEAM_IMG'];?>" alt="">
+                                    <img src="images/team_pic/<?php echo $teamsRow['TEAM_IMG'];?>" alt="">
                                 </div>
                                 <div class="teamInfo">
                                     <div class="teamMore">

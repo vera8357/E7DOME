@@ -187,19 +187,19 @@ session_start();
 
 
 
-if ( isset($_SESSION['ADMIN_ID']) ) {
-    $ADMIN_ID = $_SESSION['ADMIN_ID'];
-    $ADMIN_PERM = $_SESSION['ADMIN_PERM'];
+// if ( isset($_SESSION['ADMIN_ID']) ) {
+//     $ADMIN_ID = $_SESSION['ADMIN_ID'];
+//     $ADMIN_PERM = $_SESSION['ADMIN_PERM'];
     
-    echo '<script language="javascript">';
-    echo 'alert("歡迎！管理員")';
-    echo '</script>';
-  }else{
-    echo '<script language="javascript">';
-    echo 'alert("請登入管理員")';
-    echo '</script>';
-    exit;
-  }
+//     echo '<script language="javascript">';
+//     echo 'alert("歡迎！管理員")';
+//     echo '</script>';
+//   }else{
+//     echo '<script language="javascript">';
+//     echo 'alert("請登入管理員")';
+//     echo '</script>';
+//     exit;
+//   }
 
 
 

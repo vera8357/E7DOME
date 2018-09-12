@@ -165,14 +165,15 @@ $booTicket = $pdo->query($sqlBoo);
   <div class="book_and_team">
     <div class="select_book">
       <h2>感謝您的預約</h2>
-      <p>預約明細預約明細預約明細預約明細</p>
-      <p>預約明細預約明細預約明細預約明細</p>
+      <p>E7DOME提供最好的運動場地!</p>
+      <p>快來E7DOME揮灑汗水!</p>
       <div class="select_btn boo">預約明細</div>
     </div>
     <div class="select_team">
       <h2>尋找運動夥伴?</h2>
-      <p>文案文案文案</p>
-      <p>揪團文案文案揪團文案文案揪案文案</p>
+      <p>歡迎在E7DOME尋找其他運動夥伴!</p>
+      <p>立刻來揪團吧!</p>
+      <P>目前還不想揪團，之後在預約紀錄還可以再揪團</P>
       <div class="select_btn team">來去揪團</div>
     </div>
     <div class="ticket inverse">
