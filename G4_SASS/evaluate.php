@@ -77,7 +77,7 @@
 					
 				</ul>
 
-				<textarea name="evaluate_text" placeholder="輸入評價" style="color:#fff;" ></textarea>
+				<textarea name="evaluate_text" placeholder="輸入評價" style="color:#757575;" ></textarea>
 			
 
 
