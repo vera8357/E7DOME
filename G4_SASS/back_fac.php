@@ -28,7 +28,7 @@ session_start();
                 <a href="back_book.php" class="hover-a">預約訂單管理</a>
             </li>
             <li>
-                <a href="back_card01.php" class="hover-a">點數卡商品管理</a>
+                <a href="back_card.php" class="hover-a">點數卡商品管理</a>
             </li>
             <li>
                 <a href="back_card_order01.php" class="hover-a">儲值紀錄</a>

@@ -59,9 +59,8 @@
 					<div class="pg2_fac_info">
 						<div class="fac_info_content">
 							<h2>籃球場</h2>
-							<p>文案文案文案文案</p>
-							<p>文案文案文案文案</p>
-							<p>文案文案文案文案</p>
+							<p>想像curry一樣射滿全場嗎?</p>
+							<p>來我們籃球場揮灑汗水吧!</p>
 							
 							<a href="basketball.php">更多資訊</a>
 							<a href="booking.php">立即預約</a>
@@ -79,9 +78,8 @@
 					<div class="pg2_fac_info">
 						<div class="fac_info_content">
 							<h2>保齡球場</h2>
-							<p>文案文案文案文案</p>
-							<p>文案文案文案文案</p>
-							<p>文案文案文案文案</p>
+							<p>來打一場漂亮的全倒吧!</p>
+							<p>歡迎來最漂亮的保齡球場</p>
 							<a href="bowling.php">更多資訊</a>
 							<a href="booking.php">立即預約</a>
 
@@ -98,9 +96,8 @@
 					<div class="pg2_fac_info">
 						<div class="fac_info_content">
 							<h2>羽球球場</h2>
-							<p>文案文案文案文案</p>
-							<p>文案文案文案文案</p>
-							<p>文案文案文案文案</p>
+							<p>一起揪麻吉來場2對2吧!</p>
+							<p>世界上最大的羽球場</p>
 							<a href="badminton.php">更多資訊</a>
 							<a href="booking.php">立即預約</a>
 						</div>
@@ -116,9 +113,7 @@
 					<div class="pg2_fac_info">
 						<div class="fac_info_content">
 							<h2>攀岩場</h2>
-							<p>文案文案文案文案</p>
-							<p>文案文案文案文案</p>
-							<p>文案文案文案文案</p>
+							<p>爬爬爬!</p>
 							<a href="climbimg.php">更多資訊</a>
 							<a href="booking.php">立即預約</a>
 						</div>
@@ -156,7 +151,7 @@
 					<ul class="teamGroup">
 					<?php
 					require_once('php/connect_g4.php');
-					$sql = "SELECT * FROM team JOIN booking ON (team.BOO_NO = booking.BOO_NO) JOIN facility ON (facility.FAC_NO = booking.FAC_NO)  WHERE booking.BOO_DATE > CURDATE() ";
+					$sql = "SELECT * FROM team JOIN booking ON (team.BOO_NO = booking.BOO_NO) JOIN facility ON (facility.FAC_NO = booking.FAC_NO)  WHERE booking.BOO_DATE > CURDATE() limit 6";
 					$team = $pdo->query( $sql);
 					$teams = $team->fetchAll(PDO::FETCH_ASSOC);
 					foreach($teams as $i=>$teamsRow){
@@ -171,7 +166,7 @@
 										</div>
 									</div>
 									<div class="teamPic">
-										<img src="images/<?php echo $teamsRow["TEAM_IMG"];?>" alt="">
+										<img src="images/team_pic/<?php echo $teamsRow["TEAM_IMG"];?>" alt="">
 									</div>
 									<div class="teamInfo">
 										<div class="teamMore">
@@ -211,7 +206,8 @@
 			<div class="home_pg4_bluebox1">
 				<div class="home_pg4_txt">
 					<h2>點數儲值</h2>
-					<p>文案文案文案</p>
+					<p>場地點數制</p>
+					<p>買越多送越多!</p>
 				</div>
 				<div class="home_pg4_yellowbox"></div>
 				<div class="home_pg4_whitebox"></div>
