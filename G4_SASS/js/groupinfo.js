@@ -2,6 +2,12 @@
     $(document).ready(function(){
 
 
+        
+
+    $("#close_3").click(function close3(){
+        $id('create_in').style.display = 'none';
+    });
+
 
     $(".createGroup").click(function createGroupCheck(){
         if($("#link_member").text() == "登入"){

@@ -18,13 +18,22 @@ $TEAM_NO = $_REQUEST["TEAM_NO"];
 
 switch($_FILES['upfile']['error']){
   case UPLOAD_ERR_OK:
+<<<<<<< HEAD
+    if( file_exists("../images/team_pic/")===false){
+    	mkdir("../images/team_pic/");
+=======
     if( file_exists("../images/team_pic")===false){
     	mkdir("../images/team_pic");
+>>>>>>> upstream/G4-1
     }
     $from = $_FILES['upfile']['tmp_name'];
     $fileto =pathinfo($_FILES['upfile']['name']);
     $filext = $fileto['basename'];
+<<<<<<< HEAD
+    $to = "../images/team_pic/{$filext}";
+=======
     $to = "../images/team_pic{$filext}";
+>>>>>>> upstream/G4-1
     $filname = "{$filext}";
     if(copy( $from, $to)){
       $file = "
