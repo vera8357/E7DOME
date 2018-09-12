@@ -25,6 +25,7 @@
     "scrollmagic": "^2.0.5"
   },
   "dependencies": {
-    "isotope-layout": "^3.0.6"
+    "isotope-layout": "^3.0.6",
+    "components-font-awesome": "^5.0.6"
   }
 }
