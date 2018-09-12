@@ -8,9 +8,13 @@ try{
 	$sql ="UPDATE booking SET boo_status = '2' WHERE booking.boo_no =".$_REQUEST['booking_no'];
 	$boo_status = $pdo->exec($sql);
 
+	$sql = "DELETE FROM team WHERE BOO_NO =".$_REQUEST['booking_no'];
+	$team_del = $pdo->exec($sql);
+	
 	$sql = "select fac.FAC_POINTS, boo.MEM_NO from booking boo join facility fac on boo.FAC_NO = fac.FAC_NO where boo.boo_no =".$_REQUEST['booking_no'];
 	$boo_ponints = $pdo->query($sql);
 
+	
 	$rows = $boo_ponints->fetch(PDO::FETCH_ASSOC);
 	$points = $rows['FAC_POINTS'];
 	$mem_no = $rows['MEM_NO'];

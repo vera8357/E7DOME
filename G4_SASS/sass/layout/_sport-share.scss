@@ -110,12 +110,12 @@ body {
 .reservation,
 .group{
     cursor: pointer;
-    width:45%;
+    width:35%;
     background-color: #0052b2;
     color:#fff;
     font-family:'HanWangZonYi';
     font-size: 18px;
-    padding: 12px 0 12px;
+    padding: 2% 0 2%;
     border: 0;
     outline: 0;
     border-radius: 9487px;
@@ -126,6 +126,7 @@ body {
 .group{
     background-color: #fff;
     color:#0052b2;
+    margin-left: 1%;
 }
 .site_select{
     font-size: 0;
@@ -134,7 +135,7 @@ body {
 .site_item{
     display:inline-block;
     width:33.3%;
-    padding-top: 0%;
+    padding-top: 5%;
     text-align: center;
     cursor: pointer;
 }

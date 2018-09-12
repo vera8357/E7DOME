@@ -188,12 +188,12 @@
 	}
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
 	#fp-nav{
 		display: none;
 	}
 	.teamItem.all{
-		display: none;
+		// display: none;
 	}
 	.teamMore.all .moreSkew{
 		display: none;
@@ -230,7 +230,7 @@
 	}
 	
 	.teamGroup{
-		width: 75%;
-		margin: 0 auto;
+		width: 80%;
+		margin: 0 auto 50px;
 	}
 }
