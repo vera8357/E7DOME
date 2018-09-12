@@ -179,7 +179,7 @@ try {
     ?>
                 <li class="message-box">
                     <div class="mem-head01">
-                        <img src="images/<?php echo $teamsRow["MEM_IMG"];?>" alt="">
+                        <img src="images/member_pic/<?php echo $teamsRow["MEM_IMG"];?>" alt="">
                     </div>
                     <div class="mem-mid">
                         <div class="mem-id">
