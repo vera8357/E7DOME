@@ -32,7 +32,7 @@
 			</video>
 			<div class="home_pg1_bluebox1">
 				<div class="home_pg1_txt">
-					<h1>邊緣人?!<br>一起運動吧!</h1>
+					<h1>尋找夥伴<br>快樂一起動!</h1>
 					<div class="home_pg1_btng">
 						<div class="home_pg1_btn">
 							<a href="booking.php">預約</a>
@@ -255,7 +255,7 @@
 			verticalCentered: false,
 			anchors: ['firstPage', 'secondPage', 'thirdPage', 'forthPage', 'lastPage'],
 			navigation: true,
-			responsiveWidth : 992,
+			responsiveWidth : 768,
 			navigationTooltips: ['首頁','場地介紹','快來揪團','儲值點數','營業資訊'],
 			onLeave: function (origin, destination, direction) {
 				if (destination.index == 0) {
