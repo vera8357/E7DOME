@@ -40,12 +40,12 @@ require_once('connect_g4.php');
     <span class="confirm_left">付款方式</span><span class="confirm_right">'.$str_method.'</span>
     </div>
     <p class="pay_note">注意事項: 儲值點數無法退費或兌現</p>
-    <form action="php/points_finish.php" method="POST">
-    <input type="hidden" name="CARD_NO" value="'.$CARD_NO.'">
-    <input type="hidden" name="CARD_POINTS" value="'.$row['CARD_POINTS'].'">
-    <input type="hidden" name="CARD_PRICE" value="'.$row['CARD_PRICE'].'">
-    <input type="hidden" name="CARD_METHOD" value="'.$CARD_METHOD.'">
-    <input type="submit" value="確認付款" class="confirm_btn">
+    <form>
+    <input type="hidden" id="CARD_NO" name="CARD_NO" value="'.$CARD_NO.'">
+    <input type="hidden" id="CARD_POINTS" name="CARD_POINTS" value="'.$row['CARD_POINTS'].'">
+    <input type="hidden" id="CARD_PRICE" name="CARD_PRICE" value="'.$row['CARD_PRICE'].'">
+    <input type="hidden" id="CARD_METHOD" name="CARD_METHOD" value="'.$CARD_METHOD.'">
+    <input type="button" value="確認付款" class="confirm_btn">
     </form>';
     
 

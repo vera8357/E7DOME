@@ -13,6 +13,12 @@ header{
 .point_wrapper{
     width: 1200px;
     margin: auto;
+    position: relative;
+}
+.point_wrapper:after{
+    display: block;
+    content: '';
+    clear: both;
 }
 input.CARD_NO,
 input.CARD_METHOD
@@ -346,6 +352,10 @@ input.CARD_METHOD
             width: 100%;
             padding: 65px 0 0;
         }
+        .pay_list{
+            top:60px;
+        }
+
     }
     @media screen and (max-width: 768px) {
         .payment_select,
@@ -366,3 +376,94 @@ input.CARD_METHOD
                 }
          }   
     }
+    @keyframes pay_list{   
+        from{
+            transform: scaleY(0); 
+        }
+        to{
+            transform: scaleY(1); 
+        }
+    }
+.pay_list{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: #0052B2;
+    animation: pay_list .5s forwards;
+    .cancelX{
+        -webkit-user-select: none; 
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        color: #fff;
+        transition: .3s;
+        cursor: pointer;
+        s
+        &:hover{
+            color:#FFB405;
+        }
+    }
+    .a_group{
+        text-align: center;
+    }
+    a{
+        display: inline-block;
+        margin-top: 20px;
+        background-color: #fff;
+        border : 1px solid #fff;
+        color:#0052B2;
+        text-decoration: none;
+        padding: 10px 15px;
+        font-size: 14px;
+        margin: 20px 15px;
+        font-family: 'HanWangZonYi';
+        transition: .3s;
+        &:hover{
+            background-color: transparent;
+            color:#fff;
+        }
+        &.a_pon{
+            background-color: transparent;
+            color:#fff;
+            &:hover{
+                background-color: #fff;
+                color:#0052B2;
+            }
+        }
+    }
+    h2{
+        text-align: center;
+        color:#fff;
+        font-size: 48px;
+        padding: 60px 0;
+    }
+    table{
+        text-align: left;
+        color:#fff;
+        font-size: 24px;
+        line-height: 30px;
+        th,td{
+            padding: 10px 15px;
+        }
+        th{
+            text-align: center;
+            font-weight: bold;
+        }
+        td{
+            text-align: right;
+        }
+    }
+    .pay_list_info{
+        // width: 50%;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 992px) {
+    .pay_list{
+        top:60px;
+    }
+}

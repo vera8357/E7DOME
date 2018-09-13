@@ -104,7 +104,7 @@ body {
 }
 
 .ticket .airports:after {
-  content: '';
+  // content: '';
   width: 16px;
   height: 16px;
   background-color: #f6f6f6;
@@ -115,7 +115,7 @@ body {
   box-shadow: inset 12px 0px 18px -11px rgba(3, 3, 3, 0.5);
 }
 .ticket .airports:before {
-  content: '';
+  // content: '';
   width: 16px;
   height: 16px;
   background-color: #f6f6f6;

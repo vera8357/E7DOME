@@ -32,7 +32,7 @@
 			</video>
 			<div class="home_pg1_bluebox1">
 				<div class="home_pg1_txt">
-					<h1>邊緣人?!<br>一起運動吧!</h1>
+					<h1>缺夥伴?!<br>一起運動吧!</h1>
 					<div class="home_pg1_btng">
 						<div class="home_pg1_btn">
 							<a href="booking.php">預約</a>
@@ -59,8 +59,9 @@
 					<div class="pg2_fac_info">
 						<div class="fac_info_content">
 							<h2>籃球場</h2>
-							<p>想像curry一樣射滿全場嗎?</p>
-							<p>來我們籃球場揮灑汗水吧!</p>
+							<p>想像LBJ衝進籃下來個爆扣</p>
+							<p>還是像curry一樣射滿全場</p>
+							<p>快來我們籃球場揮灑汗水吧!</p>
 							
 							<a href="basketball.php">更多資訊</a>
 							<a href="booking.php">立即預約</a>
@@ -78,8 +79,8 @@
 					<div class="pg2_fac_info">
 						<div class="fac_info_content">
 							<h2>保齡球場</h2>
-							<p>來打一場漂亮的全倒吧!</p>
-							<p>歡迎來最漂亮的保齡球場</p>
+							<p>揪個三五好友</p>
+							<p>來保齡球場打個漂亮的全倒吧!</p>
 							<a href="bowling.php">更多資訊</a>
 							<a href="booking.php">立即預約</a>
 
@@ -96,8 +97,9 @@
 					<div class="pg2_fac_info">
 						<div class="fac_info_content">
 							<h2>羽球球場</h2>
-							<p>一起揪麻吉來場2對2吧!</p>
-							<p>世界上最大的羽球場</p>
+							<p>害怕運動的肢體碰撞</p>
+							<p>想要簡單休閒的運動?</p>
+							<p>來打場羽球吧!</p>
 							<a href="badminton.php">更多資訊</a>
 							<a href="booking.php">立即預約</a>
 						</div>
@@ -113,7 +115,9 @@
 					<div class="pg2_fac_info">
 						<div class="fac_info_content">
 							<h2>攀岩場</h2>
-							<p>爬爬爬!</p>
+							<p>擁有超強的體能</p>
+							<p>人人都稱你是蜘蛛人?</p>
+							<P>來玩我們的攀岩場吧!</P>
 							<a href="climbimg.php">更多資訊</a>
 							<a href="booking.php">立即預約</a>
 						</div>
@@ -206,8 +210,9 @@
 			<div class="home_pg4_bluebox1">
 				<div class="home_pg4_txt">
 					<h2>點數儲值</h2>
-					<p>場地點數制</p>
-					<p>買越多送越多!</p>
+					<p>預約場地費用採點數制</p>
+					<p>點數無時間限制</p>
+					<p>儲值越多送越多!</p>
 				</div>
 				<div class="home_pg4_yellowbox"></div>
 				<div class="home_pg4_whitebox"></div>
@@ -255,7 +260,7 @@
 			verticalCentered: false,
 			anchors: ['firstPage', 'secondPage', 'thirdPage', 'forthPage', 'lastPage'],
 			navigation: true,
-			responsiveWidth : 992,
+			responsiveWidth : 767,
 			navigationTooltips: ['首頁','場地介紹','快來揪團','儲值點數','營業資訊'],
 			onLeave: function (origin, destination, direction) {
 				if (destination.index == 0) {

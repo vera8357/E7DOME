@@ -27,6 +27,9 @@
 	
 	
 	<div class="point_wrapper">
+	<div class="pay_list">
+		<div class="cancelX">X</div>
+		</div>
 	<h1 class="payment_title">儲值點數
 		<div class="title_bg"></div>
 	</h1>
@@ -127,6 +130,9 @@
 	
 	<script>
 		$(document).ready(function () {
+			$('.cancelX').click(function(){
+				$('.pay_list').hide();
+			});
 			function show(){
 				$.ajax({
 				url: 'php/points_confirm.php',
@@ -140,11 +146,11 @@
 					$('.payment_confirm').children().remove();
 					$('.payment_confirm').append(data);
 					$('form').submit(function (e) {
-						var form = this;
-						e.preventDefault();
-						setTimeout(function () {
-							form.submit();
-						}, 3000); 
+						// var form = this;
+						// e.preventDefault();
+						// setTimeout(function () {
+						// 	form.submit();
+						// }, 3000); 
 					});
 					<?php 
 						if(isset($_SESSION["MEM_NO"]))
@@ -154,15 +160,36 @@
 					?>
 					var session = <?php echo $mem_no?>;
 					$('.confirm_btn').click(function(event){
+				
 						if(session==0){
 							event.preventDefault();
 							alert('請先登入會員');
 							showLoginForm();
 						}
 						else{
-							$('.pay_finish').show();
+							$(this).attr('disabled', true);
+							$.ajax({
+								url: 'points_finish.php',
+								data: { 
+									CARD_NO:$('#CARD_NO').val(),
+									CARD_PRICE:$('#CARD_PRICE').val(),
+									CARD_POINTS:$('#CARD_POINTS').val(),
+									CARD_METHOD:$('#CARD_METHOD').val()						
+								},
+								type: 'GET',
+								dataType: 'text',
+								success: function (data) {
+									$('.pay_list').children().not('.cancelX').remove();
+									$('.pay_list').append(data);
+									$('.pay_finish').show();
+									setTimeout(function () {
+									$('.pay_finish').hide();
+									$('.pay_list').show();
+									$('.confirm_btn').attr('disabled', false);
+									}, 3000);
+							}
+						})
 						}
-						
 					});
 				}
 			})

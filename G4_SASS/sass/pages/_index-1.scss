@@ -53,7 +53,7 @@
   right: auto;
   animation: top-right 6s ease-in-out alternate infinite;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .light{
     display: none;
   }
@@ -352,20 +352,19 @@ a {
     opacity: 1;
   }
   .home_pg1_txt h1 {
-    font-size: 48px;
-    line-height: 60px;
+    font-size: 120px;
+    line-height: 180px;
   }
   .home_pg1_btng {
     margin-top: 10px;
   }
   .home_pg1_btn {
-    // width: 14vw;
-    // height: 6vw;
-    width: 80px;
-    height: 30px;
-    font-size: 20px;
+    
+    width: 180px;
+    height: 80px;
+    font-size: 48px;
     text-align: center;
-    line-height: 30px;
+    line-height: 80px;
     margin: 0 10px;
   }
   .home_pg1_yellowbox {
@@ -464,9 +463,33 @@ a {
     transition-delay: .5s;
   }
 }
+@media screen and (max-width: 767px) {
+  .home_pg1_txt h1 {
+    font-size: 48px;
+    line-height: 60px;
+  }
+  .home_pg1_btng {
+    margin-top: 10px;
+  }
+  .home_pg1_btn {
+    // width: 14vw;
+    // height: 6vw;
+    width: 80px;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    margin: 0 10px;
+  }
+
+}
 .home_pg2 {
   background-image: url('../images/index/pag2-bg-1.jpg');
   background-size: cover;
+}
+.home_pg2 .wrapper{
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 .svg_none{
 	display: none;
@@ -487,11 +510,12 @@ a {
   background-color: rgba(0, 0, 0, 0.3);
   color: #fff;
   width: 80%;
-  padding: 30px 50px 100px;
+  padding: 30px 30px ;
   box-sizing: border-box;
   h2{
-    font-size: 36px;
-    margin-bottom: 15px
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-family: 'HanWangZonYi';
   }
   p{
     line-height: 24px;
@@ -521,13 +545,7 @@ a {
   }
 }
 @media screen and (max-width: 992px) {
-	.fp-controlArrow.fp-prev {
-		left: 15px !important;
-	  }
-	  
-	  .fp-controlArrow.fp-next {
-		right: 15px !important;
-	  }
+
 	.home_pg2 .wrapper {
 		display: flex;
 		flex-wrap: wrap;
@@ -536,7 +554,8 @@ a {
 	  }
 	  
 	  .pg2_fac_info {
-		height: 40vh;
+    // height: 50vh;
+    padding: 50px 0;
 		order: 2;
 		width: 80%;
 		// background-color: #fff;
@@ -554,11 +573,13 @@ a {
       }
       h2{
         width: 100%;
-        font-size: 24px;
+        font-size: 36px;
         text-align: center;
+        color:#fff;
       }
       p{
         width: 100%;
+        text-align: center;
       }
       width: 100%;
       height: 90%;
@@ -566,12 +587,13 @@ a {
 	  }
 	  
 	  .home_pg2 .pg2_fac_svg {
+      padding: 50px 0 0;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		order:1;
 		width: 100%;
-		height: 60vh;
+		// height: 50vh;
 		svg {
 		  width: 80%;
 		  align-self: flex-end;
@@ -628,7 +650,16 @@ a {
   //            blink-caret .5s step-end infinite alternate;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
+  .fp-controlArrow.fp-prev {
+    border-width: 20px 25px 20px 0 !important;
+		left: 15px !important;
+	  }
+	  
+	  .fp-controlArrow.fp-next {
+    border-width: 20px 0 20px 25px !important; 
+		right: 15px !important;
+    }
   .home_pg3  .home_team {
 		// position: absolute;
 		// top:50%;
@@ -937,16 +968,20 @@ a {
 }
 
 @media screen and (max-width: 1200px) {
+  .home_pg4_yellowbox:after{
+    display: none;
+  }
   .home_pg4_bg {
     display: none;
   }
   .home_pg4_bluebox2 {
     bottom: 0;
+    height: 8vh;
   }
   .home_pg4_bluebox1 {
     width: 100%;
     top: 120px;
-    height: 5vh;
+    height: 8vh;
     left: 0;
     transform: skewX(0deg) scaleX(0);
     transform-origin: left;
@@ -979,11 +1014,11 @@ a {
   }
   .pointCard {
     width: 80%;
+    // top:20vh;
     text-align: center;
     left: 0;
     margin: 0 auto;
   }
-  .pointCard li {}
   .cardP1 {
     font-size: 2.5vw;
   }
@@ -1005,7 +1040,6 @@ a {
     padding: 1px;
     border-radius: 50%;
   }
-  .cardBuy {}
   .home_pg4_txt {
     width: 100%;
     left: 0;
@@ -1020,16 +1054,19 @@ a {
   }
   .home_pg4_txt h2 {
     color: #ffb505;
-    font-size: 24px;
+    font-size: 48px;
+    line-height: 8vh
   }
   .home_pg4_txt p {
     color: #ffb505;
-    font-size: 1.5vw;
+    font-size: 24px;
     margin-top: 3vh;
   }
   .home_pg4_bluebox2 h3 {
+    line-height: 8vh;
     text-align: center;
     padding-right: 0;
+    font-size: 48px;
   }
   .home_pg4_yellowbox:before {
     display: none;
@@ -1037,9 +1074,13 @@ a {
 }
 
 @media screen and (max-width: 767px) {
+  .home_pg4 .wrapper{
+    padding: 50px 0;
+  }
   .home_pg4_bluebox2{
     height: 50px;
     background-color: #FFB505;
+    margin-bottom: 40px;
     h3{
       font-size: 24px;
       line-height: 50px;
@@ -1048,14 +1089,26 @@ a {
   .home_pg4_bluebox1{
     // display: none;
     position: static;
-    margin-top: 80px;
+    margin-top: 40px;
     margin-bottom: 20px;
+    height: 48px;
   }
   .home_pg4_txt {
     // display: none;
     position: static;
+    h2{
+      font-size: 24px;
+      line-height: 48px;
+      margin-bottom: 20px;
+    }
+    p{
+      font-size: 18px;
+      line-height: 24px;
+      margin-top: 0;
+    }
   }
   .pointCard {
+    position: static;
     top:0;
     transform: translateY(0);
     // top: 50%;
@@ -1224,6 +1277,8 @@ a {
   font-size: 20px;
   line-height: 36px;
   z-index: 4;
+  font-family: 'HanWangZonYi';
+  
 }
 
 @media screen and (max-width: 1200px) {
@@ -1252,18 +1307,19 @@ a {
     transform: skewX(0deg) scaleY(1);
   }
   .home_pg5_yellowbox2 h3 {
-    font-size: 8vw;
+    font-size:48px;
     bottom: 10px;
   }
   .home_pg5_whitebox1 {
     top: 100px;
+    height: 80px;
   }
   .home_pg5 h2 {
     padding-left: 0px;
     width: 100%;
     text-align: center;
-    font-size: 24px;
-    top: calc(100px + 4vw);
+    font-size: 48px;
+    top:140px;
     z-index: 3;
     opacity: 0;
   }
@@ -1277,6 +1333,7 @@ a {
     width: 60%;
     height: 0;
     padding-bottom: 36.333333%;
+    margin-bottom: 20px;
   }
   #map {
     position: absolute;
@@ -1291,6 +1348,21 @@ a {
     padding-left: 0px;
     text-align: center;
     color: #fff;
-    font-size: 16px;
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .home_pg5_whitebox1 {
+    height: 48px;
+  }
+  .home_pg5 h2{
+    top:124px;
+    font-size: 24px;
+  }
+  .home_pg5_footer {
+    font-size: 18px;
+  }
+  .home_pg5_yellowbox2 h3 {
+    font-size: 8vw;
   }
 }
