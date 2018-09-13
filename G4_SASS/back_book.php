@@ -65,7 +65,7 @@ session_start();
         <form action="#">
             <div class="search">
                 <input type="text" id="book_search" placeholder="輸入會員帳號"> 
-                <button class="search_btn btn" id="search-btn">查詢</button>
+                <!-- <button class="search_btn btn" id="search-btn">查詢</button> -->
             </div>
             
             <table>
@@ -88,23 +88,62 @@ session_start();
     
 <script>
 
-function booQuery(){
-$('#search-btn').click(function(){
-    var mem_no = $('#book_search').val();
+// function booQuery(){
+//     $('#search-btn').click(function(){
+//         var mem_id = $('#book_search').val();
 
+//         $.ajax({
+//             url: "php/back_bookQuery.php",
+//             type: 'post',
+//             // async: false,
+//             data: {MEM_ID: mem_id},
+//             success:function(data){
+//        	        $('#table-query-result').html(data);
+//        	    }
+//         });
+//     });
+// }
+
+function booQueryLoad(){
+    var mem_id = "'or '1=1";
     $.ajax({
         url: "php/back_bookQuery.php",
         type: 'post',
         // async: false,
-        data: {MEM_NO: mem_no},
+        data: {MEM_ID: mem_id},
         success:function(data){
    	        $('#table-query-result').html(data);
    	    }
     });
-});
-
 }
-window.addEventListener('load',booQuery);
+
+function booQueryAuto(){
+    $('#book_search').keyup(function(){
+        var mem_id = $(this).val();
+        if ( mem_id == '') {
+            var mem_id = "'or '1=1";
+        } else {
+            var mem_id = $(this).val();
+        }
+
+        $.ajax({
+            url: "php/back_bookQuery.php",
+            type: 'post',
+            // async: false,
+            data: {MEM_ID: mem_id},
+            success:function(data){
+       	        $('#table-query-result').html(data);
+       	    }
+        });
+    });   
+}
+
+
+window.addEventListener('load', function(){
+    // booQuery();
+    booQueryLoad();
+    booQueryAuto();
+});
 </script>
 
 </body>
