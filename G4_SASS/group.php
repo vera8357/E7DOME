@@ -18,6 +18,7 @@ try {
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
+        <script src="libs/jquery/dist/jquery.min.js"></script>
 </head>
 
 <body class="group-body" id="group-body">
@@ -25,16 +26,45 @@ try {
         <?php include 'header.php';?>
     </header>
     <section>
-        <div class="select_bar cl-12">
-            <span class="selectSport black select-width select">
-                <select class="filters-select">
-                    <option value="*" selected>全部</option>
-                    <option value=".1">籃球</option>
-                    <option value=".2">保齡球</option>
-                    <option value=".3">羽毛球</option>
-                    <option value=".4">攀岩</option>
+
+
+    <div class="select_bar cl-12">
+        <span class="selectSport black select-width select">
+            <select class="filters-select">
+    <?php
+
+        if(!isset($_SESSION["cate_no"])){
+    ?>
+                <option value='*'>全部</option>
+                <option value='.1'>籃球</option>
+                <option value='.2'>保齡球</option>
+                <option value='.3'>羽毛球</option>
+                <option value='.4'>攀岩</option>
+            </select>
+        </span>
+    <?php
+        }else{
+
+    ?>
+                <option value='*'>全部</option>
+                <option id="option" value='.1'<?php if($_SESSION['cate_no'] == '1') { echo' selected'; }?>>籃球</option>
+                <option value='.2'<?php if($_SESSION['cate_no'] == "2") { echo ' selected'; }?>>保齡球</option>
+                <option value='.3'<?php if($_SESSION['cate_no'] == "3") { echo ' selected'; }?>>羽毛球</option>
+                <option value='.4'<?php if($_SESSION['cate_no'] == "4") { echo ' selected'; }?>>攀岩</option>
                 </select>
             </span>
+            <script>
+            var select = $('.selectSport option:selected').val();
+            if(select == '.1'){
+                $('#option').trigger("click");
+            }
+        };
+            </script>
+<?php
+};
+?>
+
+
             <span class="selectTime black select-width select">
                 <select class="filters-select">
                     <option value="*">全部</option>
