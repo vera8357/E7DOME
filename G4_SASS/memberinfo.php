@@ -5,9 +5,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0,viewport-fit=cover">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/memberinfo.css">
-	<title>會員基本資料</title>
+	<title>E7DOME-會員基本資料</title>
 	
 
 </head>
@@ -33,7 +34,7 @@ $member_pic = 'images/member_pic/'.$_SESSION["MEM_IMG"];
 
 				<div class="pic_wrap">
 					<label>
-						<input  type="file" name="upfile" id="upfile">
+						<input  type="file" name="upfile" id="upfile" accept="image/*">
 						<img id="show_pic" class="pic" src="<?php echo$member_pic; ?>">
 						<div class="change_pic">變更大頭照</div>
 					</label>

@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0,viewport-fit=cover">
 <title>Examples</title>
 <link rel="stylesheet" type="text/css" href="css/bookingTicket.css">
 <link rel="stylesheet" type="text/css "href="css/creatgroup.css">

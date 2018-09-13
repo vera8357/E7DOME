@@ -14,7 +14,7 @@ session_start();
     <link rel="stylesheet" href="css/back.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" type="text/css" href="css/back_login.css">
-	<title>Document</title>
+	<title>E7DOME-後台管理員登入</title>
 </head>
 <body>
 	<section>
