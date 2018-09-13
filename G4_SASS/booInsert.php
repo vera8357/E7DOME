@@ -33,8 +33,20 @@ if( isset($_SESSION['refreshChk']) ){
   $_SESSION['refreshChk'] = rand();
 }
 
-// GET MEM_NO
-$MEM_NO = $_SESSION["MEM_NO"];
+// MEM LOGIN CHK
+if( isset( $_SESSION["MEM_NO"]) ){
+  $MEM_NO = $_SESSION["MEM_NO"];
+}else{
+  header("location: booking.php");
+  exit;
+}
+
+
+// DATA EMPTY CHECK
+if( $_REQUEST["FAC_POINTS"] == ''){
+  header("location: booking.php");
+  exit;
+}
 
 // MEM_POINTS CHK
 $MEM_POINTS = $_SESSION["MEM_POINTS"];
